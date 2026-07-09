@@ -402,6 +402,7 @@
     <a href="#sec-releases">Releases</a>
     <a href="#sec-leaderboard">Leaderboard</a>
     <a href="#sec-market">Market share</a>
+    <a href="#sec-media">Image &amp; video</a>
     <a href="#sec-stocks">AI stocks</a>
     <a href="#sec-compute">Compute &amp; chips</a>
     <a href="#sec-wire">Big AI wire</a>
@@ -462,6 +463,31 @@
           <div class="callout">
             <b>Fastest mover:</b> Claude's web traffic is up ~855% YoY (+228% in a single quarter) — the steepest growth curve of any major assistant. On Cloudflare's "actively chosen" ranking it now sits at <b>#2</b>, ahead of Gemini.
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- IMAGE + VIDEO AI -->
+    <section id="sec-media" style="padding-top:8px;">
+      <div class="grid-2">
+
+        <div class="panel">
+          <div class="panel-top">
+            <h3>Top 5 image AI</h3>
+            <span class="asof">Curated snapshot</span>
+          </div>
+          <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
+          <div id="image-ai"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-top">
+            <h3>Top 5 video AI</h3>
+            <span class="asof">Curated snapshot</span>
+          </div>
+          <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
+          <div id="video-ai"></div>
         </div>
 
       </div>
@@ -645,6 +671,38 @@
       </div>
     `).join('');
 
+    // top 5 image + video AI — curated by hand, see source links above (bar length = ordinal rank)
+    const renderRank = (el, rows) => {
+      document.getElementById(el).innerHTML = rows.map(r => `
+        <div class="lb-row">
+          <div class="lb-top">
+            <div class="lb-name">
+              <span class="lb-rank">${String(r.rank).padStart(2,'0')}</span>
+              <span class="lb-model">${esc(r.model)}</span>
+              <span class="lb-org">${esc(r.org)}</span>
+            </div>
+            <span class="lb-stat">${esc(r.stat)}</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" style="--w:${r.w}%"></div></div>
+          <div class="lb-note">${esc(r.note)}</div>
+        </div>
+      `).join('');
+    };
+    renderRank('image-ai', [
+      {rank:1, model:"Nano Banana Pro", org:"Google · Gemini 3", w:100, stat:"Tops the image arena", note:"Gemini-3-powered image model; strongest prompt adherence & text rendering"},
+      {rank:2, model:"GPT-Image-1", org:"OpenAI", w:90, stat:"Native ChatGPT image gen", note:"Best-in-class instruction following and in-image typography"},
+      {rank:3, model:"Seedream 4.0", org:"ByteDance", w:82, stat:"Top open-access contender", note:"High-fidelity photoreal output; strong on Asian-language prompts"},
+      {rank:4, model:"Midjourney v7", org:"Midjourney", w:74, stat:"Aesthetic favorite", note:"Leads on artistic style and coherence; community-driven tuning"},
+      {rank:5, model:"FLUX1.1 Pro", org:"Black Forest Labs", w:66, stat:"Open-weight leader", note:"Self-hostable; the default base for many fine-tuned image pipelines"},
+    ]);
+    renderRank('video-ai', [
+      {rank:1, model:"Veo 3.1", org:"Google DeepMind", w:100, stat:"Tops the video arena", note:"Native synced audio, strong physics & long-shot temporal coherence"},
+      {rank:2, model:"Sora 2", org:"OpenAI", w:90, stat:"Cinematic prompt control", note:"Standalone app; excels at complex multi-shot scene direction"},
+      {rank:3, model:"Kling 2.5", org:"Kuaishou", w:82, stat:"Adoption leader in Asia", note:"Fast generation with reliable motion; popular for social content"},
+      {rank:4, model:"Runway Gen-4", org:"Runway", w:74, stat:"Pro creative toolchain", note:"Deep editing controls favored by studios and VFX workflows"},
+      {rank:5, model:"Hailuo 02", org:"MiniMax", w:66, stat:"Best value tier", note:"Strong image-to-video quality at a fraction of frontier pricing"},
+    ]);
+
     // legend for donut — curated by hand, see source links above
     const legend = [
       {name:"ChatGPT", pct:"53.9%", color:"var(--deep)"},
@@ -728,18 +786,19 @@
         <td class="signal-cell">${esc(s.signal||'')}</td>
       </tr>
     `; }).join('');
+
+    // animate all ordinal bars in once their rows exist in the DOM
+    animateBars();
+  }
+
+  function animateBars() {
+    document.querySelectorAll('.bar-fill').forEach((el, i) => {
+      el.style.width = '0';
+      setTimeout(() => { el.style.width = el.style.getPropertyValue('--w'); }, 200 + i * 40);
+    });
   }
 
   loadData();
-
-  // animate bars in on load
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.querySelectorAll('.bar-fill').forEach((el, i) => {
-        setTimeout(() => { el.style.width = el.style.getPropertyValue('--w'); }, 200 + i*100);
-      });
-    }, 300);
-  });
 </script>
 
 
