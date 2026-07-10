@@ -299,3 +299,57 @@ body.drawer-open { overflow: hidden; }
 .cm-threads a:hover { color: var(--teal); text-decoration: underline; }
 .cm-tmeta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
 .cm-empty { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-dim); margin: 0; }
+
+/* ================= section ribbon (reusable heading system) =================
+   [ SOLID TITLE BOX ][ TRANSLUCENT DESCRIPTOR BOX ] — one component for all
+   major section headings so they read cleanly over the ocean photo. Variants
+   share the same shape; only the accent colour changes. */
+.section-ribbon {
+  display: flex; align-items: stretch; flex-wrap: wrap; margin: 0 0 22px;
+  width: fit-content; max-width: 100%;
+  transition: transform .2s ease;
+}
+.section-ribbon__title {
+  font-family: var(--font-display); font-size: clamp(20px, 2.6vw, 27px); font-weight: 600;
+  color: #fff; background: var(--deep); margin: 0; padding: 8px 20px;
+  border-radius: 13px 3px 3px 13px; position: relative; overflow: hidden; z-index: 1;
+  display: flex; align-items: center; line-height: 1.15;
+  box-shadow: 0 6px 20px rgba(18,48,62,.18);
+}
+.section-ribbon__descriptor {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--deep); background: rgba(62,143,163,.20); margin: 0; padding: 8px 15px;
+  border: 1px solid rgba(62,143,163,.45); border-left: none; border-radius: 0 13px 13px 0;
+  display: flex; align-items: center; line-height: 1.4; max-width: 46ch;
+}
+/* slow ocean-current sheen across the title box (text itself never moves) */
+.section-ribbon__title::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(234,244,246,.28) 48%, rgba(62,143,163,.35) 55%, transparent 72%);
+  background-size: 260% 100%; background-position: 120% 0; opacity: .9;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .section-ribbon__title::before { animation: ribbonCurrent 10s ease-in-out infinite alternate; }
+}
+@keyframes ribbonCurrent { from { background-position: 120% 0; } to { background-position: -30% 0; } }
+.section-ribbon:hover, .section-ribbon:focus-within { transform: translateY(-2px); }
+.section-ribbon:hover .section-ribbon__title::before,
+.section-ribbon:focus-within .section-ribbon__title::before { opacity: 1; }
+
+/* variants — recognisably one system, accent colour only */
+.section-ribbon--market .section-ribbon__title { background: #b0554a; }
+.section-ribbon--market .section-ribbon__descriptor { background: rgba(192,106,92,.20); border-color: rgba(192,106,92,.5); }
+.section-ribbon--research .section-ribbon__title { background: #8a6d3b; }
+.section-ribbon--research .section-ribbon__descriptor { background: rgba(176,141,82,.22); border-color: rgba(176,141,82,.5); }
+.section-ribbon--infra .section-ribbon__title { background: #123a4a; }
+.section-ribbon--infra .section-ribbon__descriptor { background: rgba(27,75,90,.18); border-color: rgba(27,75,90,.45); }
+
+/* mobile: stack title above descriptor, full-width, clean corners */
+@media (max-width: 560px) {
+  .section-ribbon { width: 100%; }
+  .section-ribbon__title { border-radius: 13px 13px 0 0; width: 100%; }
+  .section-ribbon__descriptor { border-radius: 0 0 13px 13px; border-left: 1px solid rgba(62,143,163,.45); border-top: none; width: 100%; max-width: none; }
+  .section-ribbon--market .section-ribbon__descriptor { border-left-color: rgba(192,106,92,.5); }
+  .section-ribbon--research .section-ribbon__descriptor { border-left-color: rgba(176,141,82,.5); }
+  .section-ribbon--infra .section-ribbon__descriptor { border-left-color: rgba(27,75,90,.45); }
+}
