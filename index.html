@@ -172,7 +172,7 @@
 
   /* ---------- panels: frosted glass ---------- */
   .panel{
-    background:var(--panel);backdrop-filter:blur(10px);
+    background:var(--panel-solid);
     border:1px solid var(--border);border-radius:16px;padding:26px 28px;
     box-shadow:0 6px 24px rgba(18,48,62,0.07);
     transition:box-shadow .25s ease, transform .25s cubic-bezier(.16,.84,.44,1);
@@ -191,7 +191,7 @@
   }
   @media (max-width:900px){.stats-strip{grid-template-columns:repeat(2,1fr);}}
   .stat{
-    background:var(--panel);backdrop-filter:blur(10px);
+    background:var(--panel-solid);
     border:1px solid var(--border);border-radius:14px;padding:20px 18px;
     box-shadow:0 4px 16px rgba(18,48,62,0.06);
     transition:transform .22s cubic-bezier(.16,.84,.44,1), box-shadow .22s ease, border-color .22s ease;
@@ -206,7 +206,7 @@
   .release-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
   @media (max-width:900px){.release-grid{grid-template-columns:1fr;}}
   .release-card{
-    background:var(--panel);backdrop-filter:blur(10px);
+    background:var(--panel-solid);
     border:1px solid var(--border);border-top:3px solid var(--sea);
     border-radius:14px;padding:22px 24px;
     box-shadow:0 4px 16px rgba(18,48,62,0.06);
@@ -318,7 +318,7 @@
   @media (max-width:960px){.wire-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:640px){.wire-grid{grid-template-columns:1fr;}}
   .card{
-    background:var(--panel);backdrop-filter:blur(10px);
+    background:var(--panel-solid);
     border:1px solid var(--border);border-radius:14px;padding:22px;
     box-shadow:0 4px 16px rgba(18,48,62,0.06);
     transition:transform .2s ease, box-shadow .2s ease;
@@ -361,7 +361,7 @@
 
   /* ---------- breakthrough cards ---------- */
   .brk-card{
-    background:var(--panel);backdrop-filter:blur(10px);
+    background:var(--panel-solid);
     border:1px solid var(--border);border-left:3px solid var(--sand);
     border-radius:12px;padding:18px 20px;
     box-shadow:0 4px 16px rgba(18,48,62,0.05);
@@ -375,7 +375,7 @@
 
   /* ---------- footer ---------- */
   footer{
-    background:var(--panel);backdrop-filter:blur(10px);
+    background:var(--panel-solid);
     border-top:1px solid var(--border);
     padding:28px clamp(16px,4vw,48px) 130px;
     font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);line-height:1.8;

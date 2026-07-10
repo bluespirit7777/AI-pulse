@@ -13,7 +13,7 @@ html, body { overflow-x: clip; }
    halo on loose headings/tags that can't take a full backing without feeling
    heavy. */
 .intro-note {
-  background: var(--panel); backdrop-filter: blur(10px);
+  background: var(--panel-solid);
   border: 1px solid var(--border); border-radius: 12px;
   padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.05);
 }
@@ -21,7 +21,7 @@ html, body { overflow-x: clip; }
   text-shadow: 0 1px 3px rgba(250,253,254,.7), 0 0px 14px rgba(250,253,254,.55);
 }
 .map-summary {
-  background: var(--panel); backdrop-filter: blur(10px);
+  background: var(--panel-solid);
   border: 1px solid var(--border); border-radius: 12px;
   padding: 10px 16px; box-shadow: 0 4px 16px rgba(18,48,62,.05);
 }
@@ -81,7 +81,7 @@ html, body { overflow-x: clip; }
 .history-note { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); text-align: right; margin-top: 6px; max-width: 220px; }
 
 .map-frame {
-  position: relative; background: var(--panel); backdrop-filter: blur(10px);
+  position: relative; background: var(--panel-solid); backdrop-filter: blur(10px);
   border: 1px solid var(--border); border-radius: 18px; overflow: hidden;
   box-shadow: 0 8px 30px rgba(18,48,62,.09); margin-top: 12px;
 }
@@ -162,7 +162,7 @@ body.drawer-open { overflow: hidden; }
 
 /* ---------- three waves: real SVG waveforms ---------- */
 .wf-row {
-  background: var(--panel); backdrop-filter: blur(10px); border: 1px solid var(--border);
+  background: var(--panel-solid); border: 1px solid var(--border);
   border-radius: 14px; padding: 16px 20px; margin-bottom: 14px;
   box-shadow: 0 4px 16px rgba(18,48,62,.06);
 }
@@ -219,7 +219,7 @@ body.drawer-open { overflow: hidden; }
 .river-more-btn:hover { background: var(--foam); }
 .river-list {
   list-style: none; margin: 0; padding: 22px 24px 8px; position: relative;
-  background: var(--panel); backdrop-filter: blur(10px);
+  background: var(--panel-solid);
   border: 1px solid var(--border); border-radius: 16px;
   box-shadow: 0 6px 24px rgba(18,48,62,.07);
 }
@@ -260,7 +260,7 @@ body.drawer-open { overflow: hidden; }
 .tide-head { display: flex; justify-content: flex-end; margin-bottom: 4px; }
 .tide-range { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
 .tide-svg {
-  width: 100%; height: auto; display: block; background: var(--panel); backdrop-filter: blur(10px);
+  width: 100%; height: auto; display: block; background: var(--panel-solid);
   border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 4px 16px rgba(18,48,62,.06);
 }
 .tide-grid { stroke: var(--border); stroke-width: 1; }
