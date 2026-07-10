@@ -138,7 +138,7 @@
   .subnav{
     position:sticky;top:0;z-index:40;background:var(--panel-solid);
     border-bottom:1px solid var(--border);display:flex;gap:8px;padding:12px clamp(16px,4vw,48px);
-    overflow-x:auto;
+    overflow-x:auto;align-items:center;
   }
   .subnav a{
     font-family:var(--font-body);font-weight:600;font-size:12.5px;letter-spacing:.03em;white-space:nowrap;
@@ -147,6 +147,11 @@
     text-decoration:none;transition:background .2s ease, transform .15s ease;
   }
   .subnav a:hover{background:var(--teal);transform:translateY(-1px);}
+  .subnav-group{
+    font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-dim);white-space:nowrap;padding-left:2px;
+  }
+  .subnav-sep{width:1px;height:20px;background:var(--border-strong);flex-shrink:0;}
 
   /* ---------- layout ---------- */
   .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px);position:relative;z-index:2;}
@@ -411,19 +416,20 @@
     <div class="ticker" id="ticker"></div>
   </div>
 
-  <nav class="subnav">
+  <nav class="subnav" aria-label="Section navigation">
+    <span class="subnav-group">Pulse</span>
     <a href="#sec-map">Ocean map</a>
+    <a href="#sec-waves">Waves</a>
+    <a href="#sec-river">River</a>
+    <a href="#sec-tide">Tide</a>
+    <span class="subnav-sep" aria-hidden="true"></span>
+    <span class="subnav-group">Explore the depths</span>
     <a href="#sec-releases">Releases</a>
-    <a href="#sec-waves">Strongest waves</a>
-    <a href="#sec-river">Signal river</a>
-    <a href="#sec-leaderboard">Leaderboard</a>
-    <a href="#sec-market">Market share</a>
+    <a href="#sec-leaderboard">Models</a>
     <a href="#sec-media">Image &amp; video</a>
-    <a href="#sec-stocks">AI stocks</a>
-    <a href="#sec-compute">Compute &amp; chips</a>
-    <a href="#sec-wire">Big AI wire</a>
-    <a href="#sec-local">Local feed</a>
-    <a href="#sec-breakthrough">Breakthroughs</a>
+    <a href="#sec-stocks">Markets</a>
+    <a href="#sec-compute">Infrastructure</a>
+    <a href="#sec-local">Research</a>
   </nav>
 
   <div class="wrap">
@@ -485,17 +491,29 @@
     <section id="sec-river" style="padding-top:8px;">
       <div class="section-head">
         <h2>Signal river</h2>
-        <span class="tag">EVERYTHING CROSSING THE WIRE, BY SIGNIFICANCE</span>
+        <span class="tag">EVERY STORY CROSSING THE WIRE, NEWEST FIRST</span>
         <div class="rule"></div>
       </div>
-      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Duplicate stories are merged; dot size reflects significance. Filter by category.</p>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">The full chronological stream — duplicate reports of one event are merged into a single signal. Dot size reflects significance; filter by category, entity, or time.</p>
       <div id="river"></div>
     </section>
 
-    <!-- STATS STRIP -->
-    <section style="padding-top:8px;">
-      <div class="stats-strip" id="stats"></div>
+    <!-- 30-DAY TIDE -->
+    <section id="sec-tide" style="padding-top:8px;">
+      <div class="section-head">
+        <h2>The Tide</h2>
+        <span class="tag">DAILY SIGNAL VOLUME BY CATEGORY, AS HISTORY BUILDS</span>
+        <div class="rule"></div>
+      </div>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">A stacked view of how much moved in each category per day. It only plots days actually collected and shows its real available range — it never implies history that wasn't recorded.</p>
+      <div id="tide"></div>
     </section>
+
+    <!-- EXPLORE THE DEPTHS (curated + reference datasets) -->
+    <div class="depths-divider">
+      <h2>Explore the depths</h2>
+      <p>Curated rankings and reference datasets beneath the live pulse. Hand-maintained snapshots and live market data — each labelled with its source and freshness.</p>
+    </div>
 
     <!-- LEADERBOARD + MARKET SHARE -->
     <section id="sec-leaderboard" style="padding-top:8px;">
@@ -599,16 +617,6 @@
       </div>
     </section>
 
-    <!-- BIG AI WIRE -->
-    <section id="sec-wire">
-      <div class="section-head">
-        <h2>Big AI wire</h2>
-        <span class="tag">OPENAI · ANTHROPIC · GOOGLE · META · XAI · POLICY</span>
-        <div class="rule"></div>
-      </div>
-      <div class="wire-grid" id="wire"></div>
-    </section>
-
     <!-- LOCAL/OPEN + BREAKTHROUGHS -->
     <section id="sec-local">
       <div class="grid-2">
@@ -637,7 +645,7 @@
   </div>
 
   <footer>
-    <div><b>Wire, releases, local feed, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds and Yahoo Finance — every card links to its original source. <b>Leaderboard, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
+    <div><b>Waves, river, tide, releases, open-weight feed, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds and Yahoo Finance — every item links to its original source. <b>Leaderboard, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
     <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
   </footer>
 

@@ -5,6 +5,7 @@ import { loadLatest, loadEntities, loadRanges } from './data.js';
 import { createOceanMap } from './oceanmap.js';
 import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
+import { renderTide } from './tide.js';
 import { renderCurated, renderLive, animateBars } from './sections.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
 
@@ -84,6 +85,7 @@ async function boot() {
 
   renderDynamic();
   paintHistoryNote();
+  renderTide($('#tide'), ranges);
 
   if (entities && $('#ocean-map')) {
     map = createOceanMap($('#ocean-map'), entities);
@@ -101,6 +103,7 @@ async function boot() {
       ranges = freshRanges;
       renderDynamic();
       paintHistoryNote();
+      renderTide($('#tide'), ranges);
       applyRange(range);
     } catch (err) {
       console.warn('[data] refresh skipped', err.message);

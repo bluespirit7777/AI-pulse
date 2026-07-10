@@ -75,17 +75,10 @@ export function renderLive(data, now = Date.now()) {
       ${r.url ? `<div class="card-src"><span>${sourceChip('auto')} ${esc(r.sourceName || '')}</span><a class="src-link" href="${esc(r.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
     </div>`).join('') : `<p class="empty-state">No qualifying model or feature launches in the current window — this section only shows actual ships, not general lab news.</p>`);
 
-  // wire
-  setHTML('wire', (data.wire || []).map((c) => `
-    <div class="card">
-      <div class="card-top">
-        <div class="card-tag"><span class="tdot" style="background:${ACCENT[c.logoKey] || 'var(--ink-soft)'}"></span>${esc(c.org)}</div>
-        <span class="asof">${esc(c.date)}</span>
-      </div>
-      <h4>${esc(c.h)}</h4>
-      <p>${esc(c.p)}</p>
-      <div class="card-src"><span>${sourceChip('auto')} ${esc(c.sourceName || '')} ${verificationChip(c.verification)}</span>${c.url ? `<a class="src-link" href="${esc(c.url)}" target="_blank" rel="noopener">Read original</a>` : ''}</div>
-    </div>`).join(''));
+  // (The former "Big AI wire" section was removed — the Signal River now
+  //  carries the full chronological stream with filters, so a separate wire
+  //  grid was pure duplication. data.wire is still built for compatibility
+  //  but no longer rendered.)
 
   // open-weight feed
   const feed = data.feed || [];
