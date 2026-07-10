@@ -438,12 +438,15 @@
             <h2>The AI Ocean Map</h2>
             <span class="tag">WHERE THE ENERGY IS MOVING</span>
           </div>
-          <p class="lead intro-note">A depth map of the AI ecosystem — applications at the surface, silicon in the deep. Node <b>size</b> is curated importance; node <b>glow</b> is live activity from the signal feed. Hover, tap, or tab to a node for detail.</p>
+          <p class="lead intro-note">A depth map of the AI ecosystem — chips and infrastructure at the base, applications rising to the surface. Node <b>size</b> is curated importance; inner <b>glow</b> is live activity; the outer <b>ring</b> shows change versus the prior period. Hover, tap, or tab to a node for detail.</p>
         </div>
-        <div class="range-toggle" role="tablist" aria-label="Activity time range">
-          <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
-          <button class="range-btn" role="tab" aria-selected="false" data-range="7D">7D</button>
-          <button class="range-btn" role="tab" aria-selected="false" data-range="30D">30D</button>
+        <div>
+          <div class="range-toggle" role="tablist" aria-label="Activity time range">
+            <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
+            <button class="range-btn" role="tab" aria-selected="false" data-range="7D">7D</button>
+            <button class="range-btn" role="tab" aria-selected="false" data-range="30D">30D</button>
+          </div>
+          <div class="history-note" id="history-note"></div>
         </div>
       </div>
       <div id="ocean-map"></div>
@@ -452,6 +455,7 @@
         <span><i style="border-color:var(--teal);border-top-style:dashed"></i>partners with</span>
         <span><i style="border-color:var(--coral);border-top-style:dotted"></i>competes with</span>
         <span>◌ dashed node = no fresh signal</span>
+        <span>▲▼ ring = change vs prior period</span>
       </div>
     </section>
 

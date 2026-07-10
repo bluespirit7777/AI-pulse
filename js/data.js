@@ -1,6 +1,5 @@
-// Data loading + historical comparison. Everything degrades gracefully: the
-// site is fully functional with only latest.json, and history that doesn't
-// exist yet is reported honestly ("accumulating"), never fabricated.
+// Data loading. Everything degrades gracefully: the site is fully functional
+// with only latest.json; entities.json and range.json enrich it when present.
 
 const BUST = () => '?_=' + Date.now();
 
@@ -16,19 +15,13 @@ export async function loadEntities() {
   return res.json();
 }
 
-// UTC date string N days before `from` (default now), e.g. "2026-07-03".
-export function dayKey(daysAgo, from = new Date()) {
-  const d = new Date(from);
-  d.setUTCDate(d.getUTCDate() - daysAgo);
-  return d.toISOString().slice(0, 10);
-}
-
-// Returns the snapshot for N days ago, or null if that file doesn't exist yet.
-// A 404 is expected and NOT an error — it just means history hasn't reached
-// back that far.
-export async function loadSnapshot(daysAgo) {
+// data/range.json — real per-range (24H/7D/30D) stats built at fetch time
+// from compact event history (see scripts/lib/history.mjs). Absent/malformed
+// is not an error: the map falls back to "history accumulating" for every
+// range rather than failing.
+export async function loadRanges() {
   try {
-    const res = await fetch(`data/history/${dayKey(daysAgo)}.json` + BUST(), { cache: 'no-store' });
+    const res = await fetch('data/range.json' + BUST(), { cache: 'no-store' });
     if (!res.ok) return null;
     return await res.json();
   } catch {
@@ -36,16 +29,4 @@ export async function loadSnapshot(daysAgo) {
   }
 }
 
-// Per-entity activity delta between now and a snapshot. Returns {} if no
-// snapshot (caller shows "history accumulating").
-export function entityDelta(latestActivity, snapshot) {
-  if (!snapshot || !snapshot.entityActivity) return {};
-  const out = {};
-  for (const id of Object.keys(latestActivity || {})) {
-    out[id] = (latestActivity[id] || 0) - (snapshot.entityActivity[id] || 0);
-  }
-  return out;
-}
-
-// Maps a UI range key to a snapshot offset in days.
-export const RANGE_DAYS = { '24H': 1, '7D': 7, '30D': 30 };
+export const RANGE_KEYS = ['24H', '7D', '30D'];

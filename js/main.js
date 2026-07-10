@@ -1,7 +1,7 @@
 // Orchestrator: loads data, renders every section, wires the time-range toggle
 // and a silent periodic refresh. The site is fully functional with only
-// latest.json; entities.json and history/ enrich it when present.
-import { loadLatest, loadEntities, loadSnapshot, entityDelta, RANGE_DAYS } from './data.js';
+// latest.json; entities.json and range.json enrich it when present.
+import { loadLatest, loadEntities, loadRanges } from './data.js';
 import { createOceanMap } from './oceanmap.js';
 import { renderWaves } from './waves.js';
 import { renderRiver } from './river.js';
@@ -10,6 +10,7 @@ import { timeAgo, fmtSnapshot, $ } from './util.js';
 
 const REFRESH_MS = 10 * 60 * 1000; // silent re-fetch cadence
 let data = null;
+let ranges = null;
 let map = null;
 let range = '24H';
 
@@ -26,20 +27,30 @@ function paintUpdated() {
   if (stocksAsof) stocksAsof.textContent = fmtSnapshot(data.updatedAt);
 }
 
-async function applyRange(next) {
+function paintHistoryNote() {
+  const el = $('#history-note');
+  if (!el) return;
+  if (!ranges) { el.textContent = ''; return; }
+  const days = ranges.historyDepthDays;
+  el.textContent = days < 1
+    ? 'Range history just started collecting — comparisons will appear as data accumulates.'
+    : `${days} day${days === 1 ? '' : 's'} of range history collected so far.`;
+}
+
+function applyRange(next) {
   range = next;
   document.querySelectorAll('.range-btn').forEach((b) => {
     const on = b.dataset.range === range;
     b.classList.toggle('active', on);
     b.setAttribute('aria-selected', String(on));
   });
-  if (!map || !data) return;
-  const snap = await loadSnapshot(RANGE_DAYS[range]);
+  if (!map) return;
+  const r = ranges?.ranges?.[range];
   map.update({
-    activity: data.entityActivity || {},
-    delta: entityDelta(data.entityActivity, snap),
+    activity: r?.entityActivity || data.entityActivity || {},
+    delta: r?.entityDelta || {},
     rangeLabel: range,
-    historyAvailable: !!snap,
+    historyAvailable: !!r?.previousWindowComplete,
   });
 }
 
@@ -60,7 +71,7 @@ async function boot() {
 
   let entities = null;
   try {
-    [data, entities] = await Promise.all([loadLatest(), loadEntities()]);
+    [data, entities, ranges] = await Promise.all([loadLatest(), loadEntities(), loadRanges()]);
   } catch (err) {
     console.error('[data] load failed', err);
     const banner = $('#data-note');
@@ -72,22 +83,25 @@ async function boot() {
   }
 
   renderDynamic();
+  paintHistoryNote();
 
   if (entities && $('#ocean-map')) {
     map = createOceanMap($('#ocean-map'), entities);
     document.querySelectorAll('.range-btn').forEach((b) =>
       b.addEventListener('click', () => applyRange(b.dataset.range))
     );
-    await applyRange('24H');
+    applyRange('24H');
   }
 
   // silent refresh — keeps an open tab from going stale without a reload
   setInterval(async () => {
     try {
-      const fresh = await loadLatest();
+      const [fresh, freshRanges] = await Promise.all([loadLatest(), loadRanges()]);
       data = fresh;
+      ranges = freshRanges;
       renderDynamic();
-      await applyRange(range);
+      paintHistoryNote();
+      applyRange(range);
     } catch (err) {
       console.warn('[data] refresh skipped', err.message);
     }

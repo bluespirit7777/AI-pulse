@@ -31,7 +31,7 @@ export function createOceanMap(root, entities) {
     });
   });
 
-  let state = { activity: {}, delta: {}, rangeLabel: '24H', historyAvailable: false, maxAct: 1 };
+  let state = { activity: {}, delta: {}, rangeLabel: '24H', historyAvailable: false, maxAct: 1, maxAbsDelta: 1 };
 
   // ---- build static scaffolding once ----
   root.innerHTML = `
@@ -88,7 +88,9 @@ export function createOceanMap(root, entities) {
     g.innerHTML = `
       <circle class="node-glow" r="${p.r}" fill="var(--sea)" opacity="0"></circle>
       <circle class="node-ripple" r="${p.r}" fill="none" stroke="var(--sea)" stroke-width="1.5" opacity="0"></circle>
+      <circle class="node-ring" r="${p.r + 5}" fill="none" stroke="var(--coral)" stroke-width="2" opacity="0" stroke-dasharray="3 3"></circle>
       <circle class="node-core" r="${p.r}" fill="var(--panel-solid)" stroke="var(--deep)" stroke-width="2"></circle>
+      <text class="node-trend" x="${p.r - 2}" y="${-p.r + 4}" text-anchor="middle" opacity="0">▲</text>
       <text class="node-label" y="${p.r + 15}" text-anchor="middle">${esc(n.name)}</text>
     `;
     gNodes.appendChild(g);
@@ -146,6 +148,7 @@ export function createOceanMap(root, entities) {
         <button class="drawer-close" aria-label="Close details">✕</button>
         <div class="drawer-eyebrow">${esc(layerName)}</div>
         <h3 id="drawer-title">${esc(n.name)} <span class="drawer-org">${esc(orgLabel(n))}</span></h3>
+        ${n.version && n.version !== n.name ? `<div class="drawer-version">Current version: <b>${esc(n.version)}</b></div>` : ''}
         <div class="drawer-signal">
           <span class="drawer-count">${count}</span>
           <span class="drawer-count-lbl">recent signal${count === 1 ? '' : 's'} mention it · ${esc(state.rangeLabel)}</span>
@@ -191,9 +194,14 @@ export function createOceanMap(root, entities) {
   }
 
   function paint() {
-    let max = 1;
-    for (const n of nodes) max = Math.max(max, state.activity[n.id] || 0);
+    let max = 1, maxAbsDelta = 1;
+    for (const n of nodes) {
+      max = Math.max(max, state.activity[n.id] || 0);
+      const d = state.delta[n.id];
+      if (state.historyAvailable && d != null) maxAbsDelta = Math.max(maxAbsDelta, Math.abs(d));
+    }
     state.maxAct = max;
+    state.maxAbsDelta = maxAbsDelta;
     const ranked = nodes.slice().sort((a, b) => (state.activity[b.id] || 0) - (state.activity[a.id] || 0));
     const topActive = new Set(ranked.slice(0, 4).filter((n) => (state.activity[n.id] || 0) > 0).map((n) => n.id));
 
@@ -204,14 +212,41 @@ export function createOceanMap(root, entities) {
       const { count, norm } = actLevel(n.id);
       const glow = g.querySelector('.node-glow');
       const ripple = g.querySelector('.node-ripple');
+      const ring = g.querySelector('.node-ring');
+      const trend = g.querySelector('.node-trend');
       const core = g.querySelector('.node-core');
       const quiet = count === 0;
+      const d = state.historyAvailable ? state.delta[n.id] : null;
 
+      // inner brightness = activity in the SELECTED range (real, live)
       glow.setAttribute('r', p.r + 6 + norm * 22);
       glow.setAttribute('opacity', quiet ? 0 : (0.1 + norm * 0.3).toFixed(3));
-      core.setAttribute('stroke-dasharray', quiet ? '3 3' : ''); // fading = no fresh signal
+      core.setAttribute('stroke-dasharray', quiet ? '3 3' : ''); // dashed = no fresh signal this range
       core.setAttribute('opacity', quiet ? 0.6 : 1);
-      g.setAttribute('aria-label', `${n.name}${orgLabel(n) ? ', ' + orgLabel(n) : ''}. ${count} recent signal${count === 1 ? '' : 's'}, ${state.rangeLabel}. Activate for details.`);
+
+      // outer ring = change vs the equivalent PRIOR period; absent entirely
+      // when we don't yet have a complete prior window to compare against —
+      // never a fabricated "no change" ring.
+      if (d == null || d === 0) {
+        ring.setAttribute('opacity', 0);
+      } else {
+        const mag = clamp(Math.abs(d) / maxAbsDelta, 0.15, 1);
+        ring.setAttribute('stroke', d > 0 ? 'var(--coral)' : 'var(--sea)');
+        ring.setAttribute('stroke-width', (1.5 + mag * 2.5).toFixed(2));
+        ring.setAttribute('opacity', (0.35 + mag * 0.45).toFixed(3));
+      }
+
+      // trend marker = rising / falling; hidden when flat or accumulating
+      if (d == null || d === 0) {
+        trend.setAttribute('opacity', 0);
+      } else {
+        trend.textContent = d > 0 ? '▲' : '▼';
+        trend.setAttribute('fill', d > 0 ? 'var(--coral)' : 'var(--sea)');
+        trend.setAttribute('opacity', 1);
+      }
+
+      const deltaTxt = d == null ? ', trend accumulating' : d > 0 ? `, up ${d} vs prior ${state.rangeLabel}` : d < 0 ? `, down ${Math.abs(d)} vs prior ${state.rangeLabel}` : ', flat vs prior period';
+      g.setAttribute('aria-label', `${n.name}${orgLabel(n) ? ', ' + orgLabel(n) : ''}. ${count} recent signal${count === 1 ? '' : 's'}, ${state.rangeLabel}${deltaTxt}. Activate for details.`);
 
       // ripple: reuse SMIL only when motion is allowed and node is top-active
       ripple.innerHTML = '';
@@ -228,8 +263,12 @@ export function createOceanMap(root, entities) {
     const top = ranked.slice(0, 5).filter((n) => (state.activity[n.id] || 0) > 0);
     summary.innerHTML = top.length
       ? `<span class="ms-h">Most active now (${esc(state.rangeLabel)}):</span> ` +
-        top.map((n) => `${esc(n.name)} <b>${state.activity[n.id]}</b>`).join(' · ') +
-        (state.historyAvailable ? '' : ` <span class="ms-note">· ${esc(state.rangeLabel)} change accumulating</span>`)
+        top.map((n) => {
+          const d = state.historyAvailable ? state.delta[n.id] : null;
+          const trendTxt = d == null ? '' : d > 0 ? ` (▲${d})` : d < 0 ? ` (▼${Math.abs(d)})` : ' (flat)';
+          return `${esc(n.name)} <b>${state.activity[n.id]}</b>${trendTxt}`;
+        }).join(' · ') +
+        (state.historyAvailable ? '' : ` <span class="ms-note">· ${esc(state.rangeLabel)} trend accumulating</span>`)
       : `<span class="ms-note">No live signals matched tracked entities in this window.</span>`;
   }
 
