@@ -12,7 +12,7 @@
 // Entirely readable without animation: every peak has a title on hover/focus,
 // and activating the row opens a detail panel with the full story.
 import { esc, timeAgo } from './util.js';
-import { confidenceChip, freshnessChip } from './freshness.js';
+import { verificationChip, freshnessChip } from './freshness.js';
 import { VERIFICATION_LABEL, IMPACT_LABEL } from '../scripts/lib/signals.mjs';
 
 const FAMILY = {
@@ -92,7 +92,7 @@ export function renderWaveforms(root, allSignals = [], waves = [], now = Date.no
         </svg>
         <button class="wf-summary" aria-expanded="false">
           <span class="wf-title">${esc(w.title)}</span>
-          <span class="wf-meta">${freshnessChip(w.dateISO, now)} ${confidenceChip(w.verification === 'analysis' ? 'early' : w.sourceCount >= 3 ? 'strong' : w.sourceCount === 2 ? 'moderate' : 'early')} <span class="wf-impact">${esc(IMPACT_LABEL[w.impact] || w.impact)}</span></span>
+          <span class="wf-meta">${freshnessChip(w.dateISO, now)} ${verificationChip(w.verification)} <span class="wf-impact">${esc(IMPACT_LABEL[w.impact] || w.impact)}</span></span>
         </button>
         <div class="wf-detail" hidden></div>
       </article>`;

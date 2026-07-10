@@ -3,7 +3,7 @@
 // panels come from curated.js. Ported from the original inline script, with
 // freshness/provenance chips added.
 import { esc } from './util.js';
-import { freshnessChip, confidenceChip, sourceChip } from './freshness.js';
+import { freshnessChip, verificationChip, sourceChip } from './freshness.js';
 import * as C from './curated.js';
 
 const LOGO = {
@@ -84,7 +84,7 @@ export function renderLive(data, now = Date.now()) {
       </div>
       <h4>${esc(c.h)}</h4>
       <p>${esc(c.p)}</p>
-      <div class="card-src"><span>${sourceChip('auto')} ${esc(c.sourceName || '')}${c.sourceCount >= 2 ? ' ' + confidenceChip(c.sourceCount >= 3 ? 'strong' : 'moderate') : ''}</span>${c.url ? `<a class="src-link" href="${esc(c.url)}" target="_blank" rel="noopener">Read original</a>` : ''}</div>
+      <div class="card-src"><span>${sourceChip('auto')} ${esc(c.sourceName || '')} ${verificationChip(c.verification)}</span>${c.url ? `<a class="src-link" href="${esc(c.url)}" target="_blank" rel="noopener">Read original</a>` : ''}</div>
     </div>`).join(''));
 
   // open-weight feed

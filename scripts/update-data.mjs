@@ -218,40 +218,31 @@ async function main() {
   });
   const merged = dedupeMerge(categorized, { threshold: 0.34, nodes });
 
-  // 3) unified, scored signal stream — the spine of every section. Category
-  //    is taken from the cluster's representative (set in step 2, before
-  //    merging, so it already benefited from the category-match clustering
-  //    signal — no need to recompute).
+  // 3) enrich EVERY merged cluster once with significance/impact/verification/
+  //    entityIds — every downstream section (signals, releases, wire, feed,
+  //    breakthroughs) reads these same computed fields, so a story's
+  //    verification chip is never re-derived differently in different places.
+  for (const it of merged) {
+    it.significance = scoreSignificance(it, nodes, now);
+    it.impact = classifyImpact(it.significance);
+    it.verification = classifyVerification(it);
+    it.entityIds = matchEntities(`${it.title} ${it.desc}`, nodes).ids;
+    it.clusterId = stableId(it.link);
+  }
+
+  // 4) unified signal stream — the spine of the hero/waves/river.
   const signals = merged
-    .map((it) => {
-      const category = it.category;
-      const item = { ...it, category };
-      const significance = scoreSignificance(item, nodes, now);
-      const entityIds = matchEntities(`${it.title} ${it.desc}`, nodes).ids;
-      const clusterId = stableId(it.link);
-      return {
-        id: it.link,
-        clusterId,
-        title: it.title,
-        desc: it.desc,
-        url: it.link,
-        dateISO: new Date(it.date).toISOString(),
-        date: shortDate(it.date),
-        category,
-        catConfidence: it.catConfidence,
-        family: waveFamily(category),
-        significance,
-        impact: classifyImpact(significance),
-        verification: classifyVerification(item),
-        sourceCount: it.sourceCount,
-        sources: it.sources.map((s) => ({ name: s.sourceName, url: s.link })),
-        sourceName: it.sourceName,
-        entityIds,
-      };
-    })
+    .map((it) => ({
+      id: it.link, clusterId: it.clusterId, title: it.title, desc: it.desc, url: it.link,
+      dateISO: new Date(it.date).toISOString(), date: shortDate(it.date),
+      category: it.category, catConfidence: it.catConfidence, family: waveFamily(it.category),
+      significance: it.significance, impact: it.impact, verification: it.verification,
+      sourceCount: it.sourceCount, sources: it.sources.map((s) => ({ name: s.sourceName, url: s.link })),
+      sourceName: it.sourceName, entityIds: it.entityIds,
+    }))
     .sort((a, b) => b.significance - a.significance);
 
-  // 4) derive the existing detailed sections from the same merged stream —
+  // 5) derive the existing detailed sections from the same merged stream —
   //    every section reads the same underlying clusters, so a story never
   //    appears in one place miscategorized relative to another.
   const releasesByLab = {};
@@ -277,11 +268,13 @@ async function main() {
         h: truncate(top.title, 90), p: truncate(top.desc, 220) || top.title,
         items: list.slice(0, 3).map((it) => ({ n: truncate(it.title, 50), d: shortDate(it.date), note: it.sourceName })),
         url: top.link, sourceName: top.sourceName, sourceCount: top.sourceCount,
+        verification: top.verification, impact: top.impact,
       };
     });
 
   const wireCards = wire.slice(0, 8).map((it) => ({
     org: it.lab ? COMPANY_TAG[it.lab] : 'AI WIRE', logoKey: it.lab || 'other', date: shortDate(it.date),
+    verification: it.verification, impact: it.impact,
     h: truncate(it.title, 80), p: truncate(it.desc, 260) || it.title, url: it.link,
     sourceName: it.sourceName, sourceCount: it.sourceCount,
   }));
@@ -291,12 +284,13 @@ async function main() {
     return {
       name: truncate(it.title, 60), org: it.sourceName, date: shortDate(it.date), lic, licClass,
       desc: truncate(it.desc, 140) || 'Open-weight coverage — confirm exact license on the model card.',
-      url: it.link, sourceName: it.sourceName,
+      url: it.link, sourceName: it.sourceName, verification: it.verification, impact: it.impact,
     };
   });
 
   const brk = breakthroughs.slice(0, 6).map((it) => ({
     field: inferField(`${it.title} ${it.desc}`), date: shortDate(it.date),
+    verification: it.verification, impact: it.impact,
     h: truncate(it.title, 80), p: truncate(it.desc, 260) || it.title, url: it.link,
     sourceName: it.sourceName, sourceCount: it.sourceCount,
   }));

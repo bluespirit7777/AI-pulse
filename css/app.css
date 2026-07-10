@@ -58,9 +58,14 @@ html, body { overflow-x: clip; }
 .fr-curated { color: #8a6d3b; border-color: rgba(176,141,82,.5); border-style: dashed; }
 .fr-est { border-style: dashed; color: var(--ink-dim); }
 .fr-stale, .fr-old { color: var(--ink-dim); opacity: .85; }
-.cf-strong { color: #1f6f57; border-color: rgba(46,125,130,.5); }
-.cf-moderate { color: var(--sea); }
-.cf-early { color: var(--ink-dim); }
+.vf-official { color: #1f6f57; border-color: rgba(46,125,130,.5); }
+.vf-corroborated { color: var(--sea); }
+.vf-single { color: var(--ink-dim); }
+.vf-uncertain { color: var(--coral); border-style: dashed; }
+.vf-analysis { color: #8a6d3b; }
+.im-high { color: var(--coral); font-weight: 600; }
+.im-notable { color: var(--teal); }
+.im-emerging { color: var(--ink-dim); }
 
 /* ---------- ocean map hero ---------- */
 .hero { padding-top: 22px; }
@@ -189,7 +194,8 @@ body.drawer-open { overflow: hidden; }
 @media (max-width: 640px) { .wf-svg { height: 60px; } }
 
 /* ---------- signal river ---------- */
-.river-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.river-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 8px; }
+.river-filters { display: flex; flex-wrap: wrap; gap: 6px; }
 .river-filter {
   font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em; color: var(--ink-soft);
   background: var(--panel-solid); border: 1px solid var(--border); border-radius: 18px;
@@ -197,6 +203,20 @@ body.drawer-open { overflow: hidden; }
 }
 .river-filter:hover { border-color: var(--border-strong); color: var(--deep); }
 .river-filter.active { background: var(--deep); color: #fff; border-color: var(--deep); }
+.river-filters-time .river-filter.active { background: var(--sea); border-color: var(--sea); }
+.river-entity-select {
+  font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);
+  background: var(--panel-solid); border: 1px solid var(--border); border-radius: 18px;
+  padding: 5px 12px; cursor: pointer;
+}
+.river-count { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); margin: 0 0 14px; }
+.river-more { text-align: center; margin-top: 16px; }
+.river-more-btn {
+  font-family: var(--font-mono); font-size: 11.5px; color: var(--teal); background: var(--panel-solid);
+  border: 1px solid var(--border-strong); border-radius: 20px; padding: 8px 20px; cursor: pointer;
+  transition: background .16s;
+}
+.river-more-btn:hover { background: var(--foam); }
 .river-list {
   list-style: none; margin: 0; padding: 22px 24px 8px; position: relative;
   background: var(--panel); backdrop-filter: blur(10px);

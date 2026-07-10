@@ -13,11 +13,21 @@ export const SOURCE = {
   stale: { label: 'Stale', cls: 'fr-stale', mark: '○', desc: 'Older than the usual refresh window' },
 };
 
-// Corroboration tier from how many independent sources carried a story.
-export const CONFIDENCE = {
-  strong: { label: 'Strong signal', cls: 'cf-strong', desc: '3+ independent sources' },
-  moderate: { label: 'Moderate signal', cls: 'cf-moderate', desc: '2 independent sources' },
-  early: { label: 'Early signal', cls: 'cf-early', desc: 'Single source so far' },
+// Verification (source reliability) and impact (event magnitude) are
+// deliberately separate axes — see classifyVerification/classifyImpact in
+// scripts/lib/signals.mjs for the full rule set. Never derive one from the
+// other here; always pass the real field the backend computed.
+export const VERIFICATION = {
+  official: { label: 'Official', cls: 'vf-official', desc: 'Reported by the subject’s own channel' },
+  corroborated: { label: 'Corroborated', cls: 'vf-corroborated', desc: '2+ independent sources agree' },
+  single: { label: 'Single report', cls: 'vf-single', desc: 'One source so far, not yet corroborated' },
+  uncertain: { label: 'Uncertain', cls: 'vf-uncertain', desc: 'Hedged or unconfirmed language in the reporting' },
+  analysis: { label: 'Analysis', cls: 'vf-analysis', desc: 'Commentary or opinion, not a reported fact' },
+};
+export const IMPACT = {
+  high: { label: 'High impact', cls: 'im-high' },
+  notable: { label: 'Notable', cls: 'im-notable' },
+  emerging: { label: 'Emerging', cls: 'im-emerging' },
 };
 
 // A provenance chip. `type` is a SOURCE key.
@@ -27,10 +37,16 @@ export function sourceChip(type, extra = '') {
   return `<span class="fr-chip ${s.cls}" title="${esc(title)}"><span class="fr-mark" aria-hidden="true">${s.mark}</span>${esc(s.label)}</span>`;
 }
 
-// A confidence chip. `tier` is a CONFIDENCE key.
-export function confidenceChip(tier) {
-  const c = CONFIDENCE[tier] || CONFIDENCE.early;
-  return `<span class="fr-chip ${c.cls}" title="${esc(c.desc)}">${esc(c.label)}</span>`;
+// A verification chip. `tier` is a VERIFICATION key.
+export function verificationChip(tier) {
+  const v = VERIFICATION[tier] || VERIFICATION.single;
+  return `<span class="fr-chip ${v.cls}" title="${esc(v.desc)}">${esc(v.label)}</span>`;
+}
+
+// An impact chip. `tier` is an IMPACT key.
+export function impactChip(tier) {
+  const i = IMPACT[tier] || IMPACT.emerging;
+  return `<span class="fr-chip ${i.cls}">${esc(i.label)}</span>`;
 }
 
 // "Updated 4 min ago" chip whose halo brightness reflects age (bright < 1h,
