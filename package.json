@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/update-data.mjs",
     "validate": "node scripts/validate.mjs",
-    "test": "node --test test/signals.test.mjs test/history.test.mjs",
+    "test": "node --test test/signals.test.mjs test/history.test.mjs test/stocks.test.mjs",
     "check": "npm run validate && npm test"
   },
   "engines": {

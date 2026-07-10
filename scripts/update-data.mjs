@@ -23,12 +23,14 @@ import {
   computeEntityActivity,
   buildWaves,
 } from './lib/signals.mjs';
+import { computeReturns, correlationPairs, relativeVolume, average, direction } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const OUT_PATH = path.join(DATA_DIR, 'latest.json');
 const RANGES_PATH = path.join(DATA_DIR, 'range.json');
+const STOCKNET_PATH = path.join(DATA_DIR, 'stock-network.json');
 const ENTITIES_PATH = path.join(DATA_DIR, 'entities.json');
 const HISTORY_DIR = path.join(DATA_DIR, 'history');
 const EVENTS_DIR = path.join(HISTORY_DIR, 'events');
@@ -57,17 +59,44 @@ const FEEDS = [
   { url: 'https://www.technologyreview.com/topic/artificial-intelligence/feed', name: 'MIT Technology Review', logoKey: 'other' },
 ];
 
+// `shares` = approximate shares outstanding in billions (curated, changes only
+// quarterly). Market cap is computed as shares × live price — a real, current
+// figure that updates with price, NOT fabricated. `netLayer` places the stock
+// in the ecosystem depth map: 1 platforms/software · 2 cloud/compute ·
+// 3 chips/networking · 4 foundry.
 const STOCKS = [
-  { t: 'NVDA', n: 'Nvidia', layer: 'Chips', signal: 'Dominant AI GPU stack — data center is the majority of revenue' },
-  { t: 'MSFT', n: 'Microsoft', layer: 'Cloud', signal: 'Azure AI + Copilot pushed across the whole product line' },
-  { t: 'AVGO', n: 'Broadcom', layer: 'Chips', signal: 'Custom AI XPUs for hyperscalers plus AI networking silicon' },
-  { t: 'GOOGL', n: 'Alphabet', layer: 'Cloud', signal: 'Gemini and in-house TPUs across search, cloud and devices' },
-  { t: 'AMZN', n: 'Amazon', layer: 'Cloud', signal: 'Custom Trainium chips and AWS Bedrock model hosting' },
-  { t: 'META', n: 'Meta', layer: 'Software', signal: 'Ad-ranking AI and in-house frontier model efforts' },
-  { t: 'TSM', n: 'TSMC', layer: 'Foundry', signal: 'Manufactures advanced-node chips for Nvidia, AMD and Apple' },
-  { t: 'AMD', n: 'AMD', layer: 'Chips', signal: 'Instinct GPU line chasing Nvidia’s ecosystem lead' },
-  { t: 'PLTR', n: 'Palantir', layer: 'Software', signal: 'AIP platform adoption across government and enterprise' },
-  { t: 'ORCL', n: 'Oracle', layer: 'Cloud', signal: 'Large-scale cloud compute deals with frontier AI labs' },
+  { t: 'NVDA', n: 'Nvidia', layer: 'Chips', netLayer: 3, shares: 24.4, signal: 'Dominant AI GPU stack — data center is the majority of revenue' },
+  { t: 'MSFT', n: 'Microsoft', layer: 'Cloud', netLayer: 2, shares: 7.43, signal: 'Azure AI + Copilot pushed across the whole product line' },
+  { t: 'AVGO', n: 'Broadcom', layer: 'Chips', netLayer: 3, shares: 4.92, signal: 'Custom AI XPUs for hyperscalers plus AI networking silicon' },
+  { t: 'GOOGL', n: 'Alphabet', layer: 'Cloud', netLayer: 2, shares: 12.2, signal: 'Gemini and in-house TPUs across search, cloud and devices' },
+  { t: 'AMZN', n: 'Amazon', layer: 'Cloud', netLayer: 2, shares: 10.7, signal: 'Custom Trainium chips and AWS Bedrock model hosting' },
+  { t: 'META', n: 'Meta', layer: 'Software', netLayer: 1, shares: 2.52, signal: 'Ad-ranking AI and in-house frontier model efforts' },
+  { t: 'TSM', n: 'TSMC', layer: 'Foundry', netLayer: 4, shares: 5.19, signal: 'Manufactures advanced-node chips for Nvidia, AMD and Apple' },
+  { t: 'AMD', n: 'AMD', layer: 'Chips', netLayer: 3, shares: 1.62, signal: 'Instinct GPU line chasing Nvidia’s ecosystem lead' },
+  { t: 'PLTR', n: 'Palantir', layer: 'Software', netLayer: 1, shares: 2.40, signal: 'AIP platform adoption across government and enterprise' },
+  { t: 'ORCL', n: 'Oracle', layer: 'Cloud', netLayer: 2, shares: 2.81, signal: 'Large-scale cloud compute deals with frontier AI labs' },
+];
+
+// Curated BUSINESS relationships (kept strictly separate from statistical price
+// correlations). from → to.
+const STOCK_RELS = [
+  { from: 'MSFT', to: 'NVDA', type: 'depends' }, { from: 'AMZN', to: 'NVDA', type: 'depends' },
+  { from: 'GOOGL', to: 'NVDA', type: 'depends' }, { from: 'ORCL', to: 'NVDA', type: 'depends' },
+  { from: 'META', to: 'NVDA', type: 'depends' }, { from: 'NVDA', to: 'TSM', type: 'depends' },
+  { from: 'AMD', to: 'TSM', type: 'depends' }, { from: 'AVGO', to: 'TSM', type: 'depends' },
+  { from: 'PLTR', to: 'MSFT', type: 'depends' },
+  { from: 'MSFT', to: 'AVGO', type: 'partner' }, { from: 'GOOGL', to: 'AVGO', type: 'partner' },
+  { from: 'AMZN', to: 'AVGO', type: 'partner' },
+  { from: 'NVDA', to: 'AMD', type: 'competes' }, { from: 'NVDA', to: 'AVGO', type: 'competes' },
+  { from: 'MSFT', to: 'GOOGL', type: 'competes' }, { from: 'MSFT', to: 'AMZN', type: 'competes' },
+  { from: 'GOOGL', to: 'AMZN', type: 'competes' },
+];
+
+const NET_LAYERS = [
+  { id: 1, name: 'Platforms & software' },
+  { id: 2, name: 'Cloud & compute' },
+  { id: 3, name: 'Chips & networking' },
+  { id: 4, name: 'Foundry' },
 ];
 
 async function fetchWithTimeout(url, opts = {}) {
@@ -211,7 +240,9 @@ async function fetchModelBuzz(m, now) {
 // ---------- stocks ----------
 async function fetchStock(meta) {
   try {
-    const res = await fetchWithTimeout(`https://query1.finance.yahoo.com/v8/finance/chart/${meta.t}?interval=1d&range=5d`);
+    // 3 months of daily bars — enough for a 30-day return correlation and a
+    // 20-day average volume, plus latest price/volume.
+    const res = await fetchWithTimeout(`https://query1.finance.yahoo.com/v8/finance/chart/${meta.t}?interval=1d&range=3mo`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const result = (await res.json())?.chart?.result?.[0];
     const m = result?.meta;
@@ -219,11 +250,64 @@ async function fetchStock(meta) {
     const price = m.regularMarketPrice;
     const prevClose = m.chartPreviousClose ?? m.previousClose;
     const changePct = prevClose ? ((price - prevClose) / prevClose) * 100 : null;
-    return { t: meta.t, n: m.longName || m.shortName || meta.n, layer: meta.layer, signal: meta.signal, price, changePct, url: `https://finance.yahoo.com/quote/${meta.t}` };
+
+    // build a date-sorted [{date, close, volume}] series (skip null bars)
+    const ts = result.timestamp || [];
+    const closes = result.indicators?.quote?.[0]?.close || [];
+    const vols = result.indicators?.quote?.[0]?.volume || [];
+    const series = [];
+    for (let i = 0; i < ts.length; i++) {
+      if (closes[i] == null) continue;
+      series.push({ date: new Date(ts[i] * 1000).toISOString().slice(0, 10), close: closes[i], volume: vols[i] ?? null });
+    }
+    return {
+      t: meta.t, n: m.longName || m.shortName || meta.n, layer: meta.layer, signal: meta.signal,
+      price, changePct, url: `https://finance.yahoo.com/quote/${meta.t}`,
+      volume: m.regularMarketVolume ?? (series.length ? series[series.length - 1].volume : null),
+      series,
+    };
   } catch (err) {
     console.error(`[stock] ${meta.t}: ${err.message}`);
-    return { t: meta.t, n: meta.n, layer: meta.layer, signal: meta.signal, price: null, changePct: null, url: `https://finance.yahoo.com/quote/${meta.t}` };
+    return { t: meta.t, n: meta.n, layer: meta.layer, signal: meta.signal, price: null, changePct: null, url: `https://finance.yahoo.com/quote/${meta.t}`, volume: null, series: [] };
   }
+}
+
+// Build data/stock-network.json from the fetched quotes: ecosystem nodes with
+// market cap (curated shares × live price), relative/dollar volume, plus the
+// 30-day price-return correlation pairs (|r| >= 0.5) and curated business
+// relationships. All heavy math happens here at build time, never in the browser.
+function buildStockNetwork(quotes, metaByTicker, now) {
+  const tickers = quotes.map((q) => q.t);
+  const returnsByTicker = {};
+  for (const q of quotes) if (q.series?.length) returnsByTicker[q.t] = computeReturns(q.series);
+
+  const correlations = correlationPairs(returnsByTicker, tickers, 30, 0.5);
+
+  const nodes = quotes.map((q) => {
+    const meta = metaByTicker[q.t] || {};
+    const vols = (q.series || []).map((r) => r.volume);
+    const relVol = relativeVolume(vols, 20);
+    const avg20 = average((q.series || []).slice(-21, -1).map((r) => r.volume));
+    const marketCap = meta.shares != null && q.price != null ? meta.shares * 1e9 * q.price : null;
+    return {
+      t: q.t, n: q.n, layer: q.layer, netLayer: meta.netLayer ?? 2, url: q.url, signal: q.signal,
+      price: q.price, changePct: q.changePct, direction: direction(q.changePct),
+      marketCap, volume: q.volume ?? null,
+      dollarVolume: q.volume != null && q.price != null ? q.volume * q.price : null,
+      avg20Volume: avg20, relVolume: relVol,
+    };
+  });
+
+  return {
+    updatedAt: new Date(now).toISOString(),
+    layers: NET_LAYERS,
+    correlationWindow: 30,
+    correlationThreshold: 0.5,
+    marketCapNote: 'Market cap = curated shares outstanding × live price (shares update quarterly).',
+    nodes,
+    correlations,
+    relationships: STOCK_RELS,
+  };
 }
 
 async function main() {
@@ -345,7 +429,11 @@ async function main() {
   }));
 
   console.log('Fetching stock quotes…');
-  const stocks = await Promise.all(STOCKS.map(fetchStock));
+  const quotes = await Promise.all(STOCKS.map(fetchStock));
+  const metaByTicker = Object.fromEntries(STOCKS.map((s) => [s.t, s]));
+  const stockNetwork = buildStockNetwork(quotes, metaByTicker, now);
+  // the latest.json table keeps just the compact per-stock fields (no history series)
+  const stocks = quotes.map(({ series, ...rest }) => rest);
 
   console.log('Fetching community discussion…');
   const community = await Promise.all(COMMUNITY_MODELS.map((m) => fetchModelBuzz(m, now)));
@@ -367,10 +455,12 @@ async function main() {
   await mkdir(DATA_DIR, { recursive: true });
   await writeFile(OUT_PATH, JSON.stringify(data, null, 2), 'utf-8');
   console.log(`Wrote ${OUT_PATH}`);
+  await writeFile(STOCKNET_PATH, JSON.stringify(stockNetwork, null, 2), 'utf-8');
+  console.log(`Wrote ${STOCKNET_PATH} (${stockNetwork.nodes.length} nodes, ${stockNetwork.correlations.length} correlations >= 0.5)`);
 
   await writeEventHistoryAndRanges(signals, nodes, now);
 
-  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.length}`);
+  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.length}, correlations: ${stockNetwork.correlations.length}`);
 }
 
 // Appends today's clustered signals to data/history/events/YYYY-MM-DD.json

@@ -119,12 +119,42 @@ async function main() {
     }
   }
 
+  // stock-network.json
+  let net;
+  try {
+    net = JSON.parse(await readFile(path.join(DATA_DIR, 'stock-network.json'), 'utf-8'));
+  } catch (e) {
+    fail(`stock-network.json missing or invalid: ${e.message}`);
+  }
+  if (net) {
+    if (!isArr(net.nodes) || net.nodes.length === 0) fail('stock-network.json: nodes missing/empty');
+    if (!isArr(net.correlations)) fail('stock-network.json: correlations must be an array');
+    if (!isArr(net.relationships)) fail('stock-network.json: relationships must be an array');
+    const tickers = new Set((net.nodes || []).map((n) => n.t));
+    (net.nodes || []).forEach((n, i) => {
+      if (!isStr(n.t)) fail(`stock-network node[${i}].t missing`);
+      if (![1, 2, 3, 4].includes(n.netLayer)) fail(`stock-network node[${i}].netLayer invalid`);
+      if (n.marketCap != null && !isNum(n.marketCap)) fail(`stock-network node[${i}].marketCap must be number or null`);
+      if (n.relVolume != null && !isNum(n.relVolume)) fail(`stock-network node[${i}].relVolume must be number or null`);
+      if (!['up', 'down', 'flat'].includes(n.direction)) fail(`stock-network node[${i}].direction invalid`);
+    });
+    (net.correlations || []).forEach((c, i) => {
+      if (!tickers.has(c.a) || !tickers.has(c.b)) fail(`stock-network correlation[${i}] references unknown ticker`);
+      if (!isNum(c.r) || Math.abs(c.r) < (net.correlationThreshold ?? 0.5) - 1e-9) fail(`stock-network correlation[${i}].r below threshold (must be pre-filtered)`);
+      if (!isNum(c.n) || c.n !== (net.correlationWindow ?? 30)) fail(`stock-network correlation[${i}].n must equal the ${net.correlationWindow ?? 30}-day window`);
+    });
+    (net.relationships || []).forEach((r, i) => {
+      if (!tickers.has(r.from) || !tickers.has(r.to)) fail(`stock-network relationship[${i}] references unknown ticker`);
+      if (!['depends', 'partner', 'competes'].includes(r.type)) fail(`stock-network relationship[${i}].type invalid`);
+    });
+  }
+
   if (errors.length) {
     console.error(`✗ validate.mjs: ${errors.length} problem(s):`);
     errors.forEach((e) => console.error('  -', e));
     process.exit(1);
   }
-  console.log(`✓ validate.mjs: latest.json OK (${data.signals.length} signals, ${data.waves.length} waves, ${data.stocks.length} stocks); range.json OK (${ranges.historyDepthDays}d history)`);
+  console.log(`✓ validate.mjs: latest.json OK (${data.signals.length} signals, ${data.waves.length} waves, ${data.stocks.length} stocks); range.json OK (${ranges.historyDepthDays}d history); stock-network.json OK (${net.nodes.length} nodes, ${net.correlations.length} correlations)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
