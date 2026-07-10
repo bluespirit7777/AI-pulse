@@ -6,6 +6,20 @@
 
 export const CURATED_ASOF = 'Jul 09 2026';
 
+// Editorial reception summaries for the top models, keyed to data.community[].key.
+// A computed sentiment score has no free live source, so this qualitative read
+// is hand-written and clearly chip-labelled "Curated" — it sits alongside the
+// LIVE Hacker-News discussion volume/threads, which auto-update. Keep these to
+// one defensible sentence each; edit and commit to update.
+export const RECEPTION_ASOF = 'Jul 10 2026';
+export const modelReception = {
+  claude: 'A developer favourite for agentic coding and long-context work; some report a higher cost per task.',
+  gpt: 'The broadest mainstream adoption and strong reasoning reviews, with mixed notes on verbosity in longer agentic runs.',
+  gemini: 'Reception is climbing as Gemini 3 rolls into Search and Workspace; praised for multimodal and very long context.',
+  grok: 'Polarising — fast-moving and competitive on some benchmarks, but reception is coloured by X-platform controversy.',
+  qwen: 'The open-weight darling of the local-LLM crowd; widely called the best self-hostable option for coders.',
+};
+
 export const leaderboard = [
   { rank: 1, model: 'Claude Opus 4.8', org: 'Anthropic', w: 100, stat: 'Tops Intelligence Index (61.4)', note: 'SWE-bench Pro 69.2% · computer-use 84% on Online-Mind2Web' },
   { rank: 2, model: 'GPT-5.5', org: 'OpenAI', w: 92, stat: 'Narrowly edged on the index', note: 'Strong agentic + math performance across evals' },

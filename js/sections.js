@@ -108,7 +108,7 @@ export function renderLive(data, now = Date.now()) {
       <td><a href="${esc(s.url)}" target="_blank" rel="noopener" class="ticker-cell" style="text-decoration:none;">${esc(s.t)}</a><span class="co-name">${esc(s.n)}</span></td>
       <td><span class="layer-pill ${layerClass[s.layer] || ''}">${esc(s.layer)}</span></td>
       <td class="metric-cell">${s.price != null ? '$' + Number(s.price).toFixed(2) : '—'}</td>
-      <td class="${up ? 'trend-up' : 'trend-down'}">${s.changePct != null ? (up ? '+' : '') + Number(s.changePct).toFixed(2) + '%' : '—'}</td>
+      <td class="${up ? 'stock-up' : 'stock-down'}">${s.changePct != null ? (up ? '+' : '') + Number(s.changePct).toFixed(2) + '%' : '—'}</td>
       <td class="signal-cell">${esc(s.signal || '')}</td>
     </tr>`;
   }).join(''));

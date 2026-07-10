@@ -147,6 +147,22 @@ collected; below 3 days it shows a "still filling" state.
 - No interpolation of missing history; no history implied before collection began.
 - Curated/estimated data is always chip-labelled as such.
 
+## Community pulse
+
+Developer-community feedback for the top models. Two honestly-separated parts:
+
+- **Live (auto):** discussion volume, total engagement, and the top threads per
+  model from the **Hacker News Algolia API** (free, no key) over the last 30
+  days. Real feedback you can click into and read. Sorted busiest-first.
+- **Curated:** a one-line editorial reception summary per model (in
+  [`js/curated.js`](../js/curated.js)), chip-labelled "Curated".
+
+Why hybrid: a computed sentiment score has **no reliable free live source** —
+Twitter/X and Reddit APIs are now paid/restricted, and sentiment-analysis APIs
+cost money. Rather than fabricate a score, the live part is honest discussion
+data (developer community) and broader "normal-user" reception is folded into
+the hand-written curated line.
+
 ## Curated datasets
 
 The leaderboard, image/video rankings, market-share donut, and compute pricing

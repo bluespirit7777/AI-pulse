@@ -318,6 +318,11 @@
   .trend-up{color:var(--coral);font-family:var(--font-mono);font-size:12px;}
   .trend-down{color:var(--teal);font-family:var(--font-mono);font-size:12px;}
   .trend-new{color:var(--sea);font-family:var(--font-mono);font-size:12px;}
+  /* stock day-change uses conventional finance colours: gains green, losses red
+     (the compute table keeps trend-up=coral because rising GPU prices are the
+     "bad" direction for buyers) */
+  .stock-up{color:#1f7a4d;font-family:var(--font-mono);font-size:12px;}
+  .stock-down{color:var(--coral);font-family:var(--font-mono);font-size:12px;}
 
   /* ---------- wire cards ---------- */
   .wire-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -433,6 +438,7 @@
     <a href="#sec-releases">Releases</a>
     <a href="#sec-leaderboard">Models</a>
     <a href="#sec-media">Image &amp; video</a>
+    <a href="#sec-community">Community</a>
     <a href="#sec-stocks">Markets</a>
     <a href="#sec-compute">Infrastructure</a>
     <a href="#sec-local">Research</a>
@@ -577,6 +583,17 @@
         </div>
 
       </div>
+    </section>
+
+    <!-- COMMUNITY PULSE -->
+    <section id="sec-community" style="padding-top:8px;">
+      <div class="section-head">
+        <h2>Community pulse</h2>
+        <span class="tag">WHAT PEOPLE ARE SAYING ABOUT THE TOP MODELS</span>
+        <div class="rule"></div>
+      </div>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Live developer discussion — volume, engagement, and the top threads to click into — pulled from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> each cycle. A one-line reception read per model is editorial and hand-updated (a computed sentiment score has no reliable free live source, so broader "normal user" reception is folded into that curated line).</p>
+      <div class="community-grid" id="community"></div>
     </section>
 
     <!-- AI STOCKS -->

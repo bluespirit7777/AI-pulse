@@ -6,6 +6,7 @@ import { createOceanMap } from './oceanmap.js';
 import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
 import { renderTide } from './tide.js';
+import { renderCommunity } from './community.js';
 import { renderCurated, renderLive, animateBars } from './sections.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
 
@@ -59,6 +60,7 @@ function renderDynamic() {
   renderLive(data);
   renderWaveforms($('#waves'), data.signals || [], data.waves || []);
   renderRiver($('#river'), data.signals || []);
+  renderCommunity($('#community'), data.community || []);
   animateBars();
   paintUpdated();
 }

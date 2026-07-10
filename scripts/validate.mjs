@@ -36,6 +36,22 @@ async function main() {
     if (!isArr(data[key])) fail(`${key} must be an array`);
   }
 
+  // community (optional — older snapshots won't have it)
+  if (data.community != null) {
+    if (!isArr(data.community)) fail('community must be an array');
+    (data.community || []).forEach((c, i) => {
+      if (!isStr(c.key)) fail(`community[${i}].key missing`);
+      if (!isStr(c.model)) fail(`community[${i}].model missing`);
+      if (!isNum(c.discussions) || c.discussions < 0) fail(`community[${i}].discussions invalid`);
+      if (!isNum(c.points) || c.points < 0) fail(`community[${i}].points invalid`);
+      if (!isArr(c.threads)) fail(`community[${i}].threads must be an array`);
+      (c.threads || []).forEach((t, j) => {
+        if (!isStr(t.title)) fail(`community[${i}].threads[${j}].title missing`);
+        if (!isStr(t.url)) fail(`community[${i}].threads[${j}].url missing`);
+      });
+    });
+  }
+
   // signals
   (data.signals || []).forEach((s, i) => {
     if (!isStr(s.title)) fail(`signals[${i}].title missing`);

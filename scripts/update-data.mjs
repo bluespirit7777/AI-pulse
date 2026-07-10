@@ -169,6 +169,45 @@ function truncate(s, n) {
   return s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s;
 }
 
+// ---------- community discussion (Hacker News Algolia — free, no key) ----------
+// Real developer-community feedback: discussion volume, total engagement, and
+// the top threads to click into. Keyed to the top frontier models. The `q` is
+// the single best keyword (HN Algolia does relevance matching, not boolean).
+const COMMUNITY_MODELS = [
+  { key: 'claude', model: 'Claude Opus 4.8', org: 'Anthropic', q: 'Claude' },
+  { key: 'gpt', model: 'GPT-5.5', org: 'OpenAI', q: 'ChatGPT' },
+  { key: 'gemini', model: 'Gemini 3.1 Pro', org: 'Google DeepMind', q: 'Gemini' },
+  { key: 'grok', model: 'Grok 4', org: 'xAI', q: 'Grok' },
+  { key: 'qwen', model: 'Qwen 3.7 Max', org: 'Alibaba', q: 'Qwen' },
+];
+
+async function fetchModelBuzz(m, now) {
+  const since = Math.floor(now / 1000) - 30 * 24 * 3600; // last 30 days
+  try {
+    const url = `https://hn.algolia.com/api/v1/search?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}&hitsPerPage=30`;
+    const res = await fetchWithTimeout(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    const hits = (j.hits || []).filter((h) => h.title);
+    const threads = hits
+      .slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 3)
+      .map((h) => ({
+        title: truncate(h.title, 95), points: h.points || 0, comments: h.num_comments || 0,
+        url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
+        date: shortDate(new Date((h.created_at_i || 0) * 1000)),
+      }));
+    return {
+      key: m.key, model: m.model, org: m.org,
+      discussions: j.nbHits || hits.length,
+      points: hits.reduce((s, h) => s + (h.points || 0), 0),
+      threads,
+    };
+  } catch (err) {
+    console.error(`[buzz] ${m.key}: ${err.message}`);
+    return { key: m.key, model: m.model, org: m.org, discussions: 0, points: 0, threads: [] };
+  }
+}
+
 // ---------- stocks ----------
 async function fetchStock(meta) {
   try {
@@ -308,6 +347,9 @@ async function main() {
   console.log('Fetching stock quotes…');
   const stocks = await Promise.all(STOCKS.map(fetchStock));
 
+  console.log('Fetching community discussion…');
+  const community = await Promise.all(COMMUNITY_MODELS.map((m) => fetchModelBuzz(m, now)));
+
   const data = {
     updatedAt: new Date().toISOString(),
     ticker,
@@ -319,6 +361,7 @@ async function main() {
     feed,
     breakthroughs: brk,
     stocks,
+    community,
   };
 
   await mkdir(DATA_DIR, { recursive: true });
@@ -327,7 +370,7 @@ async function main() {
 
   await writeEventHistoryAndRanges(signals, nodes, now);
 
-  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}`);
+  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.length}`);
 }
 
 // Appends today's clustered signals to data/history/events/YYYY-MM-DD.json
