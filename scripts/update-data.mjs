@@ -22,6 +22,8 @@ import {
   matchEntities,
   computeEntityActivity,
   buildWaves,
+  classifyTopics,
+  TOPICS,
 } from './lib/signals.mjs';
 import { computeReturns, correlationPairs, relativeVolume, average, direction } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
@@ -198,43 +200,96 @@ function truncate(s, n) {
   return s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s;
 }
 
-// ---------- community discussion (Hacker News Algolia — free, no key) ----------
-// Real developer-community feedback: discussion volume, total engagement, and
-// the top threads to click into. Keyed to the top frontier models. The `q` is
-// the single best keyword (HN Algolia does relevance matching, not boolean).
+// ---------- community pulse (Hacker News Algolia — free, no key) ----------
+// A model conversation map + representative public comments, built entirely at
+// build time. For each model family we pull recent STORIES (for discussion
+// volume) and recent COMMENTS (for topic themes + representative excerpts).
+// This is a SAMPLE of public developer discussion, not the whole community, and
+// it's labelled as such in the UI. `q` is the single best keyword.
 const COMMUNITY_MODELS = [
-  { key: 'claude', model: 'Claude Opus 4.8', org: 'Anthropic', q: 'Claude' },
-  { key: 'gpt', model: 'GPT-5.5', org: 'OpenAI', q: 'ChatGPT' },
-  { key: 'gemini', model: 'Gemini 3.1 Pro', org: 'Google DeepMind', q: 'Gemini' },
-  { key: 'grok', model: 'Grok 4', org: 'xAI', q: 'Grok' },
-  { key: 'qwen', model: 'Qwen 3.7 Max', org: 'Alibaba', q: 'Qwen' },
+  { key: 'gpt', model: 'GPT', version: 'GPT-5.5', org: 'OpenAI', q: 'ChatGPT' },
+  { key: 'claude', model: 'Claude', version: 'Claude Opus 4.8', org: 'Anthropic', q: 'Claude' },
+  { key: 'gemini', model: 'Gemini', version: 'Gemini 3.1 Pro', org: 'Google', q: 'Gemini' },
+  { key: 'grok', model: 'Grok', version: 'Grok 4', org: 'xAI', q: 'Grok' },
+  { key: 'llama', model: 'Llama', version: 'Llama 4', org: 'Meta', q: 'Llama' },
+  { key: 'deepseek', model: 'DeepSeek', version: 'DeepSeek V3.2', org: 'DeepSeek', q: 'DeepSeek' },
+  { key: 'qwen', model: 'Qwen', version: 'Qwen 3.7', org: 'Alibaba', q: 'Qwen' },
 ];
 
-async function fetchModelBuzz(m, now) {
-  const since = Math.floor(now / 1000) - 30 * 24 * 3600; // last 30 days
-  try {
-    const url = `https://hn.algolia.com/api/v1/search?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}&hitsPerPage=30`;
-    const res = await fetchWithTimeout(url);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const j = await res.json();
-    const hits = (j.hits || []).filter((h) => h.title);
-    const threads = hits
-      .slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 3)
-      .map((h) => ({
-        title: truncate(h.title, 95), points: h.points || 0, comments: h.num_comments || 0,
-        url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`,
-        date: shortDate(new Date((h.created_at_i || 0) * 1000)),
-      }));
-    return {
-      key: m.key, model: m.model, org: m.org,
-      discussions: j.nbHits || hits.length,
-      points: hits.reduce((s, h) => s + (h.points || 0), 0),
-      threads,
-    };
-  } catch (err) {
-    console.error(`[buzz] ${m.key}: ${err.message}`);
-    return { key: m.key, model: m.model, org: m.org, discussions: 0, points: 0, threads: [] };
+// Strip HTML/entities from an HN comment and cut to ~180 chars on word
+// boundaries. When a `focus` keyword is given and present, the window is
+// centred on it so the excerpt is actually about the model being discussed
+// (not a random opening sentence). HN comment_text is HTML; never rendered raw.
+function sanitizeExcerpt(html, max = 180, focus = '') {
+  const text = decodeEntities(html); // decodeEntities also strips tags
+  if (text.length <= max) return text;
+  let start = 0;
+  if (focus) {
+    const idx = text.toLowerCase().indexOf(focus.toLowerCase());
+    if (idx > max * 0.5) start = idx - Math.floor(max * 0.35);
   }
+  let slice = text.slice(start, start + max);
+  // trim to word boundaries on both ends
+  if (start > 0) { const s = slice.indexOf(' '); if (s > 0 && s < 25) slice = slice.slice(s + 1); }
+  const end = slice.lastIndexOf(' ');
+  if (end > max * 0.6) slice = slice.slice(0, end);
+  return (start > 0 ? '…' : '') + slice.trimEnd() + '…';
+}
+
+async function fetchModelCommunity(m, now) {
+  const since = Math.floor(now / 1000) - 30 * 24 * 3600; // last 30 days
+  const base = 'https://hn.algolia.com/api/v1/search';
+  const model = { key: m.key, model: m.model, version: m.version, org: m.org, mentionCount: 0, uniqueDiscussionCount: 0, points: 0, themes: [], topThreads: [] };
+  const comments = [];
+  try {
+    const [storiesRes, commentsRes] = await Promise.all([
+      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}&hitsPerPage=30`),
+      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=comment&numericFilters=created_at_i>${since}&hitsPerPage=60`),
+    ]);
+    if (storiesRes.ok) {
+      const sj = await storiesRes.json();
+      const hits = (sj.hits || []).filter((h) => h.title);
+      model.uniqueDiscussionCount = sj.nbHits || hits.length;
+      model.points = hits.reduce((s, h) => s + (h.points || 0), 0);
+      model.topThreads = hits.slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 2)
+        .map((h) => ({ title: truncate(h.title, 90), points: h.points || 0, comments: h.num_comments || 0, url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, date: shortDate(new Date((h.created_at_i || 0) * 1000)) }));
+    }
+    if (commentsRes.ok) {
+      const cj = await commentsRes.json();
+      const hits = (cj.hits || []).filter((h) => h.comment_text);
+      model.mentionCount = cj.nbHits || hits.length;
+      const themeCounts = {};
+      for (const h of hits) {
+        const topics = classifyTopics(h.comment_text);
+        for (const tid of topics) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
+      }
+      model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
+
+      // representative comments: pick the most substantive per theme, one theme
+      // each, so excerpts don't all make the same point.
+      const usedThemes = new Set();
+      const candidates = hits
+        .map((h) => ({ h, topics: classifyTopics(h.comment_text), len: (h.comment_text || '').length }))
+        .filter((c) => c.topics.length && c.len > 120)
+        .sort((a, b) => (b.h.points || 0) - (a.h.points || 0) || b.len - a.len);
+      for (const c of candidates) {
+        const theme = c.topics.find((t) => !usedThemes.has(t)) || c.topics[0];
+        if (usedThemes.has(theme)) continue;
+        usedThemes.add(theme);
+        comments.push({
+          modelId: m.key, theme,
+          excerpt: sanitizeExcerpt(c.h.comment_text, 180, m.q),
+          source: 'Hacker News', author: c.h.author || 'anon',
+          publishedAt: new Date((c.h.created_at_i || 0) * 1000).toISOString(),
+          url: `https://news.ycombinator.com/item?id=${c.h.objectID}`,
+        });
+        if (comments.length >= 4 * 1) break; // up to 4 per model
+      }
+    }
+  } catch (err) {
+    console.error(`[community] ${m.key}: ${err.message}`);
+  }
+  return { model, comments };
 }
 
 // ---------- stocks ----------
@@ -441,8 +496,15 @@ async function main() {
     marketCap: netByTicker[rest.t]?.marketCap ?? null,
   }));
 
-  console.log('Fetching community discussion…');
-  const community = await Promise.all(COMMUNITY_MODELS.map((m) => fetchModelBuzz(m, now)));
+  console.log('Fetching community pulse…');
+  const communityResults = await Promise.all(COMMUNITY_MODELS.map((m) => fetchModelCommunity(m, now)));
+  const community = {
+    updatedAt: new Date(now).toISOString(),
+    window: '30D',
+    source: 'Hacker News',
+    models: communityResults.map((r) => r.model),
+    comments: communityResults.flatMap((r) => r.comments),
+  };
 
   const data = {
     updatedAt: new Date().toISOString(),
@@ -466,7 +528,7 @@ async function main() {
 
   await writeEventHistoryAndRanges(signals, nodes, now);
 
-  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.length}, correlations: ${stockNetwork.correlations.length}`);
+  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.models.length} models / ${community.comments.length} comments, correlations: ${stockNetwork.correlations.length}`);
 }
 
 // Appends today's clustered signals to data/history/events/YYYY-MM-DD.json

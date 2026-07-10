@@ -8,7 +8,7 @@ import {
   phraseOverlap, properNounPhrases, categorize, waveFamily, detectLicense,
   inferField, matchEntities, recencyScore, scoreSignificance,
   classifyVerification, classifyImpact, computeEntityActivity, buildWaves,
-  isProductRelease, CATEGORIES,
+  isProductRelease, classifyTopics, CATEGORIES,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -74,6 +74,14 @@ test('categorize confidence is higher for unambiguous text than borderline text'
   const strong = categorize('OpenAI raises $40B in new funding round at $300B valuation, files for IPO');
   const weak = categorize('OpenAI shares an update');
   assert.ok(strong.confidence >= weak.confidence);
+});
+
+test('classifyTopics tags community discussion themes, multi-topic aware', () => {
+  const r = classifyTopics('The coding is great but the price is too expensive for local self-hosting');
+  assert.ok(r.includes('coding'));
+  assert.ok(r.includes('price'));
+  assert.ok(r.includes('local'));
+  assert.deepEqual(classifyTopics('a plain sentence about nothing in particular'), []);
 });
 
 test('all CATEGORIES are covered by waveFamily without throwing', () => {

@@ -357,6 +357,37 @@ export function inferField(text) {
   return 'Research';
 }
 
+// ---------- community discussion topics ----------
+// Plain-language themes people discuss about AI models. A comment can match
+// several. Used by the Community Pulse aggregation — topic/volume grouping is
+// preferred over a made-up positive/negative sentiment score.
+export const TOPICS = [
+  { id: 'coding', label: 'Coding' }, { id: 'reasoning', label: 'Reasoning' },
+  { id: 'writing', label: 'Writing' }, { id: 'speed', label: 'Speed' },
+  { id: 'price', label: 'Price' }, { id: 'reliability', label: 'Reliability' },
+  { id: 'context', label: 'Context limits' }, { id: 'multimodal', label: 'Image/video' },
+  { id: 'local', label: 'Local use' }, { id: 'safety', label: 'Safety' },
+];
+const TOPIC_RULES = {
+  coding: /\b(cod(e|ing)|program|developer|debug|refactor|swe|ide|repo|compiler|function|api)\b/i,
+  reasoning: /\b(reason|logic|math|proof|problem|think|chain.of.thought|deduc|inference)\b/i,
+  writing: /\b(writ(e|ing)|prose|essay|draft|grammar|style|copy|text generation)\b/i,
+  speed: /\b(speed|fast|slow|latency|throughput|tokens?\/s|response time|quick)\b/i,
+  price: /\b(pric(e|ing)|cost|cheap|expensive|\$\d|subscription|per token|budget|free tier)\b/i,
+  reliability: /\b(reliab|hallucinat|inaccurate|wrong answer|mistake|consistent|flaky|trust|accuracy)\b/i,
+  context: /\b(context (window|length|limit)|long context|token limit|memory|forgets|1m token)\b/i,
+  multimodal: /\b(image|video|vision|multimodal|picture|photo|diagram|screenshot|audio)\b/i,
+  local: /\b(local(ly)?|self.host|offline|gguf|ollama|quantiz|on.device|llama\.cpp|vram)\b/i,
+  safety: /\b(safety|alignment|jailbreak|refus|censor|guardrail|harmful|misuse)\b/i,
+};
+
+export function classifyTopics(text) {
+  const t = String(text || '');
+  const out = [];
+  for (const topic of TOPICS) if (TOPIC_RULES[topic.id].test(t)) out.push(topic.id);
+  return out;
+}
+
 // ---------- significance scoring ----------
 // Deterministic weighted blend in [0,100]. Documented in docs/METHODOLOGY.md.
 // Not a claim of objective importance — a transparent ranking heuristic.

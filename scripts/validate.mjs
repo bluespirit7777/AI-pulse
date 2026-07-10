@@ -36,22 +36,6 @@ async function main() {
     if (!isArr(data[key])) fail(`${key} must be an array`);
   }
 
-  // community (optional — older snapshots won't have it)
-  if (data.community != null) {
-    if (!isArr(data.community)) fail('community must be an array');
-    (data.community || []).forEach((c, i) => {
-      if (!isStr(c.key)) fail(`community[${i}].key missing`);
-      if (!isStr(c.model)) fail(`community[${i}].model missing`);
-      if (!isNum(c.discussions) || c.discussions < 0) fail(`community[${i}].discussions invalid`);
-      if (!isNum(c.points) || c.points < 0) fail(`community[${i}].points invalid`);
-      if (!isArr(c.threads)) fail(`community[${i}].threads must be an array`);
-      (c.threads || []).forEach((t, j) => {
-        if (!isStr(t.title)) fail(`community[${i}].threads[${j}].title missing`);
-        if (!isStr(t.url)) fail(`community[${i}].threads[${j}].url missing`);
-      });
-    });
-  }
-
   // signals
   (data.signals || []).forEach((s, i) => {
     if (!isStr(s.title)) fail(`signals[${i}].title missing`);
@@ -117,6 +101,26 @@ async function main() {
     if (ranges.dailyCategoryHistory && ranges.dailyCategoryHistory.length > Math.ceil(ranges.historyDepthDays) + 1) {
       fail('range.json: dailyCategoryHistory has more days than historyDepthDays claims — implies data before collection began');
     }
+  }
+
+  // community (object: { window, models[], comments[] })
+  if (data.community != null) {
+    const c = data.community;
+    if (!isArr(c.models)) fail('community.models must be an array');
+    if (!isArr(c.comments)) fail('community.comments must be an array');
+    const modelIds = new Set((c.models || []).map((m) => m.key));
+    (c.models || []).forEach((m, i) => {
+      if (!isStr(m.key)) fail(`community.models[${i}].key missing`);
+      if (!isNum(m.mentionCount) || m.mentionCount < 0) fail(`community.models[${i}].mentionCount invalid`);
+      if (!isArr(m.themes)) fail(`community.models[${i}].themes must be an array`);
+    });
+    (c.comments || []).forEach((cm, i) => {
+      if (!modelIds.has(cm.modelId)) fail(`community.comments[${i}].modelId unknown: ${cm.modelId}`);
+      if (!isStr(cm.excerpt)) fail(`community.comments[${i}].excerpt missing`);
+      if (cm.excerpt && cm.excerpt.length > 200) fail(`community.comments[${i}].excerpt too long (${cm.excerpt.length})`);
+      if (/<[a-z]/i.test(cm.excerpt || '')) fail(`community.comments[${i}].excerpt contains unsanitised HTML`);
+      if (!isStr(cm.url)) fail(`community.comments[${i}].url missing`);
+    });
   }
 
   // stock-network.json
