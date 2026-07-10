@@ -8,12 +8,14 @@ the HTML/CSS/JS. Everything works offline-of-server from plain files.
 
 ```
 publisher RSS + Yahoo Finance
-        │  (GitHub Actions, every ~30 min)
+        │  (GitHub Actions, :07 & :37 each hour)
         ▼
-scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs (pure, tested)
+scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification)
+                          └──uses──> scripts/lib/history.mjs (ranges, event history)
         │
-        ├─► data/latest.json              (current snapshot the page reads)
-        └─► data/history/YYYY-MM-DD.json   (one bounded snapshot per day)
+        ├─► data/latest.json                     (current data the page reads)
+        ├─► data/range.json                      (real 24H/7D/30D stats + daily category history)
+        └─► data/history/events/YYYY-MM-DD.json   (compact events, 60-day retention)
         │
         ▼  validate.mjs + node --test  (CI gate — bad data never commits)
         ▼
@@ -21,13 +23,14 @@ scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs (pure, tested)
         │
         ▼
 index.html ──module──> js/main.js
-        ├─ js/data.js        load latest + entities + history, deltas
-        ├─ js/sections.js    live + curated section renderers
+        ├─ js/data.js        load latest + entities + range.json
+        ├─ js/oceanmap.js    hero: SVG current-field map + drawer (real per-range data)
+        ├─ js/waveform.js    three strongest waves as SVG waveforms
+        ├─ js/river.js       signal river (chronological, filters, expand/archive)
+        ├─ js/tide.js        30-day stacked-area category volume
+        ├─ js/sections.js    live + curated detail sections
         ├─ js/curated.js     hand-maintained datasets
-        ├─ js/oceanmap.js    hero map (SVG) + drawer
-        ├─ js/waves.js       three strongest waves
-        ├─ js/river.js       signal river
-        └─ js/freshness.js   provenance/confidence/freshness chips
+        └─ js/freshness.js   provenance / verification / impact / freshness chips
 ```
 
 ## Files
@@ -35,15 +38,17 @@ index.html ──module──> js/main.js
 | Path | Role |
 |------|------|
 | `index.html` | Page shell + base styles (design tokens in `:root`). |
-| `css/app.css` | Styles for the Phase-1 components. |
+| `css/app.css` | Component styles. |
 | `js/*.js` | ES modules (no bundler, no framework — served as-is). |
 | `data/latest.json` | Current data. The site is fully functional with only this. |
+| `data/range.json` | Real per-range stats + daily category history. Optional — absence falls back to "accumulating". |
 | `data/entities.json` | Curated ecosystem map config (nodes + relationships). |
-| `data/history/*.json` | Daily snapshots for deltas. Optional — absence is handled. |
-| `scripts/update-data.mjs` | Fetch + score + write. |
-| `scripts/lib/signals.mjs` | Pure, deterministic, tested scoring logic. |
-| `scripts/validate.mjs` | Schema/sanity gate run in CI. |
-| `test/signals.test.mjs` | Unit tests (`node --test`). |
+| `data/history/events/*.json` | Compact daily event files (60-day retention) feeding range.json. |
+| `scripts/update-data.mjs` | Fetch → categorize → cluster → score → write. |
+| `scripts/lib/signals.mjs` | Pure, tested: clustering, categorization, scoring, verification/impact. |
+| `scripts/lib/history.mjs` | Pure, tested: event compaction + real per-range calculations. |
+| `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json + range.json). |
+| `test/*.test.mjs` | Unit tests (`node --test`). |
 | `.github/workflows/update-data.yml` | Scheduled fetch → validate → test → commit. |
 
 ## Design principles
@@ -62,9 +67,9 @@ index.html ──module──> js/main.js
 ## Local development
 
 ```
-npm run build      # fetch fresh data → data/latest.json + history
-npm run validate   # schema-check latest.json
-npm test           # unit tests
+npm run build      # fetch fresh data → latest.json + range.json + event history
+npm run validate   # schema-check latest.json + range.json
+npm test           # unit tests (signals + history)
 npm run check      # validate + test
 npx serve .        # or any static server; open http://localhost:3000
 ```
