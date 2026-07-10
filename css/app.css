@@ -381,3 +381,64 @@ body.drawer-open { overflow: hidden; }
 .waves-explain { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin: -6px 0 18px; text-shadow: var(--text-outline); }
 .waves-explain b { color: var(--deep); }
 .how-selected { margin-left: 4px; }
+
+/* ================= AI stock network ================= */
+.stocknet-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 10px; }
+.mode-toggle { display: inline-flex; gap: 4px; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 22px; padding: 3px; }
+.mode-btn { font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; color: var(--ink-soft); background: transparent; border: none; cursor: pointer; padding: 6px 14px; border-radius: 20px; transition: background .18s, color .18s; }
+.mode-btn:hover { color: var(--deep); }
+.mode-btn.active { background: #b0554a; color: #fff; }
+.table-toggle { font-family: var(--font-mono); font-size: 11px; color: var(--teal); background: var(--panel-solid); border: 1px solid var(--border); border-radius: 20px; padding: 6px 14px; cursor: pointer; }
+.table-toggle:hover { background: var(--foam); }
+.stocknet-asof { margin-left: auto; }
+.stocknet-note { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); margin: 0 0 10px; }
+.stocknet-disclaimer { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); line-height: 1.6; margin: 12px 2px 0; }
+.stocknet-disclaimer b { color: var(--ink-soft); }
+.stock-table-wrap { margin-top: 16px; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+
+.snet-frame { position: relative; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(18,48,62,.07); }
+.snet-svg { display: block; width: 100%; height: auto; }
+.snet-band-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; fill: var(--ink-dim); opacity: .8; }
+.snet-node { cursor: pointer; transition: opacity .25s; }
+.snet-node:focus { outline: none; }
+.snet-node:focus .snet-core, .snet-node:hover .snet-core { stroke: var(--teal); stroke-width: 3; }
+.snet-node.snet-selected .snet-core { stroke: var(--teal); stroke-width: 3.5; }
+.snet-ticker { font-family: var(--font-body); font-weight: 700; font-size: 12px; fill: var(--deep); paint-order: stroke; stroke: var(--panel-solid); stroke-width: 3px; stroke-linejoin: round; }
+.snet-dir { font-family: var(--font-mono); font-size: 9px; fill: var(--ink-dim); }
+.snet-conn path { transition: opacity .25s, stroke-width .25s; }
+.snet-corr-label { font-family: var(--font-mono); font-size: 11px; fill: var(--deep); paint-order: stroke; stroke: var(--panel-solid); stroke-width: 3px; transition: opacity .2s; }
+.snet-glow { transition: r .4s, opacity .4s; }
+@media (prefers-reduced-motion: no-preference) { .snet-pulse { animation: snetPulse 3s ease-in-out infinite; } }
+@keyframes snetPulse { 0%,100% { opacity: .18; } 50% { opacity: .45; } }
+.snet-tooltip { position: absolute; transform: translate(-50%, -135%); pointer-events: none; background: var(--deep); color: #fff; font-family: var(--font-body); font-size: 12px; padding: 7px 11px; border-radius: 9px; box-shadow: 0 6px 20px rgba(0,0,0,.25); z-index: 5; line-height: 1.4; white-space: nowrap; }
+.snet-tt-t { font-family: var(--font-mono); font-size: 10px; opacity: .75; }
+.snet-tt-m { font-family: var(--font-mono); font-size: 11px; color: var(--foam); }
+.snet-legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+.snet-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.snet-key-line { width: 20px; height: 0; display: inline-block; }
+.snet-summary { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin: 10px 2px 0; line-height: 1.6; }
+.snet-summary .ms-h { color: var(--deep); font-weight: 500; }
+
+/* stock network drawer (reuses .map-drawer visuals via shared classes) */
+.snet-drawer { position: fixed; inset: 0 0 0 auto; width: min(420px, 92vw); z-index: 60; background: var(--panel-solid); border-left: 1px solid var(--border-strong); box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto; animation: drawerIn .28s cubic-bezier(.16,.84,.44,1); }
+@media (prefers-reduced-motion: reduce) { .snet-drawer { animation: none; } }
+.snet-drawer h3 { font-family: var(--font-display); font-size: 25px; font-weight: 600; color: var(--deep); margin: 4px 0 14px; }
+.snet-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin-bottom: 16px; }
+.snet-facts span { font-family: var(--font-mono); font-size: 12.5px; color: var(--deep); }
+.snet-facts b { display: block; font-family: var(--font-body); font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-dim); font-weight: 600; margin-bottom: 1px; }
+.snet-block { margin-bottom: 16px; }
+.snet-block ul { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-direction: column; gap: 5px; font-size: 13px; color: var(--ink-soft); }
+.snet-corr { font-family: var(--font-mono); font-size: 11.5px; padding: 1px 6px; border-radius: 10px; }
+.snet-corr.pos { color: #1f6f57; background: rgba(46,125,130,.12); }
+.snet-corr.neg { color: var(--coral); background: rgba(192,106,92,.12); }
+.snet-caveat { display: block; font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); font-style: italic; margin-top: 6px; }
+.snet-meta { display: flex; flex-direction: column; gap: 4px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
+.snet-nia { font-family: var(--font-mono); font-size: 11px; color: var(--coral); margin: 8px 0 0; }
+
+@media (max-width: 640px) {
+  .snet-svg { min-height: 380px; }
+  .snet-ticker { font-size: 16px; }
+  .snet-band-label { font-size: 13px; }
+  .snet-drawer { width: 100vw; }
+  .snet-facts { grid-template-columns: 1fr; }
+}

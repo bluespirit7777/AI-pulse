@@ -109,6 +109,7 @@ export function renderLive(data, now = Date.now()) {
       <td><span class="layer-pill ${layerClass[s.layer] || ''}">${esc(s.layer)}</span></td>
       <td class="metric-cell">${s.price != null ? '$' + Number(s.price).toFixed(2) : '—'}</td>
       <td class="${up ? 'stock-up' : 'stock-down'}">${s.changePct != null ? (up ? '+' : '') + Number(s.changePct).toFixed(2) + '%' : '—'}</td>
+      <td class="metric-cell">${s.relVolume != null ? Number(s.relVolume).toFixed(2) + '×' : '—'}</td>
       <td class="signal-cell">${esc(s.signal || '')}</td>
     </tr>`;
   }).join(''));

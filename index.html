@@ -625,24 +625,31 @@
       <div class="community-grid" id="community"></div>
     </section>
 
-    <!-- AI STOCKS -->
-    <section id="sec-stocks">
-      <div class="panel">
-        <div class="panel-top">
-          <h3>Top 10 AI stocks</h3>
-          <span class="asof" id="stocks-asof">Loading…</span>
+    <!-- AI STOCK NETWORK -->
+    <section id="sec-stocks" style="padding-top:8px;">
+      <div class="section-ribbon section-ribbon--market">
+        <h2 class="section-ribbon__title">AI stock network</h2>
+        <p class="section-ribbon__descriptor">How the AI market is connected</p>
+      </div>
+      <div class="stocknet-controls">
+        <div class="mode-toggle" role="tablist" aria-label="Network view mode">
+          <button class="mode-btn active" role="tab" aria-selected="true" data-mode="ecosystem">Ecosystem</button>
+          <button class="mode-btn" role="tab" aria-selected="false" data-mode="market">Market motion</button>
         </div>
-        <div class="panel-note" style="margin-bottom:14px;">Live price &amp; daily change via Yahoo Finance · click a ticker for the full quote page · not investment advice</div>
+        <button class="table-toggle" id="stock-table-toggle" type="button" aria-expanded="false" aria-controls="stock-table-wrap">View as table</button>
+        <span class="stocknet-asof asof" id="stocks-asof">Loading…</span>
+      </div>
+      <p class="stocknet-note" id="stocknet-note"></p>
+      <div id="stock-network"></div>
+      <p class="stocknet-disclaimer">Node <b>size</b> = market cap (curated shares × live price) · inner <b>glow</b> = relative volume · outer <b>ring</b> = day change. <b>Ecosystem</b> shows curated business ties; <b>Market motion</b> shows 30-day price-return correlation (|r| ≥ 0.5) — correlation ≠ causation. Not investment advice.</p>
+      <div class="stock-table-wrap" id="stock-table-wrap" hidden>
         <div style="overflow-x:auto;">
           <table class="stock-table">
             <thead>
-              <tr><th>Ticker</th><th>Layer</th><th>Price</th><th>Day change</th><th>Signal</th></tr>
+              <tr><th>Ticker</th><th>Layer</th><th>Price</th><th>Day change</th><th>Rel. vol</th><th>Signal</th></tr>
             </thead>
             <tbody id="stocks"></tbody>
           </table>
-        </div>
-        <div class="callout" style="margin-top:16px;">
-          <b>Leader:</b> Nvidia's ~$4.7T market cap remains the single largest direct link between AI capital spending and realized revenue — but Broadcom (+51.8% 1yr) and Palantir (+1,058% over 3yr) are the sharpest movers in the group.
         </div>
       </div>
     </section>

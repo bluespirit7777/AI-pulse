@@ -1,12 +1,13 @@
 // Orchestrator: loads data, renders every section, wires the time-range toggle
 // and a silent periodic refresh. The site is fully functional with only
 // latest.json; entities.json and range.json enrich it when present.
-import { loadLatest, loadEntities, loadRanges } from './data.js';
+import { loadLatest, loadEntities, loadRanges, loadStockNetwork } from './data.js';
 import { createOceanMap } from './oceanmap.js';
 import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
 import { renderTide } from './tide.js';
 import { renderCommunity } from './community.js';
+import { createStockNetwork } from './stocknetwork.js';
 import { renderCurated, renderLive, animateBars } from './sections.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
 
@@ -19,6 +20,20 @@ let range = '24H';
 function tickClock() {
   const el = $('#clock');
   if (el) el.textContent = new Date().toLocaleTimeString('en-US', { hour12: false });
+}
+
+// "View as table" toggle for the stock network — reveals the accessible
+// stock table fallback without losing the network view.
+function wireTableToggle() {
+  const btn = $('#stock-table-toggle');
+  const wrap = $('#stock-table-wrap');
+  if (!btn || !wrap) return;
+  btn.addEventListener('click', () => {
+    const show = wrap.hidden;
+    wrap.hidden = !show;
+    btn.setAttribute('aria-expanded', String(show));
+    btn.textContent = show ? 'Hide table' : 'View as table';
+  });
 }
 
 // Ticker pause/play toggle for keyboard + touch users. Hover/focus pausing is
@@ -112,6 +127,12 @@ async function boot() {
     );
     applyRange('24H');
   }
+
+  // AI stock network (independent load — a failure here leaves the table fallback intact)
+  loadStockNetwork().then((net) => {
+    if ($('#stock-network')) createStockNetwork($('#stock-network'), net);
+  }).catch((err) => console.warn('[stocknet] load skipped', err.message));
+  wireTableToggle();
 
   // silent refresh — keeps an open tab from going stale without a reload
   setInterval(async () => {

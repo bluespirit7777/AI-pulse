@@ -432,8 +432,14 @@ async function main() {
   const quotes = await Promise.all(STOCKS.map(fetchStock));
   const metaByTicker = Object.fromEntries(STOCKS.map((s) => [s.t, s]));
   const stockNetwork = buildStockNetwork(quotes, metaByTicker, now);
-  // the latest.json table keeps just the compact per-stock fields (no history series)
-  const stocks = quotes.map(({ series, ...rest }) => rest);
+  // the latest.json table keeps compact per-stock fields (no history series) but
+  // gains relVolume + marketCap so the "View as table" fallback is self-sufficient
+  const netByTicker = Object.fromEntries(stockNetwork.nodes.map((n) => [n.t, n]));
+  const stocks = quotes.map(({ series, ...rest }) => ({
+    ...rest,
+    relVolume: netByTicker[rest.t]?.relVolume ?? null,
+    marketCap: netByTicker[rest.t]?.marketCap ?? null,
+  }));
 
   console.log('Fetching community discussion…');
   const community = await Promise.all(COMMUNITY_MODELS.map((m) => fetchModelBuzz(m, now)));

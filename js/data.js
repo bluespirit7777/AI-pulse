@@ -29,4 +29,17 @@ export async function loadRanges() {
   }
 }
 
+// data/stock-network.json — pre-built ecosystem nodes + correlations. Absent/
+// malformed is not fatal: the network shows an unavailable state and the table
+// fallback (from latest.json) still works.
+export async function loadStockNetwork() {
+  try {
+    const res = await fetch('data/stock-network.json' + BUST(), { cache: 'no-store' });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 export const RANGE_KEYS = ['24H', '7D', '30D'];
