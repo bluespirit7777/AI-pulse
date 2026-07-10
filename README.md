@@ -1,54 +1,89 @@
-# AI Market Pulse
+# AI Pulse
 
-A static AI-industry news/market snapshot site. Every card links back to its original source.
+**A living visual map of where AI energy is moving.** A quiet view of a loud
+industry: a calm, ocean-themed intelligence product — not a news dump — that
+helps a visitor see momentum, connections, and what changed, with every figure
+traceable to its source.
 
-## What's live vs. curated
+Live at **https://bluespirit7777.github.io/AI-pulse/**
 
-- **Live, refreshed automatically every ~30 min:** Big AI wire, Frontier releases, Local & open-weight feed, Breakthrough signals, AI stocks (price/change). Pulled from official publisher RSS feeds and Yahoo Finance — every card links to its original article or quote page.
-- **Curated snapshot, updated by hand:** Frontier leaderboard, Market share donut, Compute & chips pricing. No reliable free live API exists for these (benchmark rankings, web-traffic share, GPU rental pricing indexes), so they stay as periodically-updated numbers with links to the real public trackers (LMArena, Artificial Analysis, Similarweb, Cloudflare Radar, cloud-gpus.com). To refresh them, edit the `leaderboard`, `legend`, and `compute` arrays directly in the `<script>` block of `index.html`.
+## What it shows
+
+1. **The AI Ocean Map** — a depth map of ~20 entities across five layers
+   (applications → frontier models → open source → cloud/compute → chips). Node
+   **size** is curated importance; node **glow** is *live* activity computed from
+   the signal feed; lines show dependency/partnership/competition. Click any node
+   for detail. A 24H/7D/30D toggle shows change over time (and says so honestly
+   while history is still accumulating).
+2. **Today's Three Strongest Waves** — the top product, market, and research
+   story by a documented significance score.
+3. **Signal River** — a significance-weighted timeline of everything crossing the
+   wire, with merged duplicates and category filters.
+4. **Detailed evidence** below — frontier releases, leaderboard, image/video
+   rankings, market share, AI stocks, compute pricing, the AI wire, open-weight
+   feed, and breakthroughs.
+
+Every item carries a **freshness / confidence / provenance** chip
+(Live · Auto · Curated · Estimated, plus corroboration strength).
+
+## Live vs. curated
+
+- **Live (auto, ~every 30 min):** signals, waves, river, releases, wire,
+  open-weight feed, breakthroughs, stock prices, and the map's activity/glow —
+  from publisher RSS feeds and Yahoo Finance. Every card links to its source.
+- **Curated (by hand):** the leaderboard, image/video rankings, market-share
+  donut, compute pricing, and the map's node *importance/size* and relationships.
+  No reliable free live API exists for these. Edit
+  [`js/curated.js`](js/curated.js) and [`data/entities.json`](data/entities.json).
+
+## Documentation
+
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — data flow, files, principles.
+- [docs/METHODOLOGY.md](docs/METHODOLOGY.md) — scoring, waves, deltas, what we
+  deliberately don't do.
+- [docs/SCHEMA.md](docs/SCHEMA.md) — the JSON shapes.
 
 ## Local development
 
 ```
-node scripts/update-data.mjs   # fetches feeds + stock quotes, writes data/latest.json
-npx serve .                    # or any static file server
+npm run build      # fetch feeds + quotes → data/latest.json + daily snapshot
+npm run check      # validate schema + run unit tests
+npx serve .        # any static server; open the printed URL
 ```
 
-Open the served URL — the page fetches `data/latest.json` client-side.
+No API keys or secrets. The page is fully functional with only `data/latest.json`.
 
 ## Automation
 
-`.github/workflows/update-data.yml` runs `scripts/update-data.mjs` on a 30-minute
-GitHub Actions cron schedule and commits `data/latest.json` if it changed. No API
-keys or secrets are required — every data source used is either a public RSS feed
-or Yahoo Finance's no-key quote endpoint.
+[`.github/workflows/update-data.yml`](.github/workflows/update-data.yml) runs at
+:07 and :37 each hour: fetch → **validate + test** (bad data never commits) →
+commit `data/latest.json` and the day's `data/history/*.json` if changed.
+GitHub's built-in `GITHUB_TOKEN` handles the commit — no personal token needed.
 
 ## Deploying for free (GitHub Pages)
 
-1. Create a new **public** GitHub repo and push this folder to it:
-   ```
-   git remote add origin https://github.com/<you>/<repo>.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. In the repo, go to **Settings → Actions → General → Workflow permissions** and select
-   **"Read and write permissions"** (required so the scheduled workflow can commit
-   `data/latest.json` back to the repo).
-3. Go to **Settings → Pages**, set **Source** to **"Deploy from a branch"**, branch
-   `main`, folder `/ (root)`. Save.
-4. Your site will be live at `https://<you>.github.io/<repo>/` within a minute or two.
-5. Optionally trigger the first data refresh manually: **Actions → Update AI Market
-   Pulse data → Run workflow** (otherwise it runs automatically on the next
-   30-minute tick).
+1. Push to a **public** repo.
+2. **Settings → Actions → General → Workflow permissions** → **Read and write**.
+3. **Settings → Pages** → Source **Deploy from a branch**, `main`, `/ (root)`.
+4. Live at `https://<you>.github.io/<repo>/` within a minute or two.
+5. Optionally trigger the first run: **Actions → Update AI Market Pulse data →
+   Run workflow**.
 
-GitHub Pages and GitHub Actions are both free for public repositories. No server to
-maintain, no hosting bill.
+GitHub Pages + Actions are free for public repos — no server, no bill.
 
-## Notes / limits
+## Known limitations
 
-- Yahoo Finance's quote endpoint is unofficial and free but undocumented — it could
-  change or rate-limit without notice. Acceptable for a low-traffic hobby site.
-- RSS sources are official publisher feeds only (no Google News, which restricts its
-  RSS to personal feed-reader use).
-- Category detection (release vs. wire vs. open-weight vs. research) is keyword-based
-  and will occasionally misclassify a headline — it's a heuristic, not a guarantee.
+- History-based deltas (24H/7D/30D) only become meaningful once snapshots
+  accumulate; until then the map shows current activity and labels the gap.
+- Yahoo Finance's quote endpoint is unofficial/undocumented — fine for low
+  traffic, could rate-limit.
+- Categorization and entity matching are keyword heuristics and will
+  occasionally misfile a headline.
+- The ocean map is dense on very small screens; the always-present text summary
+  is the accessible fallback.
+
+## Phase 2 ideas
+
+Visitor lenses (Builder/Investor/Researcher/Creator over the same data), spike
+detection surfaced as "storms," per-entity history sparklines once enough
+snapshots exist, and richer connection provenance.
