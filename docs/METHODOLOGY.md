@@ -147,21 +147,51 @@ collected; below 3 days it shows a "still filling" state.
 - No interpolation of missing history; no history implied before collection began.
 - Curated/estimated data is always chip-labelled as such.
 
+## AI stock network
+
+Ten AI stocks as a deterministic ecosystem depth map (no force simulation).
+Node **size** = market cap, inner **glow** = relative volume, outer **ring** =
+day change. Two clearly-separated modes:
+
+- **Ecosystem** — curated business ties (depends / partners / competes).
+- **Market motion** — 30-day **price-return correlation**. All heavy math runs
+  in GitHub Actions (`scripts/lib/stocks.mjs`): daily simple returns from 3
+  months of closes, Pearson correlation over the last 30 trading days **present
+  in both series** (so a "30-day" number always means 30 observations),
+  filtered to |r| ≥ 0.5. Positive vs. negative is shown by solid vs. dashed
+  lines (not colour alone) and thickness = |r|.
+
+**Market cap** = curated shares outstanding × live price — a real, price-updating
+figure (shares change only quarterly), never fabricated; the endpoint that
+serves live market cap is auth-gated, so this is the honest alternative.
+**Relative volume** = latest volume / 20-day average (raw share volume isn't
+comparable across companies). Business relationships and price correlations are
+kept strictly separate, and *correlation ≠ causation* is stated wherever
+correlations appear. The accessible table remains behind "View as table".
+
 ## Community pulse
 
-Developer-community feedback for the top models. Two honestly-separated parts:
+A model conversation map + representative public comments — **not** a comment
+feed and **not** a sentiment score. Built entirely at fetch time from the free,
+no-key **Hacker News Algolia API**:
 
-- **Live (auto):** discussion volume, total engagement, and the top threads per
-  model from the **Hacker News Algolia API** (free, no key) over the last 30
-  days. Real feedback you can click into and read. Sorted busiest-first.
-- **Curated:** a one-line editorial reception summary per model (in
-  [`js/curated.js`](../js/curated.js)), chip-labelled "Curated".
+- **Mention volume** (bubble size) and **discussion count** per model family
+  from HN stories over 30 days.
+- **Topic themes** classified from HN *comments* across 10 plain-language topics
+  (coding, reasoning, writing, speed, price, reliability, context, image/video,
+  local, safety) — see `classifyTopics` in
+  [`scripts/lib/signals.mjs`](../scripts/lib/signals.mjs). Topic/volume grouping
+  is used instead of a made-up positive/negative score.
+- **Representative comments**: real HN excerpts, one per distinct theme (so they
+  don't repeat a point), **sanitised** (HTML stripped, entities decoded) and
+  truncated to ~180 chars centred on the model keyword so they stay on-topic;
+  each shows author, source, time and a direct link.
 
-Why hybrid: a computed sentiment score has **no reliable free live source** —
-Twitter/X and Reddit APIs are now paid/restricted, and sentiment-analysis APIs
-cost money. Rather than fabricate a score, the live part is honest discussion
-data (developer community) and broader "normal-user" reception is folded into
-the hand-written curated line.
+Why not a sentiment score: automated sentiment isn't objective truth, and the
+sources that would improve breadth (X, Reddit) are paid/restricted. The result
+is labelled a **sample** of public developer discussion, not the whole
+community. On partial source failure each model is independent (per-model
+try/catch), so one failure never blanks the section.
 
 ## Curated datasets
 

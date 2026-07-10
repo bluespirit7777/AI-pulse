@@ -41,15 +41,50 @@
   "feed":         [ … ],  // open-weight rows + verification, impact
   "breakthroughs":[ … ],  // research cards + verification, impact
   "stocks":       [ { "t": "NVDA", "n": "…", "layer": "Chips",
-                      "price": 201.76, "changePct": 2.11, "url": "https://…" } ]
+                      "price": 201.76, "changePct": 2.11, "relVolume": 0.59,
+                      "marketCap": 5.1e12, "url": "https://…" } ],  // "View as table" fallback
+
+  "community": {                          // conversation map + representative comments
+    "window": "30D", "source": "Hacker News", "updatedAt": "…",
+    "models": [ { "key": "claude", "model": "Claude", "version": "…", "org": "…",
+                  "mentionCount": 6785, "uniqueDiscussionCount": 1113, "points": 0,
+                  "themes": [ { "id": "coding", "label": "Coding", "count": 39 } ],
+                  "topThreads": [ { "title": "…", "points": 0, "url": "…", "date": "…" } ] } ],
+    "comments": [ { "modelId": "claude", "theme": "coding", "excerpt": "… ≤180 chars, sanitised …",
+                    "source": "Hacker News", "author": "…", "publishedAt": "…", "url": "https://news.ycombinator.com/item?id=…" } ]
+  }
 }
 ```
 
 `CATEGORIES` = `policy · capital · compute · opensource · research · market ·
-adoption · orggov · analysis · product · general`.
+adoption · orggov · analysis · product · general`. Community `TOPICS` =
+`coding · reasoning · writing · speed · price · reliability · context ·
+multimodal · local · safety`.
 
-The page is fully functional with only `latest.json`; range/history are
-enrichments.
+The page is fully functional with only `latest.json`; range/history/stock-network
+are enrichments.
+
+## `data/stock-network.json`
+
+Pre-built at fetch time (all correlation math in GitHub Actions, never the
+browser). Node size = market cap, glow = relative volume, ring = day change.
+
+```jsonc
+{
+  "updatedAt": "…", "correlationWindow": 30, "correlationThreshold": 0.5,
+  "marketCapNote": "Market cap = curated shares outstanding × live price (shares update quarterly).",
+  "layers": [ { "id": 1, "name": "Platforms & software" }, … ],   // 1 surface → 4 deep
+  "nodes": [ { "t": "NVDA", "n": "…", "netLayer": 3, "price": …, "changePct": …,
+               "direction": "up|flat|down", "marketCap": …, "volume": …,
+               "dollarVolume": …, "avg20Volume": …, "relVolume": …, "url": "…" } ],
+  "correlations": [ { "a": "TSM", "b": "AMD", "r": 0.78, "n": 30 } ],  // |r|>=0.5, price returns
+  "relationships": [ { "from": "NVDA", "to": "TSM", "type": "depends|partner|competes" } ]
+}
+```
+
+Business `relationships` (curated) are kept strictly separate from statistical
+`correlations` (price returns) — the UI never conflates them, and correlation ≠
+causation is stated wherever correlations appear.
 
 ## `data/range.json`
 

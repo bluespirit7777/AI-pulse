@@ -10,11 +10,13 @@ the HTML/CSS/JS. Everything works offline-of-server from plain files.
 publisher RSS + Yahoo Finance
         │  (GitHub Actions, :07 & :37 each hour)
         ▼
-scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification)
-                          └──uses──> scripts/lib/history.mjs (ranges, event history)
+scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification, topics)
+                          ├──uses──> scripts/lib/history.mjs (ranges, event history)
+                          └──uses──> scripts/lib/stocks.mjs  (returns, correlations, volumes)
         │
-        ├─► data/latest.json                     (current data the page reads)
+        ├─► data/latest.json                     (current data the page reads, incl. community)
         ├─► data/range.json                      (real 24H/7D/30D stats + daily category history)
+        ├─► data/stock-network.json              (ecosystem nodes + 30-day return correlations)
         └─► data/history/events/YYYY-MM-DD.json   (compact events, 60-day retention)
         │
         ▼  validate.mjs + node --test  (CI gate — bad data never commits)
@@ -23,15 +25,20 @@ scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, 
         │
         ▼
 index.html ──module──> js/main.js
-        ├─ js/data.js        load latest + entities + range.json
-        ├─ js/oceanmap.js    hero: SVG current-field map + drawer (real per-range data)
-        ├─ js/waveform.js    three strongest waves as SVG waveforms
-        ├─ js/river.js       signal river (chronological, filters, expand/archive)
-        ├─ js/tide.js        30-day stacked-area category volume
-        ├─ js/sections.js    live + curated detail sections
-        ├─ js/curated.js     hand-maintained datasets
-        └─ js/freshness.js   provenance / verification / impact / freshness chips
+        ├─ js/data.js          load latest + entities + range + stock-network
+        ├─ js/oceanmap.js      hero: SVG current-field map + drawer (real per-range data)
+        ├─ js/waveform.js      strongest waves as SVG waveforms (why-it-matters visible)
+        ├─ js/river.js         signal river (chronological, filters, expand/archive)
+        ├─ js/tide.js          30-day stacked-area category volume
+        ├─ js/stocknetwork.js  AI stock network: ecosystem + market-motion modes, drawer
+        ├─ js/community.js      model conversation map + representative comments
+        ├─ js/sections.js      live + curated detail sections (+ stock table fallback)
+        ├─ js/curated.js       hand-maintained datasets
+        └─ js/freshness.js     provenance / verification / impact / freshness chips
 ```
+The section headings use one reusable component (`.section-ribbon` in
+`css/app.css`); the top ticker pauses on hover/focus and offers a play/pause
+control (reduced-motion → manual scroll).
 
 ## Files
 
@@ -42,12 +49,14 @@ index.html ──module──> js/main.js
 | `js/*.js` | ES modules (no bundler, no framework — served as-is). |
 | `data/latest.json` | Current data. The site is fully functional with only this. |
 | `data/range.json` | Real per-range stats + daily category history. Optional — absence falls back to "accumulating". |
+| `data/stock-network.json` | Ecosystem nodes + 30-day return correlations. Optional — absence keeps the table fallback. |
 | `data/entities.json` | Curated ecosystem map config (nodes + relationships). |
 | `data/history/events/*.json` | Compact daily event files (60-day retention) feeding range.json. |
-| `scripts/update-data.mjs` | Fetch → categorize → cluster → score → write. |
-| `scripts/lib/signals.mjs` | Pure, tested: clustering, categorization, scoring, verification/impact. |
+| `scripts/update-data.mjs` | Fetch → categorize → cluster → score → correlate → write. |
+| `scripts/lib/signals.mjs` | Pure, tested: clustering, categorization, scoring, verification/impact, topics. |
 | `scripts/lib/history.mjs` | Pure, tested: event compaction + real per-range calculations. |
-| `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json + range.json). |
+| `scripts/lib/stocks.mjs` | Pure, tested: daily returns, Pearson correlation, relative/dollar volume. |
+| `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json + range.json + stock-network.json). |
 | `test/*.test.mjs` | Unit tests (`node --test`). |
 | `.github/workflows/update-data.yml` | Scheduled fetch → validate → test → commit. |
 

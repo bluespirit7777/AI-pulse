@@ -15,13 +15,18 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    the signal feed; lines show dependency/partnership/competition. Click any node
    for detail. A 24H/7D/30D toggle shows change over time (and says so honestly
    while history is still accumulating).
-2. **Today's Three Strongest Waves** — the top product, market, and research
-   story by a documented significance score.
-3. **Signal River** — a significance-weighted timeline of everything crossing the
-   wire, with merged duplicates and category filters.
-4. **Detailed evidence** below — frontier releases, leaderboard, image/video
-   rankings, market share, AI stocks, compute pricing, the AI wire, open-weight
-   feed, and breakthroughs.
+2. **Today's Strongest Waves** — the top product, market, and research story by
+   a documented significance score, each with a visible "why it matters".
+3. **Signal River** — a chronological (newest-first) timeline of everything
+   crossing the wire, with merged duplicates and category/entity/time filters.
+4. **AI Stock Network** — 10 AI stocks as an ecosystem depth map: node size =
+   market cap, glow = relative volume, ring = day change; toggle between curated
+   **business ties** and 30-day **price-return correlation** (kept separate).
+   Accessible table fallback.
+5. **Community Pulse** — a model conversation map (bubble size = mention volume)
+   with topic themes and real, sanitised HN comment excerpts you can filter.
+6. **Detailed evidence** below — frontier releases, leaderboard, image/video
+   rankings, market share, compute pricing, open-weight feed, and breakthroughs.
 
 Every item carries a **freshness / confidence / provenance** chip
 (Live · Auto · Curated · Estimated, plus corroboration strength).
