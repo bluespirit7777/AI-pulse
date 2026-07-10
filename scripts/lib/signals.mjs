@@ -109,6 +109,66 @@ function hoursBetween(a, b) {
   return Math.abs(new Date(a).getTime() - new Date(b).getTime()) / 3.6e6;
 }
 
+// ---------- explicit event extraction (for same-event clustering) ----------
+// A story's "event" is roughly (entity, action, object). Two reports are the
+// same event when they agree on the action AND share an object — even if the
+// wording barely overlaps ("shutting down Atlas" vs "the ChatGPT browser is
+// dead"). Conversely, two same-company stories with DIFFERENT actions (a launch
+// vs a shutdown) are different events and must not merge.
+const ACTION_RULES = [
+  ['shutdown', /\b(shut(s|ting)?\s?down|sunset(s|ting|ted)?|discontinu\w+|deprecat\w+|is (already )?dead|kill(s|ed|ing)?\b|retir(es|ed|ing)|shutter\w*)\b/i],
+  ['resign', /\b(resign\w*|steps?\s?down|stepping\s?down|departs?|departure|leaving|exits?\b)\b/i],
+  ['acquire', /\b(acqui\w+|buys?\b|bought|takeover|merge[sr]?)\b/i],
+  ['raise', /\b(raise[sd]?\b|funding round|series [a-e]\b|\bipo\b|valuation)\b/i],
+  ['invest', /\b(invests?|investment|takes? a stake|backs?\b)\b/i],
+  ['sue', /\b(sues?\b|lawsuit|sued|sanction\w*|court|antitrust)\b/i],
+  ['regulate', /\b(regulat\w+|ban(s|ned|ning)?\b|executive order|investigat\w+)\b/i],
+  ['partner', /\b(partner\w*|teams? up|collaborat\w+)\b/i],
+  ['launch', /\b(launch\w*|unveil\w*|introduc\w*|debuts?|ships?\b|rolls? out|now available|releas\w+)\b/i],
+  // NB: publish is verb-form only — "publishers"/"publisher" are nouns and must
+  // NOT trigger a research action (that mis-fire broke the copyright merge).
+  ['research', /\b(paper|preprint|study|studies|research(es|ed|ing)?|discover\w+|publish(es|ed|ing)?|findings)\b/i],
+];
+export function extractAction(text) {
+  const t = String(text || '');
+  for (const [action, re] of ACTION_RULES) if (re.test(t)) return action;
+  return null;
+}
+
+// Salient object tokens: domain nouns that identify WHAT an event is about,
+// plus multi-word proper names. "browser" is what links the two Atlas stories.
+const OBJECT_NOUNS = /\b(browser|chip|gpu|model|models|app|api|tool|agent|robot|humanoid|funding|ipo|lawsuit|copyright|license|privacy|studio|assistant|search|cloud|dataset|benchmark|voice|image|video|chatbot|silicon|foundry|datacenter|data center)\b/gi;
+export function salientObjects(title, desc = '') {
+  const objs = new Set();
+  for (const p of properNounPhrases(title)) objs.add(p);
+  const text = `${title} ${desc}`;
+  const m = text.match(OBJECT_NOUNS) || [];
+  for (const w of m) objs.add(w.toLowerCase().replace('data center', 'datacenter'));
+  return objs;
+}
+function objectOverlap(a, b) {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  for (const o of a) if (b.has(o)) inter++;
+  return inter / Math.min(a.size, b.size);
+}
+
+// Same-event verdict from action + object agreement. Returns:
+//   match    — same action + shared object → merge even with low text overlap
+//   conflict — different actions + weak object overlap → different events, block
+export function eventRelation(x, y) {
+  const ax = extractAction(`${x.title} ${x.desc || ''}`);
+  const ay = extractAction(`${y.title} ${y.desc || ''}`);
+  const ov = objectOverlap(salientObjects(x.title, x.desc), salientObjects(y.title, y.desc));
+  const sameAction = ax && ay && ax === ay;
+  const diffAction = ax && ay && ax !== ay;
+  return {
+    match: !!(sameAction && ov > 0),
+    conflict: !!(diffAction && ov < 0.6), // different action AND not clearly the same object
+    objectOverlap: ov,
+  };
+}
+
 // Composite same-event score in [0,1]. `nodes` is the entities list (for
 // entity-overlap); pass [] to skip that term. `x.category`/`y.category`, if
 // present, add a same-category bonus.
@@ -128,9 +188,9 @@ export function clusterScore(x, y, docFreq, totalDocs, nodes = []) {
   const descSim = weightedSimilarity(x.desc || '', y.desc || '', docFreq, totalDocs);
   const phraseSim = phraseOverlap(x.title, y.title);
   const contentSim = 0.5 * titleSim + 0.3 * phraseSim + 0.2 * descSim;
-  if (contentSim < MIN_CONTENT) return contentSim;
 
   const timeProx = clamp(1 - hoursBetween(x.date, y.date) / 48, 0, 1); // decays to 0 over 48h
+  const closeInTime = hoursBetween(x.date, y.date) <= 72;
   let entSim = 0;
   if (nodes.length) {
     const ex = matchEntities(`${x.title} ${x.desc || ''}`, nodes).ids;
@@ -141,9 +201,25 @@ export function clusterScore(x, y, docFreq, totalDocs, nodes = []) {
       entSim = inter / union.size;
     }
   }
+
+  // explicit event reasoning first — it both rescues real merges that text
+  // similarity misses and blocks spurious ones it would otherwise allow.
+  const ev = eventRelation(x, y);
+  if (ev.conflict) return Math.min(contentSim, 0.15);   // different actions on different objects → different events
+  // same event when action agrees + object shared, OR a distinctive object is
+  // clearly shared between the same entities near in time (the copyright/Atlas
+  // case where wording barely overlaps but the OBJECT is the same story).
+  if (closeInTime && (ev.match || (ev.objectOverlap >= 0.5 && entSim > 0))) return Math.max(contentSim, 0.55);
+
+  if (contentSim < MIN_CONTENT) return contentSim;
+
+  // Structural signals (same entity / time / category) may only AMPLIFY real
+  // textual overlap — never clear the bar alone. Scaling by contentSim means
+  // two different same-company stories (near-zero content) can't merge on
+  // entity+day+category, which was the "same-company false positive" bug.
   const catMatch = x.category && y.category && x.category === y.category ? 1 : 0;
   const structural = 0.4 * entSim + 0.35 * timeProx + 0.25 * catMatch;
-  return contentSim * 0.65 + structural * 0.35;
+  return contentSim + structural * Math.min(contentSim, 0.5) * 1.4;
 }
 
 // Groups items covering the same event using clusterScore. The earliest

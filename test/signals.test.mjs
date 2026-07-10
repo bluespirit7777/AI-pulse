@@ -8,7 +8,7 @@ import {
   phraseOverlap, properNounPhrases, categorize, waveFamily, detectLicense,
   inferField, matchEntities, recencyScore, scoreSignificance,
   classifyVerification, classifyImpact, computeEntityActivity, buildWaves,
-  isProductRelease, classifyTopics, CATEGORIES,
+  isProductRelease, classifyTopics, extractAction, eventRelation, CATEGORIES,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -278,6 +278,50 @@ test('clustering does NOT merge unrelated same-company, same-day stories (false-
   // every item must remain its own cluster — same entity/company is not
   // sufficient grounds to merge distinct stories
   assert.equal(merged.length, items.length);
+});
+
+test('extractAction identifies the canonical event action', () => {
+  assert.equal(extractAction('OpenAI is shutting down Atlas'), 'shutdown');
+  assert.equal(extractAction('The ChatGPT browser is already dead'), 'shutdown');
+  assert.equal(extractAction('OpenAI launches its new family of models'), 'launch');
+  assert.equal(extractAction('Fidji Simo steps down from OpenAI'), 'resign');
+  assert.equal(extractAction('Startup raises $100M Series B'), 'raise');
+});
+
+test('clustering MERGES the Atlas shutdown pair despite low text overlap (event extraction)', () => {
+  const items = [
+    mkItem('OpenAI is shutting down Atlas, but its AI browser ambitions are still growing',
+      'OpenAI is sunsetting its AI-powered browser after less than a year.',
+      '2026-07-09T22:03:54Z', 'TechCrunch', 'product'),
+    mkItem('The ChatGPT browser is already dead',
+      'OpenAI’s AI browser experiment is over; the company is shutting it down.',
+      '2026-07-09T23:10:00Z', 'The Verge', 'product'),
+  ];
+  const merged = dedupeMerge(items, { threshold: 0.34, nodes: REAL_ENTITIES });
+  assert.equal(merged.length, 1, 'same shutdown event should be one cluster');
+  assert.equal(merged[0].sourceCount, 2);
+});
+
+test('clustering KEEPS GPT-5.6 launch and Codex/ChatGPT-Work separate (different objects)', () => {
+  const items = [
+    mkItem('OpenAI launches its new family of models with GPT-5.6',
+      "OpenAI's latest family of models promises improvements across a range of areas.",
+      '2026-07-09T22:24:24Z', 'TechCrunch', 'product'),
+    mkItem('OpenAI wants its new tool to do your work for you and with you',
+      'Rebranded Codex promises independent workflows that can run for hours.',
+      '2026-07-09T21:25:55Z', 'Ars Technica', 'product'),
+  ];
+  const merged = dedupeMerge(items, { threshold: 0.34, nodes: REAL_ENTITIES });
+  assert.equal(merged.length, 2, 'different product announcements must not merge');
+});
+
+test('eventRelation: conflict on different actions, match on same action + shared object', () => {
+  const launch = { title: 'OpenAI launches GPT-5.6', desc: '', date: new Date() };
+  const shutdown = { title: 'OpenAI is shutting down its browser', desc: '', date: new Date() };
+  assert.equal(eventRelation(launch, shutdown).conflict, true);
+  const a = { title: 'OpenAI shutting down Atlas browser', desc: '', date: new Date() };
+  const b = { title: 'The ChatGPT browser is dead', desc: 'shutting it down', date: new Date() };
+  assert.equal(eventRelation(a, b).match, true);
 });
 
 test('clusterScore gates structural signals behind a minimum content-overlap floor', () => {
