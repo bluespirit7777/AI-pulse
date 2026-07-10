@@ -67,7 +67,7 @@
   }
   .ocean-veil{
     position:fixed;inset:0;z-index:-1;
-    background:linear-gradient(180deg, rgba(234,244,246,0.46) 0%, rgba(234,244,246,0.62) 40%, rgba(234,244,246,0.76) 100%);
+    background:linear-gradient(180deg, rgba(234,244,246,0.6) 0%, rgba(234,244,246,0.7) 40%, rgba(234,244,246,0.8) 100%);
   }
 
   /* ---------- gentle animated waves (signature element) ---------- */
@@ -413,9 +413,9 @@
 
   <nav class="subnav">
     <a href="#sec-map">Ocean map</a>
+    <a href="#sec-releases">Releases</a>
     <a href="#sec-waves">Strongest waves</a>
     <a href="#sec-river">Signal river</a>
-    <a href="#sec-releases">Releases</a>
     <a href="#sec-leaderboard">Leaderboard</a>
     <a href="#sec-market">Market share</a>
     <a href="#sec-media">Image &amp; video</a>
@@ -438,7 +438,7 @@
             <h2>The AI Ocean Map</h2>
             <span class="tag">WHERE THE ENERGY IS MOVING</span>
           </div>
-          <p class="lead">A depth map of the AI ecosystem — applications at the surface, silicon in the deep. Node <b>size</b> is curated importance; node <b>glow</b> is live activity from the signal feed. Hover, tap, or tab to a node for detail.</p>
+          <p class="lead intro-note">A depth map of the AI ecosystem — applications at the surface, silicon in the deep. Node <b>size</b> is curated importance; node <b>glow</b> is live activity from the signal feed. Hover, tap, or tab to a node for detail.</p>
         </div>
         <div class="range-toggle" role="tablist" aria-label="Activity time range">
           <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
@@ -455,6 +455,17 @@
       </div>
     </section>
 
+    <!-- FRONTIER RELEASES -->
+    <section id="sec-releases" style="padding-top:8px;">
+      <div class="section-head">
+        <h2>Frontier releases</h2>
+        <span class="tag">NEW MODELS &amp; FEATURES ONLY — NOT GENERAL NEWS</span>
+        <div class="rule"></div>
+      </div>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Actual product ships and feature launches only — opinion pieces, lawsuits, and personnel news are filtered out even when a headline uses the word "release."</p>
+      <div class="release-grid" id="releases"></div>
+    </section>
+
     <!-- THREE STRONGEST WAVES -->
     <section id="sec-waves" style="padding-top:8px;">
       <div class="section-head">
@@ -462,7 +473,7 @@
         <span class="tag">PRODUCT · MARKET · RESEARCH</span>
         <div class="rule"></div>
       </div>
-      <p class="panel-note" style="margin:-6px 0 18px;">Ranked by a documented significance blend (recency, corroboration, entity weight, category) — not simply the newest three. <a class="src-link" href="docs/METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a></p>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Ranked by a documented significance blend (recency, corroboration, entity weight, category) — not simply the newest three. <a class="src-link" href="docs/METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a></p>
       <div class="waves-grid" id="waves"></div>
     </section>
 
@@ -473,23 +484,13 @@
         <span class="tag">EVERYTHING CROSSING THE WIRE, BY SIGNIFICANCE</span>
         <div class="rule"></div>
       </div>
-      <p class="panel-note" style="margin:-6px 0 18px;">Duplicate stories are merged; dot size reflects significance. Filter by category.</p>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Duplicate stories are merged; dot size reflects significance. Filter by category.</p>
       <div id="river"></div>
     </section>
 
     <!-- STATS STRIP -->
     <section style="padding-top:8px;">
       <div class="stats-strip" id="stats"></div>
-    </section>
-
-    <!-- FRONTIER RELEASES (new) -->
-    <section id="sec-releases" style="padding-top:8px;">
-      <div class="section-head">
-        <h2>Frontier releases</h2>
-        <span class="tag">LATEST MODELS &amp; FEATURES FROM THE BIG THREE</span>
-        <div class="rule"></div>
-      </div>
-      <div class="release-grid" id="releases"></div>
     </section>
 
     <!-- LEADERBOARD + MARKET SHARE -->

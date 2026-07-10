@@ -6,6 +6,26 @@
 html, body { overflow-x: clip; }
 .waves { overflow: hidden; }
 
+/* ---------- readability over the photo background ----------
+   Any text sitting directly on .ocean-bg (not inside a .panel/.card) has
+   unreliable contrast because the photo varies from light foam to dark wave.
+   Two fixes: a frosted backing on standalone text blocks, and a soft light
+   halo on loose headings/tags that can't take a full backing without feeling
+   heavy. */
+.intro-note {
+  background: var(--panel); backdrop-filter: blur(10px);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.05);
+}
+.section-head h2, .section-head .tag, .brand h1, .brand .sub {
+  text-shadow: 0 1px 3px rgba(250,253,254,.7), 0 0px 14px rgba(250,253,254,.55);
+}
+.map-summary {
+  background: var(--panel); backdrop-filter: blur(10px);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 10px 16px; box-shadow: 0 4px 16px rgba(18,48,62,.05);
+}
+
 /* ---------- section intro ---------- */
 .lead {
   font-family: var(--font-display);
@@ -164,8 +184,13 @@ body.drawer-open { overflow: hidden; }
 }
 .river-filter:hover { border-color: var(--border-strong); color: var(--deep); }
 .river-filter.active { background: var(--deep); color: #fff; border-color: var(--deep); }
-.river-list { list-style: none; margin: 0; padding: 0; position: relative; }
-.river-list::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: linear-gradient(var(--sea), rgba(62,143,163,.15)); }
+.river-list {
+  list-style: none; margin: 0; padding: 22px 24px 8px; position: relative;
+  background: var(--panel); backdrop-filter: blur(10px);
+  border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(18,48,62,.07);
+}
+.river-list::before { content: ""; position: absolute; left: 29px; top: 26px; bottom: 22px; width: 2px; background: linear-gradient(var(--sea), rgba(62,143,163,.15)); }
 .river-item { position: relative; display: grid; grid-template-columns: 30px 1fr; gap: 10px; padding: 6px 0 20px; }
 .river-dot { width: 16px; height: 16px; border-radius: 50%; margin-left: 0; margin-top: 3px; border: 3px solid var(--panel-solid); box-shadow: 0 0 0 1px var(--border-strong); z-index: 1; justify-self: start; }
 .river-sm { background: var(--sea); width: 12px; height: 12px; margin-top: 5px; }

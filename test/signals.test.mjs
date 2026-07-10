@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import {
   similarity, dedupeMerge, categorize, waveFamily, detectLicense, inferField,
   matchEntities, recencyScore, scoreSignificance, confidenceTier,
-  computeEntityActivity, buildWaves, CATEGORIES,
+  computeEntityActivity, buildWaves, isProductRelease, CATEGORIES,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -116,6 +116,16 @@ test('buildWaves returns one per family, highest significance', () => {
   const product = waves.find((w) => w.family === 'product');
   assert.equal(product.title, 'p2'); // higher significance wins, not newest
   assert.equal(waves.length, 3);
+});
+
+test('isProductRelease accepts real launches, rejects analysis/opinion pieces', () => {
+  assert.equal(isProductRelease('OpenAI launches its new family of models with GPT-5.6', ''), true);
+  assert.equal(isProductRelease('Google unveils Gemini 3.2 with native video', ''), true);
+  assert.equal(isProductRelease('Anthropic releases a new Claude feature', ''), true);
+  // the exact false positive this was written to fix
+  assert.equal(isProductRelease("How did the government decide OpenAI's frontier model was safe to release?", ''), false);
+  assert.equal(isProductRelease('Why Anthropic is releasing less than OpenAI', ''), false);
+  assert.equal(isProductRelease('Is Google about to launch a rival to GPT-5.6?', ''), false);
 });
 
 test('all CATEGORIES are covered by waveFamily without throwing', () => {

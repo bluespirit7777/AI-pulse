@@ -130,6 +130,19 @@ export function waveFamily(category) {
   return 'product';
 }
 
+// ---------- product release detection (Frontier releases section) ----------
+// Deliberately narrow: a bare "release" as a verb catches far too much (op-eds,
+// policy pieces, "safe to release" debates). We require shipping-specific
+// phrasing, AND reject question/analysis-style headlines outright — a real
+// launch announcement is declarative, not "How did X decide...?".
+const RELEASE_SHIP_RE = /\b(launch(es|ed)?|unveil(s|ed)?|introduc(es|ed|ing)|now available|debuts?|ships?|rolls? out|releases? (a|its|the|new)|releasing)\b/i;
+const ANALYSIS_HEADLINE_RE = /^\s*(how|why|what|when|who|is|are|does|did|should|could|would|will|can|has|have)\b/i;
+
+export function isProductRelease(title, desc) {
+  if (ANALYSIS_HEADLINE_RE.test(String(title || '').trim())) return false;
+  return RELEASE_SHIP_RE.test(`${title} ${desc || ''}`);
+}
+
 // ---------- license detection (open-weight feed) ----------
 export function detectLicense(text) {
   const t = String(text || '');

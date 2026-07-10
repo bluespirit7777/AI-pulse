@@ -15,6 +15,7 @@ import {
   waveFamily,
   detectLicense,
   inferField,
+  isProductRelease,
   scoreSignificance,
   confidenceTier,
   computeEntityActivity,
@@ -139,7 +140,6 @@ const LAB_KEYWORDS = {
   meta: /\bmeta\b.*\b(ai|llama)\b|\bllama\s*\d/i,
   xai: /\bx\.?ai\b|\bgrok\b/i,
 };
-const RELEASE_RE = /\b(launch|launches|launched|release[sd]?|unveil[sed]*|introduc(e|es|ed|ing)|now available|debuts?|ships?|announc(e|es|ed))\b/i;
 const COMPANY_TAG = { anthropic: 'ANTHROPIC', openai: 'OPENAI', google: 'GOOGLE', meta: 'META', xai: 'XAI' };
 const LAB_NAMES = { anthropic: 'Anthropic · Claude', openai: 'OpenAI · ChatGPT', google: 'Google · Gemini', meta: 'Meta · AI', xai: 'xAI · Grok' };
 
@@ -225,7 +225,7 @@ async function main() {
     const text = `${it.title} ${it.desc}`;
     const lab = detectLab(text);
     const cat = categorize(text);
-    if (lab && RELEASE_RE.test(text)) { (releasesByLab[lab] ||= []).push(it); continue; }
+    if (lab && isProductRelease(it.title, it.desc)) { (releasesByLab[lab] ||= []).push(it); continue; }
     if (cat === 'opensource') { feedRows.push(it); continue; }
     if (cat === 'research') { breakthroughs.push(it); continue; }
     wire.push({ ...it, lab });
@@ -233,7 +233,8 @@ async function main() {
 
   const releases = Object.entries(releasesByLab)
     .filter(([, l]) => l.length)
-    .slice(0, 3)
+    // every lab with a qualifying release today gets a card — a big multi-lab
+    // release day should never get truncated to an arbitrary top-3
     .map(([lab, list]) => {
       const top = list[0];
       return {

@@ -59,7 +59,8 @@ export function renderLive(data, now = Date.now()) {
   setHTML('ticker', line + '&nbsp;&nbsp;&nbsp;&nbsp;' + line);
 
   // releases
-  setHTML('releases', (data.releases || []).map((r) => `
+  const releases = data.releases || [];
+  setHTML('releases', releases.length ? releases.map((r) => `
     <div class="release-card" style="border-top-color:${ACCENT[r.logoKey] || ACCENT.other}">
       <div class="release-lab">
         <span class="release-logo" style="color:${ACCENT[r.logoKey] || ACCENT.other}">${LOGO[r.logoKey] || LOGO.other}</span>
@@ -72,7 +73,7 @@ export function renderLive(data, now = Date.now()) {
         ${(r.items || []).map((i) => `<li><span><b>${esc(i.n)}</b> — ${esc(i.note)}</span><span class="d">${esc(i.d)}</span></li>`).join('')}
       </ul>
       ${r.url ? `<div class="card-src"><span>${sourceChip('auto')} ${esc(r.sourceName || '')}</span><a class="src-link" href="${esc(r.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
-    </div>`).join(''));
+    </div>`).join('') : `<p class="empty-state">No qualifying model or feature launches in the current window — this section only shows actual ships, not general lab news.</p>`);
 
   // wire
   setHTML('wire', (data.wire || []).map((c) => `
