@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
 
 
 <style>
@@ -411,6 +412,9 @@
   </div>
 
   <nav class="subnav">
+    <a href="#sec-map">Ocean map</a>
+    <a href="#sec-waves">Strongest waves</a>
+    <a href="#sec-river">Signal river</a>
     <a href="#sec-releases">Releases</a>
     <a href="#sec-leaderboard">Leaderboard</a>
     <a href="#sec-market">Market share</a>
@@ -426,15 +430,56 @@
 
     <div class="data-note" id="data-note"></div>
 
-    <!-- STATS STRIP -->
-    <section style="padding-top:30px;">
-      <div class="stats-strip">
-        <div class="stat"><div class="num">357+</div><div class="lbl">Models tracked across public leaderboards</div></div>
-        <div class="stat"><div class="num">$47B</div><div class="lbl">Anthropic annualized revenue, now ahead of OpenAI</div></div>
-        <div class="stat"><div class="num">+855%</div><div class="lbl">Claude web-visit growth, year over year</div></div>
-        <div class="stat"><div class="num">1.6T</div><div class="lbl">Param open model trained on domestic Chinese chips</div></div>
-        <div class="stat"><div class="num">$4.7T</div><div class="lbl">Nvidia market cap — largest AI compute stack</div></div>
+    <!-- AI OCEAN MAP (hero) -->
+    <section id="sec-map" class="hero" style="padding-top:30px;">
+      <div class="hero-head">
+        <div>
+          <div class="section-head" style="margin-bottom:6px;">
+            <h2>The AI Ocean Map</h2>
+            <span class="tag">WHERE THE ENERGY IS MOVING</span>
+          </div>
+          <p class="lead">A depth map of the AI ecosystem — applications at the surface, silicon in the deep. Node <b>size</b> is curated importance; node <b>glow</b> is live activity from the signal feed. Hover, tap, or tab to a node for detail.</p>
+        </div>
+        <div class="range-toggle" role="tablist" aria-label="Activity time range">
+          <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
+          <button class="range-btn" role="tab" aria-selected="false" data-range="7D">7D</button>
+          <button class="range-btn" role="tab" aria-selected="false" data-range="30D">30D</button>
+        </div>
       </div>
+      <div id="ocean-map"></div>
+      <div class="map-legend" aria-hidden="true">
+        <span><i style="border-color:var(--sea)"></i>depends on</span>
+        <span><i style="border-color:var(--teal);border-top-style:dashed"></i>partners with</span>
+        <span><i style="border-color:var(--coral);border-top-style:dotted"></i>competes with</span>
+        <span>◌ dashed node = no fresh signal</span>
+      </div>
+    </section>
+
+    <!-- THREE STRONGEST WAVES -->
+    <section id="sec-waves" style="padding-top:8px;">
+      <div class="section-head">
+        <h2>Today's three strongest waves</h2>
+        <span class="tag">PRODUCT · MARKET · RESEARCH</span>
+        <div class="rule"></div>
+      </div>
+      <p class="panel-note" style="margin:-6px 0 18px;">Ranked by a documented significance blend (recency, corroboration, entity weight, category) — not simply the newest three. <a class="src-link" href="docs/METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a></p>
+      <div class="waves-grid" id="waves"></div>
+    </section>
+
+    <!-- SIGNAL RIVER -->
+    <section id="sec-river" style="padding-top:8px;">
+      <div class="section-head">
+        <h2>Signal river</h2>
+        <span class="tag">EVERYTHING CROSSING THE WIRE, BY SIGNIFICANCE</span>
+        <div class="rule"></div>
+      </div>
+      <p class="panel-note" style="margin:-6px 0 18px;">Duplicate stories are merged; dot size reflects significance. Filter by category.</p>
+      <div id="river"></div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section style="padding-top:8px;">
+      <div class="stats-strip" id="stats"></div>
     </section>
 
     <!-- FRONTIER RELEASES (new) -->
@@ -454,7 +499,7 @@
         <div class="panel">
           <div class="panel-top">
             <h3>Frontier leaderboard</h3>
-            <span class="asof">Pulled Jul 09 2026</span>
+            <span class="asof curated-asof">Curated</span>
           </div>
           <div class="panel-note" style="margin-bottom:14px;">Rank blends Artificial Analysis Intelligence Index, LMArena Elo &amp; leading public benchmarks · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Artificial Analysis</a> · <a class="src-link" href="https://lmarena.ai/leaderboard" target="_blank" rel="noopener">LMArena</a></div>
           <div id="leaderboard"></div>
@@ -463,11 +508,11 @@
         <div class="panel" id="sec-market">
           <div class="panel-top">
             <h3>Most popular AI</h3>
-            <span class="asof">Pulled Jul 09 2026</span>
+            <span class="asof curated-asof">Curated</span>
           </div>
           <div class="panel-note" style="margin-bottom:14px;">Worldwide web-visit share · updated by hand, not live — <a class="src-link" href="https://www.similarweb.com/top-websites/computers-electronics-and-technology/programming-and-developer-software/" target="_blank" rel="noopener">Similarweb</a> · <a class="src-link" href="https://radar.cloudflare.com/ai-insights" target="_blank" rel="noopener">Cloudflare Radar</a></div>
           <div class="donut-wrap">
-            <div class="donut">
+            <div class="donut" id="donut">
               <div class="donut-label"><div class="n">2.9B+</div><div class="l">MONTHLY VISITS</div></div>
             </div>
             <div class="legend" id="legend"></div>
@@ -487,7 +532,7 @@
         <div class="panel">
           <div class="panel-top">
             <h3>Top 5 image AI</h3>
-            <span class="asof">Pulled Jul 09 2026</span>
+            <span class="asof curated-asof">Curated</span>
           </div>
           <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
           <div id="image-ai"></div>
@@ -496,7 +541,7 @@
         <div class="panel">
           <div class="panel-top">
             <h3>Top 5 video AI</h3>
-            <span class="asof">Pulled Jul 09 2026</span>
+            <span class="asof curated-asof">Curated</span>
           </div>
           <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
           <div id="video-ai"></div>
@@ -532,7 +577,7 @@
       <div class="panel">
         <div class="panel-top">
           <h3>Compute &amp; chips</h3>
-          <span class="asof">As of Jun 2026</span>
+          <span class="asof curated-asof">Curated</span>
         </div>
         <div class="panel-note" style="margin-bottom:14px;">On-demand cloud rental rates, aggregated across neocloud &amp; hyperscaler listings — spot/reserved pricing runs lower · updated by hand, not live — <a class="src-link" href="https://cloud-gpus.com/" target="_blank" rel="noopener">cloud-gpus.com</a></div>
         <div style="overflow-x:auto;">
@@ -591,227 +636,7 @@
     <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
   </footer>
 
-<script>
-  // live clock
-  function tick(){
-    const d = new Date();
-    document.getElementById('clock').textContent = d.toLocaleTimeString('en-US', {hour12:false});
-  }
-  tick(); setInterval(tick, 1000);
-
-  const LOGO = {
-    anthropic: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="21.5" y2="12"/><line x1="5.3" y1="5.3" x2="18.7" y2="18.7"/><line x1="18.7" y1="5.3" x2="5.3" y2="18.7"/></svg>`,
-    openai: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><polygon points="12,2.6 20.2,7.3 20.2,16.7 12,21.4 3.8,16.7 3.8,7.3"/><circle cx="12" cy="12" r="3.1"/></svg>`,
-    google: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.8c.3 5.1.9 8.7 3.1 10.2-2.2 1.5-2.8 5.1-3.1 10.2-.3-5.1-.9-8.7-3.1-10.2C11.1 10.5 11.7 6.9 12 1.8Z"/><path d="M22.2 12c-5.1.3-8.7.9-10.2 3.1 1.5-2.2 1.5-5.9 0-8.2C13.5 9.1 17.1 11.7 22.2 12Z" opacity=".55"/></svg>`,
-    other: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/></svg>`,
-  };
-  const ACCENT = {anthropic:"var(--coral)", openai:"var(--deep)", google:"var(--sea)", meta:"var(--ink-soft)", xai:"var(--ink-soft)", policy:"var(--sand)", other:"var(--sand)"};
-
-  function esc(s){ return String(s==null?'':s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
-  function fmtSnapshot(iso){
-    try {
-      return new Date(iso).toLocaleString('en-US', {month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit', hour12:false}) + ' UTC';
-    } catch { return iso; }
-  }
-
-  async function loadData(){
-    const banner = document.getElementById('data-note');
-    try {
-      const res = await fetch('data/latest.json?_=' + Date.now(), {cache:'no-store'});
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      render(data);
-    } catch (err) {
-      console.error('[data] failed to load data/latest.json', err);
-      if (banner) {
-        banner.textContent = 'Live data failed to load (' + err.message + '). Run scripts/update-data.mjs to generate data/latest.json, then reload.';
-        banner.classList.add('show');
-      }
-    }
-  }
-
-  function render(data){
-    // ticker headlines
-    const tickerEl = document.getElementById('ticker');
-    const headlines = data.ticker || [];
-    const line = headlines.map(h => `<span>~</span>${esc(h)}`).join('&nbsp;&nbsp;&nbsp;&nbsp;');
-    tickerEl.innerHTML = line + '&nbsp;&nbsp;&nbsp;&nbsp;' + line;
-
-    const pill = document.getElementById('snapshot-pill');
-    if (pill) pill.textContent = 'Snapshot · ' + fmtSnapshot(data.updatedAt);
-    const stocksAsof = document.getElementById('stocks-asof');
-    if (stocksAsof) stocksAsof.textContent = fmtSnapshot(data.updatedAt);
-
-    // frontier releases — latest models & features, refreshed from publisher RSS feeds
-    document.getElementById('releases').innerHTML = (data.releases||[]).map(r => `
-      <div class="release-card" style="border-top-color:${ACCENT[r.logoKey]||ACCENT.other}">
-        <div class="release-lab">
-          <span class="release-logo" style="color:${ACCENT[r.logoKey]||ACCENT.other}">${LOGO[r.logoKey]||LOGO.other}</span>
-          <span class="release-labtext">${esc(r.lab)}</span>
-          <span class="asof">${esc(r.date)}</span>
-        </div>
-        <h4>${esc(r.h)}</h4>
-        <p>${esc(r.p)}</p>
-        <ul class="release-list">
-          ${(r.items||[]).map(i => `<li><span><b>${esc(i.n)}</b> — ${esc(i.note)}</span><span class="d">${esc(i.d)}</span></li>`).join('')}
-        </ul>
-        ${r.url ? `<div class="card-src"><span>Source: ${esc(r.sourceName||'')}</span><a class="src-link" href="${esc(r.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
-      </div>
-    `).join('');
-
-    // leaderboard data — curated by hand, see source links above (bar length = ordinal rank, not a literal score)
-    const leaderboard = [
-      {rank:1, model:"Claude Opus 4.8", org:"Anthropic", w:100, stat:"Tops Intelligence Index (61.4)", note:"SWE-bench Pro 69.2% · computer-use 84% on Online-Mind2Web"},
-      {rank:2, model:"GPT-5.5", org:"OpenAI", w:92, stat:"Narrowly edged on the index", note:"Strong agentic + math performance across evals"},
-      {rank:3, model:"Gemini 3.1 Pro", org:"Google DeepMind", w:85, stat:"GPQA Diamond 94.3%", note:"Leads consumer models on science reasoning · 2M-token context"},
-      {rank:4, model:"Grok 4 / 4.5", org:"xAI", w:76, stat:"2M-token context", note:"4.5 now in private beta at SpaceX & Tesla"},
-      {rank:5, model:"Qwen 3.7 Max", org:"Alibaba", w:68, stat:"Top-ranked Chinese model", note:"Highest index placement of any open/Chinese-origin model"},
-      {rank:6, model:"DeepSeek V3.2", org:"DeepSeek", w:60, stat:"Best value tier", note:"Speciale variant won gold at IMO, IOI & ICPC 2026"},
-    ];
-    document.getElementById('leaderboard').innerHTML = leaderboard.map(r => `
-      <div class="lb-row">
-        <div class="lb-top">
-          <div class="lb-name">
-            <span class="lb-rank">${String(r.rank).padStart(2,'0')}</span>
-            <span class="lb-model">${esc(r.model)}</span>
-            <span class="lb-org">${esc(r.org)}</span>
-          </div>
-          <span class="lb-stat">${esc(r.stat)}</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill" style="--w:${r.w}%"></div></div>
-        <div class="lb-note">${esc(r.note)}</div>
-      </div>
-    `).join('');
-
-    // top 5 image + video AI — curated by hand, see source links above (bar length = ordinal rank)
-    const renderRank = (el, rows) => {
-      document.getElementById(el).innerHTML = rows.map(r => `
-        <div class="lb-row">
-          <div class="lb-top">
-            <div class="lb-name">
-              <span class="lb-rank">${String(r.rank).padStart(2,'0')}</span>
-              <span class="lb-model">${esc(r.model)}</span>
-              <span class="lb-org">${esc(r.org)}</span>
-            </div>
-            <span class="lb-stat">${esc(r.stat)}</span>
-          </div>
-          <div class="bar-track"><div class="bar-fill" style="--w:${r.w}%"></div></div>
-          <div class="lb-note">${esc(r.note)}</div>
-        </div>
-      `).join('');
-    };
-    renderRank('image-ai', [
-      {rank:1, model:"Nano Banana Pro", org:"Google · Gemini 3", w:100, stat:"Tops the image arena", note:"Gemini-3-powered image model; strongest prompt adherence & text rendering"},
-      {rank:2, model:"GPT-Image-1", org:"OpenAI", w:90, stat:"Native ChatGPT image gen", note:"Best-in-class instruction following and in-image typography"},
-      {rank:3, model:"Seedream 4.0", org:"ByteDance", w:82, stat:"Top open-access contender", note:"High-fidelity photoreal output; strong on Asian-language prompts"},
-      {rank:4, model:"Midjourney v7", org:"Midjourney", w:74, stat:"Aesthetic favorite", note:"Leads on artistic style and coherence; community-driven tuning"},
-      {rank:5, model:"FLUX1.1 Pro", org:"Black Forest Labs", w:66, stat:"Open-weight leader", note:"Self-hostable; the default base for many fine-tuned image pipelines"},
-    ]);
-    renderRank('video-ai', [
-      {rank:1, model:"Veo 3.1", org:"Google DeepMind", w:100, stat:"Tops the video arena", note:"Native synced audio, strong physics & long-shot temporal coherence"},
-      {rank:2, model:"Sora 2", org:"OpenAI", w:90, stat:"Cinematic prompt control", note:"Standalone app; excels at complex multi-shot scene direction"},
-      {rank:3, model:"Kling 2.5", org:"Kuaishou", w:82, stat:"Adoption leader in Asia", note:"Fast generation with reliable motion; popular for social content"},
-      {rank:4, model:"Runway Gen-4", org:"Runway", w:74, stat:"Pro creative toolchain", note:"Deep editing controls favored by studios and VFX workflows"},
-      {rank:5, model:"Hailuo 02", org:"MiniMax", w:66, stat:"Best value tier", note:"Strong image-to-video quality at a fraction of frontier pricing"},
-    ]);
-
-    // legend for donut — curated by hand, see source links above
-    const legend = [
-      {name:"ChatGPT", pct:"53.9%", color:"var(--deep)"},
-      {name:"Gemini", pct:"27.9%", color:"var(--sea)"},
-      {name:"Claude", pct:"9.2%", color:"var(--teal)"},
-      {name:"Perplexity", pct:"~4%", color:"var(--sand)"},
-      {name:"DeepSeek", pct:"~3%", color:"var(--coral)"},
-      {name:"Other", pct:"~2%", color:"var(--ink-dim)"},
-    ];
-    document.getElementById('legend').innerHTML = legend.map(l => `
-      <div class="row"><span class="dot" style="background:${l.color}"></span>
-        <span class="name">${esc(l.name)}</span><span class="pct">${esc(l.pct)}</span>
-      </div>
-    `).join('');
-
-    // compute & chips — curated by hand, see source link above
-    const compute = [
-      {chip:"H100 (Hopper)", segment:"Mainstream training/inference", rate:"$1.4 – $7.5/hr", trend:"↓ 64–75% vs 2023 peak", trendClass:"trend-down", note:"Still the default workhorse; used cards resell $12k–$22k"},
-      {chip:"H200 (Hopper)", segment:"Inference / long context", rate:"$0.6 – $13.8/hr", trend:"↑ ~13% since Jul 2025", trendClass:"trend-up", note:"141GB VRAM fits 70B-class models on a single card"},
-      {chip:"B200 (Blackwell)", segment:"Frontier training", rate:"$2.1 – $18/hr", trend:"↑ 24% in one month", trendClass:"trend-up", note:"Hyperscaler listings run 2–3x neocloud rates"},
-      {chip:"B300 (Blackwell Ultra)", segment:"Frontier training", rate:"$4.95 – $18/hr, spot ~$2.90", trend:"New, Jan 2026", trendClass:"trend-new", note:"Doubles HBM to 288GB per GPU"},
-      {chip:"MI300X (AMD)", segment:"Nvidia alternative", rate:"from $1.57/hr", trend:"Thin coverage", trendClass:"trend-new", note:"1.8x memory vs H100, only a handful of providers list it"},
-      {chip:"A100 (legacy)", segment:"Budget / fine-tuning", rate:"$1.29 – $2.50/hr", trend:"↓ toward commodity", trendClass:"trend-down", note:"Still solid for LoRA/QLoRA fine-tuning jobs"},
-    ];
-    document.getElementById('compute-rows').innerHTML = compute.map(c => `
-      <tr>
-        <td class="ticker-cell">${esc(c.chip)}</td>
-        <td class="signal-cell">${esc(c.segment)}</td>
-        <td class="metric-cell">${esc(c.rate)}</td>
-        <td class="${c.trendClass}">${esc(c.trend)}</td>
-        <td class="signal-cell">${esc(c.note)}</td>
-      </tr>
-    `).join('');
-
-    // Big AI wire cards — refreshed automatically from publisher RSS feeds
-    document.getElementById('wire').innerHTML = (data.wire||[]).map(c => `
-      <div class="card">
-        <div class="card-top">
-          <div class="card-tag"><span class="tdot" style="background:${ACCENT[c.logoKey]||'var(--ink-soft)'}"></span>${esc(c.org)}</div>
-          <span class="asof">${esc(c.date)}</span>
-        </div>
-        <h4>${esc(c.h)}</h4>
-        <p>${esc(c.p)}</p>
-        <div class="card-src"><span>${esc(c.sourceName||'')}</span>${c.url ? `<a class="src-link" href="${esc(c.url)}" target="_blank" rel="noopener">Read original</a>` : ''}</div>
-      </div>
-    `).join('');
-
-    // local/open-weight feed — refreshed automatically from publisher RSS feeds
-    document.getElementById('feed').innerHTML = (data.feed||[]).map(f => `
-      <div class="feed-row">
-        <div><span class="feed-name">${f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${esc(f.name)}</a>` : esc(f.name)}</span><span class="feed-org">${esc(f.org)}</span></div>
-        <span class="license ${esc(f.licClass)}">${esc(f.lic)}</span>
-        <span class="asof">${esc(f.date)}</span>
-        <span class="feed-desc">${esc(f.desc)}</span>
-      </div>
-    `).join('');
-
-    // breakthroughs — refreshed automatically from publisher RSS feeds
-    document.getElementById('breakthroughs').innerHTML = (data.breakthroughs||[]).map(b => `
-      <div class="brk-card">
-        <div class="brk-top">
-          <span class="brk-field">${esc(b.field)}</span>
-          <span class="asof">${esc(b.date)}</span>
-        </div>
-        <h4>${esc(b.h)}</h4>
-        <p>${esc(b.p)}</p>
-        ${b.url ? `<div class="card-src"><span>${esc(b.sourceName||'')}</span><a class="src-link" href="${esc(b.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
-      </div>
-    `).join('');
-
-    // top 10 AI stocks — live price/day-change via Yahoo Finance, ticker links to the source quote page
-    const layerClass = {Chips:"layer-chips", Cloud:"layer-cloud", Software:"layer-software", Foundry:"layer-foundry"};
-    document.getElementById('stocks').innerHTML = (data.stocks||[]).map(s => {
-      const up = (s.changePct||0) >= 0;
-      return `
-      <tr>
-        <td><a href="${esc(s.url)}" target="_blank" rel="noopener" class="ticker-cell" style="text-decoration:none;">${esc(s.t)}</a><span class="co-name">${esc(s.n)}</span></td>
-        <td><span class="layer-pill ${layerClass[s.layer]||''}">${esc(s.layer)}</span></td>
-        <td class="metric-cell">${s.price!=null ? '$'+Number(s.price).toFixed(2) : '—'}</td>
-        <td class="${up?'trend-up':'trend-down'}">${s.changePct!=null ? (up?'+':'')+Number(s.changePct).toFixed(2)+'%' : '—'}</td>
-        <td class="signal-cell">${esc(s.signal||'')}</td>
-      </tr>
-    `; }).join('');
-
-    // animate all ordinal bars in once their rows exist in the DOM
-    animateBars();
-  }
-
-  function animateBars() {
-    document.querySelectorAll('.bar-fill').forEach((el, i) => {
-      el.style.width = '0';
-      setTimeout(() => { el.style.width = el.style.getPropertyValue('--w'); }, 200 + i * 40);
-    });
-  }
-
-  loadData();
-</script>
+<script type="module" src="js/main.js"></script>
 
 
 
