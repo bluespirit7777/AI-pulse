@@ -3,7 +3,7 @@
 // latest.json; entities.json and range.json enrich it when present.
 import { loadLatest, loadEntities, loadRanges } from './data.js';
 import { createOceanMap } from './oceanmap.js';
-import { renderWaves } from './waves.js';
+import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
 import { renderCurated, renderLive, animateBars } from './sections.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
@@ -56,7 +56,7 @@ function applyRange(next) {
 
 function renderDynamic() {
   renderLive(data);
-  renderWaves($('#waves'), data.waves || []);
+  renderWaveforms($('#waves'), data.signals || [], data.waves || []);
   renderRiver($('#river'), data.signals || []);
   animateBars();
   paintUpdated();
