@@ -134,10 +134,28 @@
   @media (prefers-reduced-motion: no-preference){
     .ticker{animation:scroll 90s linear infinite;}
   }
+  /* Pause (without resetting position) on hover, keyboard focus, or manual toggle */
+  .ticker-wrap:hover .ticker,
+  .ticker-wrap:focus-within .ticker,
+  .ticker-wrap.is-paused .ticker{animation-play-state:paused;}
   .ticker span{color:var(--sea);margin-right:10px;}
   @keyframes scroll{
     0%{transform:translateX(0);}
     100%{transform:translateX(-50%);}
+  }
+  .ticker-toggle{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:26px;height:26px;border-radius:50%;border:1px solid var(--border);
+    background:var(--panel-solid);color:var(--ink-soft);cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;font-size:10px;line-height:1;
+    z-index:3;transition:background .15s,color .15s;
+  }
+  .ticker-toggle:hover{background:var(--foam);color:var(--deep);}
+  .ticker-toggle:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  /* Reduced motion: no auto-scroll — present the strip as a manually scrollable list */
+  @media (prefers-reduced-motion: reduce){
+    .ticker-wrap{overflow-x:auto;}
+    .ticker-toggle{display:none;}
   }
 
   /* ---------- sticky nav: OPAQUE buttons ---------- */
@@ -425,6 +443,7 @@
 
   <div class="ticker-wrap">
     <div class="ticker" id="ticker"></div>
+    <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the headline ticker" aria-pressed="false">❚❚</button>
   </div>
 
   <nav class="subnav" aria-label="Section navigation">

@@ -21,6 +21,21 @@ function tickClock() {
   if (el) el.textContent = new Date().toLocaleTimeString('en-US', { hour12: false });
 }
 
+// Ticker pause/play toggle for keyboard + touch users. Hover/focus pausing is
+// pure CSS; this button gives an explicit control. Toggling .is-paused only
+// pauses animation-play-state, so position is preserved (never restarts).
+function wireTickerToggle() {
+  const wrap = $('.ticker-wrap');
+  const btn = $('#ticker-toggle');
+  if (!wrap || !btn) return;
+  btn.addEventListener('click', () => {
+    const paused = wrap.classList.toggle('is-paused');
+    btn.textContent = paused ? '▶' : '❚❚';
+    btn.setAttribute('aria-pressed', String(paused));
+    btn.setAttribute('aria-label', paused ? 'Play the headline ticker' : 'Pause the headline ticker');
+  });
+}
+
 function paintUpdated() {
   if (!data) return;
   const pill = $('#snapshot-pill');
@@ -68,6 +83,7 @@ function renderDynamic() {
 async function boot() {
   tickClock();
   setInterval(tickClock, 1000);
+  wireTickerToggle();
   setInterval(paintUpdated, 30000);
 
   renderCurated(); // curated sections never change between loads
