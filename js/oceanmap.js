@@ -12,6 +12,15 @@ const CONN_STYLE = {
   partner: { stroke: 'var(--teal)', w: 1.6, dash: '5 4', label: 'partners with' },
   competes: { stroke: 'var(--coral)', w: 1.4, dash: '2 5', label: 'competes with' },
 };
+// Direction-aware phrase for the drawer's "Connected to" list, so it reads as
+// a natural sentence ("Competes with GPT", "Depended on by ChatGPT") rather
+// than "GPT competes with". `out` = this node is the connection's source,
+// `in` = this node is the target.
+const REL_PHRASE = {
+  depends: { out: 'Depends on', in: 'Depended on by' },
+  partner: { out: 'Partners with', in: 'Partners with' },
+  competes: { out: 'Competes with', in: 'Competes with' },
+};
 
 export function createOceanMap(root, entities) {
   const nodes = entities.nodes;
@@ -181,7 +190,7 @@ export function createOceanMap(root, entities) {
         ${deltaTxt}
         <div class="drawer-why"><span class="drawer-h">Why it matters</span>${esc(n.why)}</div>
         ${rel.length ? `<div class="drawer-rel"><span class="drawer-h">Connected to</span>
-          <ul>${rel.map((r) => `<li><button class="rel-link" data-id="${esc(r.node.id)}">${esc(r.node.name)}</button> <span class="rel-type">${esc((CONN_STYLE[r.type] || {}).label || r.type)}</span></li>`).join('')}</ul>
+          <ul>${rel.map((r) => `<li><span class="rel-type">${esc((REL_PHRASE[r.type] || {})[r.dir] || r.type)}</span> <button class="rel-link" data-id="${esc(r.node.id)}">${esc(r.node.name)}</button></li>`).join('')}</ul>
         </div>` : ''}
         <div class="drawer-meta">
           <span class="fr-chip fr-live" title="Signal counts come from live feeds"><span class="fr-mark" aria-hidden="true">●</span>Activity: live</span>
