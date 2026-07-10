@@ -56,6 +56,7 @@ export function createOceanMap(root, entities) {
   const drawer = root.querySelector('#map-drawer');
   const summary = root.querySelector('#map-summary');
   let lastFocused = null;
+  let drawerOpenFor = null;
 
   // depth bands + labels
   layers.forEach((layer, li) => {
@@ -66,14 +67,36 @@ export function createOceanMap(root, entities) {
     `);
   });
 
-  // connections (behind nodes)
+  // connections (behind nodes) — curved current paths, not straight wires.
+  // De-emphasized by default (this is a field, not a wiring diagram); a
+  // connection brightens only when one of its endpoints is hovered, focused,
+  // or has its drawer open (see highlightNode below).
+  const CONN_DIM = 0.14, CONN_BRIGHT = 0.85;
   for (const c of entities.connections) {
     const a = pos.get(c.from), b = pos.get(c.to);
     if (!a || !b) continue;
     const st = CONN_STYLE[c.type] || CONN_STYLE.depends;
+    // gentle S-curve: control points offset horizontally, proportional to
+    // vertical distance, so the path "flows" rather than cutting straight
+    // through intermediate layers.
+    const dy = b.y - a.y;
+    const bend = clamp(Math.abs(dy) * 0.35, 20, 90) * (c.from < c.to ? 1 : -1);
+    const c1x = a.x + bend, c1y = a.y + dy * 0.33;
+    const c2x = b.x - bend, c2y = a.y + dy * 0.67;
+    const d = `M ${a.x} ${a.y} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${b.x} ${b.y}`;
     gConns.insertAdjacentHTML('beforeend',
-      `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${st.stroke}" stroke-width="${st.w}" stroke-dasharray="${st.dash}" stroke-linecap="round" opacity="0.28" data-from="${esc(c.from)}" data-to="${esc(c.to)}"></line>`
+      `<path d="${d}" fill="none" stroke="${st.stroke}" stroke-width="${st.w}" stroke-dasharray="${st.dash}" stroke-linecap="round" opacity="${CONN_DIM}" data-from="${esc(c.from)}" data-to="${esc(c.to)}"></path>`
     );
+  }
+
+  gConns.querySelectorAll('path').forEach((p) => { p.dataset.baseWidth = p.getAttribute('stroke-width'); });
+  function highlightNode(id) {
+    gConns.querySelectorAll('path').forEach((p) => {
+      const on = id && (p.dataset.from === id || p.dataset.to === id);
+      const base = parseFloat(p.dataset.baseWidth);
+      p.setAttribute('opacity', on ? CONN_BRIGHT : CONN_DIM);
+      p.setAttribute('stroke-width', on ? String(base + 0.8) : String(base));
+    });
   }
 
   // nodes
@@ -100,10 +123,10 @@ export function createOceanMap(root, entities) {
     g.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
     });
-    g.addEventListener('mouseenter', () => showTooltip(n, p));
-    g.addEventListener('mouseleave', hideTooltip);
-    g.addEventListener('focus', () => showTooltip(n, p));
-    g.addEventListener('blur', hideTooltip);
+    g.addEventListener('mouseenter', () => { showTooltip(n, p); highlightNode(n.id); });
+    g.addEventListener('mouseleave', () => { hideTooltip(); if (!drawerOpenFor) highlightNode(null); });
+    g.addEventListener('focus', () => { showTooltip(n, p); highlightNode(n.id); });
+    g.addEventListener('blur', () => { hideTooltip(); if (!drawerOpenFor) highlightNode(null); });
   }
 
   function actLevel(id) {
@@ -135,6 +158,8 @@ export function createOceanMap(root, entities) {
 
   function openDrawer(n) {
     lastFocused = document.activeElement;
+    drawerOpenFor = n.id;
+    highlightNode(n.id);
     const { count } = actLevel(n.id);
     const d = state.delta[n.id];
     const deltaTxt = !state.historyAvailable
@@ -190,6 +215,8 @@ export function createOceanMap(root, entities) {
     drawer.hidden = true;
     drawer.removeEventListener('keydown', onDrawerKey);
     document.body.classList.remove('drawer-open');
+    drawerOpenFor = null;
+    highlightNode(null);
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
@@ -275,6 +302,15 @@ export function createOceanMap(root, entities) {
   return {
     update(next) { state = { ...state, ...next }; paint(); },
     closeDrawer,
+    // Lets other components (a wave, a river item) reveal a specific node's
+    // ecosystem path and open its detail drawer — the map isn't an island.
+    revealEntity(id) {
+      const n = byId.get(id);
+      if (!n) return false;
+      root.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+      openDrawer(n);
+      return true;
+    },
   };
 }
 
