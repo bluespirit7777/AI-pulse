@@ -4,8 +4,85 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   computeReturns, pearson, correlationPairs, correlationsForTicker,
-  relativeVolume, average, direction,
+  relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT,
 } from '../scripts/lib/stocks.mjs';
+
+const bars = (...closes) => closes.map((c, i) => ({ date: `2026-07-${String(i + 1).padStart(2, '0')}`, close: c, volume: 1000 }));
+
+test('dailyChange: normal two-day positive move', () => {
+  const r = dailyChange(bars(100, 102)); // +2%
+  assert.ok(Math.abs(r.changePct - 2) < 1e-9);
+  assert.equal(r.review, false);
+});
+
+test('dailyChange: negative move', () => {
+  const r = dailyChange(bars(200, 190)); // -5%
+  assert.ok(Math.abs(r.changePct - (-5)) < 1e-9);
+});
+
+test('dailyChange: uses only the LAST two bars, not the 3-month start (the AMD bug)', () => {
+  // 3 months ago AMD was ~90, today ~205 — the OLD code did (205-90)/90 = +128%.
+  // Correct daily change compares today vs yesterday only.
+  const series = bars(90, 95, 110, 150, 180, 204, 205); // yesterday 204 → today 205
+  const r = dailyChange(series);
+  assert.ok(Math.abs(r.changePct - ((205 - 204) / 204 * 100)) < 1e-9);
+  assert.ok(r.changePct < 1, `expected ~0.49%, got ${r.changePct}`);
+});
+
+test('dailyChange: missing trading days (weekends/holidays) are just absent bars', () => {
+  // Fri close 100, Mon close 103 — no weekend bars exist; change is Mon vs Fri.
+  const series = [
+    { date: '2026-07-10', close: 100 },
+    { date: '2026-07-13', close: 103 },
+  ];
+  assert.ok(Math.abs(dailyChange(series).changePct - 3) < 1e-9);
+});
+
+test('dailyChange: null/invalid closes are dropped before computing', () => {
+  const series = [
+    { date: '2026-07-09', close: 100 },
+    { date: '2026-07-10', close: null },
+    { date: '2026-07-11', close: 0 },
+    { date: '2026-07-12', close: 101 },
+  ];
+  assert.ok(Math.abs(dailyChange(series).changePct - 1) < 1e-9); // 101 vs 100
+});
+
+test('dailyChange: only one valid close → null (no fabricated change)', () => {
+  const r = dailyChange(bars(100));
+  assert.equal(r.changePct, null);
+  assert.equal(r.reason, 'single valid bar');
+});
+
+test('dailyChange: empty/all-null series → null', () => {
+  assert.equal(dailyChange([]).changePct, null);
+  assert.equal(dailyChange([{ date: 'x', close: null }]).changePct, null);
+});
+
+test('dailyChange: live price used as latest vs last completed bar when it differs', () => {
+  // today bar hasn't posted; last bar is yesterday(150). Live price 153 → +2%.
+  const r = dailyChange(bars(148, 150), 153);
+  assert.ok(Math.abs(r.changePct - 2) < 1e-9);
+  assert.equal(r.latestClose, 153);
+  assert.equal(r.prevClose, 150);
+});
+
+test('dailyChange: live price equal to last bar falls back to two-bar diff', () => {
+  const r = dailyChange(bars(150, 152), 152); // post-close: live == last close
+  assert.ok(Math.abs(r.changePct - ((152 - 150) / 150 * 100)) < 1e-9);
+});
+
+test('dailyChange: large real move is flagged for review, not rejected', () => {
+  const r = dailyChange(bars(100, 140)); // +40%
+  assert.ok(Math.abs(r.changePct - 40) < 1e-9);
+  assert.equal(r.review, true);
+  assert.ok(40 > DAILY_CHANGE_REVIEW_PCT);
+});
+
+test('dailyChange: split-like halving flagged for review', () => {
+  const r = dailyChange(bars(200, 100)); // -50% (possible unadjusted split artifact)
+  assert.equal(r.review, true);
+});
 
 test('computeReturns: simple daily returns, skips gaps', () => {
   const rows = [

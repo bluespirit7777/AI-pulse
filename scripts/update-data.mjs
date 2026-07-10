@@ -25,7 +25,7 @@ import {
   classifyTopics,
   TOPICS,
 } from './lib/signals.mjs';
-import { computeReturns, correlationPairs, relativeVolume, average, direction } from './lib/stocks.mjs';
+import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -302,9 +302,6 @@ async function fetchStock(meta) {
     const result = (await res.json())?.chart?.result?.[0];
     const m = result?.meta;
     if (!m || m.regularMarketPrice == null) throw new Error('no price data');
-    const price = m.regularMarketPrice;
-    const prevClose = m.chartPreviousClose ?? m.previousClose;
-    const changePct = prevClose ? ((price - prevClose) / prevClose) * 100 : null;
 
     // build a date-sorted [{date, close, volume}] series (skip null bars)
     const ts = result.timestamp || [];
@@ -315,15 +312,21 @@ async function fetchStock(meta) {
       if (closes[i] == null) continue;
       series.push({ date: new Date(ts[i] * 1000).toISOString().slice(0, 10), close: closes[i], volume: vols[i] ?? null });
     }
+
+    // Daily change from the last two valid bars (NOT the 3-month range start).
+    const dc = dailyChange(series, m.regularMarketPrice);
+    if (dc.review) console.warn(`[stock] ${meta.t}: daily change ${dc.changePct.toFixed(1)}% exceeds ±${DAILY_CHANGE_REVIEW_PCT}% — flagged for review`);
+    const price = m.regularMarketPrice;
+
     return {
       t: meta.t, n: m.longName || m.shortName || meta.n, layer: meta.layer, signal: meta.signal,
-      price, changePct, url: `https://finance.yahoo.com/quote/${meta.t}`,
+      price, changePct: dc.changePct, changeReview: dc.review, url: `https://finance.yahoo.com/quote/${meta.t}`,
       volume: m.regularMarketVolume ?? (series.length ? series[series.length - 1].volume : null),
       series,
     };
   } catch (err) {
     console.error(`[stock] ${meta.t}: ${err.message}`);
-    return { t: meta.t, n: meta.n, layer: meta.layer, signal: meta.signal, price: null, changePct: null, url: `https://finance.yahoo.com/quote/${meta.t}`, volume: null, series: [] };
+    return { t: meta.t, n: meta.n, layer: meta.layer, signal: meta.signal, price: null, changePct: null, changeReview: false, url: `https://finance.yahoo.com/quote/${meta.t}`, volume: null, series: [] };
   }
 }
 
@@ -346,7 +349,7 @@ function buildStockNetwork(quotes, metaByTicker, now) {
     const marketCap = meta.shares != null && q.price != null ? meta.shares * 1e9 * q.price : null;
     return {
       t: q.t, n: q.n, layer: q.layer, netLayer: meta.netLayer ?? 2, url: q.url, signal: q.signal,
-      price: q.price, changePct: q.changePct, direction: direction(q.changePct),
+      price: q.price, changePct: q.changePct, changeReview: !!q.changeReview, direction: direction(q.changePct),
       marketCap, volume: q.volume ?? null,
       dollarVolume: q.volume != null && q.price != null ? q.volume * q.price : null,
       avg20Volume: avg20, relVolume: relVol,

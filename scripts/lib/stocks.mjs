@@ -94,3 +94,43 @@ export function direction(changePct) {
   if (changePct < -0.15) return 'down';
   return 'flat';
 }
+
+// Above this absolute daily %, the change is FLAGGED for review (not rejected —
+// real large moves happen, but this is also where split-adjustment artifacts and
+// bad data show up).
+export const DAILY_CHANGE_REVIEW_PCT = 25;
+
+// Daily % change from the last two VALID trading bars — the fix for the old
+// bug where change was computed against a 3-month-ago `chartPreviousClose`,
+// producing absurd "daily" moves (AMD +128%). `series` is date-sorted
+// [{date, close}]; nulls/invalid closes are dropped here. `livePrice` (Yahoo
+// regularMarketPrice) is used as the latest point ONLY when it's a genuinely
+// newer current-session price than the last completed bar (e.g. the current
+// day's bar hasn't posted a close yet); otherwise the last two closes are used,
+// which naturally handles weekends, holidays and missing bars.
+export function dailyChange(series, livePrice = null) {
+  const valid = (series || []).filter((b) => b && b.close != null && Number.isFinite(b.close) && b.close > 0);
+  if (!valid.length) return { changePct: null, latestClose: null, prevClose: null, review: false, reason: 'no valid closes' };
+  const lastBar = valid[valid.length - 1];
+  const liveOk = livePrice != null && Number.isFinite(livePrice) && livePrice > 0;
+
+  let latest, prev;
+  if (liveOk && Math.abs(livePrice - lastBar.close) / lastBar.close > 1e-6) {
+    // live price differs from the last posted bar → treat it as the current
+    // (in-progress) session vs the last completed bar
+    latest = livePrice; prev = lastBar.close;
+  } else if (valid.length >= 2) {
+    latest = lastBar.close; prev = valid[valid.length - 2].close;
+  } else {
+    return { changePct: null, latestClose: lastBar.close, prevClose: null, review: false, reason: 'single valid bar' };
+  }
+  if (prev === 0) return { changePct: null, latestClose: latest, prevClose: prev, review: false, reason: 'zero prev close' };
+  const changePct = ((latest - prev) / prev) * 100;
+  return {
+    changePct,
+    latestClose: latest,
+    prevClose: prev,
+    review: Math.abs(changePct) > DAILY_CHANGE_REVIEW_PCT,
+    reason: null,
+  };
+}
