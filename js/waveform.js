@@ -46,6 +46,14 @@ function trendFor(winner, familySignals) {
   return 'steady';
 }
 const TREND_MARK = { strengthening: '↗', weakening: '↘', steady: '→' };
+const AREA_WORD = { product: 'product', market: 'market', research: 'research' };
+
+// Deterministic "why it matters" — the concrete, non-fabricated reason this
+// story was surfaced: it's the day's top move in its area by our impact score,
+// stated with its impact/verification/corroboration.
+function whyText(w) {
+  return `The day's strongest ${AREA_WORD[w.family] || w.family} move by impact — ${(IMPACT_LABEL[w.impact] || w.impact).toLowerCase()}, ${(VERIFICATION_LABEL[w.verification] || w.verification).toLowerCase()}, ${w.sourceCount} source${w.sourceCount === 1 ? '' : 's'}.`;
+}
 
 export function renderWaveforms(root, allSignals = [], waves = [], now = Date.now()) {
   if (!waves.length) {
@@ -80,7 +88,7 @@ export function renderWaveforms(root, allSignals = [], waves = [], now = Date.no
     }).join('');
 
     return `
-      <article class="wf-row" data-idx="${i}">
+      <article class="wf-row wf-${esc(w.family)}" data-idx="${i}">
         <div class="wf-head">
           <span class="wf-fam"><span class="wf-mark" aria-hidden="true">${f.mark}</span>${esc(f.label)}</span>
           <span class="wf-trend wf-trend-${trend}" title="${esc(trend)} vs. other ${esc(w.family)} stories in this window">${TREND_MARK[trend]} ${esc(trend)}</span>
@@ -90,22 +98,30 @@ export function renderWaveforms(root, allSignals = [], waves = [], now = Date.no
           <polyline class="wf-line" points="${linePts}" fill="none" stroke="${f.color}" stroke-width="1.6" opacity="0.55"></polyline>
           ${markers}
         </svg>
-        <button class="wf-summary" aria-expanded="false">
-          <span class="wf-title">${esc(w.title)}</span>
-          <span class="wf-meta">${freshnessChip(w.dateISO, now)} ${verificationChip(w.verification)} <span class="wf-impact">${esc(IMPACT_LABEL[w.impact] || w.impact)}</span></span>
-        </button>
+        <h3 class="wf-title">${esc(w.title)}</h3>
+        ${w.summary ? `<p class="wf-summary-text">${esc(w.summary)}</p>` : ''}
+        <p class="wf-why"><span class="wf-why-label">Why it matters</span> ${esc(whyText(w))}</p>
+        <div class="wf-meta">
+          ${freshnessChip(w.dateISO, now)}
+          ${verificationChip(w.verification)}
+          <span class="wf-impact">${esc(IMPACT_LABEL[w.impact] || w.impact)}</span>
+          <span class="wf-src">${w.sourceCount} source${w.sourceCount === 1 ? '' : 's'}</span>
+          <a class="src-link" href="${esc(w.url)}" target="_blank" rel="noopener">Read original</a>
+        </div>
+        <button class="wf-more" aria-expanded="false">Sources &amp; follow-ups</button>
         <div class="wf-detail" hidden></div>
       </article>`;
   }).join('');
 
   root.querySelectorAll('.wf-row').forEach((rowEl, i) => {
     const w = waves[i];
-    const btn = rowEl.querySelector('.wf-summary');
+    const btn = rowEl.querySelector('.wf-more');
     const detail = rowEl.querySelector('.wf-detail');
     btn.addEventListener('click', () => {
       const open = detail.hidden;
       detail.hidden = !open;
       btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Hide sources & follow-ups' : 'Sources & follow-ups';
       if (open && !detail.dataset.filled) {
         detail.dataset.filled = '1';
         detail.innerHTML = detailMarkup(w, now);
@@ -126,14 +142,10 @@ function detailMarkup(w, now) {
   const followUps = w.sourceCount > 1 ? `${w.sourceCount - 1} follow-up report${w.sourceCount - 1 === 1 ? '' : 's'}` : 'no follow-up reports yet';
   return `
     <div class="wf-detail-inner">
-      <p class="wf-why"><b>Why it matters:</b> ${esc(w.summary || w.title)}</p>
       <div class="wf-facts">
-        <span><b>Verification:</b> ${esc(VERIFICATION_LABEL[w.verification] || w.verification)}</span>
-        <span><b>Impact:</b> ${esc(IMPACT_LABEL[w.impact] || w.impact)}</span>
         <span><b>Published:</b> ${esc(new Date(w.dateISO).toLocaleString('en-US', { month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }))} UTC (${esc(timeAgo(w.dateISO, now))})</span>
         <span><b>Follow-ups:</b> ${esc(followUps)}</span>
       </div>
-      ${(w.sources || []).length ? `<div class="wf-sources"><b>Sources:</b> ${w.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener" class="src-link">${esc(s.name)}</a>`).join(' · ')}</div>` : ''}
-      <a class="src-link wf-read" href="${esc(w.url)}" target="_blank" rel="noopener">Read original →</a>
+      ${(w.sources || []).length ? `<div class="wf-sources"><b>All sources:</b> ${w.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener" class="src-link">${esc(s.name)}</a>`).join(' · ')}</div>` : ''}
     </div>`;
 }

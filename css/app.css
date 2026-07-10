@@ -182,16 +182,19 @@ body.drawer-open { overflow: hidden; }
 .wf-point { cursor: pointer; transition: r .15s ease; }
 .wf-point:hover, .wf-point:focus { r: 8; outline: none; }
 .wf-point-main { stroke: var(--panel-solid); stroke-width: 2; }
-.wf-summary {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-  width: 100%; background: none; border: none; border-top: 1px solid var(--border);
-  padding: 10px 0 0; margin-top: 6px; cursor: pointer; text-align: left; font: inherit;
-}
-.wf-title { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--deep); line-height: 1.3; }
-.wf-meta { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.wf-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--deep); line-height: 1.3; margin: 8px 0 4px; border-top: 1px solid var(--border); padding-top: 10px; }
+.wf-summary-text { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 8px; }
+.wf-why { font-size: 13px; color: var(--ink); line-height: 1.5; margin: 0 0 10px; padding: 8px 10px; background: var(--foam); border-radius: 8px; border-left: 3px solid var(--sea); }
+.wf-product .wf-why { border-left-color: var(--sea); }
+.wf-market .wf-why { border-left-color: var(--coral); }
+.wf-research .wf-why { border-left-color: var(--sand); }
+.wf-why-label { display: block; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 2px; }
+.wf-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
 .wf-impact { font-family: var(--font-mono); font-size: 10.5px; color: var(--teal); }
-.wf-detail-inner { padding: 14px 2px 4px; border-top: 1px dashed var(--border); margin-top: 10px; }
-.wf-why { font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; margin: 0 0 12px; }
+.wf-src { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+.wf-more { font-family: var(--font-mono); font-size: 10.5px; color: var(--teal); background: none; border: none; border-top: 1px solid var(--border); padding: 8px 0 0; width: 100%; text-align: left; cursor: pointer; }
+.wf-more:hover { text-decoration: underline; }
+.wf-detail-inner { padding: 12px 2px 2px; }
 .wf-facts { display: flex; flex-wrap: wrap; gap: 14px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); margin-bottom: 10px; }
 .wf-facts b { color: var(--deep); font-family: var(--font-body); }
 .wf-sources { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-dim); margin-bottom: 10px; }
@@ -353,3 +356,28 @@ body.drawer-open { overflow: hidden; }
   .section-ribbon--research .section-ribbon__descriptor { border-left-color: rgba(176,141,82,.5); }
   .section-ribbon--infra .section-ribbon__descriptor { border-left-color: rgba(27,75,90,.45); }
 }
+
+/* ---------- ocean map compact intro (encoding legend) ---------- */
+.map-intro-lead {
+  font-family: var(--font-display); font-size: clamp(16px, 2vw, 20px); color: var(--deep);
+  margin: 0 0 10px; text-shadow: var(--text-outline); max-width: 52ch;
+}
+.map-encoding { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.map-enc {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);
+  background: var(--panel-solid); border: 1px solid var(--border);
+  border-radius: 20px; padding: 4px 12px 4px 8px;
+}
+.map-enc b { color: var(--deep); font-weight: 700; }
+.enc-ico { width: 24px; height: 14px; flex-shrink: 0; }
+.map-enc-util {
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim);
+  font-style: italic; text-shadow: var(--text-outline);
+}
+@media (max-width: 560px) { .map-encoding { gap: 7px; } .map-enc { font-size: 10.5px; } }
+
+/* ---------- waves section explainer ---------- */
+.waves-explain { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin: -6px 0 18px; text-shadow: var(--text-outline); }
+.waves-explain b { color: var(--deep); }
+.how-selected { margin-left: 4px; }

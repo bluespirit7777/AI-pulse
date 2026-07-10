@@ -475,7 +475,22 @@
             <h2 class="section-ribbon__title">The AI Ocean Map</h2>
             <p class="section-ribbon__descriptor">Where AI power flows</p>
           </div>
-          <p class="lead intro-note">A depth map of the AI ecosystem — chips and infrastructure at the base, applications rising to the surface. Node <b>size</b> is curated importance; inner <b>glow</b> is live activity; the outer <b>ring</b> shows change versus the prior period. Hover, tap, or tab to a node for detail.</p>
+          <p class="map-intro-lead">A depth map of the AI ecosystem — chips at the base, applications at the surface.</p>
+          <div class="map-encoding" role="list" aria-label="What the map encodes">
+            <span class="map-enc" role="listitem">
+              <svg class="enc-ico" viewBox="0 0 26 14" aria-hidden="true"><circle cx="5" cy="7" r="3" fill="var(--sea)"/><circle cx="18" cy="7" r="6" fill="var(--sea)"/></svg>
+              <span><b>Size</b> · curated importance</span>
+            </span>
+            <span class="map-enc" role="listitem">
+              <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" fill="var(--teal)" opacity=".28"/><circle cx="8" cy="8" r="3.5" fill="var(--teal)"/></svg>
+              <span><b>Glow</b> · live activity</span>
+            </span>
+            <span class="map-enc" role="listitem">
+              <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="var(--coral)" stroke-width="2"/></svg>
+              <span><b>Ring</b> · change vs prior period</span>
+            </span>
+            <span class="map-enc-util">Select a node for details.</span>
+          </div>
         </div>
         <div>
           <div class="range-toggle" role="tablist" aria-label="Activity time range">
@@ -512,7 +527,7 @@
         <h2 class="section-ribbon__title">Today's strongest waves</h2>
         <p class="section-ribbon__descriptor">The biggest product, market &amp; research moves</p>
       </div>
-      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Ranked by a documented significance blend (recency, corroboration, entity weight, category) — not simply the newest three. <a class="src-link" href="docs/METHODOLOGY.md" target="_blank" rel="noopener">Methodology</a></p>
+      <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
       <div class="waves-grid" id="waves"></div>
     </section>
 
