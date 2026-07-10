@@ -17,8 +17,13 @@ html, body { overflow-x: clip; }
   border: 1px solid var(--border); border-radius: 12px;
   padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.05);
 }
-.section-head h2, .section-head .tag, .brand h1, .brand .sub {
-  text-shadow: 0 1px 3px rgba(250,253,254,.7), 0 0px 14px rgba(250,253,254,.55);
+/* Loose text sitting on the ocean photo (no panel behind it) gets a crisp
+   white outline; the text keeps its own colour. Text inside .panel/.card/
+   .intro-note already has an opaque backing and is intentionally excluded. */
+.section-head h2, .section-head .tag, .brand h1, .brand .sub,
+.depths-divider h2, .depths-divider p, .map-legend, .map-legend span,
+.history-note {
+  text-shadow: var(--text-outline);
 }
 .map-summary {
   background: var(--panel-solid);
