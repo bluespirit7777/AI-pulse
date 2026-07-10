@@ -6,7 +6,7 @@
 //
 // Run: node scripts/update-data.mjs
 
-import { writeFile, mkdir, readFile } from 'node:fs/promises';
+import { writeFile, mkdir, readFile, readdir, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -17,16 +17,30 @@ import {
   inferField,
   isProductRelease,
   scoreSignificance,
-  confidenceTier,
+  classifyVerification,
+  classifyImpact,
+  matchEntities,
   computeEntityActivity,
   buildWaves,
 } from './lib/signals.mjs';
+import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const OUT_PATH = path.join(DATA_DIR, 'latest.json');
+const RANGES_PATH = path.join(DATA_DIR, 'range.json');
 const ENTITIES_PATH = path.join(DATA_DIR, 'entities.json');
 const HISTORY_DIR = path.join(DATA_DIR, 'history');
+const EVENTS_DIR = path.join(HISTORY_DIR, 'events');
+
+// Deterministic (non-cryptographic) short hash — used for stable cluster IDs
+// so the same story keeps the same ID across builds (its representative URL
+// doesn't change once assigned).
+function stableId(str) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193); }
+  return (h >>> 0).toString(36);
+}
 
 const UA = 'Mozilla/5.0 (compatible; AIMarketPulseBot/1.0; +https://github.com/)';
 const FETCH_TIMEOUT_MS = 12000;
@@ -184,50 +198,71 @@ async function main() {
   console.log(`Fetched ${allItems.length} items from ${FEEDS.length} feeds.`);
 
   // 1) drop stale/evergreen posts (some publisher feeds carry years-old items),
-  //    newest first, then merge duplicate stories (preserves per-source corroboration)
+  //    newest first
   const RECENT_MS = 60 * 24 * 3.6e6; // 60 days
   const recent = allItems.filter((it) => now - new Date(it.date).getTime() <= RECENT_MS);
   const pool = recent.length >= 12 ? recent : allItems; // fallback if feeds are sparse
   pool.sort((a, b) => b.date - a.date);
-  const merged = dedupeMerge(pool, 0.5);
+  if (process.env.DUMP_POOL) {
+    await writeFile(process.env.DUMP_POOL, JSON.stringify(pool, null, 2), 'utf-8');
+    console.log('DUMP_POOL written, exiting early for inspection.');
+    process.exit(0);
+  }
 
-  // 2) unified, categorized, scored signal stream — the spine of the new sections
+  // 2) categorize EACH raw item first (needed as a clustering signal — two
+  //    reports of the same event are almost always categorized identically),
+  //    then cluster duplicate reports of the same event together.
+  const categorized = pool.map((it) => {
+    const { category, confidence: catConfidence } = categorize(it.title, it.desc);
+    return { ...it, category, catConfidence };
+  });
+  const merged = dedupeMerge(categorized, { threshold: 0.34, nodes });
+
+  // 3) unified, scored signal stream — the spine of every section. Category
+  //    is taken from the cluster's representative (set in step 2, before
+  //    merging, so it already benefited from the category-match clustering
+  //    signal — no need to recompute).
   const signals = merged
     .map((it) => {
-      const text = `${it.title} ${it.desc}`;
-      const category = categorize(text);
+      const category = it.category;
       const item = { ...it, category };
       const significance = scoreSignificance(item, nodes, now);
+      const entityIds = matchEntities(`${it.title} ${it.desc}`, nodes).ids;
+      const clusterId = stableId(it.link);
       return {
         id: it.link,
+        clusterId,
         title: it.title,
         desc: it.desc,
         url: it.link,
         dateISO: new Date(it.date).toISOString(),
         date: shortDate(it.date),
         category,
+        catConfidence: it.catConfidence,
         family: waveFamily(category),
         significance,
-        confidence: confidenceTier(it.sourceCount),
+        impact: classifyImpact(significance),
+        verification: classifyVerification(item),
         sourceCount: it.sourceCount,
         sources: it.sources.map((s) => ({ name: s.sourceName, url: s.link })),
         sourceName: it.sourceName,
+        entityIds,
       };
     })
     .sort((a, b) => b.significance - a.significance);
 
-  // 3) derive the existing detailed sections from the same merged stream
+  // 4) derive the existing detailed sections from the same merged stream —
+  //    every section reads the same underlying clusters, so a story never
+  //    appears in one place miscategorized relative to another.
   const releasesByLab = {};
   const feedRows = [];
   const breakthroughs = [];
   const wire = [];
   for (const it of merged) {
-    const text = `${it.title} ${it.desc}`;
-    const lab = detectLab(text);
-    const cat = categorize(text);
+    const lab = detectLab(`${it.title} ${it.desc}`);
     if (lab && isProductRelease(it.title, it.desc)) { (releasesByLab[lab] ||= []).push(it); continue; }
-    if (cat === 'opensource') { feedRows.push(it); continue; }
-    if (cat === 'research') { breakthroughs.push(it); continue; }
+    if (it.category === 'opensource') { feedRows.push(it); continue; }
+    if (it.category === 'research') { breakthroughs.push(it); continue; }
     wire.push({ ...it, lab });
   }
 
@@ -268,12 +303,12 @@ async function main() {
 
   const ticker = signals.slice(0, 10).map((s) => truncate(s.title, 110).toUpperCase());
 
-  // 4) live ocean-map inputs + strongest waves (all deterministic)
+  // 5) live ocean-map inputs + strongest waves (all deterministic)
   const entityActivity = computeEntityActivity(signals, nodes);
   const waves = buildWaves(signals).map((w) => ({
     family: w.family, category: w.category, title: w.title, summary: truncate(w.desc, 180) || w.title,
-    significance: w.significance, confidence: w.confidence, date: w.date, dateISO: w.dateISO,
-    url: w.url, sourceCount: w.sourceCount, sources: w.sources,
+    significance: w.significance, impact: w.impact, verification: w.verification, date: w.date, dateISO: w.dateISO,
+    url: w.url, sourceCount: w.sourceCount, sources: w.sources, entityIds: w.entityIds,
   }));
 
   console.log('Fetching stock quotes…');
@@ -296,28 +331,63 @@ async function main() {
   await writeFile(OUT_PATH, JSON.stringify(data, null, 2), 'utf-8');
   console.log(`Wrote ${OUT_PATH}`);
 
-  await writeDailySnapshot(data);
+  await writeEventHistoryAndRanges(signals, nodes, now);
 
   console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}`);
 }
 
-// One compact snapshot per UTC day (the day's last run wins — bounds growth to
-// ~365 small files/year). Enough to compute 24H/7D/30D deltas without storing
-// full article text historically.
-async function writeDailySnapshot(data) {
-  const day = data.updatedAt.slice(0, 10);
-  await mkdir(HISTORY_DIR, { recursive: true });
-  const snap = {
-    date: day,
-    updatedAt: data.updatedAt,
-    signalCount: data.signals.length,
-    entityActivity: data.entityActivity,
-    waveTitles: data.waves.map((w) => ({ family: w.family, title: w.title })),
-    stocks: data.stocks.map((s) => ({ t: s.t, price: s.price, changePct: s.changePct })),
-    topSignals: data.signals.slice(0, 12).map((s) => ({ title: s.title, category: s.category, significance: s.significance })),
-  };
-  await writeFile(path.join(HISTORY_DIR, `${day}.json`), JSON.stringify(snap, null, 2), 'utf-8');
-  console.log(`Wrote history snapshot ${day}.json`);
+// Appends today's clustered signals to data/history/events/YYYY-MM-DD.json
+// (de-duplicated by clusterId against what's already there today), prunes
+// event files older than HISTORY_RETENTION_DAYS, loads the retained window,
+// and writes data/range.json with REAL per-range stats (current window vs the
+// equivalent prior window — never a single blended comparison point).
+async function writeEventHistoryAndRanges(signals, nodes, now) {
+  await mkdir(EVENTS_DIR, { recursive: true });
+
+  const today = dayKey(now);
+  const todayPath = path.join(EVENTS_DIR, `${today}.json`);
+  let existingToday = [];
+  try { existingToday = JSON.parse(await readFile(todayPath, 'utf-8')); } catch { /* first run today */ }
+
+  const freshToday = signals.map((s) => ({ ...toCompactEvent(s), collectedOn: today }));
+  const mergedToday = mergeTodayEvents(existingToday, freshToday);
+  await writeFile(todayPath, JSON.stringify(mergedToday, null, 2), 'utf-8');
+  console.log(`Wrote ${mergedToday.length} events to history/events/${today}.json`);
+
+  // prune anything older than the retention window (bounds growth to ~60 files)
+  const cutoff = now - HISTORY_RETENTION_DAYS * 24 * 3.6e6;
+  const files = await readdir(EVENTS_DIR);
+  for (const f of files) {
+    const m = f.match(/^(\d{4}-\d{2}-\d{2})\.json$/);
+    if (!m) continue;
+    if (new Date(m[1] + 'T00:00:00Z').getTime() < cutoff) {
+      await unlink(path.join(EVENTS_DIR, f));
+      console.log(`Pruned expired history/events/${f}`);
+    }
+  }
+
+  // load everything within the retention window (including the file we just wrote)
+  const remaining = await readdir(EVENTS_DIR);
+  let allEvents = [];
+  let earliestDay = today;
+  for (const f of remaining) {
+    const m = f.match(/^(\d{4}-\d{2}-\d{2})\.json$/);
+    if (!m) continue;
+    if (m[1] < earliestDay) earliestDay = m[1];
+    try {
+      const day = JSON.parse(await readFile(path.join(EVENTS_DIR, f), 'utf-8'));
+      allEvents = allEvents.concat(day);
+    } catch (err) {
+      console.error(`[history] failed to read ${f}: ${err.message}`);
+    }
+  }
+  // collection start = midnight UTC of the earliest day-file we actually have
+  // on disk — NOT the oldest article's publish date (see buildRangesDoc doc).
+  const collectionStartMs = new Date(`${earliestDay}T00:00:00Z`).getTime();
+
+  const rangesDoc = buildRangesDoc(allEvents, now, nodes, collectionStartMs);
+  await writeFile(RANGES_PATH, JSON.stringify(rangesDoc, null, 2), 'utf-8');
+  console.log(`Wrote ${RANGES_PATH} (${allEvents.length} events, ${rangesDoc.historyDepthDays}d of history)`);
 }
 
 main().catch((err) => {
