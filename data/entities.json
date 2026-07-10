@@ -1,0 +1,64 @@
+{
+  "_doc": "Curated ecosystem map config. Hand-maintained, clearly an estimate — NOT live data. 'importance' is a documented 0-100 editorial weight (roughly: reach x strategic centrality), used only for node SIZE. Live momentum/glow is computed at build time from how many recent signals mention each node's 'match' terms (see scripts/lib/signals.mjs computeEntityActivity). 'layers' are conceptual depth bands, shallow (adoption) to deep (silicon).",
+  "updatedBy": "curated",
+  "asOf": "2026-07-09",
+  "layers": [
+    { "id": 1, "name": "Applications & adoption", "blurb": "Where people actually touch AI" },
+    { "id": 2, "name": "Frontier models", "blurb": "The largest general-purpose systems" },
+    { "id": 3, "name": "Open-source ecosystem", "blurb": "Weights you can self-host" },
+    { "id": 4, "name": "Cloud & compute", "blurb": "Where the training and serving runs" },
+    { "id": 5, "name": "Chips & infrastructure", "blurb": "The silicon everything depends on" }
+  ],
+  "nodes": [
+    { "id": "chatgpt", "name": "ChatGPT", "org": "OpenAI", "layer": 1, "importance": 100, "match": ["chatgpt"], "why": "The most-used AI application; the front door to generative AI for hundreds of millions of people.", "links": [{ "label": "OpenAI", "url": "https://openai.com/news/" }] },
+    { "id": "copilot", "name": "Copilot", "org": "Microsoft", "layer": 1, "importance": 78, "match": ["copilot"], "why": "Embeds AI across Windows, Office and GitHub — the widest enterprise distribution channel.", "links": [{ "label": "Microsoft AI", "url": "https://blogs.microsoft.com/ai/" }] },
+    { "id": "perplexity", "name": "Perplexity", "org": "Perplexity", "layer": 1, "importance": 58, "match": ["perplexity"], "why": "Answer-engine framing of search; a bellwether for AI-native consumer products.", "links": [{ "label": "Perplexity", "url": "https://www.perplexity.ai/" }] },
+
+    { "id": "gpt", "name": "GPT-5.5", "org": "OpenAI", "layer": 2, "importance": 96, "match": ["gpt-5", "gpt5", "openai model", "gpt-4"], "why": "OpenAI's frontier model line; sets the pace much of the field measures against.", "links": [{ "label": "OpenAI", "url": "https://openai.com/news/" }] },
+    { "id": "claude", "name": "Claude Opus 4.8", "org": "Anthropic", "layer": 2, "importance": 92, "match": ["claude", "anthropic"], "why": "Tops several public intelligence indices; strong on agentic coding and computer use.", "links": [{ "label": "Anthropic", "url": "https://www.anthropic.com/news" }] },
+    { "id": "gemini", "name": "Gemini 3.1", "org": "Google DeepMind", "layer": 2, "importance": 90, "match": ["gemini", "deepmind"], "why": "Google's frontier model, distributed through Search, Workspace and Android.", "links": [{ "label": "Google DeepMind", "url": "https://deepmind.google/discover/blog/" }] },
+    { "id": "grok", "name": "Grok 4", "org": "xAI", "layer": 2, "importance": 66, "match": ["grok", "xai", "x.ai"], "why": "xAI's model line, tightly coupled to X and to very large training clusters.", "links": [{ "label": "xAI", "url": "https://x.ai/news" }] },
+
+    { "id": "llama", "name": "Llama", "org": "Meta", "layer": 3, "importance": 80, "match": ["llama", "meta ai"], "why": "The most widely fine-tuned open-weight base; the backbone of much of the open ecosystem.", "links": [{ "label": "Meta AI", "url": "https://ai.meta.com/blog/" }] },
+    { "id": "deepseek", "name": "DeepSeek", "org": "DeepSeek", "layer": 3, "importance": 72, "match": ["deepseek"], "why": "Chinese open-weight lab whose efficient training runs reset cost expectations.", "links": [{ "label": "DeepSeek", "url": "https://www.deepseek.com/" }] },
+    { "id": "qwen", "name": "Qwen", "org": "Alibaba", "layer": 3, "importance": 70, "match": ["qwen", "alibaba"], "why": "Highest-placed open/Chinese-origin model family on public indices.", "links": [{ "label": "Qwen", "url": "https://qwenlm.github.io/" }] },
+    { "id": "mistral", "name": "Mistral", "org": "Mistral AI", "layer": 3, "importance": 54, "match": ["mistral"], "why": "Europe's leading open-weight lab; a reference point for efficient mid-size models.", "links": [{ "label": "Mistral AI", "url": "https://mistral.ai/news/" }] },
+
+    { "id": "azure", "name": "Microsoft Azure", "org": "Microsoft", "layer": 4, "importance": 88, "match": ["azure", "microsoft cloud"], "why": "OpenAI's primary compute partner and a top enterprise AI cloud.", "links": [{ "label": "Azure AI", "url": "https://azure.microsoft.com/en-us/blog/" }] },
+    { "id": "aws", "name": "AWS", "org": "Amazon", "layer": 4, "importance": 84, "match": ["aws", "amazon web services", "bedrock", "trainium"], "why": "Hosts Anthropic and Bedrock models; builds custom Trainium silicon.", "links": [{ "label": "AWS", "url": "https://aws.amazon.com/blogs/machine-learning/" }] },
+    { "id": "gcp", "name": "Google Cloud", "org": "Google", "layer": 4, "importance": 82, "match": ["google cloud", "vertex ai", "tpu"], "why": "Serves Gemini and rents TPUs; a co-compute partner to Anthropic.", "links": [{ "label": "Google Cloud", "url": "https://cloud.google.com/blog/products/ai-machine-learning" }] },
+    { "id": "oracle", "name": "Oracle", "org": "Oracle", "layer": 4, "importance": 62, "match": ["oracle"], "why": "Large-scale compute contracts with frontier labs have made it an AI-infra story.", "links": [{ "label": "Oracle", "url": "https://www.oracle.com/news/" }] },
+    { "id": "coreweave", "name": "CoreWeave", "org": "CoreWeave", "layer": 4, "importance": 52, "match": ["coreweave", "neocloud"], "why": "The archetypal 'neocloud' — GPU capacity rented to labs at scale.", "links": [{ "label": "CoreWeave", "url": "https://www.coreweave.com/blog" }] },
+
+    { "id": "nvidia", "name": "Nvidia", "org": "Nvidia", "layer": 5, "importance": 100, "match": ["nvidia", "\\bh100\\b", "\\bh200\\b", "blackwell", "\\bgpu\\b"], "why": "The dominant AI accelerator and software stack; the single largest infra dependency.", "links": [{ "label": "Nvidia", "url": "https://nvidianews.nvidia.com/" }] },
+    { "id": "amd", "name": "AMD", "org": "AMD", "layer": 5, "importance": 68, "match": ["\\bamd\\b", "instinct", "mi300", "mi350"], "why": "The most credible Nvidia alternative in AI training and inference.", "links": [{ "label": "AMD", "url": "https://www.amd.com/en/newsroom.html" }] },
+    { "id": "tsmc", "name": "TSMC", "org": "TSMC", "layer": 5, "importance": 86, "match": ["tsmc", "taiwan semiconductor"], "why": "Fabricates the advanced-node chips nearly every AI accelerator depends on.", "links": [{ "label": "TSMC", "url": "https://pr.tsmc.com/english/latest-news" }] },
+    { "id": "broadcom", "name": "Broadcom", "org": "Broadcom", "layer": 5, "importance": 64, "match": ["broadcom"], "why": "Custom AI accelerators for hyperscalers plus the networking silicon that links clusters.", "links": [{ "label": "Broadcom", "url": "https://www.broadcom.com/company/news" }] }
+  ],
+  "connections": [
+    { "from": "chatgpt", "to": "gpt", "type": "depends" },
+    { "from": "copilot", "to": "gpt", "type": "partner" },
+    { "from": "perplexity", "to": "claude", "type": "depends" },
+    { "from": "perplexity", "to": "gpt", "type": "depends" },
+    { "from": "gpt", "to": "azure", "type": "depends" },
+    { "from": "claude", "to": "aws", "type": "depends" },
+    { "from": "claude", "to": "gcp", "type": "depends" },
+    { "from": "gemini", "to": "gcp", "type": "depends" },
+    { "from": "grok", "to": "oracle", "type": "depends" },
+    { "from": "grok", "to": "coreweave", "type": "depends" },
+    { "from": "llama", "to": "aws", "type": "depends" },
+    { "from": "gpt", "to": "claude", "type": "competes" },
+    { "from": "claude", "to": "gemini", "type": "competes" },
+    { "from": "azure", "to": "nvidia", "type": "depends" },
+    { "from": "aws", "to": "nvidia", "type": "depends" },
+    { "from": "gcp", "to": "nvidia", "type": "depends" },
+    { "from": "oracle", "to": "nvidia", "type": "depends" },
+    { "from": "coreweave", "to": "nvidia", "type": "depends" },
+    { "from": "aws", "to": "broadcom", "type": "partner" },
+    { "from": "gcp", "to": "broadcom", "type": "partner" },
+    { "from": "nvidia", "to": "tsmc", "type": "depends" },
+    { "from": "amd", "to": "tsmc", "type": "depends" },
+    { "from": "broadcom", "to": "tsmc", "type": "depends" },
+    { "from": "amd", "to": "nvidia", "type": "competes" }
+  ]
+}

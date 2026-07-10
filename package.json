@@ -1,0 +1,16 @@
+{
+  "name": "ai-pulse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Pulse — a living visual map of where AI energy is moving. Static site, no backend.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/update-data.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test test/signals.test.mjs",
+    "check": "npm run validate && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
