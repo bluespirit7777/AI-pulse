@@ -22,18 +22,21 @@ export function renderCommunity(root, community) {
     return;
   }
 
-  const ranked = models.slice().sort((a, b) => (b.mentionCount || 0) - (a.mentionCount || 0));
+  // bubble size = validated public discussions (stories that genuinely discuss
+  // the model), NOT raw keyword hits. See scripts/lib/signals.mjs matchModelMention.
+  const discussions = (m) => m.validatedDiscussions || 0;
+  const ranked = models.slice().sort((a, b) => discussions(b) - discussions(a));
   const state = { modelId: ranked[0].key, theme: 'all' };
-  const maxMention = Math.max(...models.map((m) => m.mentionCount || 0), 1);
+  const maxDisc = Math.max(...models.map(discussions), 1);
 
-  // ---- bubble layout (deterministic, sized by mention volume) ----
+  // ---- bubble layout (deterministic, sized by validated discussion volume) ----
   const n = ranked.length;
   const pad = 60;
   const positions = ranked.map((m, i) => ({
     key: m.key,
     x: pad + ((i + 0.5) * (VW - pad * 2)) / n,
     y: VH / 2 - 6,
-    r: 14 + Math.sqrt((m.mentionCount || 0) / maxMention) * 34,
+    r: 14 + Math.sqrt(discussions(m) / maxDisc) * 34,
   }));
   const posByKey = Object.fromEntries(positions.map((p) => [p.key, p]));
 
@@ -44,7 +47,7 @@ export function renderCommunity(root, community) {
       </svg>
     </div>
     <div class="cm-detail" id="cm-detail"></div>
-    <p class="cm-foot">A <b>sample</b> of public developer discussion from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> (${esc(community.window || '30D')}) — not the whole community, and not a sentiment score. Updated ${esc(timeAgo(community.updatedAt))}.</p>
+    <p class="cm-foot"><b>Bubble size = validated public discussions</b> — Hacker News threads (${esc(community.window || '30D')}) that genuinely discuss the model, not raw keyword hits. A <b>sample</b> of public developer discussion, not the whole community and not a sentiment score. <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> · updated ${esc(timeAgo(community.updatedAt))}.</p>
   `;
   const gB = root.querySelector('.cm-bubbles');
 
@@ -57,11 +60,11 @@ export function renderCommunity(root, community) {
     g.setAttribute('role', 'button');
     g.setAttribute('data-key', m.key);
     g.setAttribute('transform', `translate(${p.x} ${p.y})`);
-    g.setAttribute('aria-label', `${m.model}: ${fmt(m.mentionCount)} mentions in ${esc(community.window || '30D')}. Top themes ${(m.themes || []).slice(0, 3).map((t) => t.label).join(', ') || 'none'}. Select to see comments.`);
+    g.setAttribute('aria-label', `${m.model}: ${fmt(discussions(m))} validated public discussions in ${esc(community.window || '30D')}${m.limited ? ' (limited sample)' : ''}. Top themes ${(m.themes || []).slice(0, 3).map((t) => t.label).join(', ') || 'none'}. Select to see comments.`);
     g.innerHTML = `
       <circle class="cm-bub-core" r="${p.r.toFixed(1)}" fill="${color}"></circle>
       <text class="cm-bub-label" text-anchor="middle" dy="0.32em" y="0">${esc(m.model)}</text>
-      <text class="cm-bub-count" text-anchor="middle" y="${(p.r + 13).toFixed(0)}">${fmt(m.mentionCount)}</text>`;
+      <text class="cm-bub-count" text-anchor="middle" y="${(p.r + 13).toFixed(0)}">${fmt(discussions(m))}</text>`;
     gB.appendChild(g);
     const sel = () => selectModel(m.key);
     g.addEventListener('click', sel);
@@ -86,8 +89,9 @@ export function renderCommunity(root, community) {
     detail.innerHTML = `
       <div class="cm-head">
         <div><span class="cm-model">${esc(m.model)}</span> <span class="cm-org">${esc(m.org || '')}${m.version && m.version !== m.model ? ' · ' + esc(m.version) : ''}</span></div>
-        <div class="cm-stats"><span><b>${fmt(m.mentionCount)}</b> mentions</span><span><b>${fmt(m.uniqueDiscussionCount)}</b> threads</span></div>
+        <div class="cm-stats"><span><b>${fmt(m.validatedDiscussions)}</b> discussions</span><span><b>${fmt(m.validatedMentions)}</b> mentions</span></div>
       </div>
+      ${m.limited ? `<p class="cm-limited">⚠ Limited discussion sample — few validated threads in this window; treat as indicative only.</p>` : ''}
       ${(m.themes || []).length ? `<div class="cm-themes" role="tablist" aria-label="Filter comments by topic">
         ${themeChips.map((t) => `<button class="cm-theme${t.id === state.theme ? ' active' : ''}" role="tab" aria-selected="${t.id === state.theme}" data-theme="${esc(t.id)}">${esc(t.label)}${t.id !== 'all' ? ` <span class="cm-theme-n">${t.count}</span>` : ''}</button>`).join('')}
       </div>` : ''}

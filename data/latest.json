@@ -1,19 +1,49 @@
 {
-  "updatedAt": "2026-07-10T18:30:17.212Z",
+  "updatedAt": "2026-07-11T04:40:52.174Z",
   "ticker": [
+    "APPLE IS SUING OPENAI FOR ALLEGEDLY STEALING HARDWARE SECRETS",
     "OPENAI’S CEO OF AGI DEPLOYMENT, FIDJI SIMO, IS STEPPING DOWN",
     "APPLE IS SUING OPENAI FOR ALLEGEDLY STEALING HARDWARE SECRETS",
     "OPENAI MAY HAVE MADE A FATAL MISSTEP IN COPYRIGHT FIGHT WITH NEWS ORGS",
     "GPT-5.6 IS NOW THE PREFERRED MODEL IN MICROSOFT 365 COPILOT",
+    "OPENAI’S HEAD OF SAFETY IS LEAVING THE COMPANY",
+    "APPLE SUES OPENAI OVER ALLEGED TRADE SECRET THEFT",
     "THE CHATGPT BROWSER IS ALREADY DEAD",
     "ANTHROPIC FOUND A HIDDEN SPACE WHERE CLAUDE PUZZLES OVER CONCEPTS",
     "HOW DEUTSCHE TELEKOM IS REWIRING TELECOMMUNICATIONS WITH AI",
-    "PARIS-BASED AI VOICE STARTUP GRADIUM RAISES $100M SEED, BACKED BY NVIDIA",
-    "OPENAI WANTS ITS NEW TOOL TO DO YOUR WORK FOR YOU AND WITH YOU",
-    "GOOGLE WILL NOW DISCLOSE WHICH ADS ARE MADE WITH AI",
-    "SAY HELLO TO CLAUDE WRAPPED"
+    "PARIS-BASED AI VOICE STARTUP GRADIUM RAISES $100M SEED, BACKED BY NVIDIA"
   ],
   "signals": [
+    {
+      "id": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
+      "clusterId": "1ximkm2",
+      "title": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
+      "desc": "The iPhone maker claims OpenAI encouraged poached employees to bring over confidential presentations, secret prototypes, and key supplier details.",
+      "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
+      "dateISO": "2026-07-10T20:44:05.000Z",
+      "date": "JUL 11 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "uncertain",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
+    },
     {
       "id": "https://www.wired.com/story/fidji-simo-ceo-agi-deployment-openai/",
       "clusterId": "1416iml",
@@ -25,7 +55,7 @@
       "category": "orggov",
       "catConfidence": 0.64,
       "family": "market",
-      "significance": 78,
+      "significance": 73,
       "impact": "high",
       "verification": "corroborated",
       "sourceCount": 3,
@@ -89,7 +119,7 @@
       "category": "policy",
       "catConfidence": 0.82,
       "family": "market",
-      "significance": 73,
+      "significance": 70,
       "impact": "high",
       "verification": "uncertain",
       "sourceCount": 2,
@@ -120,7 +150,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 75,
+      "significance": 70,
       "impact": "high",
       "verification": "official",
       "sourceCount": 4,
@@ -149,6 +179,58 @@
       ]
     },
     {
+      "id": "https://www.wired.com/story/openai-head-of-safety-leaving/",
+      "clusterId": "vkxqlk",
+      "title": "OpenAI’s Head of Safety Is Leaving the Company",
+      "desc": "Johannes Heidecke’s departure comes as OpenAI tries to further integrate its research and safety teams.",
+      "url": "https://www.wired.com/story/openai-head-of-safety-leaving/",
+      "dateISO": "2026-07-11T01:07:26.000Z",
+      "date": "JUL 11 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 69,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-head-of-safety-leaving/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+      "clusterId": "ugqe25",
+      "title": "Apple sues OpenAI over alleged trade secret theft",
+      "desc": "Apple alleges the misconduct was directed by OpenAI's senior leadership, including a longtime former employee.",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+      "dateISO": "2026-07-10T21:00:29.000Z",
+      "date": "JUL 11 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 67,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset",
       "clusterId": "1axdiug",
       "title": "The ChatGPT browser is already dead",
@@ -159,8 +241,8 @@
       "category": "product",
       "catConfidence": 0.88,
       "family": "product",
-      "significance": 72,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
@@ -190,8 +272,8 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 71,
-      "impact": "high",
+      "significance": 66,
+      "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
@@ -220,7 +302,7 @@
       "category": "adoption",
       "catConfidence": 0.38,
       "family": "product",
-      "significance": 67,
+      "significance": 64,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -246,7 +328,7 @@
       "category": "capital",
       "catConfidence": 0.78,
       "family": "market",
-      "significance": 65,
+      "significance": 62,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -272,7 +354,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 65,
+      "significance": 60,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -298,7 +380,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 62,
+      "significance": 59,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -315,149 +397,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
-      "clusterId": "1ghrxem",
-      "title": "Say hello to Claude Wrapped",
-      "desc": "The popularity of Spotify Wrapped has kicked off a wide range of year-in-review features, on apps from YouTube to Uber - and now, the lookback trend has come to AI. Anthropic on Thursday announced a \"reflect\" feature for its Claude chatbot, allowing users to see an analysis of their usage data over the past month, […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage",
-      "dateISO": "2026-07-09T13:30:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "analysis",
-      "catConfidence": 0.56,
-      "family": "product",
-      "significance": 62,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/963105/anthropic-claude-wrapped-reflection-ai-usage"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/",
-      "clusterId": "1nadg1",
-      "title": "Nvidia is a victim of the compute marketplace it created",
-      "desc": "Having proven how valuable compute can be, the company finds itself at the center of a market everyone wants to be in — while simpler technologies and less interesting companies get rich on the sidelines.",
-      "url": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/",
-      "dateISO": "2026-07-09T17:06:11.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 59,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
-      "clusterId": "17ha3r5",
-      "title": "Separating signal from noise in coding evaluations",
-      "desc": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
-      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
-      "dateISO": "2026-07-08T13:00:00.000Z",
-      "date": "JUL 08 2026",
-      "category": "analysis",
-      "catConfidence": 0.5,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/",
-      "clusterId": "1y1a7lu",
-      "title": "Anthropic, OpenAI, and SpaceX are bigger than the last 25 years of tech exits",
-      "desc": "Three big AI IPOs are set to generate more value than all the U.S. VC-backed exits since 2000.",
-      "url": "https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/",
-      "dateISO": "2026-07-09T14:51:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/anthropic-openai-and-spacex-are-bigger-than-the-last-25-years-of-tech-exits/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "clusterId": "172d394",
-      "title": "ChatGPT is now a partner for your most ambitious work",
-      "desc": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
-      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "dateISO": "2026-07-09T10:00:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
       ]
     },
     {
@@ -499,58 +438,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/gpt-5-6",
-      "clusterId": "qb16sv",
-      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-      "desc": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
-      "url": "https://openai.com/index/gpt-5-6",
-      "dateISO": "2026-07-09T10:00:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/gpt-5-6"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/bio-bug-bounty",
-      "clusterId": "wkihly",
-      "title": "GPT-5.5 Bio Bug Bounty",
-      "desc": "Details about the OpenAI Bio Bounty program",
-      "url": "https://openai.com/index/bio-bug-bounty",
-      "dateISO": "2026-07-09T10:00:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/bio-bug-bounty"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/stargate-michigan-data-center",
       "clusterId": "1145igk",
       "title": "Building the infrastructure for the Intelligence Age in Michigan",
@@ -585,6 +472,172 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/",
+      "clusterId": "1nadg1",
+      "title": "Nvidia is a victim of the compute marketplace it created",
+      "desc": "Having proven how valuable compute can be, the company finds itself at the center of a market everyone wants to be in — while simpler technologies and less interesting companies get rich on the sidelines.",
+      "url": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/",
+      "dateISO": "2026-07-09T17:06:11.000Z",
+      "date": "JUL 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/nvidia-is-a-victim-of-the-compute-marketplace-it-created/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+      "clusterId": "17ha3r5",
+      "title": "Separating signal from noise in coding evaluations",
+      "desc": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+      "dateISO": "2026-07-08T13:00:00.000Z",
+      "date": "JUL 08 2026",
+      "category": "analysis",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
+      "clusterId": "1xi1uds",
+      "title": "Hugging Face’s CEO on why companies are done renting their AI",
+      "desc": "Open source AI is booming, according to Hugging Face CEO Clem Delangue. The company has grown into something like a GitHub for AI in recent years, where AI builders can share and download open models and datasets, now used by roughly half the Fortune 500. Delangue has seen the same story play out again and again: companies start […]",
+      "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
+      "dateISO": "2026-07-10T14:00:00.000Z",
+      "date": "JUL 10 2026",
+      "category": "opensource",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "clusterId": "172d394",
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "desc": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "dateISO": "2026-07-09T10:00:00.000Z",
+      "date": "JUL 09 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/gpt-5-6",
+      "clusterId": "qb16sv",
+      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+      "desc": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
+      "url": "https://openai.com/index/gpt-5-6",
+      "dateISO": "2026-07-09T10:00:00.000Z",
+      "date": "JUL 09 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-5-6"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/bio-bug-bounty",
+      "clusterId": "wkihly",
+      "title": "GPT-5.5 Bio Bug Bounty",
+      "desc": "Details about the OpenAI Bio Bounty program",
+      "url": "https://openai.com/index/bio-bug-bounty",
+      "dateISO": "2026-07-09T10:00:00.000Z",
+      "date": "JUL 09 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/bio-bug-bounty"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
       "clusterId": "2tg230",
       "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
@@ -595,7 +648,7 @@
       "category": "capital",
       "catConfidence": 0.64,
       "family": "market",
-      "significance": 53,
+      "significance": 48,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -623,7 +676,7 @@
       "category": "compute",
       "catConfidence": 0.44,
       "family": "market",
-      "significance": 49,
+      "significance": 46,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -635,56 +688,6 @@
       ],
       "sourceName": "The Verge",
       "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
-      "clusterId": "1xi1uds",
-      "title": "Hugging Face’s CEO on why companies are done renting their AI",
-      "desc": "Open source AI is booming, according to Hugging Face CEO Clem Delangue. The company has grown into something like a GitHub for AI in recent years, where AI builders can share and download open models and datasets, now used by roughly half the Fortune 500. Delangue has seen the same story play out again and again: companies start […]",
-      "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
-      "dateISO": "2026-07-10T14:00:00.000Z",
-      "date": "JUL 10 2026",
-      "category": "opensource",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/",
-      "clusterId": "9ag5hr",
-      "title": "Lawsuit: Man used Grok to make 7K sex images of stepdaughter, then shot himself",
-      "desc": "More young girls sue X over Grok CSAM; X accused of shielding child predators.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/",
-      "dateISO": "2026-07-08T19:56:37.000Z",
-      "date": "JUL 08 2026",
-      "category": "policy",
-      "catConfidence": 0.82,
-      "family": "market",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "grok"
-      ]
     },
     {
       "id": "https://openai.com/index/deployment-simulation",
@@ -709,82 +712,6 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/deployment-simulation"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/07/disable-auto-play-and-infinite-scroll-or-risk-massive-fines-eu-tells-meta/",
-      "clusterId": "1bteqhm",
-      "title": "Disable autoplay and infinite scroll or risk massive fines, EU tells Meta",
-      "desc": "Digital Services Act may force Meta to make big changes on its platforms.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/disable-auto-play-and-infinite-scroll-or-risk-massive-fines-eu-tells-meta/",
-      "dateISO": "2026-07-10T15:46:18.000Z",
-      "date": "JUL 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/disable-auto-play-and-infinite-scroll-or-risk-massive-fines-eu-tells-meta/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": []
-    },
-    {
-      "id": "https://arstechnica.com/google/2026/07/google-revamps-android-ai-dev-benchmark-adds-fable-5-and-other-agents/",
-      "clusterId": "12t5fp6",
-      "title": "Google updates Android Bench with new LLMs, but Gemini still lags behind",
-      "desc": "Android Bench is evolving, and developers can help guide that process.",
-      "url": "https://arstechnica.com/google/2026/07/google-revamps-android-ai-dev-benchmark-adds-fable-5-and-other-agents/",
-      "dateISO": "2026-07-08T16:39:48.000Z",
-      "date": "JUL 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/google/2026/07/google-revamps-android-ai-dev-benchmark-adds-fable-5-and-other-agents/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/government-national-security-partnerships",
-      "clusterId": "1uacx92",
-      "title": "Our approach to government and national security partnerships",
-      "desc": "Learn how OpenAI approaches government and national security partnerships, with principles for responsible AI use, democratic accountability, and public safety.",
-      "url": "https://openai.com/index/government-national-security-partnerships",
-      "dateISO": "2026-07-08T13:30:00.000Z",
-      "date": "JUL 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/government-national-security-partnerships"
         }
       ],
       "sourceName": "OpenAI",
@@ -824,53 +751,77 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "clusterId": "jjc4jw",
-      "title": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in your feed’",
-      "desc": "Though Instagram head Adam Mosseri doesn't want to filter out AI content on the platform, he argues that you \"shouldn't have it in your feed\" if you don't like it. \"I don't think we should filter out AI content,\" Mosseri said during an interview on Lenny Rachitsky's podcast. \"I think we should let you know […]",
-      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "dateISO": "2026-07-10T13:45:02.000Z",
-      "date": "JUL 10 2026",
+      "id": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
+      "clusterId": "1lpgwom",
+      "title": "Meta removes controversial AI feature on Instagram after backlash",
+      "desc": "\"Our intent was to provide a useful creative tool and to give people control over whether their public content could be referenced in this way,\" the company said in a blog post. \"We've heard the feedback that this feature missed the mark, so it's no longer available.\"",
+      "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
+      "dateISO": "2026-07-10T23:55:07.000Z",
+      "date": "JUL 11 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 44,
       "impact": "emerging",
-      "verification": "single",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes",
+      "clusterId": "115ptb2",
+      "title": "Meta turns off the Instagram feature that let users make AI deepfakes of public accounts",
+      "desc": "Following significant backlash, Meta is turning off the feature it announced this week that let users generate AI images based on content from public Instagram accounts just by tagging them. The feature, as originally set up, meant that content from any public Instagram account could be used in AI creations without the account owner's permission. […]",
+      "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes",
+      "dateISO": "2026-07-10T23:49:50.000Z",
+      "date": "JUL 11 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "uncertain",
       "sourceCount": 1,
       "sources": [
         {
           "name": "The Verge",
-          "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters"
+          "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes"
         }
       ],
       "sourceName": "The Verge",
       "entityIds": []
     },
     {
-      "id": "https://openai.com/index/introducing-gpt-live",
-      "clusterId": "1r2qq0e",
-      "title": "Introducing GPT-Live",
-      "desc": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
-      "url": "https://openai.com/index/introducing-gpt-live",
-      "dateISO": "2026-07-08T00:00:00.000Z",
-      "date": "JUL 08 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
+      "id": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/",
+      "clusterId": "9ag5hr",
+      "title": "Lawsuit: Man used Grok to make 7K sex images of stepdaughter, then shot himself",
+      "desc": "More young girls sue X over Grok CSAM; X accused of shielding child predators.",
+      "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/",
+      "dateISO": "2026-07-08T19:56:37.000Z",
+      "date": "JUL 09 2026",
+      "category": "policy",
+      "catConfidence": 0.82,
+      "family": "market",
       "significance": 44,
       "impact": "emerging",
-      "verification": "official",
+      "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-gpt-live"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/"
         }
       ],
-      "sourceName": "OpenAI",
+      "sourceName": "Ars Technica",
       "entityIds": [
-        "chatgpt"
+        "grok"
       ]
     },
     {
@@ -892,80 +843,6 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/openai-frontier-governance-framework"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "clusterId": "jjc4jw",
-      "title": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in your feed’",
-      "desc": "Though Instagram head Adam Mosseri doesn't want to filter out AI content on the platform, he argues that you \"shouldn't have it in your feed\" if you don't like it. \"I don't think we should filter out AI content,\" Mosseri said during an interview on Lenny Rachitsky's podcast. \"I think we should let you know […]",
-      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "dateISO": "2026-07-10T13:45:02.000Z",
-      "date": "JUL 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/",
-      "clusterId": "51vzc5",
-      "title": "An AI agent startup just let its agent run its $100M fundraise",
-      "desc": "Lyzr, a startup that builds AI agents for enterprises, used its own AI agent to raise a $100 million round — proof, evidently, that the product actually works.",
-      "url": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/",
-      "dateISO": "2026-07-09T22:08:58.000Z",
-      "date": "JUL 10 2026",
-      "category": "capital",
-      "catConfidence": 0.78,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
-      "id": "https://openai.com/index/k-12-educators-practical-skills",
-      "clusterId": "11ndnu4",
-      "title": "Helping K–12 educators build practical AI skills",
-      "desc": "OpenAI Academy and the Walton Family Foundation are bringing hands-on AI Skills Jams to help K–12 educators build practical AI skills for the classroom.",
-      "url": "https://openai.com/index/k-12-educators-practical-skills",
-      "dateISO": "2026-07-08T10:00:00.000Z",
-      "date": "JUL 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/k-12-educators-practical-skills"
         }
       ],
       "sourceName": "OpenAI",
@@ -998,33 +875,6 @@
       "entityIds": [
         "chatgpt",
         "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/nvidia",
-      "clusterId": "15zr7r6",
-      "title": "How NVIDIA engineers and researchers build with Codex",
-      "desc": "Teams use Codex with GPT-5.5 to ship production systems and turn research ideas into runnable experiments.",
-      "url": "https://openai.com/index/nvidia",
-      "dateISO": "2026-05-12T00:00:00.000Z",
-      "date": "MAY 12 2026",
-      "category": "research",
-      "catConfidence": 0.38,
-      "family": "research",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/nvidia"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt",
-        "nvidia"
       ]
     },
     {
@@ -1132,29 +982,185 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/verity-harding-ai-arms-race-dangers-anthology/",
-      "clusterId": "yb6bv4",
-      "title": "This Former DeepMind Exec Thinks the AI Arms Race Could End in Disaster",
-      "desc": "Verity Harding tells WIRED that the US government’s nationalistic attitude toward AI is evidence that a worst-case scenario is taking shape.",
-      "url": "https://www.wired.com/story/verity-harding-ai-arms-race-dangers-anthology/",
-      "dateISO": "2026-07-08T09:30:00.000Z",
+      "id": "https://openai.com/index/introducing-gpt-live",
+      "clusterId": "1r2qq0e",
+      "title": "Introducing GPT-Live",
+      "desc": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
+      "url": "https://openai.com/index/introducing-gpt-live",
+      "dateISO": "2026-07-08T00:00:00.000Z",
       "date": "JUL 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
+      "category": "product",
+      "catConfidence": 0.6,
       "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-live"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/",
+      "clusterId": "1dghvi9",
+      "title": "Google’s AI buildout drove 37% increase in electricity use in 2025",
+      "desc": "Google tries balancing AI data center emissions with clean energy efforts.",
+      "url": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/",
+      "dateISO": "2026-07-02T11:15:49.000Z",
+      "date": "JUL 02 2026",
+      "category": "compute",
+      "catConfidence": 0.67,
+      "family": "market",
       "significance": 41,
       "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/verity-harding-ai-arms-race-dangers-anthology/"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/"
         }
       ],
-      "sourceName": "Wired",
+      "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
+      "clusterId": "1r4rd0l",
+      "title": "Claude Science is Anthropic’s newest flagship product",
+      "desc": "At an event for pharmaceutical executives, biotech founders, and researchers on Tuesday, Anthropic announced Claude Science, a major new product intended to support scientific research in the same way that Claude Code supports software engineering. Like Claude Code, Claude Science can autonomously carry out meaningful work when given concise, high-level instructions, and it has access…",
+      "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
+      "dateISO": "2026-06-30T21:50:04.000Z",
+      "date": "JUL 01 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/"
+        }
+      ],
+      "sourceName": "MIT Technology Review",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/patch-the-planet",
+      "clusterId": "6els2w",
+      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+      "desc": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
+      "url": "https://openai.com/index/patch-the-planet",
+      "dateISO": "2026-06-22T10:00:00.000Z",
+      "date": "JUN 22 2026",
+      "category": "opensource",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/patch-the-planet"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "clusterId": "qh9qtc",
+      "title": "We’re strengthening our presence in Alabama through new investments and community support.",
+      "desc": "Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
+      "dateISO": "2026-06-15T15:00:00.000Z",
+      "date": "JUN 15 2026",
+      "category": "compute",
+      "catConfidence": 0.44,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
+      "clusterId": "1iubf8b",
+      "title": "Investing in multi-agent AI safety research",
+      "desc": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
+      "dateISO": "2026-06-10T10:21:19.000Z",
+      "date": "JUN 10 2026",
+      "category": "capital",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/chatgpt-memory-dreaming",
+      "clusterId": "1wc522m",
+      "title": "Dreaming: Better memory for a more helpful ChatGPT",
+      "desc": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+      "url": "https://openai.com/index/chatgpt-memory-dreaming",
+      "dateISO": "2026-06-04T09:00:00.000Z",
+      "date": "JUN 04 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-memory-dreaming"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
       ]
     }
   ],
@@ -1164,8 +1170,8 @@
       "category": "product",
       "title": "The ChatGPT browser is already dead",
       "summary": "OpenAI is already shutting down ChatGPT Atlas, its browser that could do tasks for you on your behalf, less than a year after launching it. Atlas was announced in October, but as…",
-      "significance": 72,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "corroborated",
       "date": "JUL 10 2026",
       "dateISO": "2026-07-09T20:34:05.000Z",
@@ -1191,7 +1197,7 @@
       "category": "orggov",
       "title": "OpenAI’s CEO of AGI Deployment, Fidji Simo, Is Stepping Down",
       "summary": "The move comes after Simo took significant medical leave. She will stay on as a part-time adviser.",
-      "significance": 78,
+      "significance": 73,
       "impact": "high",
       "verification": "corroborated",
       "date": "JUL 09 2026",
@@ -1221,8 +1227,8 @@
       "category": "research",
       "title": "Anthropic found a hidden space where Claude puzzles over concepts",
       "summary": "The AI firm Anthropic has developed a technique that has given it the clearest glimpse yet at what’s really going on inside large language models as they answer questions or carry…",
-      "significance": 71,
-      "impact": "high",
+      "significance": 66,
+      "impact": "notable",
       "verification": "corroborated",
       "date": "JUL 10 2026",
       "dateISO": "2026-07-09T20:22:28.000Z",
@@ -1244,12 +1250,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 24,
+    "chatgpt": 23,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 73,
-    "claude": 7,
-    "gemini": 34,
+    "gpt": 74,
+    "claude": 5,
+    "gemini": 33,
     "grok": 1,
     "llama": 0,
     "deepseek": 1,
@@ -1260,7 +1266,7 @@
     "gcp": 0,
     "oracle": 1,
     "coreweave": 0,
-    "nvidia": 4,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 1
@@ -1327,21 +1333,69 @@
   ],
   "wire": [
     {
-      "org": "AI WIRE",
-      "logoKey": "other",
+      "org": "OPENAI",
+      "logoKey": "openai",
       "date": "JUL 11 2026",
       "verification": "single",
       "impact": "notable",
-      "h": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to bu…",
-      "p": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
-      "url": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+      "h": "OpenAI’s Head of Safety Is Leaving the Company",
+      "p": "Johannes Heidecke’s departure comes as OpenAI tries to further integrate its research and safety teams.",
+      "url": "https://www.wired.com/story/openai-head-of-safety-leaving/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "JUL 11 2026",
+      "verification": "uncertain",
+      "impact": "emerging",
+      "h": "Meta removes controversial AI feature on Instagram after backlash",
+      "p": "\"Our intent was to provide a useful creative tool and to give people control over whether their public content could be referenced in this way,\" the company said in a blog post. \"We've heard the feedback that this feature missed the mark, so it's no longer av…",
+      "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "JUL 11 2026",
+      "verification": "uncertain",
+      "impact": "emerging",
+      "h": "Meta turns off the Instagram feature that let users make AI deepfakes of public…",
+      "p": "Following significant backlash, Meta is turning off the feature it announced this week that let users generate AI images based on content from public Instagram accounts just by tagging them. The feature, as originally set up, meant that content from any publi…",
+      "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 11 2026",
+      "verification": "uncertain",
+      "impact": "high",
+      "h": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
+      "p": "The iPhone maker claims OpenAI encouraged poached employees to bring over confidential presentations, secret prototypes, and key supplier details.",
+      "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
+      "sourceName": "Wired",
+      "sourceCount": 2
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 11 2026",
+      "verification": "uncertain",
+      "impact": "notable",
+      "h": "Apple sues OpenAI over alleged trade secret theft",
+      "p": "Apple alleges the misconduct was directed by OpenAI's senior leadership, including a longtime former employee.",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     },
     {
       "org": "AI WIRE",
       "logoKey": "other",
-      "date": "JUL 10 2026",
+      "date": "JUL 11 2026",
       "verification": "single",
       "impact": "notable",
       "h": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to bu…",
@@ -1373,66 +1427,6 @@
       "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
       "sourceName": "The Verge",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 10 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Would you host part of an AI data center in your home?",
-      "p": "A solar and home energy storage company is expanding into AI data centers, but not by building one - instead, it's offering to pay its customers to put its compute units in their homes. Sunrun is launching a pilot program for a new \"distributed AI compute\" pr…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 10 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "A New Experiential Gallery Just Might Change Your Mind About AI Art",
-      "p": "Billed as the “world’s first museum of AI arts,” Dataland uses wearables and troves of material from the Amazon to merge nature, biometrics, and art.",
-      "url": "https://www.wired.com/story/a-new-experiential-gallery-just-might-change-your-mind-about-ai-art/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 10 2026",
-      "verification": "official",
-      "impact": "notable",
-      "h": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "p": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
-      "url": "https://openai.com/index/deutsche-telekom",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 10 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Robot Dogs, Teslas, and Rescue Helicopters: The UN AI Summit Was a Lot",
-      "p": "Amid live coding sessions and Silicon Valley optimism, the UN’s AI for Good summit wrestled with an urgent question: Can global governance catch up before the technology races beyond its control?",
-      "url": "https://www.wired.com/story/robot-dogs-teslas-and-rescue-helicopters-the-un-ai-summit-was-alot/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 08 2026",
-      "verification": "analysis",
-      "impact": "notable",
-      "h": "Separating signal from noise in coding evaluations",
-      "p": "A new analysis from OpenAI reveals issues in SWE-Bench Pro, a popular coding benchmark, raising concerns about reliability and accuracy in evaluating AI models.",
-      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
-      "sourceName": "OpenAI",
-      "sourceCount": 3
     }
   ],
   "feed": [
@@ -1445,7 +1439,7 @@
       "desc": "Open source AI is booming, according to Hugging Face CEO Clem Delangue. The company has grown into something like a GitHub for AI in recent…",
       "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
       "sourceName": "TechCrunch",
-      "verification": "single",
+      "verification": "corroborated",
       "impact": "notable"
     },
     {
@@ -1466,7 +1460,7 @@
       "field": "Research",
       "date": "JUL 10 2026",
       "verification": "corroborated",
-      "impact": "high",
+      "impact": "notable",
       "h": "Anthropic found a hidden space where Claude puzzles over concepts",
       "p": "The AI firm Anthropic has developed a technique that has given it the clearest glimpse yet at what’s really going on inside large language models as they answer questions or carry out tasks. What they found ranges from the mundane to the unnerving. Researcher…",
       "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
@@ -1535,134 +1529,134 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 210.32,
-      "changePct": 3.718266978394042,
+      "price": 210.96,
+      "changePct": 4.033932332484786,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 103656526,
-      "relVolume": 0.7028487415561753,
-      "marketCap": 5131808000000
+      "volume": 147203662,
+      "relVolume": 1.0042308148500791,
+      "marketCap": 5147424000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 385.035,
-      "changePct": 0.1756213800272305,
+      "price": 385.1,
+      "changePct": 0.19253324491524537,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 15212279,
-      "relVolume": 0.31375732145427937,
-      "marketCap": 2860810050000
+      "volume": 24111839,
+      "relVolume": 0.5076071884035015,
+      "marketCap": 2861293000000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 400,
-      "changePct": -0.27672842664079444,
+      "price": 399.97,
+      "changePct": -0.28420736767752325,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7644230,
-      "relVolume": 0.25093103313575243,
-      "marketCap": 1968000000000
+      "volume": 13913232,
+      "relVolume": 0.47865086000191037,
+      "marketCap": 1967852400000.0002
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 355.815,
-      "changePct": -0.8568118592108167,
+      "price": 357.18,
+      "changePct": -0.4764752160439343,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 10729851,
-      "relVolume": 0.29593776339654115,
-      "marketCap": 4340943000000
+      "volume": 17441180,
+      "relVolume": 0.49990188673937574,
+      "marketCap": 4357596000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 245.63,
-      "changePct": -0.5707530932804069,
+      "price": 245.34,
+      "changePct": -0.6881464517662833,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 19494459,
-      "relVolume": 0.3124470532195681,
-      "marketCap": 2628241000000
+      "volume": 31268333,
+      "relVolume": 0.5068424345694398,
+      "marketCap": 2625138000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 668.425,
-      "changePct": 5.850542925651314,
+      "price": 669.21,
+      "changePct": 5.9748594842071,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 30148340,
-      "relVolume": 1.578248393330578,
-      "marketCap": 1684431000000
+      "volume": 39408342,
+      "relVolume": 2.1214261525809106,
+      "marketCap": 1686409200000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 436.63,
-      "changePct": -0.07551871537867087,
+      "price": 434.11,
+      "changePct": -0.6522350236288443,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6589358,
-      "relVolume": 0.4538419153857068,
-      "marketCap": 2266109700000
+      "volume": 9558426,
+      "relVolume": 0.6593024416951032,
+      "marketCap": 2253030900000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 555.7,
-      "changePct": 1.6425303601690657,
+      "price": 557.89,
+      "changePct": 2.0431015042210627,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 13292286,
-      "relVolume": 0.43357455808443235,
-      "marketCap": 900234000000.0001
+      "volume": 20605362,
+      "relVolume": 0.6736645790130471,
+      "marketCap": 903781800000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 126.32,
-      "changePct": -2.1078686708215257,
+      "price": 126.79,
+      "changePct": -1.7436395595715384,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 22173740,
-      "relVolume": 0.49683018891599046,
-      "marketCap": 303168000000
+      "volume": 30714836,
+      "relVolume": 0.696682716622598,
+      "marketCap": 304296000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 141.4,
-      "changePct": -1.9553510611217018,
+      "price": 140.64,
+      "changePct": -2.48231992841002,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 19141139,
-      "relVolume": 0.541835751445234,
-      "marketCap": 397334000000
+      "volume": 26601250,
+      "relVolume": 0.8415915213656249,
+      "marketCap": 395198399999.99994
     }
   ],
   "community": {
-    "updatedAt": "2026-07-10T18:30:11.383Z",
+    "updatedAt": "2026-07-11T04:40:41.300Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -1671,34 +1665,36 @@
         "model": "GPT",
         "version": "GPT-5.5",
         "org": "OpenAI",
-        "mentionCount": 2257,
-        "uniqueDiscussionCount": 284,
-        "points": 1399,
+        "rawHits": 2260,
+        "validatedMentions": 2232,
+        "validatedDiscussions": 281,
+        "limited": false,
+        "points": 1436,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
+            "count": 14
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 8
+            "count": 10
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 5
+            "count": 6
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 4
           },
           {
             "id": "price",
             "label": "Price",
             "count": 3
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 2
           },
           {
             "id": "local",
@@ -1708,6 +1704,16 @@
           {
             "id": "speed",
             "label": "Speed",
+            "count": 1
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 1
+          },
+          {
+            "id": "safety",
+            "label": "Safety",
             "count": 1
           }
         ],
@@ -1721,8 +1727,8 @@
           },
           {
             "title": "ChatGPT Work",
-            "points": 344,
-            "comments": 181,
+            "points": 348,
+            "comments": 184,
             "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
             "date": "JUL 09 2026"
           }
@@ -1733,54 +1739,51 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "mentionCount": 6778,
-        "uniqueDiscussionCount": 1110,
-        "points": 15329,
+        "rawHits": 6721,
+        "validatedMentions": 6553,
+        "validatedDiscussions": 1078,
+        "limited": false,
+        "points": 16074,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 34
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 20
+            "count": 28
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 17
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 10
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 4
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 2
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 2
+            "count": 7
           },
           {
             "id": "context",
             "label": "Context limits",
-            "count": 2
+            "count": 6
           },
           {
             "id": "local",
             "label": "Local use",
-            "count": 2
+            "count": 5
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 4
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 1
+            "count": 4
           }
         ],
         "topThreads": [
@@ -1805,24 +1808,31 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google",
-        "mentionCount": 1036,
-        "uniqueDiscussionCount": 118,
-        "points": 656,
+        "rawHits": 1161,
+        "validatedMentions": 1161,
+        "validatedDiscussions": 120,
+        "limited": false,
+        "points": 761,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 17
-          },
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 10
+            "count": 19
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 8
+            "count": 15
+          },
+          {
+            "id": "reasoning",
+            "label": "Reasoning",
+            "count": 12
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "count": 7
           },
           {
             "id": "writing",
@@ -1833,11 +1843,6 @@
             "id": "local",
             "label": "Local use",
             "count": 5
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 3
           },
           {
             "id": "multimodal",
@@ -1877,38 +1882,40 @@
         "model": "Grok",
         "version": "Grok 4",
         "org": "xAI",
-        "mentionCount": 11045,
-        "uniqueDiscussionCount": 488,
-        "points": 1433,
+        "rawHits": 11120,
+        "validatedMentions": 6255,
+        "validatedDiscussions": 234,
+        "limited": false,
+        "points": 1186,
         "themes": [
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 18
+          },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 19
+            "count": 12
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 13
-          },
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 13
+            "count": 8
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 5
+            "count": 4
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 4
+            "count": 2
           },
           {
-            "id": "context",
-            "label": "Context limits",
+            "id": "reliability",
+            "label": "Reliability",
             "count": 2
           },
           {
@@ -1917,13 +1924,8 @@
             "count": 1
           },
           {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 1
-          },
-          {
-            "id": "local",
-            "label": "Local use",
+            "id": "context",
+            "label": "Context limits",
             "count": 1
           },
           {
@@ -1935,17 +1937,17 @@
         "topThreads": [
           {
             "title": "Grok 4.5",
-            "points": 767,
-            "comments": 1461,
+            "points": 769,
+            "comments": 1468,
             "url": "https://x.ai/news/grok-4-5",
             "date": "JUL 08 2026"
           },
           {
-            "title": "A robot is sprinting towards you. Do you want it running on Claude or Grok?",
-            "points": 272,
-            "comments": 210,
-            "url": "https://openrouter.ai/blog/insights/royale-last-agent-standing/",
-            "date": "JUN 17 2026"
+            "title": "We made Grok 4.5, GPT-5.5, and Claude build the same apps",
+            "points": 173,
+            "comments": 93,
+            "url": "https://www.tryai.dev/blog/grok-4.5-vs-gpt-5.5-vs-claude-build-off",
+            "date": "JUL 09 2026"
           }
         ]
       },
@@ -1954,19 +1956,21 @@
         "model": "Llama",
         "version": "Llama 4",
         "org": "Meta",
-        "mentionCount": 641,
-        "uniqueDiscussionCount": 80,
-        "points": 165,
+        "rawHits": 642,
+        "validatedMentions": 522,
+        "validatedDiscussions": 66,
+        "limited": false,
+        "points": 139,
         "themes": [
           {
             "id": "local",
             "label": "Local use",
-            "count": 34
+            "count": 39
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 15
+            "count": 16
           },
           {
             "id": "reasoning",
@@ -1974,9 +1978,9 @@
             "count": 11
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 8
+            "id": "context",
+            "label": "Context limits",
+            "count": 9
           },
           {
             "id": "price",
@@ -1984,19 +1988,24 @@
             "count": 7
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 7
+            "id": "writing",
+            "label": "Writing",
+            "count": 5
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 6
+            "count": 5
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 1
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 3
+            "count": 1
           },
           {
             "id": "safety",
@@ -2006,18 +2015,18 @@
         ],
         "topThreads": [
           {
-            "title": "Show HN: I built a web tool to see and edit what an AI thinks before it answers",
-            "points": 32,
-            "comments": 8,
-            "url": "https://lucid.earthpilot.ai",
-            "date": "JUL 09 2026"
-          },
-          {
             "title": "Show HN: I built a free app for New Yorkers to save money on groceries",
             "points": 12,
             "comments": 10,
             "url": "https://sbnyc.app/",
             "date": "JUL 10 2026"
+          },
+          {
+            "title": "Show HN: How clanker are you? A reverse Turing test",
+            "points": 11,
+            "comments": 11,
+            "url": "https://howclankerareyou.com/",
+            "date": "JUL 04 2026"
           }
         ]
       },
@@ -2026,33 +2035,40 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "mentionCount": 1274,
-        "uniqueDiscussionCount": 72,
-        "points": 1681,
+        "rawHits": 1263,
+        "validatedMentions": 1184,
+        "validatedDiscussions": 78,
+        "limited": false,
+        "points": 1714,
         "themes": [
           {
             "id": "price",
             "label": "Price",
-            "count": 20
-          },
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 14
+            "count": 27
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
+            "count": 14
+          },
+          {
+            "id": "coding",
+            "label": "Coding",
+            "count": 13
           },
           {
             "id": "local",
             "label": "Local use",
-            "count": 6
+            "count": 8
           },
           {
             "id": "writing",
             "label": "Writing",
+            "count": 5
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
             "count": 4
           },
           {
@@ -2069,6 +2085,11 @@
             "id": "context",
             "label": "Context limits",
             "count": 2
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 1
           },
           {
             "id": "safety",
@@ -2098,34 +2119,31 @@
         "model": "Qwen",
         "version": "Qwen 3.7",
         "org": "Alibaba",
-        "mentionCount": 4812,
-        "uniqueDiscussionCount": 188,
-        "points": 2923,
+        "rawHits": 4839,
+        "validatedMentions": 3387,
+        "validatedDiscussions": 121,
+        "limited": false,
+        "points": 2730,
         "themes": [
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 20
-          },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 17
+            "count": 16
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 16
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 11
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 6
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 5
+            "count": 8
           },
           {
             "id": "price",
@@ -2133,13 +2151,18 @@
             "count": 7
           },
           {
-            "id": "context",
-            "label": "Context limits",
+            "id": "writing",
+            "label": "Writing",
             "count": 3
           },
           {
             "id": "reliability",
             "label": "Reliability",
+            "count": 3
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
             "count": 2
           },
           {
@@ -2215,48 +2238,39 @@
       },
       {
         "modelId": "claude",
-        "theme": "reasoning",
-        "excerpt": "…is, it's made up and full of assertions that are false. Claude Fable just told me moments ago that a problem I was debugging was due to virtio-GPU giving back bad…",
+        "theme": "coding",
+        "excerpt": "… GTO solution could exploit gaps in my bots play and profit). Claude opus 4.8 kept asserting that this was a performance ceiling in the card abstraction I was using (grouping…",
         "source": "Hacker News",
-        "author": "jchw",
-        "publishedAt": "2026-07-10T16:07:43.000Z",
-        "url": "https://news.ycombinator.com/item?id=48861849"
+        "author": "lunchboxfortwo",
+        "publishedAt": "2026-07-10T21:00:52.000Z",
+        "url": "https://news.ycombinator.com/item?id=48865207"
       },
       {
         "modelId": "claude",
-        "theme": "coding",
-        "excerpt": "…but as before this was just experiments with using and LLM (claude + codex) to just get it running. Since if they couldn't get it running I'm not sure if I would have wanted to…",
+        "theme": "reasoning",
+        "excerpt": "…of word lists online if that’s what you need.If you have a Claude (or similar) subscription, you can build yourself a language learning app that’s better for you than most…",
+        "source": "Hacker News",
+        "author": "frostlynx",
+        "publishedAt": "2026-07-11T01:44:45.000Z",
+        "url": "https://news.ycombinator.com/item?id=48867723"
+      },
+      {
+        "modelId": "claude",
+        "theme": "context",
+        "excerpt": "…have a pretty simple set of instructions right now and Claude still regularly messes them up. Like, my first instructions are: - Never commit to git without permission. -…",
+        "source": "Hacker News",
+        "author": "overgard",
+        "publishedAt": "2026-07-10T18:30:43.000Z",
+        "url": "https://news.ycombinator.com/item?id=48863507"
+      },
+      {
+        "modelId": "claude",
+        "theme": "speed",
+        "excerpt": "…to use for agentic editing in normal apps like OpenCode/Claude Code: https://raw.githubusercontent.com/Osmantic/MMBT-Messy-Model-...For agentic, 50-256k token on-device…",
         "source": "Hacker News",
         "author": "bigyabai",
         "publishedAt": "2026-07-10T19:57:27.000Z",
         "url": "https://news.ycombinator.com/item?id=48864460"
-      },
-      {
-        "modelId": "claude",
-        "theme": "writing",
-        "excerpt": "… Modeling, Data Visualization, Git, Linux, GenAI (OpenAI API, Claude, ChatGPT), R, SQL, ETL, Power BI.Keywords: Quantitative Data Analysis; Data Analytics; Data Pipelines;…",
-        "source": "Hacker News",
-        "author": "jgalaz",
-        "publishedAt": "2026-07-10T21:28:39.000Z",
-        "url": "https://news.ycombinator.com/item?id=48865537"
-      },
-      {
-        "modelId": "claude",
-        "theme": "writing",
-        "excerpt": "…of nvim as my day to day development environment. Using Claude code or cursor makes me feel very removed from the code.Exploring code, gathering context and tweaking…",
-        "source": "Hacker News",
-        "author": "anonymid",
-        "publishedAt": "2026-07-10T14:09:50.000Z",
-        "url": "https://news.ycombinator.com/item?id=48860194"
-      },
-      {
-        "modelId": "gemini",
-        "theme": "price",
-        "excerpt": "…dialogue with multiple AI systems (Claude, ChatGPT, Gemini, Copilot, and DeepL). I cannot fully verify how much nuance is preserved in languages I cannot read, so if…",
-        "source": "Hacker News",
-        "author": "michikawa59",
-        "publishedAt": "2026-07-10T12:24:32.000Z",
-        "url": "https://news.ycombinator.com/item?id=48858919"
       },
       {
         "modelId": "gemini",
@@ -2270,42 +2284,33 @@
       {
         "modelId": "gemini",
         "theme": "reasoning",
-        "excerpt": "…ry-human-at-atco...https://deepmind.google/blog/alphaevolve-a-gemini-powered-co...…",
+        "excerpt": "…Siri gets smarter without you farming queries out to Google Gemini? Bill me for it in iCloud+ I’ll probably pay for those tokens.Was that so…",
         "source": "Hacker News",
-        "author": "ben_w",
-        "publishedAt": "2026-07-10T19:21:34.000Z",
-        "url": "https://news.ycombinator.com/item?id=48864059"
+        "author": "majestik",
+        "publishedAt": "2026-07-10T05:22:28.000Z",
+        "url": "https://news.ycombinator.com/item?id=48856012"
       },
       {
         "modelId": "gemini",
-        "theme": "speed",
-        "excerpt": "…y/2022/06/11/google-...?) but by the time they released it as Gemini, it was significantly under performing competitors, and became a bit of a laghing stock.…",
+        "theme": "price",
+        "excerpt": "…but was (is? unsure atm) still eminently usable. I gave gemini a test drive recently and it was horrendous, as in \"picking dirt cheap Chinese model over gemini any day\" bad,…",
         "source": "Hacker News",
-        "author": "dlcarrier",
-        "publishedAt": "2026-07-09T23:47:04.000Z",
-        "url": "https://news.ycombinator.com/item?id=48853993"
+        "author": "revolvingthrow",
+        "publishedAt": "2026-07-09T16:33:50.000Z",
+        "url": "https://news.ycombinator.com/item?id=48848598"
       },
       {
-        "modelId": "grok",
-        "theme": "coding",
-        "excerpt": "…a few nice features, its codebase was a bit hard for me to grok (read: days on end of banging my head against a wall, then giving up; I'm much more comfortable messing with…",
+        "modelId": "gemini",
+        "theme": "writing",
+        "excerpt": "…reading through the code. Feed something like that to, say, Gemini Pro 3.1 and you'll get a bunch of false positives back, nit-picking, or variants of \"this could be insecure if…",
         "source": "Hacker News",
-        "author": "klibertp",
-        "publishedAt": "2026-07-09T17:54:00.000Z",
-        "url": "https://news.ycombinator.com/item?id=48849902"
+        "author": "jiggawatts",
+        "publishedAt": "2026-07-10T18:29:41.000Z",
+        "url": "https://news.ycombinator.com/item?id=48863496"
       },
       {
         "modelId": "grok",
         "theme": "reasoning",
-        "excerpt": "…itler#Antisemitism,_call....> Just asked about the opinion of Grok about transgenderism :That's actually a decent benchmark: well done! If you want to compare, provide that exact…",
-        "source": "Hacker News",
-        "author": "wizzwizz4",
-        "publishedAt": "2026-07-09T19:33:26.000Z",
-        "url": "https://news.ycombinator.com/item?id=48851268"
-      },
-      {
-        "modelId": "grok",
-        "theme": "multimodal",
         "excerpt": "… wasn't built on a day.At some point when they hit 5 yrs old, Grok / OpenAI are great tools to find good series appropriate to their reading level. Before that it can be vibed.…",
         "source": "Hacker News",
         "author": "IG_Semmelweiss",
@@ -2314,12 +2319,30 @@
       },
       {
         "modelId": "grok",
-        "theme": "writing",
-        "excerpt": "…it's reasonable and I agree on diagnosis. So, here is Grok's comment: The structural math in this piece is solid—Minsky-style Ponzi dynamics at the household level, where…",
+        "theme": "reliability",
+        "excerpt": "…itler#Antisemitism,_call....> Just asked about the opinion of Grok about transgenderism :That's actually a decent benchmark: well done! If you want to compare, provide that exact…",
         "source": "Hacker News",
-        "author": "mathgladiator",
-        "publishedAt": "2026-07-09T21:42:41.000Z",
-        "url": "https://news.ycombinator.com/item?id=48852749"
+        "author": "wizzwizz4",
+        "publishedAt": "2026-07-09T19:33:26.000Z",
+        "url": "https://news.ycombinator.com/item?id=48851268"
+      },
+      {
+        "modelId": "grok",
+        "theme": "coding",
+        "excerpt": "… YOLO mode is apparently a hacking technique. I’ve been using Grok as a backend for some experimental AI game storytelling, and obviously fiction isn’t all rainbows and unicorns,…",
+        "source": "Hacker News",
+        "author": "cameronh90",
+        "publishedAt": "2026-07-09T14:36:45.000Z",
+        "url": "https://news.ycombinator.com/item?id=48846601"
+      },
+      {
+        "modelId": "grok",
+        "theme": "speed",
+        "excerpt": "…_most_ of the products I useThe 2 main criticisms I see of Grok are the Mechahitler comment and the CSAM image generationon mechahitler - I'm no expert but if I remember…",
+        "source": "Hacker News",
+        "author": "s08148692",
+        "publishedAt": "2026-07-09T15:50:50.000Z",
+        "url": "https://news.ycombinator.com/item?id=48847945"
       },
       {
         "modelId": "llama",
@@ -2332,12 +2355,21 @@
       },
       {
         "modelId": "llama",
-        "theme": "reasoning",
-        "excerpt": "…- I think it's worth noting that ROCm/Vulkan versions and llama.cpp build versions are going to have some big differences for numbers.For those wanting to get the most out of…",
+        "theme": "context",
+        "excerpt": "… mentioned, my setup with Sear is the following, all through `llama.cpp`, which has a built-in webui with an MCP client:* SearXNG in Docker — enable the JSON API (`search.formats:…",
         "source": "Hacker News",
-        "author": "lhl",
-        "publishedAt": "2026-07-06T15:26:00.000Z",
-        "url": "https://news.ycombinator.com/item?id=48806002"
+        "author": "goodroot",
+        "publishedAt": "2026-07-04T02:46:17.000Z",
+        "url": "https://news.ycombinator.com/item?id=48782223"
+      },
+      {
+        "modelId": "llama",
+        "theme": "local",
+        "excerpt": "…LLMs into coding tasks. I have models as small as llama3.2:3b up to Qwen3.6:27b dense. Over 10 unique models in the swarm.So far, the results are... interesting.…",
+        "source": "Hacker News",
+        "author": "vitally3643",
+        "publishedAt": "2026-07-03T21:22:15.000Z",
+        "url": "https://news.ycombinator.com/item?id=48780140"
       },
       {
         "modelId": "llama",
@@ -2347,15 +2379,6 @@
         "author": "saghm",
         "publishedAt": "2026-07-10T04:43:33.000Z",
         "url": "https://news.ycombinator.com/item?id=48855837"
-      },
-      {
-        "modelId": "llama",
-        "theme": "writing",
-        "excerpt": "> There’s an uncensored model floating around that you can run locally with llama.cppThere are many uncensored (and abliterated) models floating around (HauHauCS has large…",
-        "source": "Hacker News",
-        "author": "crystal_revenge",
-        "publishedAt": "2026-07-07T03:40:05.000Z",
-        "url": "https://news.ycombinator.com/item?id=48813434"
       },
       {
         "modelId": "deepseek",
@@ -2369,6 +2392,15 @@
       {
         "modelId": "deepseek",
         "theme": "coding",
+        "excerpt": "…at a much lower price will be the one to win in the end.DeepSeek is remarkably efficient at caching and their cached token rates are crazy cheap; using it with Reasonix is…",
+        "source": "Hacker News",
+        "author": "SwellJoe",
+        "publishedAt": "2026-07-11T02:27:26.000Z",
+        "url": "https://news.ycombinator.com/item?id=48868036"
+      },
+      {
+        "modelId": "deepseek",
+        "theme": "price",
         "excerpt": "…(high) via OpenAI subscription * General purpose subagent: deepseek-v4-pro (high) via OpenCode Go subscription * Using `obra/superpowers` for subagent driven workflows * The…",
         "source": "Hacker News",
         "author": "beefsack",
@@ -2377,21 +2409,12 @@
       },
       {
         "modelId": "deepseek",
-        "theme": "price",
+        "theme": "local",
         "excerpt": "…codebase (I tried different models including GPT-5.5 and DeepSeek). Interestingly Gemma 4 under opencode running locally performs not bad at all, it's far yet from DeepSeek…",
         "source": "Hacker News",
         "author": "novaRom",
         "publishedAt": "2026-07-09T20:02:13.000Z",
         "url": "https://news.ycombinator.com/item?id=48851649"
-      },
-      {
-        "modelId": "deepseek",
-        "theme": "writing",
-        "excerpt": "…usually in Epics and they have Tasks.I have been using DeepSeek V4 Flash for much of my coding in https://github.com/brainless/akar for example. Planning is mostly done by…",
-        "source": "Hacker News",
-        "author": "brainless",
-        "publishedAt": "2026-07-09T04:08:55.000Z",
-        "url": "https://news.ycombinator.com/item?id=48840879"
       },
       {
         "modelId": "qwen",
@@ -2413,21 +2436,21 @@
       },
       {
         "modelId": "qwen",
-        "theme": "price",
-        "excerpt": "…by severely compromising on the model (a custom quantized Qwen3.5-27B-Q2_K which someone published on huggingface) so that I can use a context size large enough that…",
-        "source": "Hacker News",
-        "author": "saghm",
-        "publishedAt": "2026-07-10T04:43:33.000Z",
-        "url": "https://news.ycombinator.com/item?id=48855837"
-      },
-      {
-        "modelId": "qwen",
         "theme": "writing",
         "excerpt": "…some of my recent sessions, here are some examples:- Asking Qwen to review project docs (requirements, user stories, etc) so that \"we\" can evaluate an iterate on an API design.…",
         "source": "Hacker News",
         "author": "anon373839",
         "publishedAt": "2026-07-10T06:23:37.000Z",
         "url": "https://news.ycombinator.com/item?id=48856424"
+      },
+      {
+        "modelId": "qwen",
+        "theme": "multimodal",
+        "excerpt": "…are pretty tight, ~400ms for everything. I have optimized qwen-3-asr and added streaming detection to it, as well as pocket-tts (this) and qwen-3-tts, with a goal of ~70ms for…",
+        "source": "Hacker News",
+        "author": "pantelisk",
+        "publishedAt": "2026-07-08T18:07:24.000Z",
+        "url": "https://news.ycombinator.com/item?id=48835204"
       }
     ]
   }

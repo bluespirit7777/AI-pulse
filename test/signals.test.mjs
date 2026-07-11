@@ -8,7 +8,8 @@ import {
   phraseOverlap, properNounPhrases, categorize, waveFamily, detectLicense,
   inferField, matchEntities, recencyScore, scoreSignificance,
   classifyVerification, classifyImpact, computeEntityActivity, buildWaves,
-  isProductRelease, classifyTopics, extractAction, eventRelation, CATEGORIES,
+  isProductRelease, classifyTopics, extractAction, eventRelation,
+  matchModelMention, isValidatedMention, COMMUNITY_MATCH_THRESHOLD, CATEGORIES,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -74,6 +75,46 @@ test('categorize confidence is higher for unambiguous text than borderline text'
   const strong = categorize('OpenAI raises $40B in new funding round at $300B valuation, files for IPO');
   const weak = categorize('OpenAI shares an update');
   assert.ok(strong.confidence >= weak.confidence);
+});
+
+test('community matching: reject ambiguous ordinary-language "grok"', () => {
+  assert.equal(isValidatedMention('Hard to grok this codebase without docs', 'grok'), false);
+  assert.equal(isValidatedMention('I finally started to grok monads', 'grok'), false);
+  assert.equal(isValidatedMention('trying to grok the concept of closures', 'grok'), false);
+});
+
+test('community matching: accept real xAI Grok discussion', () => {
+  assert.equal(isValidatedMention('Grok 4 is better at reasoning than the last version', 'grok'), true);
+  assert.equal(isValidatedMention('xAI Grok just shipped a new model', 'grok'), true);
+  // bare "grok" with AI context is a softer accept
+  assert.ok(matchModelMention('Grok gave a wrong answer to my LLM prompt', 'grok') >= COMMUNITY_MATCH_THRESHOLD);
+});
+
+test('community matching: llama.cpp / Meta Llama accepted, the animal rejected', () => {
+  assert.equal(isValidatedMention('I run llama.cpp locally on my laptop', 'llama'), true);
+  assert.equal(isValidatedMention('Meta Llama 4 benchmarks look strong', 'llama'), true);
+  assert.equal(isValidatedMention('A llama walked into the barn', 'llama'), false);
+  assert.equal(isValidatedMention('we visited a llama farm last weekend', 'llama'), false);
+});
+
+test('community matching: keyword inside another word does not match', () => {
+  // "gemini" substring-style false positives shouldn't slip through word boundaries
+  assert.equal(isValidatedMention('the geminid meteor shower peaks tonight', 'gemini'), false);
+  // unambiguous families still need the actual token
+  assert.equal(isValidatedMention('a random sentence about nothing', 'claude'), false);
+});
+
+test('community matching: non-ambiguous families score higher with org/version', () => {
+  assert.ok(matchModelMention('ChatGPT is great', 'gpt') >= COMMUNITY_MATCH_THRESHOLD);
+  assert.ok(matchModelMention('OpenAI GPT-5.6 model update', 'gpt') > matchModelMention('gpt did something', 'gpt'));
+  assert.equal(isValidatedMention('Anthropic Claude Code writes tests', 'claude'), true);
+});
+
+test('community matching: multi-model comment validates for each genuinely present model', () => {
+  const text = 'I compared Claude Opus and GPT-5.6 for coding — Claude won on refactors';
+  assert.equal(isValidatedMention(text, 'claude'), true);
+  assert.equal(isValidatedMention(text, 'gpt'), true);
+  assert.equal(isValidatedMention(text, 'gemini'), false); // not mentioned
 });
 
 test('classifyTopics tags community discussion themes, multi-topic aware', () => {

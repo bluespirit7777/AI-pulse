@@ -300,6 +300,7 @@ body.drawer-open { overflow: hidden; }
 .cm-org { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
 .cm-stats { display: flex; gap: 14px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); }
 .cm-stats b { color: var(--teal); }
+.cm-limited { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); background: color-mix(in srgb, var(--warn, #c98a1a) 12%, transparent); border: 1px solid color-mix(in srgb, var(--warn, #c98a1a) 35%, transparent); border-radius: 8px; padding: 6px 10px; margin: 0 0 12px; line-height: 1.5; }
 .cm-themes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .cm-theme { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); background: var(--panel-solid); border: 1px solid var(--border); border-radius: 18px; padding: 4px 11px; cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
 .cm-theme:hover { border-color: var(--border-strong); color: var(--deep); }

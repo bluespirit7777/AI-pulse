@@ -70,11 +70,19 @@ async function main() {
     if (!entityIds.has(id)) fail(`entityActivity has unknown entity id: ${id}`);
   }
 
-  // stocks
+  // stocks — daily change must be sane (the AMD +128% bug guard): an absurd
+  // |change| is only allowed if it was explicitly flagged for review.
   (data.stocks || []).forEach((s, i) => {
     if (!isStr(s.t)) fail(`stocks[${i}].t missing`);
     if (!isStr(s.url)) fail(`stocks[${i}].url missing`);
     if (s.price != null && !isNum(s.price)) fail(`stocks[${i}].price must be number or null`);
+    const chg = s.changePct != null ? s.changePct : s.change;
+    if (chg != null) {
+      if (!isNum(chg)) fail(`stocks[${i}].changePct must be number or null`);
+      else if (Math.abs(chg) > 25 && !s.changeReview) {
+        fail(`stocks[${i}] (${s.t}) daily change ${chg.toFixed(1)}% is absurd and not flagged for review — likely a stale-baseline bug`);
+      }
+    }
   });
 
   // range.json
@@ -103,7 +111,7 @@ async function main() {
     }
   }
 
-  // community (object: { window, models[], comments[] })
+  // community (object: { window, models[], comments[] }) — validated matching
   if (data.community != null) {
     const c = data.community;
     if (!isArr(c.models)) fail('community.models must be an array');
@@ -111,15 +119,27 @@ async function main() {
     const modelIds = new Set((c.models || []).map((m) => m.key));
     (c.models || []).forEach((m, i) => {
       if (!isStr(m.key)) fail(`community.models[${i}].key missing`);
-      if (!isNum(m.mentionCount) || m.mentionCount < 0) fail(`community.models[${i}].mentionCount invalid`);
+      // validated metrics: bubble size is validatedDiscussions, not raw hits
+      for (const f of ['rawHits', 'validatedMentions', 'validatedDiscussions']) {
+        if (!isNum(m[f]) || m[f] < 0) fail(`community.models[${i}].${f} invalid`);
+      }
+      // a validated count can never exceed the raw keyword-hit count it derives from
+      if (isNum(m.validatedMentions) && isNum(m.rawHits) && m.validatedMentions > m.rawHits) {
+        fail(`community.models[${i}].validatedMentions (${m.validatedMentions}) exceeds rawHits (${m.rawHits})`);
+      }
+      if (typeof m.limited !== 'boolean') fail(`community.models[${i}].limited must be boolean`);
       if (!isArr(m.themes)) fail(`community.models[${i}].themes must be an array`);
     });
+    // representative comments must be relevant, sanitised, and globally unique
+    const seenComment = new Set();
     (c.comments || []).forEach((cm, i) => {
       if (!modelIds.has(cm.modelId)) fail(`community.comments[${i}].modelId unknown: ${cm.modelId}`);
       if (!isStr(cm.excerpt)) fail(`community.comments[${i}].excerpt missing`);
       if (cm.excerpt && cm.excerpt.length > 200) fail(`community.comments[${i}].excerpt too long (${cm.excerpt.length})`);
       if (/<[a-z]/i.test(cm.excerpt || '')) fail(`community.comments[${i}].excerpt contains unsanitised HTML`);
       if (!isStr(cm.url)) fail(`community.comments[${i}].url missing`);
+      // no excerpt reused across models/themes (would imply a comment counted twice)
+      if (cm.url) { if (seenComment.has(cm.url)) fail(`community.comments[${i}] reuses url ${cm.url}`); seenComment.add(cm.url); }
     });
   }
 

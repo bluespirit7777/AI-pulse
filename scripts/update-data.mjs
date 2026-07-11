@@ -23,6 +23,7 @@ import {
   computeEntityActivity,
   buildWaves,
   classifyTopics,
+  isValidatedMention,
   TOPICS,
 } from './lib/signals.mjs';
 import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT } from './lib/stocks.mjs';
@@ -236,46 +237,67 @@ function sanitizeExcerpt(html, max = 180, focus = '') {
   return (start > 0 ? '…' : '') + slice.trimEnd() + '…';
 }
 
-async function fetchModelCommunity(m, now) {
+const COMMUNITY_LIMITED_MIN = 8; // fewer than this validated discussions → "limited sample"
+
+async function fetchModelCommunity(m, now, usedCommentIds) {
   const since = Math.floor(now / 1000) - 30 * 24 * 3600; // last 30 days
   const base = 'https://hn.algolia.com/api/v1/search';
-  const model = { key: m.key, model: m.model, version: m.version, org: m.org, mentionCount: 0, uniqueDiscussionCount: 0, points: 0, themes: [], topThreads: [] };
+  const model = {
+    key: m.key, model: m.model, version: m.version, org: m.org,
+    rawHits: 0, validatedMentions: 0, validatedDiscussions: 0, limited: true,
+    points: 0, themes: [], topThreads: [],
+  };
   const comments = [];
   try {
     const [storiesRes, commentsRes] = await Promise.all([
-      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}&hitsPerPage=30`),
-      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=comment&numericFilters=created_at_i>${since}&hitsPerPage=60`),
+      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}&hitsPerPage=40`),
+      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=comment&numericFilters=created_at_i>${since}&hitsPerPage=80`),
     ]);
+
+    // ---- stories: validate each, estimate validated discussion volume ----
+    let storyRatio = 0;
     if (storiesRes.ok) {
       const sj = await storiesRes.json();
       const hits = (sj.hits || []).filter((h) => h.title);
-      model.uniqueDiscussionCount = sj.nbHits || hits.length;
-      model.points = hits.reduce((s, h) => s + (h.points || 0), 0);
-      model.topThreads = hits.slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 2)
+      const validated = hits.filter((h) => isValidatedMention(`${h.title} ${h.story_text || ''}`, m.key));
+      storyRatio = hits.length ? validated.length / hits.length : 0;
+      // validated unique discussions = raw story hits scaled by the validated
+      // fraction of the sample (never exceeds raw hits).
+      model.validatedDiscussions = Math.round((sj.nbHits || hits.length) * storyRatio);
+      model.points = validated.reduce((s, h) => s + (h.points || 0), 0);
+      model.topThreads = validated.slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 2)
         .map((h) => ({ title: truncate(h.title, 90), points: h.points || 0, comments: h.num_comments || 0, url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, date: shortDate(new Date((h.created_at_i || 0) * 1000)) }));
     }
+
+    // ---- comments: validate, theme-tag validated ones, pick representatives ----
     if (commentsRes.ok) {
       const cj = await commentsRes.json();
-      const hits = (cj.hits || []).filter((h) => h.comment_text);
-      model.mentionCount = cj.nbHits || hits.length;
+      const raw = (cj.hits || []).filter((h) => h.comment_text);
+      model.rawHits = cj.nbHits || raw.length;
+      const decoded = raw.map((h) => ({ h, text: decodeEntities(h.comment_text) }));
+      const validated = decoded.filter((c) => isValidatedMention(c.text, m.key));
+      const commentRatio = decoded.length ? validated.length / decoded.length : 0;
+      model.validatedMentions = Math.round(model.rawHits * commentRatio);
+
       const themeCounts = {};
-      for (const h of hits) {
-        const topics = classifyTopics(h.comment_text);
-        for (const tid of topics) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
+      for (const c of validated) {
+        for (const tid of classifyTopics(c.text)) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
       }
       model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
 
-      // representative comments: pick the most substantive per theme, one theme
-      // each, so excerpts don't all make the same point.
+      // representative comments: validated only, one per distinct theme, most
+      // substantive first, globally de-duplicated so an excerpt never repeats
+      // across model bubbles.
       const usedThemes = new Set();
-      const candidates = hits
-        .map((h) => ({ h, topics: classifyTopics(h.comment_text), len: (h.comment_text || '').length }))
-        .filter((c) => c.topics.length && c.len > 120)
+      const candidates = validated
+        .map((c) => ({ ...c, topics: classifyTopics(c.text), len: c.text.length }))
+        .filter((c) => c.topics.length && c.len > 120 && !usedCommentIds.has(c.h.objectID))
         .sort((a, b) => (b.h.points || 0) - (a.h.points || 0) || b.len - a.len);
       for (const c of candidates) {
-        const theme = c.topics.find((t) => !usedThemes.has(t)) || c.topics[0];
-        if (usedThemes.has(theme)) continue;
+        const theme = c.topics.find((t) => !usedThemes.has(t));
+        if (!theme) continue;
         usedThemes.add(theme);
+        usedCommentIds.add(c.h.objectID);
         comments.push({
           modelId: m.key, theme,
           excerpt: sanitizeExcerpt(c.h.comment_text, 180, m.q),
@@ -283,9 +305,10 @@ async function fetchModelCommunity(m, now) {
           publishedAt: new Date((c.h.created_at_i || 0) * 1000).toISOString(),
           url: `https://news.ycombinator.com/item?id=${c.h.objectID}`,
         });
-        if (comments.length >= 4 * 1) break; // up to 4 per model
+        if (comments.length >= 4) break;
       }
     }
+    model.limited = model.validatedDiscussions < COMMUNITY_LIMITED_MIN;
   } catch (err) {
     console.error(`[community] ${m.key}: ${err.message}`);
   }
@@ -500,7 +523,10 @@ async function main() {
   }));
 
   console.log('Fetching community pulse…');
-  const communityResults = await Promise.all(COMMUNITY_MODELS.map((m) => fetchModelCommunity(m, now)));
+  // shared across models so a comment excerpt is never reused between bubbles
+  const usedCommentIds = new Set();
+  const communityResults = [];
+  for (const cm of COMMUNITY_MODELS) communityResults.push(await fetchModelCommunity(cm, now, usedCommentIds));
   const community = {
     updatedAt: new Date(now).toISOString(),
     window: '30D',

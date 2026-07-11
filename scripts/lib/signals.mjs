@@ -464,6 +464,58 @@ export function classifyTopics(text) {
   return out;
 }
 
+// ---------- contextual model matching (Community Pulse) ----------
+// Raw keyword search over-counts: "grok" the verb, "llama" the animal or
+// llama.cpp-as-tool, and comments that merely mention a company. This returns a
+// 0–1 confidence that a text is really discussing a given model family, so we
+// count VALIDATED mentions, not raw hits. Ambiguous families (grok, llama)
+// require nearby AI context and reject ordinary-language usage.
+const AI_CONTEXT = /\b(a\.?i\.?|llm|model|inference|benchmark|prompt|tokens?|coding|reasoning|xai|meta\b|local model|api|chatbot|fine.?tun|open.?weight|hugging ?face|context window|agent|anthropic|openai|google|assistant)\b/i;
+const GROK_REJECT = /\b((hard|difficult|tries?|trying|able|unable|fully|easy|easier|hoping|want|need|starting|able)\s+to\s+grok|grok(king|ked)?\s+(the|this|it|that|his|her|their|its|our|my|your|some|a\b)|can'?t\s+grok|cannot\s+grok|understand\s+or\s+grok|to\s+grok\b|grok\s+the\s+(code|codebase|concept|idea|material|system))\b/i;
+const LLAMA_ANIMAL = /\b(a\s+llama|the\s+llama|llamas\b|llama\s+(walked|farm|spit|wool|trek|ranch|standing)|alpaca|petting)\b/i;
+
+const COMMUNITY_MATCHERS = {
+  gpt: { name: 'GPT', strong: [/\bchatgpt\b/i, /\bgpt-?5(\.\d)?\b/i, /\bgpt-?4(\.\d)?\b/i, /\bopenai (gpt|model)\b/i], org: /\bopenai\b/i, version: /\bgpt-?\d(\.\d)?\b/i, product: /\bchatgpt (work|enterprise|plus)\b/i, ambiguous: false },
+  claude: { name: 'Claude', strong: [/\bclaude\b/i], org: /\banthropic\b/i, version: /\bclaude (opus|sonnet|haiku|\d)/i, product: /\bclaude code\b/i, ambiguous: false },
+  gemini: { name: 'Gemini', strong: [/\bgemini\b/i], org: /\bgoogle\b/i, version: /\bgemini \d/i, ambiguous: false },
+  grok: { name: 'Grok', strong: [/\bgrok-?\s?\d(\.\d)?\b/i, /\bxai grok\b/i, /\bgrok ai\b/i, /\bgrok model\b/i], base: /\bgrok\b/i, org: /\bxai\b/i, version: /\bgrok-?\s?\d/i, ambiguous: true, reject: GROK_REJECT },
+  llama: { name: 'Llama', strong: [/\bllama-?\s?\d\b/i, /\bmeta llama\b/i, /\bllama\.cpp\b/i, /\bllama model\b/i], base: /\bllama\b/i, org: /\bmeta\b/i, version: /\bllama-?\s?\d/i, ambiguous: true, reject: LLAMA_ANIMAL },
+  deepseek: { name: 'DeepSeek', strong: [/\bdeepseek\b/i], version: /\bdeepseek[- ]?v?\d/i, ambiguous: false },
+  qwen: { name: 'Qwen', strong: [/\bqwen\b/i], org: /\balibaba\b/i, version: /\bqwen[- ]?\d/i, ambiguous: false },
+};
+export const COMMUNITY_MATCH_THRESHOLD = 0.5;
+
+// Confidence in [0,1] that `text` genuinely discusses model `key`.
+export function matchModelMention(text, key) {
+  const m = COMMUNITY_MATCHERS[key];
+  if (!m) return 0;
+  const t = ` ${text} `;
+  const hasStrong = m.strong.some((re) => re.test(t));
+  const hasBase = m.base ? m.base.test(t) : hasStrong;
+  const hasOrg = m.org ? m.org.test(t) : false;
+  const hasVersion = m.version ? m.version.test(t) : false;
+  const hasProduct = m.product ? m.product.test(t) : false;
+  const hasAI = AI_CONTEXT.test(t);
+
+  if (m.ambiguous) {
+    const rejected = m.reject && m.reject.test(t);
+    if (hasStrong) return 0.9;                         // "Grok 4", "xAI Grok", "llama.cpp" — unambiguous
+    if (hasBase && !rejected && (hasAI || hasOrg)) return 0.6; // bare grok/llama WITH AI context
+    return 0;                                          // bare + ordinary-language use, or no AI context
+  }
+  if (!hasStrong && !hasBase) return 0;
+  let c = 0.55;
+  if (hasOrg) c += 0.15;
+  if (hasVersion) c += 0.15;
+  if (hasProduct) c += 0.1;
+  if (hasAI) c += 0.05;
+  return Math.min(c, 1);
+}
+
+export function isValidatedMention(text, key) {
+  return matchModelMention(text, key) >= COMMUNITY_MATCH_THRESHOLD;
+}
+
 // ---------- significance scoring ----------
 // Deterministic weighted blend in [0,100]. Documented in docs/METHODOLOGY.md.
 // Not a claim of objective importance — a transparent ranking heuristic.
