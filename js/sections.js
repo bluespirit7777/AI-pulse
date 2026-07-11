@@ -82,6 +82,10 @@ function wireDonutTooltip() {
   }
   donut.addEventListener('mousemove', onMove);
   donut.addEventListener('mouseleave', () => { tip.hidden = true; });
+  // safety net: also hide on leaving the wider wrap (covers the legend and
+  // any gap between it and the circle), so the tooltip can never be left
+  // showing once the cursor is no longer anywhere near the pie chart.
+  wrap.addEventListener('mouseleave', () => { tip.hidden = true; });
 }
 
 export function renderCurated() {

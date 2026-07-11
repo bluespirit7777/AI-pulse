@@ -289,9 +289,18 @@ body.drawer-open { overflow: hidden; }
    one fans its representative comments out as cards around it, connected by
    thin lines drawn in the same SVG. No separate list panel below. */
 .cm-stage-wrap {
+  /* aspect-ratio MUST match the SVG's own viewBox (900:560) at every
+     breakpoint — the petal cards are plain HTML positioned by percentage
+     against this box, so any mismatch between this ratio and the SVG's
+     internal coordinate system misaligns them from where the SVG actually
+     draws the bubbles/connectors once preserveAspectRatio scales it to fit. */
   position: relative; width: 100%; aspect-ratio: 900 / 560;
   background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(18,48,62,.06); overflow: hidden;
+  box-shadow: 0 4px 16px rgba(18,48,62,.06);
+  /* visible, not hidden: on very narrow viewports a full row of petal cards
+     can need slightly more height than the ratio provides — let them extend
+     past the panel rather than silently clipping/hiding their content. */
+  overflow: visible;
 }
 .cm-stage { display: block; width: 100%; height: 100%; }
 .cm-bubble { cursor: pointer; }
@@ -322,7 +331,7 @@ body.drawer-open { overflow: hidden; }
 .cm-petal-meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); display: flex; justify-content: space-between; gap: 6px; align-items: baseline; }
 .cm-petal-meta a { color: var(--sea); text-decoration: none; }
 .cm-petal-meta a:hover { text-decoration: underline; }
-.cm-petal-empty { position: absolute; top: 52%; left: 50%; transform: translate(-50%, 0); font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); text-align: center; width: 220px; pointer-events: none; }
+.cm-petal-empty { position: absolute; top: 58.9%; left: 50%; transform: translate(-50%, 0); font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); text-align: center; width: 220px; pointer-events: none; }
 
 .cm-info { margin-top: 14px; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.06); }
 .cm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
@@ -338,7 +347,6 @@ body.drawer-open { overflow: hidden; }
 .cm-thread-n { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); }
 .cm-foot { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); line-height: 1.6; margin: 12px 2px 0; }
 @media (max-width: 640px) {
-  .cm-stage-wrap { aspect-ratio: 420 / 520; }
   .cm-petal { width: min(150px, 42vw); }
   .cm-petal-excerpt { font-size: 11.5px; }
   .cm-bub-label { font-size: 11px; }

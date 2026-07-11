@@ -5,16 +5,25 @@
 // no separate list panel, no topic filter, just click and read. All data is
 // pre-built in latest.json.community; excerpts are already sanitised at build
 // time but we still esc() on render.
-import { esc, timeAgo, prefersReducedMotion, clamp } from './util.js';
+import { esc, timeAgo, prefersReducedMotion } from './util.js';
 
 const FAMILY_COLOR = {
   gpt: 'var(--deep)', claude: 'var(--coral)', gemini: 'var(--sea)', grok: 'var(--ink-soft)',
   llama: 'var(--sand)', deepseek: 'var(--teal)', qwen: '#7a5c8e',
 };
 const VW = 900, VH = 560;
-const BUBBLE_Y = 78; // bubble row near the top, leaving room for petals below
-const PETAL_R = 190; // distance from bubble center to each petal anchor
-const PETAL_ARC = 130; // total degrees the petal fan spans, centered straight down
+const GRID_COLS = 3; // bubbles lay out 3-per-row
+const GRID_TOP_Y = 60;
+const GRID_ROW_GAP = 100;
+// Petals always anchor in this fixed band BELOW THE WHOLE GRID, regardless of
+// which row the selected bubble is in — a fixed radial fan (as when there was
+// only one bubble row) would land a top-row bubble's petals on top of the
+// rows below it. A short connector line from the bubble down to this band
+// still reads as "its comments, right here" without ever overlapping another
+// model's bubble. All petals sit in ONE horizontal row (not stacked) — real
+// card height (~150-180px, several lines of excerpt text) is too tall for a
+// second stacked row to fit in the remaining vertical budget below the grid.
+const PETAL_ZONE_Y = 330;
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString());
 
 export function renderCommunity(root, community) {
@@ -33,15 +42,23 @@ export function renderCommunity(root, community) {
   const state = { modelId: null };
   const maxDisc = Math.max(...models.map(discussions), 1);
 
-  // ---- bubble layout: one row near the top of the stage ----
-  const n = ranked.length;
+  // ---- bubble layout: 3 per row, wrapping into a grid; a partial last row
+  //      is centered rather than left-hugging so it doesn't look stranded ----
   const pad = 70;
-  const positions = ranked.map((m, i) => ({
-    key: m.key,
-    x: pad + ((i + 0.5) * (VW - pad * 2)) / n,
-    y: BUBBLE_Y,
-    r: 18 + Math.sqrt(discussions(m) / maxDisc) * 40,
-  }));
+  const positions = [];
+  for (let start = 0; start < ranked.length; start += GRID_COLS) {
+    const rowModels = ranked.slice(start, start + GRID_COLS);
+    const ri = start / GRID_COLS;
+    rowModels.forEach((m, ci) => {
+      positions.push({
+        key: m.key,
+        x: pad + ((ci + 0.5) * (VW - pad * 2)) / rowModels.length,
+        y: GRID_TOP_Y + ri * GRID_ROW_GAP,
+        // capped so two vertically-adjacent rows of bubbles never touch
+        r: 15 + Math.sqrt(discussions(m) / maxDisc) * 29,
+      });
+    });
+  }
   const posByKey = Object.fromEntries(positions.map((p) => [p.key, p]));
 
   root.innerHTML = `
@@ -100,57 +117,47 @@ export function renderCommunity(root, community) {
     drawInfo();
   }
 
-  function petalAnchor(bubble, i, count, marginUnits) {
-    // bubbles near the left/right edge of the stage bias their fan toward the
-    // center so petals never spill off-stage — without this, the leftmost/
-    // rightmost model's petals render partly invisible (clipped by the stage).
-    const normX = clamp((bubble.x - VW / 2) / (VW / 2 - pad), -1, 1);
-    const biasDeg = -normX * (PETAL_ARC / 2 - 8);
-    const angleDeg = biasDeg + (count > 1 ? -PETAL_ARC / 2 + (PETAL_ARC * i) / (count - 1) : 0);
-    const rad = (angleDeg * Math.PI) / 180;
-    // safety margin sized to the card's OWN rendered half-width (as a fraction
-    // of the actual stage width) so it can never push past the edge — this
-    // has to be measured live, not a fixed fraction, because the card is
-    // proportionally much wider on narrow/mobile stages than on desktop.
-    const x = clamp(bubble.x + PETAL_R * Math.sin(rad), marginUnits, VW - marginUnits);
-    return { x, y: bubble.y + PETAL_R * Math.cos(rad), rad };
+  function petalAnchor(bubble, i, count, colsPerRow, colGapUnits, rowGapUnits, shiftUnits) {
+    // A grid of cards below the bubble — NOT a radial fan around it, because
+    // with bubbles now on 3 rows, a fan from a top-row bubble would land on
+    // top of the rows below it. Anchoring every model's petals to the same
+    // below-the-grid band means they never overlap another bubble regardless
+    // of which row was clicked. colsPerRow adapts to the stage's actual
+    // width (see drawPetals) so cards never need to overlap or overflow —
+    // on desktop that's usually all of them in one row; on narrow/mobile
+    // stages it wraps to 2 columns.
+    const row = Math.floor(i / colsPerRow);
+    const col = i % colsPerRow;
+    const colsInThisRow = Math.min(colsPerRow, count - row * colsPerRow);
+    const xOffset = colsInThisRow > 1 ? (col - (colsInThisRow - 1) / 2) * colGapUnits : 0;
+    return { x: bubble.x + xOffset + shiftUnits, y: PETAL_ZONE_Y + row * rowGapUnits };
   }
 
   function drawPetals() {
     gConn.innerHTML = '';
     petalsEl.innerHTML = '';
+    stageWrap.style.minHeight = ''; // reset before recomputing below
     if (!state.modelId) return;
     const bubble = posByKey[state.modelId];
     const mine = comments.filter((c) => c.modelId === state.modelId).slice(0, 4);
-    // measure a throwaway petal to get its real rendered half-width, then
-    // convert to SVG units via the stage's actual current pixel width.
-    const stagePx = stageWrap.clientWidth || VW;
-    let cardHalfUnits = VW * 0.1;
-    if (mine.length) {
-      const probe = document.createElement('div');
-      probe.className = 'cm-petal';
-      probe.style.visibility = 'hidden';
-      probe.style.position = 'absolute';
-      probe.innerHTML = '<p class="cm-petal-excerpt">x</p>';
-      petalsEl.appendChild(probe);
-      const halfPx = probe.getBoundingClientRect().width / 2;
-      probe.remove();
-      cardHalfUnits = (halfPx / stagePx) * VW + VW * 0.02; // + small gutter
-    }
     if (!mine.length) {
       petalsEl.innerHTML = `<div class="cm-petal-empty">No representative comments for this model in the current window.</div>`;
       return;
     }
-    mine.forEach((c, i) => {
-      const a = petalAnchor(bubble, i, mine.length, cardHalfUnits);
-      const edgeX = bubble.x + (bubble.r + 4) * Math.sin(a.rad);
-      const edgeY = bubble.y + (bubble.r + 4) * Math.cos(a.rad);
-      gConn.insertAdjacentHTML('beforeend', `<path class="cm-connector" d="M ${edgeX.toFixed(1)} ${edgeY.toFixed(1)} L ${a.x.toFixed(1)} ${(a.y - 6).toFixed(1)}"></path>`);
+    // Two-pass layout: first render every real card (hidden, unpositioned) to
+    // measure its ACTUAL size — different excerpts wrap to different heights,
+    // so sizing row/column spacing off just one probe card left taller cards
+    // overlapping the row below them. Only once every card's real size is
+    // known do we compute a uniform grid (max width/height) and position them.
+    // pxPerUnit is derived from WIDTH alone (never affected by the min-height
+    // growth below) so it stays valid even after the wrapper grows taller —
+    // the SVG's own preserveAspectRatio scales by width the same way.
+    const rect = stageWrap.getBoundingClientRect();
+    const pxPerUnit = (rect.width || VW) / VW;
+    const els = mine.map((c) => {
       const petal = document.createElement('div');
       petal.className = 'cm-petal';
-      petal.style.left = `${(a.x / VW) * 100}%`;
-      petal.style.top = `${(a.y / VH) * 100}%`;
-      petal.style.animationDelay = `${i * 40}ms`;
+      petal.style.visibility = 'hidden';
       petal.innerHTML = `
         <p class="cm-petal-excerpt">${esc(c.excerpt)}</p>
         <div class="cm-petal-meta">
@@ -158,6 +165,54 @@ export function renderCommunity(root, community) {
           <a href="${esc(c.url)}" target="_blank" rel="noopener">read on HN</a>
         </div>`;
       petalsEl.appendChild(petal);
+      return petal;
+    });
+    const sizesPx = els.map((el) => el.getBoundingClientRect());
+    const maxWidthPx = Math.max(...sizesPx.map((s) => s.width));
+    const maxHeightPx = Math.max(...sizesPx.map((s) => s.height));
+    const widthUnits = maxWidthPx / pxPerUnit;
+    const heightUnits = maxHeightPx / pxPerUnit;
+    const gutterUnits = VW * 0.015;
+    const colGapUnits = widthUnits + gutterUnits; // adjacent cards can never overlap: gap >= widest card
+    const rowGapUnits = heightUnits + VH * 0.05; // stacked rows can never overlap: gap >= tallest card
+    const marginUnits = widthUnits / 2 + gutterUnits;
+
+    // as many columns as actually fit across the stage — usually all of them
+    // on desktop, fewer on narrow/mobile stages, wrapping the rest to
+    // additional rows instead of forcing an overflow.
+    const colsPerRow = Math.max(1, Math.min(mine.length, Math.floor((VW - 2 * marginUnits) / colGapUnits) || 1));
+    const rowCount = Math.ceil(mine.length / colsPerRow);
+
+    // shift the WHOLE grid horizontally (not each card independently — that
+    // let cards near an edge collapse onto each other) just enough to keep
+    // every card within the stage bounds, preserving their even spacing.
+    const widestRowCols = Math.min(colsPerRow, mine.length);
+    const halfSpan = widestRowCols > 1 ? ((widestRowCols - 1) / 2) * colGapUnits : 0;
+    let shiftUnits = 0;
+    if (bubble.x - halfSpan < marginUnits) shiftUnits = marginUnits - (bubble.x - halfSpan);
+    else if (bubble.x + halfSpan > VW - marginUnits) shiftUnits = (VW - marginUnits) - (bubble.x + halfSpan);
+
+    // if wrapping to multiple rows needs more vertical room than the panel's
+    // natural aspect-ratio height provides (a real possibility with several
+    // long excerpts stacked on a narrow phone), grow the panel to fit rather
+    // than letting cards spill past its background into whatever follows it
+    // on the page. Positions below are in PX (not %) specifically so this
+    // growth never shifts them — a percentage would recompute against the
+    // new, taller height and throw off the whole layout.
+    const neededUnits = PETAL_ZONE_Y + (rowCount - 1) * rowGapUnits + heightUnits + VH * 0.03;
+    const neededPx = neededUnits * pxPerUnit;
+    if (neededPx > rect.height) stageWrap.style.minHeight = `${Math.ceil(neededPx)}px`;
+
+    // every connector starts at the same point — the bubble's bottom edge —
+    // and fans out to each card, a clean "starburst from one point" look.
+    const originX = bubble.x, originY = bubble.y + bubble.r + 4;
+    els.forEach((petal, i) => {
+      const a = petalAnchor(bubble, i, mine.length, colsPerRow, colGapUnits, rowGapUnits, shiftUnits);
+      gConn.insertAdjacentHTML('beforeend', `<path class="cm-connector" d="M ${originX.toFixed(1)} ${originY.toFixed(1)} L ${a.x.toFixed(1)} ${(a.y - 6).toFixed(1)}"></path>`);
+      petal.style.left = `${(a.x * pxPerUnit).toFixed(1)}px`;
+      petal.style.top = `${(a.y * pxPerUnit).toFixed(1)}px`;
+      petal.style.animationDelay = `${i * 40}ms`;
+      petal.style.visibility = '';
     });
   }
 

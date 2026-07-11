@@ -78,6 +78,14 @@ const FEEDS = [
   { url: 'https://arstechnica.com/ai/feed/', name: 'Ars Technica', logoKey: 'other' },
   { url: 'https://www.wired.com/feed/tag/ai/latest/rss', name: 'Wired', logoKey: 'other' },
   { url: 'https://www.technologyreview.com/topic/artificial-intelligence/feed', name: 'MIT Technology Review', logoKey: 'other' },
+  // Anthropic publishes no official RSS/Atom feed (unlike OpenAI/Google), so
+  // without this, Claude coverage depends entirely on generic tech outlets —
+  // which rarely use ship-language ("launches"/"introduces") — leaving too few
+  // qualifying Frontier Releases items. Google News RSS search needs no API
+  // key and aggregates Anthropic's own "Introducing Claude X" posts (via
+  // syndication/reprints) alongside third-party coverage. isGoogleNews strips
+  // the "Headline - Publisher" suffix Google News appends to every title.
+  { url: 'https://news.google.com/rss/search?q=Anthropic+Claude+when:60d&hl=en-US&gl=US&ceid=US:en', name: 'Google News (Anthropic)', logoKey: 'anthropic', isGoogleNews: true },
   // Official frontier-lab YouTube channels (Atom feeds, no API key). Videos are
   // gated in fetchFeed to release-like uploads only, so keynotes and tutorials
   // don't pollute the general signal stream — an official launch video simply
@@ -171,7 +179,7 @@ function parseFeed(xml, source) {
   const items = [];
   const itemBlocks = xml.match(/<item[\s\S]*?<\/item>/gi) || xml.match(/<entry[\s\S]*?<\/entry>/gi) || [];
   for (const block of itemBlocks) {
-    const title = tag(block, 'title');
+    let title = tag(block, 'title');
     let link = tag(block, 'link');
     if (!link) link = attr(block, 'link', 'href');
     if (!link) {
@@ -180,15 +188,24 @@ function parseFeed(xml, source) {
     }
     const dateStr = tag(block, 'pubDate') || tag(block, 'published') || tag(block, 'updated') || tag(block, 'dc:date');
     // media:description is the video summary in YouTube Atom feeds
-    const desc = tag(block, 'description') || tag(block, 'summary') || tag(block, 'content') || tag(block, 'media:description');
+    let desc = tag(block, 'description') || tag(block, 'summary') || tag(block, 'content') || tag(block, 'media:description');
     const date = dateStr ? new Date(dateStr) : new Date();
     if (!title || !link) continue;
+    let sourceName = source.name;
+    if (source.isGoogleNews) {
+      // every Google News RSS title ends " - <Publisher>" — split it out so
+      // items get real per-article attribution and a clean headline instead
+      // of a blanket "Google News (…)" label and a mangled title.
+      const m = title.match(/^(.*)\s+-\s+([^-]+)$/);
+      if (m) { title = m[1].trim(); sourceName = m[2].trim(); }
+      desc = ''; // Google News descriptions are just the title+publisher HTML re-concatenated — no signal
+    }
     items.push({
       title: title.trim(),
       link: link.trim(),
       desc: desc.slice(0, 400),
       date: isNaN(date.getTime()) ? new Date() : date,
-      sourceName: source.name,
+      sourceName,
       feedLogoKey: source.logoKey,
       isVideo: !!source.isVideo,
     });

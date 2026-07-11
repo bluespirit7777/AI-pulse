@@ -304,8 +304,12 @@
     background:var(--panel-solid);border:1px solid var(--border-strong);border-radius:8px;
     padding:6px 11px;font-family:var(--font-mono);font-size:12px;color:var(--ink);
     box-shadow:0 4px 14px rgba(14,42,55,0.16);white-space:nowrap;
-    display:flex;align-items:center;gap:7px;
   }
+  /* :not([hidden]) so the [hidden] attribute (equal specificity to a plain
+     class rule) actually wins and hides it — a bare "display:flex" here would
+     permanently override the UA [hidden]{display:none} rule, leaving the
+     tooltip visibly stuck showing its last content even when not hovering. */
+  .donut-tooltip:not([hidden]){display:flex;align-items:center;gap:7px;}
   .donut-tooltip .donut-tt-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
   .donut-tooltip b{color:var(--deep);}
   .donut-label{
