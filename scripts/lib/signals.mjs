@@ -121,7 +121,12 @@ const ACTION_RULES = [
   ['acquire', /\b(acqui\w+|buys?\b|bought|takeover|merge[sr]?)\b/i],
   ['raise', /\b(raise[sd]?\b|funding round|series [a-e]\b|\bipo\b|valuation)\b/i],
   ['invest', /\b(invests?|investment|takes? a stake|backs?\b)\b/i],
-  ['sue', /\b(sues?\b|lawsuit|sued|sanction\w*|court|antitrust)\b/i],
+  // su(e|es|ing|ed) covers "sue/sues/suing/sued" uniformly — the earlier
+  // `sues?\b` alone missed the gerund "is suing", which was a real miss: two
+  // genuine reports of the same Apple/OpenAI trade-secrets suit ("Apple is
+  // SUING OpenAI..." vs "Apple SUES OpenAI...") failed to merge because only
+  // one of the two headlines used a form the old regex recognized.
+  ['sue', /\b(su(e|es|ing|ed)|lawsuit|sanction\w*|court|antitrust)\b/i],
   ['regulate', /\b(regulat\w+|ban(s|ned|ning)?\b|executive order|investigat\w+)\b/i],
   ['partner', /\b(partner\w*|teams? up|collaborat\w+)\b/i],
   ['launch', /\b(launch\w*|unveil\w*|introduc\w*|debuts?|ships?\b|rolls? out|now available|releas\w+)\b/i],
@@ -143,12 +148,18 @@ export function extractAction(text) {
 // must NOT by themselves justify merging two otherwise-unrelated stories; this
 // is what wrongly merged "Introducing Gemma 4 12B" with an unrelated "Claude
 // Fable 5" launch video, both merely containing the word "model").
-const OBJECT_NOUNS_STRONG = /\b(browser|chip|gpu|robot|humanoid|funding|ipo|lawsuit|copyright|license|privacy|studio|dataset|benchmark|silicon|foundry|datacenter|data center)\b/gi;
+const OBJECT_NOUNS_STRONG = /\b(browser|chip|gpu|robot|humanoid|funding|ipo|lawsuit|copyright|license|privacy|studio|dataset|benchmark|silicon|foundry|datacenter|data center|secrets?|trademark)\b/gi;
 const OBJECT_NOUNS_WEAK = /\b(model|models|app|api|tool|agent|assistant|search|cloud|voice|image|video|chatbot)\b/gi;
 function extractNouns(text, re) {
   const objs = new Set();
   const m = text.match(re) || [];
-  for (const w of m) objs.add(w.toLowerCase().replace('data center', 'datacenter'));
+  for (const w of m) {
+    let norm = w.toLowerCase().replace('data center', 'datacenter');
+    // singular/plural must collapse to one token, or "hardware secrets" vs
+    // "trade secret" (same story, different qualifier) fail to overlap.
+    if (norm === 'secrets') norm = 'secret';
+    objs.add(norm);
+  }
   return objs;
 }
 export function salientObjects(title, desc = '') {
@@ -538,6 +549,80 @@ export function isValidatedMention(text, key) {
   return matchModelMention(text, key) >= COMMUNITY_MATCH_THRESHOLD;
 }
 
+// ---------- representative-comment ranking (Community Pulse) ----------
+// Composite relevance score in [0,1], deliberately NOT length-based: a long
+// comment used to win by default under the old points-then-length sort, which
+// is a bad proxy for "worth reading" (rambling replies beat sharp, short
+// ones). Priority order is model-match confidence, then how specific/rare the
+// comment's theme is (a "context limits" comment says more than a "coding"
+// one when everyone's talking about coding), then whether the text reads as a
+// complete thought, then recency. Non-duplication is enforced separately as a
+// selection-time filter (see dedupe-by-similarity in update-data.mjs) rather
+// than folded into the score, since "how different from what's already
+// picked" only makes sense relative to the picks made so far.
+export function themeSpecificity(themeId, themeCounts, totalValidatedComments) {
+  if (!totalValidatedComments) return 0;
+  const freq = (themeCounts[themeId] || 0) / totalValidatedComments;
+  return clamp(1 - freq, 0, 1);
+}
+
+// A cheap, structural stand-in for "reads as a complete thought" — sentence
+// punctuation, enough words to carry an idea, not a bare quote-reply. Length
+// is only ONE input among several, and even then it's a floor/ceiling check
+// rather than a monotonic reward, so a merely-longer comment doesn't win.
+export function contextualCompleteness(text) {
+  const t = String(text || '').trim();
+  if (!t) return 0;
+  const words = t.split(/\s+/).filter(Boolean).length;
+  const isQuoteOnly = t.split('\n').every((l) => !l.trim() || l.trim().startsWith('>'));
+  const hasSentenceEnd = /[.!?]["')\]]?\s*$/.test(t) || /[.!?]["')\]]?\s+[A-Z]/.test(t);
+  let score = 0.5;
+  if (words >= 15) score += 0.2;
+  if (words >= 30) score += 0.1;
+  if (hasSentenceEnd) score += 0.15;
+  if (isQuoteOnly) score -= 0.4;
+  if (t.length < 40) score -= 0.3;
+  return clamp(score, 0, 1);
+}
+
+// Linear decay over the community window (default 30 days) — recent
+// discussion is more representative of the CURRENT conversation than a
+// month-old comment, but it's the lowest-weighted of the four scored terms.
+export function communityRecencyScore(publishedAtMs, now, windowDays = 30) {
+  const days = (now - publishedAtMs) / 86400000;
+  return clamp(1 - days / windowDays, 0, 1);
+}
+
+// Weights sum to 1; order matches the documented priority (model-match confidence
+// > theme specificity > contextual completeness > recency). Non-duplication is
+// applied by the caller as a selection-time filter, not a term here.
+export function commentRelevanceScore({ matchConfidence = 0, themeSpecificity = 0, completeness = 0, recency = 0 }) {
+  return 0.40 * matchConfidence + 0.25 * themeSpecificity + 0.20 * completeness + 0.15 * recency;
+}
+
+// ---------- community coverage / exact-vs-estimated (Community Pulse honesty) ----------
+// Pure coverage math, split out from scripts/update-data.mjs's HN Algolia fetch
+// specifically so the exact-vs-estimated decision is independently testable
+// without mocking network calls. `rawHits` is the total Algolia reports for
+// the query; `fetchedCount` is how many of those we actually paginated
+// through (bounded by HN_MAX_PAGES in update-data.mjs); `validatedCount` is
+// how many of the FETCHED sample passed contextual model-match validation.
+//
+// Rule: a count is only ever "exact" when every raw hit was fetched (coverage
+// >= 1) — in that case validatedCount already IS the true total, no scaling
+// needed. Otherwise the validated fraction of the sample is scaled up to the
+// full raw-hit count and explicitly flagged as an estimate; this class of bug
+// (silently presenting an extrapolated number as an exact count) is exactly
+// what isEstimated exists to prevent.
+export function communityStoryCoverage({ rawHits, fetchedCount, validatedCount, sampleSize }) {
+  const coverage = rawHits ? clamp(fetchedCount / rawHits, 0, 1) : 1;
+  if (coverage >= 1) {
+    return { coverage, isEstimated: false, estimatedRelevantDiscussions: validatedCount };
+  }
+  const ratio = sampleSize ? validatedCount / sampleSize : 0;
+  return { coverage, isEstimated: true, estimatedRelevantDiscussions: Math.round(rawHits * ratio) };
+}
+
 // ---------- significance scoring ----------
 // Deterministic weighted blend in [0,100]. Documented in docs/METHODOLOGY.md.
 // Not a claim of objective importance — a transparent ranking heuristic.
@@ -560,6 +645,11 @@ export function recencyScore(date, now) {
   return clamp(1 - hours / 72, 0, 1); // linear decay to zero over 3 days
 }
 
+// Below this, categorize()'s own winner-vs-runner-up confidence is too weak to
+// trust — the category is little better than a guess, so the story shouldn't
+// be able to out-rank a confidently-categorized one on significance alone.
+export const LOW_CATEGORY_CONFIDENCE = 0.45;
+
 export function scoreSignificance(item, nodes, now) {
   const text = `${item.title} ${item.desc || ''}`;
   const { maxImportance } = matchEntities(text, nodes);
@@ -567,7 +657,11 @@ export function scoreSignificance(item, nodes, now) {
   const src = Math.min(item.sourceCount || 1, 4) / 4;
   const ent = maxImportance / 100;
   const cat = CATEGORY_WEIGHT[item.category] ?? 0.6;
-  const score = 0.35 * rec + 0.25 * src + 0.25 * ent + 0.15 * cat;
+  let score = 0.35 * rec + 0.25 * src + 0.25 * ent + 0.15 * cat;
+  // meaningful penalty, not a rounding nudge — a low-confidence category call
+  // (categorize() itself wasn't sure) must not let recency/entity weight alone
+  // push a story to the top of the feed.
+  if ((item.catConfidence ?? 1) < LOW_CATEGORY_CONFIDENCE) score *= 0.8;
   return Math.round(clamp(score, 0, 1) * 100);
 }
 
@@ -615,6 +709,62 @@ export function classifyImpact(significance) {
 }
 
 export const IMPACT_LABEL = { high: 'High impact', notable: 'Notable', emerging: 'Emerging' };
+
+// ---------- integrity caps (General/Analysis, low confidence, job posts) ----------
+// A single thinly-sourced "General" story can otherwise still hit significance
+// 70+ purely from recency + a heavily-weighted entity (e.g. "OpenAI hires a
+// family product manager" — fresh, mentions OpenAI, but is routine personnel
+// news, not a confirmed major event). These rules stop scoring machinery from
+// dressing up routine/unconfirmed items as equivalent to a corroborated launch
+// or lawsuit. Applied AFTER verification is known (needs sourceCount +
+// official-source check), so this runs as a distinct step in the pipeline,
+// not inside scoreSignificance itself.
+const JOB_POSTING_RE = /\b(is hiring|we.?re hiring|now hiring|job (opening|posting|listing)|open position|now recruiting|join our team|apply (now|today)|careers? page|we.?re looking for a)\b/i;
+const SPECULATIVE_RE = /\b(plans? to|is considering|are considering|may (launch|release|announce|acquire|build)|reportedly (planning|considering|weighing|exploring)|weighing (a|an|whether)|exploring (a|an|whether)|could (launch|release|announce)|in (early|talks|discussions) (for|to|about))\b/i;
+
+// Single-source, non-official General/Analysis stories are capped here — real
+// news that clears the bar for official/corroborated reporting is unaffected.
+export const GENERAL_SIGNIFICANCE_CAP = 55;
+
+function isOfficialOrCorroborated(item) {
+  return item.verification === 'official' || (item.sourceCount || 1) >= 2;
+}
+
+// Returns the (possibly capped) { significance, impact, capped, capReason }.
+// `item` needs: significance, category, verification, sourceCount, title, desc.
+export function applyIntegrityCaps(item) {
+  const text = `${item.title || ''} ${item.desc || ''}`;
+  const isLowGrade = item.category === 'general' || item.category === 'analysis';
+  const strong = isOfficialOrCorroborated(item);
+  const isJobOrSpeculative = JOB_POSTING_RE.test(text) || SPECULATIVE_RE.test(text);
+
+  let significance = item.significance;
+  let capReason = null;
+
+  // Single-source, non-official General/Analysis: significance capped —
+  // recency + entity weight alone cannot carry it past a routine-news ceiling.
+  if (isLowGrade && !strong && significance > GENERAL_SIGNIFICANCE_CAP) {
+    significance = GENERAL_SIGNIFICANCE_CAP;
+    capReason = 'single-source-general';
+  }
+
+  let impact = classifyImpact(significance);
+  // General/Analysis cannot be High impact without an official primary source
+  // or independent corroboration, regardless of what the raw score says.
+  if (isLowGrade && !strong && impact === 'high') {
+    impact = 'notable';
+    capReason = capReason || 'general-without-evidence';
+  }
+  // Job postings and speculative/rumoured plans default to Emerging or
+  // Notable — routine hiring news and "considering X" reporting should never
+  // read as a confirmed major event, however fresh or entity-heavy it is.
+  if (isJobOrSpeculative && impact === 'high') {
+    impact = 'notable';
+    capReason = capReason || 'job-or-speculative';
+  }
+
+  return { significance, impact, capped: capReason != null, capReason };
+}
 
 // ---------- editorial: "why it matters" (consequence, not scoring) ----------
 // A deterministic, plain-language sentence about the CONSEQUENCE of an event —

@@ -9,6 +9,7 @@ import { renderTide } from './tide.js';
 import { renderCommunity } from './community.js';
 import { createStockNetwork } from './stocknetwork.js';
 import { renderCurated, renderLive, animateBars } from './sections.js';
+import { renderDataHealth } from './datahealth.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
 
 const REFRESH_MS = 10 * 60 * 1000; // silent re-fetch cadence
@@ -67,6 +68,7 @@ function paintUpdated() {
       ? `Build <a class="src-link" href="${repo}/commit/${b.sha}" target="_blank" rel="noopener">${b.shortSha}</a> · data generated ${fmtSnapshot(b.builtAt)}`
       : `Build ${b.shortSha} · data generated ${fmtSnapshot(b.builtAt)}`;
   }
+  renderDataHealth($('#dh-chip'), $('#dh-drawer'), data.dataHealth, data.build);
 }
 
 function paintHistoryNote() {
@@ -100,7 +102,7 @@ function renderDynamic() {
   renderLive(data);
   renderWaveforms($('#waves'), data.signals || [], data.waves || []);
   renderRiver($('#river'), data.signals || [], Date.now(), entityNameById);
-  renderCommunity($('#community'), data.community || []);
+  renderCommunity($('#community'), data.community || {});
   animateBars();
   paintUpdated();
 }

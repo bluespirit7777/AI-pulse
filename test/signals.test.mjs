@@ -10,7 +10,7 @@ import {
   classifyVerification, classifyImpact, computeEntityActivity, buildWaves,
   isProductRelease, classifyTopics, extractAction, eventRelation,
   matchModelMention, isValidatedMention, COMMUNITY_MATCH_THRESHOLD, CATEGORIES,
-  whyItMatters,
+  whyItMatters, applyIntegrityCaps, LOW_CATEGORY_CONFIDENCE, GENERAL_SIGNIFICANCE_CAP,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -410,6 +410,40 @@ test('clustering KEEPS two different launches from different companies separate 
   assert.equal(merged.length, 2, 'different companies\' launches sharing only the generic word "model" must not merge');
 });
 
+test('regression: two Apple/OpenAI trade-secrets lawsuit headlines merge into one cluster', () => {
+  // "is suing" (gerund) vs "sues" (present tense) — a real miss where the old
+  // `sues?\b` action regex only recognized one of the two real-world phrasings
+  // of the same event, and "hardware secrets" vs "trade secret theft" needed
+  // a shared "secrets" object token to link them despite different wording.
+  const APPLE_NODES = [...REAL_ENTITIES, { id: 'apple', name: 'Apple', layer: 1, importance: 90, match: ['apple'] }];
+  const items = [
+    mkItem('Apple is suing OpenAI for allegedly stealing hardware secrets',
+      'The lawsuit alleges a former Apple engineer took confidential hardware designs to OpenAI.',
+      '2026-07-10T14:00:00Z', 'The Verge', 'policy'),
+    mkItem('Apple sues OpenAI over alleged trade secret theft',
+      'Apple filed suit against OpenAI, claiming trade secret theft by a former employee.',
+      '2026-07-10T15:30:00Z', 'Reuters', 'policy'),
+  ];
+  const merged = dedupeMerge(items, { threshold: 0.34, nodes: APPLE_NODES });
+
+  assert.equal(merged.length, 1, 'both reports of the same suit should merge into one cluster');
+  assert.equal(merged[0].sourceCount, 2, 'the merged cluster should keep both unique sources');
+  const sourceNames = merged[0].sources.map((s) => s.sourceName).sort();
+  assert.deepEqual(sourceNames, ['Reuters', 'The Verge']);
+
+  assert.equal(extractAction(merged[0].title), 'sue');
+  const entityIds = matchEntities(`${merged[0].title} ${merged[0].desc}`, APPLE_NODES).ids;
+  assert.ok(entityIds.includes('apple'), 'Apple should be a matched entity');
+  assert.ok(entityIds.includes('gpt'), 'OpenAI/GPT should be a matched entity');
+
+  // object overlap on the shared "secrets" token, despite "hardware secrets"
+  // vs "trade secret" using different qualifiers
+  const a = { title: items[0].title, desc: items[0].desc };
+  const b = { title: items[1].title, desc: items[1].desc };
+  assert.equal(eventRelation(a, b).match, true);
+  assert.ok(eventRelation(a, b).objectOverlap > 0);
+});
+
 test('eventRelation: conflict on different actions, match on same action + shared object', () => {
   const launch = { title: 'OpenAI launches GPT-5.6', desc: '', date: new Date() };
   const shutdown = { title: 'OpenAI is shutting down its browser', desc: '', date: new Date() };
@@ -474,4 +508,96 @@ test('weightedSimilarity down-weights common tokens vs rare ones', () => {
   // "OpenAI" appears in every doc (low idf); a shared rare word should matter more
   const commonOnly = weightedSimilarity('OpenAI news today', 'OpenAI update today', docFreq, corpus.length);
   assert.ok(commonOnly >= 0 && commonOnly <= 1);
+});
+
+// ---------- signal correctness: penalties + integrity caps ----------
+
+test('scoreSignificance: category confidence below the threshold gets a meaningful penalty', () => {
+  const now = new Date('2026-07-10T12:00:00Z').getTime();
+  const base = { title: 'OpenAI announces something', desc: '', date: new Date('2026-07-10T11:00:00Z'), sourceCount: 1, category: 'general' };
+  const confident = scoreSignificance({ ...base, catConfidence: 0.9 }, REAL_ENTITIES, now);
+  const unsure = scoreSignificance({ ...base, catConfidence: 0.2 }, REAL_ENTITIES, now);
+  assert.ok(unsure < confident, `low-confidence score (${unsure}) should be penalized below the high-confidence score (${confident})`);
+  assert.ok(confident - unsure >= 8, `penalty (${confident - unsure} pts) should be meaningful, not a rounding nudge`);
+  assert.ok(LOW_CATEGORY_CONFIDENCE === 0.45);
+});
+
+test('applyIntegrityCaps: General cannot be High impact without an official source or corroboration', () => {
+  const r = applyIntegrityCaps({ significance: 85, category: 'general', verification: 'single', sourceCount: 1, title: 'Something happens', desc: '' });
+  assert.notEqual(r.impact, 'high');
+  assert.equal(r.capped, true);
+});
+
+test('applyIntegrityCaps: General WITH an official source is not forced down', () => {
+  const r = applyIntegrityCaps({ significance: 85, category: 'general', verification: 'official', sourceCount: 1, title: 'Something happens', desc: '' });
+  assert.equal(r.impact, 'high');
+  assert.equal(r.capped, false);
+});
+
+test('applyIntegrityCaps: General WITH 2+ corroborating sources is not forced down', () => {
+  const r = applyIntegrityCaps({ significance: 85, category: 'general', verification: 'corroborated', sourceCount: 3, title: 'Something happens', desc: '' });
+  assert.equal(r.impact, 'high');
+});
+
+test('applyIntegrityCaps: single-source non-official General significance is capped', () => {
+  const r = applyIntegrityCaps({ significance: 92, category: 'general', verification: 'single', sourceCount: 1, title: 'A minor thing happened', desc: '' });
+  assert.equal(r.significance, GENERAL_SIGNIFICANCE_CAP);
+  assert.equal(GENERAL_SIGNIFICANCE_CAP, 55);
+});
+
+test('applyIntegrityCaps: General significance already under the cap is left alone', () => {
+  const r = applyIntegrityCaps({ significance: 40, category: 'general', verification: 'single', sourceCount: 1, title: 'A minor thing happened', desc: '' });
+  assert.equal(r.significance, 40);
+  assert.equal(r.capped, false);
+});
+
+test('applyIntegrityCaps: job postings never reach High impact', () => {
+  const r = applyIntegrityCaps({ significance: 90, category: 'orggov', verification: 'official', sourceCount: 1, title: 'OpenAI is hiring a Family Product Manager', desc: 'Apply now to join our team.' });
+  assert.notEqual(r.impact, 'high');
+  assert.equal(r.capped, true);
+});
+
+test('applyIntegrityCaps: speculative/rumoured plans never reach High impact', () => {
+  const r = applyIntegrityCaps({ significance: 88, category: 'product', verification: 'corroborated', sourceCount: 2, title: 'OpenAI is reportedly considering a new hardware device', desc: 'The company may launch a wearable next year.' });
+  assert.notEqual(r.impact, 'high');
+});
+
+test('applyIntegrityCaps: a real, well-evidenced High-impact story is untouched', () => {
+  const r = applyIntegrityCaps({ significance: 88, category: 'product', verification: 'official', sourceCount: 1, title: 'OpenAI launches GPT-5.6', desc: 'The company unveiled its new flagship model today.' });
+  assert.equal(r.impact, 'high');
+  assert.equal(r.significance, 88);
+  assert.equal(r.capped, false);
+});
+
+test('regression: the OpenAI "family product manager" job posting cannot outrank a confirmed major event on recency + entity weight alone', () => {
+  const now = new Date('2026-07-10T12:00:00Z').getTime();
+  // Job posting: very fresh (15 min old) and mentions the heavily-weighted
+  // "OpenAI"/"gpt" entity, but is routine personnel news, thinly sourced, and
+  // the categorizer itself wasn't confident about it.
+  const jobPosting = {
+    title: 'OpenAI is hiring a Family Product Manager', desc: 'Join our team — apply now.',
+    date: new Date('2026-07-10T11:45:00Z'), sourceCount: 1, category: 'general', catConfidence: 0.3,
+  };
+  // Confirmed major event: officially announced, corroborated by multiple
+  // outlets, ~27 hours older — recency alone would favor the job posting.
+  const majorEvent = {
+    title: 'OpenAI launches GPT-5.6, its new flagship model', desc: 'The company unveiled the release in an official blog post.',
+    date: new Date('2026-07-09T09:00:00Z'), sourceCount: 3, category: 'product', catConfidence: 0.9, sourceName: 'OpenAI',
+  };
+
+  const jobSig = scoreSignificance(jobPosting, REAL_ENTITIES, now);
+  const jobVerif = classifyVerification(jobPosting);
+  const jobFinal = applyIntegrityCaps({ ...jobPosting, significance: jobSig, verification: jobVerif });
+
+  const eventSig = scoreSignificance(majorEvent, REAL_ENTITIES, now);
+  const eventVerif = classifyVerification(majorEvent);
+  const eventFinal = applyIntegrityCaps({ ...majorEvent, significance: eventSig, verification: eventVerif });
+
+  assert.equal(eventVerif, 'official');
+  assert.ok(
+    jobFinal.significance < eventFinal.significance,
+    `job posting (${jobFinal.significance}) must not outrank the confirmed launch (${eventFinal.significance})`
+  );
+  assert.notEqual(jobFinal.impact, 'high');
+  assert.equal(eventFinal.impact, 'high');
 });

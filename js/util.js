@@ -26,9 +26,13 @@ export function timeAgo(iso, now = Date.now()) {
 
 export function fmtSnapshot(iso) {
   try {
+    // explicit timeZone:'UTC' — this is labelled "UTC" in the output, so it
+    // must actually format in UTC rather than silently using the viewer's
+    // local timezone (the same date could otherwise read a day off from what
+    // dateISO/the build record actually says, depending on the browser's TZ).
     return (
       new Date(iso).toLocaleString('en-US', {
-        month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false,
+        month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC',
       }) + ' UTC'
     );
   } catch { return String(iso); }

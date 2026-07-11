@@ -19,16 +19,26 @@ import {
   isProductRelease,
   scoreSignificance,
   classifyVerification,
-  classifyImpact,
+  applyIntegrityCaps,
   matchEntities,
   computeEntityActivity,
   buildWaves,
   classifyTopics,
   isValidatedMention,
+  matchModelMention,
+  COMMUNITY_MATCH_THRESHOLD,
+  themeSpecificity,
+  contextualCompleteness,
+  communityRecencyScore,
+  commentRelevanceScore,
+  communityStoryCoverage,
+  similarity,
   TOPICS,
 } from './lib/signals.mjs';
 import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT, periodChange, WEEK_TRADING_DAYS, MONTH_TRADING_DAYS } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
+import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
+import { shortDateUTC } from './lib/dates.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -213,12 +223,16 @@ function parseFeed(xml, source) {
   return items;
 }
 
+// Returns { items, ok } rather than a bare array — `ok` distinguishes "feed
+// fetched fine but genuinely has 0 new items" from "feed fetch failed", which
+// a bare empty array can't. The Data Health control needs this distinction to
+// report a real successful/configured feed count instead of just item totals.
 async function fetchFeed(source) {
   try {
     const res = await fetchWithTimeout(source.url);
     if (!res.ok) {
       console.error(`[feed] ${source.name}: HTTP ${res.status}`);
-      return [];
+      return { items: [], ok: false };
     }
     let items = parseFeed(await res.text(), source);
     // Video channels post far more than releases — keep only uploads that name a
@@ -226,10 +240,10 @@ async function fetchFeed(source) {
     if (source.isVideo) {
       items = items.filter((it) => detectLab(`${it.title} ${it.desc}`) && isProductRelease(it.title, it.desc));
     }
-    return items;
+    return { items, ok: true };
   } catch (err) {
     console.error(`[feed] ${source.name}: ${err.message}`);
-    return [];
+    return { items: [], ok: false };
   }
 }
 
@@ -250,9 +264,6 @@ function detectLab(text) {
   for (const [key, re] of Object.entries(LAB_KEYWORDS)) if (re.test(text)) return key;
   return null;
 }
-function shortDate(d) {
-  return new Date(d).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }).toUpperCase().replace(',', '');
-}
 function truncate(s, n) {
   if (!s) return '';
   return s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s;
@@ -264,15 +275,14 @@ function truncate(s, n) {
 // volume) and recent COMMENTS (for topic themes + representative excerpts).
 // This is a SAMPLE of public developer discussion, not the whole community, and
 // it's labelled as such in the UI. `q` is the single best keyword.
-const COMMUNITY_MODELS = [
-  { key: 'gpt', model: 'GPT', version: 'GPT-5.5', org: 'OpenAI', q: 'ChatGPT' },
-  { key: 'claude', model: 'Claude', version: 'Claude Opus 4.8', org: 'Anthropic', q: 'Claude' },
-  { key: 'gemini', model: 'Gemini', version: 'Gemini 3.1 Pro', org: 'Google', q: 'Gemini' },
-  { key: 'grok', model: 'Grok', version: 'Grok 4', org: 'xAI', q: 'Grok' },
-  { key: 'llama', model: 'Llama', version: 'Llama 4', org: 'Meta', q: 'Llama' },
-  { key: 'deepseek', model: 'DeepSeek', version: 'DeepSeek V3.2', org: 'DeepSeek', q: 'DeepSeek' },
-  { key: 'qwen', model: 'Qwen', version: 'Qwen 3.7', org: 'Alibaba', q: 'Qwen' },
-];
+//
+// name/version/org come from the canonical MODEL_REGISTRY (scripts/lib/models.mjs)
+// — the same source Ocean Map (entities.json, kept in sync by hand) and the
+// Leaderboard reference — so a version bump can't drift between sections.
+const COMMUNITY_MODELS = MODEL_KEYS.map((key) => {
+  const m = MODEL_REGISTRY[key];
+  return { key, model: m.name, version: m.version, org: m.org, q: m.hnQuery };
+});
 
 // Strip HTML/entities from an HN comment and cut to ~180 chars on word
 // boundaries. When a `focus` keyword is given and present, the window is
@@ -294,83 +304,128 @@ function sanitizeExcerpt(html, max = 180, focus = '') {
   return (start > 0 ? '…' : '') + slice.trimEnd() + '…';
 }
 
-const COMMUNITY_LIMITED_MIN = 8; // fewer than this validated discussions → "limited sample"
+const COMMUNITY_LIMITED_MIN = 8; // fewer than this relevant discussions → "limited sample"
+
+// HN Algolia caps a single response at hitsPerPage; a documented, bounded
+// pagination loop lets us report an EXACT count when a model's raw hits fit
+// within the cap, and an honest, explicitly-labelled ESTIMATE (scaled from
+// the validated fraction of whatever we did fetch) when they don't — see
+// storyCoverage/isEstimated below. HN_MAX_PAGES bounds worst-case build time
+// (7 models × 2 queries × up to 3 pages each).
+const HN_PAGE_SIZE = 100;
+const HN_MAX_PAGES = 3; // up to 300 raw hits sampled per query per model
+
+async function fetchAlgoliaPaginated(urlBase, maxPages = HN_MAX_PAGES) {
+  let hits = [], nbHits = 0, fetchedCount = 0;
+  for (let page = 0; page < maxPages; page++) {
+    const res = await fetchWithTimeout(`${urlBase}&page=${page}&hitsPerPage=${HN_PAGE_SIZE}`);
+    if (!res.ok) break;
+    const j = await res.json();
+    nbHits = j.nbHits ?? nbHits;
+    const pageHits = j.hits || [];
+    hits = hits.concat(pageHits);
+    fetchedCount += pageHits.length;
+    if (pageHits.length < HN_PAGE_SIZE || fetchedCount >= nbHits) break; // no more pages
+  }
+  return { hits, nbHits, fetchedCount };
+}
 
 async function fetchModelCommunity(m, now, usedCommentIds) {
   const since = Math.floor(now / 1000) - 30 * 24 * 3600; // last 30 days
   const base = 'https://hn.algolia.com/api/v1/search';
   const model = {
     key: m.key, model: m.model, version: m.version, org: m.org,
-    rawHits: 0, validatedMentions: 0, validatedDiscussions: 0, limited: true,
-    points: 0, themes: [], topThreads: [],
+    rawStoryHits: 0, fetchedStoryCount: 0, validatedStoryCount: 0, storyCoverage: 1,
+    estimatedRelevantDiscussions: 0, isEstimated: true,
+    rawCommentHits: 0, fetchedCommentCount: 0, validatedCommentCount: 0, commentCoverage: 1,
+    limited: true, points: 0, themes: [], topThreads: [],
   };
   const comments = [];
   try {
-    const [storiesRes, commentsRes] = await Promise.all([
-      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}&hitsPerPage=40`),
-      fetchWithTimeout(`${base}?query=${encodeURIComponent(m.q)}&tags=comment&numericFilters=created_at_i>${since}&hitsPerPage=80`),
+    const [storiesData, commentsData] = await Promise.all([
+      fetchAlgoliaPaginated(`${base}?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}`),
+      fetchAlgoliaPaginated(`${base}?query=${encodeURIComponent(m.q)}&tags=comment&numericFilters=created_at_i>${since}`),
     ]);
 
-    // ---- stories: validate each, estimate validated discussion volume ----
-    let storyRatio = 0;
-    if (storiesRes.ok) {
-      const sj = await storiesRes.json();
-      const hits = (sj.hits || []).filter((h) => h.title);
-      const validated = hits.filter((h) => isValidatedMention(`${h.title} ${h.story_text || ''}`, m.key));
-      storyRatio = hits.length ? validated.length / hits.length : 0;
-      // validated unique discussions = raw story hits scaled by the validated
-      // fraction of the sample (never exceeds raw hits).
-      model.validatedDiscussions = Math.round((sj.nbHits || hits.length) * storyRatio);
-      model.points = validated.reduce((s, h) => s + (h.points || 0), 0);
-      model.topThreads = validated.slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 2)
-        .map((h) => ({ title: truncate(h.title, 90), points: h.points || 0, comments: h.num_comments || 0, url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, date: shortDate(new Date((h.created_at_i || 0) * 1000)) }));
+    // ---- stories: exact count when fully paginated, explicit estimate otherwise ----
+    const storyHits = storiesData.hits.filter((h) => h.title);
+    const validatedStories = storyHits.filter((h) => isValidatedMention(`${h.title} ${h.story_text || ''}`, m.key));
+    model.rawStoryHits = storiesData.nbHits || storyHits.length;
+    model.fetchedStoryCount = storiesData.fetchedCount;
+    model.validatedStoryCount = validatedStories.length;
+    const cov = communityStoryCoverage({
+      rawHits: model.rawStoryHits, fetchedCount: model.fetchedStoryCount,
+      validatedCount: validatedStories.length, sampleSize: storyHits.length,
+    });
+    model.storyCoverage = cov.coverage;
+    model.isEstimated = cov.isEstimated;
+    model.estimatedRelevantDiscussions = cov.estimatedRelevantDiscussions;
+    model.points = validatedStories.reduce((s, h) => s + (h.points || 0), 0);
+    model.topThreads = validatedStories.slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 2)
+      .map((h) => ({ title: truncate(h.title, 90), points: h.points || 0, comments: h.num_comments || 0, url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, date: shortDateUTC(new Date((h.created_at_i || 0) * 1000)) }));
+
+    // ---- comments: coverage-aware counts, up to 2 themes each, relevance-ranked picks ----
+    const rawComments = commentsData.hits.filter((h) => h.comment_text);
+    model.rawCommentHits = commentsData.nbHits || rawComments.length;
+    model.fetchedCommentCount = commentsData.fetchedCount;
+    model.commentCoverage = model.rawCommentHits ? clamp01(model.fetchedCommentCount / model.rawCommentHits) : 1;
+
+    const decoded = rawComments.map((h) => ({ h, text: decodeEntities(h.comment_text) }));
+    const scored = decoded.map((c) => ({ ...c, matchConfidence: matchModelMention(c.text, m.key) }));
+    const validated = scored.filter((c) => c.matchConfidence >= COMMUNITY_MATCH_THRESHOLD);
+    model.validatedCommentCount = validated.length;
+
+    const themeCounts = {};
+    for (const c of validated) {
+      c.topics = classifyTopics(c.text).slice(0, 2); // a comment may carry up to 2 themes
+      for (const tid of c.topics) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
     }
+    model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
 
-    // ---- comments: validate, theme-tag validated ones, pick representatives ----
-    if (commentsRes.ok) {
-      const cj = await commentsRes.json();
-      const raw = (cj.hits || []).filter((h) => h.comment_text);
-      model.rawHits = cj.nbHits || raw.length;
-      const decoded = raw.map((h) => ({ h, text: decodeEntities(h.comment_text) }));
-      const validated = decoded.filter((c) => isValidatedMention(c.text, m.key));
-      const commentRatio = decoded.length ? validated.length / decoded.length : 0;
-      model.validatedMentions = Math.round(model.rawHits * commentRatio);
-
-      const themeCounts = {};
-      for (const c of validated) {
-        for (const tid of classifyTopics(c.text)) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
-      }
-      model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
-
-      // representative comments: validated only, one per distinct theme, most
-      // substantive first, globally de-duplicated so an excerpt never repeats
-      // across model bubbles.
-      const usedThemes = new Set();
-      const candidates = validated
-        .map((c) => ({ ...c, topics: classifyTopics(c.text), len: c.text.length }))
-        .filter((c) => c.topics.length && c.len > 120 && !usedCommentIds.has(c.h.objectID))
-        .sort((a, b) => (b.h.points || 0) - (a.h.points || 0) || b.len - a.len);
-      for (const c of candidates) {
-        const theme = c.topics.find((t) => !usedThemes.has(t));
-        if (!theme) continue;
-        usedThemes.add(theme);
-        usedCommentIds.add(c.h.objectID);
-        comments.push({
-          modelId: m.key, theme,
-          excerpt: sanitizeExcerpt(c.h.comment_text, 180, m.q),
-          source: 'Hacker News', author: c.h.author || 'anon',
-          publishedAt: new Date((c.h.created_at_i || 0) * 1000).toISOString(),
-          url: `https://news.ycombinator.com/item?id=${c.h.objectID}`,
+    // Representative comments: ranked by a composite relevance score — model-
+    // match confidence, then theme specificity, contextual completeness and
+    // recency (see commentRelevanceScore in lib/signals.mjs). Deliberately NOT
+    // sorted by length or points. Non-duplication is enforced here as a
+    // selection-time filter: a candidate is skipped if it's near-identical to
+    // one already picked for this model, both globally (usedCommentIds, so no
+    // excerpt repeats across model panels) and within this model's own list.
+    const totalValidated = validated.length || 1;
+    const candidates = validated
+      .filter((c) => c.topics.length && !usedCommentIds.has(c.h.objectID))
+      .map((c) => {
+        const spec = c.topics.reduce((s, t) => s + themeSpecificity(t, themeCounts, totalValidated), 0) / c.topics.length;
+        const score = commentRelevanceScore({
+          matchConfidence: c.matchConfidence,
+          themeSpecificity: spec,
+          completeness: contextualCompleteness(c.text),
+          recency: communityRecencyScore((c.h.created_at_i || 0) * 1000, now),
         });
-        if (comments.length >= 4) break;
-      }
+        return { ...c, score };
+      })
+      .sort((a, b) => b.score - a.score);
+
+    const chosenTexts = [];
+    for (const c of candidates) {
+      if (comments.length >= 6) break; // 3 shown + "show one more" + a couple spare
+      if (chosenTexts.some((t) => similarity(t, c.text) > 0.6)) continue; // near-duplicate of an already-picked comment
+      chosenTexts.push(c.text);
+      usedCommentIds.add(c.h.objectID);
+      comments.push({
+        modelId: m.key, themes: c.topics,
+        excerpt: sanitizeExcerpt(c.h.comment_text, 180, m.q),
+        source: 'Hacker News', author: c.h.author || 'anon',
+        publishedAt: new Date((c.h.created_at_i || 0) * 1000).toISOString(),
+        url: `https://news.ycombinator.com/item?id=${c.h.objectID}`,
+      });
     }
-    model.limited = model.validatedDiscussions < COMMUNITY_LIMITED_MIN;
+    model.limited = model.estimatedRelevantDiscussions < COMMUNITY_LIMITED_MIN;
   } catch (err) {
     console.error(`[community] ${m.key}: ${err.message}`);
   }
   return { model, comments };
 }
+
+function clamp01(v) { return Math.max(0, Math.min(1, v)); }
 
 // ---------- stocks ----------
 async function fetchStock(meta) {
@@ -460,8 +515,9 @@ async function main() {
 
   console.log('Fetching RSS feeds…');
   const feedResults = await Promise.all(FEEDS.map(fetchFeed));
-  const allItems = feedResults.flat();
-  console.log(`Fetched ${allItems.length} items from ${FEEDS.length} feeds.`);
+  const allItems = feedResults.flatMap((r) => r.items);
+  const feedsSucceeded = feedResults.filter((r) => r.ok).length;
+  console.log(`Fetched ${allItems.length} items from ${feedsSucceeded}/${FEEDS.length} feeds (succeeded/configured).`);
 
   // 1) drop stale/evergreen posts (some publisher feeds carry years-old items),
   //    newest first
@@ -488,10 +544,15 @@ async function main() {
   //    entityIds — every downstream section (signals, releases, wire, feed,
   //    breakthroughs) reads these same computed fields, so a story's
   //    verification chip is never re-derived differently in different places.
+  //    Order matters: verification must be known BEFORE integrity caps run
+  //    (the General/Analysis cap checks official-source + corroboration).
   for (const it of merged) {
     it.significance = scoreSignificance(it, nodes, now);
-    it.impact = classifyImpact(it.significance);
     it.verification = classifyVerification(it);
+    const capped = applyIntegrityCaps(it);
+    it.significance = capped.significance;
+    it.impact = capped.impact;
+    it.capped = capped.capped;
     it.entityIds = matchEntities(`${it.title} ${it.desc}`, nodes).ids;
     it.clusterId = stableId(it.link);
   }
@@ -500,13 +561,17 @@ async function main() {
   const signals = merged
     .map((it) => ({
       id: it.link, clusterId: it.clusterId, title: it.title, desc: it.desc, url: it.link,
-      dateISO: new Date(it.date).toISOString(), date: shortDate(it.date),
+      dateISO: new Date(it.date).toISOString(), date: shortDateUTC(it.date),
       category: it.category, catConfidence: it.catConfidence, family: waveFamily(it.category),
       significance: it.significance, impact: it.impact, verification: it.verification,
       sourceCount: it.sourceCount, sources: it.sources.map((s) => ({ name: s.sourceName, url: s.link })),
       sourceName: it.sourceName, entityIds: it.entityIds,
     }))
     .sort((a, b) => b.significance - a.significance);
+
+  // Written here (rather than at the very end) so its return value —
+  // historyDepthDays — is available for the Data Health summary below.
+  const rangesDoc = await writeEventHistoryAndRanges(signals, nodes, now);
 
   // 5) derive the existing detailed sections from the same merged stream —
   //    every section reads the same underlying clusters, so a story never
@@ -541,7 +606,7 @@ async function main() {
         const video = it.sources.find((s) => /\(YouTube\)/.test(s.sourceName || ''));
         const isVideo = !!video && video.link === it.link;
         return {
-          h: truncate(it.title, 90), d: shortDate(it.date), url: it.link,
+          h: truncate(it.title, 90), d: shortDateUTC(it.date), url: it.link,
           isVideo,
           videoUrl: video && !isVideo ? video.link : null,
           sourceName: it.sourceName, sourceCount: it.sourceCount,
@@ -552,7 +617,7 @@ async function main() {
   });
 
   const wireCards = wire.slice(0, 8).map((it) => ({
-    org: it.lab ? COMPANY_TAG[it.lab] : 'AI WIRE', logoKey: it.lab || 'other', date: shortDate(it.date),
+    org: it.lab ? COMPANY_TAG[it.lab] : 'AI WIRE', logoKey: it.lab || 'other', date: shortDateUTC(it.date),
     verification: it.verification, impact: it.impact,
     h: truncate(it.title, 80), p: truncate(it.desc, 260) || it.title, url: it.link,
     sourceName: it.sourceName, sourceCount: it.sourceCount,
@@ -561,14 +626,14 @@ async function main() {
   const feed = feedRows.slice(0, 8).map((it) => {
     const { lic, licClass } = detectLicense(`${it.title} ${it.desc}`);
     return {
-      name: truncate(it.title, 60), org: it.sourceName, date: shortDate(it.date), lic, licClass,
+      name: truncate(it.title, 60), org: it.sourceName, date: shortDateUTC(it.date), lic, licClass,
       desc: truncate(it.desc, 140) || 'Open-weight coverage — confirm exact license on the model card.',
       url: it.link, sourceName: it.sourceName, verification: it.verification, impact: it.impact,
     };
   });
 
   const brk = breakthroughs.slice(0, 6).map((it) => ({
-    field: inferField(`${it.title} ${it.desc}`), date: shortDate(it.date),
+    field: inferField(`${it.title} ${it.desc}`), date: shortDateUTC(it.date),
     verification: it.verification, impact: it.impact,
     h: truncate(it.title, 80), p: truncate(it.desc, 260) || it.title, url: it.link,
     sourceName: it.sourceName, sourceCount: it.sourceCount,
@@ -611,9 +676,29 @@ async function main() {
     comments: communityResults.flatMap((r) => r.comments),
   };
 
+  const build = buildInfo();
+  const nowISO = new Date(now).toISOString();
+
+  // A compact, honest snapshot of the pipeline's own health — separate from
+  // the content itself, so a reader (or the site) can tell "is this data
+  // fresh and complete" without having to infer it from feed counts buried in
+  // build logs. `estimatedDatasets` counts community models whose discussion
+  // count is a scaled estimate rather than an exact paginated count (see
+  // fetchModelCommunity / communityStoryCoverage).
+  const dataHealth = {
+    feedsSucceeded, feedsConfigured: FEEDS.length,
+    stockNodesAvailable: stockNetwork.nodes.length,
+    communityModelsAvailable: community.models.length,
+    historyDepthDays: rangesDoc.historyDepthDays,
+    estimatedDatasets: community.models.filter((m) => m.isEstimated).length,
+    buildSha: build.shortSha,
+    lastSuccessfulUpdate: nowISO,
+  };
+
   const data = {
-    updatedAt: new Date().toISOString(),
-    build: buildInfo(),
+    updatedAt: nowISO,
+    build,
+    dataHealth,
     ticker,
     signals: signals.slice(0, 40),
     waves,
@@ -631,8 +716,6 @@ async function main() {
   console.log(`Wrote ${OUT_PATH}`);
   await writeFile(STOCKNET_PATH, JSON.stringify(stockNetwork, null, 2), 'utf-8');
   console.log(`Wrote ${STOCKNET_PATH} (${stockNetwork.nodes.length} nodes, ${stockNetwork.correlations.length} correlations >= 0.5)`);
-
-  await writeEventHistoryAndRanges(signals, nodes, now);
 
   console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.models.length} models / ${community.comments.length} comments, correlations: ${stockNetwork.correlations.length}`);
 }
@@ -689,6 +772,7 @@ async function writeEventHistoryAndRanges(signals, nodes, now) {
   const rangesDoc = buildRangesDoc(allEvents, now, nodes, collectionStartMs);
   await writeFile(RANGES_PATH, JSON.stringify(rangesDoc, null, 2), 'utf-8');
   console.log(`Wrote ${RANGES_PATH} (${allEvents.length} events, ${rangesDoc.historyDepthDays}d of history)`);
+  return rangesDoc;
 }
 
 main().catch((err) => {

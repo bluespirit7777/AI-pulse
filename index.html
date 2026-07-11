@@ -286,6 +286,19 @@
     transition:width 1.4s cubic-bezier(.16,.84,.44,1);}
   .lb-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);margin-top:5px;}
 
+  /* leaderboard: 4 use-case-specific views, not one blended "objective" rank */
+  .lb-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .lb-tab{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);
+    background:var(--panel);border:1px solid var(--border-strong);border-radius:999px;
+    padding:8px 14px;min-height:44px;cursor:pointer;}
+  .lb-tab:hover{border-color:var(--deep);color:var(--ink);}
+  .lb-tab:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
+  .lb-tab[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
+  .lb-disclaimer{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.02em;color:var(--warn,#c98a1a);
+    background:color-mix(in srgb, var(--warn,#c98a1a) 10%, transparent);
+    border:1px solid color-mix(in srgb, var(--warn,#c98a1a) 35%, transparent);
+    border-radius:8px;padding:6px 10px;margin:0 0 14px;line-height:1.5;}
+
   /* ---------- donut ---------- */
   .donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;}
   .donut{
@@ -430,6 +443,14 @@
   }
   footer b{color:var(--ink-soft);}
   .footer-build{opacity:.72;font-size:10.5px;letter-spacing:.02em;}
+  .dh-chip{margin-top:10px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.02em;color:var(--ink-soft);
+    background:var(--panel);border:1px solid var(--border-strong);border-radius:999px;
+    padding:6px 12px;min-height:32px;cursor:pointer;}
+  .dh-chip:hover{border-color:var(--deep);color:var(--ink);}
+  .dh-chip:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
+  .dh-chip .dh-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+  .dh-dot--ok{background:var(--teal, #2f8f7f);}
+  .dh-dot--warn{background:var(--warn,#c98a1a);}
 </style>
 </head>
 <body>
@@ -585,7 +606,9 @@
             <h3>Frontier leaderboard</h3>
             <span class="asof curated-asof">Curated</span>
           </div>
-          <div class="panel-note" style="margin-bottom:14px;">Rank blends Artificial Analysis Intelligence Index, LMArena Elo &amp; Scale Labs' third-party evaluations · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Artificial Analysis</a> · <a class="src-link" href="https://lmarena.ai/leaderboard" target="_blank" rel="noopener">LMArena</a> · <a class="src-link" href="https://labs.scale.com/leaderboard" target="_blank" rel="noopener">Scale Labs</a></div>
+          <div class="panel-note" style="margin-bottom:14px;">Bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Artificial Analysis</a> · <a class="src-link" href="https://lmarena.ai/leaderboard" target="_blank" rel="noopener">LMArena</a> · <a class="src-link" href="https://labs.scale.com/leaderboard" target="_blank" rel="noopener">Scale Labs</a></div>
+          <div class="lb-tabs" role="tablist" aria-label="Leaderboard view" id="lb-tabs"></div>
+          <p class="lb-disclaimer" id="lb-disclaimer" hidden></p>
           <div id="leaderboard"></div>
         </div>
 
@@ -650,9 +673,9 @@
     <section id="sec-community" style="padding-top:8px;">
       <div class="section-ribbon">
         <h2 class="section-ribbon__title">Community pulse</h2>
-        <p class="section-ribbon__descriptor">What people are saying about the top models</p>
+        <p class="section-ribbon__descriptor">What developers discuss about leading models</p>
       </div>
-      <p class="panel-note intro-note" style="margin:-6px 0 18px;">A model conversation map — bubble size is validated public discussion volume, not raw keyword hits. Click a model to see what people are actually saying, arranged around it. Sourced from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a>, a sample of public developer discussion (not a sentiment score).</p>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Select a model to explore its discussion volume, leading themes and representative comments. Sourced from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a>, a sample of public developer discussion (not a sentiment score).</p>
       <div id="community"></div>
     </section>
 
@@ -725,7 +748,10 @@
     <div><b>Waves, river, tide, releases, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
     <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
     <div style="margin-top:8px;" id="footer-build" class="footer-build"></div>
+    <button type="button" class="dh-chip" id="dh-chip" aria-haspopup="dialog" aria-controls="dh-drawer" hidden>Data Health</button>
   </footer>
+
+  <div class="dh-drawer" id="dh-drawer" role="dialog" aria-modal="true" aria-labelledby="dh-drawer-title" hidden></div>
 
 <script type="module" src="js/main.js"></script>
 

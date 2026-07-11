@@ -10,9 +10,11 @@ the HTML/CSS/JS. Everything works offline-of-server from plain files.
 publisher RSS + official lab YouTube (Atom) + Yahoo Finance
         │  (GitHub Actions, :07 & :37 each hour)
         ▼
-scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification, topics)
+scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification, topics, community ranking)
                           ├──uses──> scripts/lib/history.mjs (ranges, event history)
-                          └──uses──> scripts/lib/stocks.mjs  (returns, correlations, volumes)
+                          ├──uses──> scripts/lib/stocks.mjs  (returns, correlations, volumes)
+                          ├──uses──> scripts/lib/models.mjs  (canonical model registry — one source of truth)
+                          └──uses──> scripts/lib/dates.mjs   (explicit-UTC date formatting)
         │
         ├─► data/latest.json                     (current data the page reads, incl. community)
         ├─► data/range.json                      (real 24H/7D/30D stats + daily category history)
@@ -31,9 +33,10 @@ index.html ──module──> js/main.js
         ├─ js/river.js         signal river (chronological, filters, expand/archive)
         ├─ js/tide.js          30-day stacked-area category volume
         ├─ js/stocknetwork.js  AI stock network: ecosystem + market-motion modes, drawer
-        ├─ js/community.js      model conversation map + representative comments
-        ├─ js/sections.js      live + curated detail sections (+ stock table fallback)
-        ├─ js/curated.js       hand-maintained datasets
+        ├─ js/community.js     "Community Current": model tablist + themes + representative comments
+        ├─ js/sections.js      live + curated detail sections (+ leaderboard view tabs, stock table fallback)
+        ├─ js/curated.js       hand-maintained datasets (incl. 4 leaderboard views)
+        ├─ js/datahealth.js    Data Health footer chip + drawer
         └─ js/freshness.js     provenance / verification / impact / freshness chips
 ```
 The section headings use one reusable component (`.section-ribbon` in
@@ -56,7 +59,9 @@ control (reduced-motion → manual scroll).
 | `scripts/lib/signals.mjs` | Pure, tested: clustering, categorization, scoring, verification/impact, topics. |
 | `scripts/lib/history.mjs` | Pure, tested: event compaction + real per-range calculations. |
 | `scripts/lib/stocks.mjs` | Pure, tested: daily returns, Pearson correlation, relative/dollar volume. |
-| `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json + range.json + stock-network.json). |
+| `scripts/lib/models.mjs` | Canonical model registry (name/org/version/HN query) — the one source every section reads, so versions can't drift between Ocean Map, Community Pulse, Frontier Releases and the Leaderboard. |
+| `scripts/lib/dates.mjs` | Explicit-UTC date formatting (`shortDateUTC`/`dayKeyUTC`) — timezone-stable regardless of the build/browser machine's local clock. |
+| `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json incl. dataHealth + community + range.json + stock-network.json). |
 | `test/*.test.mjs` | Unit tests (`node --test`). |
 | `.github/workflows/update-data.yml` | Scheduled fetch → validate → test → commit. |
 

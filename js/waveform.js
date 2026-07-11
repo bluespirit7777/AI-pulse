@@ -156,7 +156,7 @@ function detailMarkup(w, now) {
   return `
     <div class="wf-detail-inner">
       <div class="wf-facts">
-        <span><b>Published:</b> ${esc(new Date(w.dateISO).toLocaleString('en-US', { month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false }))} UTC (${esc(timeAgo(w.dateISO, now))})</span>
+        <span><b>Published:</b> ${esc(new Date(w.dateISO).toLocaleString('en-US', { month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC' }))} UTC (${esc(timeAgo(w.dateISO, now))})</span>
         <span><b>Follow-ups:</b> ${esc(followUps)}</span>
       </div>
       ${(w.sources || []).length ? `<div class="wf-sources"><b>All sources:</b> ${w.sources.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener" class="src-link">${esc(s.name)}</a>`).join(' · ')}</div>` : ''}

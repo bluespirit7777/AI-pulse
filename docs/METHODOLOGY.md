@@ -207,11 +207,14 @@ comparable across companies). Business relationships and price correlations are
 kept strictly separate, and *correlation ≠ causation* is stated wherever
 correlations appear. The accessible table remains behind "View as table".
 
-## Community pulse
+## Community pulse ("Community Current")
 
-A model conversation map + representative public comments — **not** a comment
-feed and **not** a sentiment score. Built entirely at fetch time from the free,
-no-key **Hacker News Algolia API**:
+A horizontal model selector + a two-column info/themes panel + a short list of
+representative comments — **not** a comment feed and **not** a sentiment score.
+Built entirely at fetch time from the free, no-key **Hacker News Algolia API**.
+The frontend (`js/community.js`) is plain document flow: real `role="tab"`
+buttons (not interactive elements nested inside an SVG), a CSS grid panel, no
+absolute positioning, no runtime measurement, no connector lines.
 
 - **Contextual matching, not raw keyword hits (correctness pass).** Every story
   and comment is validated by `matchModelMention`/`isValidatedMention`: per-model
@@ -220,27 +223,110 @@ no-key **Hacker News Algolia API**:
   as a verb ("finally grok monads") and "llama" the animal are rejected unless a
   strong alias ("Grok 4", "xAI Grok", "llama.cpp") or AI context is present. Each
   match returns a 0–1 confidence with a 0.5 threshold.
-- **Bubble size = validated public discussions** — raw HN story hits scaled by
-  the validated fraction of the sample, never the raw hit count. `rawHits`,
-  `validatedMentions` and `validatedDiscussions` are stored separately; a
-  **"Limited discussion sample"** badge appears when validated discussions are
-  sparse. (In one live build this cut grok's 11,120 raw comment hits to ~6,255
-  validated mentions — the verb noise removed.)
-- **Topic themes** classified from *validated* HN comments across 10
-  plain-language topics (coding, reasoning, writing, speed, price, reliability,
-  context, image/video, local, safety) — see `classifyTopics`. Topic/volume
-  grouping is used instead of a made-up positive/negative score.
-- **Representative comments**: real, validated HN excerpts, one per distinct
-  theme (so they don't repeat a point) and **globally de-duplicated** so an
-  excerpt never reappears under a different model; **sanitised** (HTML stripped,
-  entities decoded) and truncated to ~180 chars centred on the model keyword so
-  they stay on-topic; each shows author, source, time and a direct link.
+- **Exact counts vs. explicit estimates.** HN Algolia results are paginated up
+  to a documented safe maximum (`HN_MAX_PAGES` × `HN_PAGE_SIZE` = 300 raw hits
+  per query per model). When every raw story hit was fetched and validated
+  (`storyCoverage >= 1`), `estimatedRelevantDiscussions` is an **exact** count
+  (`isEstimated: false`). Otherwise it's the validated fraction of the fetched
+  sample scaled up to the full raw-hit total, explicitly flagged
+  (`isEstimated: true`, shown with an "≈" and an "Estimated" badge in the UI).
+  An extrapolated number is never presented as an exact one — see
+  `communityStoryCoverage` in `scripts/lib/signals.mjs`. Coverage (stories AND
+  comments) is exposed in the model panel's "Data coverage" row. A model whose
+  discussion count is small gets a **dashed selector ring** ("Limited sample").
+- **Up to 2 themes per comment**, classified from *validated* HN comments
+  across 10 plain-language topics (coding, reasoning, writing, speed, price,
+  reliability, context, image/video, local, safety) — see `classifyTopics`. The
+  model panel shows its top 4 themes as compact horizontal wave bars (bar
+  length = sampled theme count), labelled "Themes in sampled comments". Topic/
+  volume grouping is used instead of a made-up positive/negative score.
+- **Representative comments are relevance-ranked, not length-ranked.** Each
+  candidate gets a composite score (`commentRelevanceScore` in
+  `scripts/lib/signals.mjs`): 0.40 model-match confidence + 0.25 theme
+  specificity (rarer themes score higher than "coding", which nearly everyone
+  mentions) + 0.20 contextual completeness (reads as a full thought, not a bare
+  quote-reply — structural, not primarily length) + 0.15 recency. Non-
+  duplication is enforced as a selection-time filter: a candidate is skipped if
+  it's near-identical (Jaccard similarity > 0.6) to one already picked, both
+  within a model's own list and globally (`usedCommentIds`, so an excerpt never
+  repeats under a different model). 3 comments show by default; a 4th is behind
+  "Show one more" — no auto-scroll. Excerpts are **sanitised** (HTML stripped,
+  entities decoded) and truncated to ~180 chars centred on the model keyword.
 
 Why not a sentiment score: automated sentiment isn't objective truth, and the
 sources that would improve breadth (X, Reddit) are paid/restricted. The result
 is labelled a **sample** of public developer discussion, not the whole
 community. On partial source failure each model is independent (per-model
 try/catch), so one failure never blanks the section.
+
+## Signal correctness: integrity caps
+
+A single thinly-sourced story can otherwise still reach High impact purely
+from recency + a heavily-weighted entity mention — routine personnel news or
+an unconfirmed rumor dressed up as a confirmed major event. `scoreSignificance`
+applies a **meaningful penalty (×0.8)**, not a rounding nudge, when
+`categorize()`'s own winner-vs-runner-up confidence is below `0.45`
+(`LOW_CATEGORY_CONFIDENCE`) — the category call itself wasn't confident, so
+recency/entity weight alone shouldn't be able to push the story to the top.
+
+After verification is known, `applyIntegrityCaps` (in `scripts/lib/signals.mjs`)
+applies three more rules, in order:
+1. Single-source, non-official **General/Analysis** stories have their
+   significance capped at `GENERAL_SIGNIFICANCE_CAP` (55).
+2. General/Analysis **cannot reach High impact** without an official primary
+   source or independent corroboration (2+ sources), regardless of the raw
+   score.
+3. **Job postings** and **speculative/rumoured plans** ("plans to…",
+   "reportedly considering…") default to Emerging or Notable, never High —
+   detected via `JOB_POSTING_RE`/`SPECULATIVE_RE`, independent of category.
+
+Regression-tested against a synthetic "OpenAI hires a family product manager"
+job posting: fresh, mentions a heavily-weighted entity, would otherwise score
+High — capped to Notable (significance 55) and correctly outranked by a
+confirmed, corroborated launch (significance 74, High).
+
+## Date consistency
+
+All persisted display dates are generated with **explicit UTC**
+(`scripts/lib/dates.mjs`'s `shortDateUTC`/`dayKeyUTC`, using `getUTCMonth()`
+etc. directly rather than `toLocaleDateString`, which silently uses the host
+machine's local timezone). `dateISO` is the stored authority; display strings
+are derived from it, never the other way around. Tested for TZ-independence by
+switching `process.env.TZ` across Pacific/Kiritimati, Etc/GMT+12 and
+America/Los_Angeles and confirming the same ISO instant always formats to the
+same calendar day (`test/dates.test.mjs`) — the same class of bug that (before
+this pass) made `fmtSnapshot()` label local time "UTC" without actually
+formatting in UTC.
+
+## Leaderboard: 4 use-case-specific views
+
+One blended ranking reads as more objective than the evidence supports —
+different benchmarks disagree about which model is "best" depending on the
+task. `js/curated.js`'s `LEADERBOARD_VIEWS` offers 4 views instead:
+**Overall balance**, **Reasoning**, **Agentic coding**, **Cost efficiency**.
+Only Overall balance carries a disclaimer — *"Editorial synthesis—not a
+universal benchmark ranking."* — because it's a hand-weighted blend; the other
+three are direct benchmark or pricing-tier readouts. Every row's note names
+its source and snapshot date (Scale Labs' Humanity's Last Exam/EnigmaEval for
+Reasoning, SWE Atlas/Remote Labor Index for Agentic coding, public pricing
+pages for Cost). Where a model has no tracked score for a view's specific
+benchmark, the note says so honestly ("Not among Scale Labs' published
+scorers…") rather than assigning an invented number. Cost efficiency is
+deliberately **qualitative** (budget/mid/premium tier + self-hostability), not
+fabricated precise $/token figures, since exact provider pricing changes too
+often for a hand-maintained number to stay honest for long.
+
+## Data Health
+
+A compact footer control (`js/datahealth.js`) summarizing the pipeline's own
+completeness, separate from the content itself: successful/configured feed
+count (HTTP-ok fetches, not "had ≥1 item" — `fetchFeed` returns `{items, ok}`
+so a feed that's fine but has 0 new items is distinguishable from a feed that
+actually failed), stock nodes available, community models available, history
+depth, how many community datasets are estimates rather than exact counts,
+build SHA, and when data last updated successfully. Full detail is in a
+drawer (click the chip), mirroring the AI Stock Network's existing drawer
+pattern (focus trap, Escape to close, focus restored on close).
 
 ## Build provenance
 

@@ -9,6 +9,13 @@
     "sha": "d769fc4…", "shortSha": "d769fc4",
     "ref": "main", "builtAt": "2026-07-10T10:05:00.000Z"
   },
+  "dataHealth": {                            // pipeline's own completeness — Data Health control
+    "feedsSucceeded": 15, "feedsConfigured": 15,   // HTTP-ok fetches, not "had ≥1 item"
+    "stockNodesAvailable": 10, "communityModelsAvailable": 7,
+    "historyDepthDays": 1.8,                 // same figure as range.json's historyDepthDays
+    "estimatedDatasets": 2,                  // community models with isEstimated === true
+    "buildSha": "d769fc4", "lastSuccessfulUpdate": "2026-07-10T10:05:00.000Z"
+  },
   "ticker": ["HEADLINE …"],                  // up to 10 uppercase headlines
 
   "signals": [                               // unified scored stream (≤40)
@@ -50,17 +57,27 @@
                       "changeReview": false,                // true ⇒ |change|>25%, flagged not dropped
                       "relVolume": 0.59, "marketCap": 5.1e12, "url": "https://…" } ],  // "View as table" fallback
 
-  "community": {                          // conversation map + representative comments
+  "community": {                          // "Community Current" — model selector + themes + comments
     "window": "30D", "source": "Hacker News", "updatedAt": "…",
     "models": [ { "key": "claude", "model": "Claude", "version": "…", "org": "…",
-                  "rawHits": 6785,                 // raw HN keyword-hit count (context, not bubble size)
-                  "validatedMentions": 6553,       // hits that genuinely discuss the model (≤ rawHits)
-                  "validatedDiscussions": 1078,    // validated unique discussions → BUBBLE SIZE
-                  "limited": false, "points": 0,   // limited ⇒ "Limited discussion sample" badge
-                  "themes": [ { "id": "coding", "label": "Coding", "count": 39 } ],
+                  // stories: exact vs estimated discussion count (see docs/METHODOLOGY.md)
+                  "rawStoryHits": 900,              // total Algolia reports for the query
+                  "fetchedStoryCount": 300,         // how many were actually paginated through (≤ HN_MAX_PAGES pages)
+                  "validatedStoryCount": 160,        // of the FETCHED sample, how many validated
+                  "storyCoverage": 0.33,             // fetchedStoryCount / rawStoryHits, clamped to 1
+                  "estimatedRelevantDiscussions": 480,  // exact validatedStoryCount when storyCoverage>=1, else a scaled estimate
+                  "isEstimated": true,               // false ⇒ estimatedRelevantDiscussions is an EXACT count, never an extrapolation
+                  // comments: same fetched/validated/coverage pattern, no single "estimated" output (used for themes+ranking, not a headline count)
+                  "rawCommentHits": 2261, "fetchedCommentCount": 300, "validatedCommentCount": 299, "commentCoverage": 0.13,
+                  "limited": false, "points": 0,     // limited ⇒ dashed selector ring + "Limited sample" badge
+                  "themes": [ { "id": "coding", "label": "Coding", "count": 39 } ],  // sorted desc; UI shows top 4 as wave bars
                   "topThreads": [ { "title": "…", "points": 0, "url": "…", "date": "…" } ] } ],
-    "comments": [ { "modelId": "claude", "theme": "coding", "excerpt": "… ≤180 chars, sanitised, validated, globally unique …",
+    "comments": [ { "modelId": "claude", "themes": ["coding", "price"],   // up to 2 themes per comment
+                    "excerpt": "… ≤180 chars, sanitised, validated, globally unique …",
                     "source": "Hacker News", "author": "…", "publishedAt": "…", "url": "https://news.ycombinator.com/item?id=…" } ]
+    // comments are pre-ranked by commentRelevanceScore (model-match confidence >
+    // theme specificity > contextual completeness > recency; never primarily
+    // length) — array order IS the ranking, the frontend does not re-sort.
   }
 }
 ```

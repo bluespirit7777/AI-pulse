@@ -39,6 +39,21 @@ async function main() {
     if (!isStr(data.build.builtAt) || isNaN(Date.parse(data.build.builtAt))) fail('build.builtAt missing/invalid');
   }
 
+  // Data Health summary — a compact, honest snapshot of the pipeline's own
+  // completeness (feed success rate, coverage, history depth), separate from
+  // the content itself.
+  if (!data.dataHealth || typeof data.dataHealth !== 'object') fail('dataHealth missing');
+  else {
+    const h = data.dataHealth;
+    for (const f of ['feedsSucceeded', 'feedsConfigured', 'stockNodesAvailable', 'communityModelsAvailable', 'historyDepthDays', 'estimatedDatasets']) {
+      if (!isNum(h[f]) || h[f] < 0) fail(`dataHealth.${f} invalid`);
+    }
+    if (h.feedsSucceeded > h.feedsConfigured) fail('dataHealth.feedsSucceeded exceeds feedsConfigured');
+    if (h.estimatedDatasets > h.communityModelsAvailable) fail('dataHealth.estimatedDatasets exceeds communityModelsAvailable');
+    if (!isStr(h.buildSha)) fail('dataHealth.buildSha missing');
+    if (!isStr(h.lastSuccessfulUpdate) || isNaN(Date.parse(h.lastSuccessfulUpdate))) fail('dataHealth.lastSuccessfulUpdate missing/invalid');
+  }
+
   for (const key of ['ticker', 'signals', 'waves', 'releases', 'wire', 'feed', 'breakthroughs', 'stocks']) {
     if (!isArr(data[key])) fail(`${key} must be an array`);
   }
@@ -151,14 +166,25 @@ async function main() {
     const modelIds = new Set((c.models || []).map((m) => m.key));
     (c.models || []).forEach((m, i) => {
       if (!isStr(m.key)) fail(`community.models[${i}].key missing`);
-      // validated metrics: bubble size is validatedDiscussions, not raw hits
-      for (const f of ['rawHits', 'validatedMentions', 'validatedDiscussions']) {
+      // explicit coverage/estimation fields — see docs/METHODOLOGY.md. A story
+      // count is only ever "exact" (isEstimated === false) when storyCoverage
+      // reached 1 (every raw hit was actually fetched and validated).
+      for (const f of [
+        'rawStoryHits', 'fetchedStoryCount', 'validatedStoryCount', 'storyCoverage', 'estimatedRelevantDiscussions',
+        'rawCommentHits', 'fetchedCommentCount', 'validatedCommentCount', 'commentCoverage',
+      ]) {
         if (!isNum(m[f]) || m[f] < 0) fail(`community.models[${i}].${f} invalid`);
       }
-      // a validated count can never exceed the raw keyword-hit count it derives from
-      if (isNum(m.validatedMentions) && isNum(m.rawHits) && m.validatedMentions > m.rawHits) {
-        fail(`community.models[${i}].validatedMentions (${m.validatedMentions}) exceeds rawHits (${m.rawHits})`);
-      }
+      if (typeof m.isEstimated !== 'boolean') fail(`community.models[${i}].isEstimated must be boolean`);
+      // a validated/fetched count can never exceed the raw hit count it derives from
+      if (m.validatedStoryCount > m.fetchedStoryCount) fail(`community.models[${i}].validatedStoryCount exceeds fetchedStoryCount`);
+      if (m.fetchedStoryCount > m.rawStoryHits) fail(`community.models[${i}].fetchedStoryCount exceeds rawStoryHits`);
+      if (m.validatedCommentCount > m.fetchedCommentCount) fail(`community.models[${i}].validatedCommentCount exceeds fetchedCommentCount`);
+      if (m.fetchedCommentCount > m.rawCommentHits) fail(`community.models[${i}].fetchedCommentCount exceeds rawCommentHits`);
+      if (m.storyCoverage > 1) fail(`community.models[${i}].storyCoverage cannot exceed 1`);
+      if (m.commentCoverage > 1) fail(`community.models[${i}].commentCoverage cannot exceed 1`);
+      // an exact (non-estimated) count is only honest when coverage is complete
+      if (m.isEstimated === false && m.storyCoverage < 1) fail(`community.models[${i}] claims an exact count with incomplete storyCoverage`);
       if (typeof m.limited !== 'boolean') fail(`community.models[${i}].limited must be boolean`);
       if (!isArr(m.themes)) fail(`community.models[${i}].themes must be an array`);
     });
@@ -170,6 +196,8 @@ async function main() {
       if (cm.excerpt && cm.excerpt.length > 200) fail(`community.comments[${i}].excerpt too long (${cm.excerpt.length})`);
       if (/<[a-z]/i.test(cm.excerpt || '')) fail(`community.comments[${i}].excerpt contains unsanitised HTML`);
       if (!isStr(cm.url)) fail(`community.comments[${i}].url missing`);
+      if (!isArr(cm.themes) || !cm.themes.length) fail(`community.comments[${i}].themes must be a non-empty array`);
+      if (cm.themes && cm.themes.length > 2) fail(`community.comments[${i}].themes has more than 2 entries (up to 2 allowed)`);
       // no excerpt reused across models/themes (would imply a comment counted twice)
       if (cm.url) { if (seenComment.has(cm.url)) fail(`community.comments[${i}] reuses url ${cm.url}`); seenComment.add(cm.url); }
     });

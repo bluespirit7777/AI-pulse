@@ -284,72 +284,84 @@ body.drawer-open { overflow: hidden; }
 .tide-summary { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); margin: 12px 0 0; line-height: 1.6; }
 .tide-note { color: var(--ink-dim); }
 
-/* ---------- community pulse (radial conversation stage) ---------- */
-/* A much bigger interactive stage: model bubbles sit near the top; clicking
-   one fans its representative comments out as cards around it, connected by
-   thin lines drawn in the same SVG. No separate list panel below. */
-.cm-stage-wrap {
-  /* aspect-ratio MUST match the SVG's own viewBox (900:560) at every
-     breakpoint — the petal cards are plain HTML positioned by percentage
-     against this box, so any mismatch between this ratio and the SVG's
-     internal coordinate system misaligns them from where the SVG actually
-     draws the bubbles/connectors once preserveAspectRatio scales it to fit. */
-  position: relative; width: 100%; aspect-ratio: 900 / 560;
-  background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(18,48,62,.06);
-  /* visible, not hidden: on very narrow viewports a full row of petal cards
-     can need slightly more height than the ratio provides — let them extend
-     past the panel rather than silently clipping/hiding their content. */
-  overflow: visible;
+/* ---------- community pulse ("Community Current") ---------- */
+/* Horizontal model selector (real buttons, accessible tablist) + a two-column
+   info/themes panel + a short representative-comments list. Deliberately no
+   absolute positioning, no runtime measurement, no connector lines — normal
+   document flow throughout so it works identically on desktop and mobile. */
+.cc-selector {
+  display: flex; gap: 10px; overflow-x: auto; padding: 6px 2px 14px;
+  -webkit-overflow-scrolling: touch; scrollbar-width: thin;
 }
-.cm-stage { display: block; width: 100%; height: 100%; }
-.cm-bubble { cursor: pointer; }
-.cm-bubble:focus { outline: none; }
-.cm-bub-core { transition: opacity .2s, r .3s, stroke-width .2s; opacity: .85; }
-.cm-bubble:hover .cm-bub-core, .cm-bubble:focus .cm-bub-core { opacity: 1; }
-.cm-bubble.cm-selected .cm-bub-core { opacity: 1; stroke: var(--deep); stroke-width: 3.5; }
-.cm-bubble.cm-dimmed .cm-bub-core { opacity: .3; }
-@media (prefers-reduced-motion: no-preference) { .cm-bub-pulse { animation: cmPulse 3s ease-in-out infinite; } }
-@keyframes cmPulse { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
-.cm-bub-label { font-family: var(--font-body); font-weight: 700; font-size: 13px; fill: #fff; paint-order: stroke; }
-.cm-bub-count { font-family: var(--font-mono); font-size: 10.5px; fill: var(--ink-dim); }
-.cm-connector { fill: none; stroke: var(--border-strong); stroke-width: 1.4; stroke-dasharray: 3 4; opacity: .8; }
-
-/* petals: real HTML so excerpt text wraps normally; positioned in the same
-   percentage space as the SVG viewBox (the wrap's aspect-ratio keeps the two
-   coordinate systems aligned regardless of rendered pixel size). */
-.cm-petals { position: absolute; inset: 0; pointer-events: none; }
-.cm-petal {
-  position: absolute; width: min(210px, 30vw); transform: translate(-50%, 0);
-  background: var(--panel-solid); border: 1px solid var(--border); border-radius: 10px;
-  padding: 10px 12px; box-shadow: 0 6px 18px rgba(18,48,62,.14);
-  pointer-events: auto; animation: cmPetalIn .22s ease-out both;
+.cc-tab {
+  flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-family: var(--font-body); cursor: pointer; color: var(--ink);
+  background: var(--panel-solid); border: 1.5px solid var(--border); border-radius: 999px;
+  padding: calc(9px + 5px * var(--scale, 0)) calc(16px + 10px * var(--scale, 0));
+  min-height: 44px; min-width: 44px; justify-content: center;
+  transition: box-shadow .15s, border-color .15s, transform .15s;
 }
-@keyframes cmPetalIn { from { opacity: 0; transform: translate(-50%, -6px) scale(.94); } to { opacity: 1; transform: translate(-50%, 0) scale(1); } }
-@media (prefers-reduced-motion: reduce) { .cm-petal { animation: none; } }
-.cm-petal-excerpt { font-size: 12.5px; color: var(--ink); line-height: 1.5; margin: 0 0 6px; }
-.cm-petal-meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); display: flex; justify-content: space-between; gap: 6px; align-items: baseline; }
-.cm-petal-meta a { color: var(--sea); text-decoration: none; }
-.cm-petal-meta a:hover { text-decoration: underline; }
-.cm-petal-empty { position: absolute; top: 58.9%; left: 50%; transform: translate(-50%, 0); font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); text-align: center; width: 220px; pointer-events: none; }
+.cc-tab:hover { border-color: var(--accent, var(--border-strong)); }
+.cc-tab:focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
+/* limited sample: a dashed ring, independent of selection state */
+.cc-tab--limited { border-style: dashed; }
+/* selected: a clear solid ring in the model's own accent color */
+.cc-tab[aria-selected="true"] {
+  border-color: var(--accent, var(--deep)); border-style: solid;
+  box-shadow: 0 0 0 2.5px color-mix(in srgb, var(--accent, var(--deep)) 35%, transparent);
+  transform: translateY(-1px);
+}
+.cc-tab-name { font-weight: 700; font-size: calc(13px + 2px * var(--scale, 0)); color: var(--ink); }
+.cc-tab-count { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
 
-.cm-info { margin-top: 14px; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.06); }
-.cm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
-.cm-model { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--deep); }
-.cm-org { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
-.cm-stats { display: flex; gap: 14px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); }
-.cm-stats b { color: var(--teal); }
-.cm-limited { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); background: color-mix(in srgb, var(--warn, #c98a1a) 12%, transparent); border: 1px solid color-mix(in srgb, var(--warn, #c98a1a) 35%, transparent); border-radius: 8px; padding: 6px 10px; margin: 0 0 8px; line-height: 1.5; }
-.cm-threads { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; }
-.cm-threads-h { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); width: 100%; }
-.cm-thread { font-family: var(--font-body); font-weight: 600; font-size: 13px; color: var(--ink); text-decoration: none; }
-.cm-thread:hover { color: var(--teal); text-decoration: underline; }
-.cm-thread-n { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); }
-.cm-foot { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); line-height: 1.6; margin: 12px 2px 0; }
-@media (max-width: 640px) {
-  .cm-petal { width: min(150px, 42vw); }
-  .cm-petal-excerpt { font-size: 11.5px; }
-  .cm-bub-label { font-size: 11px; }
+.cc-panel { background: var(--panel-solid); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; box-shadow: 0 4px 16px rgba(18,48,62,.06); }
+.cc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.cc-col-info { border-right: 1px solid var(--border); padding-right: 22px; }
+.cc-info-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin-bottom: 10px; }
+.cc-info-model { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--deep); }
+.cc-info-org { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
+.cc-facts { display: grid; gap: 7px; margin: 0 0 10px; }
+.cc-facts > div { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; }
+.cc-facts dt { color: var(--ink-soft); }
+.cc-facts dd { margin: 0; font-family: var(--font-mono); color: var(--teal); font-weight: 600; text-align: right; }
+.cc-status { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.cc-badge { font-family: var(--font-mono); font-size: 10px; letter-spacing: .04em; border-radius: 6px; padding: 3px 8px; border: 1px solid var(--border-strong); color: var(--ink-soft); }
+.cc-badge--exact { color: var(--teal); border-color: color-mix(in srgb, var(--teal) 45%, transparent); background: color-mix(in srgb, var(--teal) 10%, transparent); }
+.cc-badge--estimate { color: var(--ink-soft); }
+.cc-badge--limited { color: var(--warn, #c98a1a); border-color: color-mix(in srgb, var(--warn, #c98a1a) 45%, transparent); background: color-mix(in srgb, var(--warn, #c98a1a) 10%, transparent); }
+
+.cc-themes-h { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 10px; }
+.cc-wavebars { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.cc-wavebars li { display: grid; grid-template-columns: 84px 1fr 24px; align-items: center; gap: 8px; }
+.cc-wavebar-label { font-size: 11.5px; color: var(--ink-soft); }
+.cc-wavebar-track { height: 8px; border-radius: 5px; background: color-mix(in srgb, var(--border-strong) 60%, transparent); overflow: hidden; }
+.cc-wavebar-fill { display: block; height: 100%; width: var(--w, 0%); background: var(--accent, var(--sea)); border-radius: 5px; }
+.cc-wavebar-n { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); text-align: right; }
+.cc-empty { font-size: 12px; color: var(--ink-dim); margin: 0; }
+
+.cc-voices { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+.cc-voices-h { font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); margin: 0 0 12px; }
+.cc-comments { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.cc-comment { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+.cc-comment-themes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.cc-theme-tag { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .03em; color: var(--sea); background: color-mix(in srgb, var(--sea) 12%, transparent); border: 1px solid color-mix(in srgb, var(--sea) 35%, transparent); border-radius: 6px; padding: 2px 7px; }
+.cc-comment-excerpt { font-size: 12.5px; color: var(--ink); line-height: 1.55; margin: 0 0 8px; }
+.cc-comment-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; align-items: baseline; }
+.cc-comment-meta a { color: var(--sea); text-decoration: none; }
+.cc-comment-meta a:hover { text-decoration: underline; }
+.cc-show-more {
+  margin-top: 12px; font-family: var(--font-mono); font-size: 11.5px; color: var(--deep);
+  background: transparent; border: 1px solid var(--border-strong); border-radius: 8px;
+  padding: 9px 14px; min-height: 44px; cursor: pointer;
+}
+.cc-show-more:hover { border-color: var(--deep); }
+
+.cc-foot { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); line-height: 1.6; margin: 12px 2px 0; }
+
+@media (max-width: 720px) {
+  .cc-grid { grid-template-columns: 1fr; }
+  .cc-col-info { border-right: none; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 16px; }
+  .cc-panel { padding: 16px; }
 }
 
 /* ================= section ribbon (reusable heading system) =================
@@ -493,3 +505,14 @@ body.drawer-open { overflow: hidden; }
   .snet-drawer { width: 100vw; }
   .snet-facts { grid-template-columns: 1fr; }
 }
+
+/* ---------- data health drawer (reuses .drawer-inner/.drawer-close visuals) ---------- */
+.dh-drawer { position: fixed; inset: 0 0 0 auto; width: min(400px, 92vw); z-index: 60; background: var(--panel-solid); border-left: 1px solid var(--border-strong); box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto; animation: drawerIn .28s cubic-bezier(.16,.84,.44,1); }
+@media (prefers-reduced-motion: reduce) { .dh-drawer { animation: none; } }
+.dh-drawer h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--deep); margin: 4px 0 14px; }
+.dh-facts { display: grid; gap: 9px; margin: 12px 0 16px; }
+.dh-facts > div { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.dh-facts dt { color: var(--ink-soft); }
+.dh-facts dd { margin: 0; font-family: var(--font-mono); color: var(--teal); font-weight: 600; text-align: right; }
+.dh-note { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); line-height: 1.6; margin-top: 14px; }
+@media (max-width: 640px) { .dh-drawer { width: 100vw; } }

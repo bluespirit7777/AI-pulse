@@ -5,6 +5,7 @@
 import { esc } from './util.js';
 import { freshnessChip, verificationChip, sourceChip } from './freshness.js';
 import * as C from './curated.js';
+import { MODEL_REGISTRY } from '../scripts/lib/models.mjs';
 
 const LOGO = {
   anthropic: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="21.5" y2="12"/><line x1="5.3" y1="5.3" x2="18.7" y2="18.7"/><line x1="18.7" y1="5.3" x2="5.3" y2="18.7"/></svg>`,
@@ -13,11 +14,13 @@ const LOGO = {
   other: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/></svg>`,
 };
 const ACCENT = { anthropic: 'var(--coral)', openai: 'var(--deep)', google: 'var(--sea)', meta: 'var(--ink-soft)', xai: 'var(--ink-soft)', policy: 'var(--sand)', other: 'var(--sand)' };
-// Frontier Releases shows exactly these 3 brands, always, in this order.
+// Frontier Releases shows exactly these 3 brands, always, in this order —
+// name/org come from the canonical MODEL_REGISTRY so this can never drift
+// from Community Pulse or the Leaderboard.
 const RELEASE_BRAND = {
-  anthropic: { name: 'Claude', org: 'Anthropic' },
-  openai: { name: 'ChatGPT', org: 'OpenAI' },
-  google: { name: 'Gemini', org: 'Google DeepMind' },
+  anthropic: { name: MODEL_REGISTRY.claude.brand, org: MODEL_REGISTRY.claude.org },
+  openai: { name: MODEL_REGISTRY.gpt.brand, org: MODEL_REGISTRY.gpt.org },
+  google: { name: MODEL_REGISTRY.gemini.brand, org: MODEL_REGISTRY.gemini.org },
 };
 const YT_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true"><path d="M9.5 7.5v9l8-4.5-8-4.5Z"/></svg>`;
 
@@ -88,9 +91,55 @@ function wireDonutTooltip() {
   wrap.addEventListener('mouseleave', () => { tip.hidden = true; });
 }
 
+// Leaderboard: 4 use-case-specific views (Overall balance / Reasoning /
+// Agentic coding / Cost efficiency), not one blended "objective" rank — see
+// LEADERBOARD_VIEWS in curated.js. Overall balance is the only view with a
+// disclaimer (it's an editorial blend); the other three are direct benchmark
+// readouts, so no disclaimer is shown for them.
+function wireLeaderboardTabs() {
+  const tabsEl = document.getElementById('lb-tabs');
+  const disclaimerEl = document.getElementById('lb-disclaimer');
+  if (!tabsEl) return;
+  tabsEl.innerHTML = C.LEADERBOARD_VIEWS.map((v, i) => `
+    <button type="button" role="tab" class="lb-tab" id="lb-tab-${v.id}" data-id="${v.id}"
+      aria-selected="${i === 0}" aria-controls="leaderboard" tabindex="${i === 0 ? '0' : '-1'}">${esc(v.label)}</button>
+  `).join('');
+  const tabs = Array.from(tabsEl.querySelectorAll('.lb-tab'));
+
+  function select(id, { focusTab = false } = {}) {
+    const view = C.LEADERBOARD_VIEWS.find((v) => v.id === id) || C.LEADERBOARD_VIEWS[0];
+    tabs.forEach((t) => {
+      const isSel = t.dataset.id === view.id;
+      t.setAttribute('aria-selected', String(isSel));
+      t.tabIndex = isSel ? 0 : -1;
+      if (isSel && focusTab) t.focus();
+    });
+    setHTML('leaderboard', rankRows(view.data));
+    if (disclaimerEl) {
+      disclaimerEl.textContent = view.disclaimer || '';
+      disclaimerEl.hidden = !view.disclaimer;
+    }
+    animateBars();
+  }
+
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t.dataset.id));
+    t.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        select(tabs[(i + dir + tabs.length) % tabs.length].dataset.id, { focusTab: true });
+      } else if (e.key === 'Home') { e.preventDefault(); select(tabs[0].dataset.id, { focusTab: true }); }
+      else if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1].dataset.id, { focusTab: true }); }
+    });
+  });
+
+  select(C.LEADERBOARD_VIEWS[0].id);
+}
+
 export function renderCurated() {
   setHTML('stats', C.stats.map((s) => `<div class="stat"><div class="num">${esc(s.num)}</div><div class="lbl">${esc(s.lbl)}</div></div>`).join(''));
-  setHTML('leaderboard', rankRows(C.leaderboard));
+  wireLeaderboardTabs();
   setHTML('image-ai', rankRows(C.imageAI));
   setHTML('local-ai', rankRows(C.localAI));
   setHTML('video-ai', rankRows(C.videoAI));

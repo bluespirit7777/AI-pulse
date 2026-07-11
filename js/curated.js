@@ -20,22 +20,80 @@ export const modelReception = {
   qwen: 'The open-weight darling of the local-LLM crowd; widely called the best self-hostable option for coders.',
 };
 
-// Rank order is cross-checked against Scale Labs' public leaderboard
-// (https://labs.scale.com/leaderboard) — a real, third-party evaluator, not
-// house benchmarks from any one lab. Scale shows a genuine split: Gemini/GPT
-// lead broad frontier reasoning (Humanity's Last Exam, EnigmaEval), while
-// Claude leads agentic coding specifically. WITHIN Claude, Fable 5 beats Opus
-// 4.8 on 2 of the 3 agentic metrics checked — SWE Atlas Refactoring (54.8 vs
-// 46.7) and Remote Labor Index (16.1 vs 8.3) — with Opus 4.8 ahead only on
-// Codebase QnA (57.3 vs n/a). Net evidence favors Fable 5 above Opus 4.8.
-export const leaderboard = [
-  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: 'Leads frontier reasoning', note: 'Tops Humanity’s Last Exam & EnigmaEval among tracked models (Scale Labs) · native computer-use in 3.5 Flash' },
-  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Near-tied for top reasoning', note: 'GPT-5.4/5.5-class trails Gemini by ~2pts on Humanity’s Last Exam (Scale Labs); broadest mainstream reach' },
-  { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', w: 88, stat: 'Leads agentic coding execution', note: 'Beats Opus 4.8 on Scale Labs’ SWE Atlas Refactoring (54.8 vs 46.7), Test Writing (58.5 vs 49.6) & Remote Labor Index (16.1 vs 8.3) — the stronger Claude tier on hands-on dev-agent work, not just the faster one' },
-  { rank: 4, model: 'Claude Opus 4.8', org: 'Anthropic', w: 84, stat: 'Leads codebase comprehension', note: '#1 on Scale Labs’ SWE Atlas Codebase QnA (57.3) — its one edge over Fable 5 among the metrics checked' },
-  { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 74, stat: '2M-token context', note: 'Competitive on some benchmarks; reception coloured by X-platform controversy' },
-  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 66, stat: 'Top open/Chinese model', note: 'Highest index placement of any open-origin model' },
+// ---------- leaderboard: 4 use-case-specific views, not one "objective" rank ----------
+// A single blended ranking reads as more authoritative than the evidence
+// supports — different benchmarks disagree about which model is "best"
+// depending on the task. Rather than picking one synthesis and presenting it
+// as universal, the leaderboard offers 4 views, each citing its own
+// benchmark + snapshot date; "Overall balance" is explicitly labelled as
+// editorial synthesis, not a benchmark result. See docs/METHODOLOGY.md.
+export const LEADERBOARD_SNAPSHOT = 'Jul 2026';
+export const LEADERBOARD_OVERALL_DISCLAIMER = 'Editorial synthesis—not a universal benchmark ranking.';
+
+// "Overall balance" — a hand-weighted blend across reasoning, agentic coding,
+// adoption and reception. Rank order is cross-checked against Scale Labs'
+// public leaderboard (https://labs.scale.com/leaderboard) — a real,
+// third-party evaluator, not house benchmarks from any one lab — but the
+// BLEND itself (how reasoning is weighed against agentic coding, adoption,
+// etc.) is an editorial judgment call, which is why this view carries the
+// disclaimer above rather than being presented as a benchmark result.
+export const leaderboardOverall = [
+  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: 'Leads frontier reasoning', note: `Tops Humanity's Last Exam & EnigmaEval among tracked models (Scale Labs, ${'Jul 2026'} snapshot) · native computer-use in 3.5 Flash` },
+  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Near-tied for top reasoning', note: `Trails Gemini by ~2pts on Humanity's Last Exam (Scale Labs, ${'Jul 2026'} snapshot); broadest mainstream reach` },
+  { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', w: 88, stat: 'Leads agentic coding execution', note: `Beats Opus 4.8 on Scale Labs' SWE Atlas Refactoring (54.8 vs 46.7) and Remote Labor Index (16.1 vs 8.3) — ${'Jul 2026'} snapshot; the stronger Claude tier on hands-on dev-agent work specifically, not a claim about every task` },
+  { rank: 4, model: 'Claude Opus 4.8', org: 'Anthropic', w: 84, stat: 'Leads codebase comprehension', note: `#1 on Scale Labs' SWE Atlas Codebase QnA (57.3, ${'Jul 2026'} snapshot) — its one edge over Fable 5 among the metrics checked` },
+  { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 74, stat: '2M-token context', note: `Mid-pack on Scale Labs' tracked reasoning and agentic evals (${'Jul 2026'} snapshot); reception coloured by X-platform controversy` },
+  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 66, stat: 'Top open/Chinese model', note: `Highest-ranked open-weight model on Scale Labs' public leaderboard (${'Jul 2026'} snapshot)` },
 ];
+
+// "Reasoning" — Scale Labs' Humanity's Last Exam + EnigmaEval specifically.
+// Only Gemini and GPT have a published score tracked here; the rest are
+// listed for comparison but are honestly marked as not separately
+// benchmarked on THESE two evals in this snapshot, rather than assigning
+// them an invented number.
+export const leaderboardReasoning = [
+  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: "46.44% on Humanity's Last Exam", note: `Highest tracked score on Humanity's Last Exam & EnigmaEval (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: "44.32% on Humanity's Last Exam", note: `Narrowly behind Gemini on Humanity's Last Exam (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
+  { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
+  { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 45, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot` },
+  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 40, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot` },
+];
+
+// "Agentic coding" — Scale Labs' SWE Atlas suite + Remote Labor Index.
+// Claude is the only family with published per-metric scores tracked here.
+export const leaderboardAgentic = [
+  { rank: 1, model: 'Claude Fable 5', org: 'Anthropic', w: 100, stat: 'Leads Refactoring & Remote Labor Index', note: `SWE Atlas Refactoring 54.8 vs Opus 4.8's 46.7; Remote Labor Index 16.1 vs 8.3 (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 2, model: 'Claude Opus 4.8', org: 'Anthropic', w: 92, stat: 'Leads Codebase QnA', note: `SWE Atlas Codebase QnA 57.3 — its one edge over Fable 5 among the metrics checked (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 3, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot` },
+  { rank: 3, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot — see Reasoning view for its strongest benchmark result` },
+  { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 42, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot` },
+  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 40, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot` },
+];
+
+// "Cost efficiency" — deliberately QUALITATIVE/directional, not precise
+// $/token figures: exact provider pricing changes too often and varies by
+// tier/region for a single hand-maintained number to stay honest for long.
+// Ranked by public pricing-page TIER (budget/mid/premium) and whether the
+// model is self-hostable at zero marginal API cost, not a fabricated rate.
+export const leaderboardCost = [
+  { rank: 1, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 100, stat: 'Open-weight, self-hostable', note: `Apache-2.0 weights — no per-token API cost when self-hosted (public model card, ${'Jul 2026'} snapshot)` },
+  { rank: 2, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 70, stat: 'Mid tier via Flash variants', note: `Flash-tier pricing sits below the top frontier bracket (public pricing page, ${'Jul 2026'} snapshot); Pro tier is priced at the frontier bracket` },
+  { rank: 3, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 60, stat: 'Frontier tier', note: `Priced in the top frontier bracket across providers (public pricing page, ${'Jul 2026'} snapshot)` },
+  { rank: 4, model: 'Grok 4.5', org: 'xAI', w: 55, stat: 'Frontier tier', note: `Priced in the top frontier bracket across providers (public pricing page, ${'Jul 2026'} snapshot)` },
+  { rank: 5, model: 'Claude Opus 4.8', org: 'Anthropic', w: 48, stat: 'Premium tier', note: `Priced at the premium end of the frontier bracket (public pricing page, ${'Jul 2026'} snapshot); some report a higher cost per completed task` },
+  { rank: 6, model: 'Claude Fable 5', org: 'Anthropic', w: 48, stat: 'Premium tier', note: `Priced at the premium end of the frontier bracket (public pricing page, ${'Jul 2026'} snapshot)` },
+];
+
+export const LEADERBOARD_VIEWS = [
+  { id: 'overall', label: 'Overall balance', data: leaderboardOverall, disclaimer: LEADERBOARD_OVERALL_DISCLAIMER },
+  { id: 'reasoning', label: 'Reasoning', data: leaderboardReasoning, disclaimer: null },
+  { id: 'agentic', label: 'Agentic coding', data: leaderboardAgentic, disclaimer: null },
+  { id: 'cost', label: 'Cost efficiency', data: leaderboardCost, disclaimer: null },
+];
+
+// Back-compat alias — some call sites may still reference the single default view.
+export const leaderboard = leaderboardOverall;
 
 // Elo scores from Artificial Analysis' real Image Arena Quality leaderboard
 // (artificialanalysis.ai/text-to-image) — the same source already cited below.

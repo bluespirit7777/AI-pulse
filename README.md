@@ -29,13 +29,21 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    market cap, glow = relative volume, ring = day change (computed from the last
    two valid trading bars); toggle between curated **business ties** and 30-day
    **price-return correlation** (kept separate). Accessible table fallback.
-6. **Community Pulse** — a model conversation map where bubble size = **validated
-   public discussions** (contextually matched, with ambiguous "grok"/"llama"
-   noise rejected), plus topic themes and real, sanitised, de-duplicated HN
-   comment excerpts you can filter.
+6. **Community Pulse** ("Community Current") — a horizontal model selector sized
+   by relevant discussion volume (contextually matched, with ambiguous
+   "grok"/"llama" noise rejected), a two-column panel of stats + theme wave
+   bars, and relevance-ranked representative HN comments. Discussion counts are
+   exact when the full result set was paginated, and clearly marked "≈
+   estimated" with coverage shown otherwise — never presented as an exact count
+   they aren't.
 7. **Explore the depths** — frontier releases (incl. official-lab YouTube launch
-   videos), leaderboard, image/video rankings, market share, compute pricing,
-   open-weight feed, and breakthroughs.
+   videos), a 4-view leaderboard (Overall balance / Reasoning / Agentic coding /
+   Cost efficiency — Overall labelled as editorial synthesis, the rest citing a
+   named benchmark + snapshot date), image/video rankings, market share, compute
+   pricing, open-weight feed, and breakthroughs.
+8. **Data Health** — a compact footer control showing feed success rate, stock/
+   community coverage, history depth, how many datasets are estimates, the
+   build SHA, and when data last updated successfully. Full detail in a drawer.
 
 Every item carries a **freshness / confidence / provenance** chip
 (Live · Auto · Curated · Estimated, plus corroboration strength).
