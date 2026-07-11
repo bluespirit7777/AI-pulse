@@ -24,26 +24,27 @@ export const modelReception = {
 // (https://labs.scale.com/leaderboard) — a real, third-party evaluator, not
 // house benchmarks from any one lab. Scale shows a genuine split: Gemini/GPT
 // lead broad frontier reasoning (Humanity's Last Exam, EnigmaEval), while
-// Claude leads agentic coding specifically — and within Claude, Fable 5 beats
-// Opus 4.8 on hands-on dev-agent tasks (SWE Atlas Refactoring: 54.8 vs 46.7;
-// Test Writing: 58.5 vs 49.6; Remote Labor Index: 16.1 vs 8.3), while Opus 4.8
-// leads codebase comprehension (SWE Atlas Codebase QnA: 57.3, #1). So Fable
-// is the faster tier, not a strictly weaker one — see its note below.
+// Claude leads agentic coding specifically. WITHIN Claude, Fable 5 beats Opus
+// 4.8 on 2 of the 3 agentic metrics checked — SWE Atlas Refactoring (54.8 vs
+// 46.7) and Remote Labor Index (16.1 vs 8.3) — with Opus 4.8 ahead only on
+// Codebase QnA (57.3 vs n/a). Net evidence favors Fable 5 above Opus 4.8.
 export const leaderboard = [
   { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: 'Leads frontier reasoning', note: 'Tops Humanity’s Last Exam & EnigmaEval among tracked models (Scale Labs) · native computer-use in 3.5 Flash' },
   { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Near-tied for top reasoning', note: 'GPT-5.4/5.5-class trails Gemini by ~2pts on Humanity’s Last Exam (Scale Labs); broadest mainstream reach' },
-  { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', w: 88, stat: 'Leads codebase comprehension', note: '#1 on Scale Labs’ SWE Atlas Codebase QnA (57.3); flagship Claude tier' },
-  { rank: 4, model: 'Claude Fable 5', org: 'Anthropic', w: 84, stat: 'Leads agentic coding execution', note: 'Beats Opus 4.8 on Scale Labs’ SWE Atlas Refactoring (54.8 vs 46.7) & Test Writing (58.5 vs 49.6) — faster tier, not a weaker one' },
+  { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', w: 88, stat: 'Leads agentic coding execution', note: 'Beats Opus 4.8 on Scale Labs’ SWE Atlas Refactoring (54.8 vs 46.7), Test Writing (58.5 vs 49.6) & Remote Labor Index (16.1 vs 8.3) — the stronger Claude tier on hands-on dev-agent work, not just the faster one' },
+  { rank: 4, model: 'Claude Opus 4.8', org: 'Anthropic', w: 84, stat: 'Leads codebase comprehension', note: '#1 on Scale Labs’ SWE Atlas Codebase QnA (57.3) — its one edge over Fable 5 among the metrics checked' },
   { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 74, stat: '2M-token context', note: 'Competitive on some benchmarks; reception coloured by X-platform controversy' },
   { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 66, stat: 'Top open/Chinese model', note: 'Highest index placement of any open-origin model' },
 ];
 
+// Elo scores from Artificial Analysis' real Image Arena Quality leaderboard
+// (artificialanalysis.ai/text-to-image) — the same source already cited below.
 export const imageAI = [
-  { rank: 1, model: 'Nano Banana Pro', org: 'Google · Gemini 3', w: 100, stat: 'Tops the image arena', note: 'Gemini-3-powered; strongest prompt adherence & text rendering' },
-  { rank: 2, model: 'GPT-Image-1', org: 'OpenAI', w: 90, stat: 'Native ChatGPT image gen', note: 'Best-in-class instruction following and in-image typography' },
-  { rank: 3, model: 'Seedream 4.0', org: 'ByteDance', w: 82, stat: 'Top open-access contender', note: 'High-fidelity photoreal output; strong on Asian-language prompts' },
-  { rank: 4, model: 'Midjourney v7', org: 'Midjourney', w: 74, stat: 'Aesthetic favorite', note: 'Leads on artistic style and coherence; community-driven tuning' },
-  { rank: 5, model: 'FLUX1.1 Pro', org: 'Black Forest Labs', w: 66, stat: 'Open-weight leader', note: 'Self-hostable; the default base for many fine-tuned pipelines' },
+  { rank: 1, model: 'GPT Image 2', org: 'OpenAI', w: 100, stat: 'Tops the image arena', note: 'Elo 1337 on Artificial Analysis — clear #1, well ahead of the field' },
+  { rank: 2, model: 'GPT Image 1.5', org: 'OpenAI', w: 88, stat: 'Strong runner-up', note: 'Elo 1258 — OpenAI holds both #1 and #2 on quality Elo' },
+  { rank: 3, model: 'Nano Banana Pro', org: 'Google · Gemini 3', w: 76, stat: 'Best from Google', note: 'Gemini-3-powered; Elo 1216, strongest prompt adherence among non-OpenAI models' },
+  { rank: 4, model: 'FLUX.2 [max]', org: 'Black Forest Labs', w: 68, stat: 'Top open-lineage model', note: 'Elo 1190; frontier tier of the open-weight-rooted FLUX line' },
+  { rank: 5, model: 'Seedream 4.0', org: 'ByteDance', w: 62, stat: 'Leading Asia-market model', note: 'Elo 1188; strong photoreal output and Asian-language prompt handling' },
 ];
 
 // Top self-hostable / open-weight models — the "run it yourself today" tier.
