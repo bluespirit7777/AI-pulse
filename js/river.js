@@ -20,7 +20,9 @@ const EXPAND_STEP = 24;
 
 function sizeClass(sig) { return sig >= 70 ? 'big' : sig >= 45 ? 'mid' : 'sm'; }
 
-export function renderRiver(root, signals = [], now = Date.now()) {
+export function renderRiver(root, signals = [], now = Date.now(), entityNames = {}) {
+  // readable label for an entity id (R8): "gpt" → "GPT". Falls back to the id.
+  const entityLabel = (id) => entityNames[id] || id;
   const sorted = signals.slice().sort((a, b) => Date.parse(b.dateISO) - Date.parse(a.dateISO));
   const cats = ['all', ...Array.from(new Set(sorted.map((s) => s.category)))];
   const entityCounts = new Map();
@@ -55,7 +57,9 @@ export function renderRiver(root, signals = [], now = Date.now()) {
   timeBar.innerHTML = Object.keys(TIME_WINDOWS).map((t) =>
     `<button class="river-filter${t === 'all' ? ' active' : ''}" role="tab" aria-selected="${t === 'all'}" data-time="${esc(t)}">${esc(t === 'all' ? 'Any time' : t)}</button>`
   ).join('');
-  entitySelect.innerHTML += topEntityIds.map((id) => `<option value="${esc(id)}">${esc(id)} (${entityCounts.get(id)})</option>`).join('');
+  // option VALUE stays the id (filtering is by id); the visible LABEL is the
+  // readable entity name (R8).
+  entitySelect.innerHTML += topEntityIds.map((id) => `<option value="${esc(id)}">${esc(entityLabel(id))} (${entityCounts.get(id)})</option>`).join('');
 
   function filtered() {
     return sorted.filter((s) => {

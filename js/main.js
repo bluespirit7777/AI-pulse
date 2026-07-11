@@ -16,6 +16,7 @@ let data = null;
 let ranges = null;
 let map = null;
 let range = '24H';
+let entityNameById = {}; // id → readable name for the river entity filter (R8)
 
 function tickClock() {
   const el = $('#clock');
@@ -89,7 +90,7 @@ function applyRange(next) {
 function renderDynamic() {
   renderLive(data);
   renderWaveforms($('#waves'), data.signals || [], data.waves || []);
-  renderRiver($('#river'), data.signals || []);
+  renderRiver($('#river'), data.signals || [], Date.now(), entityNameById);
   renderCommunity($('#community'), data.community || []);
   animateBars();
   paintUpdated();
@@ -115,6 +116,8 @@ async function boot() {
     }
     return;
   }
+
+  if (entities?.nodes) entityNameById = Object.fromEntries(entities.nodes.map((n) => [n.id, n.name]));
 
   renderDynamic();
   paintHistoryNote();

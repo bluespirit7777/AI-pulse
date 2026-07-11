@@ -29,8 +29,9 @@ export function renderTide(root, ranges) {
   if (history.length < MIN_DAYS) {
     root.innerHTML = `
       <div class="tide-collecting empty-state">
-        <b>The 30-day Tide is still filling.</b> It charts daily signal volume by
-        category, and only plots days actually collected — so far
+        <b>The 30-day Tide is still filling.</b> It charts how daily <b>operational</b>
+        AI activity changes by category — general commentary and opinion/analysis
+        are excluded. It only plots days actually collected — so far
         ${esc(String(history.length))} day${history.length === 1 ? '' : 's'}
         (${esc(String(depth))}d). It appears here once at least ${MIN_DAYS} days exist,
         and never draws history that wasn't recorded.
@@ -89,7 +90,7 @@ export function renderTide(root, ranges) {
     <div class="tide-legend">
       ${present.map((c) => `<span class="tide-key"><span class="tide-swatch" style="background:${CAT_COLOR[c]}"></span>${esc(CAT_LABEL[c] || c)}</span>`).join('')}
     </div>
-    <p class="tide-summary">Across ${esc(String(n))} collected day${n === 1 ? '' : 's'}, the busiest categories were ${esc(topCategories(days, present))}.</p>
+    <p class="tide-summary">Across ${esc(String(n))} collected day${n === 1 ? '' : 's'}, the busiest categories were ${esc(topCategories(days, present))}. <span class="tide-note">Operational categories only — general commentary and opinion/analysis are excluded.</span></p>
   `;
 }
 
