@@ -250,17 +250,22 @@
     transition:transform .24s cubic-bezier(.16,.84,.44,1);
   }
   .release-logo svg{width:18px;height:18px;display:block;}
-  .release-labtext{color:var(--ink-soft);}
-  .release-lab .asof{margin-left:auto;}
-  .release-card h4{font-family:var(--font-display);font-size:21px;font-weight:600;margin:0 0 8px;color:var(--deep);}
-  .release-card p{font-size:14px;color:var(--ink-soft);margin:0 0 12px;line-height:1.62;}
+  .release-labtext{color:var(--deep);font-size:15px;font-weight:700;letter-spacing:0;text-transform:none;display:flex;flex-direction:column;gap:1px;}
+  .release-org{color:var(--ink-soft);font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;}
   .release-list{margin:0;padding:0;list-style:none;}
   .release-list li{
-    font-size:13.5px;color:var(--ink-soft);padding:7px 0;border-top:1px dashed var(--border);
+    font-size:13.5px;color:var(--ink-soft);padding:9px 0;border-top:1px dashed var(--border);
     display:flex;justify-content:space-between;gap:10px;align-items:baseline;
   }
   .release-list li b{color:var(--ink);font-weight:600;}
-  .release-list .d{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);white-space:nowrap;}
+  .release-list .d{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);white-space:nowrap;flex-shrink:0;}
+  .release-item-main{display:inline-flex;align-items:baseline;gap:6px;min-width:0;}
+  .release-item-link{color:inherit;text-decoration:none;}
+  .release-item-link:hover b{color:var(--sea);text-decoration:underline;}
+  .release-yt-link{color:var(--coral);display:inline-flex;align-items:center;flex-shrink:0;}
+  .release-yt-link:hover{color:var(--deep);}
+  .release-yt-inline{color:var(--coral);display:inline-flex;align-items:center;margin-right:5px;transform:translateY(1px);}
+  .release-empty{color:var(--ink-dim);font-size:12.5px;line-height:1.6;border-top:none !important;padding-top:2px !important;}
 
   /* ---------- grids ---------- */
   .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
@@ -282,9 +287,9 @@
   .lb-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);margin-top:5px;}
 
   /* ---------- donut ---------- */
-  .donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;}
   .donut{
-    width:160px;height:160px;border-radius:50%;flex-shrink:0;position:relative;
+    width:160px;height:160px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;
     background:conic-gradient(
       var(--deep) 0% 53.9%,
       var(--sea) 53.9% 81.8%,
@@ -294,6 +299,15 @@
       var(--ink-dim) 98% 100%
     );
   }
+  .donut-tooltip{
+    position:absolute;pointer-events:none;z-index:5;
+    background:var(--panel-solid);border:1px solid var(--border-strong);border-radius:8px;
+    padding:6px 11px;font-family:var(--font-mono);font-size:12px;color:var(--ink);
+    box-shadow:0 4px 14px rgba(14,42,55,0.16);white-space:nowrap;
+    display:flex;align-items:center;gap:7px;
+  }
+  .donut-tooltip .donut-tt-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .donut-tooltip b{color:var(--deep);}
   .donut-label{
     position:absolute;inset:21%;border-radius:50%;background:var(--panel-solid);
     display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -554,7 +568,7 @@
         <h2 class="section-ribbon__title">Frontier releases</h2>
         <p class="section-ribbon__descriptor">New models &amp; features only — not general news</p>
       </div>
-      <p class="panel-note intro-note" style="margin:-6px 0 18px;">Actual product ships and feature launches only — opinion pieces, lawsuits, and personnel news are filtered out even when a headline uses the word "release."</p>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">The 3 frontier assistants — Claude, ChatGPT, Gemini — each with their 5 most recent qualifying releases from the last 60 days, newest first. Actual product ships and feature launches only — opinion pieces, lawsuits, and personnel news are filtered out even when a headline uses the word "release." Includes official lab YouTube uploads (▶).</p>
       <div class="release-grid" id="releases"></div>
     </section>
 
@@ -582,6 +596,7 @@
               <div class="donut-label"><div class="n">2.9B+</div><div class="l">MONTHLY VISITS</div></div>
             </div>
             <div class="legend" id="legend"></div>
+            <div class="donut-tooltip" id="donut-tooltip" role="status" aria-live="polite" hidden></div>
           </div>
           <div class="callout">
             <b>Fastest mover:</b> Claude's web traffic is up ~855% YoY (+228% in a single quarter) — the steepest growth curve of any major assistant. On Cloudflare's "actively chosen" ranking it now sits at <b>#2</b>, ahead of Gemini.
@@ -591,17 +606,28 @@
       </div>
     </section>
 
-    <!-- IMAGE + VIDEO AI -->
+    <!-- IMAGE + LOCAL AI + VIDEO AI -->
     <section id="sec-media" style="padding-top:8px;">
       <div class="grid-2">
 
-        <div class="panel">
-          <div class="panel-top">
-            <h3>Top 5 image AI</h3>
-            <span class="asof curated-asof">Curated</span>
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div class="panel">
+            <div class="panel-top">
+              <h3>Top 5 image AI</h3>
+              <span class="asof curated-asof">Curated</span>
+            </div>
+            <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
+            <div id="image-ai"></div>
           </div>
-          <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
-          <div id="image-ai"></div>
+
+          <div class="panel" id="sec-local-ai">
+            <div class="panel-top">
+              <h3>Top 5 local AI</h3>
+              <span class="asof curated-asof">Curated</span>
+            </div>
+            <div class="panel-note" style="margin-bottom:14px;">Best self-hostable / open-weight models by leaderboard placement &amp; real-world local-LLM adoption · bar length is ordinal, not a raw score · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/?open-weights=true" target="_blank" rel="noopener">Artificial Analysis (open weights)</a></div>
+            <div id="local-ai"></div>
+          </div>
         </div>
 
         <div class="panel">
@@ -622,7 +648,7 @@
         <h2 class="section-ribbon__title">Community pulse</h2>
         <p class="section-ribbon__descriptor">What people are saying about the top models</p>
       </div>
-      <p class="panel-note intro-note" style="margin:-6px 0 18px;">A model conversation map — bubble size is 30-day mention volume — plus real, topic-tagged excerpts. Select a model to read what people are actually saying, then filter by topic. Sourced from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a>, a sample of public developer discussion (not a sentiment score).</p>
+      <p class="panel-note intro-note" style="margin:-6px 0 18px;">A model conversation map — bubble size is validated public discussion volume, not raw keyword hits. Click a model to see what people are actually saying, arranged around it. Sourced from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a>, a sample of public developer discussion (not a sentiment score).</p>
       <div id="community"></div>
     </section>
 
@@ -677,35 +703,22 @@
       </div>
     </section>
 
-    <!-- LOCAL/OPEN + BREAKTHROUGHS -->
+    <!-- BREAKTHROUGHS -->
     <section id="sec-local">
-      <div class="grid-2">
-
-        <div class="panel">
-          <div class="panel-top">
-            <h3>Local &amp; open-weight feed</h3>
-            <span class="asof">Rolling</span>
-          </div>
-          <div class="panel-note" style="margin-bottom:6px;">Models you can self-host today — license per public model card</div>
-          <div id="feed"></div>
+      <div class="panel" id="sec-breakthrough">
+        <div class="panel-top">
+          <h3>Breakthrough signals</h3>
+          <span class="asof">Rolling</span>
         </div>
-
-        <div class="panel" id="sec-breakthrough">
-          <div class="panel-top">
-            <h3>Breakthrough signals</h3>
-            <span class="asof">Rolling</span>
-          </div>
-          <div class="panel-note" style="margin-bottom:6px;">Research moving from lab to headline</div>
-          <div id="breakthroughs" style="display:flex;flex-direction:column;gap:14px;margin-top:10px;"></div>
-        </div>
-
+        <div class="panel-note" style="margin-bottom:6px;">Research moving from lab to headline</div>
+        <div id="breakthroughs" style="display:flex;flex-direction:column;gap:14px;margin-top:10px;"></div>
       </div>
     </section>
 
   </div>
 
   <footer>
-    <div><b>Waves, river, tide, releases, open-weight feed, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds and Yahoo Finance — every item links to its original source. <b>Leaderboard, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
+    <div><b>Waves, river, tide, releases, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
     <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
     <div style="margin-top:8px;" id="footer-build" class="footer-build"></div>
   </footer>

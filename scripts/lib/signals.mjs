@@ -137,13 +137,35 @@ export function extractAction(text) {
 
 // Salient object tokens: domain nouns that identify WHAT an event is about,
 // plus multi-word proper names. "browser" is what links the two Atlas stories.
-const OBJECT_NOUNS = /\b(browser|chip|gpu|model|models|app|api|tool|agent|robot|humanoid|funding|ipo|lawsuit|copyright|license|privacy|studio|assistant|search|cloud|dataset|benchmark|voice|image|video|chatbot|silicon|foundry|datacenter|data center)\b/gi;
+// Split strong (genuinely identifying, safe to force a merge on their own —
+// "copyright" is what links the NYT/OpenAI pair) from weak (so generic that
+// nearly every AI product launch uses them — "model", "tool", "app" — and
+// must NOT by themselves justify merging two otherwise-unrelated stories; this
+// is what wrongly merged "Introducing Gemma 4 12B" with an unrelated "Claude
+// Fable 5" launch video, both merely containing the word "model").
+const OBJECT_NOUNS_STRONG = /\b(browser|chip|gpu|robot|humanoid|funding|ipo|lawsuit|copyright|license|privacy|studio|dataset|benchmark|silicon|foundry|datacenter|data center)\b/gi;
+const OBJECT_NOUNS_WEAK = /\b(model|models|app|api|tool|agent|assistant|search|cloud|voice|image|video|chatbot)\b/gi;
+function extractNouns(text, re) {
+  const objs = new Set();
+  const m = text.match(re) || [];
+  for (const w of m) objs.add(w.toLowerCase().replace('data center', 'datacenter'));
+  return objs;
+}
 export function salientObjects(title, desc = '') {
   const objs = new Set();
   for (const p of properNounPhrases(title)) objs.add(p);
   const text = `${title} ${desc}`;
-  const m = text.match(OBJECT_NOUNS) || [];
-  for (const w of m) objs.add(w.toLowerCase().replace('data center', 'datacenter'));
+  for (const o of extractNouns(text, OBJECT_NOUNS_STRONG)) objs.add(o);
+  for (const o of extractNouns(text, OBJECT_NOUNS_WEAK)) objs.add(o);
+  return objs;
+}
+// Distinctive-only variant for the event-relation forced-merge decision:
+// proper-noun phrases + strong nouns, excluding generic ones a weak overlap
+// could trivially satisfy across unrelated stories.
+function distinctiveObjects(title, desc = '') {
+  const objs = new Set();
+  for (const p of properNounPhrases(title)) objs.add(p);
+  for (const o of extractNouns(`${title} ${desc}`, OBJECT_NOUNS_STRONG)) objs.add(o);
   return objs;
 }
 function objectOverlap(a, b) {
@@ -154,12 +176,12 @@ function objectOverlap(a, b) {
 }
 
 // Same-event verdict from action + object agreement. Returns:
-//   match    — same action + shared object → merge even with low text overlap
+//   match    — same action + shared DISTINCTIVE object → merge even with low text overlap
 //   conflict — different actions + weak object overlap → different events, block
 export function eventRelation(x, y) {
   const ax = extractAction(`${x.title} ${x.desc || ''}`);
   const ay = extractAction(`${y.title} ${y.desc || ''}`);
-  const ov = objectOverlap(salientObjects(x.title, x.desc), salientObjects(y.title, y.desc));
+  const ov = objectOverlap(distinctiveObjects(x.title, x.desc), distinctiveObjects(y.title, y.desc));
   const sameAction = ax && ay && ax === ay;
   const diffAction = ax && ay && ax !== ay;
   return {

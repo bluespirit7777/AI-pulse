@@ -134,3 +134,24 @@ export function dailyChange(series, livePrice = null) {
     reason: null,
   };
 }
+
+// Trading-day lookbacks for the drawer's Week/Month change figures — calendar
+// weeks/months don't map to a fixed bar count, so these are the conventional
+// trading-day approximations (5 ≈ 1 week, 21 ≈ 1 month).
+export const WEEK_TRADING_DAYS = 5;
+export const MONTH_TRADING_DAYS = 21;
+
+// % change over `lookbackDays` VALID trading bars — same last-two-bars style
+// as dailyChange, generalized to a longer window. Returns null (not a
+// fabricated number) when there isn't yet enough history for the window,
+// which naturally self-heals as more daily bars accumulate.
+export function periodChange(series, lookbackDays, livePrice = null) {
+  const valid = (series || []).filter((b) => b && b.close != null && Number.isFinite(b.close) && b.close > 0);
+  if (valid.length <= lookbackDays) return { changePct: null, reason: 'insufficient history' };
+  const lastBar = valid[valid.length - 1];
+  const liveOk = livePrice != null && Number.isFinite(livePrice) && livePrice > 0;
+  const latest = liveOk && Math.abs(livePrice - lastBar.close) / lastBar.close > 1e-6 ? livePrice : lastBar.close;
+  const prev = valid[valid.length - 1 - lookbackDays].close;
+  if (prev === 0) return { changePct: null, reason: 'zero prev close' };
+  return { changePct: ((latest - prev) / prev) * 100, reason: null };
+}

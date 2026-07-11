@@ -16,8 +16,12 @@ const REL_STYLE = {
   competes: { stroke: 'var(--coral)', dash: '2 5', label: 'competes with' },
 };
 const DIM = 0.10, BRIGHT = 0.9;
+// core fill = direction at a glance: green up, orange down, slate flat.
+const CORE_COLOR = { up: '#1f7a4d', down: '#d9760a', flat: '#5b6b74' };
 const fmtUSD = (n) => (n == null ? '—' : n >= 1e12 ? '$' + (n / 1e12).toFixed(2) + 'T' : n >= 1e9 ? '$' + (n / 1e9).toFixed(1) + 'B' : '$' + (n / 1e6).toFixed(0) + 'M');
 const fmtNum = (n) => (n == null ? '—' : Number(n).toLocaleString());
+const fmtPct = (n) => (n == null ? '—' : (n >= 0 ? '+' : '') + n.toFixed(2) + '%');
+const pctClass = (n) => (n == null ? '' : n >= 0 ? 'stock-up' : 'stock-down');
 
 export function createStockNetwork(root, net) {
   if (!root) return;
@@ -89,10 +93,11 @@ export function createStockNetwork(root, net) {
     const ringColor = n.direction === 'up' ? '#1f7a4d' : n.direction === 'down' ? 'var(--coral)' : 'var(--ink-dim)';
     const ringW = 2 + Math.min(Math.abs(n.changePct || 0), 10) / 10 * 3;
     const glowNorm = clamp(((n.relVolume ?? 1) - 0.8) / 1.2, 0, 1);
+    const coreColor = CORE_COLOR[n.direction] || CORE_COLOR.flat;
     g.innerHTML = `
       <circle class="snet-glow" r="${(p.r + 4 + glowNorm * 16).toFixed(1)}" fill="var(--sea)" opacity="${(glowNorm * 0.35).toFixed(3)}"></circle>
       <circle class="snet-ring" r="${(p.r + 3).toFixed(1)}" fill="none" stroke="${ringColor}" stroke-width="${ringW.toFixed(1)}"></circle>
-      <circle class="snet-core" r="${p.r.toFixed(1)}" fill="var(--panel-solid)" stroke="var(--deep)" stroke-width="1.5"></circle>
+      <circle class="snet-core" r="${p.r.toFixed(1)}" fill="${coreColor}" stroke="var(--deep)" stroke-width="1.5"></circle>
       <text class="snet-ticker" text-anchor="middle" dy="-1">${esc(n.t)}</text>
       <text class="snet-dir" text-anchor="middle" dy="11">${n.direction === 'up' ? '▲' : n.direction === 'down' ? '▼' : '—'}</text>`;
     gNodes.appendChild(g);
@@ -208,7 +213,9 @@ export function createStockNetwork(root, net) {
         <h3 id="snet-drawer-title">${esc(n.n)} <span class="drawer-org">${esc(n.t)}</span></h3>
         <div class="snet-facts">
           <span><b>Price</b>${n.price != null ? '$' + n.price.toFixed(2) : '—'}</span>
-          <span class="${(n.changePct || 0) >= 0 ? 'stock-up' : 'stock-down'}"><b>Day change</b>${n.changePct != null ? (n.changePct >= 0 ? '+' : '') + n.changePct.toFixed(2) + '%' : '—'}</span>
+          <span class="${pctClass(n.changePct)}"><b>Day change</b>${fmtPct(n.changePct)}</span>
+          <span class="${pctClass(n.weekChangePct)}"><b>Week change</b>${fmtPct(n.weekChangePct)}</span>
+          <span class="${pctClass(n.monthChangePct)}"><b>Month change</b>${fmtPct(n.monthChangePct)}</span>
           <span><b>Market cap</b>${fmtUSD(n.marketCap)}</span>
           <span><b>Latest volume</b>${fmtNum(n.volume)}</span>
           <span><b>Dollar volume</b>${fmtUSD(n.dollarVolume)}</span>

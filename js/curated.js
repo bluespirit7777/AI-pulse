@@ -4,7 +4,7 @@
 //
 // Update cadence: edit here, commit. `asOf` drives the date chip shown per panel.
 
-export const CURATED_ASOF = 'Jul 09 2026';
+export const CURATED_ASOF = 'Jul 11 2026';
 
 // Editorial reception summaries for the top models, keyed to data.community[].key.
 // A computed sentiment score has no free live source, so this qualitative read
@@ -21,12 +21,12 @@ export const modelReception = {
 };
 
 export const leaderboard = [
-  { rank: 1, model: 'Claude Opus 4.8', org: 'Anthropic', w: 100, stat: 'Tops Intelligence Index (61.4)', note: 'SWE-bench Pro 69.2% · computer-use 84% on Online-Mind2Web' },
-  { rank: 2, model: 'GPT-5.5', org: 'OpenAI', w: 92, stat: 'Narrowly edged on the index', note: 'Strong agentic + math performance across evals' },
-  { rank: 3, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', w: 85, stat: 'GPQA Diamond 94.3%', note: 'Leads consumer models on science reasoning · 2M-token context' },
-  { rank: 4, model: 'Grok 4 / 4.5', org: 'xAI', w: 76, stat: '2M-token context', note: '4.5 now in private beta at SpaceX & Tesla' },
-  { rank: 5, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 68, stat: 'Top-ranked Chinese model', note: 'Highest index placement of any open/Chinese-origin model' },
-  { rank: 6, model: 'DeepSeek V3.2', org: 'DeepSeek', w: 60, stat: 'Best value tier', note: 'Speciale variant won gold at IMO, IOI & ICPC 2026' },
+  { rank: 1, model: 'Claude Opus 4.8', org: 'Anthropic', w: 100, stat: 'Tops Intelligence Index', note: 'Leads agentic coding + long-context; Fable 5 is the faster sibling below it' },
+  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Newest OpenAI flagship', note: 'Sol tuning sharpens reasoning + agentic tool use; broadest mainstream reach' },
+  { rank: 3, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 88, stat: 'Best science + multimodal', note: 'Native computer-use in 3.5 Flash · very long context across Search & Workspace' },
+  { rank: 4, model: 'Claude Fable 5', org: 'Anthropic', w: 82, stat: 'Fast frontier tier', note: 'Opus-class quality at higher speed/lower cost; a developer default for iteration' },
+  { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 74, stat: '2M-token context', note: 'Competitive on some benchmarks; reception coloured by X-platform controversy' },
+  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 66, stat: 'Top open/Chinese model', note: 'Highest index placement of any open-origin model' },
 ];
 
 export const imageAI = [
@@ -35,6 +35,16 @@ export const imageAI = [
   { rank: 3, model: 'Seedream 4.0', org: 'ByteDance', w: 82, stat: 'Top open-access contender', note: 'High-fidelity photoreal output; strong on Asian-language prompts' },
   { rank: 4, model: 'Midjourney v7', org: 'Midjourney', w: 74, stat: 'Aesthetic favorite', note: 'Leads on artistic style and coherence; community-driven tuning' },
   { rank: 5, model: 'FLUX1.1 Pro', org: 'Black Forest Labs', w: 66, stat: 'Open-weight leader', note: 'Self-hostable; the default base for many fine-tuned pipelines' },
+];
+
+// Top self-hostable / open-weight models — the "run it yourself today" tier.
+// Rank blends open-model leaderboards + real-world local-LLM adoption. Ordinal.
+export const localAI = [
+  { rank: 1, model: 'Qwen 3.7 (235B/A22B)', org: 'Alibaba', w: 100, stat: 'Best all-round self-hostable', note: 'Apache-2.0 · the local-LLM community favourite for coding + agents' },
+  { rank: 2, model: 'DeepSeek V3.2', org: 'DeepSeek', w: 90, stat: 'Best value / reasoning', note: 'MIT-licensed weights · strong math + code at low inference cost' },
+  { rank: 3, model: 'Llama 4 Maverick', org: 'Meta', w: 80, stat: 'Broadest ecosystem', note: 'Llama community licence · the default base for fine-tuned pipelines' },
+  { rank: 4, model: 'GLM-4.6', org: 'Zhipu AI', w: 72, stat: 'Strong agentic open model', note: 'Open weights · competitive tool-use and coding for its size' },
+  { rank: 5, model: 'Mistral Large 3', org: 'Mistral AI', w: 64, stat: 'Efficient European option', note: 'Open weights · solid multilingual quality on modest hardware' },
 ];
 
 export const videoAI = [

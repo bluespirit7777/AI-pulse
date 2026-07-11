@@ -84,6 +84,7 @@ browser). Node size = market cap, glow = relative volume, ring = day change.
   "marketCapNote": "Market cap = curated shares outstanding × live price (shares update quarterly).",
   "layers": [ { "id": 1, "name": "Platforms & software" }, … ],   // 1 surface → 4 deep
   "nodes": [ { "t": "NVDA", "n": "…", "netLayer": 3, "price": …, "changePct": …,
+               "weekChangePct": …, "monthChangePct": …,   // 5/21 trading days back; null until enough history
                "direction": "up|flat|down", "marketCap": …, "volume": …,
                "dollarVolume": …, "avg20Volume": …, "relVolume": …, "url": "…" } ],
   "correlations": [ { "a": "TSM", "b": "AMD", "r": 0.78, "n": 30 } ],  // |r|>=0.5, price returns

@@ -43,6 +43,26 @@ async function main() {
     if (!isArr(data[key])) fail(`${key} must be an array`);
   }
 
+  // releases: exactly 3 fixed brand cards (Claude/ChatGPT/Gemini), always
+  // present even with zero qualifying releases; each item needs its own link.
+  const RELEASE_LABS = ['anthropic', 'openai', 'google'];
+  if (isArr(data.releases)) {
+    if (data.releases.length !== RELEASE_LABS.length) fail(`releases must have exactly ${RELEASE_LABS.length} brand cards, got ${data.releases.length}`);
+    const seenLabs = new Set();
+    data.releases.forEach((r, i) => {
+      if (!RELEASE_LABS.includes(r.logoKey)) fail(`releases[${i}].logoKey unexpected: ${r.logoKey}`);
+      if (seenLabs.has(r.logoKey)) fail(`releases[${i}].logoKey duplicated: ${r.logoKey}`);
+      seenLabs.add(r.logoKey);
+      if (!isArr(r.items)) fail(`releases[${i}].items must be an array`);
+      if (r.items && r.items.length > 5) fail(`releases[${i}].items must be <= 5`);
+      (r.items || []).forEach((it, j) => {
+        if (!isStr(it.h)) fail(`releases[${i}].items[${j}].h missing`);
+        if (!isStr(it.url)) fail(`releases[${i}].items[${j}].url missing`);
+      });
+    });
+    for (const lab of RELEASE_LABS) if (!seenLabs.has(lab)) fail(`releases is missing the fixed brand: ${lab}`);
+  }
+
   // signals
   (data.signals || []).forEach((s, i) => {
     if (!isStr(s.title)) fail(`signals[${i}].title missing`);
@@ -173,6 +193,8 @@ async function main() {
       if (n.marketCap != null && !isNum(n.marketCap)) fail(`stock-network node[${i}].marketCap must be number or null`);
       if (n.relVolume != null && !isNum(n.relVolume)) fail(`stock-network node[${i}].relVolume must be number or null`);
       if (!['up', 'down', 'flat'].includes(n.direction)) fail(`stock-network node[${i}].direction invalid`);
+      if (n.weekChangePct != null && !isNum(n.weekChangePct)) fail(`stock-network node[${i}].weekChangePct must be number or null`);
+      if (n.monthChangePct != null && !isNum(n.monthChangePct)) fail(`stock-network node[${i}].monthChangePct must be number or null`);
     });
     (net.correlations || []).forEach((c, i) => {
       if (!tickers.has(c.a) || !tickers.has(c.b)) fail(`stock-network correlation[${i}] references unknown ticker`);

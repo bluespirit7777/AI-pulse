@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import {
   computeReturns, pearson, correlationPairs, correlationsForTicker,
   relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT,
+  periodChange, WEEK_TRADING_DAYS, MONTH_TRADING_DAYS,
 } from '../scripts/lib/stocks.mjs';
 
 const bars = (...closes) => closes.map((c, i) => ({ date: `2026-07-${String(i + 1).padStart(2, '0')}`, close: c, volume: 1000 }));
@@ -82,6 +83,32 @@ test('dailyChange: large real move is flagged for review, not rejected', () => {
 test('dailyChange: split-like halving flagged for review', () => {
   const r = dailyChange(bars(200, 100)); // -50% (possible unadjusted split artifact)
   assert.equal(r.review, true);
+});
+
+test('periodChange: week/month change from N trading bars back, not the range start', () => {
+  // 25 daily bars, prices climbing 100 -> 124; week (5 bars) and month (21 bars)
+  // must each compare against their OWN lookback point, not the series start.
+  const closes = Array.from({ length: 25 }, (_, i) => 100 + i);
+  const series = bars(...closes);
+  const week = periodChange(series, WEEK_TRADING_DAYS); // last=124, 5-back=119
+  assert.ok(Math.abs(week.changePct - ((124 - 119) / 119) * 100) < 1e-9);
+  const month = periodChange(series, MONTH_TRADING_DAYS); // last=124, 21-back=103
+  assert.ok(Math.abs(month.changePct - ((124 - 103) / 103) * 100) < 1e-9);
+});
+
+test('periodChange: insufficient history returns null, never a fabricated fraction', () => {
+  const series = bars(...Array.from({ length: 10 }, (_, i) => 100 + i));
+  assert.equal(periodChange(series, MONTH_TRADING_DAYS).changePct, null);
+  assert.equal(periodChange(series, MONTH_TRADING_DAYS).reason, 'insufficient history');
+});
+
+test('periodChange: live price used as the latest point only when it differs from the last bar', () => {
+  const closes = Array.from({ length: 10 }, (_, i) => 100 + i); // ends at 109
+  const series = bars(...closes);
+  const withLive = periodChange(series, WEEK_TRADING_DAYS, 112); // live differs from last bar (109)
+  assert.ok(Math.abs(withLive.changePct - ((112 - 104) / 104) * 100) < 1e-9);
+  const withoutLive = periodChange(series, WEEK_TRADING_DAYS, 109); // live == last bar
+  assert.ok(Math.abs(withoutLive.changePct - ((109 - 104) / 104) * 100) < 1e-9);
 });
 
 test('computeReturns: simple daily returns, skips gaps', () => {

@@ -284,43 +284,65 @@ body.drawer-open { overflow: hidden; }
 .tide-summary { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); margin: 12px 0 0; line-height: 1.6; }
 .tide-note { color: var(--ink-dim); }
 
-/* ---------- community pulse (conversation map + comments) ---------- */
-.cm-map-wrap { background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px; padding: 8px 10px; box-shadow: 0 4px 16px rgba(18,48,62,.06); }
-.cm-map { display: block; width: 100%; height: auto; }
+/* ---------- community pulse (radial conversation stage) ---------- */
+/* A much bigger interactive stage: model bubbles sit near the top; clicking
+   one fans its representative comments out as cards around it, connected by
+   thin lines drawn in the same SVG. No separate list panel below. */
+.cm-stage-wrap {
+  position: relative; width: 100%; aspect-ratio: 900 / 560;
+  background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(18,48,62,.06); overflow: hidden;
+}
+.cm-stage { display: block; width: 100%; height: 100%; }
 .cm-bubble { cursor: pointer; }
 .cm-bubble:focus { outline: none; }
-.cm-bub-core { transition: opacity .2s, r .3s; opacity: .82; }
+.cm-bub-core { transition: opacity .2s, r .3s, stroke-width .2s; opacity: .85; }
 .cm-bubble:hover .cm-bub-core, .cm-bubble:focus .cm-bub-core { opacity: 1; }
-.cm-bubble.cm-selected .cm-bub-core { opacity: 1; stroke: var(--deep); stroke-width: 3; }
+.cm-bubble.cm-selected .cm-bub-core { opacity: 1; stroke: var(--deep); stroke-width: 3.5; }
+.cm-bubble.cm-dimmed .cm-bub-core { opacity: .3; }
 @media (prefers-reduced-motion: no-preference) { .cm-bub-pulse { animation: cmPulse 3s ease-in-out infinite; } }
-@keyframes cmPulse { 0%,100% { opacity: .82; } 50% { opacity: 1; } }
-.cm-bub-label { font-family: var(--font-body); font-weight: 700; font-size: 12px; fill: #fff; paint-order: stroke; }
-.cm-bub-count { font-family: var(--font-mono); font-size: 10px; fill: var(--ink-dim); }
+@keyframes cmPulse { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
+.cm-bub-label { font-family: var(--font-body); font-weight: 700; font-size: 13px; fill: #fff; paint-order: stroke; }
+.cm-bub-count { font-family: var(--font-mono); font-size: 10.5px; fill: var(--ink-dim); }
+.cm-connector { fill: none; stroke: var(--border-strong); stroke-width: 1.4; stroke-dasharray: 3 4; opacity: .8; }
 
-.cm-detail { margin-top: 16px; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px; padding: 18px 22px; box-shadow: 0 4px 16px rgba(18,48,62,.06); }
-.cm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
-.cm-model { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--deep); }
+/* petals: real HTML so excerpt text wraps normally; positioned in the same
+   percentage space as the SVG viewBox (the wrap's aspect-ratio keeps the two
+   coordinate systems aligned regardless of rendered pixel size). */
+.cm-petals { position: absolute; inset: 0; pointer-events: none; }
+.cm-petal {
+  position: absolute; width: min(210px, 30vw); transform: translate(-50%, 0);
+  background: var(--panel-solid); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 12px; box-shadow: 0 6px 18px rgba(18,48,62,.14);
+  pointer-events: auto; animation: cmPetalIn .22s ease-out both;
+}
+@keyframes cmPetalIn { from { opacity: 0; transform: translate(-50%, -6px) scale(.94); } to { opacity: 1; transform: translate(-50%, 0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .cm-petal { animation: none; } }
+.cm-petal-excerpt { font-size: 12.5px; color: var(--ink); line-height: 1.5; margin: 0 0 6px; }
+.cm-petal-meta { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); display: flex; justify-content: space-between; gap: 6px; align-items: baseline; }
+.cm-petal-meta a { color: var(--sea); text-decoration: none; }
+.cm-petal-meta a:hover { text-decoration: underline; }
+.cm-petal-empty { position: absolute; top: 52%; left: 50%; transform: translate(-50%, 0); font-family: var(--font-mono); font-size: 12px; color: var(--ink-dim); text-align: center; width: 220px; pointer-events: none; }
+
+.cm-info { margin-top: 14px; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.06); }
+.cm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.cm-model { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--deep); }
 .cm-org { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
 .cm-stats { display: flex; gap: 14px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); }
 .cm-stats b { color: var(--teal); }
-.cm-limited { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); background: color-mix(in srgb, var(--warn, #c98a1a) 12%, transparent); border: 1px solid color-mix(in srgb, var(--warn, #c98a1a) 35%, transparent); border-radius: 8px; padding: 6px 10px; margin: 0 0 12px; line-height: 1.5; }
-.cm-themes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-.cm-theme { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); background: var(--panel-solid); border: 1px solid var(--border); border-radius: 18px; padding: 4px 11px; cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
-.cm-theme:hover { border-color: var(--border-strong); color: var(--deep); }
-.cm-theme.active { background: var(--deep); color: #fff; border-color: var(--deep); }
-.cm-theme-n { opacity: .7; }
-.cm-comments { display: flex; flex-direction: column; gap: 12px; }
-.cm-comment { margin: 0; padding: 12px 14px; background: var(--foam); border-radius: 10px; border-left: 3px solid var(--sea); }
-.cm-comment-theme { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--sea); }
-.cm-excerpt { font-size: 14px; color: var(--ink); line-height: 1.55; margin: 4px 0 8px; }
-.cm-comment-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
-.cm-threads { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
-.cm-threads-h { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); }
+.cm-limited { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); background: color-mix(in srgb, var(--warn, #c98a1a) 12%, transparent); border: 1px solid color-mix(in srgb, var(--warn, #c98a1a) 35%, transparent); border-radius: 8px; padding: 6px 10px; margin: 0 0 8px; line-height: 1.5; }
+.cm-threads { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; }
+.cm-threads-h { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); width: 100%; }
 .cm-thread { font-family: var(--font-body); font-weight: 600; font-size: 13px; color: var(--ink); text-decoration: none; }
 .cm-thread:hover { color: var(--teal); text-decoration: underline; }
 .cm-thread-n { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); }
 .cm-foot { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); line-height: 1.6; margin: 12px 2px 0; }
-@media (max-width: 560px) { .cm-map { min-height: 150px; } .cm-bub-label { font-size: 15px; } }
+@media (max-width: 640px) {
+  .cm-stage-wrap { aspect-ratio: 420 / 520; }
+  .cm-petal { width: min(150px, 42vw); }
+  .cm-petal-excerpt { font-size: 11.5px; }
+  .cm-bub-label { font-size: 11px; }
+}
 
 /* ================= section ribbon (reusable heading system) =================
    [ SOLID TITLE BOX ][ TRANSLUCENT DESCRIPTOR BOX ] — one component for all
@@ -378,7 +400,9 @@ body.drawer-open { overflow: hidden; }
 
 /* ---------- ocean map compact intro (encoding legend) ---------- */
 .map-intro-lead {
-  font-family: var(--font-display); font-size: clamp(16px, 2vw, 20px); color: var(--deep);
+  /* 20% larger and ~50% darker than the base --deep, keeping the thin white
+     outline so it stays legible directly on the ocean photo. */
+  font-family: var(--font-display); font-size: clamp(19px, 2.4vw, 24px); color: #0E252D;
   margin: 0 0 10px; text-shadow: var(--text-outline); max-width: 52ch;
 }
 .map-encoding { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
@@ -422,8 +446,8 @@ body.drawer-open { overflow: hidden; }
 .snet-node:focus { outline: none; }
 .snet-node:focus .snet-core, .snet-node:hover .snet-core { stroke: var(--teal); stroke-width: 3; }
 .snet-node.snet-selected .snet-core { stroke: var(--teal); stroke-width: 3.5; }
-.snet-ticker { font-family: var(--font-body); font-weight: 700; font-size: 12px; fill: var(--deep); paint-order: stroke; stroke: var(--panel-solid); stroke-width: 3px; stroke-linejoin: round; }
-.snet-dir { font-family: var(--font-mono); font-size: 9px; fill: var(--ink-dim); }
+.snet-ticker { font-family: var(--font-body); font-weight: 700; font-size: 12px; fill: #fff; paint-order: stroke; stroke: rgba(14,42,55,0.45); stroke-width: 2.5px; stroke-linejoin: round; }
+.snet-dir { font-family: var(--font-mono); font-size: 9px; fill: rgba(255,255,255,0.85); }
 .snet-conn path { transition: opacity .25s, stroke-width .25s; }
 .snet-corr-label { font-family: var(--font-mono); font-size: 11px; fill: var(--deep); paint-order: stroke; stroke: var(--panel-solid); stroke-width: 3px; transition: opacity .2s; }
 .snet-glow { transition: r .4s, opacity .4s; }

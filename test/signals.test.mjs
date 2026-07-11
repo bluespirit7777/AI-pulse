@@ -394,6 +394,22 @@ test('clustering KEEPS GPT-5.6 launch and Codex/ChatGPT-Work separate (different
   assert.equal(merged.length, 2, 'different product announcements must not merge');
 });
 
+test('clustering KEEPS two different launches from different companies separate even when both share only generic "model" wording', () => {
+  // Real bug: both "Introducing X" launch headlines extract action=launch and
+  // both mention the word "model" — a weak, ubiquitous noun that must not by
+  // itself force a merge of two unrelated products from unrelated companies.
+  const items = [
+    mkItem('Introducing Gemma 4 12B: a unified, encoder-free multimodal model',
+      'Google DeepMind unveils Gemma 4, its latest open multimodal model.',
+      '2026-07-08T10:00:00Z', 'Google DeepMind', 'product'),
+    mkItem('Introducing Claude Fable 5',
+      'Anthropic introduces Claude Fable 5, a faster, more affordable model.',
+      '2026-07-08T11:00:00Z', 'Anthropic (YouTube)', 'product'),
+  ];
+  const merged = dedupeMerge(items, { threshold: 0.34, nodes: REAL_ENTITIES });
+  assert.equal(merged.length, 2, 'different companies\' launches sharing only the generic word "model" must not merge');
+});
+
 test('eventRelation: conflict on different actions, match on same action + shared object', () => {
   const launch = { title: 'OpenAI launches GPT-5.6', desc: '', date: new Date() };
   const shutdown = { title: 'OpenAI is shutting down its browser', desc: '', date: new Date() };
@@ -401,6 +417,10 @@ test('eventRelation: conflict on different actions, match on same action + share
   const a = { title: 'OpenAI shutting down Atlas browser', desc: '', date: new Date() };
   const b = { title: 'The ChatGPT browser is dead', desc: 'shutting it down', date: new Date() };
   assert.equal(eventRelation(a, b).match, true);
+  // generic shared noun ("model") must NOT force a match between unrelated launches
+  const gemma = { title: 'Introducing Gemma 4 12B: a unified, encoder-free multimodal model', desc: '', date: new Date() };
+  const fable = { title: 'Introducing Claude Fable 5', desc: 'a faster, more affordable model', date: new Date() };
+  assert.equal(eventRelation(gemma, fable).match, false);
 });
 
 test('clusterScore gates structural signals behind a minimum content-overlap floor', () => {

@@ -27,7 +27,7 @@ import {
   isValidatedMention,
   TOPICS,
 } from './lib/signals.mjs';
-import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT } from './lib/stocks.mjs';
+import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT, periodChange, WEEK_TRADING_DAYS, MONTH_TRADING_DAYS } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -225,6 +225,9 @@ const LAB_KEYWORDS = {
 };
 const COMPANY_TAG = { anthropic: 'ANTHROPIC', openai: 'OPENAI', google: 'GOOGLE', meta: 'META', xai: 'XAI' };
 const LAB_NAMES = { anthropic: 'Anthropic · Claude', openai: 'OpenAI · ChatGPT', google: 'Google · Gemini', meta: 'Meta · AI', xai: 'xAI · Grok' };
+// Frontier Releases always shows exactly these 3 brands — see the release-
+// building block in main() for why.
+const RELEASE_LABS = ['anthropic', 'openai', 'google'];
 
 function detectLab(text) {
   for (const [key, re] of Object.entries(LAB_KEYWORDS)) if (re.test(text)) return key;
@@ -407,9 +410,14 @@ function buildStockNetwork(quotes, metaByTicker, now) {
     const relVol = relativeVolume(vols, 20);
     const avg20 = average((q.series || []).slice(-21, -1).map((r) => r.volume));
     const marketCap = meta.shares != null && q.price != null ? meta.shares * 1e9 * q.price : null;
+    // week/month change for the drawer — null (not fabricated) until enough
+    // trading-day history has accumulated for that lookback.
+    const weekChangePct = periodChange(q.series, WEEK_TRADING_DAYS, q.price).changePct;
+    const monthChangePct = periodChange(q.series, MONTH_TRADING_DAYS, q.price).changePct;
     return {
       t: q.t, n: q.n, layer: q.layer, netLayer: meta.netLayer ?? 2, url: q.url, signal: q.signal,
       price: q.price, changePct: q.changePct, changeReview: !!q.changeReview, direction: direction(q.changePct),
+      weekChangePct, monthChangePct,
       marketCap, volume: q.volume ?? null,
       dollarVolume: q.volume != null && q.price != null ? q.volume * q.price : null,
       avg20Volume: avg20, relVolume: relVol,
@@ -486,32 +494,45 @@ async function main() {
   // 5) derive the existing detailed sections from the same merged stream —
   //    every section reads the same underlying clusters, so a story never
   //    appears in one place miscategorized relative to another.
-  const releasesByLab = {};
+  //
+  //    Frontier Releases always shows exactly these 3 brands (Claude/ChatGPT/
+  //    Gemini), each with its up to 5 most-recent qualifying releases within
+  //    the 60-day pool — never collapsed to whichever lab happened to publish
+  //    most recently, and never silently dropped if a lab has zero releases
+  //    right now (the card still renders, with an honest empty state).
+  const releasesByLab = Object.fromEntries(RELEASE_LABS.map((l) => [l, []]));
   const feedRows = [];
   const breakthroughs = [];
   const wire = [];
   for (const it of merged) {
     const lab = detectLab(`${it.title} ${it.desc}`);
-    if (lab && isProductRelease(it.title, it.desc)) { (releasesByLab[lab] ||= []).push(it); continue; }
+    if (lab && RELEASE_LABS.includes(lab) && isProductRelease(it.title, it.desc)) { releasesByLab[lab].push(it); continue; }
     if (it.category === 'opensource') { feedRows.push(it); continue; }
     if (it.category === 'research') { breakthroughs.push(it); continue; }
     wire.push({ ...it, lab });
   }
 
-  const releases = Object.entries(releasesByLab)
-    .filter(([, l]) => l.length)
-    // every lab with a qualifying release today gets a card — a big multi-lab
-    // release day should never get truncated to an arbitrary top-3
-    .map(([lab, list]) => {
-      const top = list[0];
-      return {
-        lab: LAB_NAMES[lab] || lab, logoKey: lab, date: shortDate(top.date),
-        h: truncate(top.title, 90), p: truncate(top.desc, 220) || top.title,
-        items: list.slice(0, 3).map((it) => ({ n: truncate(it.title, 50), d: shortDate(it.date), note: it.sourceName })),
-        url: top.link, sourceName: top.sourceName, sourceCount: top.sourceCount,
-        verification: top.verification, impact: top.impact,
-      };
-    });
+  const releases = RELEASE_LABS.map((lab) => {
+    const list = releasesByLab[lab].slice().sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
+    return {
+      lab: LAB_NAMES[lab] || lab, logoKey: lab,
+      items: list.map((it) => {
+        // Surface the official YouTube upload distinctly: either the whole
+        // release IS the video (its own canonical link — the video-native
+        // case), or a video merged alongside a separate text source reporting
+        // the same event, in which case it gets its own secondary ▶ link.
+        const video = it.sources.find((s) => /\(YouTube\)/.test(s.sourceName || ''));
+        const isVideo = !!video && video.link === it.link;
+        return {
+          h: truncate(it.title, 90), d: shortDate(it.date), url: it.link,
+          isVideo,
+          videoUrl: video && !isVideo ? video.link : null,
+          sourceName: it.sourceName, sourceCount: it.sourceCount,
+          verification: it.verification, impact: it.impact,
+        };
+      }),
+    };
+  });
 
   const wireCards = wire.slice(0, 8).map((it) => ({
     org: it.lab ? COMPANY_TAG[it.lab] : 'AI WIRE', logoKey: it.lab || 'other', date: shortDate(it.date),

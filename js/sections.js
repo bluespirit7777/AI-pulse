@@ -13,6 +13,13 @@ const LOGO = {
   other: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/></svg>`,
 };
 const ACCENT = { anthropic: 'var(--coral)', openai: 'var(--deep)', google: 'var(--sea)', meta: 'var(--ink-soft)', xai: 'var(--ink-soft)', policy: 'var(--sand)', other: 'var(--sand)' };
+// Frontier Releases shows exactly these 3 brands, always, in this order.
+const RELEASE_BRAND = {
+  anthropic: { name: 'Claude', org: 'Anthropic' },
+  openai: { name: 'ChatGPT', org: 'OpenAI' },
+  google: { name: 'Gemini', org: 'Google DeepMind' },
+};
+const YT_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true"><path d="M9.5 7.5v9l8-4.5-8-4.5Z"/></svg>`;
 
 const setHTML = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
 
@@ -32,10 +39,56 @@ function rankRows(rows) {
     </div>`).join('');
 }
 
+// Hovering the donut shows which AI a wedge belongs to — the conic-gradient
+// has no per-wedge DOM element, so the wedge is found by converting the
+// cursor angle (clockwise from 12 o'clock, matching CSS conic-gradient) into
+// a cumulative-percent lookup against the same marketShare array that drew
+// the gradient, so tooltip and wedge can never disagree.
+function segmentAtPct(pct) {
+  let acc = 0;
+  for (const row of C.marketShare) {
+    const start = acc;
+    acc += row.pct;
+    if (pct < acc || row === C.marketShare[C.marketShare.length - 1]) return { ...row, start, end: acc };
+  }
+  return null;
+}
+
+function wireDonutTooltip() {
+  const donut = document.getElementById('donut');
+  const wrap = donut?.closest('.donut-wrap');
+  const tip = document.getElementById('donut-tooltip');
+  if (!donut || !wrap || !tip || donut.dataset.tooltipWired) return;
+  donut.dataset.tooltipWired = '1';
+  const label = donut.querySelector('.donut-label');
+
+  function onMove(e) {
+    const rect = donut.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2, cy = rect.top + rect.height / 2;
+    const dx = e.clientX - cx, dy = e.clientY - cy;
+    const dist = Math.hypot(dx, dy);
+    const outerR = rect.width / 2;
+    const innerR = label ? label.getBoundingClientRect().width / 2 : outerR * 0.42;
+    if (dist > outerR || dist < innerR) { tip.hidden = true; return; }
+    let angle = Math.atan2(dx, -dy) * (180 / Math.PI); // clockwise from 12 o'clock
+    if (angle < 0) angle += 360;
+    const seg = segmentAtPct((angle / 360) * 100);
+    if (!seg) { tip.hidden = true; return; }
+    tip.innerHTML = `<span class="donut-tt-dot" style="background:${seg.color}"></span><b>${esc(seg.name)}</b> ${esc(seg.pct)}%`;
+    tip.hidden = false;
+    const wrapRect = wrap.getBoundingClientRect();
+    tip.style.left = (e.clientX - wrapRect.left + 14) + 'px';
+    tip.style.top = (e.clientY - wrapRect.top - 12) + 'px';
+  }
+  donut.addEventListener('mousemove', onMove);
+  donut.addEventListener('mouseleave', () => { tip.hidden = true; });
+}
+
 export function renderCurated() {
   setHTML('stats', C.stats.map((s) => `<div class="stat"><div class="num">${esc(s.num)}</div><div class="lbl">${esc(s.lbl)}</div></div>`).join(''));
   setHTML('leaderboard', rankRows(C.leaderboard));
   setHTML('image-ai', rankRows(C.imageAI));
+  setHTML('local-ai', rankRows(C.localAI));
   setHTML('video-ai', rankRows(C.videoAI));
 
   const donut = document.getElementById('donut');
@@ -43,6 +96,7 @@ export function renderCurated() {
   setHTML('legend', C.marketShare.map((l) =>
     `<div class="row"><span class="dot" style="background:${l.color}"></span><span class="name">${esc(l.name)}</span><span class="pct">${esc(l.pct)}%</span></div>`
   ).join(''));
+  wireDonutTooltip();
 
   setHTML('compute-rows', C.compute.map((c) => `
     <tr><td class="ticker-cell">${esc(c.chip)}</td><td class="signal-cell">${esc(c.segment)}</td>
@@ -58,37 +112,35 @@ export function renderLive(data, now = Date.now()) {
   const line = headlines.map((h) => `<span>~</span>${esc(h)}`).join('&nbsp;&nbsp;&nbsp;&nbsp;');
   setHTML('ticker', line + '&nbsp;&nbsp;&nbsp;&nbsp;' + line);
 
-  // releases
+  // releases — always exactly 3 brand cards (Claude/ChatGPT/Gemini), each
+  // listing up to its 5 most-recent qualifying releases with a direct link,
+  // plus a separate ▶ link when an official YouTube upload corroborated it.
   const releases = data.releases || [];
-  setHTML('releases', releases.length ? releases.map((r) => `
+  setHTML('releases', releases.map((r) => {
+    const brand = RELEASE_BRAND[r.logoKey] || { name: r.lab, org: '' };
+    return `
     <div class="release-card" style="border-top-color:${ACCENT[r.logoKey] || ACCENT.other}">
       <div class="release-lab">
         <span class="release-logo" style="color:${ACCENT[r.logoKey] || ACCENT.other}">${LOGO[r.logoKey] || LOGO.other}</span>
-        <span class="release-labtext">${esc(r.lab)}</span>
-        <span class="asof">${esc(r.date)}</span>
+        <span class="release-labtext">${esc(brand.name)}<span class="release-org">${esc(brand.org)}</span></span>
       </div>
-      <h4>${esc(r.h)}</h4>
-      <p>${esc(r.p)}</p>
       <ul class="release-list">
-        ${(r.items || []).map((i) => `<li><span><b>${esc(i.n)}</b> — ${esc(i.note)}</span><span class="d">${esc(i.d)}</span></li>`).join('')}
+        ${(r.items || []).map((i) => `
+          <li>
+            <span class="release-item-main">
+              <a class="release-item-link" href="${esc(i.url)}" target="_blank" rel="noopener">${i.isVideo ? `<span class="release-yt-inline" aria-hidden="true">${YT_ICON}</span>` : ''}<b>${esc(i.h)}</b></a>
+              ${i.videoUrl ? `<a class="release-yt-link" href="${esc(i.videoUrl)}" target="_blank" rel="noopener" aria-label="Watch the launch video on YouTube" title="Watch on YouTube">${YT_ICON}</a>` : ''}
+            </span>
+            <span class="d">${esc(i.d)}</span>
+          </li>`).join('') || `<li class="release-empty">No qualifying releases in the last 60 days — this section only shows actual ships, not general lab news.</li>`}
       </ul>
-      ${r.url ? `<div class="card-src"><span>${sourceChip('auto')} ${esc(r.sourceName || '')}</span><a class="src-link" href="${esc(r.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
-    </div>`).join('') : `<p class="empty-state">No qualifying model or feature launches in the current window — this section only shows actual ships, not general lab news.</p>`);
+    </div>`;
+  }).join(''));
 
   // (The former "Big AI wire" section was removed — the Signal River now
   //  carries the full chronological stream with filters, so a separate wire
   //  grid was pure duplication. data.wire is still built for compatibility
   //  but no longer rendered.)
-
-  // open-weight feed
-  const feed = data.feed || [];
-  setHTML('feed', feed.length ? feed.map((f) => `
-    <div class="feed-row">
-      <div><span class="feed-name">${f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${esc(f.name)}</a>` : esc(f.name)}</span><span class="feed-org">${esc(f.org)}</span></div>
-      <span class="license ${esc(f.licClass)}">${esc(f.lic)}</span>
-      <span class="asof">${esc(f.date)}</span>
-      <span class="feed-desc">${esc(f.desc)}</span>
-    </div>`).join('') : `<p class="empty-state">No open-weight stories in the current window. New releases appear here as they cross the wire.</p>`);
 
   // breakthroughs
   const brk = data.breakthroughs || [];
