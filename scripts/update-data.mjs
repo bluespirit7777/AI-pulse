@@ -526,6 +526,7 @@ async function main() {
     family: w.family, category: w.category, title: w.title, summary: truncate(w.desc, 180) || w.title,
     significance: w.significance, impact: w.impact, verification: w.verification, date: w.date, dateISO: w.dateISO,
     url: w.url, sourceCount: w.sourceCount, sources: w.sources, entityIds: w.entityIds,
+    whyItMatters: w.whyItMatters,
   }));
 
   console.log('Fetching stock quotes…');

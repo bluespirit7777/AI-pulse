@@ -10,6 +10,7 @@ import {
   classifyVerification, classifyImpact, computeEntityActivity, buildWaves,
   isProductRelease, classifyTopics, extractAction, eventRelation,
   matchModelMention, isValidatedMention, COMMUNITY_MATCH_THRESHOLD, CATEGORIES,
+  whyItMatters,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -133,6 +134,43 @@ test('waveFamily maps new categories sensibly', () => {
   assert.equal(waveFamily('orggov'), 'market');
   assert.equal(waveFamily('general'), 'product');
   assert.equal(waveFamily('analysis'), 'product'); // family assigned but excluded from waves upstream
+});
+
+// ---------- whyItMatters (R5: consequence, not scoring) ----------
+
+test('whyItMatters explains a consequence, never the scoring methodology', () => {
+  const why = whyItMatters({ title: 'OpenAI launches GPT-5.6', category: 'product', impact: 'high', verification: 'official' });
+  // must NOT leak scoring vocabulary (impact score, source count, "strongest move")
+  assert.ok(!/impact score|source(s)?\b.*\d|strongest .* move|significance/i.test(why), why);
+  // must read as a consequence
+  assert.ok(/build on|raises the bar|rivals/i.test(why), why);
+});
+
+test('whyItMatters is action-driven: shutdown vs launch give different consequences', () => {
+  const shut = whyItMatters({ title: 'OpenAI is shutting down its Atlas browser', category: 'product', impact: 'notable', verification: 'corroborated' });
+  const launch = whyItMatters({ title: 'OpenAI launches a new model', category: 'product', impact: 'high', verification: 'official' });
+  assert.notEqual(shut, launch);
+  assert.ok(/users|winding|bets/i.test(shut), shut);
+});
+
+test('whyItMatters hedges when the signal is weak or thinly sourced', () => {
+  const weak = whyItMatters({ title: 'Startup raises a round', category: 'capital', impact: 'emerging', verification: 'single' });
+  assert.ok(/if it holds up|could|may|might/i.test(weak), weak);
+});
+
+test('whyItMatters falls back to category, then to a generic hedged line', () => {
+  assert.ok(whyItMatters({ title: 'EU debates AI rules', category: 'policy' }).length > 0);
+  const generic = whyItMatters({ title: 'something ambiguous', category: 'general' });
+  assert.ok(/isn’t yet clear|attention/i.test(generic), generic);
+});
+
+test('buildWaves attaches a whyItMatters consequence to each wave', () => {
+  const sigs = [
+    { id: 'a', title: 'OpenAI launches GPT-5.6', category: 'product', significance: 90, impact: 'high', verification: 'official' },
+    { id: 'b', title: 'Nvidia stock jumps on AI demand', category: 'market', significance: 70, impact: 'notable', verification: 'corroborated' },
+    { id: 'c', title: 'New paper on scaling laws', category: 'research', significance: 60, impact: 'emerging', verification: 'single' },
+  ];
+  for (const w of buildWaves(sigs)) assert.ok(typeof w.whyItMatters === 'string' && w.whyItMatters.length > 20, w.family);
 });
 
 // ---------- isProductRelease ----------

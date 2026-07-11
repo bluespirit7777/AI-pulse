@@ -13,7 +13,7 @@
 // and activating the row opens a detail panel with the full story.
 import { esc, timeAgo } from './util.js';
 import { verificationChip, freshnessChip } from './freshness.js';
-import { VERIFICATION_LABEL, IMPACT_LABEL } from '../scripts/lib/signals.mjs';
+import { VERIFICATION_LABEL, IMPACT_LABEL, whyItMatters } from '../scripts/lib/signals.mjs';
 
 const FAMILY = {
   product: { label: 'Product wave', mark: '◆', color: 'var(--sea)' },
@@ -37,22 +37,33 @@ function yForSig(sig) {
 }
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
-function trendFor(winner, familySignals) {
+// Intensity of the winning story RELATIVE TO its family's other stories in the
+// same visible window. This is NOT a time-series trend (we don't yet have the
+// multi-day per-family history that would need), so the labels are honest about
+// being a within-window intensity comparison, not "rising/falling over time".
+function intensityFor(winner, familySignals) {
   const others = familySignals.filter((s) => s.id !== winner.id);
-  if (!others.length) return 'steady';
+  if (!others.length) return 'typical';
   const avg = others.reduce((a, s) => a + s.significance, 0) / others.length;
-  if (winner.significance > avg + 8) return 'strengthening';
-  if (winner.significance < avg - 8) return 'weakening';
-  return 'steady';
+  if (winner.significance > avg + 8) return 'standout';
+  if (winner.significance < avg - 8) return 'lower';
+  return 'typical';
 }
-const TREND_MARK = { strengthening: '↗', weakening: '↘', steady: '→' };
+const INTENSITY = {
+  standout: { mark: '▲', label: 'Stands out' },
+  typical: { mark: '▬', label: 'Typical' },
+  lower: { mark: '▽', label: 'Lower intensity' },
+};
 const AREA_WORD = { product: 'product', market: 'market', research: 'research' };
 
-// Deterministic "why it matters" — the concrete, non-fabricated reason this
-// story was surfaced: it's the day's top move in its area by our impact score,
-// stated with its impact/verification/corroboration.
+// "Why it matters" — the CONSEQUENCE (from the shared editorial templates), not
+// the scoring. Prefer the value computed at build time; fall back for old data.
 function whyText(w) {
-  return `The day's strongest ${AREA_WORD[w.family] || w.family} move by impact — ${(IMPACT_LABEL[w.impact] || w.impact).toLowerCase()}, ${(VERIFICATION_LABEL[w.verification] || w.verification).toLowerCase()}, ${w.sourceCount} source${w.sourceCount === 1 ? '' : 's'}.`;
+  return w.whyItMatters || whyItMatters(w);
+}
+// Separate, clearly-labelled "why the algorithm surfaced this" line.
+function whySelected(w) {
+  return `Day's strongest ${AREA_WORD[w.family] || w.family} move by our impact score — ${(IMPACT_LABEL[w.impact] || w.impact).toLowerCase()}, ${(VERIFICATION_LABEL[w.verification] || w.verification).toLowerCase()}, ${w.sourceCount} source${w.sourceCount === 1 ? '' : 's'}.`;
 }
 
 export function renderWaveforms(root, allSignals = [], waves = [], now = Date.now()) {
@@ -75,7 +86,8 @@ export function renderWaveforms(root, allSignals = [], waves = [], now = Date.no
     if (!points.some((p) => p.id === w.id)) points.push(w); // winner is always plotted even if outside the default window
     points.sort((a, b) => Date.parse(a.dateISO) - Date.parse(b.dateISO));
 
-    const trend = trendFor(w, points);
+    const intensity = intensityFor(w, points);
+    const iMeta = INTENSITY[intensity];
     const linePts = points.map((p) => `${xForTime(p.dateISO, now).toFixed(1)},${yForSig(p.significance).toFixed(1)}`).join(' ');
     const areaPts = `${PAD},${VH - PAD} ${linePts} ${VW - PAD},${VH - PAD}`;
 
@@ -91,7 +103,7 @@ export function renderWaveforms(root, allSignals = [], waves = [], now = Date.no
       <article class="wf-row wf-${esc(w.family)}" data-idx="${i}">
         <div class="wf-head">
           <span class="wf-fam"><span class="wf-mark" aria-hidden="true">${f.mark}</span>${esc(f.label)}</span>
-          <span class="wf-trend wf-trend-${trend}" title="${esc(trend)} vs. other ${esc(w.family)} stories in this window">${TREND_MARK[trend]} ${esc(trend)}</span>
+          <span class="wf-trend wf-trend-${intensity}" title="Intensity vs. the other ${esc(w.family)} stories in this ${WINDOW_HOURS}h window — not a change over time">${iMeta.mark} ${esc(iMeta.label)}</span>
         </div>
         <svg class="wf-svg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="${esc(f.label)}: ${esc(w.title)}, significance ${w.significance} of 100">
           <polygon class="wf-area" points="${areaPts}" fill="${f.color}" opacity="0.12"></polygon>
@@ -101,6 +113,7 @@ export function renderWaveforms(root, allSignals = [], waves = [], now = Date.no
         <h3 class="wf-title">${esc(w.title)}</h3>
         ${w.summary ? `<p class="wf-summary-text">${esc(w.summary)}</p>` : ''}
         <p class="wf-why"><span class="wf-why-label">Why it matters</span> ${esc(whyText(w))}</p>
+        <p class="wf-selected"><span class="wf-selected-label">Why selected</span> ${esc(whySelected(w))}</p>
         <div class="wf-meta">
           ${freshnessChip(w.dateISO, now)}
           ${verificationChip(w.verification)}

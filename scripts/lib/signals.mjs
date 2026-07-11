@@ -594,6 +594,53 @@ export function classifyImpact(significance) {
 
 export const IMPACT_LABEL = { high: 'High impact', notable: 'Notable', emerging: 'Emerging' };
 
+// ---------- editorial: "why it matters" (consequence, not scoring) ----------
+// A deterministic, plain-language sentence about the CONSEQUENCE of an event —
+// what it changes for users, developers, competitors or the field. This is
+// deliberately NOT "why the algorithm surfaced it" (impact score, source count);
+// that stays a separate, clearly-labelled "why selected" line in the UI.
+// Templates are keyed by the extracted action first (most specific), then by
+// category. When the signal is weak or thinly sourced the wording is hedged so
+// the site never overstates an uncertain effect.
+const WHY_BY_ACTION = {
+  shutdown: 'Winding a product down pushes its users elsewhere and signals where the company is now placing its bets.',
+  resign: 'Leadership change at this level can redirect a lab’s priorities, hiring and release timelines.',
+  acquire: 'An acquisition folds talent and technology under one owner, reshaping who competes with whom.',
+  raise: 'Fresh capital extends how long the company can fund training runs and hiring before it needs revenue.',
+  invest: 'A strategic investment ties the two companies’ roadmaps — models, compute or distribution — closer together.',
+  sue: 'However it resolves, the case could set a precedent for how models may be built, trained or licensed.',
+  regulate: 'New rules here can change what products are allowed to ship, and in which markets.',
+  partner: 'The partnership shifts who gets access to whose models, compute or customers.',
+  launch: 'A new release raises the bar rivals are measured against and gives developers something to build on now.',
+  research: 'If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate.',
+};
+const WHY_BY_CATEGORY = {
+  policy: 'Policy sets the rules every lab has to build under, so the effect reaches well beyond the company named.',
+  capital: 'Where the money flows signals which bets investors expect to pay off.',
+  compute: 'Compute supply and cost set the ceiling on how large — and how cheap — the next models can be.',
+  opensource: 'Open weights let anyone run and build on the model, widening who can compete.',
+  research: WHY_BY_ACTION.research,
+  market: 'The move reflects how investors are repricing the AI trade right now.',
+  adoption: 'This is where model capability turns into real usage and revenue.',
+  orggov: 'Governance changes shape how a lab makes its biggest calls.',
+  product: WHY_BY_ACTION.launch,
+  analysis: 'It’s an active argument in the field; the concrete effect is still a matter of debate.',
+  general: 'It’s drawing attention across AI right now, though the downstream effect isn’t yet clear.',
+};
+
+export function whyItMatters(sig = {}) {
+  const text = `${sig.title || sig.h || ''} ${sig.summary || sig.desc || sig.p || ''}`;
+  const action = extractAction(text);
+  let base = (action && WHY_BY_ACTION[action]) || WHY_BY_CATEGORY[sig.category] || WHY_BY_CATEGORY.general;
+  // Hedge harder when the signal is emerging or thinly sourced — unless the
+  // template is already conditional ("could", "if", "may", "isn't clear").
+  const weak = sig.impact === 'emerging' || sig.verification === 'single' || sig.verification === 'uncertain';
+  if (weak && !/\b(could|may|might|if it holds|still|isn’t yet clear|matter of debate)\b/i.test(base)) {
+    base = 'If it holds up, ' + base.charAt(0).toLowerCase() + base.slice(1);
+  }
+  return base;
+}
+
 // ---------- entity activity (ocean-map glow) ----------
 // Real, live, deterministic: counts how many of the supplied signals mention
 // each node. This is what makes a node "glow" — not a curated guess.
@@ -620,7 +667,7 @@ export function buildWaves(signals) {
   const waves = [];
   for (const family of ['product', 'market', 'research']) {
     const list = byFamily[family].slice().sort((a, b) => b.significance - a.significance);
-    if (list[0]) waves.push({ family, ...list[0] });
+    if (list[0]) waves.push({ family, ...list[0], whyItMatters: whyItMatters(list[0]) });
   }
   return waves;
 }
