@@ -1,51 +1,34 @@
 {
-  "updatedAt": "2026-07-11T18:09:58.250Z",
+  "updatedAt": "2026-07-11T19:06:40.281Z",
   "build": {
-    "sha": "a4b5e180d49c50e047a2568b9d7200d7d5576f4b",
-    "shortSha": "a4b5e18",
+    "sha": "ec37f385cec7b61f14032aa288515b901bdfc2a5",
+    "shortSha": "ec37f38",
     "ref": "main",
-    "builtAt": "2026-07-11T18:09:58.250Z"
+    "builtAt": "2026-07-11T19:07:03.474Z"
+  },
+  "dataHealth": {
+    "feedsSucceeded": 15,
+    "feedsConfigured": 15,
+    "stockNodesAvailable": 10,
+    "communityModelsAvailable": 7,
+    "historyDepthDays": 1.8,
+    "estimatedDatasets": 2,
+    "buildSha": "ec37f38",
+    "lastSuccessfulUpdate": "2026-07-11T19:06:40.281Z"
   },
   "ticker": [
-    "OPENAI BETS ON FAMILIES AS CHATGPT GOES DEEPER INTO HOUSEHOLDS",
     "OPENAI’S CEO OF AGI DEPLOYMENT, FIDJI SIMO, IS STEPPING DOWN",
-    "APPLE IS SUING OPENAI FOR ALLEGEDLY STEALING HARDWARE SECRETS",
     "OPENAI MAY HAVE MADE A FATAL MISSTEP IN COPYRIGHT FIGHT WITH NEWS ORGS",
-    "OPENAI’S HEAD OF SAFETY IS LEAVING THE COMPANY",
-    "APPLE SUES OPENAI OVER ALLEGED TRADE SECRET THEFT",
     "THE CHATGPT BROWSER IS ALREADY DEAD",
     "ANTHROPIC FOUND A HIDDEN SPACE WHERE CLAUDE PUZZLES OVER CONCEPTS",
-    "ANTHROPIC RELEASES CLAUDE SCIENCE, A PRODUCT AIMED AT RESEARCHERS, THE PHARMA INDUSTRY",
-    "HOW DEUTSCHE TELEKOM IS REWIRING TELECOMMUNICATIONS WITH AI"
+    "APPLE IS SUING OPENAI FOR ALLEGEDLY STEALING HARDWARE SECRETS",
+    "HOW BUSINESS OPERATIONS TEAMS USE CHATGPT WORK",
+    "OPENAI BETS ON FAMILIES AS CHATGPT GOES DEEPER INTO HOUSEHOLDS",
+    "PARIS-BASED AI VOICE STARTUP GRADIUM RAISES $100M SEED, BACKED BY NVIDIA",
+    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
+    "OPENAI LAUNCHES ITS NEW FAMILY OF MODELS WITH GPT-5.6"
   ],
   "signals": [
-    {
-      "id": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
-      "clusterId": "6tj3u0",
-      "title": "OpenAI bets on families as ChatGPT goes deeper into households",
-      "desc": "ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting.",
-      "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
-      "dateISO": "2026-07-11T14:13:00.000Z",
-      "date": "JUL 11 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 70,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
     {
       "id": "https://www.wired.com/story/fidji-simo-ceo-agi-deployment-openai/",
       "clusterId": "1416iml",
@@ -57,7 +40,7 @@
       "category": "orggov",
       "catConfidence": 0.64,
       "family": "market",
-      "significance": 67,
+      "significance": 66,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 3,
@@ -73,36 +56,6 @@
         {
           "name": "Wired",
           "url": "https://www.wired.com/story/fidji-simo-ceo-agi-deployment-openai/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
-      "clusterId": "1ximkm2",
-      "title": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
-      "desc": "The iPhone maker claims OpenAI encouraged poached employees to bring over confidential presentations, secret prototypes, and key supplier details.",
-      "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
-      "dateISO": "2026-07-10T20:44:05.000Z",
-      "date": "JUL 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets"
-        },
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/"
         }
       ],
       "sourceName": "Wired",
@@ -138,58 +91,6 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.wired.com/story/openai-head-of-safety-leaving/",
-      "clusterId": "vkxqlk",
-      "title": "OpenAI’s Head of Safety Is Leaving the Company",
-      "desc": "Johannes Heidecke’s departure comes as OpenAI tries to further integrate its research and safety teams.",
-      "url": "https://www.wired.com/story/openai-head-of-safety-leaving/",
-      "dateISO": "2026-07-11T01:07:26.000Z",
-      "date": "JUL 11 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 62,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openai-head-of-safety-leaving/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-      "clusterId": "ugqe25",
-      "title": "Apple sues OpenAI over alleged trade secret theft",
-      "desc": "Apple alleges the misconduct was directed by OpenAI's senior leadership, including a longtime former employee.",
-      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-      "dateISO": "2026-07-10T21:00:29.000Z",
-      "date": "JUL 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 60,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
         "gpt"
       ]
     },
@@ -255,73 +156,35 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
-      "clusterId": "708tpf",
-      "title": "Anthropic releases Claude Science, a product aimed at researchers, the pharma industry",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
-      "dateISO": "2026-06-30T07:00:00.000Z",
-      "date": "JUN 30 2026",
-      "category": "research",
-      "catConfidence": 0.43,
-      "family": "research",
-      "significance": 59,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 6,
-      "sources": [
-        {
-          "name": "Pharmaceutical Technology",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWGVhaElNeldSR3pPSllJSDZTOEJ5eWRJRmZvVUptckV0OWw2ekV1Q2dFVFEwRE9iblBNTFdsSVEyUkRVenZNdUtGZnlqemY1Vm14eHFFd0VpQjdVMHhCMjRRZlFsWmc1cldoZ3FuOUNaeG5XMm5OVW10ckFlZXE4ZGVubnk3ajJnb3kxNjZJaFUzNnhiY0hLVUJ3Z0doMkc3N3RoTWxOVQ?oc=5"
-        },
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/"
-        },
-        {
-          "name": "STAT",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
-        },
-        {
-          "name": "Northeastern Global News",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
-        }
-      ],
-      "sourceName": "STAT",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/deutsche-telekom",
-      "clusterId": "1tmwijm",
-      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
-      "desc": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
-      "url": "https://openai.com/index/deutsche-telekom",
-      "dateISO": "2026-07-10T07:00:00.000Z",
+      "id": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
+      "clusterId": "1ximkm2",
+      "title": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
+      "desc": "The iPhone maker claims OpenAI encouraged poached employees to bring over confidential presentations, secret prototypes, and key supplier details.",
+      "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
+      "dateISO": "2026-07-10T20:44:05.000Z",
       "date": "JUL 10 2026",
-      "category": "adoption",
-      "catConfidence": 0.38,
+      "category": "general",
+      "catConfidence": 0.3,
       "family": "product",
-      "significance": 57,
+      "significance": 58,
       "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
+      "verification": "uncertain",
+      "sourceCount": 3,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/deutsche-telekom"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/964350/apple-openai-lawsuit-trade-secrets"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/"
         }
       ],
-      "sourceName": "OpenAI",
+      "sourceName": "Wired",
       "entityIds": [
         "gpt"
       ]
@@ -365,16 +228,16 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
-      "clusterId": "23nitv",
-      "title": "Elon Musk praises Mythos/Fable, promises not to ‘cut off’ Anthropic",
-      "desc": "Should Anthropic trust Elon Musk to host its models? With about $40 billion in revenue at stake, Musk insists that the company can.",
-      "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
-      "dateISO": "2026-07-09T21:57:42.000Z",
-      "date": "JUL 09 2026",
-      "category": "capital",
-      "catConfidence": 0.4,
-      "family": "market",
+      "id": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
+      "clusterId": "6tj3u0",
+      "title": "OpenAI bets on families as ChatGPT goes deeper into households",
+      "desc": "ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting.",
+      "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
+      "dateISO": "2026-07-11T14:13:00.000Z",
+      "date": "JUL 11 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
       "significance": 55,
       "impact": "notable",
       "verification": "single",
@@ -382,12 +245,13 @@
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/"
+          "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/"
         }
       ],
       "sourceName": "TechCrunch",
       "entityIds": [
-        "claude"
+        "chatgpt",
+        "gpt"
       ]
     },
     {
@@ -461,7 +325,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 54,
+      "significance": 53,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -503,178 +367,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5",
-      "clusterId": "1dwsflu",
-      "title": "Anthropic: Claude Mythos identified 10,000+ software flaws",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5",
-      "dateISO": "2026-05-26T07:00:00.000Z",
-      "date": "MAY 26 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 9,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5/"
-        },
-        {
-          "name": "WIRED",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRWFPUzFGbjVnQXpCQmh0d3BybFlmSnR1R0E0WUpLdXBVVTN6eENPajNoS25udGFHSmpITnptUWRScGlXb1o5NnNWMHNFY2pSRHpIS21hZGdpNi1PbHZ0NzJrVThQcDFNaVRSbGRJLVBSa21XX0RmTDBFOXNWRnhhWmdOVU1SV1Nsd1Z4N1BhRDFSSFVhWEdMM2ZaaVFDZlhGVkl6emp3?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZldDREpCR3h2NTUxODFwLWU5OHVLLWVOQXFzaExVeUk0MUkwR3dhNk9OWk41c29kX2o0OXA5MkNUdTAxTVdOQVh6ZzNqTE5rMVBuaUt4Nm5vZzNVcThFZHIwZ0Y2cjdhTWtuMVEtWkszWDBwNnd2TUVrTnh1elUyYmk1TUhuVmczUm11UVp2Qml2dmt5Nzc2NlBGdVBpVEZrbkkyRDAzQW9Jbkp6QWFMU3VaT0F1V3Q5VzFXM2VR?oc=5"
-        },
-        {
-          "name": "Mashable",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbjhkRkZ2S3JBQ3gxOHRFU19xM0VxRGRvSThQd3FyUURHQzlPME5Rd3JWR3JXbi1EQ1dsWjhqNE5NZTdLckFCWUdUaTZHQWJDOUlldlRHdFZieEVJRG5KdWtYWWxoNGhhNHg3bXFzTENoMC1jTXA2eUgzQUtSeGsxYi1WejdVNElGbG16SURHZHJXbThITWNR?oc=5"
-        },
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFZRVXVXbExma1lxdjN0RkRoUFo4SVFYWm1QWk9TYTQwZS1tUldwbUVhbndQRkFtSmVwNTNmWndVQWF5U2NpRXZfdnA4NEFxMTA3SXBoVFFMLWtvbHdhZjJZbTVJT0F3MWZCNHhxUnJEalJyTExqZUtLVWJrdk5WWHFHWmJOV2p6cmtPa3ZuZFA0UkRNXzI3MGhDZjFFYXpsRVhQdF92eHQxd0RGa1ZvdWROZ3FpeTBSV255WGx3cw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tNXJJQXNGZWM1d1VmMVRfOFZlYU9VUFcwdm03RFhDRE5uajJOY19mbUQ5ZVpXYW9IOWhzd3JOS3F2c0xIdFRYVUgtZF9RVVI1VW1KVExGb0RVRDBWdlpNTXN1cTA?oc=5"
-        },
-        {
-          "name": "Interconnects AI",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XOUpqaUlWeFZ2RDF3NGY4UjlBa0JKV0VFSk9yZlNfNXNlSHpBZlJ1VUQ2TTE0V291UE9iSDZVQ292ZjV6SGF2ZGI3Yk5lQS1IaGJvaGtnSVQzd1ZaeGJ1bmF6RVJLeC15Q0t2dWpBd0Y?oc=5"
-        },
-        {
-          "name": "Help Net Security",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5"
-        }
-      ],
-      "sourceName": "Help Net Security",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNcDh6T01vNGFja29vVTczcHpJbnd2VDNkX3k0WXBlMUtiNUxPNnVpTHl0ZHloZFFGS044Ri1UNDhHUEZtM09KcW9xMWR3cXVsTHNmWTM3T2VBSW5HamN4bzZOSGxjeC1INjRaQzgxUnJQemtlUE1F?oc=5",
-      "clusterId": "1374cau",
-      "title": "Anthropic wants small businesses to use Claude Code",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNcDh6T01vNGFja29vVTczcHpJbnd2VDNkX3k0WXBlMUtiNUxPNnVpTHl0ZHloZFFGS044Ri1UNDhHUEZtM09KcW9xMWR3cXVsTHNmWTM3T2VBSW5HamN4bzZOSGxjeC1INjRaQzgxUnJQemtlUE1F?oc=5",
-      "dateISO": "2026-05-13T07:00:00.000Z",
-      "date": "MAY 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 7,
-      "sources": [
-        {
-          "name": "WSJ",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
-        },
-        {
-          "name": "South China Morning Post",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
-        },
-        {
-          "name": "Malwarebytes",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
-        },
-        {
-          "name": "Business Insider",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5"
-        },
-        {
-          "name": "Axios",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNcDh6T01vNGFja29vVTczcHpJbnd2VDNkX3k0WXBlMUtiNUxPNnVpTHl0ZHloZFFGS044Ri1UNDhHUEZtM09KcW9xMWR3cXVsTHNmWTM3T2VBSW5HamN4bzZOSGxjeC1INjRaQzgxUnJQemtlUE1F?oc=5"
-        }
-      ],
-      "sourceName": "Axios",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
-      "clusterId": "mx3e1n",
-      "title": "Google will now disclose which ads are made with AI",
-      "desc": "While Google prohibits misleading and deceptive ads, an ad can still leverage AI to create some type of synthetic or digitally altered content. Until now, that's something Google only required election ads to disclose.",
-      "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
-      "dateISO": "2026-07-09T18:40:51.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
-      "clusterId": "olsj4w",
-      "title": "Introducing Claude Corps",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
-      "dateISO": "2026-06-11T07:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
       "clusterId": "enwy17",
       "title": "Anthropic launches Claude Tag, a tool that works like a virtual employee within Slack",
@@ -706,37 +398,6 @@
       "sourceName": "Fortune",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-      "clusterId": "xv66ya",
-      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
-      "desc": "Learn how GPT-5.6 powers Microsoft 365 Copilot with stronger AI capabilities across Word, Excel, PowerPoint, Chat, and Cowork for faster, higher-quality work.",
-      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
-      "dateISO": "2026-07-09T13:00:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "copilot",
-        "gpt"
       ]
     },
     {
@@ -774,116 +435,101 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9PWmhDajNFV09GX2ZrcFpRTHJUcFdwcFZDRDFvMlQ5MGhpclVkR1dYSFI4MllXTWRkaTR5cEhQN0RvcmFRVTVicXpxbUZkc2lDUTZj?oc=5",
-      "clusterId": "ghesqa",
-      "title": "UST is bringing Claude to physical AI",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9PWmhDajNFV09GX2ZrcFpRTHJUcFdwcFZDRDFvMlQ5MGhpclVkR1dYSFI4MllXTWRkaTR5cEhQN0RvcmFRVTVicXpxbUZkc2lDUTZj?oc=5",
-      "dateISO": "2026-07-10T00:43:28.000Z",
-      "date": "JUL 10 2026",
+      "id": "https://www.wired.com/story/openai-head-of-safety-leaving/",
+      "clusterId": "vkxqlk",
+      "title": "OpenAI’s Head of Safety Is Leaving the Company",
+      "desc": "Johannes Heidecke’s departure comes as OpenAI tries to further integrate its research and safety teams.",
+      "url": "https://www.wired.com/story/openai-head-of-safety-leaving/",
+      "dateISO": "2026-07-11T01:07:26.000Z",
+      "date": "JUL 11 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 49,
       "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9PWmhDajNFV09GX2ZrcFpRTHJUcFdwcFZDRDFvMlQ5MGhpclVkR1dYSFI4MllXTWRkaTR5cEhQN0RvcmFRVTVicXpxbUZkc2lDUTZj?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/",
-      "clusterId": "15n5j60",
-      "title": "How did the government decide OpenAI’s frontier model was safe to release?",
-      "desc": "\"Exactly what that dialog looked like between the government and Anthropic and OpenAI is unclear.\"",
-      "url": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/",
-      "dateISO": "2026-07-09T18:22:39.000Z",
-      "date": "JUL 09 2026",
-      "category": "analysis",
-      "catConfidence": 0.43,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/07/after-spooking-trump-into-safety-testing-anthropic-ai-models-get-global-release/",
-      "clusterId": "1l1kam",
-      "title": "After spooking Trump into safety testing, Anthropic AI models get global release",
-      "desc": "US lifts curbs on Anthropic’s advanced Fable and Mythos models.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/after-spooking-trump-into-safety-testing-anthropic-ai-models-get-global-release/",
-      "dateISO": "2026-07-01T16:44:18.000Z",
-      "date": "JUL 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "CBS News",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWHlvQ0t3R3I5NWtGdW1SZlpMVVdka2xtT1FtLXdPRXdSN3cxYzdleEllMGRWNXR6RnN1YUZuNFZLUkRhbWtqY0hjTFN1b2lzYV96OElSZi1tX2F6WGRsaE1BNVRVQmhzazY1TGcwTmJRV0ZUbkFtQzhzZTlYdHFsVWVJalY?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5"
-        },
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/after-spooking-trump-into-safety-testing-anthropic-ai-models-get-global-release/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOb2NaQ1M3VWIxd2NUamtRS0YxcjhSLXUyYllGbTY3b3FPSndseTRLdVVHcjRJTEpTd1N0azA5ZF81bkpVRFg2d2JYWFRTTlVhbTZBVGd0cWJ0V012VkU5dzNoRWUyMGFvT3pocTJyVlUtckpYX1A4dFpmUHlPWlVRWGM2ZXFFZmdTeXhMNW5rOTg2cjY5cnBOTQ?oc=5",
-      "clusterId": "dutmfb",
-      "title": "Anthropic’s new Claude feature is quietly selling you on AI",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOb2NaQ1M3VWIxd2NUamtRS0YxcjhSLXUyYllGbTY3b3FPSndseTRLdVVHcjRJTEpTd1N0azA5ZF81bkpVRFg2d2JYWFRTTlVhbTZBVGd0cWJ0V012VkU5dzNoRWUyMGFvT3pocTJyVlUtckpYX1A4dFpmUHlPWlVRWGM2ZXFFZmdTeXhMNW5rOTg2cjY5cnBOTQ?oc=5",
-      "dateISO": "2026-07-09T14:53:09.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOb2NaQ1M3VWIxd2NUamtRS0YxcjhSLXUyYllGbTY3b3FPSndseTRLdVVHcjRJTEpTd1N0azA5ZF81bkpVRFg2d2JYWFRTTlVhbTZBVGd0cWJ0V012VkU5dzNoRWUyMGFvT3pocTJyVlUtckpYX1A4dFpmUHlPWlVRWGM2ZXFFZmdTeXhMNW5rOTg2cjY5cnBOTQ?oc=5"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-head-of-safety-leaving/"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
+      "clusterId": "708tpf",
+      "title": "Anthropic releases Claude Science, a product aimed at researchers, the pharma industry",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
+      "dateISO": "2026-06-30T07:00:00.000Z",
+      "date": "JUN 30 2026",
+      "category": "research",
+      "catConfidence": 0.43,
+      "family": "research",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 6,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/"
+        },
+        {
+          "name": "STAT",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
+        },
+        {
+          "name": "Northeastern Global News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWFMLUFicUpQcmdVbGVZS1VmekY5c3Bmc0pFQmxtX01mRnd0aFNmNTVkUm45R1FWMy1HWFlfOEU3TWpsZEZDeUZiOUs1QXNFRE1jQ2ktRTgzT2p1dU1hbkM5WWhZVXlRckVhaUU4Y0huZ19nLWctVVEzVW0weDdWRU45dlAtTjVFSFdIcW55YXVWa0dGS3dLY3diUDJsV19QdVZQLUluWWFwNkZWX0pVc2VBWWlwbU0?oc=5"
+        }
+      ],
+      "sourceName": "STAT",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/deutsche-telekom",
+      "clusterId": "1tmwijm",
+      "title": "How Deutsche Telekom is rewiring telecommunications with AI",
+      "desc": "How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.",
+      "url": "https://openai.com/index/deutsche-telekom",
+      "dateISO": "2026-07-10T07:00:00.000Z",
+      "date": "JUL 10 2026",
+      "category": "adoption",
+      "catConfidence": 0.38,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/deutsche-telekom"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -945,58 +591,6 @@
       "entityIds": []
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
-      "clusterId": "rb1ddv",
-      "title": "A new way to reflect on how you use Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
-      "dateISO": "2026-07-09T13:31:02.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "clusterId": "172d394",
-      "title": "ChatGPT is now a partner for your most ambitious work",
-      "desc": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
-      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
-      "dateISO": "2026-07-09T10:00:00.000Z",
-      "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/openai-frontier-governance-framework",
       "clusterId": "6emnhr",
       "title": "OpenAI’s Frontier Governance Framework",
@@ -1023,55 +617,145 @@
       ]
     },
     {
-      "id": "https://openai.com/index/gpt-5-6",
-      "clusterId": "qb16sv",
-      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
-      "desc": "More intelligence from every token, stronger performance per dollar, and more capability on demand for your hardest work.",
-      "url": "https://openai.com/index/gpt-5-6",
-      "dateISO": "2026-07-09T10:00:00.000Z",
+      "id": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
+      "clusterId": "23nitv",
+      "title": "Elon Musk praises Mythos/Fable, promises not to ‘cut off’ Anthropic",
+      "desc": "Should Anthropic trust Elon Musk to host its models? With about $40 billion in revenue at stake, Musk insists that the company can.",
+      "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/",
+      "dateISO": "2026-07-09T21:57:42.000Z",
       "date": "JUL 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
+      "category": "capital",
+      "catConfidence": 0.4,
+      "family": "market",
       "significance": 43,
       "impact": "emerging",
-      "verification": "official",
+      "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/gpt-5-6"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/"
         }
       ],
-      "sourceName": "OpenAI",
+      "sourceName": "TechCrunch",
       "entityIds": [
-        "gpt"
+        "claude"
       ]
     },
     {
-      "id": "https://openai.com/index/bio-bug-bounty",
-      "clusterId": "wkihly",
-      "title": "GPT-5.5 Bio Bug Bounty",
-      "desc": "Details about the OpenAI Bio Bounty program",
-      "url": "https://openai.com/index/bio-bug-bounty",
-      "dateISO": "2026-07-09T10:00:00.000Z",
-      "date": "JUL 09 2026",
+      "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5",
+      "clusterId": "1dwsflu",
+      "title": "Anthropic: Claude Mythos identified 10,000+ software flaws",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5",
+      "dateISO": "2026-05-26T07:00:00.000Z",
+      "date": "MAY 26 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 43,
       "impact": "emerging",
       "verification": "official",
-      "sourceCount": 1,
+      "sourceCount": 10,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/bio-bug-bounty"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5/"
+        },
+        {
+          "name": "WIRED",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRWFPUzFGbjVnQXpCQmh0d3BybFlmSnR1R0E0WUpLdXBVVTN6eENPajNoS25udGFHSmpITnptUWRScGlXb1o5NnNWMHNFY2pSRHpIS21hZGdpNi1PbHZ0NzJrVThQcDFNaVRSbGRJLVBSa21XX0RmTDBFOXNWRnhhWmdOVU1SV1Nsd1Z4N1BhRDFSSFVhWEdMM2ZaaVFDZlhGVkl6emp3?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZldDREpCR3h2NTUxODFwLWU5OHVLLWVOQXFzaExVeUk0MUkwR3dhNk9OWk41c29kX2o0OXA5MkNUdTAxTVdOQVh6ZzNqTE5rMVBuaUt4Nm5vZzNVcThFZHIwZ0Y2cjdhTWtuMVEtWkszWDBwNnd2TUVrTnh1elUyYmk1TUhuVmczUm11UVp2Qml2dmt5Nzc2NlBGdVBpVEZrbkkyRDAzQW9Jbkp6QWFMU3VaT0F1V3Q5VzFXM2VR?oc=5"
+        },
+        {
+          "name": "Mashable",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbjhkRkZ2S3JBQ3gxOHRFU19xM0VxRGRvSThQd3FyUURHQzlPME5Rd3JWR3JXbi1EQ1dsWjhqNE5NZTdLckFCWUdUaTZHQWJDOUlldlRHdFZieEVJRG5KdWtYWWxoNGhhNHg3bXFzTENoMC1jTXA2eUgzQUtSeGsxYi1WejdVNElGbG16SURHZHJXbThITWNR?oc=5"
+        },
+        {
+          "name": "BBC",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFZRVXVXbExma1lxdjN0RkRoUFo4SVFYWm1QWk9TYTQwZS1tUldwbUVhbndQRkFtSmVwNTNmWndVQWF5U2NpRXZfdnA4NEFxMTA3SXBoVFFMLWtvbHdhZjJZbTVJT0F3MWZCNHhxUnJEalJyTExqZUtLVWJrdk5WWHFHWmJOV2p6cmtPa3ZuZFA0UkRNXzI3MGhDZjFFYXpsRVhQdF92eHQxd0RGa1ZvdWROZ3FpeTBSV255WGx3cw?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tNXJJQXNGZWM1d1VmMVRfOFZlYU9VUFcwdm03RFhDRE5uajJOY19mbUQ5ZVpXYW9IOWhzd3JOS3F2c0xIdFRYVUgtZF9RVVI1VW1KVExGb0RVRDBWdlpNTXN1cTA?oc=5"
+        },
+        {
+          "name": "Interconnects AI",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XOUpqaUlWeFZ2RDF3NGY4UjlBa0JKV0VFSk9yZlNfNXNlSHpBZlJ1VUQ2TTE0V291UE9iSDZVQ292ZjV6SGF2ZGI3Yk5lQS1IaGJvaGtnSVQzd1ZaeGJ1bmF6RVJLeC15Q0t2dWpBd0Y?oc=5"
+        },
+        {
+          "name": "Mashable",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNVpvQklzeUpyLS1vVHU3aE9HMEJ6THVtN3d0ZndIQ3d1NG5VOHUxRy0yUW9HWnNjNW4xTzdld2E2a04tUXJkcllzbGtUeS0xb1hZSTEweVB4YmJtQ0drUWRFLXp6MlRKSjdPM2EzN2x1cV9tYlNNXzNoWG9EX0U0OFd4N1JoRzFWa183RTR1RjhxMnM?oc=5"
+        },
+        {
+          "name": "Help Net Security",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5"
         }
       ],
-      "sourceName": "OpenAI",
+      "sourceName": "Help Net Security",
       "entityIds": [
-        "gpt"
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNcDh6T01vNGFja29vVTczcHpJbnd2VDNkX3k0WXBlMUtiNUxPNnVpTHl0ZHloZFFGS044Ri1UNDhHUEZtM09KcW9xMWR3cXVsTHNmWTM3T2VBSW5HamN4bzZOSGxjeC1INjRaQzgxUnJQemtlUE1F?oc=5",
+      "clusterId": "1374cau",
+      "title": "Anthropic wants small businesses to use Claude Code",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNcDh6T01vNGFja29vVTczcHpJbnd2VDNkX3k0WXBlMUtiNUxPNnVpTHl0ZHloZFFGS044Ri1UNDhHUEZtM09KcW9xMWR3cXVsTHNmWTM3T2VBSW5HamN4bzZOSGxjeC1INjRaQzgxUnJQemtlUE1F?oc=5",
+      "dateISO": "2026-05-13T07:00:00.000Z",
+      "date": "MAY 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 8,
+      "sources": [
+        {
+          "name": "WSJ",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
+        },
+        {
+          "name": "Malwarebytes",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxQWEdVUUN6MVgwQlFIN1F4QTRBdkFyTFdtbEJEYUV4RGhtanJvYmIzQVF5bkJ1MlZwQjdLekQ1Mkc4SXpVbV9pZnhJT2U2Yjh3YUpsRTZHSW5sM3BBc2JTMk1LRzBOS2cxSDFiM0w0YTZrQ0hPNVQ5MllMcG5ZdkVmdTQtT1pSdXFRLURwNjlqUkxrR1NTZGJ2WEpTSDljOG9fZHFvaTh4ZldwU1hxWEN2R0dxOXREQmRVejdCUUlRSWJqblBoTHZCVVU3aklKLU5uZDhxWHNCLVMyR092Yk13NGI2RXUxRGREdE1aeWdkcnVRSGlBMm1lUUd4Q3RFTHA2Qk8zQURKanlQa1ZIb0pZbHhJYkhmUjA5Y3pFRnJ4WW1TRGNvUlhCTkF4OVlxTVBpM01mdXBnNkhjRjAwSkxpbGFfYzFLTG1XdWhZOVpIUVNWRzZFYkE?oc=5"
+        },
+        {
+          "name": "Business Insider",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5"
+        },
+        {
+          "name": "Axios",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNcDh6T01vNGFja29vVTczcHpJbnd2VDNkX3k0WXBlMUtiNUxPNnVpTHl0ZHloZFFGS044Ri1UNDhHUEZtM09KcW9xMWR3cXVsTHNmWTM3T2VBSW5HamN4bzZOSGxjeC1INjRaQzgxUnJQemtlUE1F?oc=5"
+        }
+      ],
+      "sourceName": "Axios",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -1099,32 +783,6 @@
       "entityIds": [
         "claude",
         "qwen"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWWVnN0FCeWUwZThwV2pob3RhOWZscXhGNUdGRzRDT21EQkhiNDNvZkVCc01rNWRsM0FyX09PcnRtN3ZLbjU1WVNObUs5RUs3bmw4dXQ5Ukw0eXB0cHVndGQxRU9XT2RiS1puWF9kbUpzNnBZRElST2ZZUWZHN0JidVhGVldlWVVNZ254OVJpZ1ZiMWPSAZMBQVVfeXFMTU5fdTdMSWEwWml1TGRXTzdxOXdDVGpsTnV2VE9fdXNpM3VEVnI4MjlqWDNobmphcTFRQUkxdlFxOVpsLUpJTDZQbkotVjhnUjNnZnRZMFplWHVhN0tQT3FUc0Fmem1oZm4zWUY3ZG5kUXVpQm0yUW5tLWtvU1huRmp2eTZkQzkwdjZVcDFKS2hIS3A4?oc=5",
-      "clusterId": "1460nky",
-      "title": "Anthropic cuts top-tier AI access after US foreigner ban",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWWVnN0FCeWUwZThwV2pob3RhOWZscXhGNUdGRzRDT21EQkhiNDNvZkVCc01rNWRsM0FyX09PcnRtN3ZLbjU1WVNObUs5RUs3bmw4dXQ5Ukw0eXB0cHVndGQxRU9XT2RiS1puWF9kbUpzNnBZRElST2ZZUWZHN0JidVhGVldlWVVNZ254OVJpZ1ZiMWPSAZMBQVVfeXFMTU5fdTdMSWEwWml1TGRXTzdxOXdDVGpsTnV2VE9fdXNpM3VEVnI4MjlqWDNobmphcTFRQUkxdlFxOVpsLUpJTDZQbkotVjhnUjNnZnRZMFplWHVhN0tQT3FUc0Fmem1oZm4zWUY3ZG5kUXVpQm0yUW5tLWtvU1huRmp2eTZkQzkwdjZVcDFKS2hIS3A4?oc=5",
-      "dateISO": "2026-06-13T07:00:00.000Z",
-      "date": "JUN 13 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "dw.com",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWWVnN0FCeWUwZThwV2pob3RhOWZscXhGNUdGRzRDT21EQkhiNDNvZkVCc01rNWRsM0FyX09PcnRtN3ZLbjU1WVNObUs5RUs3bmw4dXQ5Ukw0eXB0cHVndGQxRU9XT2RiS1puWF9kbUpzNnBZRElST2ZZUWZHN0JidVhGVldlWVVNZ254OVJpZ1ZiMWPSAZMBQVVfeXFMTU5fdTdMSWEwWml1TGRXTzdxOXdDVGpsTnV2VE9fdXNpM3VEVnI4MjlqWDNobmphcTFRQUkxdlFxOVpsLUpJTDZQbkotVjhnUjNnZnRZMFplWHVhN0tQT3FUc0Fmem1oZm4zWUY3ZG5kUXVpQm0yUW5tLWtvU1huRmp2eTZkQzkwdjZVcDFKS2hIS3A4?oc=5"
-        }
-      ],
-      "sourceName": "dw.com",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -1207,15 +865,15 @@
       ]
     },
     {
-      "id": "https://openai.com/index/how-agents-are-transforming-work",
-      "clusterId": "117rsni",
-      "title": "How agents are transforming work",
-      "desc": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
-      "url": "https://openai.com/index/how-agents-are-transforming-work",
-      "dateISO": "2026-06-25T02:00:00.000Z",
-      "date": "JUN 25 2026",
+      "id": "https://openai.com/index/diagnose-rare-childhood-diseases",
+      "clusterId": "1kkn0cr",
+      "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+      "desc": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
+      "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
+      "dateISO": "2026-06-18T08:00:00.000Z",
+      "date": "JUN 18 2026",
       "category": "research",
-      "catConfidence": 0.38,
+      "catConfidence": 0.6,
       "family": "research",
       "significance": 42,
       "impact": "emerging",
@@ -1224,7 +882,347 @@
       "sources": [
         {
           "name": "OpenAI",
-          "url": "https://openai.com/index/how-agents-are-transforming-work"
+          "url": "https://openai.com/index/diagnose-rare-childhood-diseases"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/openai-to-acquire-ona",
+      "clusterId": "1xb5ngz",
+      "title": "OpenAI to acquire Ona",
+      "desc": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
+      "url": "https://openai.com/index/openai-to-acquire-ona",
+      "dateISO": "2026-06-11T00:00:00.000Z",
+      "date": "JUN 11 2026",
+      "category": "capital",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/openai-to-acquire-ona"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/databricks",
+      "clusterId": "1vg1liv",
+      "title": "Databricks brings GPT-5.5 to enterprise agent workflows",
+      "desc": "Databricks uses GPT-5.5 for enterprise agent workflows after the model set a new state of the art on the OfficeQA Pro benchmark.",
+      "url": "https://openai.com/index/databricks",
+      "dateISO": "2026-05-15T00:00:00.000Z",
+      "date": "MAY 15 2026",
+      "category": "research",
+      "catConfidence": 0.58,
+      "family": "research",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/databricks"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+      "clusterId": "2tg230",
+      "title": "SK Hynix raises $26.5B in the biggest foreign IPO in US history, is urged to build new US fabs",
+      "desc": "The AI chip boom just produced its biggest Wall Street moment yet. Now SK Hynix and Samsung are being asked to build U.S. factories.",
+      "url": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/",
+      "dateISO": "2026-07-10T17:17:12.000Z",
+      "date": "JUL 10 2026",
+      "category": "capital",
+      "catConfidence": 0.64,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
+      "clusterId": "mx3e1n",
+      "title": "Google will now disclose which ads are made with AI",
+      "desc": "While Google prohibits misleading and deceptive ads, an ad can still leverage AI to create some type of synthetic or digitally altered content. Until now, that's something Google only required election ads to disclose.",
+      "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
+      "dateISO": "2026-07-09T18:40:51.000Z",
+      "date": "JUL 09 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/introducing-gpt-live",
+      "clusterId": "1r2qq0e",
+      "title": "Introducing GPT-Live",
+      "desc": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
+      "url": "https://openai.com/index/introducing-gpt-live",
+      "dateISO": "2026-07-08T00:00:00.000Z",
+      "date": "JUL 08 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-live"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/",
+      "clusterId": "1dghvi9",
+      "title": "Google’s AI buildout drove 37% increase in electricity use in 2025",
+      "desc": "Google tries balancing AI data center emissions with clean energy efforts.",
+      "url": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/",
+      "dateISO": "2026-07-02T11:15:49.000Z",
+      "date": "JUL 02 2026",
+      "category": "compute",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/patch-the-planet",
+      "clusterId": "6els2w",
+      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+      "desc": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
+      "url": "https://openai.com/index/patch-the-planet",
+      "dateISO": "2026-06-22T10:00:00.000Z",
+      "date": "JUN 22 2026",
+      "category": "opensource",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/patch-the-planet"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5",
+      "clusterId": "1cri4pn",
+      "title": "Anthropic Invests $150 Million To Launch 1,000 Claude Corps Fellowships",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5",
+      "dateISO": "2026-06-18T07:00:00.000Z",
+      "date": "JUN 18 2026",
+      "category": "capital",
+      "catConfidence": 0.58,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5"
+        }
+      ],
+      "sourceName": "Forbes",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
+      "clusterId": "1iubf8b",
+      "title": "Investing in multi-agent AI safety research",
+      "desc": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
+      "dateISO": "2026-06-10T10:21:19.000Z",
+      "date": "JUN 10 2026",
+      "category": "capital",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/chatgpt-memory-dreaming",
+      "clusterId": "1wc522m",
+      "title": "Dreaming: Better memory for a more helpful ChatGPT",
+      "desc": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
+      "url": "https://openai.com/index/chatgpt-memory-dreaming",
+      "dateISO": "2026-06-04T09:00:00.000Z",
+      "date": "JUN 04 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-memory-dreaming"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/trustworthy-third-party-evaluations-foundations",
+      "clusterId": "1k76y6u",
+      "title": "A shared playbook for trustworthy third party evaluations",
+      "desc": "OpenAI shares guidance on third-party AI evaluations, covering how to assess model capabilities, safeguards, and validity for frontier systems.",
+      "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations",
+      "dateISO": "2026-05-29T00:00:00.000Z",
+      "date": "MAY 29 2026",
+      "category": "market",
+      "catConfidence": 0.78,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/trustworthy-third-party-evaluations-foundations"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
+      "clusterId": "1y8m4ot",
+      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
+      "dateISO": "2026-05-28T07:00:00.000Z",
+      "date": "MAY 28 2026",
+      "category": "capital",
+      "catConfidence": 0.89,
+      "family": "market",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/warp",
+      "clusterId": "1mdn84z",
+      "title": "Warp’s big bet on building open source with GPT-5.5",
+      "desc": "Warp uses GPT-5.5 and OpenAI models to coordinate coding agents across local, cloud, and open-source development workflows.",
+      "url": "https://openai.com/index/warp",
+      "dateISO": "2026-05-27T00:00:00.000Z",
+      "date": "MAY 27 2026",
+      "category": "opensource",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/warp"
         }
       ],
       "sourceName": "OpenAI",
@@ -1267,7 +1265,7 @@
       "category": "orggov",
       "title": "OpenAI’s CEO of AGI Deployment, Fidji Simo, Is Stepping Down",
       "summary": "The move comes after Simo took significant medical leave. She will stay on as a part-time adviser.",
-      "significance": 67,
+      "significance": 66,
       "impact": "notable",
       "verification": "corroborated",
       "date": "JUL 09 2026",
@@ -1325,13 +1323,13 @@
     "chatgpt": 25,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 80,
-    "claude": 70,
+    "gpt": 78,
+    "claude": 72,
     "gemini": 32,
     "grok": 1,
     "llama": 0,
     "deepseek": 1,
-    "qwen": 2,
+    "qwen": 1,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
@@ -1349,6 +1347,17 @@
       "logoKey": "anthropic",
       "items": [
         {
+          "h": "Introducing Claude Sonnet 5",
+          "d": "JUN 30 2026",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
           "h": "Anthropic finally, officially launches Claude Sonnet 5",
           "d": "JUN 30 2026",
           "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1hVTNmV3ExUXk0eGtBV2FYaXhpVEtqQ0pjWEJOSVJQdmUwdzRFc0pza05KSDVaYmJPLU9jRUtmc2VOVXBodnoybjNiTkpDaHNwWVVnMV9LRU9sc001RG4ydW9JV0QzbW5zWW8zag?oc=5",
@@ -1357,6 +1366,17 @@
           "sourceName": "Mashable",
           "sourceCount": 1,
           "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing Claude Tag",
+          "d": "JUN 23 2026",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
           "impact": "emerging"
         },
         {
@@ -1379,28 +1399,6 @@
           "sourceName": "Forbes",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "emerging"
-        },
-        {
-          "h": "Introducing Claude Corps",
-          "d": "JUN 11 2026",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 3,
-          "verification": "official",
-          "impact": "notable"
-        },
-        {
-          "h": "Introducing Claude Fable 5",
-          "d": "JUN 09 2026",
-          "url": "https://www.youtube.com/watch?v=Y9Wz2PV404E",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "Anthropic (YouTube)",
-          "sourceCount": 1,
-          "verification": "analysis",
           "impact": "emerging"
         }
       ]
@@ -1523,7 +1521,7 @@
       "logoKey": "openai",
       "date": "JUL 11 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "OpenAI bets on families as ChatGPT goes deeper into households",
       "p": "ChatGPT is hiring a dedicated product manager to build experiences for families, caregivers, and older adults, according to a job posting.",
       "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
@@ -1576,19 +1574,7 @@
       "p": "The iPhone maker claims OpenAI encouraged poached employees to bring over confidential presentations, secret prototypes, and key supplier details.",
       "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
       "sourceName": "Wired",
-      "sourceCount": 2
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 10 2026",
-      "verification": "uncertain",
-      "impact": "notable",
-      "h": "Apple sues OpenAI over alleged trade secret theft",
-      "p": "Apple alleges the misconduct was directed by OpenAI's senior leadership, including a longtime former employee.",
-      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
+      "sourceCount": 3
     },
     {
       "org": "AI WIRE",
@@ -1612,6 +1598,18 @@
       "p": "Digital Services Act may force Meta to make big changes on its platforms.",
       "url": "https://arstechnica.com/tech-policy/2026/07/disable-auto-play-and-infinite-scroll-or-risk-massive-fines-eu-tells-meta/",
       "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 10 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in…",
+      "p": "Though Instagram head Adam Mosseri doesn't want to filter out AI content on the platform, he argues that you \"shouldn't have it in your feed\" if you don't like it. \"I don't think we should filter out AI content,\" Mosseri said during an interview on Lenny Rach…",
+      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -1842,70 +1840,77 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-11T18:09:50.506Z",
+    "updatedAt": "2026-07-11T19:06:40.281Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
       {
         "key": "gpt",
         "model": "GPT",
-        "version": "GPT-5.5",
+        "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawHits": 1481,
-        "validatedMentions": 1462,
-        "validatedDiscussions": 185,
+        "rawStoryHits": 215,
+        "fetchedStoryCount": 215,
+        "validatedStoryCount": 160,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 160,
+        "isEstimated": false,
+        "rawCommentHits": 2264,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 299,
+        "commentCoverage": 0.13250883392226148,
         "limited": false,
-        "points": 1437,
+        "points": 2000,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 16
+            "count": 55
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 10
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 7
+            "count": 46
           },
           {
             "id": "writing",
             "label": "Writing",
+            "count": 17
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 15
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 12
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "count": 11
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
             "count": 5
           },
           {
             "id": "local",
             "label": "Local use",
-            "count": 3
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 2
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 2
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 1
+            "count": 4
           },
           {
             "id": "context",
             "label": "Context limits",
-            "count": 1
+            "count": 3
           },
           {
             "id": "safety",
             "label": "Safety",
-            "count": 1
+            "count": 3
           }
         ],
         "topThreads": [
@@ -1930,55 +1935,67 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawHits": 6607,
-        "validatedMentions": 6194,
-        "validatedDiscussions": 1055,
+        "rawStoryHits": 1083,
+        "fetchedStoryCount": 300,
+        "validatedStoryCount": 295,
+        "storyCoverage": 0.2770083102493075,
+        "estimatedRelevantDiscussions": 1065,
+        "isEstimated": true,
+        "rawCommentHits": 6614,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 293,
+        "commentCoverage": 0.045358330813426065,
         "limited": false,
-        "points": 15283,
+        "points": 17406,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 45
+            "count": 152
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 62
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 8
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 7
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 5
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 4
+            "count": 34
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 3
+            "count": 16
           },
           {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 3
+            "id": "speed",
+            "label": "Speed",
+            "count": 11
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 11
           },
           {
             "id": "context",
             "label": "Context limits",
+            "count": 8
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 6
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 5
+          },
+          {
+            "id": "safety",
+            "label": "Safety",
             "count": 2
           }
         ],
@@ -2002,102 +2019,141 @@
       {
         "key": "gemini",
         "model": "Gemini",
-        "version": "Gemini 3.1 Pro",
-        "org": "Google",
-        "rawHits": 1143,
-        "validatedMentions": 1143,
-        "validatedDiscussions": 121,
+        "version": "Gemini 3.5 Pro",
+        "org": "Google DeepMind",
+        "rawStoryHits": 121,
+        "fetchedStoryCount": 121,
+        "validatedStoryCount": 107,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 107,
+        "isEstimated": false,
+        "rawCommentHits": 1144,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 295,
+        "commentCoverage": 0.26223776223776224,
         "limited": false,
-        "points": 770,
+        "points": 1887,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 15
+            "count": 69
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 61
           },
           {
-            "id": "speed",
-            "label": "Speed",
-            "count": 8
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 6
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 6
+            "id": "price",
+            "label": "Price",
+            "count": 36
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 3
+            "count": 20
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 19
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "count": 13
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 7
           },
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 2
+            "count": 5
           },
           {
             "id": "safety",
             "label": "Safety",
-            "count": 1
+            "count": 4
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
+            "count": 3
           }
         ],
         "topThreads": [
+          {
+            "title": "Noam Shazeer Joins OpenAI",
+            "points": 355,
+            "comments": 425,
+            "url": "https://twitter.com/NoamShazeer/status/2067400851438932297",
+            "date": "JUN 18 2026"
+          },
           {
             "title": "Computer use in Gemini 3.5 Flash",
             "points": 242,
             "comments": 167,
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
             "date": "JUN 24 2026"
-          },
-          {
-            "title": "Google limits Meta's use of its Gemini AI models",
-            "points": 162,
-            "comments": 72,
-            "url": "https://www.cnbc.com/2026/06/28/google-limits-metas-use-of-its-gemini-ai-models-ft-reports.html",
-            "date": "JUN 28 2026"
           }
         ]
       },
       {
         "key": "grok",
         "model": "Grok",
-        "version": "Grok 4",
+        "version": "Grok 4.5",
         "org": "xAI",
-        "rawHits": 11055,
-        "validatedMentions": 6218,
-        "validatedDiscussions": 233,
+        "rawStoryHits": 491,
+        "fetchedStoryCount": 300,
+        "validatedStoryCount": 23,
+        "storyCoverage": 0.6109979633401222,
+        "estimatedRelevantDiscussions": 38,
+        "isEstimated": true,
+        "rawCommentHits": 11058,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 164,
+        "commentCoverage": 0.027129679869777535,
         "limited": false,
-        "points": 1200,
+        "points": 1209,
         "themes": [
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 15
-          },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 34
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 33
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 8
+            "count": 28
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 10
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "count": 5
+          },
+          {
+            "id": "safety",
+            "label": "Safety",
+            "count": 5
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 4
           },
           {
             "id": "multimodal",
@@ -2105,33 +2161,8 @@
             "count": 4
           },
           {
-            "id": "speed",
-            "label": "Speed",
-            "count": 2
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 2
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 1
-          },
-          {
-            "id": "context",
-            "label": "Context limits",
-            "count": 1
-          },
-          {
             "id": "local",
             "label": "Local use",
-            "count": 1
-          },
-          {
-            "id": "safety",
-            "label": "Safety",
             "count": 1
           }
         ],
@@ -2139,7 +2170,7 @@
           {
             "title": "Grok 4.5",
             "points": 771,
-            "comments": 1476,
+            "comments": 1477,
             "url": "https://x.ai/news/grok-4-5",
             "date": "JUL 08 2026"
           },
@@ -2155,58 +2186,65 @@
       {
         "key": "llama",
         "model": "Llama",
-        "version": "Llama 4",
+        "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawHits": 538,
-        "validatedMentions": 437,
-        "validatedDiscussions": 60,
+        "rawStoryHits": 75,
+        "fetchedStoryCount": 75,
+        "validatedStoryCount": 31,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 31,
+        "isEstimated": false,
+        "rawCommentHits": 640,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 235,
+        "commentCoverage": 0.46875,
         "limited": false,
         "points": 131,
         "themes": [
           {
             "id": "local",
             "label": "Local use",
-            "count": 38
-          },
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 15
+            "count": 105
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
+            "count": 51
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 9
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 8
+            "id": "coding",
+            "label": "Coding",
+            "count": 47
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 7
+            "count": 27
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 22
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
+            "count": 17
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 5
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 1
+            "count": 14
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 1
+            "count": 3
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 2
           },
           {
             "id": "safety",
@@ -2236,61 +2274,68 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawHits": 1223,
-        "validatedMentions": 1147,
-        "validatedDiscussions": 77,
+        "rawStoryHits": 68,
+        "fetchedStoryCount": 68,
+        "validatedStoryCount": 66,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 66,
+        "isEstimated": false,
+        "rawCommentHits": 1223,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 293,
+        "commentCoverage": 0.24529844644317253,
         "limited": false,
-        "points": 1472,
+        "points": 1808,
         "themes": [
           {
             "id": "price",
             "label": "Price",
-            "count": 27
+            "count": 72
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 15
+            "count": 69
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 9
+            "count": 69
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 7
+            "count": 20
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 4
+            "count": 16
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 11
           },
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 3
+            "count": 7
           },
           {
             "id": "context",
             "label": "Context limits",
-            "count": 2
+            "count": 5
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 1
+            "count": 5
           },
           {
             "id": "safety",
             "label": "Safety",
-            "count": 1
+            "count": 5
           }
         ],
         "topThreads": [
@@ -2313,43 +2358,60 @@
       {
         "key": "qwen",
         "model": "Qwen",
-        "version": "Qwen 3.7",
+        "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawHits": 4805,
-        "validatedMentions": 3364,
-        "validatedDiscussions": 122,
+        "rawStoryHits": 181,
+        "fetchedStoryCount": 181,
+        "validatedStoryCount": 39,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 39,
+        "isEstimated": false,
+        "rawCommentHits": 4804,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 211,
+        "commentCoverage": 0.06244796003330558,
         "limited": false,
-        "points": 2737,
+        "points": 2767,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 16
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 15
+            "count": 55
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
+            "count": 48
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 36
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 7
+            "count": 21
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 6
+            "count": 18
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 8
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 3
+            "count": 6
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
+            "count": 4
           },
           {
             "id": "reliability",
@@ -2357,19 +2419,9 @@
             "count": 2
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 2
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 2
-          },
-          {
             "id": "safety",
             "label": "Safety",
-            "count": 2
+            "count": 1
           }
         ],
         "topThreads": [
@@ -2393,223 +2445,461 @@
     "comments": [
       {
         "modelId": "gpt",
-        "theme": "price",
-        "excerpt": "… through long-term dialogue with multiple AI systems (Claude, ChatGPT, Gemini, Copilot, and DeepL). I cannot fully verify how much nuance is preserved in languages I cannot read,…",
+        "themes": [
+          "speed"
+        ],
+        "excerpt": "…under the covers. But what's happening when you switch from ChatGPT Work to ChatGPT Codex? If I switch it while in an existing session, nothing seems to happen. Does that mean…",
         "source": "Hacker News",
-        "author": "michikawa59",
-        "publishedAt": "2026-07-10T12:24:32.000Z",
-        "url": "https://news.ycombinator.com/item?id=48858919"
+        "author": "GMoromisato",
+        "publishedAt": "2026-07-09T21:50:25.000Z",
+        "url": "https://news.ycombinator.com/item?id=48852828"
       },
       {
         "modelId": "gpt",
-        "theme": "reasoning",
-        "excerpt": "…describing. Going by the reverse-engineered breakdowns, ChatGPT supposedly pulls something like your last 40 conversations into context, weighted by recency and relevance.…",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "I wonder why they haven’t simply continued to rebrand Codex as a general-purpose tool. ChatGPT Work is a convoluted name and continues the trend of having separate brands for…",
         "source": "Hacker News",
-        "author": "tejassuds",
-        "publishedAt": "2026-07-10T12:49:42.000Z",
-        "url": "https://news.ycombinator.com/item?id=48859175"
+        "author": "thimabi",
+        "publishedAt": "2026-07-09T17:39:29.000Z",
+        "url": "https://news.ycombinator.com/item?id=48849661"
       },
       {
         "modelId": "gpt",
-        "theme": "coding",
-        "excerpt": "…and images were generated at least in part by an AI, mostly ChatGPT, the music was from a procedural generator I made myself in 2009 for shareware games I wrote back then. But I…",
+        "themes": [
+          "reliability"
+        ],
+        "excerpt": "…to a tiny, unsearchable popup window. Renaming the old app \"ChatGPT Classic\" implies that it will be discontinued at some point. This is a serious regression. What existed…",
         "source": "Hacker News",
-        "author": "ben_w",
-        "publishedAt": "2026-07-10T21:37:11.000Z",
-        "url": "https://news.ycombinator.com/item?id=48865643"
+        "author": "todfox",
+        "publishedAt": "2026-07-09T19:06:06.000Z",
+        "url": "https://news.ycombinator.com/item?id=48850888"
       },
       {
         "modelId": "gpt",
-        "theme": "writing",
-        "excerpt": "…and every time he saw an error, he just copy-pasted it to ChatGPT without reading and then the answer back to me.The project eventually shifted towards my original idea, but…",
+        "themes": [
+          "local"
+        ],
+        "excerpt": "I have not used voice mode much with chatgpt. I was surprised to learn that they were already not running the voice model like a UX orchestrator while utilizing other models in…",
         "source": "Hacker News",
-        "author": "anal_reactor",
-        "publishedAt": "2026-07-10T15:14:43.000Z",
-        "url": "https://news.ycombinator.com/item?id=48861092"
+        "author": "vinay_ys",
+        "publishedAt": "2026-07-08T19:40:49.000Z",
+        "url": "https://news.ycombinator.com/item?id=48836506"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "speed"
+        ],
+        "excerpt": "…thinking this was a good idea? Don't they have access to ChatGPT to talk them out of it? Of course, I'm a random on the Internet who doesn't get it, but what a dumb move. ASI…",
+        "source": "Hacker News",
+        "author": "fragmede",
+        "publishedAt": "2026-07-09T20:07:14.000Z",
+        "url": "https://news.ycombinator.com/item?id=48851700"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "coding",
+          "price"
+        ],
+        "excerpt": "On one hand, this had to happen at some point. I feel the split between ChatGPT vs. Codex wasn't helping OpenAI.Anthropic did it right from the beginning by unifying everything in…",
+        "source": "Hacker News",
+        "author": "polyrand",
+        "publishedAt": "2026-07-09T21:05:51.000Z",
+        "url": "https://news.ycombinator.com/item?id=48852373"
       },
       {
         "modelId": "claude",
-        "theme": "coding",
-        "excerpt": "…the vscode LSP typechecking errors which are < 1s feedback. Claude Opus 4.6-4.8 understand all 3 languages very well.I agree that GHC devs should focus most of their efforts on…",
-        "source": "Hacker News",
-        "author": "nh2",
-        "publishedAt": "2026-07-11T05:19:12.000Z",
-        "url": "https://news.ycombinator.com/item?id=48868992"
-      },
-      {
-        "modelId": "claude",
-        "theme": "price",
-        "excerpt": "…if it is needed and we're blind to how they do it. See the Claude plugin for Chrome as an example of using it in a user-in-the-loop solution. That said, I've been spending a…",
-        "source": "Hacker News",
-        "author": "kordlessagain",
-        "publishedAt": "2026-07-11T14:57:22.000Z",
-        "url": "https://news.ycombinator.com/item?id=48872621"
-      },
-      {
-        "modelId": "claude",
-        "theme": "writing",
-        "excerpt": "…For structural changes, it shells out to your installed Claude, Codex, or OpenCode CLI in headless mode, meaning the fix is covered by your existing coding-agent plan. No…",
-        "source": "Hacker News",
-        "author": "ruslan_qm",
-        "publishedAt": "2026-07-11T07:44:16.000Z",
-        "url": "https://news.ycombinator.com/item?id=48869740"
-      },
-      {
-        "modelId": "claude",
-        "theme": "reasoning",
-        "excerpt": "… the topic of the post.I guess technically, he takes shots at claude which no doubt wrote large sections of this? But I also would object to calling that ad hominem, and doubt…",
-        "source": "Hacker News",
-        "author": "grayhatter",
-        "publishedAt": "2026-07-11T05:53:55.000Z",
-        "url": "https://news.ycombinator.com/item?id=48869168"
-      },
-      {
-        "modelId": "gemini",
-        "theme": "coding",
-        "excerpt": "…than most frontier. Opus has cleaner reasoning, GPT 5.x and Gemini 3.x Pro do not. If someone scaled that boi up by 5x? I get the feeling DeepSeek did so many arch innovations…",
-        "source": "Hacker News",
-        "author": "reinitctxoffset",
-        "publishedAt": "2026-07-09T23:21:22.000Z",
-        "url": "https://news.ycombinator.com/item?id=48853740"
-      },
-      {
-        "modelId": "gemini",
-        "theme": "multimodal",
-        "excerpt": "… this you could analyze a couple of his vids in general using gemini 3.1 pro with openrouter in detail and you can ask multiple questions abut a video to explain in detail exactly…",
-        "source": "Hacker News",
-        "author": "mesmertech",
-        "publishedAt": "2026-07-11T13:14:13.000Z",
-        "url": "https://news.ycombinator.com/item?id=48871804"
-      },
-      {
-        "modelId": "gemini",
-        "theme": "speed",
-        "excerpt": "…each of them. (And I used to have the $250/month plan for Gemini... lol?)Both Fable and Sol are good and definite improvements. I don't have a favorite yet. It's too early to…",
-        "source": "Hacker News",
-        "author": "Dfol",
-        "publishedAt": "2026-07-10T14:25:22.000Z",
-        "url": "https://news.ycombinator.com/item?id=48860422"
-      },
-      {
-        "modelId": "gemini",
-        "theme": "reasoning",
-        "excerpt": "…Siri gets smarter without you farming queries out to Google Gemini? Bill me for it in iCloud+ I’ll probably pay for those tokens.Was that so…",
-        "source": "Hacker News",
-        "author": "majestik",
-        "publishedAt": "2026-07-10T05:22:28.000Z",
-        "url": "https://news.ycombinator.com/item?id=48856012"
-      },
-      {
-        "modelId": "grok",
-        "theme": "local",
-        "excerpt": "…different model checking its work. Like GLM, (now with 4.5) Grok, Composer.Several OpenAI, Anthropic, xAI employees, and popular AI engineers post on X and share helpful tips &…",
+        "themes": [
+          "local"
+        ],
+        "excerpt": "…is now to setup loops (eg I setup hourly integrations for Claude/Codex to 1) scrape my Linear, claim achievable tasks, and push PRs or 2) do root cause analysis on customer…",
         "source": "Hacker News",
         "author": "gabriel-uribe",
         "publishedAt": "2026-07-11T16:15:01.000Z",
         "url": "https://news.ycombinator.com/item?id=48873321"
       },
       {
-        "modelId": "grok",
-        "theme": "reasoning",
-        "excerpt": "… wasn't built on a day.At some point when they hit 5 yrs old, Grok / OpenAI are great tools to find good series appropriate to their reading level. Before that it can be vibed.…",
+        "modelId": "claude",
+        "themes": [
+          "reliability"
+        ],
+        "excerpt": "… make sense, like GPT-5.3-Codex (medium) performs better than Claude Opus 4.8 (medium) yeah sure…",
         "source": "Hacker News",
-        "author": "IG_Semmelweiss",
-        "publishedAt": "2026-07-10T09:42:47.000Z",
-        "url": "https://news.ycombinator.com/item?id=48857823"
+        "author": "noname120",
+        "publishedAt": "2026-07-10T07:24:35.000Z",
+        "url": "https://news.ycombinator.com/item?id=48856797"
       },
       {
-        "modelId": "grok",
-        "theme": "reliability",
-        "excerpt": "…itler#Antisemitism,_call....> Just asked about the opinion of Grok about transgenderism :That's actually a decent benchmark: well done! If you want to compare, provide that exact…",
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "speed"
+        ],
+        "excerpt": "… a week ago).I've found DS4 Flash to be very temperental (via Claude Code). The speed is great, but it often builds a completely wrong mental model and charges off down the wrong…",
         "source": "Hacker News",
-        "author": "wizzwizz4",
-        "publishedAt": "2026-07-09T19:33:26.000Z",
-        "url": "https://news.ycombinator.com/item?id=48851268"
+        "author": "nmfisher",
+        "publishedAt": "2026-07-10T00:38:26.000Z",
+        "url": "https://news.ycombinator.com/item?id=48854353"
       },
       {
-        "modelId": "grok",
-        "theme": "coding",
-        "excerpt": "… YOLO mode is apparently a hacking technique. I’ve been using Grok as a backend for some experimental AI game storytelling, and obviously fiction isn’t all rainbows and unicorns,…",
-        "source": "Hacker News",
-        "author": "cameronh90",
-        "publishedAt": "2026-07-09T14:36:45.000Z",
-        "url": "https://news.ycombinator.com/item?id=48846601"
-      },
-      {
-        "modelId": "llama",
-        "theme": "coding",
-        "excerpt": "…or context/rope length aspects.Several families - esp Llama and gemma - seem to be easily doom-inclined during expansions (I realize this is a pathological misuse of the…",
-        "source": "Hacker News",
-        "author": "kfsone",
-        "publishedAt": "2026-07-07T21:38:01.000Z",
-        "url": "https://news.ycombinator.com/item?id=48824232"
-      },
-      {
-        "modelId": "llama",
-        "theme": "context",
-        "excerpt": "… mentioned, my setup with Sear is the following, all through `llama.cpp`, which has a built-in webui with an MCP client:* SearXNG in Docker — enable the JSON API (`search.formats:…",
-        "source": "Hacker News",
-        "author": "goodroot",
-        "publishedAt": "2026-07-04T02:46:17.000Z",
-        "url": "https://news.ycombinator.com/item?id=48782223"
-      },
-      {
-        "modelId": "llama",
-        "theme": "price",
-        "excerpt": "…tier of OpenCode Zen to ask it stuff about what models and llama.cpp configurations to use in the hopes that I could maybe bootstrap something halfway decent to use locally,…",
-        "source": "Hacker News",
-        "author": "saghm",
-        "publishedAt": "2026-07-10T04:43:33.000Z",
-        "url": "https://news.ycombinator.com/item?id=48855837"
-      },
-      {
-        "modelId": "llama",
-        "theme": "reasoning",
-        "excerpt": "> There’s an uncensored model floating around that you can run locally with llama.cppThere are many uncensored (and abliterated) models floating around (HauHauCS has large…",
-        "source": "Hacker News",
-        "author": "crystal_revenge",
-        "publishedAt": "2026-07-07T03:40:05.000Z",
-        "url": "https://news.ycombinator.com/item?id=48813434"
-      },
-      {
-        "modelId": "deepseek",
-        "theme": "reasoning",
-        "excerpt": "…obvious political influence on LLMs on stuff like GLM or DeepSeek. This is reflected in conversations even on HN where this is brought up as a risk so I think this is…",
-        "source": "Hacker News",
-        "author": "inkysigma",
-        "publishedAt": "2026-07-09T10:05:15.000Z",
-        "url": "https://news.ycombinator.com/item?id=48843454"
-      },
-      {
-        "modelId": "deepseek",
-        "theme": "coding",
-        "excerpt": "…at a much lower price will be the one to win in the end.DeepSeek is remarkably efficient at caching and their cached token rates are crazy cheap; using it with Reasonix is…",
-        "source": "Hacker News",
-        "author": "SwellJoe",
-        "publishedAt": "2026-07-11T02:27:26.000Z",
-        "url": "https://news.ycombinator.com/item?id=48868036"
-      },
-      {
-        "modelId": "deepseek",
-        "theme": "price",
-        "excerpt": "…(high) via OpenAI subscription * General purpose subagent: deepseek-v4-pro (high) via OpenCode Go subscription * Using `obra/superpowers` for subagent driven workflows * The…",
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "price"
+        ],
+        "excerpt": "I'd say Codex and Claude Code have different strengths and weaknesses. Claude Code is significantly better in terms of their subagent UI for example - being able to see the list…",
         "source": "Hacker News",
         "author": "beefsack",
         "publishedAt": "2026-07-10T09:00:25.000Z",
         "url": "https://news.ycombinator.com/item?id=48857510"
       },
       {
-        "modelId": "deepseek",
-        "theme": "local",
-        "excerpt": "…codebase (I tried different models including GPT-5.5 and DeepSeek). Interestingly Gemma 4 under opencode running locally performs not bad at all, it's far yet from DeepSeek…",
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "reasoning"
+        ],
+        "excerpt": "…making a great AI coding experience but they didn't control Claude and got destroyed once Anthropic started explicitly training Claude to be better at using Claude code. And…",
         "source": "Hacker News",
-        "author": "novaRom",
-        "publishedAt": "2026-07-09T20:02:13.000Z",
-        "url": "https://news.ycombinator.com/item?id=48851649"
+        "author": "mips_avatar",
+        "publishedAt": "2026-07-11T18:20:36.000Z",
+        "url": "https://news.ycombinator.com/item?id=48874346"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "reasoning"
+        ],
+        "excerpt": "…or set of tasks without you ever having to notice or care. Claude code on the other hand still has fairly poor compaction.Codex has more generous usage limits, and they also…",
+        "source": "Hacker News",
+        "author": "jatora",
+        "publishedAt": "2026-07-10T04:07:21.000Z",
+        "url": "https://news.ycombinator.com/item?id=48855642"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "reasoning",
+          "multimodal"
+        ],
+        "excerpt": "…the most efficient large models (I'd wager their margins on Gemini 3.5 Flash inference are absurd). They have among the best image, video, and audio models, going in every…",
+        "source": "Hacker News",
+        "author": "SwellJoe",
+        "publishedAt": "2026-07-08T23:09:09.000Z",
+        "url": "https://news.ycombinator.com/item?id=48838584"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…high instead of low made tasks complete faster and cheaper (Gemini 3.0 flash).Other aspects are caching, often at 0.1X cost, where providers really differ in how efficient they…",
+        "source": "Hacker News",
+        "author": "tidbeck",
+        "publishedAt": "2026-07-06T20:16:56.000Z",
+        "url": "https://news.ycombinator.com/item?id=48809908"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…price range that provides the same all around perfas noted, gemini 3 flash is expensivereally not liking google these days they are not hungry…",
+        "source": "Hacker News",
+        "author": "zuzululu",
+        "publishedAt": "2026-07-10T22:23:22.000Z",
+        "url": "https://news.ycombinator.com/item?id=48866068"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "reliability"
+        ],
+        "excerpt": "Do you remember when Gemini [made diverse Nazis](https://www.theverge.com/2024/2/21/24079371/google-ai-gemini...) and refused to make white polar bears or white ice cream? That…",
+        "source": "Hacker News",
+        "author": "Gareth321",
+        "publishedAt": "2026-07-09T08:15:17.000Z",
+        "url": "https://news.ycombinator.com/item?id=48842550"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "context"
+        ],
+        "excerpt": "I notice Gemini is essentially a frontend to Reddit at this point. I'm guessing that was on TikTok and also Reddit, while the malicious Wikipedia edit doesn't make it through a…",
+        "source": "Hacker News",
+        "author": "pjjpo",
+        "publishedAt": "2026-07-07T10:07:10.000Z",
+        "url": "https://news.ycombinator.com/item?id=48815729"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "price",
+          "local"
+        ],
+        "excerpt": "…dialogue with multiple AI systems (Claude, ChatGPT, Gemini, Copilot, and DeepL). I cannot fully verify how much nuance is preserved in languages I cannot read, so if…",
+        "source": "Hacker News",
+        "author": "michikawa59",
+        "publishedAt": "2026-07-10T12:24:32.000Z",
+        "url": "https://news.ycombinator.com/item?id=48858919"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "coding",
+          "writing"
+        ],
+        "excerpt": "…MCP2) visit target site3) point GLM 5.2 to MCP (maybe grok 4.5 will also work here? haven't tested their guardrails yet)4) instruct model to create userscript that…",
+        "source": "Hacker News",
+        "author": "teravor",
+        "publishedAt": "2026-07-10T21:53:47.000Z",
+        "url": "https://news.ycombinator.com/item?id=48865800"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "coding",
+          "speed"
+        ],
+        "excerpt": "Now we have various Opus+ level models (Opus/Fable, Grok 4.5, GPT 5.6) I prefer to focus on price/speed and harness as models are all generally good enough for coding. (Fable is…",
+        "source": "Hacker News",
+        "author": "small_model",
+        "publishedAt": "2026-07-09T21:56:58.000Z",
+        "url": "https://news.ycombinator.com/item?id=48852894"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "writing"
+        ],
+        "excerpt": "Blog post idea:We made Grok 4.5, GPT-5.5, and Claude write a blog post about using Grok 4.5, GPT-5.5, and Claude to build the same apps.",
+        "source": "Hacker News",
+        "author": "ks2048",
+        "publishedAt": "2026-07-09T02:37:06.000Z",
+        "url": "https://news.ycombinator.com/item?id=48840320"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "speed",
+          "price"
+        ],
+        "excerpt": "Here is a prompt I keyed into SuperGrok (still have the bargain priced $10 a month subscription as they seem to be really desparate for subscribers right now): Answer these…",
+        "source": "Hacker News",
+        "author": "trollbridge",
+        "publishedAt": "2026-07-09T05:07:10.000Z",
+        "url": "https://news.ycombinator.com/item?id=48841220"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "speed",
+          "price"
+        ],
+        "excerpt": "…faster and much cheaper: https://aibenchy.com/compare/x-ai-grok-4-5-medium/z-ai-glm-5...…",
+        "source": "Hacker News",
+        "author": "XCSme",
+        "publishedAt": "2026-07-08T23:20:08.000Z",
+        "url": "https://news.ycombinator.com/item?id=48838708"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…cost for performance, I wonder why nobody is talking about Grok 4.5 high? Those numbers look very convincing to…",
+        "source": "Hacker News",
+        "author": "arendtio",
+        "publishedAt": "2026-07-10T22:57:32.000Z",
+        "url": "https://news.ycombinator.com/item?id=48866387"
+      },
+      {
+        "modelId": "llama",
+        "themes": [
+          "speed",
+          "price"
+        ],
+        "excerpt": "… so it does sample local models. I just tested \"--candidates ollama/llama3.2:1b\", and that works - ignoring the lack of rich UX for local/unpriced models, as I was focussing on…",
+        "source": "Hacker News",
+        "author": "jarodrh",
+        "publishedAt": "2026-07-11T12:01:23.000Z",
+        "url": "https://news.ycombinator.com/item?id=48871280"
+      },
+      {
+        "modelId": "llama",
+        "themes": [
+          "speed",
+          "context"
+        ],
+        "excerpt": "I second this.I used llama swap for a while before leaning into lemonade. The UI has improved a lot, but be careful as the most of the models default to very small 4K context…",
+        "source": "Hacker News",
+        "author": "data-ottawa",
+        "publishedAt": "2026-07-10T18:38:42.000Z",
+        "url": "https://news.ycombinator.com/item?id=48863576"
+      },
+      {
+        "modelId": "llama",
+        "themes": [
+          "coding",
+          "context"
+        ],
+        "excerpt": "llama.cpp supports a wide variety of 4-bit and smaller quants and mmap's models by default, so you dont need to be able to hold the weights in memory (the OS will handle bringing…",
+        "source": "Hacker News",
+        "author": "ac29",
+        "publishedAt": "2026-07-10T03:18:59.000Z",
+        "url": "https://news.ycombinator.com/item?id=48855363"
+      },
+      {
+        "modelId": "llama",
+        "themes": [
+          "reasoning",
+          "writing"
+        ],
+        "excerpt": "… since I just got home, I'm making all of my modifications to llama.cpp, the goal was to eventually put this on a SBC of some kind with an nvme to handle the mmapped files. I…",
+        "source": "Hacker News",
+        "author": "Cieric",
+        "publishedAt": "2026-07-09T21:44:36.000Z",
+        "url": "https://news.ycombinator.com/item?id=48852772"
+      },
+      {
+        "modelId": "llama",
+        "themes": [
+          "price",
+          "reliability"
+        ],
+        "excerpt": "My first thought would be an adjustment to a reasoning budget parameter (using llama.cpp as my reference) which would lead to these results. But no way to know precisely without…",
+        "source": "Hacker News",
+        "author": "mhitza",
+        "publishedAt": "2026-07-05T04:15:18.000Z",
+        "url": "https://news.ycombinator.com/item?id=48791208"
+      },
+      {
+        "modelId": "llama",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "AWS already supports Llama and GLM in its Bedrock service for hosted models.They’re much cheaper to run, eg, Llama 3.3 Instruct 70B is 5-10x cheaper than Sonnet…",
+        "source": "Hacker News",
+        "author": "zmgsabst",
+        "publishedAt": "2026-07-07T04:30:21.000Z",
+        "url": "https://news.ycombinator.com/item?id=48813677"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "speed",
+          "local"
+        ],
+        "excerpt": "…play back with a local TTS model on my Pixel 10 Pro.But the Deepseek v4 flash model I am using through OpenRouter is killing me on latency. Any suggestions to improve…",
+        "source": "Hacker News",
+        "author": "shostack",
+        "publishedAt": "2026-07-09T02:10:57.000Z",
+        "url": "https://news.ycombinator.com/item?id=48840097"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "context",
+          "local"
+        ],
+        "excerpt": "…time burns tokens like crazy. I had a Hermes session using DeepSeek v4 Pro via Ollama, and ate half my weekly token allotment in a couple hours, just by piling on more and more…",
+        "source": "Hacker News",
+        "author": "diseasedyak",
+        "publishedAt": "2026-07-07T20:24:19.000Z",
+        "url": "https://news.ycombinator.com/item?id=48823202"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "writing",
+          "local"
+        ],
+        "excerpt": "…Update 1: Llama 3.1 70B gets it right as well. Update 2: Deepseek V4 Flash gets it right. Update 3: Glm 4.5 Air gets it right as wellCan't seem to get any smaller models to…",
+        "source": "Hacker News",
+        "author": "AlexDragusin",
+        "publishedAt": "2026-07-07T00:08:00.000Z",
+        "url": "https://news.ycombinator.com/item?id=48812127"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "coding",
+          "context"
+        ],
+        "excerpt": "Lower context window notwithstanding, Hy3's coding benchmarks hold their own against DeepSeek v4 Pro & MiMo v2.5 Pro. That's quite something for a model priced like DeepSeek v4…",
+        "source": "Hacker News",
+        "author": "ignoramous",
+        "publishedAt": "2026-07-09T16:37:20.000Z",
+        "url": "https://news.ycombinator.com/item?id=48848653"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "reasoning",
+          "writing"
+        ],
+        "excerpt": "…a long way since these old models were released though. Deepseek V4 Flash is even cheaper than gpt-5-nano. I'm still going to pay a cloud provider to run it for me, I'm not…",
+        "source": "Hacker News",
+        "author": "whycombinetor",
+        "publishedAt": "2026-07-10T21:59:44.000Z",
+        "url": "https://news.ycombinator.com/item?id=48865853"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "reasoning",
+          "speed"
+        ],
+        "excerpt": "… context or sticking to KV-cache efficient models such as the DeepSeek V4 series. Still, this might be one way of making use of existing lower-end hardware for practical inference…",
+        "source": "Hacker News",
+        "author": "zozbot234",
+        "publishedAt": "2026-07-10T07:17:49.000Z",
+        "url": "https://news.ycombinator.com/item?id=48856753"
       },
       {
         "modelId": "qwen",
-        "theme": "reasoning",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…what model to use. If it's so simple that a dirt cheap qwen 3.5 flash or whatever will be fine, then it chooses that. If it deems we need GPT 5.6, then it uses that, etc.…",
+        "source": "Hacker News",
+        "author": "indigodaddy",
+        "publishedAt": "2026-07-11T14:57:16.000Z",
+        "url": "https://news.ycombinator.com/item?id=48872619"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "reliability"
+        ],
+        "excerpt": "…and call this out,> We have replicated the core claims on Qwen 3.6 27B, and also share preliminary evidence of extending this work by finding abstract \"interpretative…",
+        "source": "Hacker News",
+        "author": "tclancy",
+        "publishedAt": "2026-07-07T10:19:19.000Z",
+        "url": "https://news.ycombinator.com/item?id=48815808"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "speed"
+        ],
+        "excerpt": "The Strix Halo is a great dev machine and a mediocre AI machine. You can run Qwen 3.6 27B at a decent speed, or larger MoE models, and that's about it. For some that's more than…",
+        "source": "Hacker News",
+        "author": "prima-facie",
+        "publishedAt": "2026-07-10T18:16:22.000Z",
+        "url": "https://news.ycombinator.com/item?id=48863352"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "reasoning",
+          "reliability"
+        ],
         "excerpt": "…say \"...ask the thinking model...\" and that redirects it to Qwen 3.6 27B on vLLM.Can't claim originality though - it was inspired by Sesame - where their models will invoke a…",
         "source": "Hacker News",
         "author": "alexellisuk",
@@ -2618,30 +2908,26 @@
       },
       {
         "modelId": "qwen",
-        "theme": "coding",
-        "excerpt": "…and routing my token spend via OpenRouter or offloading to Qwen locally. Then I'll have to put an accurate dollar amount on frontier…",
+        "themes": [
+          "coding",
+          "writing"
+        ],
+        "excerpt": "Gemma 4 is the first really small model that feels smart, to me. I mean, Qwen 3.6 is arguably better at some coding tasks. But, Gemma 4 has shockingly good reasoning for a small…",
         "source": "Hacker News",
-        "author": "goodmattg",
-        "publishedAt": "2026-07-09T18:49:41.000Z",
-        "url": "https://news.ycombinator.com/item?id=48850666"
+        "author": "SwellJoe",
+        "publishedAt": "2026-07-09T19:35:21.000Z",
+        "url": "https://news.ycombinator.com/item?id=48851301"
       },
       {
         "modelId": "qwen",
-        "theme": "writing",
-        "excerpt": "…some of my recent sessions, here are some examples:- Asking Qwen to review project docs (requirements, user stories, etc) so that \"we\" can evaluate an iterate on an API design.…",
+        "themes": [
+          "speed"
+        ],
+        "excerpt": "…they have the deal with Anthropic. They're still offering Qwen 3, not even 3.5 and certainly not 3.6. GLM 5 is the newest z.AI model they have, when it's 5.2 that would be the…",
         "source": "Hacker News",
-        "author": "anon373839",
-        "publishedAt": "2026-07-10T06:23:37.000Z",
-        "url": "https://news.ycombinator.com/item?id=48856424"
-      },
-      {
-        "modelId": "qwen",
-        "theme": "multimodal",
-        "excerpt": "…are pretty tight, ~400ms for everything. I have optimized qwen-3-asr and added streaming detection to it, as well as pocket-tts (this) and qwen-3-tts, with a goal of ~70ms for…",
-        "source": "Hacker News",
-        "author": "pantelisk",
-        "publishedAt": "2026-07-08T18:07:24.000Z",
-        "url": "https://news.ycombinator.com/item?id=48835204"
+        "author": "regularfry",
+        "publishedAt": "2026-07-07T05:26:09.000Z",
+        "url": "https://news.ycombinator.com/item?id=48813967"
       }
     ]
   }
