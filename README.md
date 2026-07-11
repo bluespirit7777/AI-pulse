@@ -16,26 +16,37 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    for detail. A 24H/7D/30D toggle shows change over time (and says so honestly
    while history is still accumulating).
 2. **Today's Strongest Waves** — the top product, market, and research story by
-   a documented significance score, each with a visible "why it matters".
+   a documented significance score. Each has a "why it matters" that explains the
+   **consequence** of the event and a separate "why selected" line for the
+   scoring; the badge reads *Stands out / Typical / Lower intensity* (an honest
+   within-window comparison, not a fake time trend).
 3. **Signal River** — a chronological (newest-first) timeline of everything
-   crossing the wire, with merged duplicates and category/entity/time filters.
-4. **AI Stock Network** — 10 AI stocks as an ecosystem depth map: node size =
-   market cap, glow = relative volume, ring = day change; toggle between curated
-   **business ties** and 30-day **price-return correlation** (kept separate).
-   Accessible table fallback.
-5. **Community Pulse** — a model conversation map (bubble size = mention volume)
-   with topic themes and real, sanitised HN comment excerpts you can filter.
-6. **Detailed evidence** below — frontier releases, leaderboard, image/video
-   rankings, market share, compute pricing, open-weight feed, and breakthroughs.
+   crossing the wire, with merged duplicates and category/entity/time filters
+   (the entity filter shows readable names — GPT, Nvidia — not ids).
+4. **The Tide** — how daily **operational** AI activity changes by category
+   (general commentary and analysis excluded); only plots days actually collected.
+5. **AI Stock Network** — 10 AI stocks as an ecosystem depth map: node size =
+   market cap, glow = relative volume, ring = day change (computed from the last
+   two valid trading bars); toggle between curated **business ties** and 30-day
+   **price-return correlation** (kept separate). Accessible table fallback.
+6. **Community Pulse** — a model conversation map where bubble size = **validated
+   public discussions** (contextually matched, with ambiguous "grok"/"llama"
+   noise rejected), plus topic themes and real, sanitised, de-duplicated HN
+   comment excerpts you can filter.
+7. **Explore the depths** — frontier releases (incl. official-lab YouTube launch
+   videos), leaderboard, image/video rankings, market share, compute pricing,
+   open-weight feed, and breakthroughs.
 
 Every item carries a **freshness / confidence / provenance** chip
 (Live · Auto · Curated · Estimated, plus corroboration strength).
 
 ## Live vs. curated
 
-- **Live (auto, ~every 30 min):** signals, waves, river, releases, wire,
-  open-weight feed, breakthroughs, stock prices, and the map's activity/glow —
-  from publisher RSS feeds and Yahoo Finance. Every card links to its source.
+- **Live (auto, ~every 30 min):** signals, waves, river, tide, releases,
+  open-weight feed, breakthroughs, community pulse, stock prices, and the map's
+  activity/glow — from publisher RSS feeds, official frontier-lab YouTube
+  channels, Hacker News, and Yahoo Finance. Every card links to its source, and
+  the footer shows the build commit the live data came from.
 - **Curated (by hand):** the leaderboard, image/video rankings, market-share
   donut, compute pricing, and the map's node *importance/size* and relationships.
   No reliable free live API exists for these. Edit

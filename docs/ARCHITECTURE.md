@@ -7,7 +7,7 @@ the HTML/CSS/JS. Everything works offline-of-server from plain files.
 ## Data flow
 
 ```
-publisher RSS + Yahoo Finance
+publisher RSS + official lab YouTube (Atom) + Yahoo Finance
         │  (GitHub Actions, :07 & :37 each hour)
         ▼
 scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification, topics)
@@ -27,7 +27,7 @@ scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, 
 index.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network
         ├─ js/oceanmap.js      hero: SVG current-field map + drawer (real per-range data)
-        ├─ js/waveform.js      strongest waves as SVG waveforms (why-it-matters visible)
+        ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected")
         ├─ js/river.js         signal river (chronological, filters, expand/archive)
         ├─ js/tide.js          30-day stacked-area category volume
         ├─ js/stocknetwork.js  AI stock network: ecosystem + market-motion modes, drawer

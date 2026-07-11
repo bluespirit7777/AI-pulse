@@ -11,7 +11,12 @@ objective truth. The logic lives in
 
 ## Pipeline
 
-1. **Fetch** — 9 publisher RSS feeds + Yahoo Finance quotes. No API keys.
+1. **Fetch** — 9 publisher RSS feeds, 5 official frontier-lab **YouTube** channel
+   Atom feeds (OpenAI, Anthropic, Google DeepMind, AI at Meta, NVIDIA), and Yahoo
+   Finance quotes. No API keys. Video uploads are gated to release-like items
+   (must name a lab **and** read as a product release) so keynotes and tutorials
+   never enter the general stream — a launch video simply corroborates the blog
+   release.
 2. **Filter** — drop items older than 60 days (some feeds carry years-old
    evergreen posts). Falls back to the unfiltered pool if fewer than 12 recent
    items exist.
@@ -49,6 +54,16 @@ and a false-positive guard that keeps 5 distinct same-day OpenAI stories apart.
 
 Each cluster keeps a stable ID, its earliest publication as the canonical
 representative, and every distinct source.
+
+**Explicit event relation (correctness pass).** On top of the similarity blend,
+each pair is checked for an extracted **action** (shutdown / resign / acquire /
+raise / invest / sue / regulate / partner / launch / research) and a set of
+**salient objects** (domain nouns + proper-noun phrases). Two reports with the
+same action and a shared object are merged even when their wording barely
+overlaps (the two "ChatGPT Atlas browser is dead" reports); two reports with
+**conflicting** actions and weak object overlap are blocked from merging even
+when they share a company and a day (a GPT-5.6 *launch* vs a Codex/ChatGPT-Work
+story). This is unit-tested against both cases.
 
 ## Categorization (Priority 3)
 
@@ -129,15 +144,27 @@ de-emphasized until a node is selected.
 
 **Waveforms** — x = publish time in a 72h window; amplitude = significance;
 brightness = freshness; marker size = source count; secondary peaks = other
-same-family stories this window; trend arrow = winner vs. the family's other
-points.
+same-family stories this window. The badge reads **Stands out / Typical / Lower
+intensity** — an honest *within-window* comparison of the winner against its
+family's other stories, **not** a time-series trend (we don't yet have the
+multi-day per-family history a real rising/falling trend would need).
+
+**"Why it matters"** is a deterministic editorial line about the **consequence**
+of the event — keyed by the extracted action, then category, and hedged when the
+signal is emerging or thinly sourced (`whyItMatters` in `signals.mjs`, computed at
+build time). The scoring rationale ("day's strongest product move …") is kept as
+a separate, clearly-labelled **"Why selected"** line so consequence and selection
+are never conflated.
 
 **Signal River** — chronological (time first); dot size = significance but never
 reorders; verification chip per item; category/entity/time filters; expand/
 archive for older signals.
 
-**The Tide** — daily category volume, stacked, only over days actually
-collected; below 3 days it shows a "still filling" state.
+**The Tide** — *how operational AI activity changes each day*: stacked daily
+volume across the nine operational categories only. **General commentary and
+opinion/analysis are excluded** (stated in the UI), so it tracks activity, not
+chatter. Plotted only over days actually collected; below 3 days it shows a
+"still filling" state and never implies history that wasn't recorded.
 
 ## What we deliberately don't do
 
@@ -161,6 +188,17 @@ day change. Two clearly-separated modes:
   filtered to |r| ≥ 0.5. Positive vs. negative is shown by solid vs. dashed
   lines (not colour alone) and thickness = |r|.
 
+**Daily % change (correctness pass)** is computed from the **last two valid
+trading bars**, not Yahoo's `chartPreviousClose` (which is the close from the
+*start* of the 3-month range and produced absurd "daily" moves like AMD +128%).
+Null/zero closes are dropped first, so weekends, holidays and missing bars are
+handled naturally; the live `regularMarketPrice` is used as the latest point only
+when it is genuinely newer than the last posted bar. A move over ±25% is
+**flagged for review** (`changeReview`), not silently dropped — real large moves
+happen, but so do unadjusted-split artifacts — and the same field is shared by
+the network, table and drawer so they can never disagree. `dailyChange` has 12
+regression tests including the exact AMD bug.
+
 **Market cap** = curated shares outstanding × live price — a real, price-updating
 figure (shares change only quarterly), never fabricated; the endpoint that
 serves live market cap is auth-gated, so this is the honest alternative.
@@ -175,23 +213,42 @@ A model conversation map + representative public comments — **not** a comment
 feed and **not** a sentiment score. Built entirely at fetch time from the free,
 no-key **Hacker News Algolia API**:
 
-- **Mention volume** (bubble size) and **discussion count** per model family
-  from HN stories over 30 days.
-- **Topic themes** classified from HN *comments* across 10 plain-language topics
-  (coding, reasoning, writing, speed, price, reliability, context, image/video,
-  local, safety) — see `classifyTopics` in
-  [`scripts/lib/signals.mjs`](../scripts/lib/signals.mjs). Topic/volume grouping
-  is used instead of a made-up positive/negative score.
-- **Representative comments**: real HN excerpts, one per distinct theme (so they
-  don't repeat a point), **sanitised** (HTML stripped, entities decoded) and
-  truncated to ~180 chars centred on the model keyword so they stay on-topic;
-  each shows author, source, time and a direct link.
+- **Contextual matching, not raw keyword hits (correctness pass).** Every story
+  and comment is validated by `matchModelMention`/`isValidatedMention`: per-model
+  aliases (ChatGPT→GPT, "Claude Code"→Claude), a required nearby-AI-context test,
+  and **ambiguity rejection** for family names that are ordinary words — "grok"
+  as a verb ("finally grok monads") and "llama" the animal are rejected unless a
+  strong alias ("Grok 4", "xAI Grok", "llama.cpp") or AI context is present. Each
+  match returns a 0–1 confidence with a 0.5 threshold.
+- **Bubble size = validated public discussions** — raw HN story hits scaled by
+  the validated fraction of the sample, never the raw hit count. `rawHits`,
+  `validatedMentions` and `validatedDiscussions` are stored separately; a
+  **"Limited discussion sample"** badge appears when validated discussions are
+  sparse. (In one live build this cut grok's 11,120 raw comment hits to ~6,255
+  validated mentions — the verb noise removed.)
+- **Topic themes** classified from *validated* HN comments across 10
+  plain-language topics (coding, reasoning, writing, speed, price, reliability,
+  context, image/video, local, safety) — see `classifyTopics`. Topic/volume
+  grouping is used instead of a made-up positive/negative score.
+- **Representative comments**: real, validated HN excerpts, one per distinct
+  theme (so they don't repeat a point) and **globally de-duplicated** so an
+  excerpt never reappears under a different model; **sanitised** (HTML stripped,
+  entities decoded) and truncated to ~180 chars centred on the model keyword so
+  they stay on-topic; each shows author, source, time and a direct link.
 
 Why not a sentiment score: automated sentiment isn't objective truth, and the
 sources that would improve breadth (X, Reddit) are paid/restricted. The result
 is labelled a **sample** of public developer discussion, not the whole
 community. On partial source failure each model is independent (per-model
 try/catch), so one failure never blanks the section.
+
+## Build provenance
+
+Each build stamps `latest.json` with a `build` block — `sha`, `shortSha`, `ref`,
+`builtAt` — from `GITHUB_SHA` in CI or `git rev-parse` locally. The footer renders
+**"Build &lt;shortSha&gt; · data generated &lt;time&gt;"** linking to the exact commit, so the
+live GitHub Pages deployment can be verified against the repo at a glance.
+`validate.mjs` enforces the block's presence before any commit.
 
 ## Curated datasets
 

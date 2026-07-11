@@ -5,6 +5,10 @@
 ```jsonc
 {
   "updatedAt": "2026-07-10T10:05:00.000Z",  // ISO timestamp of this build
+  "build": {                                 // provenance (verify live vs repo)
+    "sha": "d769fc4…", "shortSha": "d769fc4",
+    "ref": "main", "builtAt": "2026-07-10T10:05:00.000Z"
+  },
   "ticker": ["HEADLINE …"],                  // up to 10 uppercase headlines
 
   "signals": [                               // unified scored stream (≤40)
@@ -31,7 +35,8 @@
     { "family": "product", "category": "product", "title": "…", "summary": "…",
       "significance": 74, "impact": "high", "verification": "corroborated",
       "date": "JUL 10 2026", "dateISO": "…", "url": "https://…",
-      "sourceCount": 2, "sources": [ … ], "entityIds": [ … ] }
+      "sourceCount": 2, "sources": [ … ], "entityIds": [ … ],
+      "whyItMatters": "Winding a product down pushes its users elsewhere…" }  // consequence, not scoring
   ],
 
   "entityActivity": { "chatgpt": 28, "gemini": 21, "nvidia": 4, … },
@@ -41,16 +46,20 @@
   "feed":         [ … ],  // open-weight rows + verification, impact
   "breakthroughs":[ … ],  // research cards + verification, impact
   "stocks":       [ { "t": "NVDA", "n": "…", "layer": "Chips",
-                      "price": 201.76, "changePct": 2.11, "relVolume": 0.59,
-                      "marketCap": 5.1e12, "url": "https://…" } ],  // "View as table" fallback
+                      "price": 201.76, "changePct": 2.11,   // from last two valid bars
+                      "changeReview": false,                // true ⇒ |change|>25%, flagged not dropped
+                      "relVolume": 0.59, "marketCap": 5.1e12, "url": "https://…" } ],  // "View as table" fallback
 
   "community": {                          // conversation map + representative comments
     "window": "30D", "source": "Hacker News", "updatedAt": "…",
     "models": [ { "key": "claude", "model": "Claude", "version": "…", "org": "…",
-                  "mentionCount": 6785, "uniqueDiscussionCount": 1113, "points": 0,
+                  "rawHits": 6785,                 // raw HN keyword-hit count (context, not bubble size)
+                  "validatedMentions": 6553,       // hits that genuinely discuss the model (≤ rawHits)
+                  "validatedDiscussions": 1078,    // validated unique discussions → BUBBLE SIZE
+                  "limited": false, "points": 0,   // limited ⇒ "Limited discussion sample" badge
                   "themes": [ { "id": "coding", "label": "Coding", "count": 39 } ],
                   "topThreads": [ { "title": "…", "points": 0, "url": "…", "date": "…" } ] } ],
-    "comments": [ { "modelId": "claude", "theme": "coding", "excerpt": "… ≤180 chars, sanitised …",
+    "comments": [ { "modelId": "claude", "theme": "coding", "excerpt": "… ≤180 chars, sanitised, validated, globally unique …",
                     "source": "Hacker News", "author": "…", "publishedAt": "…", "url": "https://news.ycombinator.com/item?id=…" } ]
   }
 }
