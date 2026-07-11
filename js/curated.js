@@ -20,11 +20,20 @@ export const modelReception = {
   qwen: 'The open-weight darling of the local-LLM crowd; widely called the best self-hostable option for coders.',
 };
 
+// Rank order is cross-checked against Scale Labs' public leaderboard
+// (https://labs.scale.com/leaderboard) — a real, third-party evaluator, not
+// house benchmarks from any one lab. Scale shows a genuine split: Gemini/GPT
+// lead broad frontier reasoning (Humanity's Last Exam, EnigmaEval), while
+// Claude leads agentic coding specifically — and within Claude, Fable 5 beats
+// Opus 4.8 on hands-on dev-agent tasks (SWE Atlas Refactoring: 54.8 vs 46.7;
+// Test Writing: 58.5 vs 49.6; Remote Labor Index: 16.1 vs 8.3), while Opus 4.8
+// leads codebase comprehension (SWE Atlas Codebase QnA: 57.3, #1). So Fable
+// is the faster tier, not a strictly weaker one — see its note below.
 export const leaderboard = [
-  { rank: 1, model: 'Claude Opus 4.8', org: 'Anthropic', w: 100, stat: 'Tops Intelligence Index', note: 'Leads agentic coding + long-context; Fable 5 is the faster sibling below it' },
-  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Newest OpenAI flagship', note: 'Sol tuning sharpens reasoning + agentic tool use; broadest mainstream reach' },
-  { rank: 3, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 88, stat: 'Best science + multimodal', note: 'Native computer-use in 3.5 Flash · very long context across Search & Workspace' },
-  { rank: 4, model: 'Claude Fable 5', org: 'Anthropic', w: 82, stat: 'Fast frontier tier', note: 'Opus-class quality at higher speed/lower cost; a developer default for iteration' },
+  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: 'Leads frontier reasoning', note: 'Tops Humanity’s Last Exam & EnigmaEval among tracked models (Scale Labs) · native computer-use in 3.5 Flash' },
+  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Near-tied for top reasoning', note: 'GPT-5.4/5.5-class trails Gemini by ~2pts on Humanity’s Last Exam (Scale Labs); broadest mainstream reach' },
+  { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', w: 88, stat: 'Leads codebase comprehension', note: '#1 on Scale Labs’ SWE Atlas Codebase QnA (57.3); flagship Claude tier' },
+  { rank: 4, model: 'Claude Fable 5', org: 'Anthropic', w: 84, stat: 'Leads agentic coding execution', note: 'Beats Opus 4.8 on Scale Labs’ SWE Atlas Refactoring (54.8 vs 46.7) & Test Writing (58.5 vs 49.6) — faster tier, not a weaker one' },
   { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 74, stat: '2M-token context', note: 'Competitive on some benchmarks; reception coloured by X-platform controversy' },
   { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 66, stat: 'Top open/Chinese model', note: 'Highest index placement of any open-origin model' },
 ];
