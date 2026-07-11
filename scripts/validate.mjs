@@ -32,6 +32,13 @@ async function main() {
 
   if (!isStr(data.updatedAt) || isNaN(Date.parse(data.updatedAt))) fail('updatedAt missing/invalid');
 
+  // build provenance (R10)
+  if (!data.build || typeof data.build !== 'object') fail('build metadata missing');
+  else {
+    if (!isStr(data.build.shortSha)) fail('build.shortSha missing');
+    if (!isStr(data.build.builtAt) || isNaN(Date.parse(data.build.builtAt))) fail('build.builtAt missing/invalid');
+  }
+
   for (const key of ['ticker', 'signals', 'waves', 'releases', 'wire', 'feed', 'breakthroughs', 'stocks']) {
     if (!isArr(data[key])) fail(`${key} must be an array`);
   }
@@ -63,6 +70,11 @@ async function main() {
     if (!isNum(w.significance)) fail(`waves[${i}].significance invalid`);
     if (!IMPACT_VALUES.includes(w.impact)) fail(`waves[${i}].impact invalid: ${w.impact}`);
     if (!VERIFICATION_VALUES.includes(w.verification)) fail(`waves[${i}].verification invalid: ${w.verification}`);
+    // R5: "why it matters" must be a real consequence sentence, not scoring leakage
+    if (!isStr(w.whyItMatters) || w.whyItMatters.length < 20) fail(`waves[${i}].whyItMatters missing/too short`);
+    if (/impact score|source count|significance|strongest .* move/i.test(w.whyItMatters || '')) {
+      fail(`waves[${i}].whyItMatters leaks scoring methodology instead of a consequence`);
+    }
   });
 
   // entityActivity keys must be known entity ids

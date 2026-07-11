@@ -7,6 +7,7 @@
 // Run: node scripts/update-data.mjs
 
 import { writeFile, mkdir, readFile, readdir, unlink } from 'node:fs/promises';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -49,6 +50,23 @@ function stableId(str) {
 
 const UA = 'Mozilla/5.0 (compatible; AIMarketPulseBot/1.0; +https://github.com/)';
 const FETCH_TIMEOUT_MS = 12000;
+
+// Build provenance (R10): the commit the data was generated from, so the footer
+// can show exactly which build is live and a deploy can be verified against the
+// repo. In GitHub Actions GITHUB_SHA is set; locally we fall back to `git rev-parse`.
+function buildInfo() {
+  let sha = process.env.GITHUB_SHA || '';
+  if (!sha) {
+    try { sha = execSync('git rev-parse HEAD', { cwd: __dirname, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim(); }
+    catch { sha = ''; }
+  }
+  return {
+    sha,
+    shortSha: sha ? sha.slice(0, 7) : 'local',
+    ref: process.env.GITHUB_REF_NAME || 'main',
+    builtAt: new Date().toISOString(),
+  };
+}
 
 const FEEDS = [
   { url: 'https://openai.com/blog/rss.xml', name: 'OpenAI', logoKey: 'openai' },
@@ -557,6 +575,7 @@ async function main() {
 
   const data = {
     updatedAt: new Date().toISOString(),
+    build: buildInfo(),
     ticker,
     signals: signals.slice(0, 40),
     waves,

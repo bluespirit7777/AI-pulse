@@ -58,6 +58,15 @@ function paintUpdated() {
   if (pill) pill.textContent = 'Updated ' + timeAgo(data.updatedAt);
   const stocksAsof = $('#stocks-asof');
   if (stocksAsof) stocksAsof.textContent = fmtSnapshot(data.updatedAt);
+  // build provenance (R10): which commit produced the live data
+  const build = $('#footer-build');
+  if (build && data.build) {
+    const b = data.build;
+    const repo = 'https://github.com/bluespirit7777/AI-pulse';
+    build.innerHTML = b.sha
+      ? `Build <a class="src-link" href="${repo}/commit/${b.sha}" target="_blank" rel="noopener">${b.shortSha}</a> · data generated ${fmtSnapshot(b.builtAt)}`
+      : `Build ${b.shortSha} · data generated ${fmtSnapshot(b.builtAt)}`;
+  }
 }
 
 function paintHistoryNote() {
