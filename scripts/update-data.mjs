@@ -60,6 +60,17 @@ const FEEDS = [
   { url: 'https://arstechnica.com/ai/feed/', name: 'Ars Technica', logoKey: 'other' },
   { url: 'https://www.wired.com/feed/tag/ai/latest/rss', name: 'Wired', logoKey: 'other' },
   { url: 'https://www.technologyreview.com/topic/artificial-intelligence/feed', name: 'MIT Technology Review', logoKey: 'other' },
+  // Official frontier-lab YouTube channels (Atom feeds, no API key). Videos are
+  // gated in fetchFeed to release-like uploads only, so keynotes and tutorials
+  // don't pollute the general signal stream — an official launch video simply
+  // corroborates the lab's blog-RSS release.
+  { url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCXZCJLdBC09xxGZ6gcdrc6A', name: 'OpenAI (YouTube)', logoKey: 'openai', isVideo: true },
+  { url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA', name: 'Anthropic (YouTube)', logoKey: 'anthropic', isVideo: true },
+  { url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCP7jMXSY2xbc3KCAE0MHQ-A', name: 'Google DeepMind (YouTube)', logoKey: 'google', isVideo: true },
+  { url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC04FyDIvYXNecpbG8gyOw4A', name: 'AI at Meta (YouTube)', logoKey: 'meta', isVideo: true },
+  // Note: xAI has no verified official model-release channel on YouTube; Grok
+  // launches are still captured via news/blog RSS + detectLab('xai').
+  { url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCHuiy8bXnmK5nisYHUd1J5g', name: 'NVIDIA (YouTube)', logoKey: 'other', isVideo: true },
 ];
 
 // `shares` = approximate shares outstanding in billions (curated, changes only
@@ -150,7 +161,8 @@ function parseFeed(xml, source) {
       if (m) link = m[1];
     }
     const dateStr = tag(block, 'pubDate') || tag(block, 'published') || tag(block, 'updated') || tag(block, 'dc:date');
-    const desc = tag(block, 'description') || tag(block, 'summary') || tag(block, 'content');
+    // media:description is the video summary in YouTube Atom feeds
+    const desc = tag(block, 'description') || tag(block, 'summary') || tag(block, 'content') || tag(block, 'media:description');
     const date = dateStr ? new Date(dateStr) : new Date();
     if (!title || !link) continue;
     items.push({
@@ -160,6 +172,7 @@ function parseFeed(xml, source) {
       date: isNaN(date.getTime()) ? new Date() : date,
       sourceName: source.name,
       feedLogoKey: source.logoKey,
+      isVideo: !!source.isVideo,
     });
   }
   return items;
@@ -172,7 +185,13 @@ async function fetchFeed(source) {
       console.error(`[feed] ${source.name}: HTTP ${res.status}`);
       return [];
     }
-    return parseFeed(await res.text(), source);
+    let items = parseFeed(await res.text(), source);
+    // Video channels post far more than releases — keep only uploads that name a
+    // lab AND read as a product release, so the general stream stays clean.
+    if (source.isVideo) {
+      items = items.filter((it) => detectLab(`${it.title} ${it.desc}`) && isProductRelease(it.title, it.desc));
+    }
+    return items;
   } catch (err) {
     console.error(`[feed] ${source.name}: ${err.message}`);
     return [];
