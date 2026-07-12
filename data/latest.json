@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-12T15:40:09.683Z",
+  "updatedAt": "2026-07-12T15:45:23.809Z",
   "build": {
-    "sha": "88ca5a7fd0cf97c4f4bcd662ba8ff42abdd1f07a",
-    "shortSha": "88ca5a7",
+    "sha": "74d37f3d43eb7e5fb239286bda39e951d78003f8",
+    "shortSha": "74d37f3",
     "ref": "main",
-    "builtAt": "2026-07-12T15:40:22.979Z"
+    "builtAt": "2026-07-12T15:45:35.488Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 2.7,
-    "estimatedDatasets": 2,
-    "buildSha": "88ca5a7",
-    "lastSuccessfulUpdate": "2026-07-12T15:40:09.683Z"
+    "estimatedDatasets": 3,
+    "buildSha": "74d37f3",
+    "lastSuccessfulUpdate": "2026-07-12T15:45:23.809Z"
   },
   "ticker": [
     "OPENAI’S CEO OF AGI DEPLOYMENT, FIDJI SIMO, IS STEPPING DOWN",
+    "HOW BUSINESS OPERATIONS TEAMS USE CHATGPT WORK",
     "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
     "OPENAI MAY HAVE MADE A FATAL MISSTEP IN COPYRIGHT FIGHT WITH NEWS ORGS",
     "INTRODUCING CLAUDE CORPS",
     "ANTHROPIC LAUNCHES CLAUDE TAG, A TOOL THAT WORKS LIKE A VIRTUAL EMPLOYEE WITHIN SLACK",
-    "THE FIGHT AGAINST AI DATA CENTERS IS JUST BEGINNING",
     "BRISTOL MYERS TO DEPLOY ANTHROPIC'S CLAUDE AI MODEL TO SPEED UP DRUG DISCOVERY",
     "APPLE IS SUING OPENAI FOR ALLEGEDLY STEALING HARDWARE SECRETS",
     "THE CHATGPT BROWSER IS ALREADY DEAD",
-    "HOW BUSINESS OPERATIONS TEAMS USE CHATGPT WORK"
+    "ANTHROPIC FOUND A HIDDEN SPACE WHERE CLAUDE PUZZLES OVER CONCEPTS"
   ],
   "signals": [
     {
@@ -61,6 +61,44 @@
       "sourceName": "Wired",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
+      "clusterId": "oj3zma",
+      "title": "How business operations teams use ChatGPT Work",
+      "desc": "See how business operations teams can use ChatGPT Work to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs",
+      "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
+      "dateISO": "2026-05-15T00:00:00.000Z",
+      "date": "MAY 15 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 56,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
       ]
     },
     {
@@ -197,30 +235,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/column/963346/ai-data-centers-fight",
-      "clusterId": "65o3hf",
-      "title": "The fight against AI data centers is just beginning",
-      "desc": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the data center buildout, follow Emma Roth. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it started Years before the AI boom threatened local power […]",
-      "url": "https://www.theverge.com/column/963346/ai-data-centers-fight",
-      "dateISO": "2026-07-12T12:00:00.000Z",
-      "date": "JUL 12 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/column/963346/ai-data-centers-fight"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5",
       "clusterId": "1mmbjuf",
       "title": "Bristol Myers to deploy Anthropic's Claude AI model to speed up drug discovery",
@@ -317,40 +331,6 @@
       "entityIds": [
         "chatgpt",
         "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
-      "clusterId": "oj3zma",
-      "title": "How business operations teams use ChatGPT Work",
-      "desc": "See how business operations teams can use ChatGPT Work to create initiative briefs, strategy updates, leadership decision packets, progress updates, and more from real work inputs",
-      "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex",
-      "dateISO": "2026-05-15T00:00:00.000Z",
-      "date": "MAY 15 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/academy/codex-for-work/how-business-operations-teams-use-codex"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
       ]
     },
     {
@@ -600,7 +580,7 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "official",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "sources": [
         {
           "name": "Wired",
@@ -623,6 +603,10 @@
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iZTNFalowWHVUV2FhOGlEcWgxVWdISzBVLXJfN2FXOXBjdkVhRG0wVFRyNURuMHNxREtKeENYSkdWdm45OXBTd2xaUzlZQjBTQ2dQWjgzOUtCZw?oc=5"
         },
         {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMFZRVXVXbExma1lxdjN0RkRoUFo4SVFYWm1QWk9TYTQwZS1tUldwbUVhbndQRkFtSmVwNTNmWndVQWF5U2NpRXZfdnA4NEFxMTA3SXBoVFFMLWtvbHdhZjJZbTVJT0F3MWZCNHhxUnJEalJyTExqZUtLVWJrdk5WWHFHWmJOV2p6cmtPa3ZuZFA0UkRNXzI3MGhDZjFFYXpsRVhQdF92eHQxd0RGa1ZvdWROZ3FpeTBSV255WGx3cw?oc=5"
+        },
+        {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tNXJJQXNGZWM1d1VmMVRfOFZlYU9VUFcwdm03RFhDRE5uajJOY19mbUQ5ZVpXYW9IOWhzd3JOS3F2c0xIdFRYVUgtZF9RVVI1VW1KVExGb0RVRDBWdlpNTXN1cTA?oc=5"
         },
@@ -631,8 +615,8 @@
           "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XOUpqaUlWeFZ2RDF3NGY4UjlBa0JKV0VFSk9yZlNfNXNlSHpBZlJ1VUQ2TTE0V291UE9iSDZVQ292ZjV6SGF2ZGI3Yk5lQS1IaGJvaGtnSVQzd1ZaeGJ1bmF6RVJLeC15Q0t2dWpBd0Y?oc=5"
         },
         {
-          "name": "Marcus on AI | Substack",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vVnZ3ZWlxYW10NlZfcnhtOWUxZTZ4QjVCZFNyNEhEQnF3SDBVay1EZk1CUk15RHllMDNtRjRYSGdKdkEtdnZ4LUlmOHRtY1MyWHJia0FQMW10LW9yYVM1WDVNSnhIX2o1SUFNQ3hGSQ?oc=5"
+          "name": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxORXNFd050a3E2TWg3VWFuckhfN21iTUxtcU15VENRVmk0UE9VLWRfVExFN1M3ZWxURzduT25NWXMySDBfMmpQSG05dEV6M3lIZmxGXzJSRnJZb0UzZmpMWGVWTlIwTHBJaXdHV0R6Qm9VZ04wZFdtajkxeHlFNVFpcjNSR2xuc19fc01WaVlOSTFSb3JqR1BHak12YVNRNnhKLWJqWTg2Y0FyWUN6OWtSUlhWWTlQSTRQNE9fUm1uUlhYdkV0cXpYLWVEbldQRUY3d3g5SWp1dFZzeVBi?oc=5"
         },
         {
           "name": "Help Net Security",
@@ -1208,6 +1192,32 @@
       "entityIds": [
         "chatgpt"
       ]
+    },
+    {
+      "id": "https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/",
+      "clusterId": "nkm0la",
+      "title": "Your family’s $300 stake in OpenAI",
+      "desc": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. OpenAI CEO Sam Altman’s oft-discussed promise that Americans will share in the wealth AI creates was in the news again last week. On Thursday, the Financial Times reported that Altman is in…",
+      "url": "https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/",
+      "dateISO": "2026-07-06T18:00:00.000Z",
+      "date": "JUL 06 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/07/06/1140176/your-familys-300-stake-in-openai/"
+        }
+      ],
+      "sourceName": "MIT Technology Review",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1305,13 +1315,13 @@
     "chatgpt": 25,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 76,
+    "gpt": 77,
     "claude": 72,
     "gemini": 32,
     "grok": 1,
     "llama": 0,
     "deepseek": 1,
-    "qwen": 3,
+    "qwen": 2,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
@@ -1499,18 +1509,6 @@
   ],
   "wire": [
     {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 12 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "The fight against AI data centers is just beginning",
-      "p": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the data center buildout, follow Emma Roth. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here. How it…",
-      "url": "https://www.theverge.com/column/963346/ai-data-centers-fight",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
       "org": "OPENAI",
       "logoKey": "openai",
       "date": "JUL 11 2026",
@@ -1592,6 +1590,18 @@
       "p": "Digital Services Act may force Meta to make big changes on its platforms.",
       "url": "https://arstechnica.com/tech-policy/2026/07/disable-auto-play-and-infinite-scroll-or-risk-massive-fines-eu-tells-meta/",
       "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 10 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in…",
+      "p": "Though Instagram head Adam Mosseri doesn't want to filter out AI content on the platform, he argues that you \"shouldn't have it in your feed\" if you don't like it. \"I don't think we should filter out AI content,\" Mosseri said during an interview on Lenny Rach…",
+      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -1822,7 +1832,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-12T15:40:09.683Z",
+    "updatedAt": "2026-07-12T15:45:23.809Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -1831,8 +1841,8 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 275,
-        "fetchedStoryCount": 275,
+        "rawStoryHits": 185,
+        "fetchedStoryCount": 185,
         "validatedStoryCount": 158,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 158,
@@ -1928,7 +1938,7 @@
         "validatedCommentCount": 294,
         "commentCoverage": 0.046217840086273304,
         "limited": false,
-        "points": 16639,
+        "points": 16640,
         "themes": [
           {
             "id": "coding",
@@ -2003,12 +2013,12 @@
         "model": "Gemini",
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 117,
-        "fetchedStoryCount": 117,
+        "rawStoryHits": 115,
+        "fetchedStoryCount": 112,
         "validatedStoryCount": 104,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 104,
-        "isEstimated": false,
+        "storyCoverage": 0.9739130434782609,
+        "estimatedRelevantDiscussions": 107,
+        "isEstimated": true,
         "rawCommentHits": 1121,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
@@ -2089,10 +2099,10 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 482,
+        "rawStoryHits": 484,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.6224066390041494,
+        "storyCoverage": 0.6198347107438017,
         "estimatedRelevantDiscussions": 35,
         "isEstimated": true,
         "rawCommentHits": 11132,
@@ -2100,7 +2110,7 @@
         "validatedCommentCount": 164,
         "commentCoverage": 0.026949335249730505,
         "limited": false,
-        "points": 1522,
+        "points": 1524,
         "themes": [
           {
             "id": "coding",
@@ -2158,7 +2168,7 @@
           },
           {
             "title": "What xAI's Grok Build CLI Actually Sends to xAI",
-            "points": 314,
+            "points": 316,
             "comments": 141,
             "url": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
             "date": "JUL 12 2026"
@@ -2262,10 +2272,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
         "isEstimated": false,
-        "rawCommentHits": 1193,
+        "rawCommentHits": 1160,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
-        "commentCoverage": 0.2514668901927913,
+        "commentCoverage": 0.25862068965517243,
         "limited": false,
         "points": 1812,
         "themes": [
@@ -2348,10 +2358,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 39,
         "isEstimated": false,
-        "rawCommentHits": 4769,
+        "rawCommentHits": 4768,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 212,
-        "commentCoverage": 0.06290626965820927,
+        "commentCoverage": 0.06291946308724833,
         "limited": false,
         "points": 2768,
         "themes": [
