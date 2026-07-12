@@ -176,11 +176,19 @@ async function main() {
         if (!isNum(m[f]) || m[f] < 0) fail(`community.models[${i}].${f} invalid`);
       }
       if (typeof m.isEstimated !== 'boolean') fail(`community.models[${i}].isEstimated must be boolean`);
-      // a validated/fetched count can never exceed the raw hit count it derives from
+      // validated is filtered FROM fetched in-process, so this can never drift —
+      // a real logic bug, not an external-data quirk, unlike the raw-hit checks below.
       if (m.validatedStoryCount > m.fetchedStoryCount) fail(`community.models[${i}].validatedStoryCount exceeds fetchedStoryCount`);
-      if (m.fetchedStoryCount > m.rawStoryHits) fail(`community.models[${i}].fetchedStoryCount exceeds rawStoryHits`);
       if (m.validatedCommentCount > m.fetchedCommentCount) fail(`community.models[${i}].validatedCommentCount exceeds fetchedCommentCount`);
-      if (m.fetchedCommentCount > m.rawCommentHits) fail(`community.models[${i}].fetchedCommentCount exceeds rawCommentHits`);
+      // NOTE: deliberately NOT asserting fetchedCount <= rawHits here. HN
+      // Algolia's nbHits is an approximate, eventually-consistent count that
+      // can legitimately shift between paginated requests as the live index
+      // updates mid-fetch (a real CI failure caught this: fetchedStoryCount
+      // briefly exceeded rawStoryHits on a live run). update-data.mjs already
+      // takes the max nbHits seen across pages to keep this rare, but Algolia's
+      // count is external and approximate by design — not something this
+      // pipeline can guarantee an exact ordering against, so it isn't a data-
+      // integrity violation the way validated > fetched would be.
       if (m.storyCoverage > 1) fail(`community.models[${i}].storyCoverage cannot exceed 1`);
       if (m.commentCoverage > 1) fail(`community.models[${i}].commentCoverage cannot exceed 1`);
       // an exact (non-estimated) count is only honest when coverage is complete

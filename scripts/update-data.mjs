@@ -321,7 +321,13 @@ async function fetchAlgoliaPaginated(urlBase, maxPages = HN_MAX_PAGES) {
     const res = await fetchWithTimeout(`${urlBase}&page=${page}&hitsPerPage=${HN_PAGE_SIZE}`);
     if (!res.ok) break;
     const j = await res.json();
-    nbHits = j.nbHits ?? nbHits;
+    // Algolia's nbHits is an approximate, eventually-consistent count that can
+    // shift between paginated requests as the index updates live (a real CI
+    // failure: page 0 reported nbHits=200, but by page 2 the live index had
+    // grown enough that fetchedCount reached 250 — an honest "raw hits" figure
+    // must never end up SMALLER than what we actually, verifiably fetched, so
+    // track the max seen across pages rather than overwriting with the latest).
+    nbHits = Math.max(nbHits, j.nbHits ?? 0);
     const pageHits = j.hits || [];
     hits = hits.concat(pageHits);
     fetchedCount += pageHits.length;

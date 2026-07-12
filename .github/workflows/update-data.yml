@@ -30,9 +30,7 @@ jobs:
         run: node scripts/update-data.mjs
 
       - name: Validate data + run unit tests
-        run: |
-          node scripts/validate.mjs
-          node --test test/signals.test.mjs test/history.test.mjs test/stocks.test.mjs
+        run: npm run check
 
       - name: Commit and push if changed
         run: |
