@@ -217,6 +217,9 @@ export function createStockNetwork(root, net) {
         <div class="drawer-eyebrow">${esc(LAYER_LABELS[n.netLayer])}</div>
         <h3 id="snet-drawer-title">${esc(n.n)} <span class="drawer-org">${esc(n.t)}</span></h3>
         <div class="snet-chart" id="snet-chart"></div>
+        <div class="snet-chart-link">
+          <a href="${esc(`https://www.tradingview.com/symbols/${tvSymbol(n.t).replace(':', '-')}/`)}" target="_blank" rel="noopener" class="src-link">Open ${esc(n.t)} chart on TradingView ↗</a>
+        </div>
         <div class="snet-facts">
           <span><b>Price</b>${n.price != null ? '$' + n.price.toFixed(2) : '—'}</span>
           <span class="${pctClass(n.changePct)}"><b>Day change</b>${fmtPct(n.changePct)}</span>
