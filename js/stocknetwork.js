@@ -278,7 +278,27 @@ export function createStockNetwork(root, net) {
       hide_top_toolbar: false,
       support_host: 'https://www.tradingview.com',
     });
+    // Ad blockers and privacy extensions commonly block this exact domain at
+    // the network level — a real, frequent failure mode (Opera's built-in
+    // blocker does this by default), not a hypothetical. `error` fires when
+    // the request itself is blocked; the timeout is belt-and-braces for the
+    // rarer case where the script loads but the iframe never actually
+    // appears. Either way, a real fallback with a direct link beats leaving
+    // silent blank space that reads as the site being broken.
+    const fallback = () => showChartFallback(host, ticker);
+    script.addEventListener('error', fallback);
     host.appendChild(script);
+    setTimeout(() => { if (!host.querySelector('iframe')) fallback(); }, 4000);
+  }
+
+  function showChartFallback(host, ticker) {
+    if (host.querySelector('iframe')) return; // it loaded just in time
+    const tvUrl = `https://www.tradingview.com/symbols/${tvSymbol(ticker).replace(':', '-')}/`;
+    host.innerHTML = `
+      <div class="snet-chart-fallback">
+        <p>Chart didn't load — likely blocked by an ad blocker or privacy extension in this browser.</p>
+        <a href="${esc(tvUrl)}" target="_blank" rel="noopener" class="src-link">View ${esc(ticker)} on TradingView →</a>
+      </div>`;
   }
   function onDrawerKey(e) {
     if (e.key === 'Escape') closeDrawer();
