@@ -16,6 +16,11 @@ const REL_STYLE = {
   competes: { stroke: 'var(--coral)', dash: '2 5', label: 'competes with' },
 };
 const DIM = 0.10, BRIGHT = 0.9;
+// TradingView symbols need an exchange prefix — mapped by hand since it's a
+// fixed, small, rarely-changing list (our 10 tracked tickers' primary listing
+// venues), not something worth round-tripping through the data pipeline.
+const TV_EXCHANGE = { TSM: 'NYSE', ORCL: 'NYSE', PLTR: 'NYSE' }; // default NASDAQ otherwise
+const tvSymbol = (t) => `${TV_EXCHANGE[t] || 'NASDAQ'}:${t}`;
 // core fill = direction at a glance: green up, orange down, slate flat.
 const CORE_COLOR = { up: '#1f7a4d', down: '#d9760a', flat: '#5b6b74' };
 const fmtUSD = (n) => (n == null ? '—' : n >= 1e12 ? '$' + (n / 1e12).toFixed(2) + 'T' : n >= 1e9 ? '$' + (n / 1e9).toFixed(1) + 'B' : '$' + (n / 1e6).toFixed(0) + 'M');
@@ -211,6 +216,7 @@ export function createStockNetwork(root, net) {
         <button class="drawer-close" aria-label="Close details">✕</button>
         <div class="drawer-eyebrow">${esc(LAYER_LABELS[n.netLayer])}</div>
         <h3 id="snet-drawer-title">${esc(n.n)} <span class="drawer-org">${esc(n.t)}</span></h3>
+        <div class="snet-chart" id="snet-chart"></div>
         <div class="snet-facts">
           <span><b>Price</b>${n.price != null ? '$' + n.price.toFixed(2) : '—'}</span>
           <span class="${pctClass(n.changePct)}"><b>Day change</b>${fmtPct(n.changePct)}</span>
@@ -240,6 +246,39 @@ export function createStockNetwork(root, net) {
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
     drawer.addEventListener('keydown', onDrawerKey);
     drawer.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
+    mountChart(n.t);
+  }
+
+  // TradingView's free embeddable "Advanced Chart" widget — a live third-party
+  // iframe, the one exception to this site's otherwise fully self-built,
+  // build-time-data architecture. Deliberate trade-off: real, familiar
+  // candlestick charting with zero backend and no API key, at the cost of not
+  // controlling its internal accessibility/reduced-motion behaviour (its own
+  // ticking price updates aren't ours to gate). <script> tags set via
+  // .innerHTML never execute, so the embed script is created and appended
+  // here explicitly, after the drawer markup is already in the DOM.
+  function mountChart(ticker) {
+    const host = drawer.querySelector('#snet-chart');
+    if (!host) return;
+    const widgetDiv = document.createElement('div');
+    widgetDiv.className = 'tradingview-widget-container__widget';
+    host.appendChild(widgetDiv);
+    const script = document.createElement('script');
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+    script.async = true;
+    script.text = JSON.stringify({
+      autosize: true,
+      symbol: tvSymbol(ticker),
+      interval: 'D',
+      timezone: 'Etc/UTC',
+      theme: 'light',
+      style: '1',
+      locale: 'en',
+      allow_symbol_change: false,
+      hide_top_toolbar: false,
+      support_host: 'https://www.tradingview.com',
+    });
+    host.appendChild(script);
   }
   function onDrawerKey(e) {
     if (e.key === 'Escape') closeDrawer();
