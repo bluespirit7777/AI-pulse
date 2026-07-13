@@ -14,7 +14,8 @@ scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, 
                           ├──uses──> scripts/lib/history.mjs (ranges, event history)
                           ├──uses──> scripts/lib/stocks.mjs  (returns, correlations, volumes)
                           ├──uses──> scripts/lib/models.mjs  (canonical model registry — one source of truth)
-                          └──uses──> scripts/lib/dates.mjs   (explicit-UTC date formatting)
+                          ├──uses──> scripts/lib/dates.mjs   (explicit-UTC date formatting)
+                          └──uses──> scripts/lib/compute.mjs (GPU pricing merge + trend, from Vast.ai + RunPod)
         │
         ├─► data/latest.json                     (current data the page reads, incl. community)
         ├─► data/range.json                      (real 24H/7D/30D stats + daily category history)
@@ -55,12 +56,15 @@ control (reduced-motion → manual scroll).
 | `data/stock-network.json` | Ecosystem nodes + 30-day return correlations. Optional — absence keeps the table fallback. |
 | `data/entities.json` | Curated ecosystem map config (nodes + relationships). |
 | `data/history/events/*.json` | Compact daily event files (60-day retention) feeding range.json. |
+| `data/compute-history.json` | Rolling ≤30-day GPU price snapshots (one entry/chip/day), feeding the compute panel's real trend. |
 | `scripts/update-data.mjs` | Fetch → categorize → cluster → score → correlate → write. |
 | `scripts/lib/signals.mjs` | Pure, tested: clustering, categorization, scoring, verification/impact, topics. |
 | `scripts/lib/history.mjs` | Pure, tested: event compaction + real per-range calculations. |
 | `scripts/lib/stocks.mjs` | Pure, tested: daily returns, Pearson correlation, relative/dollar volume. |
 | `scripts/lib/models.mjs` | Canonical model registry (name/org/version/HN query) — the one source every section reads, so versions can't drift between Ocean Map, Community Pulse, Frontier Releases and the Leaderboard. |
 | `scripts/lib/dates.mjs` | Explicit-UTC date formatting (`shortDateUTC`/`dayKeyUTC`) — timezone-stable regardless of the build/browser machine's local clock. |
+| `scripts/lib/compute.mjs` | Pure, tested: merges live Vast.ai + RunPod GPU offers into a real price range, filters marketplace placeholder prices, computes a real trend from rolling history. |
+| `scripts/lib/text.mjs` | Pure, tested: HTML entity decoding + tag stripping shared by feed parsing and HN comment sanitizing (entities MUST decode before tags strip, or entity-encoded tags survive). |
 | `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json incl. dataHealth + community + range.json + stock-network.json). |
 | `test/*.test.mjs` | Unit tests (`node --test`). |
 | `.github/workflows/update-data.yml` | Scheduled fetch → validate → test → commit. |

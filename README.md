@@ -51,14 +51,15 @@ Every item carries a **freshness / confidence / provenance** chip
 ## Live vs. curated
 
 - **Live (auto, ~every 30 min):** signals, waves, river, tide, releases,
-  open-weight feed, breakthroughs, community pulse, stock prices, and the map's
-  activity/glow — from publisher RSS feeds, official frontier-lab YouTube
-  channels, Hacker News, and Yahoo Finance. Every card links to its source, and
-  the footer shows the build commit the live data came from.
+  open-weight feed, breakthroughs, community pulse, stock prices, compute
+  pricing (real $/hr from Vast.ai + RunPod), and the map's activity/glow —
+  from publisher RSS feeds, official frontier-lab YouTube channels, Hacker
+  News, Yahoo Finance, and public GPU marketplace APIs. Every card links to
+  its source, and the footer shows the build commit the live data came from.
 - **Curated (by hand):** the leaderboard, image/video rankings, market-share
-  donut, compute pricing, and the map's node *importance/size* and relationships.
-  No reliable free live API exists for these. Edit
-  [`js/curated.js`](js/curated.js) and [`data/entities.json`](data/entities.json).
+  donut, and the map's node *importance/size* and relationships. No reliable
+  free live API exists for these yet. Edit [`js/curated.js`](js/curated.js)
+  and [`data/entities.json`](data/entities.json).
 
 ## Documentation
 

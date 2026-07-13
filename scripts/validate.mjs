@@ -132,6 +132,18 @@ async function main() {
     }
   });
 
+  // compute pricing — live from Vast.ai + RunPod, not the old curated array.
+  // An empty array (both marketplace fetches failed) is valid — the honest
+  // "unavailable" empty state — but every row present must be a real range.
+  const TREND_CLASSES = ['trend-up', 'trend-down', 'trend-flat', 'trend-new'];
+  (data.compute || []).forEach((c, i) => {
+    if (!isStr(c.chip)) fail(`compute[${i}].chip missing`);
+    if (!isStr(c.segment)) fail(`compute[${i}].segment missing`);
+    if (!isStr(c.rate) || !/^\$\d/.test(c.rate)) fail(`compute[${i}].rate missing/invalid: ${c.rate}`);
+    if (!TREND_CLASSES.includes(c.trendClass)) fail(`compute[${i}].trendClass invalid: ${c.trendClass}`);
+    if (!isStr(c.note)) fail(`compute[${i}].note missing`);
+  });
+
   // range.json
   let ranges;
   try {

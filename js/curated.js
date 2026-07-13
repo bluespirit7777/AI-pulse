@@ -145,14 +145,11 @@ export function donutGradient(rows = marketShare) {
   return `conic-gradient(${stops.join(', ')})`;
 }
 
-export const compute = [
-  { chip: 'H100 (Hopper)', segment: 'Mainstream training/inference', rate: '$1.4 – $7.5/hr', trend: '↓ 64–75% vs 2023 peak', trendClass: 'trend-down', note: 'Still the default workhorse; used cards resell $12k–$22k' },
-  { chip: 'H200 (Hopper)', segment: 'Inference / long context', rate: '$0.6 – $13.8/hr', trend: '↑ ~13% since Jul 2025', trendClass: 'trend-up', note: '141GB VRAM fits 70B-class models on a single card' },
-  { chip: 'B200 (Blackwell)', segment: 'Frontier training', rate: '$2.1 – $18/hr', trend: '↑ 24% in one month', trendClass: 'trend-up', note: 'Hyperscaler listings run 2–3x neocloud rates' },
-  { chip: 'B300 (Blackwell Ultra)', segment: 'Frontier training', rate: '$4.95 – $18/hr, spot ~$2.90', trend: 'New, Jan 2026', trendClass: 'trend-new', note: 'Doubles HBM to 288GB per GPU' },
-  { chip: 'MI300X (AMD)', segment: 'Nvidia alternative', rate: 'from $1.57/hr', trend: 'Thin coverage', trendClass: 'trend-new', note: '1.8x memory vs H100, only a handful of providers list it' },
-  { chip: 'A100 (legacy)', segment: 'Budget / fine-tuning', rate: '$1.29 – $2.50/hr', trend: '↓ toward commodity', trendClass: 'trend-down', note: 'Still solid for LoRA/QLoRA fine-tuning jobs' },
-];
+// Compute pricing moved to a LIVE source (Vast.ai + RunPod public marketplace
+// APIs, no key required) — see scripts/lib/compute.mjs and data.compute in
+// latest.json. No curated fallback here on purpose: the panel shows an
+// honest "unavailable" empty state on a fetch failure rather than silently
+// falling back to a stale hand-typed number that looks live but isn't.
 
 export const stats = [
   { num: '357+', lbl: 'Models tracked across public leaderboards' },

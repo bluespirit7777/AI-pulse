@@ -207,6 +207,33 @@ comparable across companies). Business relationships and price correlations are
 kept strictly separate, and *correlation ≠ causation* is stated wherever
 correlations appear. The accessible table remains behind "View as table".
 
+## Compute pricing
+
+Live $/hr GPU rental rates from two public, no-key marketplace APIs —
+[Vast.ai](https://vast.ai/) (peer-to-peer, `console.vast.ai/api/v0/bundles`)
+and [RunPod](https://runpod.io/) (managed, GraphQL `gpuTypes`) — replacing the
+previous hand-typed, unverifiable ranges. `scripts/lib/compute.mjs` matches
+live offers against a small tracked-chip catalog and merges them into a real
+low/high range; `segment` (what a chip is typically used for) stays a small
+curated classification, since that's domain knowledge that doesn't go stale
+the way a dollar figure does.
+
+**Placeholder-price filtering (correctness pass).** Both marketplaces report
+a price of exactly `$0` or `$0.50` for GPU types with no current live
+inventory — confirmed live: RunPod returned `$0.50` identically across 13
+otherwise-unrelated GPU types (a GTX 1050 and an H200 NVL do not really rent
+for the same rate). Both sentinel values are excluded before computing a
+range, not treated as real prices.
+
+**Trend** is a real day-over-day comparison against a small rolling snapshot
+history (`data/compute-history.json`, last 30 days), in the same spirit as
+range.json's `previousWindowComplete` gating: with fewer than two snapshots
+there's no comparison point yet, so the trend honestly reads "New — building
+history" rather than synthesizing a "vs 2023 peak" narrative that can't be
+verified or refreshed. The dead-band (±3%) mirrors `stocks.mjs`'s
+`direction()`. If both marketplace fetches fail, the panel shows an honest
+"unavailable" empty state — never a stale curated fallback dressed up as live.
+
 ## Community pulse ("Community Current")
 
 A horizontal model selector + a two-column info/themes panel + a short list of

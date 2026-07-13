@@ -38,6 +38,7 @@ import {
 import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT, periodChange, WEEK_TRADING_DAYS, MONTH_TRADING_DAYS } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
 import { decodeEntities } from './lib/text.mjs';
+import { GPU_CATALOG, mergeGpuPricing, formatRate, computeTrend } from './lib/compute.mjs';
 import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
 import { shortDateUTC } from './lib/dates.mjs';
 
@@ -46,6 +47,7 @@ const DATA_DIR = path.join(__dirname, '..', 'data');
 const OUT_PATH = path.join(DATA_DIR, 'latest.json');
 const RANGES_PATH = path.join(DATA_DIR, 'range.json');
 const STOCKNET_PATH = path.join(DATA_DIR, 'stock-network.json');
+const COMPUTE_HISTORY_PATH = path.join(DATA_DIR, 'compute-history.json');
 const ENTITIES_PATH = path.join(DATA_DIR, 'entities.json');
 const HISTORY_DIR = path.join(DATA_DIR, 'history');
 const EVENTS_DIR = path.join(HISTORY_DIR, 'events');
@@ -498,6 +500,79 @@ function buildStockNetwork(quotes, metaByTicker, now) {
   };
 }
 
+// ---------- compute pricing (Vast.ai + RunPod public marketplace APIs — free, no key) ----------
+// Live cloud-GPU $/hr rates, replacing the previous hand-typed, unverifiable
+// ranges. Both APIs are public read endpoints confirmed to need no
+// authentication. `segment` (what a chip is typically used for) stays a small
+// curated classification — real domain knowledge, not a price, so it doesn't
+// go stale the way a dollar figure does. See scripts/lib/compute.mjs.
+async function fetchVastOffers() {
+  try {
+    const q = encodeURIComponent(JSON.stringify({
+      order: [['score', 'desc']], type: 'on-demand', limit: 400,
+      verified: { eq: true }, rentable: { eq: true },
+    }));
+    const res = await fetchWithTimeout(`https://console.vast.ai/api/v0/bundles/?q=${q}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return (await res.json()).offers || [];
+  } catch (err) {
+    console.error(`[compute] Vast.ai: ${err.message}`);
+    return [];
+  }
+}
+
+async function fetchRunpodTypes() {
+  try {
+    const res = await fetchWithTimeout('https://api.runpod.io/graphql', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: 'query { gpuTypes { id displayName memoryInGb communityPrice securePrice } }' }),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const j = await res.json();
+    if (j.errors) throw new Error(j.errors.map((e) => e.message).join('; '));
+    return j.data.gpuTypes || [];
+  } catch (err) {
+    console.error(`[compute] RunPod: ${err.message}`);
+    return [];
+  }
+}
+
+async function fetchComputePricing(now) {
+  const [vastOffers, runpodTypes] = await Promise.all([fetchVastOffers(), fetchRunpodTypes()]);
+
+  let history = {};
+  try { history = JSON.parse(await readFile(COMPUTE_HISTORY_PATH, 'utf-8')); } catch { /* first run */ }
+
+  const today = dayKey(now);
+  const rows = [];
+  for (const entry of GPU_CATALOG) {
+    const merged = mergeGpuPricing(entry, vastOffers, runpodTypes);
+    if (!merged) {
+      console.warn(`[compute] ${entry.chip}: no current offer from either marketplace, skipping`);
+      continue;
+    }
+    const mid = (merged.low + merged.high) / 2;
+    const chipHistory = history[entry.chip] || [];
+    // one snapshot per day (re-running the same day overwrites today's entry,
+    // never duplicates it), bounded to the last 30 days
+    const withoutToday = chipHistory.filter((h) => h.date !== today);
+    const nextHistory = [...withoutToday, { date: today, mid }].slice(-30);
+    history[entry.chip] = nextHistory;
+
+    const { trend, trendClass } = computeTrend(nextHistory);
+    rows.push({
+      chip: entry.chip, segment: entry.segment,
+      rate: formatRate(merged.low, merged.high),
+      trend, trendClass,
+      note: `Live from ${merged.sampleSize} rented offer${merged.sampleSize === 1 ? '' : 's'} across Vast.ai + RunPod`,
+    });
+  }
+
+  await writeFile(COMPUTE_HISTORY_PATH, JSON.stringify(history, null, 2), 'utf-8');
+  return rows;
+}
+
 async function main() {
   const now = Date.now();
   const entities = JSON.parse(await readFile(ENTITIES_PATH, 'utf-8'));
@@ -653,6 +728,10 @@ async function main() {
     marketCap: netByTicker[rest.t]?.marketCap ?? null,
   }));
 
+  console.log('Fetching compute pricing…');
+  const compute = await fetchComputePricing(now);
+  console.log(`  compute: ${compute.length}/${GPU_CATALOG.length} chips priced live`);
+
   console.log('Fetching community pulse…');
   // shared across models so a comment excerpt is never reused between bubbles
   const usedCommentIds = new Set();
@@ -698,6 +777,7 @@ async function main() {
     feed,
     breakthroughs: brk,
     stocks,
+    compute,
     community,
   };
 
@@ -707,7 +787,7 @@ async function main() {
   await writeFile(STOCKNET_PATH, JSON.stringify(stockNetwork, null, 2), 'utf-8');
   console.log(`Wrote ${STOCKNET_PATH} (${stockNetwork.nodes.length} nodes, ${stockNetwork.correlations.length} correlations >= 0.5)`);
 
-  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, community: ${community.models.length} models / ${community.comments.length} comments, correlations: ${stockNetwork.correlations.length}`);
+  console.log(`  signals: ${signals.length}, waves: ${waves.length}, releases: ${releases.length}, wire: ${wireCards.length}, feed: ${feed.length}, breakthroughs: ${brk.length}, stocks: ${stocks.length}, compute: ${compute.length}, community: ${community.models.length} models / ${community.comments.length} comments, correlations: ${stockNetwork.correlations.length}`);
 }
 
 // Appends today's clustered signals to data/history/events/YYYY-MM-DD.json

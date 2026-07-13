@@ -57,6 +57,11 @@
                       "changeReview": false,                // true ⇒ |change|>25%, flagged not dropped
                       "relVolume": 0.59, "marketCap": 5.1e12, "url": "https://…" } ],  // "View as table" fallback
 
+  "compute": [ { "chip": "H100 (Hopper)", "segment": "Mainstream training/inference",  // segment is curated classification
+                 "rate": "$1.47 – $3.19/hr",             // LIVE — merged from Vast.ai + RunPod, placeholder prices excluded
+                 "trend": "New — building history", "trendClass": "trend-new",   // real day-over-day once 2+ snapshots exist
+                 "note": "Live from 11 rented offers across Vast.ai + RunPod" } ],  // [] (not a stale fallback) if both APIs fail
+
   "community": {                          // "Community Current" — model selector + themes + comments
     "window": "30D", "source": "Hacker News", "updatedAt": "…",
     "models": [ { "key": "claude", "model": "Claude", "version": "…", "org": "…",

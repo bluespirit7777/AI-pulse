@@ -2,7 +2,7 @@
 // (releases, wire, feed, breakthroughs, stocks) come from latest.json; ranking
 // panels come from curated.js. Ported from the original inline script, with
 // freshness/provenance chips added.
-import { esc } from './util.js';
+import { esc, fmtSnapshot } from './util.js';
 import { freshnessChip, verificationChip, sourceChip } from './freshness.js';
 import * as C from './curated.js';
 import { MODEL_REGISTRY } from '../scripts/lib/models.mjs';
@@ -151,11 +151,6 @@ export function renderCurated() {
   ).join(''));
   wireDonutTooltip();
 
-  setHTML('compute-rows', C.compute.map((c) => `
-    <tr><td class="ticker-cell">${esc(c.chip)}</td><td class="signal-cell">${esc(c.segment)}</td>
-    <td class="metric-cell">${esc(c.rate)}</td><td class="${c.trendClass}">${esc(c.trend)}</td>
-    <td class="signal-cell">${esc(c.note)}</td></tr>`).join(''));
-
   document.querySelectorAll('.curated-asof').forEach((el) => { el.textContent = 'Curated · ' + C.CURATED_ASOF; });
 }
 
@@ -218,6 +213,17 @@ export function renderLive(data, now = Date.now()) {
       <td class="signal-cell">${esc(s.signal || '')}</td>
     </tr>`;
   }).join(''));
+
+  // compute pricing — live from Vast.ai + RunPod public marketplace APIs
+  // (see scripts/lib/compute.mjs); empty, not a stale fallback, if both fetches failed
+  const compute = data.compute || [];
+  setHTML('compute-rows', compute.length ? compute.map((c) => `
+    <tr><td class="ticker-cell">${esc(c.chip)}</td><td class="signal-cell">${esc(c.segment)}</td>
+    <td class="metric-cell">${esc(c.rate)}</td><td class="${c.trendClass}">${esc(c.trend)}</td>
+    <td class="signal-cell">${esc(c.note)}</td></tr>`).join('') :
+    `<tr><td colspan="5" class="signal-cell">Live GPU pricing unavailable this cycle — check back shortly.</td></tr>`);
+  const computeAsof = document.getElementById('compute-asof');
+  if (computeAsof) computeAsof.textContent = compute.length ? 'Live · ' + fmtSnapshot(data.updatedAt) : 'Unavailable';
 }
 
 // animate ordinal bars once rows exist
