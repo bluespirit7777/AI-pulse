@@ -37,6 +37,7 @@ import {
 } from './lib/signals.mjs';
 import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT, periodChange, WEEK_TRADING_DAYS, MONTH_TRADING_DAYS } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
+import { decodeEntities } from './lib/text.mjs';
 import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
 import { shortDateUTC } from './lib/dates.mjs';
 
@@ -157,23 +158,6 @@ async function fetchWithTimeout(url, opts = {}) {
   } finally {
     clearTimeout(id);
   }
-}
-
-function decodeEntities(s) {
-  if (!s) return '';
-  return s
-    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
-    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)))
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 function tag(block, name) {
