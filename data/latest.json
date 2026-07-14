@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-14T20:30:59.570Z",
+  "updatedAt": "2026-07-14T20:45:24.131Z",
   "build": {
-    "sha": "4b9b81d07c4b782bcaac3c6dd6a1d2e110153cdc",
-    "shortSha": "4b9b81d",
+    "sha": "ee607154558fbfcb620ba5f21738a30a3fd36519",
+    "shortSha": "ee60715",
     "ref": "main",
-    "builtAt": "2026-07-14T20:31:11.848Z"
+    "builtAt": "2026-07-14T20:46:34.149Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 4.9,
-    "estimatedDatasets": 3,
-    "buildSha": "4b9b81d",
-    "lastSuccessfulUpdate": "2026-07-14T20:30:59.570Z"
+    "estimatedDatasets": 5,
+    "buildSha": "ee60715",
+    "lastSuccessfulUpdate": "2026-07-14T20:45:24.131Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
+    "IMPROVED INTELLIGENCE WITH GPT-LIVE",
     "BUILD AND PUBLISH WEB APPS DIRECTLY IN CHATGPT",
     "INTRODUCING CLAUDE FOR TEACHERS",
     "GOOGLE’S DEMIS HASSABIS SAYS IT’S TIME FOR A GLOBAL AI WATCHDOG — LED BY THE US",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "DEEPMIND CEO CALLS FOR AN INDEPENDENT STANDARDS BODY TO REGULATE FRONTIER AI",
+    "SPACEXAI’S GROK PROGRAMMING TOOL WAS UPLOADING ITS USERS’ ENTIRE CODEBASE TO CLOUD STORAGE",
     "HOW SALES TEAMS USE CHATGPT WORK",
-    "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI",
-    "WAZE IS GETTING A BUNCH OF NEW AI-POWERED FEATURES",
-    "ANTHROPIC’S NEWEST AD IS CREEPING PEOPLE OUT"
+    "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI"
   ],
   "signals": [
     {
@@ -71,6 +71,32 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "clusterId": "1u9vozr",
+      "title": "Improved Intelligence with GPT-Live",
+      "desc": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
+      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "dateISO": "2026-07-14T20:22:11.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
       "entityIds": [
         "gpt"
       ]
@@ -206,6 +232,34 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "clusterId": "yqmj6o",
+      "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
+      "desc": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packaging and uploading entire code repositories, \"including files it was told not to open […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "dateISO": "2026-07-14T19:25:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "research",
+      "catConfidence": 0.43,
+      "family": "research",
+      "significance": 59,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini",
+        "grok",
+        "gcp"
+      ]
+    },
+    {
       "id": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
       "clusterId": "pfuqx",
       "title": "How sales teams use ChatGPT Work",
@@ -291,7 +345,7 @@
       "id": "https://techcrunch.com/2026/07/14/anthropics-newest-ad-is-creeping-people-out/",
       "clusterId": "xjzqh7",
       "title": "Anthropic’s newest ad is creeping people out",
-      "desc": "Anthropic's latest advert is stirring up high emotions — which is undoubtedly what it was designed to do.",
+      "desc": "Anthropic has consistently attempted to depict itself as the ethical foil to other AI companies. This latest marketing stunt — which leans into criticism of AI as a way to make Anthropic seem aware of the responsibility it carries — would appear to be more of the same.",
       "url": "https://techcrunch.com/2026/07/14/anthropics-newest-ad-is-creeping-people-out/",
       "dateISO": "2026-07-14T19:41:27.000Z",
       "date": "JUL 14 2026",
@@ -665,32 +719,6 @@
       "sourceName": "Fortune",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "clusterId": "hh4ve5",
-      "title": "Lorde says Ray-Ban Meta AI glasses are ‘not sexy’",
-      "desc": "Lorde was performing at the Mad Cool Festival in Madrid on Thursday and took some time during her set to speak out against AI glasses. While she didn't specify any brands in particular, it's likely she was taking a shot at festival sponsor Ray-Ban, which has collaborated with Meta on a pair of AI smart […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "dateISO": "2026-07-12T20:10:19.000Z",
-      "date": "JUL 12 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "llama"
       ]
     },
     {
@@ -1158,56 +1186,29 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "clusterId": "q11r6f",
-      "title": "Alibaba to ban employees from using Anthropic's coding tool, source says",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "dateISO": "2026-07-04T07:00:00.000Z",
-      "date": "JUL 04 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude",
-        "qwen"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Build and publish web apps directly in ChatGPT",
-      "summary": "See how to build a working web app directly in ChatGPT. Describe what you want, try the first version, ask for changes in plain language, and publish it when it’s ready—with hosti…",
+      "title": "Improved Intelligence with GPT-Live",
+      "summary": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
       "significance": 75,
       "impact": "high",
       "verification": "single",
       "date": "JUL 14 2026",
-      "dateISO": "2026-07-14T19:19:36.000Z",
-      "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+      "dateISO": "2026-07-14T20:22:11.000Z",
+      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
       "sourceCount": 1,
       "sources": [
         {
           "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw"
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
         }
       ],
       "entityIds": [
-        "chatgpt"
+        "gpt"
       ],
       "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
     },
@@ -1257,22 +1258,26 @@
     {
       "family": "research",
       "category": "research",
-      "title": "YouTube and X Have Become ‘Gateways’ to Nudify Apps",
-      "summary": "A new study found that social media platforms are referring people to sites where they can create nonconsensual, sexually explicit deepfakes for as little as $1 an image.",
-      "significance": 50,
+      "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
+      "summary": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that…",
+      "significance": 59,
       "impact": "notable",
       "verification": "single",
       "date": "JUL 14 2026",
-      "dateISO": "2026-07-14T16:05:18.000Z",
-      "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
+      "dateISO": "2026-07-14T19:25:00.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
         }
       ],
-      "entityIds": [],
+      "entityIds": [
+        "gemini",
+        "grok",
+        "gcp"
+      ],
       "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
     }
   ],
@@ -1280,17 +1285,17 @@
     "chatgpt": 24,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 71,
+    "gpt": 72,
     "claude": 73,
-    "gemini": 38,
-    "grok": 1,
-    "llama": 1,
+    "gemini": 39,
+    "grok": 2,
+    "llama": 0,
     "deepseek": 1,
     "qwen": 4,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
-    "gcp": 0,
+    "gcp": 1,
     "oracle": 1,
     "coreweave": 0,
     "nvidia": 1,
@@ -1365,6 +1370,17 @@
       "logoKey": "openai",
       "items": [
         {
+          "h": "Improved Intelligence with GPT-Live",
+          "d": "JUL 14 2026",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "high"
+        },
+        {
           "h": "Build and publish web apps directly in ChatGPT",
           "d": "JUL 14 2026",
           "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
@@ -1401,17 +1417,6 @@
           "h": "OpenAI and Broadcom unveil LLM-optimized inference chip",
           "d": "JUN 24 2026",
           "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-          "d": "JUN 22 2026",
-          "url": "https://openai.com/index/patch-the-planet",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1515,7 +1520,7 @@
       "verification": "single",
       "impact": "notable",
       "h": "Anthropic’s newest ad is creeping people out",
-      "p": "Anthropic's latest advert is stirring up high emotions — which is undoubtedly what it was designed to do.",
+      "p": "Anthropic has consistently attempted to depict itself as the ethical foil to other AI companies. This latest marketing stunt — which leans into criticism of AI as a way to make Anthropic seem aware of the responsibility it carries — would appear to be more of…",
       "url": "https://techcrunch.com/2026/07/14/anthropics-newest-ad-is-creeping-people-out/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
@@ -1609,6 +1614,17 @@
   ],
   "breakthroughs": [
     {
+      "field": "Research",
+      "date": "JUL 14 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cl…",
+      "p": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packag…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "field": "Vision",
       "date": "JUL 14 2026",
       "verification": "single",
@@ -1660,17 +1676,6 @@
       "h": "How agents are transforming work",
       "p": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
       "url": "https://openai.com/index/how-agents-are-transforming-work",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "field": "Biology",
-      "date": "JUN 23 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-      "p": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
-      "url": "https://openai.com/index/gpt-5-immunology-mystery",
       "sourceName": "OpenAI",
       "sourceCount": 1
     }
@@ -6171,18 +6176,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.87 – $3.19/hr",
-      "trend": "↑ 9% vs 1d ago",
+      "rate": "$1.79 – $3.19/hr",
+      "trend": "↑ 7% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.65/hr",
-      "trend": "↑ 9% vs 1d ago",
+      "rate": "$3.53 – $4.49/hr",
+      "trend": "↑ 6% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6190,14 +6195,14 @@
       "rate": "$5.89 – $8.76/hr",
       "trend": "→ 0% vs 1d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $7.81/hr",
-      "trend": "→ 0% vs 1d ago",
-      "trendClass": "trend-flat",
+      "rate": "$6.94 – $8.75/hr",
+      "trend": "↑ 6% vs 1d ago",
+      "trendClass": "trend-up",
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6218,7 +6223,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T20:30:59.570Z",
+    "updatedAt": "2026-07-14T20:45:24.131Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6228,15 +6233,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 286,
-        "fetchedStoryCount": 286,
+        "fetchedStoryCount": 200,
         "validatedStoryCount": 162,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 162,
-        "isEstimated": false,
-        "rawCommentHits": 2228,
+        "storyCoverage": 0.6993006993006993,
+        "estimatedRelevantDiscussions": 232,
+        "isEstimated": true,
+        "rawCommentHits": 2226,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
-        "commentCoverage": 0.13464991023339318,
+        "commentCoverage": 0.1347708894878706,
         "limited": false,
         "points": 1480,
         "themes": [
@@ -6313,81 +6318,20 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1096,
-        "fetchedStoryCount": 300,
-        "validatedStoryCount": 298,
-        "storyCoverage": 0.2737226277372263,
-        "estimatedRelevantDiscussions": 1089,
+        "rawStoryHits": 0,
+        "fetchedStoryCount": 0,
+        "validatedStoryCount": 0,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 0,
         "isEstimated": true,
-        "rawCommentHits": 6602,
-        "fetchedCommentCount": 300,
-        "validatedCommentCount": 295,
-        "commentCoverage": 0.04544077552256892,
-        "limited": false,
-        "points": 17583,
-        "themes": [
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 104
-          },
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 59
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 37
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 15
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 12
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 10
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 7
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 6
-          },
-          {
-            "id": "context",
-            "label": "Context limits",
-            "count": 6
-          }
-        ],
-        "topThreads": [
-          {
-            "title": "Claude Code is steganographically marking requests",
-            "points": 2445,
-            "comments": 750,
-            "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
-            "date": "JUN 30 2026"
-          },
-          {
-            "title": "Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding?",
-            "points": 1318,
-            "comments": 563,
-            "url": "https://news.ycombinator.com/item?id=48542100",
-            "date": "JUN 15 2026"
-          }
-        ]
+        "rawCommentHits": 0,
+        "fetchedCommentCount": 0,
+        "validatedCommentCount": 0,
+        "commentCoverage": 1,
+        "limited": true,
+        "points": 0,
+        "themes": [],
+        "topThreads": []
       },
       {
         "key": "gemini",
@@ -6395,17 +6339,17 @@
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 128,
-        "fetchedStoryCount": 127,
+        "fetchedStoryCount": 128,
         "validatedStoryCount": 115,
-        "storyCoverage": 0.9921875,
-        "estimatedRelevantDiscussions": 116,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 115,
+        "isEstimated": false,
         "rawCommentHits": 1115,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
         "commentCoverage": 0.26905829596412556,
         "limited": false,
-        "points": 2068,
+        "points": 2071,
         "themes": [
           {
             "id": "reasoning",
@@ -6486,12 +6430,12 @@
         "storyCoverage": 0.5758157389635317,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11275,
+        "rawCommentHits": 11273,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 175,
-        "commentCoverage": 0.026607538802660754,
+        "commentCoverage": 0.026612259380821433,
         "limited": false,
-        "points": 2371,
+        "points": 2372,
         "themes": [
           {
             "id": "coding",
@@ -6549,7 +6493,7 @@
           },
           {
             "title": "What xAI's Grok build CLI sends to xAI: A wire-level analysis",
-            "points": 530,
+            "points": 531,
             "comments": 228,
             "url": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
             "date": "JUL 12 2026"
@@ -6561,172 +6505,40 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 78,
-        "fetchedStoryCount": 78,
-        "validatedStoryCount": 31,
+        "rawStoryHits": 0,
+        "fetchedStoryCount": 0,
+        "validatedStoryCount": 0,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 31,
-        "isEstimated": false,
-        "rawCommentHits": 614,
-        "fetchedCommentCount": 300,
-        "validatedCommentCount": 235,
-        "commentCoverage": 0.48859934853420195,
-        "limited": false,
-        "points": 135,
-        "themes": [
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 108
-          },
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 54
-          },
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 51
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 26
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 23
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 16
-          },
-          {
-            "id": "context",
-            "label": "Context limits",
-            "count": 15
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 3
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 2
-          },
-          {
-            "id": "safety",
-            "label": "Safety",
-            "count": 1
-          }
-        ],
-        "topThreads": [
-          {
-            "title": "Show HN: I built a free app for New Yorkers to save money on groceries",
-            "points": 13,
-            "comments": 10,
-            "url": "https://sbnyc.app/",
-            "date": "JUL 10 2026"
-          },
-          {
-            "title": "Show HN: How clanker are you? A reverse Turing test",
-            "points": 11,
-            "comments": 11,
-            "url": "https://howclankerareyou.com/",
-            "date": "JUL 03 2026"
-          }
-        ]
+        "estimatedRelevantDiscussions": 0,
+        "isEstimated": true,
+        "rawCommentHits": 0,
+        "fetchedCommentCount": 0,
+        "validatedCommentCount": 0,
+        "commentCoverage": 1,
+        "limited": true,
+        "points": 0,
+        "themes": [],
+        "topThreads": []
       },
       {
         "key": "deepseek",
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 77,
-        "fetchedStoryCount": 77,
-        "validatedStoryCount": 68,
+        "rawStoryHits": 0,
+        "fetchedStoryCount": 0,
+        "validatedStoryCount": 0,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 68,
-        "isEstimated": false,
-        "rawCommentHits": 1124,
-        "fetchedCommentCount": 300,
-        "validatedCommentCount": 292,
-        "commentCoverage": 0.2669039145907473,
-        "limited": false,
-        "points": 1910,
-        "themes": [
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 72
-          },
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 69
-          },
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 68
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 21
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 15
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 14
-          },
-          {
-            "id": "context",
-            "label": "Context limits",
-            "count": 7
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 7
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 5
-          },
-          {
-            "id": "safety",
-            "label": "Safety",
-            "count": 2
-          }
-        ],
-        "topThreads": [
-          {
-            "title": "US holds off blacklisting DeepSeek, more than 100 firms deemed security risks",
-            "points": 537,
-            "comments": 603,
-            "url": "https://www.reuters.com/world/china/us-holds-off-blacklisting-chinas-deepseek-more-than-100-firms-deemed-security-2026-06-17/",
-            "date": "JUN 17 2026"
-          },
-          {
-            "title": "DeepSeek Introduces Vision",
-            "points": 498,
-            "comments": 204,
-            "url": "https://chat.deepseek.com/",
-            "date": "JUN 18 2026"
-          }
-        ]
+        "estimatedRelevantDiscussions": 0,
+        "isEstimated": true,
+        "rawCommentHits": 0,
+        "fetchedCommentCount": 0,
+        "validatedCommentCount": 0,
+        "commentCoverage": 1,
+        "limited": true,
+        "points": 0,
+        "themes": [],
+        "topThreads": []
       },
       {
         "key": "qwen",
@@ -6739,10 +6551,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": false,
-        "rawCommentHits": 4694,
+        "rawCommentHits": 4697,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 210,
-        "commentCoverage": 0.06391137622496805,
+        "validatedCommentCount": 211,
+        "commentCoverage": 0.06387055567383436,
         "limited": false,
         "points": 2461,
         "themes": [
@@ -6759,7 +6571,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 39
+            "count": 40
           },
           {
             "id": "speed",
@@ -6882,75 +6694,6 @@
         "author": "polyrand",
         "publishedAt": "2026-07-09T21:05:51.000Z",
         "url": "https://news.ycombinator.com/item?id=48852373"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "reasoning"
-        ],
-        "excerpt": "…have a bit of a moat.But I switched from ChatGPT to Claude 3 months ago because my account was down for like 6 hours. I haven’t used it since. It’s too easy to switch…",
-        "source": "Hacker News",
-        "author": "boron1006",
-        "publishedAt": "2026-07-14T17:51:51.000Z",
-        "url": "https://news.ycombinator.com/item?id=48910560"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "multimodal"
-        ],
-        "excerpt": "Claude's \"honest\" is an interesting example because we can trace it to a specific document that it was trained on extensively: the \"Constitution\" is identified to Claude in its…",
-        "source": "Hacker News",
-        "author": "demosthanos",
-        "publishedAt": "2026-07-14T17:35:01.000Z",
-        "url": "https://news.ycombinator.com/item?id=48910296"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "context"
-        ],
-        "excerpt": "Anthropic recently launched Claude Tag, a new product that adds Claude as an AI Coworker in Slack.It works by reading your conversations in channels while building a persistent…",
-        "source": "Hacker News",
-        "author": "saba-ch",
-        "publishedAt": "2026-07-13T18:39:28.000Z",
-        "url": "https://news.ycombinator.com/item?id=48896909"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding",
-          "speed"
-        ],
-        "excerpt": "… I am not enthusiastic about Anthropic as a company but I use Claude Code with the three best open coding models (for low cost and speed) and opus when I need it: if you configure…",
-        "source": "Hacker News",
-        "author": "mark_l_watson",
-        "publishedAt": "2026-07-14T13:11:54.000Z",
-        "url": "https://news.ycombinator.com/item?id=48906319"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "I pretty much giving up on Claude. It's Extremely slow, especially fast few days. Computer use takes so long to do anything that sessions expire. I switched to Codex and it's a…",
-        "source": "Hacker News",
-        "author": "yruzin",
-        "publishedAt": "2026-07-13T18:44:17.000Z",
-        "url": "https://news.ycombinator.com/item?id=48896971"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding",
-          "reasoning"
-        ],
-        "excerpt": "…APIs), Metabase, Docker, CI/CD. AI-native workflow: Claude Code/Cursor daily, multi-agent pipelines via Anthropic API, MCP.Résumé/CV: https://alami.no/cv/dev/Email:…",
-        "source": "Hacker News",
-        "author": "ricalamino",
-        "publishedAt": "2026-07-14T14:23:32.000Z",
-        "url": "https://news.ycombinator.com/item?id=48907393"
       },
       {
         "modelId": "gemini",
@@ -7088,149 +6831,6 @@
         "author": "teravor",
         "publishedAt": "2026-07-10T21:53:47.000Z",
         "url": "https://news.ycombinator.com/item?id=48865800"
-      },
-      {
-        "modelId": "llama",
-        "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "…t/s (pp2048) and 7.6k t/s (pp90k) — 21% to 43% faster than llama.cpp on the same hardware. - Where it stands (Decode): Pure decode speed is 270+ t/s, which currently trails…",
-        "source": "Hacker News",
-        "author": "ambuds",
-        "publishedAt": "2026-07-13T02:18:27.000Z",
-        "url": "https://news.ycombinator.com/item?id=48887070"
-      },
-      {
-        "modelId": "llama",
-        "themes": [
-          "coding",
-          "writing"
-        ],
-        "excerpt": "…there was around 4.5 megs of old legacy code.i only tested llama.cpp since it's my only usecase.…",
-        "source": "Hacker News",
-        "author": "locallmfan",
-        "publishedAt": "2026-07-14T18:01:53.000Z",
-        "url": "https://news.ycombinator.com/item?id=48910750"
-      },
-      {
-        "modelId": "llama",
-        "themes": [
-          "speed",
-          "context"
-        ],
-        "excerpt": "I second this.I used llama swap for a while before leaning into lemonade. The UI has improved a lot, but be careful as the most of the models default to very small 4K context…",
-        "source": "Hacker News",
-        "author": "data-ottawa",
-        "publishedAt": "2026-07-10T18:38:42.000Z",
-        "url": "https://news.ycombinator.com/item?id=48863576"
-      },
-      {
-        "modelId": "llama",
-        "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "… so it does sample local models. I just tested \"--candidates ollama/llama3.2:1b\", and that works - ignoring the lack of rich UX for local/unpriced models, as I was focussing on…",
-        "source": "Hacker News",
-        "author": "jarodrh",
-        "publishedAt": "2026-07-11T12:01:23.000Z",
-        "url": "https://news.ycombinator.com/item?id=48871280"
-      },
-      {
-        "modelId": "llama",
-        "themes": [
-          "reasoning",
-          "speed"
-        ],
-        "excerpt": "… running on a 650W MSI psu. This gives me a virtual 48GB GPU (llama.cpp ftw) to backup that 48GB of RAM.I typically see scores of at least 7-12t/s on 20-30B Q4KM size dense…",
-        "source": "Hacker News",
-        "author": "SillyUsername",
-        "publishedAt": "2026-07-13T18:27:28.000Z",
-        "url": "https://news.ycombinator.com/item?id=48896729"
-      },
-      {
-        "modelId": "llama",
-        "themes": [
-          "coding",
-          "context"
-        ],
-        "excerpt": "llama.cpp supports a wide variety of 4-bit and smaller quants and mmap's models by default, so you dont need to be able to hold the weights in memory (the OS will handle bringing…",
-        "source": "Hacker News",
-        "author": "ac29",
-        "publishedAt": "2026-07-10T03:18:59.000Z",
-        "url": "https://news.ycombinator.com/item?id=48855363"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "context",
-          "multimodal"
-        ],
-        "excerpt": "… process management and IO library, and testing via Tmux.Even DeepSeek V4 Flash mostly does fine with this, once it's built a few memories in the memory system. Let alone…",
-        "source": "Hacker News",
-        "author": "logicprog",
-        "publishedAt": "2026-07-13T13:17:50.000Z",
-        "url": "https://news.ycombinator.com/item?id=48892232"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "coding",
-          "speed"
-        ],
-        "excerpt": "…I ran into a bug(?) almost immediately though, I hooked up Deepseek 4 Pro, gave it a small task and got this``` LLM error: POST \"https://api.deepseek.com/v1/chat/completions\":…",
-        "source": "Hacker News",
-        "author": "drcongo",
-        "publishedAt": "2026-07-14T16:12:00.000Z",
-        "url": "https://news.ycombinator.com/item?id=48909030"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "local"
-        ],
-        "excerpt": "Would it possible to stack up to 16x32GB VRAM, and test the performance of a MOE model such as Deepseek-v4-flash?",
-        "source": "Hacker News",
-        "author": "rrhjm53270",
-        "publishedAt": "2026-07-13T18:09:48.000Z",
-        "url": "https://news.ycombinator.com/item?id=48896486"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "speed",
-          "local"
-        ],
-        "excerpt": "…play back with a local TTS model on my Pixel 10 Pro.But the Deepseek v4 flash model I am using through OpenRouter is killing me on latency. Any suggestions to improve…",
-        "source": "Hacker News",
-        "author": "shostack",
-        "publishedAt": "2026-07-09T02:10:57.000Z",
-        "url": "https://news.ycombinator.com/item?id=48840097"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "coding",
-          "writing"
-        ],
-        "excerpt": "…new model was ever released, the combination of GLM 5.2 and DeepSeek V4 flash is more than sufficient to do real work. It's not hard to imagine that a distillation of…",
-        "source": "Hacker News",
-        "author": "m_w_",
-        "publishedAt": "2026-07-13T20:43:13.000Z",
-        "url": "https://news.ycombinator.com/item?id=48898559"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "reasoning",
-          "local"
-        ],
-        "excerpt": "…for local inference with a footprint somewhere between Deepseek V4 flash and pro.Has anyone used the new Minimax M3 model? I’m curious how it compares with Deepseek V4 and…",
-        "source": "Hacker News",
-        "author": "kamranjon",
-        "publishedAt": "2026-07-13T05:18:22.000Z",
-        "url": "https://news.ycombinator.com/item?id=48888207"
       },
       {
         "modelId": "qwen",
