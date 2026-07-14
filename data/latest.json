@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-14T19:15:24.701Z",
+  "updatedAt": "2026-07-14T19:30:56.458Z",
   "build": {
-    "sha": "195bd6785b85bfd19bbcdaa6dece5261f73b2b5d",
-    "shortSha": "195bd67",
+    "sha": "05e2e8d2eed6ffec45ab612c85e5458ca985bb49",
+    "shortSha": "05e2e8d",
     "ref": "main",
-    "builtAt": "2026-07-14T19:15:36.404Z"
+    "builtAt": "2026-07-14T19:31:09.521Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 4.8,
-    "estimatedDatasets": 2,
-    "buildSha": "195bd67",
-    "lastSuccessfulUpdate": "2026-07-14T19:15:24.701Z"
+    "estimatedDatasets": 3,
+    "buildSha": "05e2e8d",
+    "lastSuccessfulUpdate": "2026-07-14T19:30:56.458Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
+    "BUILD AND PUBLISH WEB APPS DIRECTLY IN CHATGPT",
     "INTRODUCING CLAUDE FOR TEACHERS",
     "GOOGLE’S DEMIS HASSABIS SAYS IT’S TIME FOR A GLOBAL AI WATCHDOG — LED BY THE US",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "WAZE IS GETTING A BUNCH OF NEW AI-POWERED FEATURES",
     "DEEPMIND CEO CALLS FOR AN INDEPENDENT STANDARDS BODY TO REGULATE FRONTIER AI",
+    "SPACEXAI’S GROK PROGRAMMING TOOL WAS UPLOADING ITS USERS’ ENTIRE CODEBASE TO CLOUD STORAGE",
     "HOW SALES TEAMS USE CHATGPT WORK",
-    "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI",
-    "NEW YORK BECOMES THE FIRST STATE TO ENACT A DATA CENTER MORATORIUM",
-    "SPOTIFY EXPANDS ITS AI PUSH WITH A CHATGPT-LIKE MUSIC ASSISTANT"
+    "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI"
   ],
   "signals": [
     {
@@ -69,6 +69,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+      "clusterId": "1k3xlij",
+      "title": "Build and publish web apps directly in ChatGPT",
+      "desc": "See how to build a working web app directly in ChatGPT. Describe what you want, try the first version, ask for changes in plain language, and publish it when it’s ready—with hosting and storage built in. Learn more: https://learn.chatgpt.com/ Chapters 00:00 Introducing Sites 00:21 Building a launch site 00:41 Refining with feedback 00:55 Annotating and publishing 01:09 Working with Build Web Apps ",
+      "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+      "dateISO": "2026-07-14T19:19:36.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.75,
+      "family": "product",
+      "significance": 76,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt"
       ]
     },
     {
@@ -206,6 +232,34 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "clusterId": "yqmj6o",
+      "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
+      "desc": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packaging and uploading entire code repositories, \"including files it was told not to open […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "dateISO": "2026-07-14T19:25:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "research",
+      "catConfidence": 0.43,
+      "family": "research",
+      "significance": 60,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini",
+        "grok",
+        "gcp"
+      ]
+    },
+    {
       "id": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex",
       "clusterId": "pfuqx",
       "title": "How sales teams use ChatGPT Work",
@@ -246,7 +300,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 59,
+      "significance": 58,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -542,7 +596,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 54,
+      "significance": 53,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -555,32 +609,6 @@
       "sourceName": "Wired",
       "entityIds": [
         "chatgpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "clusterId": "hh4ve5",
-      "title": "Lorde says Ray-Ban Meta AI glasses are ‘not sexy’",
-      "desc": "Lorde was performing at the Mad Cool Festival in Madrid on Thursday and took some time during her set to speak out against AI glasses. While she didn't specify any brands in particular, it's likely she was taking a shot at festival sponsor Ray-Ban, which has collaborated with Meta on a pair of AI smart […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "dateISO": "2026-07-12T20:10:19.000Z",
-      "date": "JUL 12 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "llama"
       ]
     },
     {
@@ -676,30 +704,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
-      "clusterId": "16gsw9v",
-      "title": "Reflection inks $1B compute deal with Nebius",
-      "desc": "Reflection AI has signed a $1 billion deal to access Nebius' compute. Reflection was founded in 2024 and is developing open source AI technology.",
-      "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
-      "dateISO": "2026-07-14T14:37:48.000Z",
-      "date": "JUL 14 2026",
-      "category": "opensource",
-      "catConfidence": 0.45,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
       "clusterId": "8n3r09",
       "title": "Anthropic starts localizing Claude pricing for India, its biggest market after the US",
@@ -728,6 +732,30 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+      "clusterId": "16gsw9v",
+      "title": "Reflection inks $1B compute deal with Nebius",
+      "desc": "Reflection AI has signed a $1 billion deal to access Nebius' compute. Reflection was founded in 2024 and is developing open source AI technology.",
+      "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+      "dateISO": "2026-07-14T14:37:48.000Z",
+      "date": "JUL 14 2026",
+      "category": "opensource",
+      "catConfidence": 0.45,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
@@ -1161,58 +1189,31 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "clusterId": "frzhfp",
-      "title": "PRC-linked influence operations are targeting AI debates in the US",
-      "desc": "A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.",
-      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "dateISO": "2026-06-10T12:00:00.000Z",
-      "date": "JUN 10 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Introducing Claude for Teachers",
-      "summary": "Introducing Claude for Teachers",
-      "significance": 72,
+      "title": "Build and publish web apps directly in ChatGPT",
+      "summary": "See how to build a working web app directly in ChatGPT. Describe what you want, try the first version, ask for changes in plain language, and publish it when it’s ready—with hosti…",
+      "significance": 76,
       "impact": "high",
-      "verification": "official",
+      "verification": "single",
       "date": "JUL 14 2026",
-      "dateISO": "2026-07-14T15:07:29.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T19:19:36.000Z",
+      "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw"
         }
       ],
       "entityIds": [
-        "claude"
+        "chatgpt"
       ],
-      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
     },
     {
       "family": "market",
@@ -1256,40 +1257,44 @@
     {
       "family": "research",
       "category": "research",
-      "title": "YouTube and X Have Become ‘Gateways’ to Nudify Apps",
-      "summary": "A new study found that social media platforms are referring people to sites where they can create nonconsensual, sexually explicit deepfakes for as little as $1 an image.",
-      "significance": 51,
+      "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
+      "summary": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that…",
+      "significance": 60,
       "impact": "notable",
       "verification": "single",
       "date": "JUL 14 2026",
-      "dateISO": "2026-07-14T16:05:18.000Z",
-      "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
+      "dateISO": "2026-07-14T19:25:00.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
         }
       ],
-      "entityIds": [],
+      "entityIds": [
+        "gemini",
+        "grok",
+        "gcp"
+      ],
       "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
     }
   ],
   "entityActivity": {
-    "chatgpt": 24,
+    "chatgpt": 25,
     "copilot": 1,
     "perplexity": 0,
     "gpt": 73,
     "claude": 71,
-    "gemini": 38,
-    "grok": 1,
-    "llama": 1,
+    "gemini": 39,
+    "grok": 2,
+    "llama": 0,
     "deepseek": 1,
     "qwen": 4,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
-    "gcp": 0,
+    "gcp": 1,
     "oracle": 1,
     "coreweave": 0,
     "nvidia": 1,
@@ -1364,6 +1369,17 @@
       "logoKey": "openai",
       "items": [
         {
+          "h": "Build and publish web apps directly in ChatGPT",
+          "d": "JUL 14 2026",
+          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "high"
+        },
+        {
           "h": "Introducing GPT-Live",
           "d": "JUL 08 2026",
           "url": "https://openai.com/index/introducing-gpt-live",
@@ -1400,17 +1416,6 @@
           "h": "Patch the Planet: a Daybreak initiative to support open source maintainers",
           "d": "JUN 22 2026",
           "url": "https://openai.com/index/patch-the-planet",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Daybreak: Tools for securing every organization in the world",
-          "d": "JUN 22 2026",
-          "url": "https://openai.com/index/daybreak-securing-the-world",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1608,6 +1613,17 @@
   ],
   "breakthroughs": [
     {
+      "field": "Research",
+      "date": "JUL 14 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cl…",
+      "p": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packag…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "field": "Vision",
       "date": "JUL 14 2026",
       "verification": "single",
@@ -1661,17 +1677,6 @@
       "url": "https://openai.com/index/how-agents-are-transforming-work",
       "sourceName": "OpenAI",
       "sourceCount": 1
-    },
-    {
-      "field": "Biology",
-      "date": "JUN 23 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-      "p": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
-      "url": "https://openai.com/index/gpt-5-immunology-mystery",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1680,11 +1685,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 211.695,
-      "changePct": 4.011697830242616,
+      "price": 211.215,
+      "changePct": 3.775854962258993,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 87167058,
+      "volume": 90567883,
       "ohlc": [
         {
           "d": "04-14",
@@ -2125,22 +2130,22 @@
           "o": 208.1999969482422,
           "h": 212.5399932861328,
           "l": 203.8000030517578,
-          "c": 211.69500732421875
+          "c": 211.21499633789062
         }
       ],
-      "relVolume": 0.6013648621420936,
-      "marketCap": 5165358000000
+      "relVolume": 0.6248271276380151,
+      "marketCap": 5153646000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 385.69,
-      "changePct": -1.3555303013746531,
+      "price": 386.03,
+      "changePct": -1.2685724900795818,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 17996270,
+      "volume": 18505600,
       "ohlc": [
         {
           "d": "04-14",
@@ -2581,22 +2586,22 @@
           "o": 382.5050048828125,
           "h": 388.19000244140625,
           "l": 378.6499938964844,
-          "c": 385.69000244140625
+          "c": 386.0299987792969
         }
       ],
-      "relVolume": 0.3815029391884408,
-      "marketCap": 2865676700000
+      "relVolume": 0.3923002261827373,
+      "marketCap": 2868202900000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 391.41,
-      "changePct": 1.916421326149922,
+      "price": 390.496,
+      "changePct": 0.00012447876275998484,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 11634472,
+      "volume": 12115078,
       "ohlc": [
         {
           "d": "04-14",
@@ -3037,22 +3042,22 @@
           "o": 395.6050109863281,
           "h": 397.3299865722656,
           "l": 384.6404113769531,
-          "c": 391.4100036621094
+          "c": 390.4955139160156
         }
       ],
-      "relVolume": 0.40696250528183303,
-      "marketCap": 1925737200000.0002
+      "relVolume": 0.4237736353282572,
+      "marketCap": 1921240320000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 359.285,
-      "changePct": 1.9219295080411751,
+      "price": 359.545,
+      "changePct": 1.995689049166794,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 10704998,
+      "volume": 11202621,
       "ohlc": [
         {
           "d": "04-14",
@@ -3491,24 +3496,24 @@
         {
           "d": "07-14",
           "o": 351.0899963378906,
-          "h": 359.9200134277344,
+          "h": 360.0299987792969,
           "l": 351.0899963378906,
-          "c": 359.2850036621094
+          "c": 359.5450134277344
         }
       ],
-      "relVolume": 0.30972004687608723,
-      "marketCap": 4383277000000.0005
+      "relVolume": 0.32411741704716235,
+      "marketCap": 4386449000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 247.175,
-      "changePct": -0.05458513936702216,
+      "price": 247.81,
+      "changePct": 0.2021754093792904,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 18540334,
+      "volume": 19372436,
       "ohlc": [
         {
           "d": "04-14",
@@ -3947,24 +3952,24 @@
         {
           "d": "07-14",
           "o": 245.52999877929688,
-          "h": 247.66000366210938,
+          "h": 247.97000122070312,
           "l": 243.8000030517578,
-          "c": 247.1750030517578
+          "c": 247.80999755859375
         }
       ],
-      "relVolume": 0.30043240259031584,
-      "marketCap": 2644772500000
+      "relVolume": 0.3139160001921825,
+      "marketCap": 2651567000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 659.435,
-      "changePct": 0.41189182316802514,
+      "price": 659.845,
+      "changePct": 0.4743182627587115,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8821553,
+      "volume": 9180561,
       "ohlc": [
         {
           "d": "04-14",
@@ -4405,22 +4410,22 @@
           "o": 652,
           "h": 666.5,
           "l": 649.0499877929688,
-          "c": 659.4349975585938
+          "c": 659.844970703125
         }
       ],
-      "relVolume": 0.4322812665767464,
-      "marketCap": 1661776199999.9998
+      "relVolume": 0.4498736828951866,
+      "marketCap": 1662809400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 421.995,
-      "changePct": 0.09844123491159508,
+      "price": 420.58,
+      "changePct": -0.23720291091868134,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 11012236,
+      "volume": 11436298,
       "ohlc": [
         {
           "d": "04-14",
@@ -4861,22 +4866,22 @@
           "o": 430.8699951171875,
           "h": 430.8699951171875,
           "l": 418.8599853515625,
-          "c": 421.9949951171875
+          "c": 420.5799865722656
         }
       ],
-      "relVolume": 0.7665824014913648,
-      "marketCap": 2190154050000
+      "relVolume": 0.7961021526428322,
+      "marketCap": 2182810200000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 551.75,
-      "changePct": 3.248560952805831,
+      "price": 547.4,
+      "changePct": 2.4345533054512583,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 16799966,
+      "volume": 17308610,
       "ohlc": [
         {
           "d": "04-14",
@@ -5316,23 +5321,23 @@
           "d": "07-14",
           "o": 567.7369995117188,
           "h": 574.2000122070312,
-          "l": 547.8400268554688,
-          "c": 551.75
+          "l": 547.2000122070312,
+          "c": 547.4000244140625
         }
       ],
-      "relVolume": 0.5613581955371599,
-      "marketCap": 893835000000
+      "relVolume": 0.5783541512439038,
+      "marketCap": 886788000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 134.495,
-      "changePct": 3.4258705483413454,
+      "price": 134.05,
+      "changePct": 3.08367423305044,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 41283851,
+      "volume": 42158918,
       "ohlc": [
         {
           "d": "04-14",
@@ -5773,22 +5778,22 @@
           "o": 123.61199951171875,
           "h": 135.78990173339844,
           "l": 122.63999938964844,
-          "c": 134.4949951171875
+          "c": 134.0500030517578
         }
       ],
-      "relVolume": 0.9119485371472259,
-      "marketCap": 322788000000
+      "relVolume": 0.9312785185134461,
+      "marketCap": 321720000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 129.26,
-      "changePct": -1.7333122211260112,
+      "price": 128.59,
+      "changePct": -2.2426616229371374,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 37596060,
+      "volume": 39444890,
       "ohlc": [
         {
           "d": "04-14",
@@ -6229,11 +6234,11 @@
           "o": 132,
           "h": 132.75,
           "l": 128.4199981689453,
-          "c": 129.25999450683594
+          "c": 128.58999633789062
         }
       ],
-      "relVolume": 1.1009025858255943,
-      "marketCap": 363220600000
+      "relVolume": 1.1550407515735992,
+      "marketCap": 361337900000
     }
   ],
   "compute": [
@@ -6248,10 +6253,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.47/hr",
-      "trend": "→ 2% vs 1d ago",
+      "rate": "$3.29 – $4.47/hr",
+      "trend": "→ 3% vs 1d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6264,9 +6269,9 @@
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $7.81/hr",
-      "trend": "→ 0% vs 1d ago",
-      "trendClass": "trend-flat",
+      "rate": "$6.94 – $8.75/hr",
+      "trend": "↑ 6% vs 1d ago",
+      "trendClass": "trend-up",
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6280,14 +6285,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.36 – $1.49/hr",
-      "trend": "→ 2% vs 1d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.49/hr",
+      "trend": "↑ 32% vs 1d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T19:15:24.701Z",
+    "updatedAt": "2026-07-14T19:30:56.458Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6302,10 +6307,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 159,
         "isEstimated": false,
-        "rawCommentHits": 2229,
+        "rawCommentHits": 2228,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
-        "commentCoverage": 0.13458950201884254,
+        "commentCoverage": 0.13464991023339318,
         "limited": false,
         "points": 1474,
         "themes": [
@@ -6393,12 +6398,12 @@
         "validatedCommentCount": 296,
         "commentCoverage": 0.04549590536851683,
         "limited": false,
-        "points": 17540,
+        "points": 17547,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 112
+            "count": 111
           },
           {
             "id": "reasoning",
@@ -6416,19 +6421,19 @@
             "count": 12
           },
           {
+            "id": "price",
+            "label": "Price",
+            "count": 12
+          },
+          {
             "id": "local",
             "label": "Local use",
             "count": 12
           },
           {
-            "id": "price",
-            "label": "Price",
-            "count": 11
-          },
-          {
             "id": "reliability",
             "label": "Reliability",
-            "count": 8
+            "count": 7
           },
           {
             "id": "context",
@@ -6464,17 +6469,17 @@
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 128,
-        "fetchedStoryCount": 128,
+        "fetchedStoryCount": 125,
         "validatedStoryCount": 115,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 115,
-        "isEstimated": false,
-        "rawCommentHits": 1117,
+        "storyCoverage": 0.9765625,
+        "estimatedRelevantDiscussions": 118,
+        "isEstimated": true,
+        "rawCommentHits": 1115,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.26857654431512984,
+        "commentCoverage": 0.26905829596412556,
         "limited": false,
-        "points": 2060,
+        "points": 2061,
         "themes": [
           {
             "id": "reasoning",
@@ -6555,10 +6560,10 @@
         "storyCoverage": 0.5780346820809249,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11287,
+        "rawCommentHits": 11288,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 173,
-        "commentCoverage": 0.026579250465136883,
+        "commentCoverage": 0.02657689581856839,
         "limited": false,
         "points": 2370,
         "themes": [
@@ -6630,8 +6635,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 79,
-        "fetchedStoryCount": 79,
+        "rawStoryHits": 78,
+        "fetchedStoryCount": 78,
         "validatedStoryCount": 31,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
@@ -6716,8 +6721,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 76,
-        "fetchedStoryCount": 76,
+        "rawStoryHits": 72,
+        "fetchedStoryCount": 72,
         "validatedStoryCount": 67,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
@@ -6727,7 +6732,7 @@
         "validatedCommentCount": 292,
         "commentCoverage": 0.26666666666666666,
         "limited": false,
-        "points": 1899,
+        "points": 1900,
         "themes": [
           {
             "id": "price",
@@ -6808,10 +6813,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": false,
-        "rawCommentHits": 4688,
+        "rawCommentHits": 4689,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 208,
-        "commentCoverage": 0.06399317406143344,
+        "commentCoverage": 0.06397952655150352,
         "limited": false,
         "points": 2461,
         "themes": [
