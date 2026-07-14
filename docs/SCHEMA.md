@@ -108,7 +108,8 @@ browser). Node size = market cap, glow = relative volume, ring = day change.
   "nodes": [ { "t": "NVDA", "n": "…", "netLayer": 3, "price": …, "changePct": …,
                "weekChangePct": …, "monthChangePct": …,   // 5/21 trading days back; null until enough history
                "direction": "up|flat|down", "marketCap": …, "volume": …,
-               "dollarVolume": …, "avg20Volume": …, "relVolume": …, "url": "…" } ],
+               "dollarVolume": …, "avg20Volume": …, "relVolume": …, "url": "…",
+               "chart": [ { "d": "07-13", "o": …, "h": …, "l": …, "c": … } ] } ],  // ~3mo daily OHLC → drawer's native candlestick chart; [] until history exists
   "correlations": [ { "a": "TSM", "b": "AMD", "r": 0.78, "n": 30 } ],  // |r|>=0.5, price returns
   "relationships": [ { "from": "NVDA", "to": "TSM", "type": "depends|partner|competes" } ]
 }

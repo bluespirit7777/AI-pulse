@@ -207,6 +207,21 @@ comparable across companies). Business relationships and price correlations are
 kept strictly separate, and *correlation ≠ causation* is stated wherever
 correlations appear. The accessible table remains behind "View as table".
 
+**Per-stock candlestick chart.** Selecting a stock opens a drawer with a
+**native SVG candlestick chart** drawn from a compact ~3-month daily OHLC
+series carried in `stock-network.json` (`node.chart`). It's built and served
+from the site's own domain — deliberately *not* a third-party chart embed,
+which an earlier iteration used until it turned out those widget domains are
+routinely blocked by ad blockers, VPNs and network filters, leaving some
+visitors a silently blank box with no way for the page to even detect the
+failure (a cross-origin iframe hides its load errors). The native chart
+renders for everyone. Candles are green when they closed at/above the open,
+coral when lower; the y-axis is scaled to the series' own high/low range
+(`scripts/lib/chart.mjs`, unit-tested). It refreshes each build — near-live
+daily bars, not a streaming tick chart — and a "Live interactive chart on
+TradingView" link covers the fully-interactive/real-time view for anyone
+whose network allows it.
+
 ## Compute pricing
 
 Live $/hr GPU rental rates from two public, no-key marketplace APIs —

@@ -243,6 +243,16 @@ async function main() {
       if (!['up', 'down', 'flat'].includes(n.direction)) fail(`stock-network node[${i}].direction invalid`);
       if (n.weekChangePct != null && !isNum(n.weekChangePct)) fail(`stock-network node[${i}].weekChangePct must be number or null`);
       if (n.monthChangePct != null && !isNum(n.monthChangePct)) fail(`stock-network node[${i}].monthChangePct must be number or null`);
+      // native candlestick chart series — an empty array is valid (the drawer
+      // shows an honest "no history" state), but every present bar must be a
+      // real OHLC quad with low <= high
+      if (n.chart != null) {
+        if (!isArr(n.chart)) fail(`stock-network node[${i}].chart must be an array`);
+        else n.chart.forEach((c, j) => {
+          for (const f of ['o', 'h', 'l', 'c']) if (!isNum(c[f])) fail(`stock-network node[${i}].chart[${j}].${f} invalid`);
+          if (isNum(c.l) && isNum(c.h) && c.l > c.h) fail(`stock-network node[${i}].chart[${j}] has low > high`);
+        });
+      }
     });
     (net.correlations || []).forEach((c, i) => {
       if (!tickers.has(c.a) || !tickers.has(c.b)) fail(`stock-network correlation[${i}] references unknown ticker`);

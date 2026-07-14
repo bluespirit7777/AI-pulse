@@ -65,6 +65,7 @@ control (reduced-motion → manual scroll).
 | `scripts/lib/dates.mjs` | Explicit-UTC date formatting (`shortDateUTC`/`dayKeyUTC`) — timezone-stable regardless of the build/browser machine's local clock. |
 | `scripts/lib/compute.mjs` | Pure, tested: merges live Vast.ai + RunPod GPU offers into a real price range, filters marketplace placeholder prices, computes a real trend from rolling history. |
 | `scripts/lib/text.mjs` | Pure, tested: HTML entity decoding + tag stripping shared by feed parsing and HN comment sanitizing (entities MUST decode before tags strip, or entity-encoded tags survive). |
+| `scripts/lib/chart.mjs` | Pure, tested: shapes/rounds the daily OHLC candle series and the price→pixel scaling for the stock drawer's native SVG candlestick chart. |
 | `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json incl. dataHealth + community + range.json + stock-network.json). |
 | `test/*.test.mjs` | Unit tests (`node --test`). |
 | `.github/workflows/update-data.yml` | Scheduled fetch → validate → test → commit. |

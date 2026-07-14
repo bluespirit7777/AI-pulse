@@ -39,6 +39,7 @@ import { computeReturns, correlationPairs, relativeVolume, average, direction, d
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
 import { decodeEntities } from './lib/text.mjs';
 import { GPU_CATALOG, mergeGpuPricing, formatRate, computeTrend } from './lib/compute.mjs';
+import { buildCandleSeries } from './lib/chart.mjs';
 import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
 import { shortDateUTC } from './lib/dates.mjs';
 
@@ -430,14 +431,20 @@ async function fetchStock(meta) {
     const m = result?.meta;
     if (!m || m.regularMarketPrice == null) throw new Error('no price data');
 
-    // build a date-sorted [{date, close, volume}] series (skip null bars)
+    // build a date-sorted [{date, close, volume}] series (skip null bars) plus
+    // a parallel OHLC series for the native candlestick chart in the drawer
     const ts = result.timestamp || [];
-    const closes = result.indicators?.quote?.[0]?.close || [];
-    const vols = result.indicators?.quote?.[0]?.volume || [];
+    const q = result.indicators?.quote?.[0] || {};
+    const closes = q.close || [], opens = q.open || [], highs = q.high || [], lows = q.low || [];
+    const vols = q.volume || [];
     const series = [];
+    const ohlc = [];
     for (let i = 0; i < ts.length; i++) {
       if (closes[i] == null) continue;
       series.push({ date: new Date(ts[i] * 1000).toISOString().slice(0, 10), close: closes[i], volume: vols[i] ?? null });
+      if (opens[i] != null && highs[i] != null && lows[i] != null) {
+        ohlc.push({ d: new Date(ts[i] * 1000).toISOString().slice(5, 10), o: opens[i], h: highs[i], l: lows[i], c: closes[i] });
+      }
     }
 
     // Daily change from the last two valid bars (NOT the 3-month range start).
@@ -449,7 +456,7 @@ async function fetchStock(meta) {
       t: meta.t, n: m.longName || m.shortName || meta.n, layer: meta.layer, signal: meta.signal,
       price, changePct: dc.changePct, changeReview: dc.review, url: `https://finance.yahoo.com/quote/${meta.t}`,
       volume: m.regularMarketVolume ?? (series.length ? series[series.length - 1].volume : null),
-      series,
+      series, ohlc,
     };
   } catch (err) {
     console.error(`[stock] ${meta.t}: ${err.message}`);
@@ -485,6 +492,8 @@ function buildStockNetwork(quotes, metaByTicker, now) {
       marketCap, volume: q.volume ?? null,
       dollarVolume: q.volume != null && q.price != null ? q.volume * q.price : null,
       avg20Volume: avg20, relVolume: relVol,
+      // compact ~3-month daily candle series for the drawer's native chart
+      chart: buildCandleSeries(q.ohlc),
     };
   });
 

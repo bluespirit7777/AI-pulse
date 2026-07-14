@@ -7,6 +7,7 @@
 // brighten for the selected stock (others fade). Everything reads from the
 // pre-built data/stock-network.json; no heavy math in the browser.
 import { esc, prefersReducedMotion, clamp, fmtSnapshot } from './util.js';
+import { candleBounds, priceToY, isUp } from '../scripts/lib/chart.mjs';
 
 const VW = 1000, VH = 540, PAD_X = 60, PAD_TOP = 30, PAD_BOT = 20;
 const LAYER_LABELS = { 1: 'Platforms & software', 2: 'Cloud & compute', 3: 'Chips & networking', 4: 'Foundry' };
@@ -218,7 +219,7 @@ export function createStockNetwork(root, net) {
         <h3 id="snet-drawer-title">${esc(n.n)} <span class="drawer-org">${esc(n.t)}</span></h3>
         <div class="snet-chart" id="snet-chart"></div>
         <div class="snet-chart-link">
-          <a href="${esc(`https://www.tradingview.com/symbols/${tvSymbol(n.t).replace(':', '-')}/`)}" target="_blank" rel="noopener" class="src-link">Open ${esc(n.t)} chart on TradingView ↗</a>
+          <a href="${esc(`https://www.tradingview.com/symbols/${tvSymbol(n.t).replace(':', '-')}/`)}" target="_blank" rel="noopener" class="src-link">Live interactive chart on TradingView ↗</a>
         </div>
         <div class="snet-facts">
           <span><b>Price</b>${n.price != null ? '$' + n.price.toFixed(2) : '—'}</span>
@@ -249,59 +250,69 @@ export function createStockNetwork(root, net) {
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
     drawer.addEventListener('keydown', onDrawerKey);
     drawer.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
-    mountChart(n.t);
+    mountChart(n);
   }
 
-  // TradingView's free embeddable "Advanced Chart" widget — a live third-party
-  // iframe, the one exception to this site's otherwise fully self-built,
-  // build-time-data architecture. Deliberate trade-off: real, familiar
-  // candlestick charting with zero backend and no API key, at the cost of not
-  // controlling its internal accessibility/reduced-motion behaviour (its own
-  // ticking price updates aren't ours to gate). <script> tags set via
-  // .innerHTML never execute, so the embed script is created and appended
-  // here explicitly, after the drawer markup is already in the DOM.
-  function mountChart(ticker) {
+  // Native SVG candlestick chart drawn from the compact daily OHLC series in
+  // stock-network.json (node.chart). Self-built and served from our own
+  // domain, so it renders for every visitor — no third-party embed to be
+  // blocked by an ad blocker, VPN, or network filter (which is exactly what
+  // sank the earlier TradingView iframe for some users). Near-live daily
+  // bars, refreshed each build; the "Open on TradingView" link below the
+  // chart still covers the fully-interactive, streaming view for anyone who
+  // wants it.
+  function mountChart(node) {
     const host = drawer.querySelector('#snet-chart');
     if (!host) return;
-    const widgetDiv = document.createElement('div');
-    widgetDiv.className = 'tradingview-widget-container__widget';
-    host.appendChild(widgetDiv);
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
-    script.async = true;
-    script.text = JSON.stringify({
-      autosize: true,
-      symbol: tvSymbol(ticker),
-      interval: 'D',
-      timezone: 'Etc/UTC',
-      theme: 'light',
-      style: '1',
-      locale: 'en',
-      allow_symbol_change: false,
-      hide_top_toolbar: false,
-      support_host: 'https://www.tradingview.com',
-    });
-    // Ad blockers and privacy extensions commonly block this exact domain at
-    // the network level — a real, frequent failure mode (Opera's built-in
-    // blocker does this by default), not a hypothetical. `error` fires when
-    // the request itself is blocked; the timeout is belt-and-braces for the
-    // rarer case where the script loads but the iframe never actually
-    // appears. Either way, a real fallback with a direct link beats leaving
-    // silent blank space that reads as the site being broken.
-    const fallback = () => showChartFallback(host, ticker);
-    script.addEventListener('error', fallback);
-    host.appendChild(script);
-    setTimeout(() => { if (!host.querySelector('iframe')) fallback(); }, 4000);
+    const candles = node.chart || [];
+    if (candles.length < 2) {
+      host.innerHTML = `<div class="snet-chart-empty">Price history isn’t available for ${esc(node.t)} right now.</div>`;
+      return;
+    }
+    host.innerHTML = renderCandles(candles, node);
   }
 
-  function showChartFallback(host, ticker) {
-    if (host.querySelector('iframe')) return; // it loaded just in time
-    const tvUrl = `https://www.tradingview.com/symbols/${tvSymbol(ticker).replace(':', '-')}/`;
-    host.innerHTML = `
-      <div class="snet-chart-fallback">
-        <p>Chart didn't load — likely blocked by an ad blocker or privacy extension in this browser.</p>
-        <a href="${esc(tvUrl)}" target="_blank" rel="noopener" class="src-link">View ${esc(ticker)} on TradingView →</a>
-      </div>`;
+  function renderCandles(candles, node) {
+    const W = 520, H = 300, padL = 48, padR = 12, padT = 12, padB = 24;
+    const plotL = padL, plotR = W - padR, plotT = padT, plotB = H - padB;
+    const plotW = plotR - plotL;
+    const b = candleBounds(candles);
+    const y = (p) => priceToY(p, b.min, b.max, plotT, plotB);
+    const n = candles.length;
+    const slotW = plotW / n;
+    const bodyW = Math.max(1.5, Math.min(slotW * 0.66, 9));
+    const decimals = b.max < 100 ? 2 : b.max < 1000 ? 1 : 0;
+
+    // horizontal gridlines + price labels
+    const LEVELS = 4;
+    let grid = '';
+    for (let i = 0; i <= LEVELS; i++) {
+      const price = b.min + (i / LEVELS) * (b.max - b.min);
+      const gy = y(price);
+      grid += `<line x1="${plotL}" y1="${gy.toFixed(1)}" x2="${plotR}" y2="${gy.toFixed(1)}" class="snc-grid"></line>`;
+      grid += `<text x="${plotL - 6}" y="${(gy + 3).toFixed(1)}" class="snc-ylabel" text-anchor="end">$${price.toFixed(decimals)}</text>`;
+    }
+
+    // candles: green if it closed at/above open, coral if it closed lower
+    let bars = '';
+    candles.forEach((c, i) => {
+      const cx = plotL + (i + 0.5) * slotW;
+      const color = isUp(c) ? '#1f7a4d' : 'var(--coral)';
+      const yTop = Math.min(y(c.o), y(c.c));
+      const bodyH = Math.max(1, Math.abs(y(c.o) - y(c.c)));
+      bars += `<g><title>${esc(c.d)} · O ${c.o} H ${c.h} L ${c.l} C ${c.c}</title>` +
+        `<line x1="${cx.toFixed(1)}" y1="${y(c.h).toFixed(1)}" x2="${cx.toFixed(1)}" y2="${y(c.l).toFixed(1)}" stroke="${color}" stroke-width="1"></line>` +
+        `<rect x="${(cx - bodyW / 2).toFixed(1)}" y="${yTop.toFixed(1)}" width="${bodyW.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"></rect></g>`;
+    });
+
+    const first = candles[0].d, last = candles[n - 1].d;
+    return `<svg class="snc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="${esc(node.t)} daily price candlestick chart, ${n} trading days from ${esc(first)} to ${esc(last)}.">
+      <g class="snc-grid-g">${grid}</g>
+      <g class="snc-bars">${bars}</g>
+      <text x="${plotL}" y="${H - 7}" class="snc-xlabel" text-anchor="start">${esc(first)}</text>
+      <text x="${plotR}" y="${H - 7}" class="snc-xlabel" text-anchor="end">${esc(last)}</text>
+    </svg>
+    <p class="snc-caption">Daily bars, ~3 months · refreshed each update (near-live, not streaming)</p>`;
   }
   function onDrawerKey(e) {
     if (e.key === 'Escape') closeDrawer();
