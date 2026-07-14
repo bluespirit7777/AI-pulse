@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-14T02:30:50.999Z",
+  "updatedAt": "2026-07-14T02:45:25.677Z",
   "build": {
-    "sha": "936e943607fec67989c5d7fa7db0acbde68b5f64",
-    "shortSha": "936e943",
+    "sha": "b08926f86495e1a79a4e02fa1b038b4a0228b909",
+    "shortSha": "b08926f",
     "ref": "main",
-    "builtAt": "2026-07-14T02:31:04.147Z"
+    "builtAt": "2026-07-14T02:45:40.364Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 15,
+    "feedsSucceeded": 12,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 4.1,
-    "estimatedDatasets": 2,
-    "buildSha": "936e943",
-    "lastSuccessfulUpdate": "2026-07-14T02:30:50.999Z"
+    "estimatedDatasets": 3,
+    "buildSha": "b08926f",
+    "lastSuccessfulUpdate": "2026-07-14T02:45:25.677Z"
   },
   "ticker": [
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
@@ -1282,7 +1282,7 @@
     "copilot": 1,
     "perplexity": 0,
     "gpt": 75,
-    "claude": 69,
+    "claude": 68,
     "gemini": 33,
     "grok": 1,
     "llama": 1,
@@ -1812,26 +1812,26 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.19/hr",
-      "trend": "↑ 11% vs 1d ago",
+      "rate": "$1.87 – $3.19/hr",
+      "trend": "↑ 9% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.53 – $4.39/hr",
+      "rate": "$2.94 – $4.97/hr",
       "trend": "↑ 5% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $8.76/hr",
-      "trend": "→ 0% vs 1d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$5.89 – $7.50/hr",
+      "trend": "↓ 9% vs 1d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -1859,7 +1859,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T02:30:50.999Z",
+    "updatedAt": "2026-07-14T02:45:25.677Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -1869,11 +1869,11 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 276,
-        "fetchedStoryCount": 276,
+        "fetchedStoryCount": 246,
         "validatedStoryCount": 157,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 157,
-        "isEstimated": false,
+        "storyCoverage": 0.8913043478260869,
+        "estimatedRelevantDiscussions": 176,
+        "isEstimated": true,
         "rawCommentHits": 2212,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
@@ -1960,17 +1960,17 @@
         "storyCoverage": 0.2788104089219331,
         "estimatedRelevantDiscussions": 1069,
         "isEstimated": true,
-        "rawCommentHits": 6542,
+        "rawCommentHits": 6544,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 297,
-        "commentCoverage": 0.04585753592173647,
+        "commentCoverage": 0.04584352078239609,
         "limited": false,
-        "points": 17308,
+        "points": 17311,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 151
+            "count": 152
           },
           {
             "id": "reasoning",
@@ -1980,7 +1980,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 34
+            "count": 36
           },
           {
             "id": "price",
@@ -2035,16 +2035,16 @@
         "model": "Gemini",
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 123,
-        "fetchedStoryCount": 123,
+        "rawStoryHits": 121,
+        "fetchedStoryCount": 121,
         "validatedStoryCount": 110,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 110,
         "isEstimated": false,
-        "rawCommentHits": 1102,
+        "rawCommentHits": 1084,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.27223230490018147,
+        "commentCoverage": 0.2767527675276753,
         "limited": false,
         "points": 1906,
         "themes": [
@@ -2121,18 +2121,18 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 501,
+        "rawStoryHits": 502,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 28,
-        "storyCoverage": 0.5988023952095808,
+        "storyCoverage": 0.5976095617529881,
         "estimatedRelevantDiscussions": 47,
         "isEstimated": true,
-        "rawCommentHits": 11246,
+        "rawCommentHits": 11251,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 173,
-        "commentCoverage": 0.026676151520540637,
+        "commentCoverage": 0.02666429650697716,
         "limited": false,
-        "points": 2337,
+        "points": 2338,
         "themes": [
           {
             "id": "coding",
@@ -2288,8 +2288,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 70,
-        "fetchedStoryCount": 70,
+        "rawStoryHits": 79,
+        "fetchedStoryCount": 79,
         "validatedStoryCount": 67,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
@@ -2380,10 +2380,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 37,
         "isEstimated": false,
-        "rawCommentHits": 4716,
+        "rawCommentHits": 4721,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 208,
-        "commentCoverage": 0.06361323155216285,
+        "commentCoverage": 0.06354585892819319,
         "limited": false,
         "points": 2471,
         "themes": [
