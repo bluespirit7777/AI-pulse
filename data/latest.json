@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-14T02:15:25.285Z",
+  "updatedAt": "2026-07-14T02:30:50.999Z",
   "build": {
-    "sha": "5eca20eb7fab6c31dd0d34068dd0e39c0c011e71",
-    "shortSha": "5eca20e",
+    "sha": "936e943607fec67989c5d7fa7db0acbde68b5f64",
+    "shortSha": "936e943",
     "ref": "main",
-    "builtAt": "2026-07-14T02:15:39.515Z"
+    "builtAt": "2026-07-14T02:31:04.147Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 4.1,
-    "estimatedDatasets": 3,
-    "buildSha": "5eca20e",
-    "lastSuccessfulUpdate": "2026-07-14T02:15:25.285Z"
+    "estimatedDatasets": 2,
+    "buildSha": "936e943",
+    "lastSuccessfulUpdate": "2026-07-14T02:30:50.999Z"
   },
   "ticker": [
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
@@ -515,30 +515,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
-      "clusterId": "pwhw79",
-      "title": "Now, defenders are embracing the prompt injection, too",
-      "desc": "\"Context bombing\" tricks hacking agents into shutting down before they can do harm.",
-      "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
-      "dateISO": "2026-07-13T15:06:34.000Z",
-      "date": "JUL 13 2026",
-      "category": "product",
-      "catConfidence": 0.8,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": []
-    },
-    {
       "id": "https://www.wired.com/story/fidji-simo-ceo-agi-deployment-openai/",
       "clusterId": "1416iml",
       "title": "OpenAI’s CEO of AGI Deployment, Fidji Simo, Is Stepping Down",
@@ -567,6 +543,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
+      "clusterId": "pwhw79",
+      "title": "Now, defenders are embracing the prompt injection, too",
+      "desc": "\"Context bombing\" tricks hacking agents into shutting down before they can do harm.",
+      "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
+      "dateISO": "2026-07-13T15:06:34.000Z",
+      "date": "JUL 13 2026",
+      "category": "product",
+      "catConfidence": 0.8,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": []
     },
     {
       "id": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
@@ -1812,18 +1812,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.79 – $3.19/hr",
-      "trend": "↑ 7% vs 1d ago",
+      "rate": "$1.99 – $3.19/hr",
+      "trend": "↑ 11% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.34 – $4.39/hr",
-      "trend": "↓ 11% vs 1d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$3.53 – $4.39/hr",
+      "trend": "↑ 5% vs 1d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -1852,14 +1852,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.19 – $1.49/hr",
-      "trend": "↑ 42% vs 1d ago",
+      "rate": "$1.00 – $1.49/hr",
+      "trend": "↑ 32% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T02:15:25.285Z",
+    "updatedAt": "2026-07-14T02:30:50.999Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -1869,26 +1869,26 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 276,
-        "fetchedStoryCount": 200,
+        "fetchedStoryCount": 276,
         "validatedStoryCount": 157,
-        "storyCoverage": 0.7246376811594203,
-        "estimatedRelevantDiscussions": 217,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 157,
+        "isEstimated": false,
         "rawCommentHits": 2212,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
         "commentCoverage": 0.13562386980108498,
         "limited": false,
-        "points": 1478,
+        "points": 1479,
         "themes": [
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 58
-          },
           {
             "id": "coding",
             "label": "Coding",
+            "count": 58
+          },
+          {
+            "id": "reasoning",
+            "label": "Reasoning",
             "count": 57
           },
           {
@@ -1899,7 +1899,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 15
+            "count": 16
           },
           {
             "id": "speed",
@@ -1909,7 +1909,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 9
+            "count": 8
           },
           {
             "id": "reliability",
@@ -1954,38 +1954,38 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1077,
+        "rawStoryHits": 1076,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.2785515320334262,
-        "estimatedRelevantDiscussions": 1070,
+        "storyCoverage": 0.2788104089219331,
+        "estimatedRelevantDiscussions": 1069,
         "isEstimated": true,
-        "rawCommentHits": 6539,
+        "rawCommentHits": 6542,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 297,
-        "commentCoverage": 0.045878574705612477,
+        "commentCoverage": 0.04585753592173647,
         "limited": false,
-        "points": 17307,
+        "points": 17308,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 150
+            "count": 151
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 48
+            "count": 49
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 35
+            "count": 34
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 14
+            "count": 15
           },
           {
             "id": "local",
@@ -2046,7 +2046,7 @@
         "validatedCommentCount": 295,
         "commentCoverage": 0.27223230490018147,
         "limited": false,
-        "points": 1905,
+        "points": 1906,
         "themes": [
           {
             "id": "coding",
@@ -2127,10 +2127,10 @@
         "storyCoverage": 0.5988023952095808,
         "estimatedRelevantDiscussions": 47,
         "isEstimated": true,
-        "rawCommentHits": 11245,
+        "rawCommentHits": 11246,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 173,
-        "commentCoverage": 0.026678523788350377,
+        "commentCoverage": 0.026676151520540637,
         "limited": false,
         "points": 2337,
         "themes": [
@@ -2288,8 +2288,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 74,
-        "fetchedStoryCount": 74,
+        "rawStoryHits": 70,
+        "fetchedStoryCount": 70,
         "validatedStoryCount": 67,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
@@ -2380,10 +2380,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 37,
         "isEstimated": false,
-        "rawCommentHits": 4714,
+        "rawCommentHits": 4716,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 208,
-        "commentCoverage": 0.06364022061943148,
+        "commentCoverage": 0.06361323155216285,
         "limited": false,
         "points": 2471,
         "themes": [
