@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-14T22:01:00.172Z",
+  "updatedAt": "2026-07-14T22:15:24.659Z",
   "build": {
-    "sha": "fa7a75512ded3b9b1629ce9d6287ff62ff9b196b",
-    "shortSha": "fa7a755",
+    "sha": "0686c481c18eeb60647588fda27008510d924be2",
+    "shortSha": "0686c48",
     "ref": "main",
-    "builtAt": "2026-07-14T22:01:11.641Z"
+    "builtAt": "2026-07-14T22:15:38.376Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,14 +12,14 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 4.9,
-    "estimatedDatasets": 3,
-    "buildSha": "fa7a755",
-    "lastSuccessfulUpdate": "2026-07-14T22:01:00.172Z"
+    "estimatedDatasets": 2,
+    "buildSha": "0686c48",
+    "lastSuccessfulUpdate": "2026-07-14T22:15:24.659Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
-    "BUILD AND PUBLISH WEB APPS DIRECTLY IN CHATGPT",
     "IMPROVED INTELLIGENCE WITH GPT-LIVE",
+    "BUILD AND PUBLISH WEB APPS DIRECTLY IN CHATGPT",
     "INTRODUCING CLAUDE FOR TEACHERS",
     "GOOGLE’S DEMIS HASSABIS SAYS IT’S TIME FOR A GLOBAL AI WATCHDOG — LED BY THE US",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
@@ -43,8 +43,16 @@
       "significance": 83,
       "impact": "high",
       "verification": "uncertain",
-      "sourceCount": 6,
+      "sourceCount": 8,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device"
+        },
         {
           "name": "Ars Technica",
           "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
@@ -76,6 +84,36 @@
       ]
     },
     {
+      "id": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "clusterId": "1u9vozr",
+      "title": "Improved Intelligence with GPT-Live",
+      "desc": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
+      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "dateISO": "2026-07-14T20:22:11.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 80,
+      "impact": "high",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=vTK5nWf9a9Q"
+        },
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://www.youtube.com/watch?v=8zH_O74hZBw",
       "clusterId": "1k3xlij",
       "title": "Build and publish web apps directly in ChatGPT",
@@ -99,32 +137,6 @@
       "sourceName": "OpenAI (YouTube)",
       "entityIds": [
         "chatgpt"
-      ]
-    },
-    {
-      "id": "https://www.youtube.com/watch?v=avpZWh6sm9M",
-      "clusterId": "1u9vozr",
-      "title": "Improved Intelligence with GPT-Live",
-      "desc": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
-      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
-      "dateISO": "2026-07-14T20:22:11.000Z",
-      "date": "JUL 14 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 74,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -311,32 +323,6 @@
         }
       ],
       "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-      "clusterId": "mgrppk",
-      "title": "Waze is getting a bunch of new AI-powered features",
-      "desc": "Waze is getting an AI makeover. Google is integrating its flagship AI assistant, Gemini, into the driving app with the goal of letting users personalize their trips a little more. Of the four new updates, only two are being described as involving Gemini. Waze says its updating its conversation reporting feature, first introduced in 2024, […]",
-      "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-      "dateISO": "2026-07-13T09:00:00.000Z",
-      "date": "JUL 13 2026",
-      "category": "product",
-      "catConfidence": 0.56,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty"
-        }
-      ],
-      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -664,32 +650,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/",
-      "clusterId": "l5szxj",
-      "title": "The Chatbot That Foretold Why People Share Secrets With ChatGPT",
-      "desc": "In the 1960s an MIT professor named Joseph Weizenbaum created a chatbot called ELIZA. The conversations people had with it set precedents for the chatbots to come.",
-      "url": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/",
-      "dateISO": "2026-07-14T10:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/07/14/the-founder-of-hinge-raised-18m-to-build-a-new-ai-dating-service-overtone/",
       "clusterId": "1ed1xxo",
       "title": "The founder of Hinge raised $18M to build a new AI dating service, Overtone",
@@ -712,6 +672,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/",
+      "clusterId": "l5szxj",
+      "title": "The Chatbot That Foretold Why People Share Secrets With ChatGPT",
+      "desc": "In the 1960s an MIT professor named Joseph Weizenbaum created a chatbot called ELIZA. The conversations people had with it set precedents for the chatbots to come.",
+      "url": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/",
+      "dateISO": "2026-07-14T10:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "chatgpt"
+      ]
     },
     {
       "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
@@ -1070,30 +1056,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "clusterId": "jbcjuu",
-      "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
-      "desc": "With the cash, the company aims to expand its world model offering and reach customers across geographies.",
-      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "dateISO": "2026-07-14T00:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5",
       "clusterId": "1dwsflu",
       "title": "Anthropic: Claude Mythos identified 10,000+ software flaws",
@@ -1188,31 +1150,88 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
+      "clusterId": "q11r6f",
+      "title": "Alibaba to ban employees from using Anthropic's coding tool, source says",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
+      "dateISO": "2026-07-04T07:00:00.000Z",
+      "date": "JUL 04 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude",
+        "qwen"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1mS004dFB2RHhmSy0zVWJXN0ZXbXFsdzBQTjNxNm5uOEh0cC1tVm4xdk11alFNS01lS0l4N0VVRjJHSjFUNjNfc3lHZllXRFB5Zks0X3U2VExuQ3N5aVRmV2xvd3BwNHc?oc=5",
+      "clusterId": "xhzbdd",
+      "title": "TCS and Anthropic partner to bring Claude to regulated industries",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1mS004dFB2RHhmSy0zVWJXN0ZXbXFsdzBQTjNxNm5uOEh0cC1tVm4xdk11alFNS01lS0l4N0VVRjJHSjFUNjNfc3lHZllXRFB5Zks0X3U2VExuQ3N5aVRmV2xvd3BwNHc?oc=5",
+      "dateISO": "2026-06-12T07:00:00.000Z",
+      "date": "JUN 12 2026",
+      "category": "policy",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1mS004dFB2RHhmSy0zVWJXN0ZXbXFsdzBQTjNxNm5uOEh0cC1tVm4xdk11alFNS01lS0l4N0VVRjJHSjFUNjNfc3lHZllXRFB5Zks0X3U2VExuQ3N5aVRmV2xvd3BwNHc?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Build and publish web apps directly in ChatGPT",
-      "summary": "See how to build a working web app directly in ChatGPT. Describe what you want, try the first version, ask for changes in plain language, and publish it when it’s ready—with hosti…",
-      "significance": 75,
+      "title": "Improved Intelligence with GPT-Live",
+      "summary": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
+      "significance": 80,
       "impact": "high",
-      "verification": "single",
+      "verification": "corroborated",
       "date": "JUL 14 2026",
-      "dateISO": "2026-07-14T19:19:36.000Z",
-      "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
-      "sourceCount": 1,
+      "dateISO": "2026-07-14T20:22:11.000Z",
+      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "sourceCount": 2,
       "sources": [
         {
           "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw"
+          "url": "https://www.youtube.com/watch?v=vTK5nWf9a9Q"
+        },
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
         }
       ],
       "entityIds": [
-        "chatgpt"
+        "gpt"
       ],
-      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
     },
     {
       "family": "market",
@@ -1225,8 +1244,16 @@
       "date": "JUL 13 2026",
       "dateISO": "2026-07-13T17:00:00.000Z",
       "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-      "sourceCount": 6,
+      "sourceCount": 8,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device"
+        },
         {
           "name": "Ars Technica",
           "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
@@ -1289,7 +1316,7 @@
     "perplexity": 0,
     "gpt": 73,
     "claude": 73,
-    "gemini": 39,
+    "gemini": 38,
     "grok": 2,
     "llama": 0,
     "deepseek": 1,
@@ -1375,11 +1402,11 @@
           "h": "Improved Intelligence with GPT-Live",
           "d": "JUL 14 2026",
           "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
-          "isVideo": true,
-          "videoUrl": null,
+          "isVideo": false,
+          "videoUrl": "https://www.youtube.com/watch?v=vTK5nWf9a9Q",
           "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
+          "sourceCount": 2,
+          "verification": "corroborated",
           "impact": "high"
         },
         {
@@ -1444,17 +1471,6 @@
           "impact": "notable"
         },
         {
-          "h": "Waze is getting a bunch of new AI-powered features",
-          "d": "JUL 13 2026",
-          "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing computer use in Gemini 3.5 Flash",
           "d": "JUN 24 2026",
           "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
@@ -1486,11 +1502,34 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
+        },
+        {
+          "h": "Introducing Google Antigravity 2.0",
+          "d": "MAY 17 2026",
+          "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0/",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Google DeepMind",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
         }
       ]
     }
   ],
   "wire": [
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 13 2026",
+      "verification": "uncertain",
+      "impact": "high",
+      "h": "The 6 wildest claims in Apple’s lawsuit against OpenAI",
+      "p": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Appl…",
+      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
+      "sourceName": "The Verge",
+      "sourceCount": 8
+    },
     {
       "org": "OPENAI",
       "logoKey": "openai",
@@ -1502,18 +1541,6 @@
       "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 13 2026",
-      "verification": "uncertain",
-      "impact": "high",
-      "h": "The 6 wildest claims in Apple’s lawsuit against OpenAI",
-      "p": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Appl…",
-      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-      "sourceName": "The Verge",
-      "sourceCount": 6
     },
     {
       "org": "AI WIRE",
@@ -6178,18 +6205,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.69 – $3.19/hr",
-      "trend": "↑ 5% vs 1d ago",
+      "rate": "$1.87 – $3.19/hr",
+      "trend": "↑ 9% vs 1d ago",
       "trendClass": "trend-up",
       "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.39/hr",
-      "trend": "↑ 6% vs 1d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$2.94 – $4.77/hr",
+      "trend": "→ 2% vs 1d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6197,7 +6224,7 @@
       "rate": "$5.89 – $8.76/hr",
       "trend": "→ 0% vs 1d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6225,7 +6252,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T22:01:00.172Z",
+    "updatedAt": "2026-07-14T22:15:24.659Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6245,7 +6272,7 @@
         "validatedCommentCount": 299,
         "commentCoverage": 0.135196034249662,
         "limited": false,
-        "points": 1480,
+        "points": 1482,
         "themes": [
           {
             "id": "reasoning",
@@ -6320,28 +6347,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1095,
+        "rawStoryHits": 1093,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.273972602739726,
-        "estimatedRelevantDiscussions": 1088,
+        "storyCoverage": 0.2744739249771272,
+        "estimatedRelevantDiscussions": 1086,
         "isEstimated": true,
-        "rawCommentHits": 6600,
+        "rawCommentHits": 6603,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.045454545454545456,
+        "commentCoverage": 0.04543389368468878,
         "limited": false,
-        "points": 17643,
+        "points": 17532,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 104
+            "count": 103
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 59
+            "count": 60
           },
           {
             "id": "writing",
@@ -6351,12 +6378,12 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 14
+            "count": 12
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 12
+            "count": 11
           },
           {
             "id": "local",
@@ -6401,18 +6428,18 @@
         "model": "Gemini",
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 129,
-        "fetchedStoryCount": 128,
-        "validatedStoryCount": 116,
-        "storyCoverage": 0.9922480620155039,
+        "rawStoryHits": 130,
+        "fetchedStoryCount": 130,
+        "validatedStoryCount": 117,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 117,
-        "isEstimated": true,
+        "isEstimated": false,
         "rawCommentHits": 1115,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
         "commentCoverage": 0.26905829596412556,
         "limited": false,
-        "points": 2101,
+        "points": 2111,
         "themes": [
           {
             "id": "reasoning",
@@ -6487,18 +6514,18 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 521,
+        "rawStoryHits": 520,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 30,
-        "storyCoverage": 0.5758157389635317,
-        "estimatedRelevantDiscussions": 52,
+        "validatedStoryCount": 29,
+        "storyCoverage": 0.5769230769230769,
+        "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11257,
+        "rawCommentHits": 11256,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 175,
-        "commentCoverage": 0.026650084391933906,
+        "commentCoverage": 0.026652452025586353,
         "limited": false,
-        "points": 2382,
+        "points": 2384,
         "themes": [
           {
             "id": "coding",
@@ -6574,10 +6601,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": false,
-        "rawCommentHits": 615,
+        "rawCommentHits": 616,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 236,
-        "commentCoverage": 0.4878048780487805,
+        "commentCoverage": 0.487012987012987,
         "limited": false,
         "points": 135,
         "themes": [
@@ -6607,14 +6634,14 @@
             "count": 23
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 15
-          },
-          {
             "id": "context",
             "label": "Context limits",
             "count": 15
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 14
           },
           {
             "id": "multimodal",
@@ -6654,8 +6681,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 81,
-        "fetchedStoryCount": 81,
+        "rawStoryHits": 72,
+        "fetchedStoryCount": 72,
         "validatedStoryCount": 68,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 68,
@@ -6746,10 +6773,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": false,
-        "rawCommentHits": 4694,
+        "rawCommentHits": 4693,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 211,
-        "commentCoverage": 0.06391137622496805,
+        "commentCoverage": 0.06392499467291711,
         "limited": false,
         "points": 2461,
         "themes": [
@@ -6927,18 +6954,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "I pretty much giving up on Claude. It's Extremely slow, especially fast few days. Computer use takes so long to do anything that sessions expire. I switched to Codex and it's a…",
-        "source": "Hacker News",
-        "author": "yruzin",
-        "publishedAt": "2026-07-13T18:44:17.000Z",
-        "url": "https://news.ycombinator.com/item?id=48896971"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "coding",
           "reasoning"
         ],
@@ -6947,6 +6962,18 @@
         "author": "ricalamino",
         "publishedAt": "2026-07-14T14:23:32.000Z",
         "url": "https://news.ycombinator.com/item?id=48907393"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "reasoning",
+          "speed"
+        ],
+        "excerpt": "…anyway.)BTW: It's important to try different models. The Claude 5.0 models are slow and give me bad results, so I'm sticking with 4.x for…",
+        "source": "Hacker News",
+        "author": "gwbas1c",
+        "publishedAt": "2026-07-14T18:19:04.000Z",
+        "url": "https://news.ycombinator.com/item?id=48910979"
       },
       {
         "modelId": "claude",
