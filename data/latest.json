@@ -1,22 +1,23 @@
 {
-  "updatedAt": "2026-07-14T10:45:23.382Z",
+  "updatedAt": "2026-07-14T11:00:57.389Z",
   "build": {
-    "sha": "7c0b4c3b0cde2450ca8df2d0d88891781146eccd",
-    "shortSha": "7c0b4c3",
+    "sha": "a47ff02bcdf24057864d21a6ea35bc0bf38403c0",
+    "shortSha": "a47ff02",
     "ref": "main",
-    "builtAt": "2026-07-14T10:45:35.310Z"
+    "builtAt": "2026-07-14T11:01:10.700Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 4.4,
-    "estimatedDatasets": 4,
-    "buildSha": "7c0b4c3",
-    "lastSuccessfulUpdate": "2026-07-14T10:45:23.382Z"
+    "historyDepthDays": 4.5,
+    "estimatedDatasets": 3,
+    "buildSha": "a47ff02",
+    "lastSuccessfulUpdate": "2026-07-14T11:00:57.389Z"
   },
   "ticker": [
+    "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "WAZE IS GETTING A BUNCH OF NEW AI-POWERED FEATURES",
     "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI",
@@ -25,10 +26,39 @@
     "HOW CLAUDE'S VALUES VARY BY MODEL AND LANGUAGE",
     "HERE’S WHY ANTHROPIC EXTENDED ACCESS TO CLAUDE FABLE 5 EXTENDED—AGAIN",
     "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
-    "NEW YORK BECOMES THE FIRST STATE TO ENACT A DATA CENTER MORATORIUM",
-    "ANTHROPIC STARTS LOCALIZING CLAUDE PRICING FOR INDIA, ITS BIGGEST MARKET AFTER THE US"
+    "NEW YORK BECOMES THE FIRST STATE TO ENACT A DATA CENTER MORATORIUM"
   ],
   "signals": [
+    {
+      "id": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "clusterId": "1at0cdm",
+      "title": "How data science teams use ChatGPT Work",
+      "desc": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "dateISO": "2026-07-14T00:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "analysis",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
     {
       "id": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
       "clusterId": "1cxwxyf",
@@ -1161,32 +1191,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
-      "clusterId": "1y8m4ot",
-      "title": "Anthropic raises $65B in Series H funding at $965B post-money valuation",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5",
-      "dateISO": "2026-05-28T07:00:00.000Z",
-      "date": "MAY 28 2026",
-      "category": "capital",
-      "catConfidence": 0.89,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9FbzhQTWUzSGozVXNfbDYxWWUzTFBZZlpldmQyeDBnSExRdHVMSkJyVVV4OHdlNmx3LVBFcHVXTmJ0ck9TclZvVVlPRnpoZVhW?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1269,7 +1273,7 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 22,
+    "chatgpt": 23,
     "copilot": 1,
     "perplexity": 0,
     "gpt": 74,
@@ -1549,6 +1553,18 @@
       "sourceCount": 1
     },
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 14 2026",
+      "verification": "analysis",
+      "impact": "high",
+      "h": "How data science teams use ChatGPT Work",
+      "p": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "sourceName": "OpenAI",
+      "sourceCount": 2
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 14 2026",
@@ -1557,18 +1573,6 @@
       "h": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
       "p": "With the cash, the company aims to expand its world model offering and reach customers across geographies.",
       "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 13 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Hermes agent maker Nous Research in talks for new funding at $1.5B valuation",
-      "p": "The company is raising at least $75 million, led by Robot Ventures, with significant participation from USV and other prominent investors.",
-      "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1634,17 +1638,6 @@
       "sourceCount": 5
     },
     {
-      "field": "Biology",
-      "date": "JUN 30 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "Introducing GeneBench-Pro",
-      "p": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
-      "url": "https://openai.com/index/introducing-genebench-pro",
-      "sourceName": "OpenAI",
-      "sourceCount": 2
-    },
-    {
       "field": "Reasoning",
       "date": "JUN 25 2026",
       "verification": "official",
@@ -1663,6 +1656,17 @@
       "h": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
       "p": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
       "url": "https://openai.com/index/gpt-5-immunology-mystery",
+      "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
+      "field": "Reasoning",
+      "date": "JUN 17 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "Introducing LifeSciBench",
+      "p": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
+      "url": "https://openai.com/index/introducing-life-sci-bench",
       "sourceName": "OpenAI",
       "sourceCount": 1
     }
@@ -1806,15 +1810,15 @@
       "rate": "$1.73 – $3.19/hr",
       "trend": "↑ 6% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.28 – $4.39/hr",
-      "trend": "→ 2% vs 1d ago",
+      "rate": "$3.16 – $4.39/hr",
+      "trend": "→ 0% vs 1d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -1822,7 +1826,7 @@
       "rate": "$5.89 – $8.76/hr",
       "trend": "→ 0% vs 1d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -1846,11 +1850,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "↑ 32% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T10:45:23.382Z",
+    "updatedAt": "2026-07-14T11:00:57.389Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -1945,11 +1949,11 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1080,
+        "rawStoryHits": 1081,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.2777777777777778,
-        "estimatedRelevantDiscussions": 1073,
+        "storyCoverage": 0.27752081406105455,
+        "estimatedRelevantDiscussions": 1074,
         "isEstimated": true,
         "rawCommentHits": 6534,
         "fetchedCommentCount": 300,
@@ -1986,7 +1990,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 13
+            "count": 12
           },
           {
             "id": "reliability",
@@ -2027,15 +2031,15 @@
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 124,
-        "fetchedStoryCount": 122,
+        "fetchedStoryCount": 124,
         "validatedStoryCount": 111,
-        "storyCoverage": 0.9838709677419355,
-        "estimatedRelevantDiscussions": 113,
-        "isEstimated": true,
-        "rawCommentHits": 1106,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 111,
+        "isEstimated": false,
+        "rawCommentHits": 1107,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.27124773960216997,
+        "commentCoverage": 0.27100271002710025,
         "limited": false,
         "points": 1909,
         "themes": [
@@ -2118,10 +2122,10 @@
         "storyCoverage": 0.5893909626719057,
         "estimatedRelevantDiscussions": 49,
         "isEstimated": true,
-        "rawCommentHits": 11304,
+        "rawCommentHits": 11301,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 172,
-        "commentCoverage": 0.02653927813163482,
+        "commentCoverage": 0.026546323334218212,
         "limited": false,
         "points": 2356,
         "themes": [
