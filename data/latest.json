@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-14T17:45:24.973Z",
+  "updatedAt": "2026-07-14T18:01:02.782Z",
   "build": {
-    "sha": "16df29395ef5243af8e9d5de6cd380b4852e459b",
-    "shortSha": "16df293",
+    "sha": "a179dfe2dbc4f9162717c5e9eeaaf8961876f882",
+    "shortSha": "a179dfe",
     "ref": "main",
-    "builtAt": "2026-07-14T17:45:39.395Z"
+    "builtAt": "2026-07-14T18:01:16.236Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 4.7,
-    "estimatedDatasets": 3,
-    "buildSha": "16df293",
-    "lastSuccessfulUpdate": "2026-07-14T17:45:24.973Z"
+    "historyDepthDays": 4.8,
+    "estimatedDatasets": 2,
+    "buildSha": "a179dfe",
+    "lastSuccessfulUpdate": "2026-07-14T18:01:02.782Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
@@ -22,11 +22,11 @@
     "GOOGLE’S DEMIS HASSABIS SAYS IT’S TIME FOR A GLOBAL AI WATCHDOG — LED BY THE US",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "WAZE IS GETTING A BUNCH OF NEW AI-POWERED FEATURES",
+    "DEEPMIND CEO CALLS FOR AN INDEPENDENT STANDARDS BODY TO REGULATE FRONTIER AI",
     "HOW SALES TEAMS USE CHATGPT WORK",
     "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI",
     "NEW YORK BECOMES THE FIRST STATE TO ENACT A DATA CENTER MORATORIUM",
-    "GOOGLE REVAMPS IMAGE SEARCH FOR ITS 25TH ANNIVERSARY WITH MORE IMAGES AND MORE AI",
-    "CELEBRATING 25 YEARS OF VISUAL SEARCH INNOVATION"
+    "GOOGLE REVAMPS IMAGE SEARCH FOR ITS 25TH ANNIVERSARY WITH MORE IMAGES AND MORE AI"
   ],
   "signals": [
     {
@@ -104,7 +104,7 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -171,6 +171,32 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+      "clusterId": "4e6jwt",
+      "title": "DeepMind CEO calls for an independent standards body to regulate frontier AI",
+      "desc": "DeepMind CEO Demis Hassabis is proposing an AI \"standards body\" modeled after FINRA, to test frontier models and develop best practices for their release.",
+      "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+      "dateISO": "2026-07-14T17:45:55.000Z",
+      "date": "JUL 14 2026",
+      "category": "policy",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 62,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
       ]
@@ -281,84 +307,6 @@
         }
       ],
       "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/",
-      "clusterId": "1lc9hhm",
-      "title": "Celebrating 25 years of visual search innovation",
-      "desc": "Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.",
-      "url": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/",
-      "dateISO": "2026-07-14T16:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google",
-          "url": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/"
-        }
-      ],
-      "sourceName": "Google",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
-      "clusterId": "yqofb5",
-      "title": "Google Images gets a Pinterest-like redesign focused on discovery",
-      "desc": "Now, when users navigate to Google Images, they'll see a \"For You\" gallery of images tailored to their interests and browsing history.",
-      "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
-      "dateISO": "2026-07-14T16:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
-      "clusterId": "19r0qz6",
-      "title": "The Google Images homepage will recommend photos even before you search",
-      "desc": "Google is announcing a big change to the Google Images homepage in honor of the platform's 25th anniversary this week. Instead of a mostly blank page with a search bar, the homepage will soon show you a bunch of images that it thinks you might like before you even start searching. The company says the […]",
-      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
-      "dateISO": "2026-07-14T16:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana"
-        }
-      ],
-      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -502,6 +450,84 @@
       ]
     },
     {
+      "id": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/",
+      "clusterId": "1lc9hhm",
+      "title": "Celebrating 25 years of visual search innovation",
+      "desc": "Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.",
+      "url": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/",
+      "dateISO": "2026-07-14T16:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
+      "clusterId": "yqofb5",
+      "title": "Google Images gets a Pinterest-like redesign focused on discovery",
+      "desc": "Now, when users navigate to Google Images, they'll see a \"For You\" gallery of images tailored to their interests and browsing history.",
+      "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
+      "dateISO": "2026-07-14T16:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "clusterId": "19r0qz6",
+      "title": "The Google Images homepage will recommend photos even before you search",
+      "desc": "Google is announcing a big change to the Google Images homepage in honor of the platform's 25th anniversary this week. Instead of a mostly blank page with a search bar, the homepage will soon show you a bunch of images that it thinks you might like before you even start searching. The company says the […]",
+      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "dateISO": "2026-07-14T16:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/",
       "clusterId": "l5szxj",
       "title": "The Chatbot That Foretold Why People Share Secrets With ChatGPT",
@@ -528,32 +554,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "clusterId": "hh4ve5",
-      "title": "Lorde says Ray-Ban Meta AI glasses are ‘not sexy’",
-      "desc": "Lorde was performing at the Mad Cool Festival in Madrid on Thursday and took some time during her set to speak out against AI glasses. While she didn't specify any brands in particular, it's likely she was taking a shot at festival sponsor Ray-Ban, which has collaborated with Meta on a pair of AI smart […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "dateISO": "2026-07-12T20:10:19.000Z",
-      "date": "JUL 12 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "llama"
-      ]
-    },
-    {
       "id": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
       "clusterId": "cux26r",
       "title": "YouTube and X Have Become ‘Gateways’ to Nudify Apps",
@@ -576,6 +576,32 @@
       ],
       "sourceName": "Wired",
       "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
+      "clusterId": "hh4ve5",
+      "title": "Lorde says Ray-Ban Meta AI glasses are ‘not sexy’",
+      "desc": "Lorde was performing at the Mad Cool Festival in Madrid on Thursday and took some time during her set to speak out against AI glasses. While she didn't specify any brands in particular, it's likely she was taking a shot at festival sponsor Ray-Ban, which has collaborated with Meta on a pair of AI smart […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
+      "dateISO": "2026-07-12T20:10:19.000Z",
+      "date": "JUL 12 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "llama"
+      ]
     },
     {
       "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
@@ -833,30 +859,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "clusterId": "jbcjuu",
-      "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
-      "desc": "With the cash, the company aims to expand its world model offering and reach customers across geographies.",
-      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "dateISO": "2026-07-14T00:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
       "clusterId": "1lxizuc",
       "title": "OpenAI may have made a fatal misstep in copyright fight with news orgs",
@@ -882,6 +884,30 @@
         "chatgpt",
         "gpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
+      "clusterId": "jbcjuu",
+      "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
+      "desc": "With the cash, the company aims to expand its world model offering and reach customers across geographies.",
+      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
+      "dateISO": "2026-07-14T00:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
@@ -1158,32 +1184,6 @@
         "chatgpt",
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-to-acquire-ona",
-      "clusterId": "1xb5ngz",
-      "title": "OpenAI to acquire Ona",
-      "desc": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
-      "url": "https://openai.com/index/openai-to-acquire-ona",
-      "dateISO": "2026-06-11T00:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-to-acquire-ona"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1273,7 +1273,7 @@
     "perplexity": 0,
     "gpt": 73,
     "claude": 71,
-    "gemini": 37,
+    "gemini": 38,
     "grok": 1,
     "llama": 1,
     "deepseek": 1,
@@ -1476,6 +1476,18 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "JUL 14 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "DeepMind CEO calls for an independent standards body to regulate frontier AI",
+      "p": "DeepMind CEO Demis Hassabis is proposing an AI \"standards body\" modeled after FINRA, to test frontier models and develop best practices for their release.",
+      "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "OPENAI",
       "logoKey": "openai",
       "date": "JUL 13 2026",
@@ -1557,18 +1569,6 @@
       "p": "Spotify is experimenting with a new AI feature that allows Premium subscribers to play and explore music, audiobooks, and podcasts by having conversations with a chatbot. The \"Talk to Spotify\" feature appears across the Home and Now Playing view on Spotify's…",
       "url": "https://www.theverge.com/entertainment/965358/spotify-ai-chatbot-interface-music-audiobooks-podcasts",
       "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 14 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "New York State halts construction of all new data centers",
-      "p": "New York has become the first state to temporarily halt approval of large data centers, as Gov. Kathy Hochul argues the AI-driven building boom shouldn’t come at the expense of higher electricity costs, water supplies, or local control.",
-      "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1672,11 +1672,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 210.88,
-      "changePct": 3.6112642596169806,
+      "price": 211.27,
+      "changePct": 3.802881904184131,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 69911557,
+      "volume": 72528963,
       "ohlc": [
         {
           "d": "04-14",
@@ -2117,22 +2117,22 @@
           "o": 208.1999969482422,
           "h": 211.52000427246094,
           "l": 203.8000030517578,
-          "c": 210.8800048828125
+          "c": 211.27000427246094
         }
       ],
-      "relVolume": 0.4823192935735438,
-      "marketCap": 5145472000000
+      "relVolume": 0.5003767574191159,
+      "marketCap": 5154988000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 387.19,
-      "changePct": -0.9718887664338633,
+      "price": 387.165,
+      "changePct": -0.978281230974808,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 15480527,
+      "volume": 15854615,
       "ohlc": [
         {
           "d": "04-14",
@@ -2573,22 +2573,22 @@
           "o": 382.5050048828125,
           "h": 388.19000244140625,
           "l": 378.6499938964844,
-          "c": 387.19000244140625
+          "c": 387.1650085449219
         }
       ],
-      "relVolume": 0.32817170172963706,
-      "marketCap": 2876821700000
+      "relVolume": 0.3361019934798234,
+      "marketCap": 2876635950000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 393.13,
-      "changePct": 2.364280010012277,
+      "price": 393.905,
+      "changePct": 2.5660750682384355,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 10117524,
+      "volume": 10330143,
       "ohlc": [
         {
           "d": "04-14",
@@ -3029,22 +3029,22 @@
           "o": 395.6050109863281,
           "h": 397.3299865722656,
           "l": 384.6404113769531,
-          "c": 393.1300048828125
+          "c": 393.9049987792969
         }
       ],
-      "relVolume": 0.3539011408759308,
-      "marketCap": 1934199600000
+      "relVolume": 0.36133834652742214,
+      "marketCap": 1938012599999.9998
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 358.615,
-      "changePct": 1.7318601740725172,
+      "price": 357.72,
+      "changePct": 1.4779697911392975,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 8403067,
+      "volume": 8847817,
       "ohlc": [
         {
           "d": "04-14",
@@ -3485,22 +3485,22 @@
           "o": 351.0899963378906,
           "h": 359.239990234375,
           "l": 351.0899963378906,
-          "c": 358.614990234375
+          "c": 357.7200012207031
         }
       ],
-      "relVolume": 0.24311992446359182,
-      "marketCap": 4375103000000
+      "relVolume": 0.25598755796040706,
+      "marketCap": 4364184000000.0005
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 246.6,
-      "changePct": -0.287085626172436,
+      "price": 246.48,
+      "changePct": -0.33561191995808415,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 14873717,
+      "volume": 15405123,
       "ohlc": [
         {
           "d": "04-14",
@@ -3941,22 +3941,22 @@
           "o": 245.52999877929688,
           "h": 247.25,
           "l": 243.8000030517578,
-          "c": 246.60000610351562
+          "c": 246.47999572753906
         }
       ],
-      "relVolume": 0.24101758543068452,
-      "marketCap": 2638620000000
+      "relVolume": 0.24962862670593391,
+      "marketCap": 2637336000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 663.912,
-      "changePct": 1.093591889265515,
+      "price": 660.19,
+      "changePct": 0.5268561015269337,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 7348568,
+      "volume": 7517059,
       "ohlc": [
         {
           "d": "04-14",
@@ -4397,22 +4397,22 @@
           "o": 652,
           "h": 666.5,
           "l": 649.0499877929688,
-          "c": 663.9119262695312
+          "c": 660.1900024414062
         }
       ],
-      "relVolume": 0.36010079886901414,
-      "marketCap": 1673058240000
+      "relVolume": 0.36835733860604036,
+      "marketCap": 1663678800000.0002
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 422.474,
-      "changePct": 0.00011580792642597375,
+      "price": 422.97,
+      "changePct": 0.3297155208289825,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 9337812,
+      "volume": 9678446,
       "ohlc": [
         {
           "d": "04-14",
@@ -4853,22 +4853,22 @@
           "o": 430.8699951171875,
           "h": 430.8699951171875,
           "l": 418.8599853515625,
-          "c": 422.4735107421875
+          "c": 422.9700012207031
         }
       ],
-      "relVolume": 0.6500226064565711,
-      "marketCap": 2192640060000
+      "relVolume": 0.6737347780581976,
+      "marketCap": 2195214300000.0002
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 555.035,
-      "changePct": 3.8632754973304615,
+      "price": 554.75,
+      "changePct": 3.8099486879366284,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 14803153,
+      "volume": 15058925,
       "ohlc": [
         {
           "d": "04-14",
@@ -5309,22 +5309,22 @@
           "o": 567.7369995117188,
           "h": 574.2000122070312,
           "l": 547.8400268554688,
-          "c": 555.0349731445312
+          "c": 554.75
         }
       ],
-      "relVolume": 0.4946361948792334,
-      "marketCap": 899156700000
+      "relVolume": 0.5031826233892036,
+      "marketCap": 898695000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 134.75,
-      "changePct": 3.6219678230093026,
+      "price": 135.47,
+      "changePct": 4.175644582372765,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 34977259,
+      "volume": 36309291,
       "ohlc": [
         {
           "d": "04-14",
@@ -5763,24 +5763,24 @@
         {
           "d": "07-14",
           "o": 123.61199951171875,
-          "h": 134.97999572753906,
+          "h": 135.55999755859375,
           "l": 122.63999938964844,
-          "c": 134.75
+          "c": 135.47000122070312
         }
       ],
-      "relVolume": 0.7726377119825774,
-      "marketCap": 323400000000
+      "relVolume": 0.8020619203451473,
+      "marketCap": 325128000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 129.8,
-      "changePct": -1.3227841897407433,
+      "price": 129.69,
+      "changePct": -1.4064094109404155,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 32694035,
+      "volume": 33369492,
       "ohlc": [
         {
           "d": "04-14",
@@ -6221,11 +6221,11 @@
           "o": 132,
           "h": 132.75,
           "l": 128.4199981689453,
-          "c": 129.8000030517578
+          "c": 129.69000244140625
         }
       ],
-      "relVolume": 0.9573595656718413,
-      "marketCap": 364738000000.00006
+      "relVolume": 0.9771385626708353,
+      "marketCap": 364428900000
     }
   ],
   "compute": [
@@ -6235,22 +6235,22 @@
       "rate": "$1.87 – $3.19/hr",
       "trend": "↑ 9% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.97/hr",
-      "trend": "↑ 5% vs 1d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$2.34 – $4.39/hr",
+      "trend": "↓ 11% vs 1d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $8.76/hr",
-      "trend": "→ 0% vs 1d ago",
-      "trendClass": "trend-flat",
+      "rate": "$5.89 – $6.25/hr",
+      "trend": "↓ 17% vs 1d ago",
+      "trendClass": "trend-down",
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6272,14 +6272,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "↑ 32% vs 1d ago",
+      "rate": "$0.60 – $1.49/hr",
+      "trend": "↑ 11% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T17:45:24.973Z",
+    "updatedAt": "2026-07-14T18:01:02.782Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6289,22 +6289,22 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 282,
-        "fetchedStoryCount": 191,
+        "fetchedStoryCount": 282,
         "validatedStoryCount": 160,
-        "storyCoverage": 0.6773049645390071,
-        "estimatedRelevantDiscussions": 236,
-        "isEstimated": true,
-        "rawCommentHits": 2230,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 160,
+        "isEstimated": false,
+        "rawCommentHits": 2231,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
-        "commentCoverage": 0.13452914798206278,
+        "commentCoverage": 0.1344688480502017,
         "limited": false,
         "points": 1488,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 61
+            "count": 62
           },
           {
             "id": "coding",
@@ -6329,7 +6329,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 8
+            "count": 7
           },
           {
             "id": "reliability",
@@ -6380,22 +6380,22 @@
         "storyCoverage": 0.2737226277372263,
         "estimatedRelevantDiscussions": 1089,
         "isEstimated": true,
-        "rawCommentHits": 6586,
+        "rawCommentHits": 6589,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.045551169146674765,
+        "commentCoverage": 0.04553042950371832,
         "limited": false,
-        "points": 17450,
+        "points": 17465,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 115
+            "count": 112
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 55
+            "count": 58
           },
           {
             "id": "writing",
@@ -6405,7 +6405,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 15
+            "count": 13
           },
           {
             "id": "local",
@@ -6461,32 +6461,32 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 115,
         "isEstimated": false,
-        "rawCommentHits": 1114,
+        "rawCommentHits": 1117,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.26929982046678635,
+        "commentCoverage": 0.26857654431512984,
         "limited": false,
-        "points": 2041,
+        "points": 2048,
         "themes": [
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 60
-          },
           {
             "id": "reasoning",
             "label": "Reasoning",
             "count": 60
           },
           {
+            "id": "coding",
+            "label": "Coding",
+            "count": 58
+          },
+          {
             "id": "price",
             "label": "Price",
-            "count": 34
+            "count": 35
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 22
+            "count": 21
           },
           {
             "id": "multimodal",
@@ -6501,7 +6501,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 9
+            "count": 10
           },
           {
             "id": "reliability",
@@ -6547,10 +6547,10 @@
         "storyCoverage": 0.5791505791505791,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11278,
+        "rawCommentHits": 11287,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 173,
-        "commentCoverage": 0.02660046107465863,
+        "validatedCommentCount": 174,
+        "commentCoverage": 0.026579250465136883,
         "limited": false,
         "points": 2369,
         "themes": [
@@ -6592,7 +6592,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 2
+            "count": 3
           },
           {
             "id": "safety",
@@ -6628,12 +6628,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": false,
-        "rawCommentHits": 612,
+        "rawCommentHits": 611,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 235,
-        "commentCoverage": 0.49019607843137253,
+        "commentCoverage": 0.4909983633387889,
         "limited": false,
-        "points": 134,
+        "points": 135,
         "themes": [
           {
             "id": "local",
@@ -6714,12 +6714,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
         "isEstimated": false,
-        "rawCommentHits": 1128,
+        "rawCommentHits": 1127,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 292,
-        "commentCoverage": 0.26595744680851063,
+        "commentCoverage": 0.26619343389529726,
         "limited": false,
-        "points": 1883,
+        "points": 1890,
         "themes": [
           {
             "id": "price",
@@ -6800,10 +6800,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": false,
-        "rawCommentHits": 4692,
+        "rawCommentHits": 4689,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 208,
-        "commentCoverage": 0.0639386189258312,
+        "commentCoverage": 0.06397952655150352,
         "limited": false,
         "points": 2461,
         "themes": [
@@ -6947,6 +6947,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "reasoning"
+        ],
+        "excerpt": "…have a bit of a moat.But I switched from ChatGPT to Claude 3 months ago because my account was down for like 6 hours. I haven’t used it since. It’s too easy to switch…",
+        "source": "Hacker News",
+        "author": "boron1006",
+        "publishedAt": "2026-07-14T17:51:51.000Z",
+        "url": "https://news.ycombinator.com/item?id=48910560"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "multimodal"
         ],
         "excerpt": "Claude's \"honest\" is an interesting example because we can trace it to a specific document that it was trained on extensively: the \"Constitution\" is identified to Claude in its…",
@@ -6969,18 +6980,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "I pretty much giving up on Claude. It's Extremely slow, especially fast few days. Computer use takes so long to do anything that sessions expire. I switched to Codex and it's a…",
-        "source": "Hacker News",
-        "author": "yruzin",
-        "publishedAt": "2026-07-13T18:44:17.000Z",
-        "url": "https://news.ycombinator.com/item?id=48896971"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "coding",
           "speed"
         ],
@@ -6993,6 +6992,18 @@
       {
         "modelId": "claude",
         "themes": [
+          "speed",
+          "price"
+        ],
+        "excerpt": "I pretty much giving up on Claude. It's Extremely slow, especially fast few days. Computer use takes so long to do anything that sessions expire. I switched to Codex and it's a…",
+        "source": "Hacker News",
+        "author": "yruzin",
+        "publishedAt": "2026-07-13T18:44:17.000Z",
+        "url": "https://news.ycombinator.com/item?id=48896971"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "reasoning",
           "local"
         ],
@@ -7001,18 +7012,6 @@
         "author": "mapontosevenths",
         "publishedAt": "2026-07-14T11:34:02.000Z",
         "url": "https://news.ycombinator.com/item?id=48905127"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding",
-          "reasoning"
-        ],
-        "excerpt": "…APIs), Metabase, Docker, CI/CD. AI-native workflow: Claude Code/Cursor daily, multi-agent pipelines via Anthropic API, MCP.Résumé/CV: https://alami.no/cv/dev/Email:…",
-        "source": "Hacker News",
-        "author": "ricalamino",
-        "publishedAt": "2026-07-14T14:23:32.000Z",
-        "url": "https://news.ycombinator.com/item?id=48907393"
       },
       {
         "modelId": "gemini",
@@ -7064,11 +7063,11 @@
         "themes": [
           "price"
         ],
-        "excerpt": "Google has a bit of a Network Effect going... my vehicle got an OTA update to use Gemini. Between that, search, storage, and the YT Premium bundle it was enough to convince me to…",
+        "excerpt": "…and competitors' prices race to the bottom. Google has Gemini; AWS may not deploy its own models (yet?), but that's not necessarily a losing position, as long as the market…",
         "source": "Hacker News",
-        "author": "crims0n",
-        "publishedAt": "2026-07-14T17:21:54.000Z",
-        "url": "https://news.ycombinator.com/item?id=48910121"
+        "author": "solatic",
+        "publishedAt": "2026-07-14T17:58:30.000Z",
+        "url": "https://news.ycombinator.com/item?id=48910675"
       },
       {
         "modelId": "gemini",
