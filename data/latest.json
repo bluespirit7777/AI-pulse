@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-14T20:01:01.689Z",
+  "updatedAt": "2026-07-14T20:15:23.627Z",
   "build": {
-    "sha": "088d5477184bfa0f0d6e28278a521536c811296a",
-    "shortSha": "088d547",
+    "sha": "65fd57ff70ac07be406871e78c273bda7e7f48d4",
+    "shortSha": "65fd57f",
     "ref": "main",
-    "builtAt": "2026-07-14T20:01:16.164Z"
+    "builtAt": "2026-07-14T20:15:36.544Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 4.8,
-    "estimatedDatasets": 2,
-    "buildSha": "088d547",
-    "lastSuccessfulUpdate": "2026-07-14T20:01:01.689Z"
+    "estimatedDatasets": 3,
+    "buildSha": "65fd57f",
+    "lastSuccessfulUpdate": "2026-07-14T20:15:23.627Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
@@ -43,8 +43,12 @@
       "significance": 84,
       "impact": "high",
       "verification": "uncertain",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/"
@@ -160,7 +164,7 @@
       "category": "capital",
       "catConfidence": 0.5,
       "family": "market",
-      "significance": 64,
+      "significance": 63,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -692,30 +696,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
-      "clusterId": "cux26r",
-      "title": "YouTube and X Have Become ‘Gateways’ to Nudify Apps",
-      "desc": "A new study found that social media platforms are referring people to sites where they can create nonconsensual, sexually explicit deepfakes for as little as $1 an image.",
-      "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
-      "dateISO": "2026-07-14T16:05:18.000Z",
-      "date": "JUL 14 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5",
       "clusterId": "1mmbjuf",
       "title": "Bristol Myers to deploy Anthropic's Claude AI model to speed up drug discovery",
@@ -748,6 +728,30 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
+      "clusterId": "cux26r",
+      "title": "YouTube and X Have Become ‘Gateways’ to Nudify Apps",
+      "desc": "A new study found that social media platforms are referring people to sites where they can create nonconsensual, sexually explicit deepfakes for as little as $1 an image.",
+      "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/",
+      "dateISO": "2026-07-14T16:05:18.000Z",
+      "date": "JUL 14 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/youtube-and-x-have-become-gateways-to-nudify-apps/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
@@ -935,32 +939,6 @@
       "entityIds": []
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmFacXVma1BoV2RmOXgwdFdpdEhlOHphVnVyWk5RRGxJYWpmM0t4d3BpUEpnRGNQbGJSTVZLeWdXdlJEZlV0QXdtRGJxMmR6SzJTN0JSUWdQMWFPemJMbnBjTUNPLThnaVFQTzMtdGQ0NEtoUUNmODdjaHZ1aWpHeWkzeXdfY2VsOWtiVU1WS2NieTQ4Umt5cnZvZl9HOFRLVVpTNXJIdXQtZUo1eGNNWDJIVjY0Z2FSMXZn?oc=5",
-      "clusterId": "1600ms0",
-      "title": "Anthropic starts localizing Claude pricing for India, its biggest market after the US",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmFacXVma1BoV2RmOXgwdFdpdEhlOHphVnVyWk5RRGxJYWpmM0t4d3BpUEpnRGNQbGJSTVZLeWdXdlJEZlV0QXdtRGJxMmR6SzJTN0JSUWdQMWFPemJMbnBjTUNPLThnaVFQTzMtdGQ0NEtoUUNmODdjaHZ1aWpHeWkzeXdfY2VsOWtiVU1WS2NieTQ4Umt5cnZvZl9HOFRLVVpTNXJIdXQtZUo1eGNNWDJIVjY0Z2FSMXZn?oc=5",
-      "dateISO": "2026-07-13T15:34:59.000Z",
-      "date": "JUL 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmFacXVma1BoV2RmOXgwdFdpdEhlOHphVnVyWk5RRGxJYWpmM0t4d3BpUEpnRGNQbGJSTVZLeWdXdlJEZlV0QXdtRGJxMmR6SzJTN0JSUWdQMWFPemJMbnBjTUNPLThnaVFQTzMtdGQ0NEtoUUNmODdjaHZ1aWpHeWkzeXdfY2VsOWtiVU1WS2NieTQ4Umt5cnZvZl9HOFRLVVpTNXJIdXQtZUo1eGNNWDJIVjY0Z2FSMXZn?oc=5"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
       "clusterId": "1lxizuc",
       "title": "OpenAI may have made a fatal misstep in copyright fight with news orgs",
@@ -988,16 +966,16 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "clusterId": "jbcjuu",
-      "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
-      "desc": "With the cash, the company aims to expand its world model offering and reach customers across geographies.",
-      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
-      "dateISO": "2026-07-14T00:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
+      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmFacXVma1BoV2RmOXgwdFdpdEhlOHphVnVyWk5RRGxJYWpmM0t4d3BpUEpnRGNQbGJSTVZLeWdXdlJEZlV0QXdtRGJxMmR6SzJTN0JSUWdQMWFPemJMbnBjTUNPLThnaVFQTzMtdGQ0NEtoUUNmODdjaHZ1aWpHeWkzeXdfY2VsOWtiVU1WS2NieTQ4Umt5cnZvZl9HOFRLVVpTNXJIdXQtZUo1eGNNWDJIVjY0Z2FSMXZn?oc=5",
+      "clusterId": "1600ms0",
+      "title": "Anthropic starts localizing Claude pricing for India, its biggest market after the US",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmFacXVma1BoV2RmOXgwdFdpdEhlOHphVnVyWk5RRGxJYWpmM0t4d3BpUEpnRGNQbGJSTVZLeWdXdlJEZlV0QXdtRGJxMmR6SzJTN0JSUWdQMWFPemJMbnBjTUNPLThnaVFQTzMtdGQ0NEtoUUNmODdjaHZ1aWpHeWkzeXdfY2VsOWtiVU1WS2NieTQ4Umt5cnZvZl9HOFRLVVpTNXJIdXQtZUo1eGNNWDJIVjY0Z2FSMXZn?oc=5",
+      "dateISO": "2026-07-13T15:34:59.000Z",
+      "date": "JUL 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
       "significance": 44,
       "impact": "emerging",
       "verification": "single",
@@ -1005,11 +983,13 @@
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQmFacXVma1BoV2RmOXgwdFdpdEhlOHphVnVyWk5RRGxJYWpmM0t4d3BpUEpnRGNQbGJSTVZLeWdXdlJEZlV0QXdtRGJxMmR6SzJTN0JSUWdQMWFPemJMbnBjTUNPLThnaVFQTzMtdGQ0NEtoUUNmODdjaHZ1aWpHeWkzeXdfY2VsOWtiVU1WS2NieTQ4Umt5cnZvZl9HOFRLVVpTNXJIdXQtZUo1eGNNWDJIVjY0Z2FSMXZn?oc=5"
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": []
+      "entityIds": [
+        "claude"
+      ]
     },
     {
       "id": "https://openai.com/index/openai-frontier-governance-framework",
@@ -1036,6 +1016,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
+      "clusterId": "jbcjuu",
+      "title": "Video-generation startup PixVerse raises $439M, valuation soars past $2B",
+      "desc": "With the cash, the company aims to expand its world model offering and reach customers across geographies.",
+      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/",
+      "dateISO": "2026-07-14T00:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
@@ -1220,8 +1224,12 @@
       "date": "JUL 13 2026",
       "dateISO": "2026-07-13T17:00:00.000Z",
       "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/"
@@ -1278,7 +1286,7 @@
     "chatgpt": 24,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 72,
+    "gpt": 71,
     "claude": 73,
     "gemini": 39,
     "grok": 2,
@@ -1483,6 +1491,18 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 13 2026",
+      "verification": "uncertain",
+      "impact": "high",
+      "h": "The 6 wildest claims in Apple’s lawsuit against OpenAI",
+      "p": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Appl…",
+      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
+      "sourceName": "The Verge",
+      "sourceCount": 6
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 13 2026",
@@ -1517,18 +1537,6 @@
       "url": "https://techcrunch.com/2026/07/14/the-founder-of-hinge-raised-18m-to-build-a-new-ai-dating-service-overtone/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 13 2026",
-      "verification": "uncertain",
-      "impact": "high",
-      "h": "The 6 wildest claims in Apple’s lawsuit against OpenAI",
-      "p": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Appl…",
-      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-      "sourceName": "The Verge",
-      "sourceCount": 5
     },
     {
       "org": "AI WIRE",
@@ -2132,7 +2140,7 @@
       "changePct": -1.5499111767442297,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 26339003,
+      "volume": 26894991,
       "ohlc": [
         {
           "d": "04-15",
@@ -2563,13 +2571,13 @@
         },
         {
           "d": "07-14",
-          "o": 382.5050048828125,
+          "o": 382.82000732421875,
           "h": 388.19000244140625,
           "l": 378.6499938964844,
           "c": 384.92999267578125
         }
       ],
-      "relVolume": 0.5583292942664682,
+      "relVolume": 0.5701150246398093,
       "marketCap": 2860029900000
     },
     {
@@ -3012,7 +3020,7 @@
         },
         {
           "d": "07-14",
-          "o": 395.6050109863281,
+          "o": 395.7200012207031,
           "h": 397.3299865722656,
           "l": 384.6404113769531,
           "c": 389.1099853515625
@@ -3030,7 +3038,7 @@
       "changePct": 1.9857592142288734,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 17063302,
+      "volume": 18165860,
       "ohlc": [
         {
           "d": "04-15",
@@ -3461,13 +3469,13 @@
         },
         {
           "d": "07-14",
-          "o": 351.0899963378906,
+          "o": 351.19500732421875,
           "h": 360.1600036621094,
           "l": 351.0899963378906,
           "c": 359.510009765625
         }
       ],
-      "relVolume": 0.49363353327504994,
+      "relVolume": 0.5255300326267389,
       "marketCap": 4386022000000
     },
     {
@@ -3910,7 +3918,7 @@
         },
         {
           "d": "07-14",
-          "o": 245.52999877929688,
+          "o": 245.5500030517578,
           "h": 248.55999755859375,
           "l": 243.8000030517578,
           "c": 247.49000549316406
@@ -4373,11 +4381,11 @@
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 420.705,
-      "changePct": -0.20755254705384618,
+      "price": 420.39,
+      "changePct": -0.2822648042435346,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 12606170,
+      "volume": 13462727,
       "ohlc": [
         {
           "d": "04-15",
@@ -4809,13 +4817,13 @@
         {
           "d": "07-14",
           "o": 430.8699951171875,
-          "h": 430.8699951171875,
+          "h": 431.05499267578125,
           "l": 418.8599853515625,
-          "c": 420.7049865722656
+          "c": 420.3900146484375
         }
       ],
-      "relVolume": 0.8773424801398328,
-      "marketCap": 2183458950000
+      "relVolume": 0.9369556570810557,
+      "marketCap": 2181824100000
     },
     {
       "t": "AMD",
@@ -5257,7 +5265,7 @@
         },
         {
           "d": "07-14",
-          "o": 567.7369995117188,
+          "o": 567.219970703125,
           "h": 574.2000122070312,
           "l": 546.77001953125,
           "c": 548.1300048828125
@@ -5275,7 +5283,7 @@
       "changePct": 2.829904740515502,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 48676249,
+      "volume": 49516261,
       "ohlc": [
         {
           "d": "04-15",
@@ -5706,13 +5714,13 @@
         },
         {
           "d": "07-14",
-          "o": 123.61199951171875,
+          "o": 123.61000061035156,
           "h": 135.78990173339844,
           "l": 122.63999938964844,
           "c": 133.72000122070312
         }
       ],
-      "relVolume": 1.0751053405025799,
+      "relVolume": 1.0936585652444093,
       "marketCap": 320928000000
     },
     {
@@ -5720,11 +5728,11 @@
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 127.97,
-      "changePct": -2.7139974514549734,
+      "price": 127.96,
+      "changePct": -2.7216013261250227,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 45418183,
+      "volume": 45455716,
       "ohlc": [
         {
           "d": "04-15",
@@ -6156,13 +6164,13 @@
         {
           "d": "07-14",
           "o": 132,
-          "h": 132.75,
-          "l": 127.83000183105469,
-          "c": 127.97000122070312
+          "h": 132.75999450683594,
+          "l": 127.5999984741211,
+          "c": 127.95999908447266
         }
       ],
-      "relVolume": 1.3292045861441413,
-      "marketCap": 359595700000
+      "relVolume": 1.3303030236516864,
+      "marketCap": 359567600000
     }
   ],
   "compute": [
@@ -6172,30 +6180,30 @@
       "rate": "$1.79 – $3.19/hr",
       "trend": "↑ 7% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.53 – $4.41/hr",
-      "trend": "↑ 5% vs 1d ago",
+      "rate": "$3.56 – $4.77/hr",
+      "trend": "↑ 10% vs 1d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $8.13/hr",
-      "trend": "↓ 4% vs 1d ago",
-      "trendClass": "trend-down",
+      "rate": "$5.89 – $8.76/hr",
+      "trend": "→ 0% vs 1d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $8.75/hr",
-      "trend": "↑ 6% vs 1d ago",
-      "trendClass": "trend-up",
+      "rate": "$6.94 – $7.81/hr",
+      "trend": "→ 0% vs 1d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6209,14 +6217,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.40 – $1.49/hr",
-      "trend": "→ 0% vs 1d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.49/hr",
+      "trend": "↑ 32% vs 1d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T20:01:01.689Z",
+    "updatedAt": "2026-07-14T20:15:23.627Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6225,28 +6233,28 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 286,
-        "fetchedStoryCount": 286,
+        "rawStoryHits": 224,
+        "fetchedStoryCount": 195,
         "validatedStoryCount": 162,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 162,
-        "isEstimated": false,
+        "storyCoverage": 0.8705357142857143,
+        "estimatedRelevantDiscussions": 186,
+        "isEstimated": true,
         "rawCommentHits": 2229,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
         "commentCoverage": 0.13458950201884254,
         "limited": false,
-        "points": 1477,
+        "points": 1480,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 64
+            "count": 65
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 59
+            "count": 60
           },
           {
             "id": "writing",
@@ -6256,7 +6264,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 15
+            "count": 14
           },
           {
             "id": "speed",
@@ -6317,22 +6325,22 @@
         "storyCoverage": 0.2737226277372263,
         "estimatedRelevantDiscussions": 1089,
         "isEstimated": true,
-        "rawCommentHits": 6599,
+        "rawCommentHits": 6604,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 296,
-        "commentCoverage": 0.04546143355053796,
+        "validatedCommentCount": 295,
+        "commentCoverage": 0.04542701393095094,
         "limited": false,
-        "points": 17561,
+        "points": 17567,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 107
+            "count": 104
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 57
+            "count": 58
           },
           {
             "id": "writing",
@@ -6398,22 +6406,22 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 115,
         "isEstimated": false,
-        "rawCommentHits": 1114,
+        "rawCommentHits": 1115,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 294,
-        "commentCoverage": 0.26929982046678635,
+        "validatedCommentCount": 293,
+        "commentCoverage": 0.26905829596412556,
         "limited": false,
-        "points": 2064,
+        "points": 2065,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 60
+            "count": 59
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 59
+            "count": 58
           },
           {
             "id": "price",
@@ -6484,10 +6492,10 @@
         "storyCoverage": 0.5769230769230769,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11287,
+        "rawCommentHits": 11281,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 175,
-        "commentCoverage": 0.026579250465136883,
+        "commentCoverage": 0.026593387111071714,
         "limited": false,
         "points": 2371,
         "themes": [
@@ -6509,7 +6517,7 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 10
+            "count": 11
           },
           {
             "id": "writing",
@@ -6651,12 +6659,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 68,
         "isEstimated": false,
-        "rawCommentHits": 1125,
+        "rawCommentHits": 1124,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 292,
-        "commentCoverage": 0.26666666666666666,
+        "commentCoverage": 0.2669039145907473,
         "limited": false,
-        "points": 1904,
+        "points": 1907,
         "themes": [
           {
             "id": "price",
@@ -6737,10 +6745,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": false,
-        "rawCommentHits": 4690,
+        "rawCommentHits": 4694,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 208,
-        "commentCoverage": 0.06396588486140725,
+        "validatedCommentCount": 209,
+        "commentCoverage": 0.06391137622496805,
         "limited": false,
         "points": 2461,
         "themes": [
@@ -6757,7 +6765,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 40
+            "count": 39
           },
           {
             "id": "speed",
@@ -6941,14 +6949,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "reasoning",
-          "local"
+          "coding",
+          "reasoning"
         ],
-        "excerpt": "…they go down that path I'll just go back to my old buddy Claude, or maybe buy a second Spark and keep it local.…",
+        "excerpt": "…APIs), Metabase, Docker, CI/CD. AI-native workflow: Claude Code/Cursor daily, multi-agent pipelines via Anthropic API, MCP.Résumé/CV: https://alami.no/cv/dev/Email:…",
         "source": "Hacker News",
-        "author": "mapontosevenths",
-        "publishedAt": "2026-07-14T11:34:02.000Z",
-        "url": "https://news.ycombinator.com/item?id=48905127"
+        "author": "ricalamino",
+        "publishedAt": "2026-07-14T14:23:32.000Z",
+        "url": "https://news.ycombinator.com/item?id=48907393"
       },
       {
         "modelId": "gemini",
