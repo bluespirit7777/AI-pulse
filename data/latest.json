@@ -1,23 +1,24 @@
 {
-  "updatedAt": "2026-07-14T15:30:57.981Z",
+  "updatedAt": "2026-07-14T15:45:25.682Z",
   "build": {
-    "sha": "6771900b60fb68e6d6b0912a3a355bcee7959b10",
-    "shortSha": "6771900",
+    "sha": "74988852675f33266dc3629cd155bbe7b7c4dfc6",
+    "shortSha": "7498885",
     "ref": "main",
-    "builtAt": "2026-07-14T15:31:13.030Z"
+    "builtAt": "2026-07-14T15:45:40.621Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 4.6,
-    "estimatedDatasets": 2,
-    "buildSha": "6771900",
-    "lastSuccessfulUpdate": "2026-07-14T15:30:57.981Z"
+    "historyDepthDays": 4.7,
+    "estimatedDatasets": 3,
+    "buildSha": "7498885",
+    "lastSuccessfulUpdate": "2026-07-14T15:45:25.682Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
+    "INTRODUCING CLAUDE FOR TEACHERS",
     "GOOGLE’S DEMIS HASSABIS SAYS IT’S TIME FOR A GLOBAL AI WATCHDOG — LED BY THE US",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "WAZE IS GETTING A BUNCH OF NEW AI-POWERED FEATURES",
@@ -25,8 +26,7 @@
     "EMPOWERING INDIA’S NEXT GENERATION OF INNOVATORS WITH ATL SAATHI",
     "NEW YORK BECOMES THE FIRST STATE TO ENACT A DATA CENTER MORATORIUM",
     "SPOTIFY EXPANDS ITS AI PUSH WITH A CHATGPT-LIKE MUSIC ASSISTANT",
-    "THE CHATBOT THAT FORETOLD WHY PEOPLE SHARE SECRETS WITH CHATGPT",
-    "HOW CLAUDE'S VALUES VARY BY MODEL AND LANGUAGE"
+    "THE CHATBOT THAT FORETOLD WHY PEOPLE SHARE SECRETS WITH CHATGPT"
   ],
   "signals": [
     {
@@ -61,6 +61,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "clusterId": "1vw2030",
+      "title": "Introducing Claude for Teachers",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T15:07:29.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 74,
+      "impact": "high",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -750,30 +776,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/",
-      "clusterId": "1q9sre",
-      "title": "Sam Altman’s space data center trash talk is what most experts already believe",
-      "desc": "Responding to Musk accusing him of being a scammer, Altman said, \"homeboy you're the one sellling [sic] public market investors on short-term space datacenters.\"",
-      "url": "https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/",
-      "dateISO": "2026-07-13T17:28:37.000Z",
-      "date": "JUL 13 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMHFpejc2bG9QRlgwRERHVjM1YlR1M2xtV3JVS3BLQlhZOUgxY3A4RU1fVEVnSk9SeWhyMk1LRHBjVXlwVWFVSHN3c0VUS1lueVlJYlFuQ1pIUjE1Z08tYUJUM2JFWHZoMVFKcFIwTDZmZ2N0OVJqcG5CN2k0V2dUSmJXdlA?oc=5",
       "clusterId": "1dwsflu",
       "title": "Anthropic: Claude Mythos identified 10,000+ software flaws",
@@ -1000,6 +1002,30 @@
       "entityIds": []
     },
     {
+      "id": "https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/",
+      "clusterId": "1q9sre",
+      "title": "Sam Altman’s space data center trash talk is what most experts already believe",
+      "desc": "Responding to Musk accusing him of being a scammer, Altman said, \"homeboy you're the one sellling [sic] public market investors on short-term space datacenters.\"",
+      "url": "https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/",
+      "dateISO": "2026-07-13T17:28:37.000Z",
+      "date": "JUL 13 2026",
+      "category": "compute",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://openai.com/index/openai-to-acquire-ona",
       "clusterId": "1xb5ngz",
       "title": "OpenAI to acquire Ona",
@@ -1154,59 +1180,29 @@
       "entityIds": [
         "gemini"
       ]
-    },
-    {
-      "id": "https://openai.com/index/chatgpt-memory-dreaming",
-      "clusterId": "1wc522m",
-      "title": "Dreaming: Better memory for a more helpful ChatGPT",
-      "desc": "ChatGPT introduces a new memory system to better remember preferences, keeping context fresh and relevant across conversations.",
-      "url": "https://openai.com/index/chatgpt-memory-dreaming",
-      "dateISO": "2026-06-04T09:00:00.000Z",
-      "date": "JUN 04 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/chatgpt-memory-dreaming"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Waze is getting a bunch of new AI-powered features",
-      "summary": "Waze is getting an AI makeover. Google is integrating its flagship AI assistant, Gemini, into the driving app with the goal of letting users personalize their trips a little more.…",
-      "significance": 65,
-      "impact": "notable",
-      "verification": "corroborated",
-      "date": "JUL 13 2026",
-      "dateISO": "2026-07-13T09:00:00.000Z",
-      "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-      "sourceCount": 2,
+      "title": "Introducing Claude for Teachers",
+      "summary": "Introducing Claude for Teachers",
+      "significance": 74,
+      "impact": "high",
+      "verification": "official",
+      "date": "JUL 14 2026",
+      "dateISO": "2026-07-14T15:07:29.000Z",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/13/waze-adds-new-ai-powered-features-and-customization-updates/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty"
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
         }
       ],
       "entityIds": [
-        "gemini"
+        "claude"
       ],
       "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
     },
@@ -1297,6 +1293,17 @@
       "logoKey": "anthropic",
       "items": [
         {
+          "h": "Introducing Claude for Teachers",
+          "d": "JUL 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "high"
+        },
+        {
           "h": "Introducing a way to reflect on how you use Claude",
           "d": "JUL 09 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
@@ -1339,17 +1346,6 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
-        },
-        {
-          "h": "Anthropic launches Claude Tag, a tool that works like a virtual employee within Slack",
-          "d": "JUN 23 2026",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Fortune",
-          "sourceCount": 3,
-          "verification": "corroborated",
-          "impact": "notable"
         }
       ]
     },
@@ -1507,6 +1503,18 @@
       "date": "JUL 14 2026",
       "verification": "single",
       "impact": "emerging",
+      "h": "Another contender just joined the arms race over AI in schools",
+      "p": "Another contender just joined the arms race over AI in schools",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVVNCUzQtQlYtSTctLXNIUjAzRERaODhqcEplcFNkTTdxalZ3VUhhaFZzUFpYYUpoTDRZcGxjTzdNVXNENktfa1hRcENPQjZ2Qlo4V2NwMjA1Vnh1YVE4bU9sRTlwbUtLQkg1d1BjNk00cFpHSWNuMjJRSTk2MG5BLVdkTmtaZklNUW1FRmNvSmhqak5hOXB3aDBnZE5EUUR1YUY2ZlpBMVRTY1dpOWFwRkwzOG0?oc=5",
+      "sourceName": "Chalkbeat",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 14 2026",
+      "verification": "single",
+      "impact": "emerging",
       "h": "The real AI race may no longer be at the frontier",
       "p": "Hugging Face CEO Clem Delangue says enterprises increasingly want open models, due to cost, accessibility, and ownership. Do frontier models still matter if most production AI ends up running on open models?",
       "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/",
@@ -1559,18 +1567,6 @@
       "p": "Demis Hassabis thinks the world needs an AI watchdog with the power to hit the brakes if frontier models become too dangerous. Writing in a blog post, the Google DeepMind CEO and cofounder said the US should lead the initiative, arguing that the country is th…",
       "url": "https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog",
       "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 14 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "This Luddite Puppet Hopes You’re Not Reading This on Your Smartphone",
-      "p": "On this week’s episode of The Big Interview podcast, WIRED’s senior culture editor Manisha Krishnan talks to Gowanus about eschewing Big Tech, going outside, and rejection in the age of dating apps.",
-      "url": "https://www.wired.com/story/the-big-interview-podcast-summer-of-ludd-gowanus/",
-      "sourceName": "Wired",
       "sourceCount": 1
     }
   ],
@@ -1686,11 +1682,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 209.01,
-      "changePct": 2.6924756843738993,
+      "price": 209.26,
+      "changePct": 2.8153077000469766,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 40515809,
+      "volume": 43732557,
       "ohlc": [
         {
           "d": "04-14",
@@ -2129,24 +2125,24 @@
         {
           "d": "07-14",
           "o": 208.1999969482422,
-          "h": 209.17999267578125,
+          "h": 209.3188018798828,
           "l": 203.8000030517578,
-          "c": 209.00999450683594
+          "c": 209.25999450683594
         }
       ],
-      "relVolume": 0.2795182544059293,
-      "marketCap": 5099844000000
+      "relVolume": 0.30171057409585,
+      "marketCap": 5105944000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 385.98,
-      "changePct": -1.281357419161471,
+      "price": 384.51,
+      "changePct": -1.6573264356117254,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 10965419,
+      "volume": 11664689,
       "ohlc": [
         {
           "d": "04-14",
@@ -2587,22 +2583,22 @@
           "o": 382.5050048828125,
           "h": 387.7499084472656,
           "l": 378.6499938964844,
-          "c": 385.9800109863281
+          "c": 384.510009765625
         }
       ],
-      "relVolume": 0.23245592436281368,
-      "marketCap": 2867831400000
+      "relVolume": 0.24727974953804727,
+      "marketCap": 2856909300000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 396.31,
-      "changePct": 3.1922953144927706,
+      "price": 395.34,
+      "changePct": 2.9397237088334505,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7536288,
+      "volume": 7944685,
       "ohlc": [
         {
           "d": "04-14",
@@ -3043,22 +3039,22 @@
           "o": 395.6050109863281,
           "h": 397.3299865722656,
           "l": 384.6404113769531,
-          "c": 396.30999755859375
+          "c": 395.3399963378906
         }
       ],
-      "relVolume": 0.263612018233867,
-      "marketCap": 1949845200000
+      "relVolume": 0.2778973477502889,
+      "marketCap": 1945072799999.9998
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 358.37,
-      "changePct": 1.6623599867302083,
+      "price": 356.322,
+      "changePct": 1.0812958270106747,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 5377210,
+      "volume": 5877636,
       "ohlc": [
         {
           "d": "04-14",
@@ -3497,24 +3493,24 @@
         {
           "d": "07-14",
           "o": 351.0899963378906,
-          "h": 358.4599914550781,
+          "h": 358.67999267578125,
           "l": 351.0899963378906,
-          "c": 358.3699951171875
+          "c": 356.3216857910156
         }
       ],
-      "relVolume": 0.1555749691184029,
-      "marketCap": 4372114000000
+      "relVolume": 0.17005343648271376,
+      "marketCap": 4347128400000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 245.9,
-      "changePct": -0.5701361352265231,
+      "price": 245.54,
+      "changePct": -0.7157026767757662,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 9653530,
+      "volume": 10315892,
       "ohlc": [
         {
           "d": "04-14",
@@ -3955,22 +3951,22 @@
           "o": 245.52999877929688,
           "h": 247.25,
           "l": 243.8000030517578,
-          "c": 245.89999389648438
+          "c": 245.5399932861328
         }
       ],
-      "relVolume": 0.15642831522763787,
-      "marketCap": 2631130000000
+      "relVolume": 0.16716140164585053,
+      "marketCap": 2627278000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 659.96,
-      "changePct": 0.4918370715466292,
+      "price": 656.4,
+      "changePct": -0.05024227072015036,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 4841735,
+      "volume": 5226167,
       "ohlc": [
         {
           "d": "04-14",
@@ -4411,22 +4407,22 @@
           "o": 652,
           "h": 664.280029296875,
           "l": 649.0499877929688,
-          "c": 659.9600219726562
+          "c": 656.4000244140625
         }
       ],
-      "relVolume": 0.23725882939534154,
-      "marketCap": 1663099200000
+      "relVolume": 0.2560970942533129,
+      "marketCap": 1654128000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 424.625,
-      "changePct": 0.7222860488450655,
+      "price": 422.91,
+      "changePct": 0.31548392528253083,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 5573716,
+      "volume": 6050994,
       "ohlc": [
         {
           "d": "04-14",
@@ -4867,22 +4863,22 @@
           "o": 430.8699951171875,
           "h": 430.8699951171875,
           "l": 419.3717041015625,
-          "c": 424.625
+          "c": 422.9100036621094
         }
       ],
-      "relVolume": 0.38799682430623933,
-      "marketCap": 2203803750000
+      "relVolume": 0.42122104102471464,
+      "marketCap": 2194902900000.0002
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 565.84,
-      "changePct": 5.885217040913735,
+      "price": 564.455,
+      "changePct": 5.626041209094317,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 10843667,
+      "volume": 11560032,
       "ohlc": [
         {
           "d": "04-14",
@@ -5323,22 +5319,22 @@
           "o": 567.7369995117188,
           "h": 574.2000122070312,
           "l": 547.8400268554688,
-          "c": 565.8400268554688
+          "c": 564.4550170898438
         }
       ],
-      "relVolume": 0.36233295591942555,
-      "marketCap": 916660800000
+      "relVolume": 0.38626975220496435,
+      "marketCap": 914417100000.0001
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 132.36,
-      "changePct": 1.7840721654867622,
+      "price": 131.175,
+      "changePct": 0.8728159214277929,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 25215662,
+      "volume": 26401747,
       "ohlc": [
         {
           "d": "04-14",
@@ -5779,11 +5775,11 @@
           "o": 123.61199951171875,
           "h": 134.060302734375,
           "l": 122.63999938964844,
-          "c": 132.36000061035156
+          "c": 131.1750030517578
         }
       ],
-      "relVolume": 0.5570068081608688,
-      "marketCap": 317664000000.00006
+      "relVolume": 0.583207088766529,
+      "marketCap": 314820000000
     },
     {
       "t": "ORCL",
@@ -5794,7 +5790,7 @@
       "changePct": -1.5204501308202847,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 21134379,
+      "volume": 22389826,
       "ohlc": [
         {
           "d": "04-14",
@@ -6238,7 +6234,7 @@
           "c": 129.5399932861328
         }
       ],
-      "relVolume": 0.6188651813758713,
+      "relVolume": 0.6556276732079139,
       "marketCap": 364007400000
     }
   ],
@@ -6254,10 +6250,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.39/hr",
-      "trend": "→ 3% vs 1d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$3.53 – $4.74/hr",
+      "trend": "↑ 10% vs 1d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6286,14 +6282,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "↑ 32% vs 1d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$0.40 – $1.49/hr",
+      "trend": "→ 0% vs 1d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-14T15:30:57.981Z",
+    "updatedAt": "2026-07-14T15:45:25.682Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6303,15 +6299,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 281,
-        "fetchedStoryCount": 281,
+        "fetchedStoryCount": 219,
         "validatedStoryCount": 160,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 160,
-        "isEstimated": false,
-        "rawCommentHits": 2230,
+        "storyCoverage": 0.7793594306049823,
+        "estimatedRelevantDiscussions": 205,
+        "isEstimated": true,
+        "rawCommentHits": 2228,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
-        "commentCoverage": 0.13452914798206278,
+        "commentCoverage": 0.13464991023339318,
         "limited": false,
         "points": 1488,
         "themes": [
@@ -6388,33 +6384,33 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1092,
+        "rawStoryHits": 1093,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.27472527472527475,
-        "estimatedRelevantDiscussions": 1085,
+        "storyCoverage": 0.2744739249771272,
+        "estimatedRelevantDiscussions": 1086,
         "isEstimated": true,
-        "rawCommentHits": 6555,
+        "rawCommentHits": 6564,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.04576659038901602,
+        "commentCoverage": 0.04570383912248629,
         "limited": false,
-        "points": 17332,
+        "points": 17336,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 134
+            "count": 131
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 52
+            "count": 53
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 38
+            "count": 36
           },
           {
             "id": "speed",
@@ -6437,14 +6433,14 @@
             "count": 9
           },
           {
-            "id": "multimodal",
-            "label": "Image/video",
+            "id": "context",
+            "label": "Context limits",
             "count": 7
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 6
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 7
           }
         ],
         "topThreads": [
@@ -6469,18 +6465,18 @@
         "model": "Gemini",
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 125,
-        "fetchedStoryCount": 125,
+        "rawStoryHits": 128,
+        "fetchedStoryCount": 128,
         "validatedStoryCount": 115,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 115,
         "isEstimated": false,
-        "rawCommentHits": 1063,
+        "rawCommentHits": 1112,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.28222013170272814,
+        "commentCoverage": 0.2697841726618705,
         "limited": false,
-        "points": 1978,
+        "points": 1987,
         "themes": [
           {
             "id": "coding",
@@ -6555,18 +6551,18 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 515,
+        "rawStoryHits": 516,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 29,
-        "storyCoverage": 0.5825242718446602,
+        "storyCoverage": 0.5813953488372093,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11305,
+        "rawCommentHits": 11301,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 172,
-        "commentCoverage": 0.026536930561698365,
+        "commentCoverage": 0.026546323334218212,
         "limited": false,
-        "points": 2364,
+        "points": 2365,
         "themes": [
           {
             "id": "coding",
@@ -6722,18 +6718,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 81,
-        "fetchedStoryCount": 81,
+        "rawStoryHits": 72,
+        "fetchedStoryCount": 72,
         "validatedStoryCount": 68,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 68,
         "isEstimated": false,
-        "rawCommentHits": 1128,
+        "rawCommentHits": 1081,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 292,
-        "commentCoverage": 0.26595744680851063,
+        "commentCoverage": 0.27752081406105455,
         "limited": false,
-        "points": 1826,
+        "points": 1833,
         "themes": [
           {
             "id": "price",
@@ -6814,10 +6810,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": false,
-        "rawCommentHits": 4722,
+        "rawCommentHits": 4718,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 208,
-        "commentCoverage": 0.06353240152477764,
+        "commentCoverage": 0.0635862653666808,
         "limited": false,
         "points": 2461,
         "themes": [
