@@ -34,6 +34,8 @@ const LEGACY_HASH = {
   '#sec-local': { panel: 'research' },
 };
 
+const FULL_HASH = '#full';
+
 let state = { panel: 'today', tab: 'briefing' };
 let dataReady = false;
 let pendingScrollTarget = null;
@@ -109,6 +111,17 @@ function activatePanels(panel) {
       else btn.removeAttribute('aria-current');
     }
   });
+  const fullBtn = topnavBtn('full');
+  if (fullBtn) fullBtn.removeAttribute('aria-current');
+}
+
+function setLocalTabsVisible(visible) {
+  document.querySelectorAll('.local-tabs').forEach((el) => { el.hidden = !visible; });
+}
+
+function setDepthRailVisible(visible) {
+  const rail = document.getElementById('depth-rail');
+  if (rail) rail.hidden = !visible;
 }
 
 function scrollToTarget(target, { smooth = true } = {}) {
@@ -152,6 +165,10 @@ export function goTo(panel, tab, { push = true, scroll = true } = {}) {
   const resolvedTab = tab || (state.panel === panel ? state.tab : defaultTabFor(panel));
   state = { panel, tab: resolvedTab };
 
+  // undo whatever Full Page mode changed, if we're coming from it
+  setLocalTabsVisible(true);
+  setDepthRailVisible(true);
+
   activatePanels(panel);
   if (resolvedTab) activateTabButtons(panel, resolvedTab);
   updateDepthRail(currentDepth(panel, resolvedTab));
@@ -172,9 +189,37 @@ export function goTo(panel, tab, { push = true, scroll = true } = {}) {
   }
 }
 
+// "Full page" — shows every section top-to-bottom at once, like the original
+// single-scroll page, for anyone who'd rather scroll than switch tabs. An
+// explicit opt-in (Today stays the default landing view): all 5 top panels
+// and all their local tabs are unhidden simultaneously, the now-redundant
+// local-tab bars and the depth rail (which has no single "current" section
+// to point at anymore) are hidden, and every widget inside — flip cards,
+// river filters, leaderboard tabs, etc. — keeps working exactly as it does
+// in the tabbed view, since none of their own logic depends on this.
+export function activateFullPage({ push = true } = {}) {
+  state = { panel: 'full', tab: null };
+
+  PANELS.forEach((p) => { const el = panelEl(p); if (el) el.hidden = false; });
+  Object.values(PANEL_TABS).flat().forEach((tab) => { const el = tabEl(tab); if (el) el.hidden = false; });
+  setLocalTabsVisible(false);
+  setDepthRailVisible(false);
+
+  document.querySelectorAll('.topnav-item').forEach((btn) => {
+    if (btn.dataset.panel === 'full') btn.setAttribute('aria-current', 'page');
+    else btn.removeAttribute('aria-current');
+  });
+
+  if (push && location.hash !== FULL_HASH) history.pushState({ full: true }, '', FULL_HASH);
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+}
+
 function wireTopnav() {
   document.querySelectorAll('.topnav-item').forEach((btn) => {
-    btn.addEventListener('click', () => goTo(btn.dataset.panel, null));
+    btn.addEventListener('click', () => {
+      if (btn.dataset.panel === 'full') activateFullPage();
+      else goTo(btn.dataset.panel, null);
+    });
   });
 }
 
@@ -212,6 +257,7 @@ function wireGotoButtons() {
 }
 
 function handleHash({ push } = { push: false }) {
+  if (location.hash === FULL_HASH) { activateFullPage({ push: false }); return; }
   const resolved = resolveHash(location.hash);
   if (!resolved) return;
   goTo(resolved.panel, resolved.tab, { push, scroll: true });

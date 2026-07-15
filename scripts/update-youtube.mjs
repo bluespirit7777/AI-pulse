@@ -28,6 +28,10 @@ const OUT_PATH = path.join(__dirname, '..', 'data', 'youtube-trending.json');
 const FETCH_TIMEOUT_MS = 15000;
 const WINDOW_DAYS = 7;
 const MAX_RESULTS = 5;
+// search.list costs the same 100 quota units regardless of maxResults, so
+// pulling a bigger pool here is free — it just gives filterOutShorts()
+// something left to work with instead of starving the final top-5.
+const SEARCH_POOL_SIZE = 15;
 const TRACKED_KEYS = ['claude', 'gpt', 'gemini']; // the 3 the user asked for — not the full registry
 
 async function fetchWithTimeout(url) {
@@ -41,7 +45,7 @@ async function fetchWithTimeout(url) {
 }
 
 async function fetchModelVideos(query, apiKey, now) {
-  const searchUrl = buildSearchUrl({ query, apiKey, publishedAfter: daysAgoISO(WINDOW_DAYS, now), maxResults: MAX_RESULTS });
+  const searchUrl = buildSearchUrl({ query, apiKey, publishedAfter: daysAgoISO(WINDOW_DAYS, now), maxResults: SEARCH_POOL_SIZE });
   const searchRes = await fetchWithTimeout(searchUrl);
   if (!searchRes.ok) throw new Error(`search HTTP ${searchRes.status}`);
   const searchJson = await searchRes.json();

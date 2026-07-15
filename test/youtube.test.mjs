@@ -4,8 +4,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  buildSearchUrl, buildVideosStatsUrl, parseSearchResponse, parseVideosStatsResponse,
-  mergeViewCounts, isAiRelevant, filterAiRelevant, daysAgoISO, buildTopVideos,
+  buildSearchUrl, buildVideosStatsUrl, parseSearchResponse, parseISO8601Duration,
+  parseVideosDetailsResponse, mergeVideoDetails, isShort, filterOutShorts,
+  isAiRelevant, filterAiRelevant, daysAgoISO, buildTopVideos, MAX_SHORT_SECONDS,
 } from '../scripts/lib/youtube.mjs';
 
 test('buildSearchUrl encodes query, key, and sorts by viewCount', () => {
@@ -18,10 +19,10 @@ test('buildSearchUrl encodes query, key, and sorts by viewCount', () => {
   assert.match(url, /publishedAfter=2026-07-01/);
 });
 
-test('buildVideosStatsUrl joins video ids with commas', () => {
+test('buildVideosStatsUrl joins video ids with commas and requests statistics + contentDetails', () => {
   const url = buildVideosStatsUrl({ videoIds: ['abc', 'def'], apiKey: 'KEY' });
   assert.match(url, /id=abc%2Cdef/);
-  assert.match(url, /part=statistics/);
+  assert.match(url, /part=statistics%2CcontentDetails/);
 });
 
 test('parseSearchResponse normalizes items and drops malformed entries', () => {
@@ -37,6 +38,7 @@ test('parseSearchResponse normalizes items and drops malformed entries', () => {
   assert.equal(out[0].videoId, 'v1');
   assert.equal(out[0].url, 'https://www.youtube.com/watch?v=v1');
   assert.equal(out[0].viewCount, null);
+  assert.equal(out[0].durationSeconds, null);
   assert.equal(out[0].thumbnailUrl, 'http://t/1.jpg');
 });
 
@@ -45,24 +47,60 @@ test('parseSearchResponse handles an empty/missing items array', () => {
   assert.deepEqual(parseSearchResponse(null), []);
 });
 
-test('parseVideosStatsResponse builds a videoId -> viewCount map, skipping invalid counts', () => {
-  const json = { items: [
-    { id: 'v1', statistics: { viewCount: '150000' } },
-    { id: 'v2', statistics: { viewCount: 'not-a-number' } },
-    { id: 'v3', statistics: {} },
-  ] };
-  const map = parseVideosStatsResponse(json);
-  assert.equal(map.get('v1'), 150000);
-  assert.equal(map.has('v2'), false);
-  assert.equal(map.has('v3'), false);
+test('parseISO8601Duration parses hours/minutes/seconds in any combination', () => {
+  assert.equal(parseISO8601Duration('PT45S'), 45);
+  assert.equal(parseISO8601Duration('PT4M13S'), 253);
+  assert.equal(parseISO8601Duration('PT1H2M3S'), 3723);
+  assert.equal(parseISO8601Duration('PT10M'), 600);
+  assert.equal(parseISO8601Duration('PT2H'), 7200);
 });
 
-test('mergeViewCounts attaches counts by id and leaves unmatched videos at null, not 0', () => {
+test('parseISO8601Duration returns null for missing/malformed input, never a guessed 0', () => {
+  assert.equal(parseISO8601Duration(null), null);
+  assert.equal(parseISO8601Duration(''), null);
+  assert.equal(parseISO8601Duration('not-a-duration'), null);
+});
+
+test('parseVideosDetailsResponse builds a videoId -> {viewCount, durationSeconds} map', () => {
+  const json = { items: [
+    { id: 'v1', statistics: { viewCount: '150000' }, contentDetails: { duration: 'PT4M13S' } },
+    { id: 'v2', statistics: { viewCount: 'not-a-number' }, contentDetails: { duration: 'PT30S' } },
+    { id: 'v3', statistics: {}, contentDetails: {} },
+  ] };
+  const map = parseVideosDetailsResponse(json);
+  assert.deepEqual(map.get('v1'), { viewCount: 150000, durationSeconds: 253 });
+  assert.equal(map.get('v2').viewCount, null);
+  assert.equal(map.get('v2').durationSeconds, 30);
+  assert.equal(map.get('v3').viewCount, null);
+  assert.equal(map.get('v3').durationSeconds, null);
+});
+
+test('mergeVideoDetails attaches details by id and leaves unmatched videos at null, not 0/false', () => {
   const videos = [{ videoId: 'v1', title: 'a' }, { videoId: 'v9', title: 'b' }];
-  const map = new Map([['v1', 500]]);
-  const merged = mergeViewCounts(videos, map);
+  const map = new Map([['v1', { viewCount: 500, durationSeconds: 400 }]]);
+  const merged = mergeVideoDetails(videos, map);
   assert.equal(merged[0].viewCount, 500);
+  assert.equal(merged[0].durationSeconds, 400);
   assert.equal(merged[1].viewCount, null);
+  assert.equal(merged[1].durationSeconds, null);
+});
+
+test('isShort treats <= MAX_SHORT_SECONDS as a Short and unknown duration as NOT a Short', () => {
+  assert.equal(isShort(45), true);
+  assert.equal(isShort(MAX_SHORT_SECONDS), true);
+  assert.equal(isShort(MAX_SHORT_SECONDS + 1), false);
+  assert.equal(isShort(600), false);
+  assert.equal(isShort(null), false); // unknown duration — don't over-filter
+});
+
+test('filterOutShorts drops only videos at/under the Shorts duration threshold', () => {
+  const videos = [
+    { videoId: 'short', durationSeconds: 40 },
+    { videoId: 'long', durationSeconds: 400 },
+    { videoId: 'unknown', durationSeconds: null },
+  ];
+  const out = filterOutShorts(videos).map((v) => v.videoId);
+  assert.deepEqual(out, ['long', 'unknown']);
 });
 
 test('isAiRelevant accepts videos with clear AI context', () => {
@@ -95,22 +133,22 @@ test('daysAgoISO computes a real ISO timestamp N days before `now`', () => {
   assert.equal(daysAgoISO(7, now), '2026-07-08T00:00:00.000Z');
 });
 
-test('buildTopVideos filters, attaches view counts, re-sorts by real count, and caps to maxResults', () => {
+test('buildTopVideos filters relevance + Shorts, attaches details, re-sorts by real view count, caps to maxResults', () => {
   const searchJson = {
     items: [
       { id: { videoId: 'a' }, snippet: { title: 'ChatGPT tips', description: '', channelTitle: 'C1', publishedAt: '2026-07-10T00:00:00Z' } },
       { id: { videoId: 'b' }, snippet: { title: 'ChatGPT tricks', description: '', channelTitle: 'C2', publishedAt: '2026-07-11T00:00:00Z' } },
       { id: { videoId: 'z' }, snippet: { title: 'Gemini Horoscope', description: 'zodiac forecast', channelTitle: 'C3', publishedAt: '2026-07-11T00:00:00Z' } },
+      { id: { videoId: 's' }, snippet: { title: 'ChatGPT in 30 seconds', description: '', channelTitle: 'C4', publishedAt: '2026-07-11T00:00:00Z' } },
     ],
   };
-  // 'a' has fewer views than 'b' even though search.list listed it first —
-  // the real stats call should win the final ordering.
   const statsJson = { items: [
-    { id: 'a', statistics: { viewCount: '1000' } },
-    { id: 'b', statistics: { viewCount: '5000' } },
+    { id: 'a', statistics: { viewCount: '1000' }, contentDetails: { duration: 'PT5M' } },
+    { id: 'b', statistics: { viewCount: '5000' }, contentDetails: { duration: 'PT4M' } },
+    { id: 's', statistics: { viewCount: '999999' }, contentDetails: { duration: 'PT30S' } }, // huge views but a Short — must be excluded
   ] };
   const out = buildTopVideos(searchJson, statsJson, { maxResults: 5 });
-  assert.equal(out.length, 2); // zodiac entry filtered out
+  assert.equal(out.length, 2); // zodiac entry filtered out, Short 's' filtered out despite highest views
   assert.equal(out[0].videoId, 'b');
   assert.equal(out[0].viewCount, 5000);
   assert.equal(out[1].videoId, 'a');
@@ -120,7 +158,7 @@ test('buildTopVideos caps results to maxResults', () => {
   const searchJson = { items: Array.from({ length: 8 }, (_, i) => ({
     id: { videoId: `v${i}` }, snippet: { title: `ChatGPT video ${i}`, description: '', channelTitle: 'C', publishedAt: '2026-07-10T00:00:00Z' },
   })) };
-  const statsJson = { items: Array.from({ length: 8 }, (_, i) => ({ id: `v${i}`, statistics: { viewCount: String(1000 - i) } })) };
+  const statsJson = { items: Array.from({ length: 8 }, (_, i) => ({ id: `v${i}`, statistics: { viewCount: String(1000 - i) }, contentDetails: { duration: 'PT5M' } })) };
   const out = buildTopVideos(searchJson, statsJson, { maxResults: 5 });
   assert.equal(out.length, 5);
   assert.equal(out[0].videoId, 'v0'); // highest view count

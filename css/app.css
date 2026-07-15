@@ -574,6 +574,10 @@ body.drawer-open { overflow: hidden; }
 .briefing-title { font-family: var(--font-body); font-weight: 700; font-size: 14.5px; color: var(--ink); flex-basis: 100%; }
 .briefing-why { font-size: 13px; color: var(--ink-soft); }
 .briefing-release { margin-bottom: 18px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+/* .src-link is `white-space:nowrap` by default (right for short labels like
+   "Read original ↗" elsewhere) — wrong here, where it wraps a full release
+   headline that can be longer than the viewport on narrow screens. */
+.briefing-release .src-link { white-space: normal; word-break: break-word; min-width: 0; }
 .briefing-d { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
 .briefing-more { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
 .briefing-goto {

@@ -70,6 +70,16 @@ use one reusable component (`.section-ribbon` in `css/app.css`); the top
 ticker (visible only under Today) pauses on hover/focus and offers a
 play/pause control (reduced-motion → manual scroll).
 
+A 6th, visually-distinct topnav item — **Full page** (dashed border, placed
+first) — is an explicit opt-in that unhides every panel and every local tab
+at once (`activateFullPage()` in `js/nav.js`), for anyone who'd rather scroll
+one long page than switch tabs, matching the pre-redesign layout. It hides
+the now-redundant local-tab bars and the depth rail (no single "current"
+section applies once everything is visible), reuses the exact same DOM/data
+as the tabbed views (no duplicate rendering, no duplicate ids), and every
+widget inside keeps working normally. `#full` deep-links directly into it;
+`goTo()` un-does it automatically when any other nav item is clicked next.
+
 Each of the 3 Frontier Releases cards is a CSS 3D flip container
 (`.release-card` → `.release-card-inner` → front/back `.release-card-face`):
 the front is the existing release list, unchanged; a "Top videos this week"

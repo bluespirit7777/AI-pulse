@@ -137,9 +137,10 @@ rather than treating a missing file as an error.
     "claude": {
       "query": "Claude AI",                 // exact YouTube search query used
       "updatedAt": "…",                     // per-model — one model can fail while others succeed
-      "videos": [                           // top 5 BY VIEW COUNT in the trailing window, sorted descending
+      "videos": [                           // top 5 BY VIEW COUNT in the trailing window, sorted descending — Shorts excluded
         { "videoId": "…", "title": "…", "channelTitle": "…", "publishedAt": "…",
           "viewCount": 210000,              // null if the stats call failed for this specific video
+          "durationSeconds": 253,           // null if contentDetails didn't parse; used only to exclude Shorts, not shown in the UI
           "url": "https://www.youtube.com/watch?v=…", "thumbnailUrl": "…" }
       ]
     },

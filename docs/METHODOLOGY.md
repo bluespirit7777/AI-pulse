@@ -251,6 +251,18 @@ the search query in its title, which would make that check trivially true
 and defeat its own purpose). Ambiguous-but-unflagged titles are left in
 rather than over-filtered.
 
+**Shorts are excluded — on a best-effort basis.** The public YouTube API has
+no field that says "this is a Short"; duration is the closest available
+proxy, so anything at or under 180 seconds (YouTube's own current Shorts
+eligibility window) is treated as one and dropped, via a `videos.list` call
+that also carries the view-count lookup — checking `contentDetails` costs no
+extra quota. This is a genuine best-effort heuristic, not a guarantee: a
+landscape video that happens to run under 3 minutes could still be excluded,
+and there's no way to distinguish that case from the public API alone. To
+keep the final top-5 full even after this filter runs, the initial
+`search.list` call pulls a larger pool (15 results) than it shows (5) —
+free, since `search.list`'s 100-unit cost doesn't depend on `maxResults`.
+
 **Graceful absence.** If `YOUTUBE_API_KEY` isn't configured, or a given
 run's fetch fails for one model, the card shows an honest "unavailable"
 state — never a stale result mislabeled as current, and never a fabricated

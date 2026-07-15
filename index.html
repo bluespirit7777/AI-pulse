@@ -187,6 +187,11 @@
   .topnav-item:hover{background:var(--foam);transform:translateY(-1px);}
   .topnav-item:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
   .topnav-item[aria-current="page"]{background:var(--deep);border-color:var(--deep);color:#fff;}
+  /* "Full page" is a different kind of nav item (a view-mode toggle, not one
+     of the 5 destinations) — a dashed border marks that distinction without
+     relying on color alone. */
+  .topnav-item--full{border-style:dashed;color:var(--ink-soft);}
+  .topnav-item--full[aria-current="page"]{border-style:solid;}
   /* Mobile: wrap the 5 destinations into rows instead of a horizontal-scroll
      strip (Phase 8) — with only 5 items this fits in 2 short rows, no
      hidden/overflow content and no swipe-to-discover required. */
@@ -376,6 +381,11 @@
 
   /* ---------- grids ---------- */
   .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
+  /* grid items default to min-width:auto, which refuses to shrink below the
+     content's intrinsic width (e.g. an unwrapped .lb-tabs button row) — that
+     silently overflows the column instead of letting it wrap. min-width:0
+     is what actually lets a grid item's own children wrap/shrink. */
+  .grid-2>*{min-width:0;}
   @media (max-width:880px){.grid-2{grid-template-columns:1fr;}}
 
   /* ---------- leaderboard bars ---------- */
@@ -586,6 +596,7 @@
   </div>
 
   <nav class="topnav" aria-label="Main navigation" id="topnav">
+    <button type="button" class="topnav-item topnav-item--full" data-panel="full" title="Show every section on one page, top to bottom">Full page</button>
     <button type="button" class="topnav-item" data-panel="today" aria-current="page">Today</button>
     <button type="button" class="topnav-item" data-panel="ecosystem">Ecosystem</button>
     <button type="button" class="topnav-item" data-panel="models">Models</button>

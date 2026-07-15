@@ -8,6 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CATEGORIES } from './lib/signals.mjs';
 import { RANGE_HOURS } from './lib/history.mjs';
+import { isShort } from './lib/youtube.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -291,6 +292,8 @@ async function main() {
           if (!isStr(v.title)) fail(`youtube-trending.json models.${key}.videos[${i}].title missing`);
           if (!isStr(v.url) || !v.url.includes(v.videoId || '\0')) fail(`youtube-trending.json models.${key}.videos[${i}].url missing/inconsistent`);
           if (v.viewCount != null && (!isNum(v.viewCount) || v.viewCount < 0)) fail(`youtube-trending.json models.${key}.videos[${i}].viewCount must be a non-negative number or null`);
+          if (v.durationSeconds != null && (!isNum(v.durationSeconds) || v.durationSeconds < 0)) fail(`youtube-trending.json models.${key}.videos[${i}].durationSeconds must be a non-negative number or null`);
+          if (isShort(v.durationSeconds)) fail(`youtube-trending.json models.${key}.videos[${i}] is a Short (${v.durationSeconds}s) — should have been filtered out`);
           if (!isStr(v.publishedAt) || isNaN(Date.parse(v.publishedAt))) fail(`youtube-trending.json models.${key}.videos[${i}].publishedAt missing/invalid`);
         });
         // videos must actually be sorted by view count — the whole point of

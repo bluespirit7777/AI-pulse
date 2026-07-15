@@ -7,12 +7,20 @@
 // ChatGPT and Gemini, searched SEPARATELY so one model's volume never crowds
 // out another's. `order=viewCount` does the ranking server-side (YouTube's
 // own view counts, not a derived score); a follow-up videos.list call adds
-// the real view-count number for display, since search.list doesn't return
-// statistics. A lightweight relevance filter guards against the one known
-// false-positive risk: "Gemini" collides with the zodiac sign.
+// the real view-count + duration, since search.list returns neither. Two
+// filters run before the final top-5 cut: a relevance guard (the "Gemini"
+// zodiac false-positive) and a Shorts exclusion (duration-based — YouTube's
+// public API has no explicit "is this a Short" field).
 
 const SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 const VIDEOS_URL = 'https://www.googleapis.com/youtube/v3/videos';
+
+// YouTube's own Shorts eligibility window is up to 3 minutes (extended from
+// the original 60s in 2024). There's no official API flag for "is a Short" —
+// duration is the best available proxy, so this is a best-effort filter, not
+// a guarantee: a landscape video that happens to be under 3 minutes could
+// still slip through, and there's no way to tell from the public API alone.
+export const MAX_SHORT_SECONDS = 180;
 
 export function buildSearchUrl({ query, apiKey, publishedAfter, maxResults = 5 }) {
   const params = new URLSearchParams({
@@ -28,9 +36,12 @@ export function buildSearchUrl({ query, apiKey, publishedAfter, maxResults = 5 }
   return `${SEARCH_URL}?${params.toString()}`;
 }
 
+// Requests statistics + contentDetails in the SAME call — videos.list costs
+// 1 quota unit per call regardless of how many parts or ids (up to 50) are
+// requested, so adding contentDetails for the Shorts-duration check is free.
 export function buildVideosStatsUrl({ videoIds, apiKey }) {
   const params = new URLSearchParams({
-    part: 'statistics',
+    part: 'statistics,contentDetails',
     id: (videoIds || []).join(','),
     key: apiKey,
   });
@@ -50,25 +61,51 @@ export function parseSearchResponse(json) {
       publishedAt: it.snippet.publishedAt || null,
       thumbnailUrl: it.snippet.thumbnails?.medium?.url || it.snippet.thumbnails?.default?.url || null,
       url: `https://www.youtube.com/watch?v=${it.id.videoId}`,
-      viewCount: null, // filled in by mergeViewCounts once videos.list responds
+      viewCount: null, // filled in by mergeVideoDetails once videos.list responds
+      durationSeconds: null,
     }));
 }
 
-// videos.list items → Map<videoId, viewCount>. Missing/invalid counts are
-// left out of the map rather than coerced to 0 (0 real views is possible but
-// rare; a missing/malformed field is not the same claim).
-export function parseVideosStatsResponse(json) {
+// ISO 8601 duration ("PT4M13S", "PT45S", "PT1H2M3S") → total seconds.
+// Returns null for anything that doesn't parse (never a guessed 0).
+export function parseISO8601Duration(iso) {
+  if (!iso) return null;
+  const m = /^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/.exec(iso);
+  if (!m || (!m[1] && !m[2] && !m[3])) return null;
+  const hours = Number(m[1] || 0), minutes = Number(m[2] || 0), seconds = Number(m[3] || 0);
+  return hours * 3600 + minutes * 60 + seconds;
+}
+
+// videos.list items → Map<videoId, {viewCount, durationSeconds}>. Missing/
+// invalid values are left null rather than coerced to 0/false — a missing
+// field is not the same claim as a real measured zero.
+export function parseVideosDetailsResponse(json) {
   const map = new Map();
   for (const it of json?.items || []) {
-    const raw = it?.statistics?.viewCount;
-    const n = raw != null ? Number(raw) : NaN;
-    if (it?.id && Number.isFinite(n)) map.set(it.id, n);
+    if (!it?.id) continue;
+    const rawViews = it?.statistics?.viewCount;
+    const viewCount = rawViews != null && Number.isFinite(Number(rawViews)) ? Number(rawViews) : null;
+    const durationSeconds = parseISO8601Duration(it?.contentDetails?.duration);
+    map.set(it.id, { viewCount, durationSeconds });
   }
   return map;
 }
 
-export function mergeViewCounts(videos, statsMap) {
-  return (videos || []).map((v) => ({ ...v, viewCount: statsMap?.get(v.videoId) ?? null }));
+export function mergeVideoDetails(videos, detailsMap) {
+  return (videos || []).map((v) => {
+    const d = detailsMap?.get(v.videoId);
+    return { ...v, viewCount: d?.viewCount ?? null, durationSeconds: d?.durationSeconds ?? null };
+  });
+}
+
+// Unknown duration (parse failed / field missing) is NOT treated as a Short —
+// same "don't over-filter on missing data" stance as isAiRelevant below.
+export function isShort(durationSeconds) {
+  return durationSeconds != null && durationSeconds <= MAX_SHORT_SECONDS;
+}
+
+export function filterOutShorts(videos) {
+  return (videos || []).filter((v) => !isShort(v.durationSeconds));
 }
 
 // Negative signals that mean "almost certainly the zodiac sign, not the AI
@@ -101,15 +138,19 @@ export function daysAgoISO(days, now = Date.now()) {
 }
 
 // Full pipeline over already-fetched JSON (pure — the caller does the fetch()
-// calls): filter for relevance, re-sort by real view count (defensive —
-// search.list's server-side ordering and the later stats call could in
-// theory disagree slightly), cap to maxResults.
+// calls): filter for relevance, drop Shorts, re-sort by real view count
+// (defensive — search.list's server-side ordering and the later stats call
+// could in theory disagree slightly), cap to maxResults. The caller should
+// request a bigger pool than maxResults from search.list (free — search.list
+// costs the same 100 units regardless of maxResults) so there's still enough
+// left after filtering to fill out a real top-5.
 export function buildTopVideos(searchJson, statsJson, { maxResults = 5 } = {}) {
   const parsed = parseSearchResponse(searchJson);
   const relevant = filterAiRelevant(parsed);
-  const statsMap = parseVideosStatsResponse(statsJson);
-  const withCounts = mergeViewCounts(relevant, statsMap);
-  return withCounts
+  const detailsMap = parseVideosDetailsResponse(statsJson);
+  const withDetails = mergeVideoDetails(relevant, detailsMap);
+  const longForm = filterOutShorts(withDetails);
+  return longForm
     .slice()
     .sort((a, b) => (b.viewCount ?? -1) - (a.viewCount ?? -1))
     .slice(0, maxResults);
