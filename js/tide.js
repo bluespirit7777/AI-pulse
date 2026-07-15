@@ -5,10 +5,16 @@
 // never draws a smooth 30-day curve over 1 day of data — below a minimum
 // number of days it shows an honest "collecting" state instead of implying
 // history that doesn't exist.
+//
+// Declutter (Phase 6): only the 5 busiest categories stack by default — a
+// toggle reveals the rest. Every band is keyboard-focusable and announces
+// its exact per-day values, not just a mouse-only <title> tooltip.
 import { esc } from './util.js';
 
 const VW = 720, VH = 200, PAD_L = 34, PAD_R = 12, PAD_T = 14, PAD_B = 26;
 const MIN_DAYS = 3; // fewer than this and a stacked area would be meaningless
+const SHORT_HISTORY_DAYS = 14; // below this, warn against reading a trend into it
+const DEFAULT_CAT_COUNT = 5;
 
 // Draw order bottom→top; colors reuse the river category palette.
 const CAT_ORDER = ['product', 'research', 'compute', 'capital', 'policy', 'adoption', 'opensource', 'market', 'orggov'];
@@ -39,64 +45,93 @@ export function renderTide(root, ranges) {
     return;
   }
 
-  // categories actually present, ordered
-  const present = CAT_ORDER.filter((c) => history.some((d) => (d.counts || {})[c] > 0));
   const days = history.slice(-30); // at most the last 30 collected days
   const n = days.length;
 
-  // stacked totals per day → max for y-scale
-  const dayTotals = days.map((d) => present.reduce((s, c) => s + ((d.counts || {})[c] || 0), 0));
-  const yMax = Math.max(1, ...dayTotals);
+  // categories actually present, ranked by total volume (defines the default
+  // top-5 selection); CAT_ORDER still governs visual stacking order once a
+  // set is chosen, so toggling more categories in never reshuffles the ones
+  // already on screen.
+  const totals = {};
+  for (const c of CAT_ORDER) totals[c] = days.reduce((s, d) => s + ((d.counts || {})[c] || 0), 0);
+  const present = CAT_ORDER.filter((c) => totals[c] > 0);
+  const byVolume = present.slice().sort((a, b) => totals[b] - totals[a]);
+  const defaultCats = byVolume.slice(0, DEFAULT_CAT_COUNT);
+  const extraCats = byVolume.slice(DEFAULT_CAT_COUNT);
 
-  const xFor = (i) => PAD_L + (n === 1 ? (VW - PAD_L - PAD_R) / 2 : (i / (n - 1)) * (VW - PAD_L - PAD_R));
-  const yFor = (v) => VH - PAD_B - (v / yMax) * (VH - PAD_T - PAD_B);
+  const state = { showAll: extraCats.length === 0 };
 
-  // build cumulative stacked bands (bottom→top)
-  const cum = days.map(() => 0);
-  const bands = present.map((cat) => {
-    const lower = cum.slice();
-    days.forEach((d, i) => { cum[i] += (d.counts || {})[cat] || 0; });
-    const upper = cum.slice();
-    const top = upper.map((v, i) => `${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`);
-    const bottom = lower.map((v, i) => `${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).reverse();
-    return { cat, points: [...top, ...bottom].join(' ') };
-  });
+  function draw() {
+    const activeSet = new Set(state.showAll ? present : defaultCats);
+    const activeCats = CAT_ORDER.filter((c) => activeSet.has(c));
 
-  // y gridlines
-  const ticks = 3;
-  const grid = Array.from({ length: ticks + 1 }, (_, k) => {
-    const v = Math.round((yMax * k) / ticks);
-    const y = yFor(v);
-    return `<line x1="${PAD_L}" y1="${y.toFixed(1)}" x2="${VW - PAD_R}" y2="${y.toFixed(1)}" class="tide-grid"></line>
-            <text x="${PAD_L - 6}" y="${(y + 3).toFixed(1)}" class="tide-ytick">${v}</text>`;
-  }).join('');
+    const dayTotals = days.map((d) => activeCats.reduce((s, c) => s + ((d.counts || {})[c] || 0), 0));
+    const yMax = Math.max(1, ...dayTotals);
 
-  // x labels (first, middle, last day)
-  const xLabelIdx = n <= 3 ? days.map((_, i) => i) : [0, Math.floor((n - 1) / 2), n - 1];
-  const xLabels = xLabelIdx.map((i) => {
-    const d = days[i].date.slice(5); // MM-DD
-    return `<text x="${xFor(i).toFixed(1)}" y="${VH - 8}" class="tide-xtick" text-anchor="middle">${esc(d)}</text>`;
-  }).join('');
+    const xFor = (i) => PAD_L + (n === 1 ? (VW - PAD_L - PAD_R) / 2 : (i / (n - 1)) * (VW - PAD_L - PAD_R));
+    const yFor = (v) => VH - PAD_B - (v / yMax) * (VH - PAD_T - PAD_B);
 
-  root.innerHTML = `
-    <div class="tide-head">
-      <span class="tide-range">${esc(String(n))} day${n === 1 ? '' : 's'} of history · ${esc(days[0].date)} → ${esc(days[n - 1].date)}</span>
-    </div>
-    <svg class="tide-svg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Daily AI signal volume by category over ${n} collected days. A text summary follows.">
-      ${grid}
-      ${bands.map((b) => `<polygon class="tide-band" points="${b.points}" fill="${CAT_COLOR[b.cat]}" opacity="0.72"><title>${esc(CAT_LABEL[b.cat] || b.cat)}</title></polygon>`).join('')}
-      ${xLabels}
-    </svg>
-    <div class="tide-legend">
-      ${present.map((c) => `<span class="tide-key"><span class="tide-swatch" style="background:${CAT_COLOR[c]}"></span>${esc(CAT_LABEL[c] || c)}</span>`).join('')}
-    </div>
-    <p class="tide-summary">Across ${esc(String(n))} collected day${n === 1 ? '' : 's'}, the busiest categories were ${esc(topCategories(days, present))}. <span class="tide-note">Operational categories only — general commentary and opinion/analysis are excluded.</span></p>
-  `;
+    // build cumulative stacked bands (bottom→top)
+    const cum = days.map(() => 0);
+    const bands = activeCats.map((cat) => {
+      const lower = cum.slice();
+      const perDay = days.map((d) => (d.counts || {})[cat] || 0);
+      days.forEach((d, i) => { cum[i] += perDay[i]; });
+      const upper = cum.slice();
+      const top = upper.map((v, i) => `${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`);
+      const bottom = lower.map((v, i) => `${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).reverse();
+      // exact per-day values for keyboard/screen-reader access — not just a
+      // mouse-hover <title>, so the same information reaches every user.
+      const total = perDay.reduce((s, v) => s + v, 0);
+      const breakdown = days.map((d, i) => `${d.date.slice(5)}: ${perDay[i]}`).join(', ');
+      const ariaLabel = `${CAT_LABEL[cat] || cat}: ${total} total across ${n} day${n === 1 ? '' : 's'}. ${breakdown}.`;
+      return { cat, points: [...top, ...bottom].join(' '), ariaLabel, title: `${CAT_LABEL[cat] || cat} — ${total} total` };
+    });
+
+    // y gridlines
+    const ticks = 3;
+    const grid = Array.from({ length: ticks + 1 }, (_, k) => {
+      const v = Math.round((yMax * k) / ticks);
+      const y = yFor(v);
+      return `<line x1="${PAD_L}" y1="${y.toFixed(1)}" x2="${VW - PAD_R}" y2="${y.toFixed(1)}" class="tide-grid"></line>
+              <text x="${PAD_L - 6}" y="${(y + 3).toFixed(1)}" class="tide-ytick">${v}</text>`;
+    }).join('');
+
+    // x labels (first, middle, last day)
+    const xLabelIdx = n <= 3 ? days.map((_, i) => i) : [0, Math.floor((n - 1) / 2), n - 1];
+    const xLabels = xLabelIdx.map((i) => {
+      const d = days[i].date.slice(5); // MM-DD
+      return `<text x="${xFor(i).toFixed(1)}" y="${VH - 8}" class="tide-xtick" text-anchor="middle">${esc(d)}</text>`;
+    }).join('');
+
+    const historyCaution = n < SHORT_HISTORY_DAYS
+      ? `<span class="tide-caution">Only ${esc(String(n))} day${n === 1 ? '' : 's'} collected so far — too short to read as a longer-term trend.</span>`
+      : '';
+
+    root.innerHTML = `
+      <div class="tide-head">
+        <span class="tide-range">${esc(String(n))} day${n === 1 ? '' : 's'} of history · ${esc(days[0].date)} → ${esc(days[n - 1].date)}</span>
+        ${historyCaution}
+      </div>
+      <svg class="tide-svg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="Daily AI signal volume by category over ${n} collected days. A text summary follows.">
+        ${grid}
+        ${bands.map((b) => `<polygon class="tide-band" tabindex="0" points="${b.points}" fill="${CAT_COLOR[b.cat]}" opacity="0.72" role="img" aria-label="${esc(b.ariaLabel)}"><title>${esc(b.title)}</title></polygon>`).join('')}
+        ${xLabels}
+      </svg>
+      <div class="tide-legend">
+        ${activeCats.map((c) => `<span class="tide-key"><span class="tide-swatch" style="background:${CAT_COLOR[c]}"></span>${esc(CAT_LABEL[c] || c)}</span>`).join('')}
+      </div>
+      ${extraCats.length ? `<button type="button" class="tide-toggle" aria-expanded="${state.showAll}">${state.showAll ? `Show top ${DEFAULT_CAT_COUNT} only` : `Show all ${present.length} categories`}</button>` : ''}
+      <p class="tide-summary">Across ${esc(String(n))} collected day${n === 1 ? '' : 's'}, the busiest categories were ${esc(topCategoriesText(totals))}. <span class="tide-note">Operational categories only — general commentary and opinion/analysis are excluded.</span></p>
+    `;
+
+    root.querySelector('.tide-toggle')?.addEventListener('click', () => { state.showAll = !state.showAll; draw(); });
+  }
+
+  draw();
 }
 
-function topCategories(days, present) {
-  const totals = {};
-  for (const c of present) totals[c] = days.reduce((s, d) => s + ((d.counts || {})[c] || 0), 0);
-  return Object.entries(totals).sort((a, b) => b[1] - a[1]).slice(0, 3)
+function topCategoriesText(totals) {
+  return Object.entries(totals).filter(([, v]) => v > 0).sort((a, b) => b[1] - a[1]).slice(0, 3)
     .map(([c, v]) => `${CAT_LABEL[c] || c} (${v})`).join(', ');
 }

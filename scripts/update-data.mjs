@@ -706,7 +706,9 @@ async function main() {
     };
   });
 
-  const brk = breakthroughs.slice(0, 6).map((it) => ({
+  // Sort newest first — previously inherited dedupeMerge's significance
+  // order, which showed dates out of sequence with no explanation.
+  const brk = breakthroughs.slice().sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6).map((it) => ({
     field: inferField(`${it.title} ${it.desc}`), date: shortDateUTC(it.date),
     verification: it.verification, impact: it.impact,
     h: truncate(it.title, 80), p: truncate(it.desc, 260) || it.title, url: it.link,
@@ -728,8 +730,8 @@ async function main() {
   const quotes = await Promise.all(STOCKS.map(fetchStock));
   const metaByTicker = Object.fromEntries(STOCKS.map((s) => [s.t, s]));
   const stockNetwork = buildStockNetwork(quotes, metaByTicker, now);
-  // the latest.json table keeps compact per-stock fields (no history series) but
-  // gains relVolume + marketCap so the "View as table" fallback is self-sufficient
+  // latest.json keeps compact per-stock fields (no history series), with
+  // relVolume + marketCap included for any consumer that wants them
   const netByTicker = Object.fromEntries(stockNetwork.nodes.map((n) => [n.t, n]));
   const stocks = quotes.map(({ series, ...rest }) => ({
     ...rest,

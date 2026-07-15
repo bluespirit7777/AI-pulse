@@ -51,13 +51,17 @@ export const leaderboardOverall = [
 // listed for comparison but are honestly marked as not separately
 // benchmarked on THESE two evals in this snapshot, rather than assigning
 // them an invented number.
+// `score` is set ONLY where a real published number exists (Humanity's Last
+// Exam %); the 4 rows below it have no published score on this eval and
+// deliberately carry no `score` — the renderer shows them as a plain
+// numbered/tied entry with no bar, rather than a fabricated width.
 export const leaderboardReasoning = [
-  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: "46.44% on Humanity's Last Exam", note: `Highest tracked score on Humanity's Last Exam & EnigmaEval (Scale Labs, ${'Jul 2026'} snapshot)` },
-  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: "44.32% on Humanity's Last Exam", note: `Narrowly behind Gemini on Humanity's Last Exam (Scale Labs, ${'Jul 2026'} snapshot)` },
-  { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
-  { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
-  { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 45, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot` },
-  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 40, stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot` },
+  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', score: 46.44, scoreUnit: '% HLE', stat: "46.44% on Humanity's Last Exam", note: `Highest tracked score on Humanity's Last Exam & EnigmaEval (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 44.32, scoreUnit: '% HLE', stat: "44.32% on Humanity's Last Exam", note: `Narrowly behind Gemini on Humanity's Last Exam (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
+  { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
+  { rank: 5, model: 'Grok 4.5', org: 'xAI', stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot` },
+  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot` },
 ];
 
 // "Agentic coding" — Scale Labs' SWE Atlas suite + Remote Labor Index.
@@ -97,12 +101,14 @@ export const leaderboard = leaderboardOverall;
 
 // Elo scores from Artificial Analysis' real Image Arena Quality leaderboard
 // (artificialanalysis.ai/text-to-image) — the same source already cited below.
+// Elo is a real, published score (Artificial Analysis Image Arena), so every
+// row here gets `score` and the bar is scaled to it — not an ordinal ranking.
 export const imageAI = [
-  { rank: 1, model: 'GPT Image 2', org: 'OpenAI', w: 100, stat: 'Tops the image arena', note: 'Elo 1337 on Artificial Analysis — clear #1, well ahead of the field' },
-  { rank: 2, model: 'GPT Image 1.5', org: 'OpenAI', w: 88, stat: 'Strong runner-up', note: 'Elo 1258 — OpenAI holds both #1 and #2 on quality Elo' },
-  { rank: 3, model: 'Nano Banana Pro', org: 'Google · Gemini 3', w: 76, stat: 'Best from Google', note: 'Gemini-3-powered; Elo 1216, strongest prompt adherence among non-OpenAI models' },
-  { rank: 4, model: 'FLUX.2 [max]', org: 'Black Forest Labs', w: 68, stat: 'Top open-lineage model', note: 'Elo 1190; frontier tier of the open-weight-rooted FLUX line' },
-  { rank: 5, model: 'Seedream 4.0', org: 'ByteDance', w: 62, stat: 'Leading Asia-market model', note: 'Elo 1188; strong photoreal output and Asian-language prompt handling' },
+  { rank: 1, model: 'GPT Image 2', org: 'OpenAI', score: 1337, scoreUnit: ' Elo', stat: 'Elo 1337', note: 'Elo 1337 on Artificial Analysis — clear #1, well ahead of the field' },
+  { rank: 2, model: 'GPT Image 1.5', org: 'OpenAI', score: 1258, scoreUnit: ' Elo', stat: 'Elo 1258', note: 'Elo 1258 — OpenAI holds both #1 and #2 on quality Elo' },
+  { rank: 3, model: 'Nano Banana Pro', org: 'Google · Gemini 3', score: 1216, scoreUnit: ' Elo', stat: 'Elo 1216', note: 'Gemini-3-powered; Elo 1216, strongest prompt adherence among non-OpenAI models' },
+  { rank: 4, model: 'FLUX.2 [max]', org: 'Black Forest Labs', score: 1190, scoreUnit: ' Elo', stat: 'Elo 1190', note: 'Elo 1190; frontier tier of the open-weight-rooted FLUX line' },
+  { rank: 5, model: 'Seedream 4.0', org: 'ByteDance', score: 1188, scoreUnit: ' Elo', stat: 'Elo 1188', note: 'Elo 1188; strong photoreal output and Asian-language prompt handling' },
 ];
 
 // Top self-hostable / open-weight models — the "run it yourself today" tier.

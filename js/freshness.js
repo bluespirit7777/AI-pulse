@@ -8,6 +8,7 @@ export const SOURCE = {
   live: { label: 'Live', cls: 'fr-live', mark: '●', desc: 'Fetched automatically from source APIs/feeds' },
   auto: { label: 'Auto', cls: 'fr-auto', mark: '●', desc: 'Refreshed automatically from publisher RSS feeds' },
   snapshot: { label: 'Daily snapshot', cls: 'fr-snap', mark: '◐', desc: 'A once-per-day saved snapshot' },
+  snapshot12h: { label: '12-hour snapshot', cls: 'fr-snap', mark: '◐', desc: 'Refreshed twice a day, not continuously' },
   curated: { label: 'Curated', cls: 'fr-curated', mark: '✎', desc: 'Maintained by hand — an editorial estimate, not a live feed' },
   estimated: { label: 'Estimated', cls: 'fr-est', mark: '⋯', desc: 'A derived or approximate figure' },
   stale: { label: 'Stale', cls: 'fr-stale', mark: '○', desc: 'Older than the usual refresh window' },

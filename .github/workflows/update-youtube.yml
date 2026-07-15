@@ -1,0 +1,47 @@
+name: Update YouTube trending videos
+
+on:
+  schedule:
+    # Twice a day, off the congested :00/:30 slots (same reasoning as the
+    # main data pipeline) and offset from it so the two jobs don't collide.
+    - cron: '22 3,15 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-youtube
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch trending videos
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/update-youtube.mjs
+
+      - name: Validate data
+        run: npm run validate
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/youtube-trending.json
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "chore: refresh YouTube trending videos [skip ci]"
+            git push
+          fi

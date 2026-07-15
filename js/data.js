@@ -42,4 +42,20 @@ export async function loadStockNetwork() {
   }
 }
 
+// data/youtube-trending.json — top-5-by-view-count-in-7-days videos per
+// model, refreshed twice daily by its own workflow (see
+// scripts/update-youtube.mjs). Absent/malformed is not an error: the release
+// cards' flip side just shows an honest "unavailable" state instead of a
+// stale or fabricated list — this is genuinely likely on a fresh checkout
+// before the YOUTUBE_API_KEY secret is configured.
+export async function loadYouTubeTrending() {
+  try {
+    const res = await fetch('data/youtube-trending.json' + BUST(), { cache: 'no-store' });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 export const RANGE_KEYS = ['24H', '7D', '30D'];

@@ -20,17 +20,17 @@ export const MODEL_REGISTRY = {
   gpt: {
     key: 'gpt', name: 'GPT', brand: 'ChatGPT', org: 'OpenAI',
     version: 'GPT-5.6', versionLabel: 'ChatGPT Sol (GPT-5.6)',
-    hnQuery: 'ChatGPT', entityId: 'gpt',
+    hnQuery: 'ChatGPT', ytQuery: 'ChatGPT', entityId: 'gpt',
   },
   claude: {
     key: 'claude', name: 'Claude', brand: 'Claude', org: 'Anthropic',
     version: 'Claude Opus 4.8', versionLabel: 'Claude Opus 4.8',
-    hnQuery: 'Claude', entityId: 'claude',
+    hnQuery: 'Claude', ytQuery: 'Claude AI', entityId: 'claude',
   },
   gemini: {
     key: 'gemini', name: 'Gemini', brand: 'Gemini', org: 'Google DeepMind',
     version: 'Gemini 3.5 Pro', versionLabel: 'Gemini 3.5 Pro',
-    hnQuery: 'Gemini', entityId: 'gemini',
+    hnQuery: 'Gemini', ytQuery: 'Gemini AI', entityId: 'gemini',
   },
   grok: {
     key: 'grok', name: 'Grok', brand: 'Grok', org: 'xAI',

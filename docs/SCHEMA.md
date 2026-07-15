@@ -55,7 +55,7 @@
   "stocks":       [ { "t": "NVDA", "n": "…", "layer": "Chips",
                       "price": 201.76, "changePct": 2.11,   // from last two valid bars
                       "changeReview": false,                // true ⇒ |change|>25%, flagged not dropped
-                      "relVolume": 0.59, "marketCap": 5.1e12, "url": "https://…" } ],  // "View as table" fallback
+                      "relVolume": 0.59, "marketCap": 5.1e12, "url": "https://…" } ],  // compact per-stock fields
 
   "compute": [ { "chip": "H100 (Hopper)", "segment": "Mainstream training/inference",  // segment is curated classification
                  "rate": "$1.47 – $3.19/hr",             // LIVE — merged from Vast.ai + RunPod, placeholder prices excluded
@@ -118,6 +118,42 @@ browser). Node size = market cap, glow = relative volume, ring = day change.
 Business `relationships` (curated) are kept strictly separate from statistical
 `correlations` (price returns) — the UI never conflates them, and correlation ≠
 causation is stated wherever correlations appear.
+
+## `data/youtube-trending.json` (optional)
+
+Written by `scripts/update-youtube.mjs` on its own 12-hour cron (see
+`.github/workflows/update-youtube.yml`), not the main pipeline — it's the only
+credentialed source in the whole pipeline (needs `YOUTUBE_API_KEY`), so it
+gets its own slower cadence to stay well under the free daily quota. Genuinely
+absent on a fresh checkout, or before the secret is configured — the frontend
+(the Frontier Releases card flip side) shows an honest "unavailable" state
+rather than treating a missing file as an error.
+
+```jsonc
+{
+  "updatedAt": "2026-07-15T12:00:00.000Z",
+  "windowDays": 7,                          // trailing window the videos are drawn from
+  "models": {
+    "claude": {
+      "query": "Claude AI",                 // exact YouTube search query used
+      "updatedAt": "…",                     // per-model — one model can fail while others succeed
+      "videos": [                           // top 5 BY VIEW COUNT in the trailing window, sorted descending
+        { "videoId": "…", "title": "…", "channelTitle": "…", "publishedAt": "…",
+          "viewCount": 210000,              // null if the stats call failed for this specific video
+          "url": "https://www.youtube.com/watch?v=…", "thumbnailUrl": "…" }
+      ]
+    },
+    "gpt": { … }, "gemini": { … }
+  }
+}
+```
+
+Each model is searched SEPARATELY (never one combined query) so one model's
+volume can't crowd out another's. A relevance filter (`scripts/lib/youtube.mjs`)
+drops the one known false-positive: "Gemini" results that read as the zodiac
+sign rather than the AI model. If a model's fetch fails on a given run, its
+PREVIOUS snapshot is kept rather than wiped to an empty list — never a
+fabricated result, but also never a needless downgrade for a transient error.
 
 ## `data/range.json`
 

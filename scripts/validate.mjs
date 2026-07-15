@@ -265,12 +265,50 @@ async function main() {
     });
   }
 
+  // data/youtube-trending.json — OPTIONAL (genuinely absent on a fresh
+  // checkout before YOUTUBE_API_KEY is configured, or before its first
+  // 12-hour cron run), so a missing file is not a failure. If it exists,
+  // its contents must be well-formed.
+  let yt;
+  try {
+    yt = JSON.parse(await readFile(path.join(DATA_DIR, 'youtube-trending.json'), 'utf-8'));
+  } catch (e) {
+    if (e.code !== 'ENOENT') fail(`youtube-trending.json present but invalid: ${e.message}`);
+  }
+  let ytVideoCount = 0;
+  if (yt) {
+    if (!isStr(yt.updatedAt) || isNaN(Date.parse(yt.updatedAt))) fail('youtube-trending.json: updatedAt missing/invalid');
+    if (!yt.models || typeof yt.models !== 'object') fail('youtube-trending.json: models missing');
+    else {
+      for (const [key, entry] of Object.entries(yt.models)) {
+        if (!entry || typeof entry !== 'object') { fail(`youtube-trending.json models.${key} malformed`); continue; }
+        if (!isStr(entry.query)) fail(`youtube-trending.json models.${key}.query missing`);
+        if (!isArr(entry.videos)) { fail(`youtube-trending.json models.${key}.videos must be an array`); continue; }
+        if (entry.videos.length > 5) fail(`youtube-trending.json models.${key}.videos has more than 5 entries`);
+        ytVideoCount += entry.videos.length;
+        entry.videos.forEach((v, i) => {
+          if (!isStr(v.videoId)) fail(`youtube-trending.json models.${key}.videos[${i}].videoId missing`);
+          if (!isStr(v.title)) fail(`youtube-trending.json models.${key}.videos[${i}].title missing`);
+          if (!isStr(v.url) || !v.url.includes(v.videoId || '\0')) fail(`youtube-trending.json models.${key}.videos[${i}].url missing/inconsistent`);
+          if (v.viewCount != null && (!isNum(v.viewCount) || v.viewCount < 0)) fail(`youtube-trending.json models.${key}.videos[${i}].viewCount must be a non-negative number or null`);
+          if (!isStr(v.publishedAt) || isNaN(Date.parse(v.publishedAt))) fail(`youtube-trending.json models.${key}.videos[${i}].publishedAt missing/invalid`);
+        });
+        // videos must actually be sorted by view count — the whole point of
+        // the "top viewed" claim shown on the card
+        for (let i = 1; i < entry.videos.length; i++) {
+          const prev = entry.videos[i - 1].viewCount, cur = entry.videos[i].viewCount;
+          if (prev != null && cur != null && cur > prev) fail(`youtube-trending.json models.${key}.videos not sorted by viewCount descending`);
+        }
+      }
+    }
+  }
+
   if (errors.length) {
     console.error(`✗ validate.mjs: ${errors.length} problem(s):`);
     errors.forEach((e) => console.error('  -', e));
     process.exit(1);
   }
-  console.log(`✓ validate.mjs: latest.json OK (${data.signals.length} signals, ${data.waves.length} waves, ${data.stocks.length} stocks); range.json OK (${ranges.historyDepthDays}d history); stock-network.json OK (${net.nodes.length} nodes, ${net.correlations.length} correlations)`);
+  console.log(`✓ validate.mjs: latest.json OK (${data.signals.length} signals, ${data.waves.length} waves, ${data.stocks.length} stocks); range.json OK (${ranges.historyDepthDays}d history); stock-network.json OK (${net.nodes.length} nodes, ${net.correlations.length} correlations)${yt ? `; youtube-trending.json OK (${ytVideoCount} videos)` : ''}`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

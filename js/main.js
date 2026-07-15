@@ -1,15 +1,17 @@
 // Orchestrator: loads data, renders every section, wires the time-range toggle
 // and a silent periodic refresh. The site is fully functional with only
 // latest.json; entities.json and range.json enrich it when present.
-import { loadLatest, loadEntities, loadRanges, loadStockNetwork } from './data.js';
+import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTrending } from './data.js';
 import { createOceanMap } from './oceanmap.js';
 import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
 import { renderTide } from './tide.js';
 import { renderCommunity } from './community.js';
 import { createStockNetwork } from './stocknetwork.js';
-import { renderCurated, renderLive, animateBars } from './sections.js';
+import { renderCurated, renderLive, animateBars, renderYouTubeTrending } from './sections.js';
 import { renderDataHealth } from './datahealth.js';
+import { renderBriefing } from './briefing.js';
+import { initNav, notifyDataReady } from './nav.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
 
 const REFRESH_MS = 10 * 60 * 1000; // silent re-fetch cadence
@@ -22,20 +24,6 @@ let entityNameById = {}; // id → readable name for the river entity filter (R8
 function tickClock() {
   const el = $('#clock');
   if (el) el.textContent = new Date().toLocaleTimeString('en-US', { hour12: false });
-}
-
-// "View as table" toggle for the stock network — reveals the accessible
-// stock table fallback without losing the network view.
-function wireTableToggle() {
-  const btn = $('#stock-table-toggle');
-  const wrap = $('#stock-table-wrap');
-  if (!btn || !wrap) return;
-  btn.addEventListener('click', () => {
-    const show = wrap.hidden;
-    wrap.hidden = !show;
-    btn.setAttribute('aria-expanded', String(show));
-    btn.textContent = show ? 'Hide table' : 'View as table';
-  });
 }
 
 // Ticker pause/play toggle for keyboard + touch users. Hover/focus pausing is
@@ -100,6 +88,7 @@ function applyRange(next) {
 
 function renderDynamic() {
   renderLive(data);
+  renderBriefing($('#briefing'), data);
   renderWaveforms($('#waves'), data.signals || [], data.waves || []);
   renderRiver($('#river'), data.signals || [], Date.now(), entityNameById);
   renderCommunity($('#community'), data.community || {});
@@ -111,6 +100,7 @@ async function boot() {
   tickClock();
   setInterval(tickClock, 1000);
   wireTickerToggle();
+  initNav();
   setInterval(paintUpdated, 30000);
 
   renderCurated(); // curated sections never change between loads
@@ -125,6 +115,7 @@ async function boot() {
       banner.textContent = 'Live data failed to load (' + err.message + '). Run "npm run build" to generate data/latest.json, then reload.';
       banner.classList.add('show');
     }
+    notifyDataReady(); // don't leave a pending deep-link scroll waiting forever
     return;
   }
 
@@ -142,11 +133,19 @@ async function boot() {
     applyRange('24H');
   }
 
-  // AI stock network (independent load — a failure here leaves the table fallback intact)
+  notifyDataReady(); // finishes any deep-link scroll that was waiting on real content
+
+  // AI stock network (independent load — a failure here doesn't block the rest of the page)
   loadStockNetwork().then((net) => {
     if ($('#stock-network')) createStockNetwork($('#stock-network'), net);
   }).catch((err) => console.warn('[stocknet] load skipped', err.message));
-  wireTableToggle();
+
+  // YouTube trending videos for the release-card flip side (independent load,
+  // refreshed twice daily). renderYouTubeTrending handles a null/missing
+  // result itself — swaps the initial "Loading…" state for an honest
+  // "unavailable" one rather than leaving it stuck on "Loading" forever.
+  loadYouTubeTrending().then(renderYouTubeTrending)
+    .catch((err) => { console.warn('[youtube] load skipped', err.message); renderYouTubeTrending(null); });
 
   // silent refresh — keeps an open tab from going stale without a reload
   setInterval(async () => {

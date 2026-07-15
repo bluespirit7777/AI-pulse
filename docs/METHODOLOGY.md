@@ -205,7 +205,7 @@ serves live market cap is auth-gated, so this is the honest alternative.
 **Relative volume** = latest volume / 20-day average (raw share volume isn't
 comparable across companies). Business relationships and price correlations are
 kept strictly separate, and *correlation ≠ causation* is stated wherever
-correlations appear. The accessible table remains behind "View as table".
+correlations appear.
 
 **Per-stock candlestick chart.** Selecting a stock opens a drawer with a
 **native SVG candlestick chart** drawn from a compact ~3-month daily OHLC
@@ -221,6 +221,42 @@ coral when lower; the y-axis is scaled to the series' own high/low range
 daily bars, not a streaming tick chart — and a "Live interactive chart on
 TradingView" link covers the fully-interactive/real-time view for anyone
 whose network allows it.
+
+## Frontier Releases: top YouTube videos
+
+Each Frontier Releases card (Claude/ChatGPT/Gemini) flips to show the top 5
+YouTube videos **by view count** in the trailing 7 days, searched for that
+model **separately** — "Claude AI", "ChatGPT", "Gemini AI" — so one model's
+search volume never crowds out another's, and no single combined query tries
+to average three different audiences together.
+
+Two deliberate choices worth stating explicitly:
+- **View count over recency.** `order=viewCount` (YouTube's own server-side
+  ranking) surfaces what actually got watched that week, not whichever
+  small channel happened to publish minutes before the fetch ran — the same
+  "impact over recency" reasoning behind how the Three Strongest Waves are
+  picked.
+- **Twice-daily cadence, not live.** This is the only credentialed source in
+  the pipeline (`YOUTUBE_API_KEY`, YouTube Data API v3) and `search.list`
+  costs 100 quota units/call against a 10,000/day free quota; fetching on the
+  main 30-minute cycle would blow through it. It runs on its own 12-hour
+  workflow instead — genuinely a **12-hour snapshot**, labelled as such (not
+  "Live"), never presented as more current than it is.
+
+**Relevance filter.** "Gemini" collides with the zodiac sign on YouTube.
+`scripts/lib/youtube.mjs`'s `isAiRelevant()` rejects a result only when it
+carries a zodiac/horoscope/astrology signal AND no AI-context signal — it
+does not filter on the model names themselves (every result already contains
+the search query in its title, which would make that check trivially true
+and defeat its own purpose). Ambiguous-but-unflagged titles are left in
+rather than over-filtered.
+
+**Graceful absence.** If `YOUTUBE_API_KEY` isn't configured, or a given
+run's fetch fails for one model, the card shows an honest "unavailable"
+state — never a stale result mislabeled as current, and never a fabricated
+one. A failed run for one model keeps that model's previous snapshot rather
+than wiping it to empty; a fully missing `data/youtube-trending.json` (e.g.
+before the secret is first set) is not treated as a validation error.
 
 ## Compute pricing
 
@@ -357,6 +393,17 @@ scorers…") rather than assigning an invented number. Cost efficiency is
 deliberately **qualitative** (budget/mid/premium tier + self-hostability), not
 fabricated precise $/token figures, since exact provider pricing changes too
 often for a hand-maintained number to stay honest for long.
+
+**Bar honesty**: `js/sections.js`'s `rankRows()` only draws a proportional bar
+where a row carries a real published `score` (e.g. Reasoning's Humanity's Last
+Exam %, Image AI's Elo) — its width is a genuine linear scale against the
+strongest score in that view. Rows without one (Overall balance, Agentic
+coding, Cost efficiency, Local/Video AI, and any model not tracked on a given
+benchmark) render no bar at all: a numbered rank, an "Editorial ranking · no
+measured score" tag, and a "T-" prefix when two rows tie. This replaced an
+earlier version where every row got a bar sized from an internal ordinal `w`
+weight regardless of whether a real score existed — a decorative bar length
+that could be mistaken for a measurement.
 
 ## Data Health
 

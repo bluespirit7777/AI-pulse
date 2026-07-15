@@ -23,23 +23,47 @@ const RELEASE_BRAND = {
   google: { name: MODEL_REGISTRY.gemini.brand, org: MODEL_REGISTRY.gemini.org },
 };
 const YT_ICON = `<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true"><path d="M9.5 7.5v9l8-4.5-8-4.5Z"/></svg>`;
+// Release cards are keyed by logoKey (anthropic/openai/google, matching the
+// RSS/YouTube feed source); the trending-videos data is keyed by the
+// canonical MODEL_REGISTRY id (claude/gpt/gemini) — this bridges the two.
+const LOGO_TO_MODEL_KEY = { anthropic: 'claude', openai: 'gpt', google: 'gemini' };
+const fmtViews = (n) => (n == null ? null : n >= 1e6 ? (n / 1e6).toFixed(1) + 'M' : n >= 1e3 ? (n / 1e3).toFixed(1) + 'K' : String(n));
 
 const setHTML = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
 
+// Honesty pass (Phase 4): a bar only appears where `score` is a real,
+// published number — its width is a genuine linear scale against the
+// strongest score in the same list. Rows without a `score` (ordinal-only
+// rankings, or benchmarks not run on that model) get a numbered/tied rank
+// and an explicit "Editorial ranking" label instead of a bar that could be
+// mistaken for a measurement. Ties share a rank number with a "T-" prefix.
 function rankRows(rows) {
-  return rows.map((r) => `
-    <div class="lb-row">
+  const scored = rows.filter((r) => r.score != null);
+  const maxScore = scored.length ? Math.max(...scored.map((r) => r.score)) : 0;
+  const rankCounts = new Map();
+  for (const r of rows) rankCounts.set(r.rank, (rankCounts.get(r.rank) || 0) + 1);
+
+  return rows.map((r) => {
+    const tied = rankCounts.get(r.rank) > 1;
+    const rankLabel = (tied ? 'T-' : '') + String(r.rank).padStart(2, '0');
+    const hasScore = r.score != null;
+    const barPct = hasScore && maxScore ? Math.round((r.score / maxScore) * 100) : 0;
+    return `
+    <div class="lb-row${hasScore ? '' : ' lb-row--ordinal'}">
       <div class="lb-top">
         <div class="lb-name">
-          <span class="lb-rank">${String(r.rank).padStart(2, '0')}</span>
+          <span class="lb-rank">${esc(rankLabel)}</span>
           <span class="lb-model">${esc(r.model)}</span>
           <span class="lb-org">${esc(r.org)}</span>
         </div>
-        <span class="lb-stat">${esc(r.stat)}</span>
+        <span class="lb-stat">${hasScore ? esc(String(r.score) + (r.scoreUnit || '')) : esc(r.stat)}</span>
       </div>
-      <div class="bar-track"><div class="bar-fill" style="--w:${r.w}%"></div></div>
+      ${hasScore
+        ? `<div class="bar-track"><div class="bar-fill" style="--w:${barPct}%"></div></div>`
+        : `<div class="lb-editorial-tag">Editorial ranking · no measured score for this view</div>`}
       <div class="lb-note">${esc(r.note)}</div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 // Hovering the donut shows which AI a wedge belongs to — the conic-gradient
@@ -166,24 +190,43 @@ export function renderLive(data, now = Date.now()) {
   const releases = data.releases || [];
   setHTML('releases', releases.map((r) => {
     const brand = RELEASE_BRAND[r.logoKey] || { name: r.lab, org: '' };
+    const accent = ACCENT[r.logoKey] || ACCENT.other;
+    const modelKey = LOGO_TO_MODEL_KEY[r.logoKey];
+    const backId = `yt-back-${esc(r.logoKey)}`;
+    const listId = `yt-list-${esc(r.logoKey)}`;
     return `
-    <div class="release-card" style="border-top-color:${ACCENT[r.logoKey] || ACCENT.other}">
-      <div class="release-lab">
-        <span class="release-logo" style="color:${ACCENT[r.logoKey] || ACCENT.other}">${LOGO[r.logoKey] || LOGO.other}</span>
-        <span class="release-labtext">${esc(brand.name)}<span class="release-org">${esc(brand.org)}</span></span>
+    <div class="release-card" data-model-key="${esc(modelKey || '')}">
+      <div class="release-card-inner">
+        <div class="release-card-face release-card-front" style="border-top-color:${accent}">
+          <div class="release-lab">
+            <span class="release-logo" style="color:${accent}">${LOGO[r.logoKey] || LOGO.other}</span>
+            <span class="release-labtext">${esc(brand.name)}<span class="release-org">${esc(brand.org)}</span></span>
+          </div>
+          <ul class="release-list">
+            ${(r.items || []).map((i) => `
+              <li>
+                <span class="release-item-main">
+                  <a class="release-item-link" href="${esc(i.url)}" target="_blank" rel="noopener">${i.isVideo ? `<span class="release-yt-inline" aria-hidden="true">${YT_ICON}</span>` : ''}<b>${esc(i.h)}</b></a>
+                  ${i.videoUrl ? `<a class="release-yt-link" href="${esc(i.videoUrl)}" target="_blank" rel="noopener" aria-label="Watch the launch video on YouTube" title="Watch on YouTube">${YT_ICON}</a>` : ''}
+                </span>
+                <span class="d">${esc(i.d)}</span>
+              </li>`).join('') || `<li class="release-empty">No qualifying releases in the last 60 days — this section only shows actual ships, not general lab news.</li>`}
+          </ul>
+          ${modelKey ? `<button type="button" class="release-flip-btn" data-flip="1" aria-expanded="false" aria-controls="${backId}">${YT_ICON} Top videos this week</button>` : ''}
+        </div>
+        ${modelKey ? `
+        <div class="release-card-face release-card-back" id="${backId}" style="border-top-color:${accent}" inert>
+          <div class="release-lab">
+            <span class="release-logo" style="color:${accent}">${LOGO[r.logoKey] || LOGO.other}</span>
+            <span class="release-labtext">Top videos this week<span class="release-org">${esc(brand.name)} on YouTube</span></span>
+          </div>
+          <div class="yt-videos" id="${listId}"><p class="yt-loading">Loading this week's top videos…</p></div>
+          <button type="button" class="release-flip-btn" data-flip="0">← Back to releases</button>
+        </div>` : ''}
       </div>
-      <ul class="release-list">
-        ${(r.items || []).map((i) => `
-          <li>
-            <span class="release-item-main">
-              <a class="release-item-link" href="${esc(i.url)}" target="_blank" rel="noopener">${i.isVideo ? `<span class="release-yt-inline" aria-hidden="true">${YT_ICON}</span>` : ''}<b>${esc(i.h)}</b></a>
-              ${i.videoUrl ? `<a class="release-yt-link" href="${esc(i.videoUrl)}" target="_blank" rel="noopener" aria-label="Watch the launch video on YouTube" title="Watch on YouTube">${YT_ICON}</a>` : ''}
-            </span>
-            <span class="d">${esc(i.d)}</span>
-          </li>`).join('') || `<li class="release-empty">No qualifying releases in the last 60 days — this section only shows actual ships, not general lab news.</li>`}
-      </ul>
     </div>`;
   }).join(''));
+  wireReleaseFlip();
 
   // (The former "Big AI wire" section was removed — the Signal River now
   //  carries the full chronological stream with filters, so a separate wire
@@ -200,20 +243,6 @@ export function renderLive(data, now = Date.now()) {
       ${b.url ? `<div class="card-src"><span>${sourceChip('auto')} ${esc(b.sourceName || '')}</span><a class="src-link" href="${esc(b.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
     </div>`).join('') : `<p class="empty-state">No research signals in the current window.</p>`);
 
-  // stocks
-  const layerClass = { Chips: 'layer-chips', Cloud: 'layer-cloud', Software: 'layer-software', Foundry: 'layer-foundry' };
-  setHTML('stocks', (data.stocks || []).map((s) => {
-    const up = (s.changePct || 0) >= 0;
-    return `<tr>
-      <td><a href="${esc(s.url)}" target="_blank" rel="noopener" class="ticker-cell" style="text-decoration:none;">${esc(s.t)}</a><span class="co-name">${esc(s.n)}</span></td>
-      <td><span class="layer-pill ${layerClass[s.layer] || ''}">${esc(s.layer)}</span></td>
-      <td class="metric-cell">${s.price != null ? '$' + Number(s.price).toFixed(2) : '—'}</td>
-      <td class="${up ? 'stock-up' : 'stock-down'}">${s.changePct != null ? (up ? '+' : '') + Number(s.changePct).toFixed(2) + '%' : '—'}</td>
-      <td class="metric-cell">${s.relVolume != null ? Number(s.relVolume).toFixed(2) + '×' : '—'}</td>
-      <td class="signal-cell">${esc(s.signal || '')}</td>
-    </tr>`;
-  }).join(''));
-
   // compute pricing — live from Vast.ai + RunPod public marketplace APIs
   // (see scripts/lib/compute.mjs); empty, not a stale fallback, if both fetches failed
   const compute = data.compute || [];
@@ -224,6 +253,67 @@ export function renderLive(data, now = Date.now()) {
     `<tr><td colspan="5" class="signal-cell">Live GPU pricing unavailable this cycle — check back shortly.</td></tr>`);
   const computeAsof = document.getElementById('compute-asof');
   if (computeAsof) computeAsof.textContent = compute.length ? 'Live · ' + fmtSnapshot(data.updatedAt) : 'Unavailable';
+}
+
+// Release-card flip: front (releases, unchanged) / back (top YouTube videos
+// this week). Delegated on the stable #releases container rather than bound
+// per-button, since renderLive() replaces the cards' innerHTML on every
+// silent refresh — direct button listeners would go stale.
+function setFlipped(card, flipped) {
+  card.classList.toggle('is-flipped', flipped);
+  const front = card.querySelector('.release-card-front');
+  const back = card.querySelector('.release-card-back');
+  const flipBtn = card.querySelector('.release-flip-btn[data-flip="1"]');
+  if (flipBtn) flipBtn.setAttribute('aria-expanded', String(flipped));
+  if (front) front.inert = flipped;
+  if (back) back.inert = !flipped;
+  // move focus with the flip, same pattern as this codebase's drawers
+  (flipped ? back?.querySelector('.release-flip-btn') : flipBtn)?.focus();
+}
+
+function wireReleaseFlip() {
+  const container = document.getElementById('releases');
+  if (!container || container.dataset.wired) return;
+  container.dataset.wired = '1';
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.release-flip-btn');
+    if (!btn) return;
+    const card = btn.closest('.release-card');
+    if (!card) return;
+    setFlipped(card, btn.dataset.flip === '1');
+  });
+}
+
+// Top-5-by-view-count-in-7-days videos per model (data/youtube-trending.json,
+// refreshed twice daily — see scripts/update-youtube.mjs). Independent fetch
+// from the main data cycle, so this fills in the card backs whenever it
+// resolves — separately from renderLive(), and honestly empty if the fetch
+// hasn't succeeded yet or the model has no results this cycle.
+export function renderYouTubeTrending(yt) {
+  const models = yt?.models || {};
+  for (const key of ['claude', 'gpt', 'gemini']) {
+    const listEl = document.querySelector(`.release-card[data-model-key="${key}"] .yt-videos`);
+    if (!listEl) continue;
+    const videos = models[key]?.videos || [];
+    if (!videos.length) {
+      listEl.innerHTML = `<p class="yt-empty">No trending videos available this cycle — refreshes twice a day.</p>`;
+      continue;
+    }
+    listEl.innerHTML = `
+      <ul class="yt-video-list">
+        ${videos.map((v) => `
+          <li class="yt-video">
+            <a class="yt-video-title" href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.title)}</a>
+            <div class="yt-video-meta">
+              <span class="yt-video-channel">${esc(v.channelTitle)}</span>
+              ${v.viewCount != null ? `<span class="yt-video-views">${esc(fmtViews(v.viewCount))} views</span>` : ''}
+              ${freshnessChip(v.publishedAt)}
+            </div>
+          </li>`).join('')}
+      </ul>
+      <p class="yt-caption">${sourceChip('snapshot12h', `Top by view count in the last ${yt?.windowDays || 7} days`)}</p>
+    `;
+  }
 }
 
 // animate ordinal bars once rows exist
