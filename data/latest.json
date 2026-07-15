@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-15T02:30:54.739Z",
+  "updatedAt": "2026-07-15T02:45:25.151Z",
   "build": {
-    "sha": "51f6e896321ae489740a7501660c450208406cce",
-    "shortSha": "51f6e89",
+    "sha": "c5bf1a8b37aba714dbd3d731de2810b4e8f75568",
+    "shortSha": "c5bf1a8",
     "ref": "main",
-    "builtAt": "2026-07-15T02:31:09.047Z"
+    "builtAt": "2026-07-15T02:45:40.976Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 14,
+    "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 5.1,
     "estimatedDatasets": 3,
-    "buildSha": "51f6e89",
-    "lastSuccessfulUpdate": "2026-07-15T02:30:54.739Z"
+    "buildSha": "c5bf1a8",
+    "lastSuccessfulUpdate": "2026-07-15T02:45:25.151Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
@@ -26,7 +26,7 @@
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "DEEPMIND CEO CALLS FOR AN INDEPENDENT STANDARDS BODY TO REGULATE FRONTIER AI",
-    "OPENAI’S FIRST HARDWARE DEVICE IS REPORTEDLY A SCREENLESS SPEAKER THAT CAN MOVE"
+    "SPACEXAI’S GROK PROGRAMMING TOOL WAS UPLOADING ITS USERS’ ENTIRE CODEBASE TO CLOUD STORAGE"
   ],
   "signals": [
     {
@@ -43,8 +43,16 @@
       "significance": 81,
       "impact": "high",
       "verification": "uncertain",
-      "sourceCount": 4,
+      "sourceCount": 7,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device"
+        },
         {
           "name": "Ars Technica",
           "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
@@ -52,6 +60,10 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs"
         },
         {
           "name": "The Verge",
@@ -134,7 +146,7 @@
       "category": "product",
       "catConfidence": 0.75,
       "family": "product",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -212,7 +224,7 @@
       "category": "analysis",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 66,
+      "significance": 65,
       "impact": "notable",
       "verification": "analysis",
       "sourceCount": 2,
@@ -284,6 +296,34 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "clusterId": "yqmj6o",
+      "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
+      "desc": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packaging and uploading entire code repositories, \"including files it was told not to open […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "dateISO": "2026-07-14T19:25:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "research",
+      "catConfidence": 0.43,
+      "family": "research",
+      "significance": 57,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini",
+        "grok",
+        "gcp"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/",
       "clusterId": "1ss8j1c",
       "title": "OpenAI’s first hardware device is reportedly a screenless speaker that can move",
@@ -307,32 +347,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-      "clusterId": "1stq8zc",
-      "title": "OpenAI’s new flagship model deletes files on its own, people keep warning",
-      "desc": "A number of social media posts claim that GPT-5.6 Sol deleted files and data without warning. OpenAI had basically disclosed the problem in June.",
-      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-      "dateISO": "2026-07-14T21:50:11.000Z",
-      "date": "JUL 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
         "gpt"
       ]
     },
@@ -423,6 +437,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+      "clusterId": "1stq8zc",
+      "title": "OpenAI’s new flagship model deletes files on its own, people keep warning",
+      "desc": "A number of social media posts claim that GPT-5.6 Sol deleted files and data without warning. OpenAI had basically disclosed the problem in June.",
+      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+      "dateISO": "2026-07-14T21:50:11.000Z",
+      "date": "JUL 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5",
       "clusterId": "sgv7zy",
       "title": "How Claude's values vary by model and language",
@@ -498,32 +538,6 @@
       "sourceName": "Forbes",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-      "clusterId": "mgrppk",
-      "title": "Waze is getting a bunch of new AI-powered features",
-      "desc": "Waze is getting an AI makeover. Google is integrating its flagship AI assistant, Gemini, into the driving app with the goal of letting users personalize their trips a little more. Of the four new updates, only two are being described as involving Gemini. Waze says its updating its conversation reporting feature, first introduced in 2024, […]",
-      "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-      "dateISO": "2026-07-13T09:00:00.000Z",
-      "date": "JUL 13 2026",
-      "category": "product",
-      "catConfidence": 0.56,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
       ]
     },
     {
@@ -693,6 +707,32 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "clusterId": "19r0qz6",
+      "title": "The Google Images homepage will recommend photos even before you search",
+      "desc": "Google is announcing a big change to the Google Images homepage in honor of the platform's 25th anniversary this week. Instead of a mostly blank page with a search bar, the homepage will soon show you a bunch of images that it thinks you might like before you even start searching. The company says the […]",
+      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "dateISO": "2026-07-14T16:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/inventing-eliza-book-excerpt-chatbot/",
       "clusterId": "l5szxj",
       "title": "The Chatbot That Foretold Why People Share Secrets With ChatGPT",
@@ -805,32 +845,6 @@
       "entityIds": [
         "claude",
         "qwen"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "clusterId": "hh4ve5",
-      "title": "Lorde says Ray-Ban Meta AI glasses are ‘not sexy’",
-      "desc": "Lorde was performing at the Mad Cool Festival in Madrid on Thursday and took some time during her set to speak out against AI glasses. While she didn't specify any brands in particular, it's likely she was taking a shot at festival sponsor Ray-Ban, which has collaborated with Meta on a pair of AI smart […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy",
-      "dateISO": "2026-07-12T20:10:19.000Z",
-      "date": "JUL 12 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "llama"
       ]
     },
     {
@@ -1227,8 +1241,16 @@
       "date": "JUL 13 2026",
       "dateISO": "2026-07-13T17:00:00.000Z",
       "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-      "sourceCount": 4,
+      "sourceCount": 7,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965670/openai-chatgpt-ai-smart-speaker-hardware-device"
+        },
         {
           "name": "Ars Technica",
           "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/"
@@ -1236,6 +1258,10 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs"
         },
         {
           "name": "The Verge",
@@ -1254,27 +1280,25 @@
     {
       "family": "research",
       "category": "research",
-      "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
-      "summary": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
-      "significance": 48,
+      "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
+      "summary": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that…",
+      "significance": 57,
       "impact": "notable",
-      "verification": "official",
-      "date": "JUN 18 2026",
-      "dateISO": "2026-06-18T08:00:00.000Z",
-      "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "sourceCount": 2,
+      "verification": "single",
+      "date": "JUL 14 2026",
+      "dateISO": "2026-07-14T19:25:00.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/diagnose-rare-childhood-diseases"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini",
+        "grok",
+        "gcp"
       ],
       "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
     }
@@ -1285,15 +1309,15 @@
     "perplexity": 0,
     "gpt": 74,
     "claude": 73,
-    "gemini": 36,
-    "grok": 1,
-    "llama": 1,
+    "gemini": 37,
+    "grok": 2,
+    "llama": 0,
     "deepseek": 1,
     "qwen": 4,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
-    "gcp": 0,
+    "gcp": 1,
     "oracle": 1,
     "coreweave": 0,
     "nvidia": 1,
@@ -1440,17 +1464,6 @@
           "impact": "notable"
         },
         {
-          "h": "Waze is getting a bunch of new AI-powered features",
-          "d": "JUL 13 2026",
-          "url": "https://www.theverge.com/transportation/964132/waze-gemini-ai-voice-commands-less-chatty",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing computer use in Gemini 3.5 Flash",
           "d": "JUN 24 2026",
           "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
@@ -1476,6 +1489,17 @@
           "h": "Introducing Gemini Omni",
           "d": "MAY 17 2026",
           "url": "https://deepmind.google/blog/introducing-gemini-omni/",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Google DeepMind",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing Google Antigravity 2.0",
+          "d": "MAY 17 2026",
+          "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0/",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Google DeepMind",
@@ -1514,14 +1538,14 @@
     {
       "org": "OPENAI",
       "logoKey": "openai",
-      "date": "JUL 10 2026",
+      "date": "JUL 13 2026",
       "verification": "uncertain",
-      "impact": "emerging",
-      "h": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
-      "p": "The iPhone maker claims OpenAI encouraged poached employees to bring over confidential presentations, secret prototypes, and key supplier details.",
-      "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
-      "sourceName": "Wired",
-      "sourceCount": 3
+      "impact": "high",
+      "h": "The 6 wildest claims in Apple’s lawsuit against OpenAI",
+      "p": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Appl…",
+      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
+      "sourceName": "The Verge",
+      "sourceCount": 7
     },
     {
       "org": "OPENAI",
@@ -1534,18 +1558,6 @@
       "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 13 2026",
-      "verification": "uncertain",
-      "impact": "high",
-      "h": "The 6 wildest claims in Apple’s lawsuit against OpenAI",
-      "p": "When Apple employees interviewed for jobs at OpenAI, the AI startup's hardware head allegedly asked them to show up with something unusual: components they were working on and unreleased product samples. That's according to a blockbuster lawsuit filed by Appl…",
-      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
-      "sourceName": "The Verge",
-      "sourceCount": 4
     },
     {
       "org": "AI WIRE",
@@ -1582,6 +1594,18 @@
       "url": "https://techcrunch.com/2026/07/14/the-founder-of-hinge-raised-18m-to-build-a-new-ai-dating-service-overtone/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 14 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "US military sent explosive drone boats into combat for the first time",
+      "p": "US military’s drone boats struck an Iranian naval port as war heats up again.",
+      "url": "https://arstechnica.com/ai/2026/07/us-military-sent-explosive-drone-boats-into-combat-for-the-first-time/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1611,6 +1635,17 @@
     }
   ],
   "breakthroughs": [
+    {
+      "field": "Research",
+      "date": "JUL 14 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cl…",
+      "p": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that Cereblab published findings on Monday showing how the Grok Build CLI was packag…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
     {
       "field": "Vision",
       "date": "JUL 14 2026",
@@ -1663,17 +1698,6 @@
       "h": "How agents are transforming work",
       "p": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
       "url": "https://openai.com/index/how-agents-are-transforming-work",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "field": "Biology",
-      "date": "JUN 23 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-      "p": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
-      "url": "https://openai.com/index/gpt-5-immunology-mystery",
       "sourceName": "OpenAI",
       "sourceCount": 1
     }
@@ -6182,10 +6206,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.53/hr",
-      "trend": "→ 1% vs 2d ago",
+      "rate": "$2.94 – $4.39/hr",
+      "trend": "→ 3% vs 2d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6214,14 +6238,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.60 – $1.49/hr",
-      "trend": "↑ 11% vs 2d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$0.40 – $1.49/hr",
+      "trend": "→ 0% vs 2d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-15T02:30:54.739Z",
+    "updatedAt": "2026-07-15T02:45:25.151Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6230,16 +6254,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 288,
-        "fetchedStoryCount": 288,
+        "rawStoryHits": 259,
+        "fetchedStoryCount": 198,
         "validatedStoryCount": 165,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 165,
-        "isEstimated": false,
-        "rawCommentHits": 2211,
+        "storyCoverage": 0.7644787644787645,
+        "estimatedRelevantDiscussions": 216,
+        "isEstimated": true,
+        "rawCommentHits": 2209,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
-        "commentCoverage": 0.13568521031207598,
+        "commentCoverage": 0.13580805794477138,
         "limited": false,
         "points": 1506,
         "themes": [
@@ -6322,12 +6346,12 @@
         "storyCoverage": 0.2742230347349177,
         "estimatedRelevantDiscussions": 1087,
         "isEstimated": true,
-        "rawCommentHits": 6577,
+        "rawCommentHits": 6575,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.04561350159647255,
+        "commentCoverage": 0.045627376425855515,
         "limited": false,
-        "points": 17594,
+        "points": 17597,
         "themes": [
           {
             "id": "coding",
@@ -6489,10 +6513,10 @@
         "storyCoverage": 0.5758157389635317,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11254,
+        "rawCommentHits": 11255,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 174,
-        "commentCoverage": 0.02665718855518038,
+        "commentCoverage": 0.02665482007996446,
         "limited": false,
         "points": 2394,
         "themes": [
@@ -6564,18 +6588,18 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 78,
-        "fetchedStoryCount": 78,
-        "validatedStoryCount": 31,
+        "rawStoryHits": 77,
+        "fetchedStoryCount": 77,
+        "validatedStoryCount": 30,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 31,
+        "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
         "rawCommentHits": 617,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 236,
         "commentCoverage": 0.4862236628849271,
         "limited": false,
-        "points": 135,
+        "points": 133,
         "themes": [
           {
             "id": "local",
@@ -6650,16 +6674,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 76,
-        "fetchedStoryCount": 76,
+        "rawStoryHits": 72,
+        "fetchedStoryCount": 72,
         "validatedStoryCount": 68,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 68,
         "isEstimated": false,
-        "rawCommentHits": 1125,
+        "rawCommentHits": 1079,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 291,
-        "commentCoverage": 0.26666666666666666,
+        "commentCoverage": 0.27803521779425394,
         "limited": false,
         "points": 1978,
         "themes": [
@@ -6736,12 +6760,12 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 173,
-        "fetchedStoryCount": 170,
+        "rawStoryHits": 174,
+        "fetchedStoryCount": 174,
         "validatedStoryCount": 36,
-        "storyCoverage": 0.9826589595375722,
-        "estimatedRelevantDiscussions": 37,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 36,
+        "isEstimated": false,
         "rawCommentHits": 4694,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 211,
