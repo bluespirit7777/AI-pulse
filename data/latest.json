@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-15T05:30:55.023Z",
+  "updatedAt": "2026-07-15T05:45:25.998Z",
   "build": {
-    "sha": "7899bd014c071eb5f96b4c1d5486cf08c0c96611",
-    "shortSha": "7899bd0",
+    "sha": "ce2e9c99c144506489262acda6b163f1f99751d4",
+    "shortSha": "ce2e9c9",
     "ref": "main",
-    "builtAt": "2026-07-15T05:31:08.839Z"
+    "builtAt": "2026-07-15T05:45:42.673Z"
   },
   "dataHealth": {
     "feedsSucceeded": 10,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 5.2,
-    "estimatedDatasets": 3,
-    "buildSha": "7899bd0",
-    "lastSuccessfulUpdate": "2026-07-15T05:30:55.023Z"
+    "estimatedDatasets": 2,
+    "buildSha": "ce2e9c9",
+    "lastSuccessfulUpdate": "2026-07-15T05:45:25.998Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
@@ -116,11 +116,15 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 67,
-      "impact": "notable",
+      "significance": 73,
+      "impact": "high",
       "verification": "official",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        },
         {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
@@ -918,30 +922,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
-      "clusterId": "16gsw9v",
-      "title": "Reflection inks $1B compute deal with Nebius",
-      "desc": "Reflection AI has signed a $1 billion deal to access Nebius' compute. Reflection was founded in 2024 and is developing open source AI technology.",
-      "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
-      "dateISO": "2026-07-14T14:37:48.000Z",
-      "date": "JUL 14 2026",
-      "category": "opensource",
-      "catConfidence": 0.45,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
       "clusterId": "1lxizuc",
       "title": "OpenAI may have made a fatal misstep in copyright fight with news orgs",
@@ -967,6 +947,30 @@
         "chatgpt",
         "gpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+      "clusterId": "16gsw9v",
+      "title": "Reflection inks $1B compute deal with Nebius",
+      "desc": "Reflection AI has signed a $1 billion deal to access Nebius' compute. Reflection was founded in 2024 and is developing open source AI technology.",
+      "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+      "dateISO": "2026-07-14T14:37:48.000Z",
+      "date": "JUL 14 2026",
+      "category": "opensource",
+      "catConfidence": 0.45,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://openai.com/index/openai-frontier-governance-framework",
@@ -1203,14 +1207,18 @@
       "category": "product",
       "title": "Introducing Claude for Teachers",
       "summary": "Introducing Claude for Teachers",
-      "significance": 67,
-      "impact": "notable",
+      "significance": 73,
+      "impact": "high",
       "verification": "official",
       "date": "JUL 14 2026",
       "dateISO": "2026-07-14T15:07:29.000Z",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        },
         {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
@@ -1299,7 +1307,7 @@
     "copilot": 1,
     "perplexity": 0,
     "gpt": 73,
-    "claude": 72,
+    "claude": 71,
     "gemini": 37,
     "grok": 2,
     "llama": 0,
@@ -1328,9 +1336,9 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Anthropic",
-          "sourceCount": 1,
+          "sourceCount": 2,
           "verification": "official",
-          "impact": "notable"
+          "impact": "high"
         },
         {
           "h": "Introducing a way to reflect on how you use Claude",
@@ -1610,7 +1618,7 @@
       "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
       "sourceName": "TechCrunch",
       "verification": "single",
-      "impact": "notable"
+      "impact": "emerging"
     },
     {
       "name": "Warp’s big bet on building open source with GPT-5.5",
@@ -6136,20 +6144,20 @@
       "rate": "$1.73 – $3.19/hr",
       "trend": "↑ 6% vs 2d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.59/hr",
-      "trend": "→ 0% vs 2d ago",
+      "rate": "$3.29 – $4.47/hr",
+      "trend": "→ 3% vs 2d ago",
       "trendClass": "trend-flat",
       "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $8.75/hr",
+      "rate": "$5.89 – $8.76/hr",
       "trend": "→ 0% vs 2d ago",
       "trendClass": "trend-flat",
       "note": "Live from 4 rented offers across Vast.ai + RunPod"
@@ -6173,14 +6181,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "↑ 32% vs 2d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$0.36 – $1.49/hr",
+      "trend": "→ 2% vs 2d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-15T05:30:55.023Z",
+    "updatedAt": "2026-07-15T05:45:25.998Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6190,11 +6198,11 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 289,
-        "fetchedStoryCount": 199,
+        "fetchedStoryCount": 289,
         "validatedStoryCount": 165,
-        "storyCoverage": 0.6885813148788927,
-        "estimatedRelevantDiscussions": 240,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 165,
+        "isEstimated": false,
         "rawCommentHits": 2210,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
@@ -6281,12 +6289,12 @@
         "storyCoverage": 0.2744739249771272,
         "estimatedRelevantDiscussions": 1086,
         "isEstimated": true,
-        "rawCommentHits": 6580,
+        "rawCommentHits": 6579,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.04559270516717325,
+        "commentCoverage": 0.045599635202918376,
         "limited": false,
-        "points": 17632,
+        "points": 17638,
         "themes": [
           {
             "id": "coding",
@@ -6362,17 +6370,17 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 118,
         "isEstimated": false,
-        "rawCommentHits": 1111,
+        "rawCommentHits": 1112,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.27002700270027,
+        "commentCoverage": 0.2697841726618705,
         "limited": false,
-        "points": 2192,
+        "points": 2193,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 61
+            "count": 62
           },
           {
             "id": "reasoning",
@@ -6448,10 +6456,10 @@
         "storyCoverage": 0.5747126436781609,
         "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 11250,
+        "rawCommentHits": 11252,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 174,
-        "commentCoverage": 0.02666666666666667,
+        "commentCoverage": 0.026661926768574477,
         "limited": false,
         "points": 2396,
         "themes": [
@@ -6523,16 +6531,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 77,
-        "fetchedStoryCount": 77,
+        "rawStoryHits": 47,
+        "fetchedStoryCount": 47,
         "validatedStoryCount": 30,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
-        "rawCommentHits": 616,
+        "rawCommentHits": 617,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 236,
-        "commentCoverage": 0.487012987012987,
+        "commentCoverage": 0.4862236628849271,
         "limited": false,
         "points": 133,
         "themes": [
@@ -6544,7 +6552,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 54
+            "count": 55
           },
           {
             "id": "coding",
@@ -6609,18 +6617,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 72,
-        "fetchedStoryCount": 72,
+        "rawStoryHits": 81,
+        "fetchedStoryCount": 81,
         "validatedStoryCount": 68,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 68,
         "isEstimated": false,
-        "rawCommentHits": 1102,
+        "rawCommentHits": 1125,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 291,
-        "commentCoverage": 0.27223230490018147,
+        "commentCoverage": 0.26666666666666666,
         "limited": false,
-        "points": 2007,
+        "points": 2008,
         "themes": [
           {
             "id": "price",
@@ -6703,7 +6711,7 @@
         "isEstimated": false,
         "rawCommentHits": 4690,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 213,
+        "validatedCommentCount": 212,
         "commentCoverage": 0.06396588486140725,
         "limited": false,
         "points": 2461,
@@ -6711,12 +6719,12 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 56
+            "count": 55
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 56
+            "count": 55
           },
           {
             "id": "local",
