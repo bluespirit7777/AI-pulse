@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-07-15T06:45:24.892Z",
+  "updatedAt": "2026-07-15T07:00:59.756Z",
   "build": {
-    "sha": "afbc90fab3f160e6bf14c634d9b307f460dc9e4a",
-    "shortSha": "afbc90f",
+    "sha": "08c8c418bb872f7a08b683a26ddc7c85044f07f7",
+    "shortSha": "08c8c41",
     "ref": "main",
-    "builtAt": "2026-07-15T06:45:36.710Z"
+    "builtAt": "2026-07-15T07:01:29.141Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 5.3,
-    "estimatedDatasets": 3,
-    "buildSha": "afbc90f",
-    "lastSuccessfulUpdate": "2026-07-15T06:45:24.892Z"
+    "estimatedDatasets": 2,
+    "buildSha": "08c8c41",
+    "lastSuccessfulUpdate": "2026-07-15T07:00:59.756Z"
   },
   "ticker": [
     "THE 6 WILDEST CLAIMS IN APPLE’S LAWSUIT AGAINST OPENAI",
+    "IMPROVED INTELLIGENCE WITH GPT-LIVE",
     "OPENAI RESEARCHER MILES WANG IN TALKS TO LAUNCH AI DRUG DISCOVERY STARTUP VALUED AT $2B",
     "INTRODUCING CLAUDE FOR TEACHERS",
+    "BUILD AND PUBLISH WEB APPS DIRECTLY IN CHATGPT",
     "GOOGLE’S DEMIS HASSABIS SAYS IT’S TIME FOR A GLOBAL AI WATCHDOG — LED BY THE US",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
     "WHAT ANTHROPIC’S LATEST AI DISCOVERY DOES—AND DOESN’T—SHOW",
     "DEEPMIND CEO CALLS FOR AN INDEPENDENT STANDARDS BODY TO REGULATE FRONTIER AI",
-    "SPACEXAI’S GROK PROGRAMMING TOOL WAS UPLOADING ITS USERS’ ENTIRE CODEBASE TO CLOUD STORAGE",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
-    "OPENAI’S FIRST HARDWARE DEVICE IS REPORTEDLY A SCREENLESS SPEAKER THAT CAN MOVE"
+    "SPACEXAI’S GROK PROGRAMMING TOOL WAS UPLOADING ITS USERS’ ENTIRE CODEBASE TO CLOUD STORAGE"
   ],
   "signals": [
     {
@@ -75,6 +75,36 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "clusterId": "1u9vozr",
+      "title": "Improved Intelligence with GPT-Live",
+      "desc": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
+      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+      "dateISO": "2026-07-14T20:22:11.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 76,
+      "impact": "high",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=matzTxfrhJU"
+        },
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
       "entityIds": [
         "gpt"
       ]
@@ -136,6 +166,32 @@
       ]
     },
     {
+      "id": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+      "clusterId": "1k3xlij",
+      "title": "Build and publish web apps directly in ChatGPT",
+      "desc": "See how to build a working web app directly in ChatGPT. Describe what you want, try the first version, ask for changes in plain language, and publish it when it’s ready—with hosting and storage built in. Learn more: https://learn.chatgpt.com/ Chapters 00:00 Introducing Sites 00:21 Building a launch site 00:41 Refining with feedback 00:55 Annotating and publishing 01:09 Working with Build Web Apps ",
+      "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+      "dateISO": "2026-07-14T19:19:36.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.75,
+      "family": "product",
+      "significance": 70,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog",
       "clusterId": "1yobzj7",
       "title": "Google’s Demis Hassabis says it’s time for a global AI watchdog — led by the US",
@@ -172,7 +228,7 @@
       "category": "analysis",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 64,
+      "significance": 63,
       "impact": "notable",
       "verification": "analysis",
       "sourceCount": 2,
@@ -254,7 +310,7 @@
       "category": "research",
       "catConfidence": 0.43,
       "family": "research",
-      "significance": 56,
+      "significance": 55,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -544,40 +600,6 @@
         }
       ],
       "sourceName": "Forbes",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5",
-      "clusterId": "1mmbjuf",
-      "title": "Bristol Myers to deploy Anthropic's Claude AI model to speed up drug discovery",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5",
-      "dateISO": "2026-05-20T07:00:00.000Z",
-      "date": "MAY 20 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5"
-        },
-        {
-          "name": "The Conversation",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWUpveEJWVS1OcWh3cDBXVFl3SXAxUUpxemJtNXEtUm9fZWkzNVpRS2wtaU1kZDNIb0pWRkFLdllyNkpSMzNTTXV4a2trWFlNNkN5aGI3RTY5b0VSMm54bjY3a25xUXZ0bmhLUVhPSGhjUXljMWtBNk56ekJ6bEpBRHhibDg4MU1ocWRlbFQtaXltc1h6LXRReTI0d0VWLWdNZ1E?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
       "entityIds": [
         "claude"
       ]
@@ -977,6 +999,36 @@
       "entityIds": []
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5",
+      "clusterId": "1mmbjuf",
+      "title": "Bristol Myers to deploy Anthropic's Claude AI model to speed up drug discovery",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5",
+      "dateISO": "2026-05-20T07:00:00.000Z",
+      "date": "MAY 20 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOaWdsQkU0QVJWQTRMYTdTWk1RMzlPaG9rZmZLNjZRZ185aFdoRy1oR2JwMzFQb0gtdGJIUVBwM3BrZlFnVkQyN0N0aDAyMUF6OUNLTFM0Zm00ZFRaeUp2WVFUaHlFZUhVSC1lMGJUTGhvVzFaMEJmdm1rUFYyempCWWxIYTRZNk10U0lfQ1JDQWRYQzdRc3puYU8yd0NqZVVNVWdKR3VKanktS0g4NUhXeTE2WVViM0twRWdRVDNXNWsyUQ?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/openai-frontier-governance-framework",
       "clusterId": "6emnhr",
       "title": "OpenAI’s Frontier Governance Framework",
@@ -1150,86 +1202,33 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBCeUZvTHM5SUxFNEh4QTRtM2N1c0R5N3piSVliUFlTRnZDRERDTjdrOGJKTjUzNnljQ3ZTYnJ5MGplM1Q0RFN2emJqek04bUpiWEhWd3VDTkVlblQtTzNQZkY3bw?oc=5",
-      "clusterId": "1g2nmzv",
-      "title": "DXC will integrate Claude into the systems banks, airlines, and other regulated industries rely on",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBCeUZvTHM5SUxFNEh4QTRtM2N1c0R5N3piSVliUFlTRnZDRERDTjdrOGJKTjUzNnljQ3ZTYnJ5MGplM1Q0RFN2emJqek04bUpiWEhWd3VDTkVlblQtTzNQZkY3bw?oc=5",
-      "dateISO": "2026-06-11T07:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "policy",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBCeUZvTHM5SUxFNEh4QTRtM2N1c0R5N3piSVliUFlTRnZDRERDTjdrOGJKTjUzNnljQ3ZTYnJ5MGplM1Q0RFN2emJqek04bUpiWEhWd3VDTkVlblQtTzNQZkY3bw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "clusterId": "frzhfp",
-      "title": "PRC-linked influence operations are targeting AI debates in the US",
-      "desc": "A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.",
-      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "dateISO": "2026-06-10T12:00:00.000Z",
-      "date": "JUN 10 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Introducing Claude for Teachers",
-      "summary": "Introducing Claude for Teachers",
-      "significance": 73,
+      "title": "Improved Intelligence with GPT-Live",
+      "summary": "More about our next generation voice model here: https://openai.com/index/introducing-gpt-live/",
+      "significance": 76,
       "impact": "high",
-      "verification": "official",
+      "verification": "corroborated",
       "date": "JUL 14 2026",
-      "dateISO": "2026-07-14T15:07:29.000Z",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T20:22:11.000Z",
+      "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
       "sourceCount": 2,
       "sources": [
         {
-          "name": "The Hill",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=matzTxfrhJU"
         },
         {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M"
         }
       ],
       "entityIds": [
-        "claude"
+        "gpt"
       ],
       "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
     },
@@ -1285,7 +1284,7 @@
       "category": "research",
       "title": "SpaceXAI’s Grok programming tool was uploading its users’ entire codebase to cloud storage",
       "summary": "SpaceXAI's Grok Build AI coding tool was spotted uploading users' entire codebases to Google Cloud before it was reported, and the company turned it off. The Register reports that…",
-      "significance": 56,
+      "significance": 55,
       "impact": "notable",
       "verification": "single",
       "date": "JUL 14 2026",
@@ -1307,11 +1306,11 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 23,
+    "chatgpt": 24,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 73,
-    "claude": 71,
+    "gpt": 74,
+    "claude": 72,
     "gemini": 37,
     "grok": 2,
     "llama": 0,
@@ -1406,6 +1405,28 @@
           "impact": "notable"
         },
         {
+          "h": "Improved Intelligence with GPT-Live",
+          "d": "JUL 14 2026",
+          "url": "https://www.youtube.com/watch?v=avpZWh6sm9M",
+          "isVideo": false,
+          "videoUrl": "https://www.youtube.com/watch?v=matzTxfrhJU",
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 2,
+          "verification": "corroborated",
+          "impact": "high"
+        },
+        {
+          "h": "Build and publish web apps directly in ChatGPT",
+          "d": "JUL 14 2026",
+          "url": "https://www.youtube.com/watch?v=8zH_O74hZBw",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "high"
+        },
+        {
           "h": "Introducing GPT-Live",
           "d": "JUL 08 2026",
           "url": "https://openai.com/index/introducing-gpt-live",
@@ -1420,28 +1441,6 @@
           "h": "HP Inc. launches Frontier strategic partnership with OpenAI",
           "d": "JUN 28 2026",
           "url": "https://openai.com/index/hp-frontier-partnership",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-          "d": "JUN 24 2026",
-          "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-          "d": "JUN 22 2026",
-          "url": "https://openai.com/index/patch-the-planet",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -6153,9 +6152,9 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.08 – $4.39/hr",
-      "trend": "→ 1% vs 2d ago",
-      "trendClass": "trend-flat",
+      "rate": "$3.08 – $5.14/hr",
+      "trend": "↑ 9% vs 2d ago",
+      "trendClass": "trend-up",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6164,7 +6163,7 @@
       "rate": "$5.89 – $8.76/hr",
       "trend": "→ 0% vs 2d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6185,14 +6184,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.36 – $1.49/hr",
-      "trend": "→ 2% vs 2d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.49/hr",
+      "trend": "↑ 32% vs 2d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-15T06:45:24.892Z",
+    "updatedAt": "2026-07-15T07:00:59.756Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6201,18 +6200,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 289,
-        "fetchedStoryCount": 199,
-        "validatedStoryCount": 165,
-        "storyCoverage": 0.6885813148788927,
-        "estimatedRelevantDiscussions": 240,
-        "isEstimated": true,
-        "rawCommentHits": 2212,
+        "rawStoryHits": 290,
+        "fetchedStoryCount": 290,
+        "validatedStoryCount": 166,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 166,
+        "isEstimated": false,
+        "rawCommentHits": 2211,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 299,
-        "commentCoverage": 0.13562386980108498,
+        "commentCoverage": 0.13568521031207598,
         "limited": false,
-        "points": 1506,
+        "points": 1507,
         "themes": [
           {
             "id": "reasoning",
@@ -6287,18 +6286,18 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1093,
+        "rawStoryHits": 1094,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.2744739249771272,
-        "estimatedRelevantDiscussions": 1086,
+        "storyCoverage": 0.2742230347349177,
+        "estimatedRelevantDiscussions": 1087,
         "isEstimated": true,
-        "rawCommentHits": 6574,
+        "rawCommentHits": 6575,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.04563431700638881,
+        "commentCoverage": 0.045627376425855515,
         "limited": false,
-        "points": 17651,
+        "points": 17658,
         "themes": [
           {
             "id": "coding",
@@ -6308,7 +6307,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 60
+            "count": 61
           },
           {
             "id": "writing",
@@ -6336,13 +6335,13 @@
             "count": 8
           },
           {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 6
-          },
-          {
             "id": "context",
             "label": "Context limits",
+            "count": 7
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
             "count": 6
           }
         ],
@@ -6454,97 +6453,36 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 522,
-        "fetchedStoryCount": 300,
-        "validatedStoryCount": 29,
-        "storyCoverage": 0.5747126436781609,
-        "estimatedRelevantDiscussions": 50,
+        "rawStoryHits": 0,
+        "fetchedStoryCount": 0,
+        "validatedStoryCount": 0,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 0,
         "isEstimated": true,
-        "rawCommentHits": 11250,
-        "fetchedCommentCount": 300,
-        "validatedCommentCount": 174,
-        "commentCoverage": 0.02666666666666667,
-        "limited": false,
-        "points": 2396,
-        "themes": [
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 40
-          },
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 35
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 34
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 11
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 9
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 8
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 4
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 2
-          },
-          {
-            "id": "safety",
-            "label": "Safety",
-            "count": 1
-          }
-        ],
-        "topThreads": [
-          {
-            "title": "Grok 4.5",
-            "points": 774,
-            "comments": 1495,
-            "url": "https://x.ai/news/grok-4-5",
-            "date": "JUL 08 2026"
-          },
-          {
-            "title": "What xAI's Grok build CLI sends to xAI: A wire-level analysis",
-            "points": 533,
-            "comments": 228,
-            "url": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
-            "date": "JUL 12 2026"
-          }
-        ]
+        "rawCommentHits": 0,
+        "fetchedCommentCount": 0,
+        "validatedCommentCount": 0,
+        "commentCoverage": 1,
+        "limited": true,
+        "points": 0,
+        "themes": [],
+        "topThreads": []
       },
       {
         "key": "llama",
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 67,
-        "fetchedStoryCount": 67,
+        "rawStoryHits": 77,
+        "fetchedStoryCount": 77,
         "validatedStoryCount": 30,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
-        "rawCommentHits": 617,
+        "rawCommentHits": 616,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 236,
-        "commentCoverage": 0.4862236628849271,
+        "commentCoverage": 0.487012987012987,
         "limited": false,
         "points": 133,
         "themes": [
@@ -6621,18 +6559,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 81,
-        "fetchedStoryCount": 81,
+        "rawStoryHits": 72,
+        "fetchedStoryCount": 72,
         "validatedStoryCount": 68,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 68,
         "isEstimated": false,
-        "rawCommentHits": 1126,
+        "rawCommentHits": 1080,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 291,
-        "commentCoverage": 0.2664298401420959,
+        "commentCoverage": 0.2777777777777778,
         "limited": false,
-        "points": 2007,
+        "points": 2008,
         "themes": [
           {
             "id": "price",
@@ -6715,7 +6653,7 @@
         "isEstimated": false,
         "rawCommentHits": 4682,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 212,
+        "validatedCommentCount": 213,
         "commentCoverage": 0.06407518154634771,
         "limited": false,
         "points": 2461,
@@ -6993,75 +6931,6 @@
         "author": "crims0n",
         "publishedAt": "2026-07-14T17:21:54.000Z",
         "url": "https://news.ycombinator.com/item?id=48910121"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "writing"
-        ],
-        "excerpt": "Grok 4.5 vs Meta Muse Spark 1.1 vs Fable 5 vs GPT 5.6 SolSame prompt for all four: \"Build Minecraft, but it’s a modern AAA title built for playing in the browser. Focus on…",
-        "source": "Hacker News",
-        "author": "jquave",
-        "publishedAt": "2026-07-14T19:35:56.000Z",
-        "url": "https://news.ycombinator.com/item?id=48911946"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "writing"
-        ],
-        "excerpt": "…Codex Co-authored-by: Composer Co-authored-by: Cursor Grok 4.5 377 files changed Lines changed: 62423 additions & 2871 deletions it's very hard. These “change the entire…",
-        "source": "Hacker News",
-        "author": "TazeTSchnitzel",
-        "publishedAt": "2026-07-12T17:14:07.000Z",
-        "url": "https://news.ycombinator.com/item?id=48882724"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "I don’t know why anyone would use Grok Build when they could use Cursor, with access to both Grok-4.5 and Composer-2.5-Fast and astonishingly cheap prices, and easy access to Opus…",
-        "source": "Hacker News",
-        "author": "trollbridge",
-        "publishedAt": "2026-07-13T12:06:38.000Z",
-        "url": "https://news.ycombinator.com/item?id=48891434"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "coding",
-          "speed"
-        ],
-        "excerpt": "…including int_19h and simondotau.I'm quite impressed with Grok 4.5 because its speed and single-task effectiveness feels better than anything else for a human-in-the-loop…",
-        "source": "Hacker News",
-        "author": "simondotau",
-        "publishedAt": "2026-07-13T05:10:43.000Z",
-        "url": "https://news.ycombinator.com/item?id=48888169"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "coding",
-          "speed"
-        ],
-        "excerpt": "Grok 4.5 is really fast, has more usage at $10/month than $20/month Claude pro, and Opus-level. Claude pro feels like a demo.Claude is much better in OpenCode then in Claude Code,…",
-        "source": "Hacker News",
-        "author": "Cider9986",
-        "publishedAt": "2026-07-12T20:01:34.000Z",
-        "url": "https://news.ycombinator.com/item?id=48884179"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "price"
-        ],
-        "excerpt": "…1, as their free offer is ending.I'm also actively testing Grok 4.5. There's something promising about it. The design is mediocre, in my opinion, but it operates quickly and…",
-        "source": "Hacker News",
-        "author": "ianberdin",
-        "publishedAt": "2026-07-13T19:48:14.000Z",
-        "url": "https://news.ycombinator.com/item?id=48897833"
       },
       {
         "modelId": "llama",
