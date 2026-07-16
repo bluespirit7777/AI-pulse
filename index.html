@@ -305,18 +305,16 @@
   .stat .num{font-family:var(--font-display);font-size:clamp(26px,3vw,32px);font-weight:700;color:var(--teal);}
   .stat .lbl{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.01em;line-height:1.5;}
 
-  /* ---------- release cards: flip container (front = releases, back = top YouTube videos this week) ---------- */
-  .release-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  @media (max-width:900px){.release-grid{grid-template-columns:1fr;}}
-  .release-card{perspective:1400px;}
-  .release-card-inner{
+  /* ---------- shared flip-card mechanics (release cards + Local AI spec cards) ---------- */
+  .flip-card{perspective:1400px;}
+  .flip-card-inner{
     position:relative;min-height:360px;
     transform-style:preserve-3d;
     transition:transform .5s cubic-bezier(.16,.84,.44,1), box-shadow .24s ease;
   }
-  .release-card:hover .release-card-inner{box-shadow:0 16px 36px rgba(18,48,62,0.15);}
-  .release-card.is-flipped .release-card-inner{transform:rotateY(180deg);}
-  .release-card-face{
+  .flip-card:hover .flip-card-inner{box-shadow:0 16px 36px rgba(18,48,62,0.15);}
+  .flip-card.is-flipped .flip-card-inner{transform:rotateY(180deg);}
+  .flip-card-face{
     position:absolute;inset:0;display:flex;flex-direction:column;
     background:var(--panel-solid);
     border:1px solid var(--border);border-top:3px solid var(--sea);
@@ -324,8 +322,41 @@
     box-shadow:0 4px 16px rgba(18,48,62,0.06);
     backface-visibility:hidden;overflow-y:auto;
   }
-  .release-card-back{transform:rotateY(180deg);}
-  .release-card:hover .release-logo{transform:scale(1.08) rotate(-4deg);}
+  .flip-card-back{transform:rotateY(180deg);}
+  .flip-card-btn{
+    margin-top:14px;align-self:flex-start;flex-shrink:0;
+    font-family:var(--font-mono);font-size:11px;color:var(--teal);
+    background:var(--foam);border:1px solid var(--border-strong);border-radius:999px;
+    padding:7px 14px;min-height:36px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:6px;
+    transition:background .18s ease,color .18s ease,transform .18s ease;
+  }
+  .flip-card-btn:hover{background:var(--deep);color:#fff;}
+  .flip-card-btn:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
+  .flip-card-btn svg{width:11px;height:11px;flex-shrink:0;}
+  /* "stand out" variant — solid color + icon + gentle pulse, for flips the
+     user might otherwise miss (e.g. the Local AI hardware-spec tables) */
+  .flip-card-btn--prominent{
+    background:var(--teal);color:#fff;border-color:var(--teal);
+    font-weight:600;font-size:11.5px;padding:9px 16px;box-shadow:0 3px 10px rgba(46,125,130,0.35);
+  }
+  .flip-card-btn--prominent:hover{background:var(--deep);border-color:var(--deep);transform:translateY(-1px);}
+  @media (prefers-reduced-motion: no-preference){
+    .flip-card-btn--prominent{animation:flipBtnPulse 2.6s ease-in-out infinite;}
+    .flip-card.is-flipped .flip-card-btn--prominent{animation:none;}
+  }
+  @keyframes flipBtnPulse{
+    0%,100%{box-shadow:0 3px 10px rgba(46,125,130,0.35);}
+    50%{box-shadow:0 3px 16px rgba(46,125,130,0.65);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .flip-card-inner{transition:none;}
+  }
+
+  /* ---------- release cards: flip container (front = releases, back = top YouTube videos this week) ---------- */
+  .release-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media (max-width:900px){.release-grid{grid-template-columns:1fr;}}
+  .flip-card:hover .release-logo{transform:scale(1.08) rotate(-4deg);}
   .release-lab{
     font-family:var(--font-mono);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
     color:var(--sea);margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-shrink:0;
@@ -354,17 +385,6 @@
   .release-yt-link:hover{color:var(--deep);}
   .release-yt-inline{color:var(--coral);display:inline-flex;align-items:center;margin-right:5px;transform:translateY(1px);}
   .release-empty{color:var(--ink-dim);font-size:12.5px;line-height:1.6;border-top:none !important;padding-top:2px !important;}
-  .release-flip-btn{
-    margin-top:14px;align-self:flex-start;flex-shrink:0;
-    font-family:var(--font-mono);font-size:11px;color:var(--teal);
-    background:var(--foam);border:1px solid var(--border-strong);border-radius:999px;
-    padding:7px 14px;min-height:36px;cursor:pointer;
-    display:inline-flex;align-items:center;gap:6px;
-    transition:background .18s ease,color .18s ease;
-  }
-  .release-flip-btn:hover{background:var(--deep);color:#fff;}
-  .release-flip-btn:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
-  .release-flip-btn svg{width:11px;height:11px;flex-shrink:0;}
   .yt-videos{flex:1;}
   .yt-loading,.yt-empty{color:var(--ink-dim);font-size:12.5px;line-height:1.6;}
   .yt-video-list{list-style:none;margin:0;padding:0;}
@@ -375,9 +395,29 @@
   .yt-video-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:4px;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);}
   .yt-video-views{color:var(--teal);}
   .yt-caption{margin:10px 0 0;flex-shrink:0;}
-  @media (prefers-reduced-motion: reduce){
-    .release-card-inner{transition:none;}
+
+  /* ---------- Local AI hardware-spec cards (Local + Local Mobile) ---------- */
+  .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+  .spec-grid>*{min-width:0;} /* same CSS Grid min-width:auto fix as .grid-2 — lets contents wrap/shrink instead of overflowing the column */
+  @media (max-width:820px){.spec-grid{grid-template-columns:1fr;}}
+  .spec-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .spec-table th{
+    text-align:left;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-dim);padding:0 8px 8px;border-bottom:1px solid var(--border-strong);font-weight:400;
   }
+  .spec-table td{padding:9px 8px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--ink-soft);}
+  .spec-table tr:last-child td{border-bottom:none;}
+  .spec-table .spec-model{font-family:var(--font-body);font-weight:700;color:var(--ink);}
+  .spec-tier{
+    font-family:var(--font-mono);font-size:9.5px;letter-spacing:.03em;padding:3px 9px;border-radius:20px;
+    white-space:nowrap;color:#fff;display:inline-block;
+  }
+  .spec-tier-1{background:var(--sea);}
+  .spec-tier-2{background:var(--teal);}
+  .spec-tier-3{background:var(--sand);}
+  .spec-tier-4{background:var(--coral-text);}
+  .spec-tier-5{background:var(--deep);}
+  .spec-caption{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);line-height:1.6;margin:12px 0 0;flex-shrink:0;}
 
   /* ---------- grids ---------- */
   .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
@@ -804,13 +844,60 @@
 
       <div class="tabpanel" id="tab-local" role="tabpanel" aria-labelledby="tabbtn-local" data-depth="midwater" hidden>
         <section id="sec-media-local">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 local AI</h3>
-              <span class="asof curated-asof">Curated</span>
+          <div class="spec-grid">
+
+            <div class="flip-card" id="local-ai-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-face flip-card-front">
+                  <div class="panel-top">
+                    <h3>Top 5 local AI</h3>
+                    <span class="asof curated-asof">Curated</span>
+                  </div>
+                  <div class="panel-note" style="margin-bottom:14px;">Best self-hostable / open-weight models by leaderboard placement &amp; real-world local-LLM adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/?open-weights=true" target="_blank" rel="noopener">Artificial Analysis (open weights)</a></div>
+                  <div id="local-ai"></div>
+                  <button type="button" class="flip-card-btn flip-card-btn--prominent" data-flip="1" aria-expanded="false" aria-controls="local-ai-specs-back">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10a6 6 0 0 1 10.5-4M16 10a6 6 0 0 1-10.5 4"/><path d="M14 3v3h-3M6 17v-3h3"/></svg>
+                    See PC specs for each model
+                  </button>
+                </div>
+                <div class="flip-card-face flip-card-back" id="local-ai-specs-back" inert>
+                  <div class="panel-top">
+                    <h3>PC specs by model</h3>
+                    <span class="asof curated-asof">Curated</span>
+                  </div>
+                  <div class="panel-note" style="margin-bottom:10px;" id="local-ai-specs-note"></div>
+                  <div id="local-ai-specs"></div>
+                  <button type="button" class="flip-card-btn" data-flip="0">← Back to rankings</button>
+                </div>
+              </div>
             </div>
-            <div class="panel-note" style="margin-bottom:14px;">Best self-hostable / open-weight models by leaderboard placement &amp; real-world local-LLM adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/?open-weights=true" target="_blank" rel="noopener">Artificial Analysis (open weights)</a></div>
-            <div id="local-ai"></div>
+
+            <div class="flip-card" id="local-mobile-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-face flip-card-front">
+                  <div class="panel-top">
+                    <h3>Top 5 local mobile AI</h3>
+                    <span class="asof curated-asof">Curated</span>
+                  </div>
+                  <div class="panel-note" style="margin-bottom:14px;">Best self-hostable models sized for phones &amp; tablets, not the PC-class models above · updated by hand, not live.</div>
+                  <div id="local-mobile-ai"></div>
+                  <button type="button" class="flip-card-btn flip-card-btn--prominent" data-flip="1" aria-expanded="false" aria-controls="local-mobile-specs-back">
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10a6 6 0 0 1 10.5-4M16 10a6 6 0 0 1-10.5 4"/><path d="M14 3v3h-3M6 17v-3h3"/></svg>
+                    See phone specs for each model
+                  </button>
+                </div>
+                <div class="flip-card-face flip-card-back" id="local-mobile-specs-back" inert>
+                  <div class="panel-top">
+                    <h3>Phone specs by model</h3>
+                    <span class="asof curated-asof">Curated</span>
+                  </div>
+                  <div class="panel-note" style="margin-bottom:10px;" id="local-mobile-specs-note"></div>
+                  <div id="local-mobile-specs"></div>
+                  <button type="button" class="flip-card-btn" data-flip="0">← Back to rankings</button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </div>

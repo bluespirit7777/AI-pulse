@@ -31,6 +31,25 @@ const fmtViews = (n) => (n == null ? null : n >= 1e6 ? (n / 1e6).toFixed(1) + 'M
 
 const setHTML = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
 
+// Hardware-tier tables for the Local AI flip-card backs (curated.js's
+// localAiPcSpecs / localAiMobileSpecs) — a calculated editorial estimate
+// (params × quantization ratio), never presented as a benchmarked figure.
+function specTable(rows) {
+  return `
+    <table class="spec-table">
+      <thead><tr><th>Model</th><th>Params</th><th>Size (4-bit)</th><th>Needs</th></tr></thead>
+      <tbody>
+        ${rows.map((r) => `
+          <tr>
+            <td><span class="spec-model">${esc(r.model)}</span><br><span class="spec-tier spec-tier-${r.tier}">${esc(r.tierLabel)}</span></td>
+            <td>${esc(r.params)}</td>
+            <td>${esc(r.approxSize)}</td>
+            <td>${esc(r.setup)}</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
 // Honesty pass (Phase 4): a bar only appears where `score` is a real,
 // published number — its width is a genuine linear scale against the
 // strongest score in the same list. Rows without a `score` (ordinal-only
@@ -167,6 +186,12 @@ export function renderCurated() {
   setHTML('image-ai', rankRows(C.imageAI));
   setHTML('local-ai', rankRows(C.localAI));
   setHTML('video-ai', rankRows(C.videoAI));
+  setHTML('local-mobile-ai', rankRows(C.localAiMobile));
+  setHTML('local-ai-specs', specTable(C.localAiPcSpecs));
+  setHTML('local-mobile-specs', specTable(C.localAiMobileSpecs));
+  setHTML('local-ai-specs-note', C.LOCAL_AI_SPECS_METHODOLOGY);
+  setHTML('local-mobile-specs-note', C.LOCAL_AI_SPECS_METHODOLOGY);
+  wireFlipCards('sec-media-local');
 
   const donut = document.getElementById('donut');
   if (donut) donut.style.background = C.donutGradient();
@@ -176,6 +201,7 @@ export function renderCurated() {
   wireDonutTooltip();
 
   document.querySelectorAll('.curated-asof').forEach((el) => { el.textContent = 'Curated · ' + C.CURATED_ASOF; });
+  sizeFlipCards();
 }
 
 export function renderLive(data, now = Date.now()) {
@@ -195,9 +221,9 @@ export function renderLive(data, now = Date.now()) {
     const backId = `yt-back-${esc(r.logoKey)}`;
     const listId = `yt-list-${esc(r.logoKey)}`;
     return `
-    <div class="release-card" data-model-key="${esc(modelKey || '')}">
-      <div class="release-card-inner">
-        <div class="release-card-face release-card-front" style="border-top-color:${accent}">
+    <div class="release-card flip-card" data-model-key="${esc(modelKey || '')}">
+      <div class="flip-card-inner">
+        <div class="flip-card-face flip-card-front" style="border-top-color:${accent}">
           <div class="release-lab">
             <span class="release-logo" style="color:${accent}">${LOGO[r.logoKey] || LOGO.other}</span>
             <span class="release-labtext">${esc(brand.name)}<span class="release-org">${esc(brand.org)}</span></span>
@@ -212,21 +238,22 @@ export function renderLive(data, now = Date.now()) {
                 <span class="d">${esc(i.d)}</span>
               </li>`).join('') || `<li class="release-empty">No qualifying releases in the last 60 days — this section only shows actual ships, not general lab news.</li>`}
           </ul>
-          ${modelKey ? `<button type="button" class="release-flip-btn" data-flip="1" aria-expanded="false" aria-controls="${backId}">${YT_ICON} Top videos this week</button>` : ''}
+          ${modelKey ? `<button type="button" class="flip-card-btn" data-flip="1" aria-expanded="false" aria-controls="${backId}">${YT_ICON} Top videos this week</button>` : ''}
         </div>
         ${modelKey ? `
-        <div class="release-card-face release-card-back" id="${backId}" style="border-top-color:${accent}" inert>
+        <div class="flip-card-face flip-card-back" id="${backId}" style="border-top-color:${accent}" inert>
           <div class="release-lab">
             <span class="release-logo" style="color:${accent}">${LOGO[r.logoKey] || LOGO.other}</span>
             <span class="release-labtext">Top videos this week<span class="release-org">${esc(brand.name)} on YouTube</span></span>
           </div>
           <div class="yt-videos" id="${listId}"><p class="yt-loading">Loading this week's top videos…</p></div>
-          <button type="button" class="release-flip-btn" data-flip="0">← Back to releases</button>
+          <button type="button" class="flip-card-btn" data-flip="0">← Back to releases</button>
         </div>` : ''}
       </div>
     </div>`;
   }).join(''));
-  wireReleaseFlip();
+  wireFlipCards('releases');
+  sizeFlipCards();
 
   // (The former "Big AI wire" section was removed — the Signal River now
   //  carries the full chronological stream with filters, so a separate wire
@@ -255,34 +282,72 @@ export function renderLive(data, now = Date.now()) {
   if (computeAsof) computeAsof.textContent = compute.length ? 'Live · ' + fmtSnapshot(data.updatedAt) : 'Unavailable';
 }
 
-// Release-card flip: front (releases, unchanged) / back (top YouTube videos
-// this week). Delegated on the stable #releases container rather than bound
-// per-button, since renderLive() replaces the cards' innerHTML on every
-// silent refresh — direct button listeners would go stale.
-function setFlipped(card, flipped) {
+// Generic flip-card interaction: front (default view) / back (secondary view
+// revealed by a button). Shared by the Frontier Releases cards and the Local
+// AI hardware-spec cards. Delegated on a stable container id rather than
+// bound per-button, since the container's innerHTML gets replaced on re-
+// render — direct button listeners would go stale.
+function setCardFlipped(card, flipped) {
   card.classList.toggle('is-flipped', flipped);
-  const front = card.querySelector('.release-card-front');
-  const back = card.querySelector('.release-card-back');
-  const flipBtn = card.querySelector('.release-flip-btn[data-flip="1"]');
-  if (flipBtn) flipBtn.setAttribute('aria-expanded', String(flipped));
+  const front = card.querySelector('.flip-card-front');
+  const back = card.querySelector('.flip-card-back');
+  const openBtn = card.querySelector('.flip-card-btn[data-flip="1"]');
+  if (openBtn) openBtn.setAttribute('aria-expanded', String(flipped));
   if (front) front.inert = flipped;
   if (back) back.inert = !flipped;
   // move focus with the flip, same pattern as this codebase's drawers
-  (flipped ? back?.querySelector('.release-flip-btn') : flipBtn)?.focus();
+  (flipped ? back?.querySelector('.flip-card-btn') : openBtn)?.focus();
 }
 
-function wireReleaseFlip() {
-  const container = document.getElementById('releases');
-  if (!container || container.dataset.wired) return;
-  container.dataset.wired = '1';
+function wireFlipCards(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || container.dataset.flipWired) return;
+  container.dataset.flipWired = '1';
   container.addEventListener('click', (e) => {
-    const btn = e.target.closest('.release-flip-btn');
+    const btn = e.target.closest('.flip-card-btn');
     if (!btn) return;
-    const card = btn.closest('.release-card');
+    const card = btn.closest('.flip-card');
     if (!card) return;
-    setFlipped(card, btn.dataset.flip === '1');
+    setCardFlipped(card, btn.dataset.flip === '1');
+    sizeFlipCards();
   });
 }
+
+// Flip-card faces are position:absolute (needed for the 3D rotate), so their
+// content doesn't naturally push the container taller and a fixed min-height
+// guess either wastes space or forces an internal scrollbar. This measures
+// each face's real content height — scrollHeight still reports the full,
+// unclipped height even while overflow-y:auto is actively clipping it — and
+// sizes the shared container to the tallest of the two, so neither face ever
+// needs to scroll internally.
+function sizeFlipCards() {
+  // Deferred by a tick: called right after a `hidden` attribute flip +
+  // innerHTML write (e.g. renderCurated() runs immediately after initNav()
+  // unhides the target tab on a direct #tab-local load), and measuring in
+  // that same synchronous pass can still see stale/zero layout. A 0ms
+  // setTimeout — not requestAnimationFrame — is the reliable way to defer
+  // past that: rAF depends on the browser actually scheduling a paint
+  // frame, which doesn't happen in every rendering context (confirmed via
+  // direct testing), while a plain macrotask always runs after the current
+  // synchronous work and DOM mutations are already applied.
+  setTimeout(sizeFlipCardsNow, 0);
+}
+
+function sizeFlipCardsNow() {
+  document.querySelectorAll('.flip-card').forEach((card) => {
+    const inner = card.querySelector('.flip-card-inner');
+    if (!inner) return;
+    let tallest = 0;
+    card.querySelectorAll('.flip-card-face').forEach((f) => { tallest = Math.max(tallest, f.scrollHeight); });
+    if (tallest) inner.style.minHeight = tallest + 'px';
+  });
+}
+
+let resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(sizeFlipCards, 150);
+});
 
 // Top-5-by-view-count-in-7-days videos per model (data/youtube-trending.json,
 // refreshed twice daily — see scripts/update-youtube.mjs). Independent fetch
@@ -314,6 +379,7 @@ export function renderYouTubeTrending(yt) {
       <p class="yt-caption">${sourceChip('snapshot12h', `Top by view count in the last ${yt?.windowDays || 7} days`)}</p>
     `;
   }
+  sizeFlipCards();
 }
 
 // animate ordinal bars once rows exist

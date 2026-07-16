@@ -79,6 +79,11 @@ section applies once everything is visible), reuses the exact same DOM/data
 as the tabbed views (no duplicate rendering, no duplicate ids), and every
 widget inside keeps working normally. `#full` deep-links directly into it;
 `goTo()` un-does it automatically when any other nav item is clicked next.
+It also re-orders the panels for this view specifically — Ecosystem and
+Models lead, per explicit request — via `reorderPanels()`, which physically
+moves the existing `.topsection` nodes with `appendChild` (which relocates
+rather than clones) instead of re-rendering anything; `goTo()` restores the
+original Today-first order when leaving Full Page.
 
 Each of the 3 Frontier Releases cards is a CSS 3D flip container
 (`.release-card` → `.release-card-inner` → front/back `.release-card-face`):

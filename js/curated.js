@@ -121,6 +121,48 @@ export const localAI = [
   { rank: 5, model: 'Mistral Large 3', org: 'Mistral AI', w: 64, stat: 'Efficient European option', note: 'Open weights · solid multilingual quality on modest hardware' },
 ];
 
+// Hardware tiers for the 5 models above. `approxSize` is CALCULATED — each
+// model's published total parameter count at a standard 4-bit quantization
+// (~0.6GB per billion parameters, the common GGUF/AWQ ballpark) — not a
+// benchmarked or vendor-published figure, so it's labelled as an editorial
+// estimate, never as measured/live data. MoE models (Qwen/DeepSeek/Llama 4/
+// GLM) need their FULL parameter count resident in memory even though only
+// a smaller "active" subset computes per token — that's why total, not
+// active, params drive the tier. Ranked least-to-most demanding among these
+// specific 5 — even the lightest genuinely needs prosumer-class hardware,
+// not a typical consumer laptop, and the table says so rather than
+// pretending otherwise.
+export const LOCAL_AI_SPECS_ASOF = 'Jul 2026';
+export const LOCAL_AI_SPECS_METHODOLOGY = 'Editorial estimate: memory need = published total parameters × ~0.6GB/billion (typical 4-bit quantization). Not a benchmarked or vendor-published figure.';
+export const localAiPcSpecs = [
+  { model: 'Mistral Large 3', params: '123B dense', approxSize: '~74GB', tier: 1, tierLabel: 'Prosumer workstation', setup: '1× 80–96GB GPU, or a 128GB+ unified-memory Mac' },
+  { model: 'Qwen 3.7 (235B/A22B)', params: '235B total · 22B active', approxSize: '~141GB', tier: 2, tierLabel: 'High-end workstation', setup: '2× 80GB GPUs, or 192GB+ system RAM with CPU offload' },
+  { model: 'GLM-4.6', params: '355B total · 32B active', approxSize: '~213GB', tier: 3, tierLabel: 'Multi-GPU workstation', setup: '3–4× 80GB GPUs, or 256GB+ RAM with heavy offload' },
+  { model: 'Llama 4 Maverick', params: '400B total · 17B active', approxSize: '~240GB', tier: 4, tierLabel: 'Small server', setup: '4× 80GB GPUs, or a 256–384GB RAM server' },
+  { model: 'DeepSeek V3.2', params: '671B total · 37B active', approxSize: '~403GB', tier: 5, tierLabel: 'Multi-node server', setup: '6–8× 80GB GPUs, or a 512GB+ RAM server' },
+];
+
+// Top 5 self-hostable models actually sized for phones/tablets — a distinct
+// list from the PC-class table above, not a subset of it. Real, current
+// small open-weight model families, picked for on-device fit (not
+// benchmarked against the PC-class models above — different use case
+// entirely). Ordinal, same as localAI — no fabricated score.
+export const localAiMobile = [
+  { rank: 1, model: 'Gemma 3n E4B', org: 'Google', w: 100, stat: 'Best all-round on-device model', note: 'Apache-2.0 · MatFormer architecture built specifically for phones and tablets' },
+  { rank: 2, model: 'MiniCPM-V 2.6', org: 'OpenBMB', w: 90, stat: 'Best for on-device vision + chat', note: 'Apache-2.0 · sees images/video, runs natively in the MiniCPM mobile app' },
+  { rank: 3, model: 'Phi-3.5-mini', org: 'Microsoft', w: 80, stat: 'Strong reasoning for its size', note: 'MIT-licensed · punches above its weight on reasoning benchmarks' },
+  { rank: 4, model: 'Llama 3.2 3B', org: 'Meta', w: 72, stat: 'Broadest mobile tooling support', note: 'Llama community licence · widest support across on-device runtimes (MLC, ExecuTorch)' },
+  { rank: 5, model: 'Qwen 2.5 1.5B', org: 'Alibaba', w: 64, stat: 'Smallest footprint, entry phones', note: 'Apache-2.0 · runs on 4GB-RAM phones where the others may struggle' },
+];
+
+export const localAiMobileSpecs = [
+  { model: 'Qwen 2.5 1.5B', params: '1.5B', approxSize: '~1GB', tier: 1, tierLabel: 'Entry-level phone', setup: '4GB+ RAM · most 2021+ Android/iOS devices' },
+  { model: 'Llama 3.2 3B', params: '3B', approxSize: '~2GB', tier: 2, tierLabel: 'Entry–mid phone', setup: '6GB+ RAM' },
+  { model: 'Phi-3.5-mini', params: '3.8B', approxSize: '~2.3GB', tier: 3, tierLabel: 'Mid-range phone', setup: '8GB+ RAM' },
+  { model: 'Gemma 3n E4B', params: '~4B effective', approxSize: '~2.4GB', tier: 3, tierLabel: 'Mid-range phone', setup: '8GB+ RAM' },
+  { model: 'MiniCPM-V 2.6', params: '~8B', approxSize: '~4.8GB', tier: 5, tierLabel: 'High-end phone', setup: '12GB+ RAM · multimodal (vision + text)' },
+];
+
 export const videoAI = [
   { rank: 1, model: 'Veo 3.1', org: 'Google DeepMind', w: 100, stat: 'Tops the video arena', note: 'Native synced audio, strong physics & long-shot coherence' },
   { rank: 2, model: 'Sora 2', org: 'OpenAI', w: 90, stat: 'Cinematic prompt control', note: 'Standalone app; excels at complex multi-shot scene direction' },

@@ -35,6 +35,9 @@ const LEGACY_HASH = {
 };
 
 const FULL_HASH = '#full';
+// Full Page's own visual order — Ecosystem and Models lead, per explicit
+// request, with the rest keeping their original relative order after them.
+const FULL_PAGE_ORDER = ['ecosystem', 'models', 'today', 'markets', 'research'];
 
 let state = { panel: 'today', tab: 'briefing' };
 let dataReady = false;
@@ -46,6 +49,17 @@ function panelEl(panel) { return document.getElementById('panel-' + panel); }
 function tabEl(tab) { return document.getElementById('tab-' + tab); }
 function tabBtn(tab) { return document.getElementById('tabbtn-' + tab); }
 function topnavBtn(panel) { return document.querySelector(`.topnav-item[data-panel="${panel}"]`); }
+
+// appendChild on a node already in the document MOVES it rather than
+// duplicating it, so calling this in sequence for each panel in `order`
+// leaves the panels in exactly that order — no cloning, no duplicate ids,
+// no re-rendering. Non-panel siblings (e.g. the top data-note banner) are
+// never touched, so they stay wherever they started.
+function reorderPanels(order) {
+  const main = document.getElementById('main-content');
+  if (!main) return;
+  order.forEach((p) => { const el = panelEl(p); if (el) main.appendChild(el); });
+}
 
 function defaultTabFor(panel) {
   const tabs = PANEL_TABS[panel];
@@ -168,6 +182,11 @@ export function goTo(panel, tab, { push = true, scroll = true } = {}) {
   // undo whatever Full Page mode changed, if we're coming from it
   setLocalTabsVisible(true);
   setDepthRailVisible(true);
+  const main = document.getElementById('main-content');
+  if (main?.dataset.reordered) {
+    reorderPanels(PANELS);
+    delete main.dataset.reordered;
+  }
 
   activatePanels(panel);
   if (resolvedTab) activateTabButtons(panel, resolvedTab);
@@ -204,6 +223,9 @@ export function activateFullPage({ push = true } = {}) {
   Object.values(PANEL_TABS).flat().forEach((tab) => { const el = tabEl(tab); if (el) el.hidden = false; });
   setLocalTabsVisible(false);
   setDepthRailVisible(false);
+  reorderPanels(FULL_PAGE_ORDER);
+  const main = document.getElementById('main-content');
+  if (main) main.dataset.reordered = '1';
 
   document.querySelectorAll('.topnav-item').forEach((btn) => {
     if (btn.dataset.panel === 'full') btn.setAttribute('aria-current', 'page');

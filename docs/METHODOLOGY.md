@@ -417,6 +417,30 @@ earlier version where every row got a bar sized from an internal ordinal `w`
 weight regardless of whether a real score existed — a decorative bar length
 that could be mistaken for a measurement.
 
+## Local AI hardware specs
+
+Both Local AI cards (PC and Mobile) flip to a specs table via a deliberately
+prominent button (solid fill, icon, gentle pulse — distinct from the quieter
+"Top videos this week" flip on Frontier Releases, since this one is easy to
+miss otherwise). The **size and hardware tier are calculated, not measured**:
+each model's published total parameter count × ~0.6GB per billion (the
+typical 4-bit GGUF/AWQ quantization ballpark), stated in the panel's note and
+in `curated.js`'s `LOCAL_AI_SPECS_METHODOLOGY`. For MoE models (Qwen/DeepSeek/
+Llama 4/GLM) this uses the FULL parameter count, not the smaller "active"
+count — the whole model has to be resident in memory even though only a
+subset computes per token. The PC table is honest that even its lightest
+entry (Mistral Large 3, ~74GB) needs prosumer/workstation-class hardware, not
+a typical consumer laptop — tiers are ranked relative to each other, not
+against a false "runs on anything" baseline. The Mobile table is a genuinely
+separate curated list (Gemma 3n, MiniCPM-V, Phi-3.5-mini, Llama 3.2 3B, Qwen
+2.5 1.5B) picked for on-device fit, not a subset of the PC-class models.
+
+Both flip-card backs (and Frontier Releases') share the same auto-sizing
+mechanism: `js/sections.js`'s `sizeFlipCards()` measures each face's real
+`scrollHeight` (still accurate even while `overflow-y:auto` is actively
+clipping it) and sets the shared container to the tallest, so neither face
+needs its own internal scrollbar.
+
 ## Data Health
 
 A compact footer control (`js/datahealth.js`) summarizing the pipeline's own
