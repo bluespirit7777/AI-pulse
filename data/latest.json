@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-16T18:30:37.900Z",
+  "updatedAt": "2026-07-16T18:45:26.135Z",
   "build": {
-    "sha": "4581a74fbbbc4952ea7f7b7f238fd6b44961ad85",
-    "shortSha": "4581a74",
+    "sha": "8beb1eb426d4bb220a3ca4841c061d7aaa29fc4b",
+    "shortSha": "8beb1eb",
     "ref": "main",
-    "builtAt": "2026-07-16T18:30:51.326Z"
+    "builtAt": "2026-07-16T18:45:39.725Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 6.8,
-    "estimatedDatasets": 4,
-    "buildSha": "4581a74",
-    "lastSuccessfulUpdate": "2026-07-16T18:30:37.900Z"
+    "estimatedDatasets": 3,
+    "buildSha": "8beb1eb",
+    "lastSuccessfulUpdate": "2026-07-16T18:45:26.135Z"
   },
   "ticker": [
     "AGENTIC ORCHESTRATION: ENTERPRISE AI ORGANIZATIONS HAVE A DEPLOYMENT PROBLEM, NOT A PLATFORM PROBLEM — AND MO…",
@@ -23,10 +23,10 @@
     "APPLE INTELLIGENCE APPROVED FOR LAUNCH IN CHINA WITH ALIBABA AND BAIDU",
     "INTRODUCING THE CODEX MICRO",
     "THINKING MACHINES LAB DROPS ITS FIRST MODEL",
+    "HERE'S WHY ANTHROPIC IS PUSHING STATES TO REGULATE AI FASTER",
     "OPENAI STAFFERS ARE FUNDING A RIVAL SUPER PAC TO TAKE ON THEIR BOSS",
     "INSIDE ODE WITH ANTHROPIC, THE STARTUP BETTING AI SERVICES ARE THE FUTURE OF ENTERPRISE",
-    "ANTHROPIC, BLACKSTONE BET THE NEXT TRILLION-DOLLAR AI BUSINESS IS IMPLEMENTATION, NOT JUST MODELS",
-    "IMPROVED INTELLIGENCE WITH GPT-LIVE"
+    "CREATE, EDIT AND STAR IN VIDEOS WITH TWO GOOGLE VIDS UPDATES"
   ],
   "signals": [
     {
@@ -78,7 +78,7 @@
       "category": "capital",
       "catConfidence": 0.71,
       "family": "market",
-      "significance": 77,
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -200,6 +200,32 @@
       ]
     },
     {
+      "id": "https://www.wired.com/story/why-anthropic-is-pushing-states-to-regulate-ai-faster/",
+      "clusterId": "1pg628g",
+      "title": "Here's Why Anthropic Is Pushing States to Regulate AI Faster",
+      "desc": "The company endorsed landmark AI transparency laws in California and New York last year, but its head of US state and local policy says they may already be outdated.",
+      "url": "https://www.wired.com/story/why-anthropic-is-pushing-states-to-regulate-ai-faster/",
+      "dateISO": "2026-07-16T18:35:18.000Z",
+      "date": "JUL 16 2026",
+      "category": "policy",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 62,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/why-anthropic-is-pushing-states-to-regulate-ai-faster/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/openai-employees-donations-guardrails-alliance-leading-the-future/",
       "clusterId": "16dmhwn",
       "title": "OpenAI Staffers Are Funding a Rival Super PAC to Take on Their Boss",
@@ -252,29 +278,33 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
-      "clusterId": "h3zsbj",
-      "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models",
-      "desc": "Anthropic-backed Ode launches as AI labs bet that embedding forward-deployed engineers inside enterprises is the key to accelerating enterprise AI adoption.",
-      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
-      "dateISO": "2026-07-15T13:10:47.000Z",
-      "date": "JUL 15 2026",
-      "category": "adoption",
-      "catConfidence": 0.69,
+      "id": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "clusterId": "dy1zr9",
+      "title": "Create, edit and star in videos with two Google Vids updates",
+      "desc": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "dateISO": "2026-07-16T16:00:00.000Z",
+      "date": "JUL 16 2026",
+      "category": "general",
+      "catConfidence": 0.3,
       "family": "product",
       "significance": 59,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "official",
+      "sourceCount": 2,
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/"
+          "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/"
+        },
+        {
+          "name": "Google",
+          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "Google",
       "entityIds": [
-        "claude"
+        "gemini"
       ]
     },
     {
@@ -484,32 +514,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
-      "clusterId": "dy1zr9",
-      "title": "Create, edit and star in videos with two Google Vids updates",
-      "desc": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
-      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
-      "dateISO": "2026-07-16T16:00:00.000Z",
-      "date": "JUL 16 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google",
-          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
-        }
-      ],
-      "sourceName": "Google",
-      "entityIds": [
-        "gemini"
       ]
     },
     {
@@ -738,7 +742,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 48,
+      "significance": 47,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -749,32 +753,6 @@
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
-      "clusterId": "1q7rhzi",
-      "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer",
-      "desc": "OpenAI has built an LLM super-hacker called GPT-Red that it uses as a sparring partner to help its other models boost their defenses against cyberattacks. Last week the company released the latest version of its flagship LLM, GPT-5.6. OpenAI says that training it against GPT-Red made the model its most robust release yet. GPT-Red automates…",
-      "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
-      "dateISO": "2026-07-15T17:09:37.000Z",
-      "date": "JUL 15 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/"
-        }
-      ],
-      "sourceName": "MIT Technology Review",
       "entityIds": [
         "gpt"
       ]
@@ -888,6 +866,32 @@
       "entityIds": []
     },
     {
+      "id": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
+      "clusterId": "1q7rhzi",
+      "title": "Meet GPT-Red: an LLM super-hacker OpenAI built to make its models safer",
+      "desc": "OpenAI has built an LLM super-hacker called GPT-Red that it uses as a sparring partner to help its other models boost their defenses against cyberattacks. Last week the company released the latest version of its flagship LLM, GPT-5.6. OpenAI says that training it against GPT-Red made the model its most robust release yet. GPT-Red automates…",
+      "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/",
+      "dateISO": "2026-07-15T17:09:37.000Z",
+      "date": "JUL 15 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to-make-its-models-safer/"
+        }
+      ],
+      "sourceName": "MIT Technology Review",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://arstechnica.com/ai/2026/07/openais-first-branded-hardware-is-a-light-up-keyboard/",
       "clusterId": "1663fm6",
       "title": "OpenAI's first branded hardware is... a light-up keyboard?",
@@ -909,32 +913,6 @@
         }
       ],
       "sourceName": "Ars Technica",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
-      "clusterId": "pghp8l",
-      "title": "The US is advancing AI safety through state and federal action",
-      "desc": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
-      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
-      "dateISO": "2026-07-15T12:00:00.000Z",
-      "date": "JUL 15 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action"
-        }
-      ],
-      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -994,6 +972,32 @@
       "sourceName": "inc.com",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "clusterId": "pghp8l",
+      "title": "The US is advancing AI safety through state and federal action",
+      "desc": "OpenAI outlines a “reverse federalism” approach to AI governance, where state laws help build a national framework for safe, democratic AI.",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
+      "dateISO": "2026-07-15T12:00:00.000Z",
+      "date": "JUL 15 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -1092,7 +1096,7 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "official",
-      "sourceCount": 8,
+      "sourceCount": 7,
       "sources": [
         {
           "name": "WIRED",
@@ -1105,10 +1109,6 @@
         {
           "name": "Mashable",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbjhkRkZ2S3JBQ3gxOHRFU19xM0VxRGRvSThQd3FyUURHQzlPME5Rd3JWR3JXbi1EQ1dsWjhqNE5NZTdLckFCWUdUaTZHQWJDOUlldlRHdFZieEVJRG5KdWtYWWxoNGhhNHg3bXFzTENoMC1jTXA2eUgzQUtSeGsxYi1WejdVNElGbG16SURHZHJXbThITWNR?oc=5"
-        },
-        {
-          "name": "Fortune",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOYXhYbms3WGVpeVBaMlVLd1hyTzU4NGpMcmYxeWNWQWFkSVBxM0tnQVMyNWtORks0SlB3ZE5FekdVMzhqVS1UNHp6UUlwaGtQOHJhdkRBdWpGOVBkTDRZeFlYSElTRE8tM1dBdzQzRzAwOWRBZ0VsdFd1b0toWm9kLUNYdW8wX1phUFhqeEh3LUNteWxVaXI4M2ltZHVCVVQxNWhkNDBIanRaNWc?oc=5"
         },
         {
           "name": "Anthropic",
@@ -1133,20 +1133,20 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
-      "clusterId": "1i84g2z",
-      "title": "Claude Code’s hidden tracker was an “experiment,” says Anthropic",
+      "id": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5",
+      "clusterId": "d0t8x9",
+      "title": "Anthropic's engineering leader says Claude Code is making programmers lonelier",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
-      "dateISO": "2026-07-07T07:00:00.000Z",
-      "date": "JUL 07 2026",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5",
+      "dateISO": "2026-06-22T07:00:00.000Z",
+      "date": "JUN 22 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         {
           "name": "CNBC",
@@ -1163,9 +1163,13 @@
         {
           "name": "Malwarebytes",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
+        },
+        {
+          "name": "Business Insider",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5"
         }
       ],
-      "sourceName": "Malwarebytes",
+      "sourceName": "Business Insider",
       "entityIds": [
         "claude"
       ]
@@ -1239,7 +1243,7 @@
       "category": "capital",
       "title": "How a former DeepMind researcher raised at a $300M pre-seed valuation before launching a product",
       "summary": "Drawing on more than a decade spent helping build some of the world's most influential AI systems, including research that later informed the development of ChatGPT, Andrew Dai ex…",
-      "significance": 77,
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "date": "JUL 16 2026",
@@ -1338,17 +1342,6 @@
       "logoKey": "anthropic",
       "items": [
         {
-          "h": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not jus…",
-          "d": "JUL 15 2026",
-          "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "TechCrunch",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing Claude for Teachers",
           "d": "JUL 14 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
@@ -1390,6 +1383,17 @@
           "sourceName": "CNBC",
           "sourceCount": 1,
           "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing Claude Tag",
+          "d": "JUN 23 2026",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
           "impact": "emerging"
         }
       ]
@@ -1519,6 +1523,30 @@
   ],
   "wire": [
     {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "JUL 16 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Here's Why Anthropic Is Pushing States to Regulate AI Faster",
+      "p": "The company endorsed landmark AI transparency laws in California and New York last year, but its head of US state and local policy says they may already be outdated.",
+      "url": "https://www.wired.com/story/why-anthropic-is-pushing-states-to-regulate-ai-faster/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "JUL 16 2026",
+      "verification": "official",
+      "impact": "notable",
+      "h": "Create, edit and star in videos with two Google Vids updates",
+      "p": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "sourceName": "Google",
+      "sourceCount": 2
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 16 2026",
@@ -1582,36 +1610,12 @@
       "org": "GOOGLE",
       "logoKey": "google",
       "date": "JUL 16 2026",
-      "verification": "official",
-      "impact": "notable",
-      "h": "Create, edit and star in videos with two Google Vids updates",
-      "p": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
-      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
-      "sourceName": "Google",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "JUL 16 2026",
       "verification": "single",
       "impact": "notable",
       "h": "Google’s AI Mode now lets you link and interact with select apps",
       "p": "With this new update, Google is expanding AI Mode beyond answering questions and into completing tasks across the apps they use regularly.",
       "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 16 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Energy IPOs surge as investors hunt for ways to play AI boom",
-      "p": "Companies coming to market are raising money at fastest pace this century.",
-      "url": "https://arstechnica.com/information-technology/2026/07/energy-ipos-surge-as-investors-hunt-for-ways-to-play-ai-boom/",
-      "sourceName": "Ars Technica",
       "sourceCount": 1
     }
   ],
@@ -1715,11 +1719,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 206.7,
-      "changePct": -2.729413200827206,
+      "price": 206.955,
+      "changePct": -2.609410903033088,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 74444792,
+      "volume": 76400149,
       "ohlc": [
         {
           "d": "04-16",
@@ -2160,22 +2164,22 @@
           "o": 210.26499938964844,
           "h": 211.0800018310547,
           "l": 205.85000610351562,
-          "c": 206.6999969482422
+          "c": 206.9550018310547
         }
       ],
-      "relVolume": 0.5158376851160543,
-      "marketCap": 5043480000000
+      "relVolume": 0.5293866091086886,
+      "marketCap": 5049702000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 403.9,
-      "changePct": 2.0903341282523518,
+      "price": 404.25,
+      "changePct": 2.1788021663677366,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 20433970,
+      "volume": 21385434,
       "ohlc": [
         {
           "d": "04-16",
@@ -2614,24 +2618,24 @@
         {
           "d": "07-16",
           "o": 398.0799865722656,
-          "h": 404.75,
+          "h": 404.8500061035156,
           "l": 392.05010986328125,
-          "c": 403.8999938964844
+          "c": 404.25
         }
       ],
-      "relVolume": 0.4345687923472055,
-      "marketCap": 3000977000000
+      "relVolume": 0.45480355639167863,
+      "marketCap": 3003577500000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 376.71,
-      "changePct": -4.456225874661671,
+      "price": 376.481,
+      "changePct": 0.00010868546678674261,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 10216628,
+      "volume": 10489264,
       "ohlc": [
         {
           "d": "04-16",
@@ -3072,22 +3076,22 @@
           "o": 384.5350036621094,
           "h": 386.739990234375,
           "l": 374.614990234375,
-          "c": 376.7099914550781
+          "c": 376.4805908203125
         }
       ],
-      "relVolume": 0.37270973711825456,
-      "marketCap": 1853413200000
+      "relVolume": 0.382655689137744,
+      "marketCap": 1852286520000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 360.68,
-      "changePct": -2.76070861135892,
+      "price": 359.85,
+      "changePct": -2.9844729115366264,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 20736367,
+      "volume": 22529519,
       "ohlc": [
         {
           "d": "04-16",
@@ -3527,23 +3531,23 @@
           "d": "07-16",
           "o": 373.19500732421875,
           "h": 375.2699890136719,
-          "l": 359.0315856933594,
-          "c": 360.67999267578125
+          "l": 358.1199951171875,
+          "c": 359.8500061035156
         }
       ],
-      "relVolume": 0.6050559913444911,
-      "marketCap": 4400296000000
+      "relVolume": 0.6573774689201608,
+      "marketCap": 4390170000000.0005
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 252.87,
-      "changePct": -0.8197409560885506,
+      "price": 252.63,
+      "changePct": -0.9138695362796911,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 25244794,
+      "volume": 26661858,
       "ohlc": [
         {
           "d": "04-16",
@@ -3983,23 +3987,23 @@
           "d": "07-16",
           "o": 255.38499450683594,
           "h": 258.0824890136719,
-          "l": 252.13999938964844,
-          "c": 252.8699951171875
+          "l": 251.89999389648438,
+          "c": 252.6300048828125
         }
       ],
-      "relVolume": 0.4149854959371939,
-      "marketCap": 2705709000000
+      "relVolume": 0.43827984354861604,
+      "marketCap": 2703141000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 668.125,
-      "changePct": -1.9352420492640459,
+      "price": 667.83,
+      "changePct": -1.9785384798482575,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8940046,
+      "volume": 9218950,
       "ohlc": [
         {
           "d": "04-16",
@@ -4440,22 +4444,22 @@
           "o": 678.6099853515625,
           "h": 681.9000244140625,
           "l": 665,
-          "c": 668.125
+          "c": 667.8300170898438
         }
       ],
-      "relVolume": 0.4340642552595426,
-      "marketCap": 1683675000000
+      "relVolume": 0.4476058250734907,
+      "marketCap": 1682931600000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 405.451,
-      "changePct": 0.00012319918662580744,
+      "price": 405.325,
+      "changePct": -3.374415564168139,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 17966036,
+      "volume": 18306495,
       "ohlc": [
         {
           "d": "04-16",
@@ -4896,22 +4900,22 @@
           "o": 405.2900085449219,
           "h": 415.95001220703125,
           "l": 403.5,
-          "c": 405.45050048828125
+          "c": 405.32501220703125
         }
       ],
-      "relVolume": 1.2098564788236819,
-      "marketCap": 2104290690000
+      "relVolume": 1.2327834353834835,
+      "marketCap": 2103636750000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 496.435,
-      "changePct": -6.180786972153879,
+      "price": 495.36,
+      "changePct": -6.383949117762068,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 17656892,
+      "volume": 18153083,
       "ohlc": [
         {
           "d": "04-16",
@@ -5352,22 +5356,22 @@
           "o": 509.3299865722656,
           "h": 518.739990234375,
           "l": 491.79998779296875,
-          "c": 496.43499755859375
+          "c": 495.3599853515625
         }
       ],
-      "relVolume": 0.6061956825502328,
-      "marketCap": 804224700000
+      "relVolume": 0.6232308913469046,
+      "marketCap": 802483200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 134.02,
-      "changePct": 0.1943852992695151,
+      "price": 133.91,
+      "changePct": 0.1121479974834861,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 18181765,
+      "volume": 18720409,
       "ohlc": [
         {
           "d": "04-16",
@@ -5808,22 +5812,22 @@
           "o": 133.27999877929688,
           "h": 134.3800048828125,
           "l": 128.67999267578125,
-          "c": 134.02000427246094
+          "c": 133.91000366210938
         }
       ],
-      "relVolume": 0.4020863780366268,
-      "marketCap": 321648000000
+      "relVolume": 0.41399839070487765,
+      "marketCap": 321384000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 125.95,
-      "changePct": -4.936227846453907,
+      "price": 126.185,
+      "changePct": -4.758855516007677,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 30875499,
+      "volume": 31725349,
       "ohlc": [
         {
           "d": "04-16",
@@ -6264,29 +6268,29 @@
           "o": 131.47500610351562,
           "h": 131.64999389648438,
           "l": 125.58000183105469,
-          "c": 125.94999694824219
+          "c": 126.18499755859375
         }
       ],
-      "relVolume": 0.8405678580485556,
-      "marketCap": 353919500000
+      "relVolume": 0.8637045397961952,
+      "marketCap": 354579850000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.87 – $3.19/hr",
-      "trend": "↑ 9% vs 3d ago",
+      "rate": "$1.79 – $3.19/hr",
+      "trend": "↑ 7% vs 3d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.39/hr",
-      "trend": "↑ 6% vs 3d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$3.08 – $4.39/hr",
+      "trend": "→ 1% vs 3d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6294,7 +6298,7 @@
       "rate": "$5.89 – $8.13/hr",
       "trend": "↓ 4% vs 3d ago",
       "trendClass": "trend-down",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6315,14 +6319,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "↑ 32% vs 3d ago",
+      "rate": "$0.56 – $1.49/hr",
+      "trend": "↑ 9% vs 3d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-16T18:30:37.900Z",
+    "updatedAt": "2026-07-16T18:45:26.135Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6331,18 +6335,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 308,
+        "rawStoryHits": 309,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 170,
-        "storyCoverage": 0.974025974025974,
+        "storyCoverage": 0.970873786407767,
         "estimatedRelevantDiscussions": 175,
         "isEstimated": true,
-        "rawCommentHits": 2171,
+        "rawCommentHits": 2176,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.1381851681252879,
+        "commentCoverage": 0.13786764705882354,
         "limited": false,
-        "points": 1529,
+        "points": 1530,
         "themes": [
           {
             "id": "reasoning",
@@ -6357,7 +6361,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 28
+            "count": 29
           },
           {
             "id": "price",
@@ -6367,7 +6371,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 11
+            "count": 12
           },
           {
             "id": "speed",
@@ -6423,17 +6427,17 @@
         "storyCoverage": 0.2803738317757009,
         "estimatedRelevantDiscussions": 1059,
         "isEstimated": true,
-        "rawCommentHits": 6408,
+        "rawCommentHits": 6404,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.04681647940074907,
+        "commentCoverage": 0.046845721424109935,
         "limited": false,
-        "points": 16911,
+        "points": 16913,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 134
+            "count": 133
           },
           {
             "id": "reasoning",
@@ -6443,7 +6447,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 32
+            "count": 33
           },
           {
             "id": "price",
@@ -6504,47 +6508,47 @@
         "version": "Gemini 3.5 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 132,
-        "fetchedStoryCount": 129,
+        "fetchedStoryCount": 132,
         "validatedStoryCount": 120,
-        "storyCoverage": 0.9772727272727273,
-        "estimatedRelevantDiscussions": 123,
-        "isEstimated": true,
-        "rawCommentHits": 1100,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 120,
+        "isEstimated": false,
+        "rawCommentHits": 1104,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.2727272727272727,
+        "commentCoverage": 0.2717391304347826,
         "limited": false,
-        "points": 2333,
+        "points": 2347,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 69
+            "count": 68
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 63
+            "count": 64
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 35
+            "count": 34
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 23
+            "count": 24
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 17
+            "count": 18
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 17
+            "count": 18
           },
           {
             "id": "local",
@@ -6595,10 +6599,10 @@
         "storyCoverage": 0.5660377358490566,
         "estimatedRelevantDiscussions": 53,
         "isEstimated": true,
-        "rawCommentHits": 11240,
+        "rawCommentHits": 11244,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 167,
-        "commentCoverage": 0.026690391459074734,
+        "commentCoverage": 0.026680896478121666,
         "limited": false,
         "points": 2414,
         "themes": [
@@ -6676,10 +6680,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
-        "rawCommentHits": 559,
+        "rawCommentHits": 558,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 239,
-        "commentCoverage": 0.5366726296958855,
+        "commentCoverage": 0.5376344086021505,
         "limited": false,
         "points": 162,
         "themes": [
@@ -6751,8 +6755,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 71,
-        "fetchedStoryCount": 71,
+        "rawStoryHits": 79,
+        "fetchedStoryCount": 79,
         "validatedStoryCount": 65,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 65,
@@ -6777,16 +6781,16 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 63
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 19
+            "count": 64
           },
           {
             "id": "writing",
             "label": "Writing",
+            "count": 18
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
             "count": 18
           },
           {
@@ -7077,6 +7081,17 @@
       {
         "modelId": "gemini",
         "themes": [
+          "speed"
+        ],
+        "excerpt": "…the first two stages. GPT 5.2 is slow, but efficient, while Gemini 3.1 Pro and 3.5 Flash struggle.…",
+        "source": "Hacker News",
+        "author": "stared",
+        "publishedAt": "2026-07-16T18:44:33.000Z",
+        "url": "https://news.ycombinator.com/item?id=48938519"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
           "writing",
           "safety"
         ],
@@ -7108,18 +7123,6 @@
         "author": "Topfi",
         "publishedAt": "2026-07-16T00:26:05.000Z",
         "url": "https://news.ycombinator.com/item?id=48929001"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
-          "price",
-          "local"
-        ],
-        "excerpt": "…dialogue with multiple AI systems (Claude, ChatGPT, Gemini, Copilot, and DeepL). I cannot fully verify how much nuance is preserved in languages I cannot read, so if…",
-        "source": "Hacker News",
-        "author": "michikawa59",
-        "publishedAt": "2026-07-16T01:14:52.000Z",
-        "url": "https://news.ycombinator.com/item?id=48929315"
       },
       {
         "modelId": "grok",
