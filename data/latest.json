@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-17T19:30:36.443Z",
+  "updatedAt": "2026-07-17T19:45:25.817Z",
   "build": {
-    "sha": "1507c48effe1ed63952fba1ad015d3fe70b0cf47",
-    "shortSha": "1507c48",
+    "sha": "735f7e1e141d7428708100a8df909e001b517d34",
+    "shortSha": "735f7e1",
     "ref": "main",
-    "builtAt": "2026-07-17T19:30:48.317Z"
+    "builtAt": "2026-07-17T19:45:42.921Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 7.8,
     "estimatedDatasets": 3,
-    "buildSha": "1507c48",
-    "lastSuccessfulUpdate": "2026-07-17T19:30:36.443Z"
+    "buildSha": "735f7e1",
+    "lastSuccessfulUpdate": "2026-07-17T19:45:25.817Z"
   },
   "ticker": [
     "WHY THE FIRST GPU FINANCIERS ARE TURNING TO INFERENCE CHIPS IN A $400 MILLION DEAL",
@@ -24,9 +24,9 @@
     "GOOGLE ORDERED TO OPEN ANDROID AND SEARCH TO RIVALS IN EUROPE",
     "INTRODUCING CLAUDE OPUS 4.8",
     "SAN FRANCISCO DEMANDS APPLE AND GOOGLE DELETE AI ‘NUDIFY’ APPS FROM APP STORES",
+    "APPLE’S PLOT TO CRUSH OPENAI",
     "WHY APPLE SUED OPENAI, NEW YORK TAKES ON DATA CENTERS, AND WHAT TO KNOW ABOUT CYCLOSPORIASIS",
-    "WHY TEENS DESERVE ACCESS TO SAFE AI",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN"
+    "WHY TEENS DESERVE ACCESS TO SAFE AI"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "compute",
       "catConfidence": 0.54,
       "family": "market",
-      "significance": 75,
+      "significance": 74,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -221,7 +221,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 57,
+      "significance": 56,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -238,6 +238,32 @@
       "sourceName": "Wired",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/podcast/967244/apple-openai-lawsuit-vergecast",
+      "clusterId": "bm1vv",
+      "title": "Apple’s plot to crush OpenAI",
+      "desc": "Apple is suing OpenAI. The complaint is readable and intense, as these things often are, though many experts seem to think many of the allegations are just the ways things are done. So what does Apple really want here, and why is it picking such a public fight with OpenAI? On this episode of The […]",
+      "url": "https://www.theverge.com/podcast/967244/apple-openai-lawsuit-vergecast",
+      "dateISO": "2026-07-17T17:41:32.000Z",
+      "date": "JUL 17 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/967244/apple-openai-lawsuit-vergecast"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -365,7 +391,7 @@
       "category": "policy",
       "catConfidence": 0.4,
       "family": "market",
-      "significance": 53,
+      "significance": 52,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -434,36 +460,6 @@
       ]
     },
     {
-      "id": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
-      "clusterId": "dy1zr9",
-      "title": "Create, edit and star in videos with two Google Vids updates",
-      "desc": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
-      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
-      "dateISO": "2026-07-16T16:00:00.000Z",
-      "date": "JUL 16 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/"
-        },
-        {
-          "name": "Google",
-          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
-        }
-      ],
-      "sourceName": "Google",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://openai.com/index/cars24",
       "clusterId": "egny9o",
       "title": "How Cars24 scales conversations and builds faster with OpenAI",
@@ -487,6 +483,36 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "clusterId": "dy1zr9",
+      "title": "Create, edit and star in videos with two Google Vids updates",
+      "desc": "Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "dateISO": "2026-07-16T16:00:00.000Z",
+      "date": "JUL 16 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/"
+        },
+        {
+          "name": "Google",
+          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -678,58 +704,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
-      "clusterId": "1t7gh45",
-      "title": "Google’s AI Mode now lets you link and interact with select apps",
-      "desc": "With this new update, Google is expanding AI Mode beyond answering questions and into completing tasks across the apps they use regularly.",
-      "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
-      "dateISO": "2026-07-16T16:00:00.000Z",
-      "date": "JUL 16 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm",
-      "clusterId": "kymxs4",
-      "title": "Google is renaming NotebookLM to Gemini Notebook",
-      "desc": "Google is giving its AI note-taking app a new name. The company announced on Thursday that NotebookLM is becoming Gemini Notebook, but will remain a standalone app even as it integrates more deeply across Gemini and Google Search. Google first revealed Gemini Notebook - then called Project Tailwind - in May 2023 before widely releasing […]",
-      "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm",
-      "dateISO": "2026-07-16T16:00:00.000Z",
-      "date": "JUL 16 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
       "clusterId": "1lxizuc",
       "title": "OpenAI may have made a fatal misstep in copyright fight with news orgs",
@@ -754,6 +728,58 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
+      "clusterId": "1t7gh45",
+      "title": "Google’s AI Mode now lets you link and interact with select apps",
+      "desc": "With this new update, Google is expanding AI Mode beyond answering questions and into completing tasks across the apps they use regularly.",
+      "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
+      "dateISO": "2026-07-16T16:00:00.000Z",
+      "date": "JUL 16 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm",
+      "clusterId": "kymxs4",
+      "title": "Google is renaming NotebookLM to Gemini Notebook",
+      "desc": "Google is giving its AI note-taking app a new name. The company announced on Thursday that NotebookLM is becoming Gemini Notebook, but will remain a standalone app even as it integrates more deeply across Gemini and Google Search. Google first revealed Gemini Notebook - then called Project Tailwind - in May 2023 before widely releasing […]",
+      "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm",
+      "dateISO": "2026-07-16T16:00:00.000Z",
+      "date": "JUL 16 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -1169,32 +1195,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-to-acquire-ona",
-      "clusterId": "1xb5ngz",
-      "title": "OpenAI to acquire Ona",
-      "desc": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
-      "url": "https://openai.com/index/openai-to-acquire-ona",
-      "dateISO": "2026-06-11T00:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-to-acquire-ona"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1226,7 +1226,7 @@
       "category": "compute",
       "title": "Why the first GPU financiers are turning to inference chips in a $400 million deal",
       "summary": "A $400 million chip-backed loan points to the next wave of AI infrastructure deals.",
-      "significance": 75,
+      "significance": 74,
       "impact": "high",
       "verification": "single",
       "date": "JUL 17 2026",
@@ -1300,7 +1300,7 @@
     "chatgpt": 23,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 82,
+    "gpt": 83,
     "claude": 76,
     "gemini": 34,
     "grok": 1,
@@ -1454,7 +1454,7 @@
           "sourceName": "The Verge",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "notable"
+          "impact": "emerging"
         },
         {
           "h": "Empowering India’s next generation of innovators with ATL Saathi",
@@ -1485,6 +1485,18 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
+      "date": "JUL 17 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "TikTok is testing an AI likeness detection tool",
+      "p": "TikTok is starting to test an opt-in tool that scans for AI likenesses and lets creators report them to the company, as spotted by social media consultant Matt Navarra. The tool is initially being tested with \"some\" US creators, TikTok US spokesperson Zachary…",
+      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "JUL 15 2026",
       "verification": "corroborated",
       "impact": "emerging",
@@ -1493,6 +1505,18 @@
       "url": "https://techcrunch.com/2026/07/15/spacex-falls-to-135-ipo-price-ahead-of-starship-launch/",
       "sourceName": "TechCrunch",
       "sourceCount": 3
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 17 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Apple’s plot to crush OpenAI",
+      "p": "Apple is suing OpenAI. The complaint is readable and intense, as these things often are, though many experts seem to think many of the allegations are just the ways things are done. So what does Apple really want here, and why is it picking such a public figh…",
+      "url": "https://www.theverge.com/podcast/967244/apple-openai-lawsuit-vergecast",
+      "sourceName": "The Verge",
+      "sourceCount": 1
     },
     {
       "org": "GOOGLE",
@@ -1552,30 +1576,6 @@
       "p": "Every morning, airline dispatchers, grid operators, and farmers around the world make decisions based on the same thing: a weather forecast. While these forecasts are something that most people glance at for two seconds, weather predictions influence major st…",
       "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
       "sourceName": "MIT Technology Review",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "JUL 16 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Why Apple Sued OpenAI, New York Takes on Data Centers, and What to Know about C…",
-      "p": "On today’s Uncanny Valley, we unpack OpenAI’s ongoing drama, both legal and reputational, and whether these developments could further hurt the company—particularly in its fight against Anthropic.",
-      "url": "https://www.wired.com/story/uncanny-valley-podcase-apple-sued-openai-new-york-data-center-moratorium-cyclosporiasis-outbreak/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "JUL 16 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "It's official: EU will force Google to share search data and open up AI on Andr…",
-      "p": "Google says these changes could endanger user privacy and security.",
-      "url": "https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
-      "sourceName": "Ars Technica",
       "sourceCount": 1
     }
   ],
@@ -1679,11 +1679,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 203.2,
-      "changePct": -2.0250709121710253,
+      "price": 203.055,
+      "changePct": -2.094986185424751,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 116093714,
+      "volume": 119903129,
       "ohlc": [
         {
           "d": "04-17",
@@ -2124,22 +2124,22 @@
           "o": 202.39999389648438,
           "h": 206.64500427246094,
           "l": 197.97000122070312,
-          "c": 203.1999969482422
+          "c": 203.05499267578125
         }
       ],
-      "relVolume": 0.8050960973402096,
-      "marketCap": 4958080000000
+      "relVolume": 0.8315139372384943,
+      "marketCap": 4954542000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 395.65,
-      "changePct": -1.358766423360441,
+      "price": 395.02,
+      "changePct": 0.00012639061544584448,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 23659484,
+      "volume": 24408441,
       "ohlc": [
         {
           "d": "04-17",
@@ -2580,22 +2580,22 @@
           "o": 394.8550109863281,
           "h": 398.3900146484375,
           "l": 389.3900146484375,
-          "c": 395.6499938964844
+          "c": 395.0195007324219
         }
       ],
-      "relVolume": 0.5001901969251162,
-      "marketCap": 2939679500000
+      "relVolume": 0.5160240565865715,
+      "marketCap": 2934998600000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 372.66,
-      "changePct": -0.47803671693624883,
+      "price": 372.275,
+      "changePct": -0.5808567871922835,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 16010838,
+      "volume": 16526973,
       "ohlc": [
         {
           "d": "04-17",
@@ -3036,22 +3036,22 @@
           "o": 366.0450134277344,
           "h": 377.3125,
           "l": 357.79998779296875,
-          "c": 372.6600036621094
+          "c": 372.2749938964844
         }
       ],
-      "relVolume": 0.592880803683593,
-      "marketCap": 1833487200000.0002
+      "relVolume": 0.6119932657301912,
+      "marketCap": 1831593000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 345.45,
-      "changePct": -2.5418889198356087,
+      "price": 345.25,
+      "changePct": -2.598316221041081,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 20381609,
+      "volume": 21985600,
       "ohlc": [
         {
           "d": "04-17",
@@ -3492,22 +3492,22 @@
           "o": 345.9949951171875,
           "h": 348.5199890136719,
           "l": 341.3599853515625,
-          "c": 345.45001220703125
+          "c": 345.25
         }
       ],
-      "relVolume": 0.5808967876635015,
-      "marketCap": 4214490000000
+      "relVolume": 0.6266121784033183,
+      "marketCap": 4212050000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 247.23,
-      "changePct": -1.064469834169588,
+      "price": 247.355,
+      "changePct": -1.014447824363149,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 29934982,
+      "volume": 30917520,
       "ohlc": [
         {
           "d": "04-17",
@@ -3948,22 +3948,22 @@
           "o": 244.6999969482422,
           "h": 250.24000549316406,
           "l": 243.58999633789062,
-          "c": 247.22999572753906
+          "c": 247.35499572753906
         }
       ],
-      "relVolume": 0.48798163355679,
-      "marketCap": 2645361000000
+      "relVolume": 0.5039983626890013,
+      "marketCap": 2646698500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 644.15,
-      "changePct": -3.068280959380034,
+      "price": 642.93,
+      "changePct": -3.251871379613721,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 17519456,
+      "volume": 17939733,
       "ohlc": [
         {
           "d": "04-17",
@@ -4404,22 +4404,22 @@
           "o": 647.7000122070312,
           "h": 652.2000122070312,
           "l": 626,
-          "c": 644.1500244140625
+          "c": 642.9299926757812
         }
       ],
-      "relVolume": 0.8414429273133075,
-      "marketCap": 1623258000000
+      "relVolume": 0.861628434737879,
+      "marketCap": 1620183599999.9998
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 398.02,
-      "changePct": -2.8603508322434372,
+      "price": 398.047,
+      "changePct": -0.00012193308093527161,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 16879334,
+      "volume": 17677793,
       "ohlc": [
         {
           "d": "04-17",
@@ -4860,22 +4860,22 @@
           "o": 392.1199951171875,
           "h": 404.70001220703125,
           "l": 386.03399658203125,
-          "c": 398.0199890136719
+          "c": 398.0474853515625
         }
       ],
-      "relVolume": 1.0852664762231752,
-      "marketCap": 2065723800000
+      "relVolume": 1.1366038563199656,
+      "marketCap": 2065863930000.0002
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 497.15,
-      "changePct": -0.756561059950647,
+      "price": 495.137,
+      "changePct": -1.1583813194944417,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 24812711,
+      "volume": 25453794,
       "ohlc": [
         {
           "d": "04-17",
@@ -5316,22 +5316,22 @@
           "o": 477.25,
           "h": 505.8794860839844,
           "l": 460.2099914550781,
-          "c": 497.15008544921875
+          "c": 495.13720703125
         }
       ],
-      "relVolume": 0.8537150351830822,
-      "marketCap": 805383000000
+      "relVolume": 0.8757723668426609,
+      "marketCap": 802121940000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 132.44,
-      "changePct": -1.4876524573641474,
+      "price": 131.97,
+      "changePct": -1.837251692835724,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 25678241,
+      "volume": 26449998,
       "ohlc": [
         {
           "d": "04-17",
@@ -5772,22 +5772,22 @@
           "o": 131.80499267578125,
           "h": 134.76980590820312,
           "l": 129.0500030517578,
-          "c": 132.44000244140625
+          "c": 131.97000122070312
         }
       ],
-      "relVolume": 0.5687574401193941,
-      "marketCap": 317856000000
+      "relVolume": 0.5858513888721231,
+      "marketCap": 316728000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 126.61,
-      "changePct": 1.9322128198766952,
+      "price": 126.77,
+      "changePct": 2.061023731956353,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 29793118,
+      "volume": 30817922,
       "ohlc": [
         {
           "d": "04-17",
@@ -6228,11 +6228,11 @@
           "o": 121.69999694824219,
           "h": 128.42999267578125,
           "l": 121.5,
-          "c": 126.61000061035156
+          "c": 126.7699966430664
         }
       ],
-      "relVolume": 0.7713100115218394,
-      "marketCap": 355774100000
+      "relVolume": 0.7978410239874574,
+      "marketCap": 356223700000
     }
   ],
   "compute": [
@@ -6242,7 +6242,7 @@
       "rate": "$1.87 – $3.19/hr",
       "trend": "↑ 9% vs 4d ago",
       "trendClass": "trend-up",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6255,10 +6255,10 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $5.98/hr",
-      "trend": "↓ 19% vs 4d ago",
+      "rate": "$5.89 – $8.13/hr",
+      "trend": "↓ 4% vs 4d ago",
       "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6279,14 +6279,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.56 – $1.49/hr",
-      "trend": "↑ 9% vs 4d ago",
+      "rate": "$0.60 – $1.49/hr",
+      "trend": "↑ 10% vs 4d ago",
       "trendClass": "trend-up",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-17T19:30:36.443Z",
+    "updatedAt": "2026-07-17T19:45:25.817Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6295,18 +6295,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 305,
-        "fetchedStoryCount": 300,
-        "validatedStoryCount": 169,
-        "storyCoverage": 0.9836065573770492,
-        "estimatedRelevantDiscussions": 172,
+        "rawStoryHits": 304,
+        "fetchedStoryCount": 200,
+        "validatedStoryCount": 168,
+        "storyCoverage": 0.6578947368421053,
+        "estimatedRelevantDiscussions": 255,
         "isEstimated": true,
-        "rawCommentHits": 2129,
+        "rawCommentHits": 2127,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.14091122592766558,
+        "commentCoverage": 0.14104372355430184,
         "limited": false,
-        "points": 1554,
+        "points": 1552,
         "themes": [
           {
             "id": "reasoning",
@@ -6381,18 +6381,18 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1056,
+        "rawStoryHits": 1055,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 297,
-        "storyCoverage": 0.2840909090909091,
-        "estimatedRelevantDiscussions": 1045,
+        "storyCoverage": 0.2843601895734597,
+        "estimatedRelevantDiscussions": 1044,
         "isEstimated": true,
-        "rawCommentHits": 6363,
+        "rawCommentHits": 6365,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.04714757190004715,
+        "commentCoverage": 0.04713275726630008,
         "limited": false,
-        "points": 17436,
+        "points": 17438,
         "themes": [
           {
             "id": "coding",
@@ -6407,7 +6407,12 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 29
+            "count": 31
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 12
           },
           {
             "id": "multimodal",
@@ -6417,11 +6422,6 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 11
-          },
-          {
-            "id": "price",
-            "label": "Price",
             "count": 11
           },
           {
@@ -6462,18 +6462,18 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 129,
-        "fetchedStoryCount": 129,
-        "validatedStoryCount": 119,
+        "rawStoryHits": 128,
+        "fetchedStoryCount": 128,
+        "validatedStoryCount": 118,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 119,
+        "estimatedRelevantDiscussions": 118,
         "isEstimated": false,
         "rawCommentHits": 1118,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
         "commentCoverage": 0.26833631484794274,
         "limited": false,
-        "points": 2447,
+        "points": 2445,
         "themes": [
           {
             "id": "coding",
@@ -6498,7 +6498,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 19
+            "count": 20
           },
           {
             "id": "speed",
@@ -6548,16 +6548,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 514,
+        "rawStoryHits": 513,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 31,
-        "storyCoverage": 0.5836575875486382,
+        "storyCoverage": 0.5847953216374269,
         "estimatedRelevantDiscussions": 53,
         "isEstimated": true,
-        "rawCommentHits": 10970,
+        "rawCommentHits": 10981,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 165,
-        "commentCoverage": 0.027347310847766638,
+        "commentCoverage": 0.027319916218923594,
         "limited": false,
         "points": 2412,
         "themes": [
@@ -6710,16 +6710,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 72,
-        "fetchedStoryCount": 72,
+        "rawStoryHits": 64,
+        "fetchedStoryCount": 64,
         "validatedStoryCount": 59,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 59,
         "isEstimated": false,
-        "rawCommentHits": 1024,
+        "rawCommentHits": 1023,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 288,
-        "commentCoverage": 0.29296875,
+        "commentCoverage": 0.2932551319648094,
         "limited": false,
         "points": 1417,
         "themes": [
@@ -6802,10 +6802,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": false,
-        "rawCommentHits": 4401,
+        "rawCommentHits": 4402,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 208,
-        "commentCoverage": 0.0681663258350375,
+        "commentCoverage": 0.06815084052703317,
         "limited": false,
         "points": 2235,
         "themes": [
@@ -7061,17 +7061,6 @@
       {
         "modelId": "gemini",
         "themes": [
-          "writing"
-        ],
-        "excerpt": "…(the primary product), if Google forces companies to buy Gemini (the secondary product) by bundling it with GSuite, they've given themselves a moat in the LLM space using…",
-        "source": "Hacker News",
-        "author": "sweetjuly",
-        "publishedAt": "2026-07-17T17:14:57.000Z",
-        "url": "https://news.ycombinator.com/item?id=48949762"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
           "speed"
         ],
         "excerpt": "Gemini had a pop-up on my phone today, asking me if I wanted to \"bring Gemini up to speed\" by importing conversations from my other AI apps. This tells me that Google is…",
@@ -7079,6 +7068,17 @@
         "author": "SubiculumCode",
         "publishedAt": "2026-07-17T17:07:32.000Z",
         "url": "https://news.ycombinator.com/item?id=48949675"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "writing"
+        ],
+        "excerpt": "…(the primary product), if Google forces companies to buy Gemini (the secondary product) by bundling it with GSuite, they've given themselves a moat in the LLM space using…",
+        "source": "Hacker News",
+        "author": "sweetjuly",
+        "publishedAt": "2026-07-17T17:14:57.000Z",
+        "url": "https://news.ycombinator.com/item?id=48949762"
       },
       {
         "modelId": "grok",
