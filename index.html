@@ -213,8 +213,14 @@
   }
   .local-tab:hover{border-color:var(--deep);color:var(--ink);}
   .local-tab:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
-  .local-tab[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
+  /* Local tabs are now a "jump to a section" bar (every subsection is shown
+     stacked, so there's no single "selected" panel). aria-current marks the
+     section you last jumped to, as a light cue. */
+  .local-tab[aria-current="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
   .tabpanel{scroll-margin-top:126px;}
+  /* Subsections are now shown stacked within a section — separate consecutive
+     ones with space + a light divider so the boundaries stay clear. */
+  .tabpanel + .tabpanel{margin-top:34px;padding-top:30px;border-top:1px solid var(--border);}
   .topsection{scroll-margin-top:70px;}
 
   /* ---------- one-line methodology note + disclosure (Phase 4 declutter) ---------- */
@@ -455,6 +461,18 @@
   .lb-tab:hover{border-color:var(--deep);color:var(--ink);}
   .lb-tab:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
   .lb-tab[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
+  /* Per-view colour identity (requested): Overall=blue, Reasoning=teal green,
+     Agentic=orange, Cost=brown. Unselected shows a colour-tinted box + border
+     with dark, readable text; selected fills solid with white text. Colour is
+     never the ONLY cue — the label text and aria-selected still carry it. */
+  #lb-tab-overall{border-color:#2E6FB0;background:color-mix(in srgb,#2E6FB0 12%,var(--panel));}
+  #lb-tab-overall[aria-selected="true"]{background:#2E6FB0;border-color:#2E6FB0;color:#fff;}
+  #lb-tab-reasoning{border-color:var(--teal);background:color-mix(in srgb,var(--teal) 12%,var(--panel));}
+  #lb-tab-reasoning[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff;}
+  #lb-tab-agentic{border-color:#C0692A;background:color-mix(in srgb,#C0692A 12%,var(--panel));}
+  #lb-tab-agentic[aria-selected="true"]{background:#C0692A;border-color:#C0692A;color:#fff;}
+  #lb-tab-cost{border-color:#6F4E37;background:color-mix(in srgb,#6F4E37 12%,var(--panel));}
+  #lb-tab-cost[aria-selected="true"]{background:#6F4E37;border-color:#6F4E37;color:#fff;}
   .lb-disclaimer{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.02em;color:var(--warn,#c98a1a);
     background:color-mix(in srgb, var(--warn,#c98a1a) 10%, transparent);
     border:1px solid color-mix(in srgb, var(--warn,#c98a1a) 35%, transparent);
@@ -850,10 +868,10 @@
               <div class="flip-card-inner">
                 <div class="flip-card-face flip-card-front">
                   <div class="panel-top">
-                    <h3>Top 5 local AI</h3>
+                    <h3>Local AI for your PC</h3>
                     <span class="asof curated-asof">Curated</span>
                   </div>
-                  <div class="panel-note" style="margin-bottom:14px;">Best self-hostable / open-weight models by leaderboard placement &amp; real-world local-LLM adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/?open-weights=true" target="_blank" rel="noopener">Artificial Analysis (open weights)</a></div>
+                  <div class="panel-note" style="margin-bottom:14px;">One solid open-weight pick per realistic RAM tier — from an 8GB laptop to a 64GB desktop. Not the biggest models (those need servers), but what actually runs at home · updated by hand, not live.</div>
                   <div id="local-ai"></div>
                   <button type="button" class="flip-card-btn flip-card-btn--prominent" data-flip="1" aria-expanded="false" aria-controls="local-ai-specs-back">
                     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10a6 6 0 0 1 10.5-4M16 10a6 6 0 0 1-10.5 4"/><path d="M14 3v3h-3M6 17v-3h3"/></svg>
@@ -862,7 +880,7 @@
                 </div>
                 <div class="flip-card-face flip-card-back" id="local-ai-specs-back" inert>
                   <div class="panel-top">
-                    <h3>PC specs by model</h3>
+                    <h3>PC specs by RAM tier</h3>
                     <span class="asof curated-asof">Curated</span>
                   </div>
                   <div class="panel-note" style="margin-bottom:10px;" id="local-ai-specs-note"></div>

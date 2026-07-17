@@ -38,7 +38,7 @@ export const LEADERBOARD_OVERALL_DISCLAIMER = 'Editorial synthesis—not a unive
 // etc.) is an editorial judgment call, which is why this view carries the
 // disclaimer above rather than being presented as a benchmark result.
 export const leaderboardOverall = [
-  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 100, stat: 'Leads frontier reasoning', note: `Tops Humanity's Last Exam & EnigmaEval among tracked models (Scale Labs, ${'Jul 2026'} snapshot) · native computer-use in 3.5 Flash` },
+  { rank: 1, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', w: 100, stat: 'Leads frontier reasoning', note: `Tops Humanity's Last Exam & EnigmaEval among tracked models (Scale Labs, ${'Jul 2026'} snapshot) · native computer-use in 3.5 Flash` },
   { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 95, stat: 'Near-tied for top reasoning', note: `Trails Gemini by ~2pts on Humanity's Last Exam (Scale Labs, ${'Jul 2026'} snapshot); broadest mainstream reach` },
   { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', w: 88, stat: 'Leads agentic coding execution', note: `Beats Opus 4.8 on Scale Labs' SWE Atlas Refactoring (54.8 vs 46.7) and Remote Labor Index (16.1 vs 8.3) — ${'Jul 2026'} snapshot; the stronger Claude tier on hands-on dev-agent work specifically, not a claim about every task` },
   { rank: 4, model: 'Claude Opus 4.8', org: 'Anthropic', w: 84, stat: 'Leads codebase comprehension', note: `#1 on Scale Labs' SWE Atlas Codebase QnA (57.3, ${'Jul 2026'} snapshot) — its one edge over Fable 5 among the metrics checked` },
@@ -56,7 +56,7 @@ export const leaderboardOverall = [
 // deliberately carry no `score` — the renderer shows them as a plain
 // numbered/tied entry with no bar, rather than a fabricated width.
 export const leaderboardReasoning = [
-  { rank: 1, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', score: 46.44, scoreUnit: '% HLE', stat: "46.44% on Humanity's Last Exam", note: `Highest tracked score on Humanity's Last Exam & EnigmaEval (Scale Labs, ${'Jul 2026'} snapshot)` },
+  { rank: 1, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 46.44, scoreUnit: '% HLE', stat: "46.44% on Humanity's Last Exam", note: `Highest tracked score on Humanity's Last Exam & EnigmaEval (Scale Labs, ${'Jul 2026'} snapshot)` },
   { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 44.32, scoreUnit: '% HLE', stat: "44.32% on Humanity's Last Exam", note: `Narrowly behind Gemini on Humanity's Last Exam (Scale Labs, ${'Jul 2026'} snapshot)` },
   { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
   { rank: 3, model: 'Claude Fable 5', org: 'Anthropic', stat: 'Not separately tracked here', note: `Not among Scale Labs' published Humanity's Last Exam / EnigmaEval scorers as of the ${'Jul 2026'} snapshot — see Agentic coding view for its strongest benchmark result` },
@@ -70,7 +70,7 @@ export const leaderboardAgentic = [
   { rank: 1, model: 'Claude Fable 5', org: 'Anthropic', w: 100, stat: 'Leads Refactoring & Remote Labor Index', note: `SWE Atlas Refactoring 54.8 vs Opus 4.8's 46.7; Remote Labor Index 16.1 vs 8.3 (Scale Labs, ${'Jul 2026'} snapshot)` },
   { rank: 2, model: 'Claude Opus 4.8', org: 'Anthropic', w: 92, stat: 'Leads Codebase QnA', note: `SWE Atlas Codebase QnA 57.3 — its one edge over Fable 5 among the metrics checked (Scale Labs, ${'Jul 2026'} snapshot)` },
   { rank: 3, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot` },
-  { rank: 3, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot — see Reasoning view for its strongest benchmark result` },
+  { rank: 3, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', w: 55, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot — see Reasoning view for its strongest benchmark result` },
   { rank: 5, model: 'Grok 4.5', org: 'xAI', w: 42, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot` },
   { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 40, stat: 'Not separately tracked here', note: `Not among Scale Labs' published SWE Atlas / Remote Labor Index scorers as of the ${'Jul 2026'} snapshot` },
 ];
@@ -82,7 +82,7 @@ export const leaderboardAgentic = [
 // model is self-hostable at zero marginal API cost, not a fabricated rate.
 export const leaderboardCost = [
   { rank: 1, model: 'Qwen 3.7 Max', org: 'Alibaba', w: 100, stat: 'Open-weight, self-hostable', note: `Apache-2.0 weights — no per-token API cost when self-hosted (public model card, ${'Jul 2026'} snapshot)` },
-  { rank: 2, model: 'Gemini 3.5 Pro', org: 'Google DeepMind', w: 70, stat: 'Mid tier via Flash variants', note: `Flash-tier pricing sits below the top frontier bracket (public pricing page, ${'Jul 2026'} snapshot); Pro tier is priced at the frontier bracket` },
+  { rank: 2, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', w: 70, stat: 'Mid tier via Flash variants', note: `Flash-tier pricing sits below the top frontier bracket (public pricing page, ${'Jul 2026'} snapshot); Pro tier is priced at the frontier bracket` },
   { rank: 3, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', w: 60, stat: 'Frontier tier', note: `Priced in the top frontier bracket across providers (public pricing page, ${'Jul 2026'} snapshot)` },
   { rank: 4, model: 'Grok 4.5', org: 'xAI', w: 55, stat: 'Frontier tier', note: `Priced in the top frontier bracket across providers (public pricing page, ${'Jul 2026'} snapshot)` },
   { rank: 5, model: 'Claude Opus 4.8', org: 'Anthropic', w: 48, stat: 'Premium tier', note: `Priced at the premium end of the frontier bracket (public pricing page, ${'Jul 2026'} snapshot); some report a higher cost per completed task` },
@@ -111,35 +111,34 @@ export const imageAI = [
   { rank: 5, model: 'Seedream 4.0', org: 'ByteDance', score: 1188, scoreUnit: ' Elo', stat: 'Elo 1188', note: 'Elo 1188; strong photoreal output and Asian-language prompt handling' },
 ];
 
-// Top self-hostable / open-weight models — the "run it yourself today" tier.
-// Rank blends open-model leaderboards + real-world local-LLM adoption. Ordinal.
+// Local AI you can actually run on a PERSONAL PC — one solid open-weight pick
+// per realistic consumer RAM tier, from an 8GB laptop up to a 64GB desktop.
+// Deliberately NOT the "biggest/best open models" (those are 200B–670B and
+// need workstations/servers) — this list answers "what can I run on my own
+// machine". Ordered by tier (entry → high-end), ordinal, no fabricated score.
 export const localAI = [
-  { rank: 1, model: 'Qwen 3.7 (235B/A22B)', org: 'Alibaba', w: 100, stat: 'Best all-round self-hostable', note: 'Apache-2.0 · the local-LLM community favourite for coding + agents' },
-  { rank: 2, model: 'DeepSeek V3.2', org: 'DeepSeek', w: 90, stat: 'Best value / reasoning', note: 'MIT-licensed weights · strong math + code at low inference cost' },
-  { rank: 3, model: 'Llama 4 Maverick', org: 'Meta', w: 80, stat: 'Broadest ecosystem', note: 'Llama community licence · the default base for fine-tuned pipelines' },
-  { rank: 4, model: 'GLM-4.6', org: 'Zhipu AI', w: 72, stat: 'Strong agentic open model', note: 'Open weights · competitive tool-use and coding for its size' },
-  { rank: 5, model: 'Mistral Large 3', org: 'Mistral AI', w: 64, stat: 'Efficient European option', note: 'Open weights · solid multilingual quality on modest hardware' },
+  { rank: 1, model: 'Llama 3.2 3B', org: 'Meta', w: 100, stat: 'Runs on 8GB RAM', note: 'Entry laptops · quick chat, summarizing, simple coding help — CPU-only is fine' },
+  { rank: 2, model: 'Llama 3.1 8B', org: 'Meta', w: 88, stat: 'Runs on 16GB RAM', note: 'Mainstream laptops · a capable general assistant with light coding' },
+  { rank: 3, model: 'Qwen 2.5 14B', org: 'Alibaba', w: 76, stat: 'Runs on 16–24GB RAM', note: 'Enthusiast laptops/desktops · noticeably stronger reasoning + coding' },
+  { rank: 4, model: 'Gemma 2 27B', org: 'Google', w: 66, stat: 'Runs on 32GB RAM', note: 'Enthusiast desktops · near-frontier quality for its size' },
+  { rank: 5, model: 'Llama 3.3 70B', org: 'Meta', w: 58, stat: 'Runs on 64GB RAM', note: 'High-end desktops (or a 24–48GB GPU) · the best local quality you can self-host at home' },
 ];
 
-// Hardware tiers for the 5 models above. `approxSize` is CALCULATED — each
-// model's published total parameter count at a standard 4-bit quantization
-// (~0.6GB per billion parameters, the common GGUF/AWQ ballpark) — not a
-// benchmarked or vendor-published figure, so it's labelled as an editorial
-// estimate, never as measured/live data. MoE models (Qwen/DeepSeek/Llama 4/
-// GLM) need their FULL parameter count resident in memory even though only
-// a smaller "active" subset computes per token — that's why total, not
-// active, params drive the tier. Ranked least-to-most demanding among these
-// specific 5 — even the lightest genuinely needs prosumer-class hardware,
-// not a typical consumer laptop, and the table says so rather than
-// pretending otherwise.
+// Hardware tiers for the 5 personal-PC models above, entry → high-end.
+// `approxSize` is CALCULATED — each model's published parameter count at a
+// standard 4-bit quantization (~0.6GB per billion parameters, the common
+// GGUF/AWQ ballpark) — not a benchmarked or vendor-published figure, so it's
+// labelled as an editorial estimate. These are all dense models that run on
+// ordinary consumer hardware: system RAM for CPU inference (slower) or a
+// consumer GPU's VRAM (faster) — no data-center cards required.
 export const LOCAL_AI_SPECS_ASOF = 'Jul 2026';
-export const LOCAL_AI_SPECS_METHODOLOGY = 'Editorial estimate: memory need = published total parameters × ~0.6GB/billion (typical 4-bit quantization). Not a benchmarked or vendor-published figure.';
+export const LOCAL_AI_SPECS_METHODOLOGY = 'Editorial estimate: memory need = published parameters × ~0.6GB/billion (typical 4-bit quantization). Runs on system RAM (CPU, slower) or a consumer GPU (faster). Not a benchmarked figure.';
 export const localAiPcSpecs = [
-  { model: 'Mistral Large 3', params: '123B dense', approxSize: '~74GB', tier: 1, tierLabel: 'Prosumer workstation', setup: '1× 80–96GB GPU, or a 128GB+ unified-memory Mac' },
-  { model: 'Qwen 3.7 (235B/A22B)', params: '235B total · 22B active', approxSize: '~141GB', tier: 2, tierLabel: 'High-end workstation', setup: '2× 80GB GPUs, or 192GB+ system RAM with CPU offload' },
-  { model: 'GLM-4.6', params: '355B total · 32B active', approxSize: '~213GB', tier: 3, tierLabel: 'Multi-GPU workstation', setup: '3–4× 80GB GPUs, or 256GB+ RAM with heavy offload' },
-  { model: 'Llama 4 Maverick', params: '400B total · 17B active', approxSize: '~240GB', tier: 4, tierLabel: 'Small server', setup: '4× 80GB GPUs, or a 256–384GB RAM server' },
-  { model: 'DeepSeek V3.2', params: '671B total · 37B active', approxSize: '~403GB', tier: 5, tierLabel: 'Multi-node server', setup: '6–8× 80GB GPUs, or a 512GB+ RAM server' },
+  { model: 'Llama 3.2 3B', params: '3B', approxSize: '~2GB', tier: 1, tierLabel: 'Entry laptop', setup: '8GB RAM · CPU is fine, any modern laptop' },
+  { model: 'Llama 3.1 8B', params: '8B', approxSize: '~5GB', tier: 2, tierLabel: 'Mainstream laptop', setup: '16GB RAM, or a 6–8GB GPU' },
+  { model: 'Qwen 2.5 14B', params: '14B', approxSize: '~9GB', tier: 3, tierLabel: 'Enthusiast laptop/desktop', setup: '16–24GB RAM, or a 12GB GPU' },
+  { model: 'Gemma 2 27B', params: '27B', approxSize: '~16GB', tier: 4, tierLabel: 'Enthusiast desktop', setup: '32GB RAM, or a 24GB GPU (RTX 3090/4090)' },
+  { model: 'Llama 3.3 70B', params: '70B', approxSize: '~40GB', tier: 5, tierLabel: 'High-end desktop', setup: '64GB RAM (CPU, slower), or a 48GB GPU / dual 24GB' },
 ];
 
 // Top 5 self-hostable models actually sized for phones/tablets — a distinct

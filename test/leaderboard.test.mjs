@@ -40,7 +40,7 @@ test('reasoning/agentic views never assign a specific score to a model that has 
   const reasoning = LEADERBOARD_VIEWS.find((v) => v.id === 'reasoning').data;
   const agentic = LEADERBOARD_VIEWS.find((v) => v.id === 'agentic').data;
   // Gemini/GPT are the only ones with a published Humanity's Last Exam score
-  const trackedReasoning = new Set(['Gemini 3.5 Pro', 'ChatGPT Sol (GPT-5.6)']);
+  const trackedReasoning = new Set(['Gemini 3.1 Pro', 'ChatGPT Sol (GPT-5.6)']);
   for (const row of reasoning) {
     if (!trackedReasoning.has(row.model)) {
       assert.match(row.note, /not.*(among|separately|tracked)/i, `${row.model} should honestly disclose no tracked reasoning score`);

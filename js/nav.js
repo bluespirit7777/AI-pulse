@@ -61,11 +61,6 @@ function reorderPanels(order) {
   order.forEach((p) => { const el = panelEl(p); if (el) main.appendChild(el); });
 }
 
-function defaultTabFor(panel) {
-  const tabs = PANEL_TABS[panel];
-  return tabs ? tabs[0] : null;
-}
-
 // Resolve a location.hash into {panel, tab}. Accepts legacy hashes, the
 // current-scheme ids (#panel-x, #tab-y), or falls back to the last state.
 function resolveHash(hash) {
@@ -87,31 +82,50 @@ function hashFor(panel, tab) {
   return tab ? '#tab-' + tab : '#panel-' + panel;
 }
 
-function updateDepthRail(depth) {
-  document.querySelectorAll('.depth-item').forEach((el) => {
-    el.dataset.active = String(el.dataset.depth === depth);
+// Every subsection of a top panel is shown STACKED (not one tab at a time),
+// so the local-tab bar is a "jump to a section" nav, not a tablist. This
+// strips the tablist/tabpanel ARIA the HTML still carries and unhides every
+// tabpanel once (they're gated only by their parent panel's `hidden` from
+// here on). Run once at init.
+function normalizeLocalNav() {
+  document.querySelectorAll('.local-tabs').forEach((group) => {
+    group.setAttribute('role', 'group');
+    group.querySelectorAll('.local-tab').forEach((btn) => {
+      btn.removeAttribute('role');
+      btn.removeAttribute('aria-selected');
+      btn.removeAttribute('aria-controls');
+      btn.removeAttribute('tabindex');
+    });
+  });
+  document.querySelectorAll('.tabpanel').forEach((p) => {
+    p.removeAttribute('role');
+    p.removeAttribute('aria-labelledby');
+    p.hidden = false;
   });
 }
 
-function currentDepth(panel, tab) {
-  const host = tab ? tabEl(tab) : panelEl(panel);
-  // walk to find an element carrying data-depth (tabpanel or nested <section>)
-  const withDepth = host?.matches('[data-depth]') ? host : host?.querySelector('[data-depth]');
-  return withDepth?.dataset.depth || null;
-}
-
-function activateTabButtons(panel, tab) {
+// Light "you jumped here" cue on the jump bar — not a tablist selection.
+function setLocalTabCurrent(panel, tab) {
   const tabs = PANEL_TABS[panel];
   if (!tabs) return;
   tabs.forEach((t) => {
     const btn = tabBtn(t);
-    const panelEl2 = tabEl(t);
-    const isSel = t === tab;
-    if (btn) {
-      btn.setAttribute('aria-selected', String(isSel));
-      btn.tabIndex = isSel ? 0 : -1;
-    }
-    if (panelEl2) panelEl2.hidden = !isSel;
+    if (btn) btn.setAttribute('aria-current', String(t === tab));
+  });
+}
+
+// Every distinct data-depth present among a panel's shown subsections — the
+// section now spans multiple depths, so the rail highlights all of them
+// rather than pretending there's a single "current" one.
+function panelDepths(panel) {
+  const el = panelEl(panel);
+  if (!el) return [];
+  return [...new Set([...el.querySelectorAll('[data-depth]')].map((n) => n.dataset.depth))];
+}
+
+function updateDepthRailMulti(depths) {
+  document.querySelectorAll('.depth-item').forEach((el) => {
+    el.dataset.active = String(depths.includes(el.dataset.depth));
   });
 }
 
@@ -174,10 +188,14 @@ function legacyAnchor(panel, tab) {
   return tab ? tabEl(tab) : panelEl(panel);
 }
 
+// Show a top section. `tab` is now just an optional SCROLL TARGET within the
+// section (every subsection is shown stacked), not a one-of-many selection.
+// Clicking the top-nav header passes no tab → shows the whole section from
+// its top; a legacy deep link like #sec-waves or a jump-bar click passes a
+// tab → shows the section and scrolls to that subsection.
 export function goTo(panel, tab, { push = true, scroll = true } = {}) {
   if (!PANELS.includes(panel)) return;
-  const resolvedTab = tab || (state.panel === panel ? state.tab : defaultTabFor(panel));
-  state = { panel, tab: resolvedTab };
+  state = { panel, tab: tab || null };
 
   // undo whatever Full Page mode changed, if we're coming from it
   setLocalTabsVisible(true);
@@ -188,17 +206,18 @@ export function goTo(panel, tab, { push = true, scroll = true } = {}) {
     delete main.dataset.reordered;
   }
 
-  activatePanels(panel);
-  if (resolvedTab) activateTabButtons(panel, resolvedTab);
-  updateDepthRail(currentDepth(panel, resolvedTab));
+  activatePanels(panel);            // show this panel, hide the others
+  setLocalTabCurrent(panel, tab);   // light cue on the jump bar
+  updateDepthRailMulti(panelDepths(panel));
 
   if (push) {
-    const hash = hashFor(panel, resolvedTab);
-    if (location.hash !== hash) history.pushState({ panel, tab: resolvedTab }, '', hash);
+    const hash = hashFor(panel, tab);
+    if (location.hash !== hash) history.pushState({ panel, tab: tab || null }, '', hash);
   }
 
   if (scroll) {
-    const target = legacyAnchor(panel, resolvedTab);
+    // no tab → land at the top of the section; tab → scroll to that subsection
+    const target = tab ? legacyAnchor(panel, tab) : panelEl(panel);
     pendingScrollTarget = target;
     if (dataReady) {
       scrollToTarget(target, { smooth: true });
@@ -245,22 +264,14 @@ function wireTopnav() {
   });
 }
 
+// Jump bar: each button scrolls to its subsection within the (already fully
+// shown) section. Plain buttons — Tab moves between them naturally, so no
+// tablist arrow-key roving is needed anymore.
 function wireLocalTabs() {
   document.querySelectorAll('.local-tabs').forEach((group) => {
-    const buttons = Array.from(group.querySelectorAll('.local-tab'));
     const panel = group.dataset.tabgroup;
-    buttons.forEach((btn, i) => {
+    group.querySelectorAll('.local-tab').forEach((btn) => {
       btn.addEventListener('click', () => goTo(panel, btn.dataset.tab));
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          e.preventDefault();
-          const dir = e.key === 'ArrowRight' ? 1 : -1;
-          const next = buttons[(i + dir + buttons.length) % buttons.length];
-          goTo(panel, next.dataset.tab);
-          next.focus();
-        } else if (e.key === 'Home') { e.preventDefault(); goTo(panel, buttons[0].dataset.tab); buttons[0].focus(); }
-        else if (e.key === 'End') { e.preventDefault(); goTo(panel, buttons[buttons.length - 1].dataset.tab); buttons[buttons.length - 1].focus(); }
-      });
     });
   });
 }
@@ -286,18 +297,19 @@ function handleHash({ push } = { push: false }) {
 }
 
 export function initNav() {
+  normalizeLocalNav();
   wireTopnav();
   wireLocalTabs();
   wireGotoButtons();
 
   window.addEventListener('popstate', () => handleHash({ push: false }));
 
-  // Initial load: resolve the hash if present, else default to Today/Briefing
-  // (already the DOM's default active state).
+  // Initial load: resolve the hash if present, else show Today (all of its
+  // subsections stacked — the default landing view).
   if (location.hash) {
     handleHash({ push: false });
   } else {
-    updateDepthRail(currentDepth('today', 'briefing'));
+    goTo('today', null, { push: false, scroll: false });
   }
 }
 

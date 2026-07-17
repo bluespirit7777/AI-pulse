@@ -8,9 +8,10 @@
 // Community Pulse, Frontier Releases, the Leaderboard, and entity drawers —
 // reads from here so a version bump only has to happen in ONE place. Before
 // this existed, "Gemini 3.1" (entities.json) and "Gemini 3.5 Pro" (curated
-// leaderboard) disagreed about Google's current flagship, and "Grok 4"
-// (entities.json/community) disagreed with "Grok 4.5" (leaderboard) — both
-// real inconsistencies this fixes.
+// leaderboard) disagreed about Google's current flagship — "Gemini 3.5 Pro"
+// turned out to be non-existent; the real flagship is "Gemini 3.1 Pro" — and
+// "Grok 4" (entities.json/community) disagreed with "Grok 4.5" (leaderboard)
+// — both real inconsistencies this fixes.
 //
 // `brand` is the consumer-facing PRODUCT name where it differs from the
 // model FAMILY name (the GPT family ships as the ChatGPT product) — Frontier
@@ -29,7 +30,7 @@ export const MODEL_REGISTRY = {
   },
   gemini: {
     key: 'gemini', name: 'Gemini', brand: 'Gemini', org: 'Google DeepMind',
-    version: 'Gemini 3.5 Pro', versionLabel: 'Gemini 3.5 Pro',
+    version: 'Gemini 3.1 Pro', versionLabel: 'Gemini 3.1 Pro',
     hnQuery: 'Gemini', ytQuery: 'Gemini AI', entityId: 'gemini',
   },
   grok: {

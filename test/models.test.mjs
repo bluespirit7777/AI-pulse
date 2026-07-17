@@ -23,7 +23,8 @@ test('MODEL_REGISTRY has a complete, well-formed entry for every tracked model',
 
 test('entities.json (Ocean Map) version strings match the canonical registry — no drift', () => {
   // This is the exact bug the registry fixes: "Gemini 3.1" (entities.json) vs
-  // "Gemini 3.5 Pro" (leaderboard), "Grok 4" vs "Grok 4.5". Every frontier
+  // "Gemini 3.5 Pro" (leaderboard, later confirmed non-existent and corrected
+  // to "Gemini 3.1 Pro"), "Grok 4" vs "Grok 4.5". Every frontier
   // model node's `version` must equal MODEL_REGISTRY[id].version.
   const nodesById = Object.fromEntries(entities.nodes.map((n) => [n.id, n]));
   for (const key of MODEL_KEYS) {
