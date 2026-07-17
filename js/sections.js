@@ -50,13 +50,20 @@ function specTable(rows) {
     </table>`;
 }
 
-// Honesty pass (Phase 4): a bar only appears where `score` is a real,
-// published number — its width is a genuine linear scale against the
-// strongest score in the same list. Rows without a `score` (ordinal-only
-// rankings, or benchmarks not run on that model) get a numbered/tied rank
-// and an explicit "Editorial ranking" label instead of a bar that could be
-// mistaken for a measurement. Ties share a rank number with a "T-" prefix.
-function rankRows(rows) {
+// Honesty pass (Phase 4): a bar only appears where a rating exists. A real,
+// published `score` (Humanity's Last Exam %, Elo …) drives a bar scaled
+// linearly against the strongest score in the same list and is shown as the
+// row's rating. When `showIndex` is on (the Frontier leaderboard), a view
+// without per-model benchmarks instead surfaces `w` — a 0–100 editorial
+// composite index — as the rating, with a "/100" unit and a tooltip so it
+// reads as a weighted placement, not a measurement (the per-view disclaimer
+// and each row's note reinforce this). Rows with neither a score nor (where
+// allowed) an index — a benchmark simply not run on that model — fall back to
+// an ordinal rank with an "Editorial ranking" tag and no fabricated number.
+// Other ranked lists (local/video AI) leave `showIndex` off so their `stat`
+// column (hardware needs, etc.) stays prominent instead of a bare index.
+// Ties share a rank number with a "T-" prefix.
+function rankRows(rows, { showIndex = false } = {}) {
   const scored = rows.filter((r) => r.score != null);
   const maxScore = scored.length ? Math.max(...scored.map((r) => r.score)) : 0;
   const rankCounts = new Map();
@@ -66,21 +73,30 @@ function rankRows(rows) {
     const tied = rankCounts.get(r.rank) > 1;
     const rankLabel = (tied ? 'T-' : '') + String(r.rank).padStart(2, '0');
     const hasScore = r.score != null;
-    const barPct = hasScore && maxScore ? Math.round((r.score / maxScore) * 100) : 0;
+    const hasIndex = showIndex && !hasScore && r.w != null;
+    const showBar = hasScore || hasIndex;
+    const barPct = hasScore
+      ? (maxScore ? Math.round((r.score / maxScore) * 100) : 0)
+      : (hasIndex ? Math.max(0, Math.min(100, r.w)) : 0);
+    const rating = hasScore
+      ? `${esc(String(r.score))}<span class="lb-score-unit">${esc(r.scoreUnit || '')}</span>`
+      : (hasIndex ? `${esc(String(r.w))}<span class="lb-score-unit">/100</span>` : '');
     return `
-    <div class="lb-row${hasScore ? '' : ' lb-row--ordinal'}">
+    <div class="lb-row${showBar ? '' : ' lb-row--ordinal'}">
       <div class="lb-top">
         <div class="lb-name">
           <span class="lb-rank">${esc(rankLabel)}</span>
           <span class="lb-model">${esc(r.model)}</span>
           <span class="lb-org">${esc(r.org)}</span>
         </div>
-        <span class="lb-stat">${hasScore ? esc(String(r.score) + (r.scoreUnit || '')) : esc(r.stat)}</span>
+        ${rating
+          ? `<span class="lb-score"${hasIndex ? ' title="Composite index (0–100), editorial weighting — not a single measured benchmark"' : ''}>${rating}</span>`
+          : `<span class="lb-stat">${esc(r.stat)}</span>`}
       </div>
-      ${hasScore
+      ${showBar
         ? `<div class="bar-track"><div class="bar-fill" style="--w:${barPct}%"></div></div>`
         : `<div class="lb-editorial-tag">Editorial ranking · no measured score for this view</div>`}
-      <div class="lb-note">${esc(r.note)}</div>
+      <div class="lb-note">${hasIndex && r.stat ? `<span class="lb-note-lead">${esc(r.stat)}</span> — ` : ''}${esc(r.note)}</div>
     </div>`;
   }).join('');
 }
@@ -157,7 +173,7 @@ function wireLeaderboardTabs() {
       t.tabIndex = isSel ? 0 : -1;
       if (isSel && focusTab) t.focus();
     });
-    setHTML('leaderboard', rankRows(view.data));
+    setHTML('leaderboard', rankRows(view.data, { showIndex: true }));
     if (disclaimerEl) {
       disclaimerEl.textContent = view.disclaimer || '';
       disclaimerEl.hidden = !view.disclaimer;

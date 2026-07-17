@@ -6,7 +6,8 @@ import assert from 'node:assert/strict';
 import {
   buildSearchUrl, buildVideosStatsUrl, parseSearchResponse, parseISO8601Duration,
   parseVideosDetailsResponse, mergeVideoDetails, isShort, filterOutShorts,
-  isAiRelevant, filterAiRelevant, daysAgoISO, buildTopVideos, MAX_SHORT_SECONDS,
+  isAiRelevant, filterAiRelevant, isLikelyEnglish, filterEnglish,
+  daysAgoISO, buildTopVideos, MAX_SHORT_SECONDS,
 } from '../scripts/lib/youtube.mjs';
 
 test('buildSearchUrl encodes query, key, and sorts by viewCount', () => {
@@ -17,6 +18,7 @@ test('buildSearchUrl encodes query, key, and sorts by viewCount', () => {
   assert.match(url, /type=video/);
   assert.match(url, /key=KEY123/);
   assert.match(url, /publishedAfter=2026-07-01/);
+  assert.match(url, /relevanceLanguage=en/);
 });
 
 test('buildVideosStatsUrl joins video ids with commas and requests statistics + contentDetails', () => {
@@ -128,6 +130,33 @@ test('filterAiRelevant removes only the zodiac-flagged entries', () => {
   assert.equal(out[0].title, 'Gemini AI review');
 });
 
+test('isLikelyEnglish keeps Latin-script titles and drops titles dominated by a non-Latin script', () => {
+  assert.equal(isLikelyEnglish('Gemini 3 Pro full review and benchmarks'), true);
+  assert.equal(isLikelyEnglish('ChatGPT Sol vs Claude Opus 4.8'), true);
+  assert.equal(isLikelyEnglish('Gemini 3 Pro AI'), true); // brand + latin — keep
+  assert.equal(isLikelyEnglish('जेमिनी 3 प्रो का पूरा रिव्यू'), false); // Hindi
+  assert.equal(isLikelyEnglish('ChatGPTの使い方を徹底解説する動画'), false); // Japanese dominates
+  assert.equal(isLikelyEnglish('클로드 오푸스 완벽 가이드'), false); // Korean
+  assert.equal(isLikelyEnglish('双子座 AI 完整评测教程视频'), false); // Chinese dominates
+});
+
+test('isLikelyEnglish does not over-filter: no-letter titles and ties are kept', () => {
+  assert.equal(isLikelyEnglish('🔥🔥🔥 2026 !!!'), true); // no letters at all
+  assert.equal(isLikelyEnglish(''), true);
+  assert.equal(isLikelyEnglish(null), true);
+  assert.equal(isLikelyEnglish('AI 人工'), true); // 2 latin vs 2 han — tie stays
+});
+
+test('filterEnglish removes only the non-Latin-dominated titles', () => {
+  const videos = [
+    { title: 'Gemini 3 Pro review' },
+    { title: 'ジェミニ 3 プロ 徹底レビュー' },
+    { title: 'Claude Opus deep dive' },
+  ];
+  const out = filterEnglish(videos).map((v) => v.title);
+  assert.deepEqual(out, ['Gemini 3 Pro review', 'Claude Opus deep dive']);
+});
+
 test('daysAgoISO computes a real ISO timestamp N days before `now`', () => {
   const now = Date.parse('2026-07-15T00:00:00.000Z');
   assert.equal(daysAgoISO(7, now), '2026-07-08T00:00:00.000Z');
@@ -140,15 +169,18 @@ test('buildTopVideos filters relevance + Shorts, attaches details, re-sorts by r
       { id: { videoId: 'b' }, snippet: { title: 'ChatGPT tricks', description: '', channelTitle: 'C2', publishedAt: '2026-07-11T00:00:00Z' } },
       { id: { videoId: 'z' }, snippet: { title: 'Gemini Horoscope', description: 'zodiac forecast', channelTitle: 'C3', publishedAt: '2026-07-11T00:00:00Z' } },
       { id: { videoId: 's' }, snippet: { title: 'ChatGPT in 30 seconds', description: '', channelTitle: 'C4', publishedAt: '2026-07-11T00:00:00Z' } },
+      { id: { videoId: 'hi' }, snippet: { title: 'चैटजीपीटी का पूरा रिव्यू हिंदी में', description: 'AI', channelTitle: 'C5', publishedAt: '2026-07-11T00:00:00Z' } },
     ],
   };
   const statsJson = { items: [
     { id: 'a', statistics: { viewCount: '1000' }, contentDetails: { duration: 'PT5M' } },
     { id: 'b', statistics: { viewCount: '5000' }, contentDetails: { duration: 'PT4M' } },
     { id: 's', statistics: { viewCount: '999999' }, contentDetails: { duration: 'PT30S' } }, // huge views but a Short — must be excluded
+    { id: 'hi', statistics: { viewCount: '888888' }, contentDetails: { duration: 'PT6M' } }, // huge views but Hindi — must be excluded
   ] };
   const out = buildTopVideos(searchJson, statsJson, { maxResults: 5 });
-  assert.equal(out.length, 2); // zodiac entry filtered out, Short 's' filtered out despite highest views
+  assert.equal(out.length, 2); // zodiac + Short + non-English all filtered out despite views
+  assert.ok(!out.some((v) => v.videoId === 'hi'));
   assert.equal(out[0].videoId, 'b');
   assert.equal(out[0].viewCount, 5000);
   assert.equal(out[1].videoId, 'a');

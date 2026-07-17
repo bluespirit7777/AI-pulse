@@ -83,6 +83,7 @@ function applyRange(next) {
     delta: r?.entityDelta || {},
     rangeLabel: range,
     historyAvailable: !!r?.previousWindowComplete,
+    signals: data.signals || [],
   });
 }
 

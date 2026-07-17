@@ -31,7 +31,7 @@ YouTube Data API v3 (search + videos.list)
         │   separate from the main pipeline above because it's the only
         │   credentialed source: needs YOUTUBE_API_KEY)
         ▼
-scripts/update-youtube.mjs ──uses──> scripts/lib/youtube.mjs (search/videos URL building, response parsing, relevance filter)
+scripts/update-youtube.mjs ──uses──> scripts/lib/youtube.mjs (search/videos URL building, response parsing, relevance + English-only + Shorts filters)
                             ├──uses──> scripts/lib/models.mjs (MODEL_REGISTRY.{claude,gpt,gemini}.ytQuery)
         │
         └─► data/youtube-trending.json  (top 5 by view count, trailing 7 days, per model — OPTIONAL: absent until the secret is set)
@@ -45,7 +45,7 @@ index.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
         ├─ js/nav.js           5-item IA router: panel/tab activation, legacy-hash map, depth rail, anchor correction
         ├─ js/briefing.js      Today's 60-second briefing (compact references into waves/releases, no duplicate cards)
-        ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data)
+        ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
         ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected")
         ├─ js/river.js         signal river (chronological, declutered filters, expand/archive)
         ├─ js/tide.js          stacked-area category volume, top-5 default + "show all" toggle

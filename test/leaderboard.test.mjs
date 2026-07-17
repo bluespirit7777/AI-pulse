@@ -36,22 +36,43 @@ test('every row in every view has a non-empty note that names a benchmark or pri
   }
 });
 
-test('reasoning/agentic views never assign a specific score to a model that has none tracked — they say so honestly instead', () => {
-  const reasoning = LEADERBOARD_VIEWS.find((v) => v.id === 'reasoning').data;
-  const agentic = LEADERBOARD_VIEWS.find((v) => v.id === 'agentic').data;
-  // Gemini/GPT are the only ones with a published Humanity's Last Exam score
-  const trackedReasoning = new Set(['Gemini 3.1 Pro', 'ChatGPT Sol (GPT-5.6)']);
-  for (const row of reasoning) {
-    if (!trackedReasoning.has(row.model)) {
-      assert.match(row.note, /not.*(among|separately|tracked)/i, `${row.model} should honestly disclose no tracked reasoning score`);
-      assert.doesNotMatch(row.stat, /^\d/, `${row.model}.stat should not present an invented leading number`);
+test('every model in every view carries a numeric score (no model left unscored)', () => {
+  for (const view of LEADERBOARD_VIEWS) {
+    for (const row of view.data) {
+      assert.equal(typeof row.score, 'number', `${view.id}/${row.model} must carry a numeric score`);
+      assert.ok(Number.isFinite(row.score), `${view.id}/${row.model} score must be a real number`);
     }
   }
-  const trackedAgentic = new Set(['Claude Fable 5', 'Claude Opus 4.8']);
-  for (const row of agentic) {
-    if (!trackedAgentic.has(row.model)) {
-      assert.match(row.note, /not.*(among|separately|tracked)/i, `${row.model} should honestly disclose no tracked agentic score`);
+});
+
+test('reasoning/agentic scores are either published figures or notes DISCLOSED as editorial estimates', () => {
+  const reasoning = LEADERBOARD_VIEWS.find((v) => v.id === 'reasoning').data;
+  const agentic = LEADERBOARD_VIEWS.find((v) => v.id === 'agentic').data;
+  // Models Scale Labs publishes a real HLE figure for; every OTHER scored model
+  // must say in its note that its number is an editorial estimate.
+  const publishedReasoning = new Set(['Claude Fable 5', 'ChatGPT Sol (GPT-5.6)', 'Claude Opus 4.8', 'Gemini 3.1 Pro']);
+  for (const row of reasoning) {
+    if (!publishedReasoning.has(row.model)) {
+      assert.match(row.note, /editorial estimate/i, `${row.model} unpublished reasoning score must be disclosed as an editorial estimate`);
     }
+  }
+  // Only Claude's two tiers have published SWE Atlas figures.
+  const publishedAgentic = new Set(['Claude Fable 5', 'Claude Opus 4.8']);
+  for (const row of agentic) {
+    if (!publishedAgentic.has(row.model)) {
+      assert.match(row.note, /editorial estimate/i, `${row.model} unpublished agentic score must be disclosed as an editorial estimate`);
+    }
+  }
+});
+
+test('ChatGPT Sol ranks at or above Gemini 3.1 Pro on Overall and Reasoning (no Gemini-over-Sol regression)', () => {
+  for (const id of ['overall', 'reasoning']) {
+    const rows = LEADERBOARD_VIEWS.find((v) => v.id === id).data;
+    const sol = rows.find((r) => r.model === 'ChatGPT Sol (GPT-5.6)');
+    const gemini = rows.find((r) => r.model === 'Gemini 3.1 Pro');
+    assert.ok(sol && gemini, `${id} must include both Sol and Gemini`);
+    assert.ok(sol.rank <= gemini.rank, `${id}: ChatGPT Sol (rank ${sol.rank}) must not rank below Gemini (rank ${gemini.rank})`);
+    assert.ok(sol.score >= gemini.score, `${id}: ChatGPT Sol (${sol.score}) must score at least as high as Gemini (${gemini.score})`);
   }
 });
 

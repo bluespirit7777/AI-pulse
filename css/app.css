@@ -161,6 +161,13 @@ html, body { overflow-x: clip; }
 .drawer-rel li { display: flex; align-items: baseline; gap: 8px; }
 .rel-link { background: none; border: none; padding: 0; color: var(--teal); font-family: var(--font-body); font-weight: 600; font-size: 13.5px; cursor: pointer; text-decoration: underline; }
 .rel-type { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+.drawer-sources { margin: 18px 0; }
+.drawer-src-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 11px; max-height: 264px; overflow-y: auto; }
+.drawer-src-list li { display: flex; flex-direction: column; gap: 2px; }
+.src-headline { font-family: var(--font-body); font-size: 13.5px; line-height: 1.4; color: var(--sea); text-decoration: none; font-weight: 600; }
+.src-headline:hover { text-decoration: underline; }
+.src-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+.drawer-src-empty { font-family: var(--font-mono); font-size: 11.5px; line-height: 1.55; color: var(--ink-dim); margin: 0; }
 .drawer-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 14px; }
 .drawer-links { font-family: var(--font-mono); font-size: 12px; }
 body.drawer-open { overflow: hidden; }

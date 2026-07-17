@@ -7,10 +7,11 @@
 // ChatGPT and Gemini, searched SEPARATELY so one model's volume never crowds
 // out another's. `order=viewCount` does the ranking server-side (YouTube's
 // own view counts, not a derived score); a follow-up videos.list call adds
-// the real view-count + duration, since search.list returns neither. Two
+// the real view-count + duration, since search.list returns neither. Three
 // filters run before the final top-5 cut: a relevance guard (the "Gemini"
-// zodiac false-positive) and a Shorts exclusion (duration-based — YouTube's
-// public API has no explicit "is this a Short" field).
+// zodiac false-positive), an English-only guard (script-based on the title,
+// since YouTube's relevanceLanguage hint is soft), and a Shorts exclusion
+// (duration-based — YouTube's public API has no explicit "is a Short" field).
 
 const SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 const VIDEOS_URL = 'https://www.googleapis.com/youtube/v3/videos';
@@ -31,7 +32,9 @@ export function buildSearchUrl({ query, apiKey, publishedAfter, maxResults = 5 }
     publishedAfter,
     maxResults: String(maxResults),
     safeSearch: 'strict',
-    key: apiKey,
+    relevanceLanguage: 'en', // bias results toward English (a hint, not a hard
+    regionCode: 'US',        // filter — the script-based isLikelyEnglish check
+    key: apiKey,             // below is what actually drops non-English titles)
   });
   return `${SEARCH_URL}?${params.toString()}`;
 }
@@ -132,6 +135,31 @@ export function filterAiRelevant(videos) {
   return (videos || []).filter((v) => isAiRelevant(v.title, v.description));
 }
 
+// English-only filter. YouTube's `relevanceLanguage=en` search hint is soft —
+// it still returns plenty of Hindi/Chinese/Japanese/Korean/etc. AI videos — and
+// the public API exposes no reliable per-video language field in the data we
+// fetch. So the actual guard is script-based on the TITLE: if the title is
+// written predominantly in a non-Latin script, it's not an English video.
+// Same "don't over-filter on ambiguity" stance as isAiRelevant: a title with
+// no letters at all (all emoji/numbers), or one where Latin letters merely tie,
+// is kept. Only a title where non-Latin letters OUTNUMBER Latin ones is dropped
+// — that reliably catches fully-foreign titles while letting an English title
+// that happens to contain a stray foreign word or brand name through.
+const NON_LATIN_LETTER = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Hangul}\p{Script=Devanagari}\p{Script=Arabic}\p{Script=Cyrillic}\p{Script=Thai}\p{Script=Hebrew}\p{Script=Bengali}\p{Script=Tamil}\p{Script=Telugu}\p{Script=Greek}]/gu;
+const LATIN_LETTER = /\p{Script=Latin}/gu;
+
+export function isLikelyEnglish(title) {
+  const text = String(title || '');
+  const nonLatin = (text.match(NON_LATIN_LETTER) || []).length;
+  if (nonLatin === 0) return true; // pure-Latin (or no letters) — keep
+  const latin = (text.match(LATIN_LETTER) || []).length;
+  return latin >= nonLatin; // drop only when a non-Latin script dominates
+}
+
+export function filterEnglish(videos) {
+  return (videos || []).filter((v) => isLikelyEnglish(v.title));
+}
+
 // Trailing-N-days ISO timestamp, the `publishedAfter` search bound.
 export function daysAgoISO(days, now = Date.now()) {
   return new Date(now - days * 86400000).toISOString();
@@ -146,7 +174,7 @@ export function daysAgoISO(days, now = Date.now()) {
 // left after filtering to fill out a real top-5.
 export function buildTopVideos(searchJson, statsJson, { maxResults = 5 } = {}) {
   const parsed = parseSearchResponse(searchJson);
-  const relevant = filterAiRelevant(parsed);
+  const relevant = filterEnglish(filterAiRelevant(parsed));
   const detailsMap = parseVideosDetailsResponse(statsJson);
   const withDetails = mergeVideoDetails(relevant, detailsMap);
   const longForm = filterOutShorts(withDetails);

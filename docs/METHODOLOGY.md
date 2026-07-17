@@ -251,6 +251,15 @@ the search query in its title, which would make that check trivially true
 and defeat its own purpose). Ambiguous-but-unflagged titles are left in
 rather than over-filtered.
 
+**English-only.** The `search.list` call passes `relevanceLanguage=en`, but
+that's a soft hint — YouTube still returns plenty of Hindi/Chinese/Japanese/
+Korean AI videos, and the API exposes no reliable per-video language field in
+the data fetched. The actual guard is `isLikelyEnglish()`, script-based on the
+**title**: a title is dropped only when its non-Latin-script letters outnumber
+its Latin ones. That reliably catches fully-foreign titles while keeping an
+English title that contains a stray foreign word, brand, or no letters at all
+— the same "don't over-filter on ambiguity" stance as the relevance filter.
+
 **Shorts are excluded — on a best-effort basis.** The public YouTube API has
 no field that says "this is a Short"; duration is the closest available
 proxy, so anything at or under 180 seconds (YouTube's own current Shorts
@@ -395,27 +404,34 @@ different benchmarks disagree about which model is "best" depending on the
 task. `js/curated.js`'s `LEADERBOARD_VIEWS` offers 4 views instead:
 **Overall balance**, **Reasoning**, **Agentic coding**, **Cost efficiency**.
 Only Overall balance carries a disclaimer — *"Editorial synthesis—not a
-universal benchmark ranking."* — because it's a hand-weighted blend; the other
-three are direct benchmark or pricing-tier readouts. Every row's note names
-its source and snapshot date (Scale Labs' Humanity's Last Exam/EnigmaEval for
-Reasoning, SWE Atlas/Remote Labor Index for Agentic coding, public pricing
-pages for Cost). Where a model has no tracked score for a view's specific
-benchmark, the note says so honestly ("Not among Scale Labs' published
-scorers…") rather than assigning an invented number. Cost efficiency is
-deliberately **qualitative** (budget/mid/premium tier + self-hostability), not
-fabricated precise $/token figures, since exact provider pricing changes too
-often for a hand-maintained number to stay honest for long.
+universal benchmark ranking."* — because *which* index and weighting is an
+editorial call; the other three are direct benchmark or pricing-tier readouts.
+**Every model is scored in every view** — the roster is the same six frontier
+models throughout, and none is left blank:
 
-**Bar honesty**: `js/sections.js`'s `rankRows()` only draws a proportional bar
-where a row carries a real published `score` (e.g. Reasoning's Humanity's Last
-Exam %, Image AI's Elo) — its width is a genuine linear scale against the
-strongest score in that view. Rows without one (Overall balance, Agentic
-coding, Cost efficiency, Local/Video AI, and any model not tracked on a given
-benchmark) render no bar at all: a numbered rank, an "Editorial ranking · no
-measured score" tag, and a "T-" prefix when two rows tie. This replaced an
-earlier version where every row got a bar sized from an internal ordinal `w`
-weight regardless of whether a real score existed — a decorative bar length
-that could be mistaken for a measurement.
+- **Overall balance** — Artificial Analysis' Intelligence Index (AAII), a real
+  0–100 composite (agents/coding/general/science, 25% each). Grounded ordering:
+  Claude Fable 5 ~60 leads, GPT-5.6 Sol ~59, then Opus 4.8 and Gemini 3.1 Pro,
+  Qwen 3.7 Max the top open model at #5, Grok 4.5 mid-pack.
+- **Reasoning** — Scale Labs' Humanity's Last Exam (HLE %). The top four are
+  Scale Labs' **published** figures (Fable 5 53.3, Sol 47.2, Opus 4.8 45.7,
+  Gemini 3.1 Pro 44.4 — GPT-5.6 Sol clearly ahead of Gemini). Grok 4.5 and Qwen
+  3.7 Max, which Scale Labs hasn't published, carry an **editorial estimate that
+  says so in its note** — a number, never dressed up as a measurement.
+- **Agentic coding** — Scale Labs' SWE Atlas / SWE-bench Verified (%). Claude's
+  two tiers are published; the other four are disclosed editorial estimates.
+- **Cost efficiency** — a 0–100 directional index (higher = cheaper), the note
+  making explicit it's a tier/self-hostability judgment, **not** a fabricated
+  $/token rate.
+
+**Rating rendering**: `js/sections.js`'s `rankRows()` shows each row's real
+`score` with its unit (`% HLE`, ` AAII`, `% SWE`, ` /100`), and its bar is a
+linear scale against the strongest score in that view. A model whose figure is
+an editorial estimate rather than a published benchmark discloses that in its
+`note` (the honesty guard — the number is shown, but its provenance is never
+misrepresented). The other ranked lists (Local/Video AI) leave the frontier
+`showIndex` flag off, so their `stat` column (hardware needs, arena position)
+stays the prominent right-hand figure instead of a bare index.
 
 ## Local AI hardware specs
 

@@ -41,6 +41,10 @@ export function createOceanMap(root, entities) {
   });
 
   let state = { activity: {}, delta: {}, rangeLabel: '24H', historyAvailable: false, maxAct: 1, maxAbsDelta: 1 };
+  // The live signals currently in the feed (latest.json). Each already carries
+  // a precomputed `entityIds` (see computeEntityActivity), so the drawer can
+  // list exactly which signals mention a node without re-running the matcher.
+  let allSignals = [];
 
   // ---- build static scaffolding once ----
   root.innerHTML = `
@@ -156,6 +160,13 @@ export function createOceanMap(root, entities) {
   }
   function hideTooltip() { tooltip.hidden = true; }
 
+  // Every signal in the current feed that mentions this node, newest first.
+  function signalsFor(id) {
+    return allSignals
+      .filter((s) => Array.isArray(s.entityIds) && s.entityIds.includes(id))
+      .sort((a, b) => String(b.dateISO || '').localeCompare(String(a.dateISO || '')));
+  }
+
   function relatedOf(id) {
     const rel = [];
     for (const c of entities.connections) {
@@ -166,7 +177,11 @@ export function createOceanMap(root, entities) {
   }
 
   function openDrawer(n) {
-    lastFocused = document.activeElement;
+    // Re-rendering the already-open drawer (a range switch or silent refresh
+    // updates its counts + signal list) must not re-capture focus as the
+    // "return to" element, nor yank focus back to the close button mid-read.
+    const reopening = drawerOpenFor === n.id && !drawer.hidden;
+    if (!reopening) lastFocused = document.activeElement;
     drawerOpenFor = n.id;
     highlightNode(n.id);
     const { count } = actLevel(n.id);
@@ -175,7 +190,22 @@ export function createOceanMap(root, entities) {
       ? `<span class="drawer-note">${esc(state.rangeLabel)} comparison is still accumulating — showing current activity.</span>`
       : `<span class="drawer-delta ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">${d > 0 ? '▲ +' + d : d < 0 ? '▼ ' + d : '– no change'} vs ${esc(state.rangeLabel)} ago</span>`;
     const rel = relatedOf(n.id);
+    const sigs = signalsFor(n.id);
     const layerName = (layers.find((l) => l.id === n.layer) || {}).name || '';
+    const sourcesBlock = `
+      <div class="drawer-sources">
+        <span class="drawer-h">Signals in the current feed${sigs.length ? ` (${sigs.length})` : ''}</span>
+        ${sigs.length
+          ? `<ul class="drawer-src-list">${sigs.map((s) => {
+              const srcName = s.sourceName || (s.sources && s.sources[0] && s.sources[0].name) || 'source';
+              const extra = s.sourceCount > 1 ? ` · +${s.sourceCount - 1} more source${s.sourceCount - 1 === 1 ? '' : 's'}` : '';
+              return `<li>
+                <a href="${esc(s.url)}" target="_blank" rel="noopener" class="src-headline">${esc(s.title)}</a>
+                <span class="src-meta">${esc(srcName)}${s.date ? ' · ' + esc(s.date) : ''}${extra}</span>
+              </li>`;
+            }).join('')}</ul>`
+          : `<p class="drawer-src-empty">No individual stories in the current feed window mention it right now — the activity count above is drawn from the rolling ${esc(state.rangeLabel)} range history.</p>`}
+      </div>`;
 
     drawer.innerHTML = `
       <div class="drawer-inner">
@@ -189,6 +219,7 @@ export function createOceanMap(root, entities) {
         </div>
         ${deltaTxt}
         <div class="drawer-why"><span class="drawer-h">Why it matters</span>${esc(n.why)}</div>
+        ${sourcesBlock}
         ${rel.length ? `<div class="drawer-rel"><span class="drawer-h">Connected to</span>
           <ul>${rel.map((r) => `<li><span class="rel-type">${esc((REL_PHRASE[r.type] || {})[r.dir] || r.type)}</span> <button class="rel-link" data-id="${esc(r.node.id)}">${esc(r.node.name)}</button></li>`).join('')}</ul>
         </div>` : ''}
@@ -200,7 +231,7 @@ export function createOceanMap(root, entities) {
       </div>`;
     drawer.hidden = false;
     document.body.classList.add('drawer-open');
-    drawer.querySelector('.drawer-close').focus();
+    if (!reopening) drawer.querySelector('.drawer-close').focus();
 
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
     drawer.querySelectorAll('.rel-link').forEach((b) =>
@@ -309,7 +340,14 @@ export function createOceanMap(root, entities) {
   }
 
   return {
-    update(next) { state = { ...state, ...next }; paint(); },
+    update(next) {
+      if (next && Array.isArray(next.signals)) allSignals = next.signals;
+      state = { ...state, ...next };
+      // if the drawer is open, re-render it so its signal list reflects a
+      // range switch or a silent data refresh without needing a reopen
+      if (drawerOpenFor) { const n = byId.get(drawerOpenFor); if (n) openDrawer(n); }
+      paint();
+    },
     closeDrawer,
     // Lets other components (a wave, a river item) reveal a specific node's
     // ecosystem path and open its detail drawer — the map isn't an island.
