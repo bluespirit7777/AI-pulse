@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-18T10:02:17.696Z",
+  "updatedAt": "2026-07-18T10:15:24.112Z",
   "build": {
-    "sha": "105db777b07dc606061bc3263e3c9469a290c623",
-    "shortSha": "105db77",
+    "sha": "6dac267dacbad0e41177de2597a73cbc22ad484f",
+    "shortSha": "6dac267",
     "ref": "main",
-    "builtAt": "2026-07-18T10:02:29.005Z"
+    "builtAt": "2026-07-18T10:15:37.624Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 8.4,
     "estimatedDatasets": 3,
-    "buildSha": "105db77",
-    "lastSuccessfulUpdate": "2026-07-18T10:02:17.696Z"
+    "buildSha": "6dac267",
+    "lastSuccessfulUpdate": "2026-07-18T10:15:24.112Z"
   },
   "ticker": [
     "APPLE’S LAWSUIT COULDN’T COME AT A WORSE TIME FOR OPENAI",
@@ -24,9 +24,9 @@
     "AGENTIC ORCHESTRATION: ENTERPRISE AI ORGANIZATIONS HAVE A DEPLOYMENT PROBLEM, NOT A PLATFORM PROBLEM — AND MO…",
     "INTRODUCING CLAUDE OPUS 4.8",
     "HOW A FORMER DEEPMIND RESEARCHER RAISED AT A $300M PRE-SEED VALUATION BEFORE LAUNCHING A PRODUCT",
+    "HOW GOOGLE’S NEW GEMINI RATES WORK AND HOW TO TRACK YOUR USAGE",
     "GOOGLE ORDERED TO OPEN ANDROID AND SEARCH TO RIVALS IN EUROPE",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
-    "WHY TEENS DESERVE ACCESS TO SAFE AI"
+    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN"
   ],
   "signals": [
     {
@@ -70,7 +70,7 @@
       "category": "compute",
       "catConfidence": 0.54,
       "family": "market",
-      "significance": 68,
+      "significance": 67,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -96,7 +96,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 67,
+      "significance": 66,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -237,6 +237,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "chatgpt",
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/",
+      "clusterId": "1q7mrak",
+      "title": "How Google’s New Gemini Rates Work and How to Track Your Usage",
+      "desc": "Now that Google has changed how its usage quotas are tallied, you might not get as many AI responses as you did before.",
+      "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/",
+      "dateISO": "2026-07-18T10:00:00.000Z",
+      "date": "JUL 18 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
         "gemini"
       ]
     },
@@ -486,7 +512,7 @@
       "category": "capital",
       "catConfidence": 0.56,
       "family": "market",
-      "significance": 48,
+      "significance": 47,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -1185,32 +1211,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/patch-the-planet",
-      "clusterId": "6els2w",
-      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-      "desc": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
-      "url": "https://openai.com/index/patch-the-planet",
-      "dateISO": "2026-06-22T10:00:00.000Z",
-      "date": "JUN 22 2026",
-      "category": "opensource",
-      "catConfidence": 0.5,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/patch-the-planet"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1219,7 +1219,7 @@
       "category": "product",
       "title": "Google-backed satellites for wildfire detection launch as smoke chokes US, Canada",
       "summary": "The FireSat program can spot wildfires that other satellites miss.",
-      "significance": 67,
+      "significance": 66,
       "impact": "notable",
       "verification": "single",
       "date": "JUL 17 2026",
@@ -1322,7 +1322,7 @@
     "perplexity": 0,
     "gpt": 81,
     "claude": 74,
-    "gemini": 35,
+    "gemini": 36,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1514,6 +1514,18 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "JUL 18 2026",
+      "verification": "analysis",
+      "impact": "notable",
+      "h": "How Google’s New Gemini Rates Work and How to Track Your Usage",
+      "p": "Now that Google has changed how its usage quotas are tallied, you might not get as many AI responses as you did before.",
+      "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 13 2026",
@@ -1595,18 +1607,6 @@
       "p": "India's smartphone slowdown highlights how the AI boom is reshaping consumer electronics, from pricing and demand to corporate strategy.",
       "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 17 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "TikTok is testing an AI likeness detection tool",
-      "p": "TikTok is starting to test an opt-in tool that scans for AI likenesses and lets creators report them to the company, as spotted by social media consultant Matt Navarra. The tool is initially being tested with \"some\" US creators, TikTok US spokesperson Zachary…",
-      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool",
-      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -6200,18 +6200,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.74 – $3.19/hr",
-      "trend": "↑ 6% vs 5d ago",
+      "rate": "$1.93 – $3.19/hr",
+      "trend": "↑ 10% vs 5d ago",
       "trendClass": "trend-up",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.39/hr",
-      "trend": "↑ 6% vs 5d ago",
+      "rate": "$3.59 – $4.64/hr",
+      "trend": "↑ 9% vs 5d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6219,7 +6219,7 @@
       "rate": "$5.89 – $8.13/hr",
       "trend": "↓ 4% vs 5d ago",
       "trendClass": "trend-down",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6240,14 +6240,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.56 – $1.49/hr",
-      "trend": "↑ 9% vs 5d ago",
+      "rate": "$0.60 – $1.49/hr",
+      "trend": "↑ 11% vs 5d ago",
       "trendClass": "trend-up",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-18T10:02:17.696Z",
+    "updatedAt": "2026-07-18T10:15:24.112Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6257,10 +6257,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 304,
-        "fetchedStoryCount": 200,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 170,
-        "storyCoverage": 0.6578947368421053,
-        "estimatedRelevantDiscussions": 258,
+        "storyCoverage": 0.9868421052631579,
+        "estimatedRelevantDiscussions": 172,
         "isEstimated": true,
         "rawCommentHits": 2077,
         "fetchedCommentCount": 300,
@@ -6342,16 +6342,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1050,
+        "rawStoryHits": 1051,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 296,
-        "storyCoverage": 0.2857142857142857,
-        "estimatedRelevantDiscussions": 1036,
+        "storyCoverage": 0.285442435775452,
+        "estimatedRelevantDiscussions": 1037,
         "isEstimated": true,
-        "rawCommentHits": 6295,
+        "rawCommentHits": 6290,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.04765687053216839,
+        "commentCoverage": 0.04769475357710652,
         "limited": false,
         "points": 17230,
         "themes": [
@@ -6429,10 +6429,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 114,
         "isEstimated": false,
-        "rawCommentHits": 1095,
+        "rawCommentHits": 1094,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.273972602739726,
+        "commentCoverage": 0.2742230347349177,
         "limited": false,
         "points": 2092,
         "themes": [
@@ -6515,10 +6515,10 @@
         "storyCoverage": 0.5836575875486382,
         "estimatedRelevantDiscussions": 51,
         "isEstimated": true,
-        "rawCommentHits": 10962,
+        "rawCommentHits": 10964,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 165,
-        "commentCoverage": 0.02736726874657909,
+        "commentCoverage": 0.027362276541408246,
         "limited": false,
         "points": 2413,
         "themes": [
@@ -6596,10 +6596,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
-        "rawCommentHits": 546,
+        "rawCommentHits": 545,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 242,
-        "commentCoverage": 0.5494505494505495,
+        "commentCoverage": 0.5504587155963303,
         "limited": false,
         "points": 158,
         "themes": [
@@ -6671,8 +6671,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 70,
-        "fetchedStoryCount": 70,
+        "rawStoryHits": 60,
+        "fetchedStoryCount": 60,
         "validatedStoryCount": 57,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 57,
@@ -6763,10 +6763,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 26,
         "isEstimated": false,
-        "rawCommentHits": 4382,
+        "rawCommentHits": 4379,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 209,
-        "commentCoverage": 0.06846188954815152,
+        "commentCoverage": 0.06850879196163508,
         "limited": false,
         "points": 1732,
         "themes": [
