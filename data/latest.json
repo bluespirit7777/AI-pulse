@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-19T12:01:40.119Z",
+  "updatedAt": "2026-07-19T12:15:25.034Z",
   "build": {
-    "sha": "75b347ee576d7bf73354618744f02e665b97c738",
-    "shortSha": "75b347e",
+    "sha": "9779ab68a731090c161f7ba75c6bdf38c852808b",
+    "shortSha": "9779ab6",
     "ref": "main",
-    "builtAt": "2026-07-19T12:01:51.178Z"
+    "builtAt": "2026-07-19T12:15:36.341Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 9.5,
     "estimatedDatasets": 3,
-    "buildSha": "75b347e",
-    "lastSuccessfulUpdate": "2026-07-19T12:01:40.119Z"
+    "buildSha": "9779ab6",
+    "lastSuccessfulUpdate": "2026-07-19T12:15:25.034Z"
   },
   "ticker": [
     "APPLE’S LAWSUIT COULDN’T COME AT A WORSE TIME FOR OPENAI",
@@ -25,8 +25,8 @@
     "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
     "GOOGLE-BACKED SATELLITES FOR WILDFIRE DETECTION LAUNCH AS SMOKE CHOKES US, CANADA",
     "ANTHROPIC LAUNCHES CLAUDE TAG, A TOOL THAT WORKS LIKE A VIRTUAL EMPLOYEE WITHIN SLACK",
-    "DAVE EGGERS TOLD OPENAI STAFF THAT CHATGPT WAS ‘SILENCING AN ENTIRE GENERATION’",
-    "A SCORECARD FOR THE AI AGE"
+    "A SCORECARD FOR THE AI AGE",
+    "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION"
   ],
   "signals": [
     {
@@ -279,33 +279,6 @@
       "sourceName": "Fortune",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation",
-      "clusterId": "utowfo",
-      "title": "Dave Eggers told OpenAI staff that ChatGPT was ‘silencing an entire generation’",
-      "desc": "Last year, Sam Altman invited author Dave Eggers to give a talk to around 200 OpenAI staffers. The man has written countless novels, screenplays, pieces of journalism, started McSweeney's, and founded multiple schools and nonprofits that support writers and the arts more broadly. So one might expect he'd roll into the company's offices and offer […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation",
-      "dateISO": "2026-07-18T20:54:42.000Z",
-      "date": "JUL 18 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
       ]
     },
     {
@@ -1207,6 +1180,33 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/mufg",
+      "clusterId": "oy4d1k",
+      "title": "MUFG aims to become AI-native with OpenAI",
+      "desc": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+      "url": "https://openai.com/index/mufg",
+      "dateISO": "2026-07-07T00:00:00.000Z",
+      "date": "JUL 07 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/mufg"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1325,10 +1325,10 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 24,
+    "chatgpt": 23,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 77,
+    "gpt": 76,
     "claude": 73,
     "gemini": 35,
     "grok": 0,
@@ -1522,18 +1522,6 @@
   ],
   "wire": [
     {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "JUL 18 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Dave Eggers told OpenAI staff that ChatGPT was ‘silencing an entire generation’",
-      "p": "Last year, Sam Altman invited author Dave Eggers to give a talk to around 200 OpenAI staffers. The man has written countless novels, screenplays, pieces of journalism, started McSweeney's, and founded multiple schools and nonprofits that support writers and t…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 18 2026",
@@ -1543,18 +1531,6 @@
       "p": "Chinese company Moonshot AI released a new version of its Kimi model this week, prompting concern about \"full AI communism.\"",
       "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 18 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "The apps, gadgets, and tools every reader needs",
-      "p": "Hi, friends! Welcome to Installer No. 136, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, hope your neighborhood isn't as smoky as mine, and also you can read all the old editions at the Installer homepage.) This week,…",
-      "url": "https://www.theverge.com/tech/967544/best-apps-gadgets-reading-installer",
-      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1614,6 +1590,30 @@
       "h": "Neil Rimer thinks the AI money is coming back out",
       "p": "Neil Rimer, the venture capitalist who co-founded Index Ventures, predicts the historic wealth AI is generating in Silicon Valley will have to be redistributed, voluntarily or involuntarily.",
       "url": "https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 17 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Vertu wants executives to pay $6,880 for an AI agent — here’s how it actually p…",
+      "p": "From AI workflows to battery life and security, here's what it's really like to live with Vertu's luxury foldable every day.",
+      "url": "https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 17 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Databricks hits $188B valuation, extending its run as AI’s favorite second act",
+      "p": "Databricks has remade its image into an AI company and has published research on the cost savings of open weight AI models for coding.",
+      "url": "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -6208,10 +6208,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.19/hr",
-      "trend": "↑ 11% vs 6d ago",
+      "rate": "$1.93 – $3.19/hr",
+      "trend": "↑ 10% vs 6d ago",
       "trendClass": "trend-up",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6224,8 +6224,8 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $7.13/hr",
-      "trend": "↓ 11% vs 6d ago",
+      "rate": "$5.89 – $8.13/hr",
+      "trend": "↓ 4% vs 6d ago",
       "trendClass": "trend-down",
       "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
@@ -6251,11 +6251,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "↑ 32% vs 6d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-19T12:01:40.119Z",
+    "updatedAt": "2026-07-19T12:15:25.034Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6270,10 +6270,10 @@
         "storyCoverage": 0.9966777408637874,
         "estimatedRelevantDiscussions": 170,
         "isEstimated": true,
-        "rawCommentHits": 2034,
+        "rawCommentHits": 2036,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 297,
-        "commentCoverage": 0.14749262536873156,
+        "commentCoverage": 0.14734774066797643,
         "limited": false,
         "points": 1483,
         "themes": [
@@ -6356,37 +6356,37 @@
         "storyCoverage": 0.2898550724637681,
         "estimatedRelevantDiscussions": 1028,
         "isEstimated": true,
-        "rawCommentHits": 6358,
+        "rawCommentHits": 6362,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.04718464926077383,
+        "commentCoverage": 0.04715498270983967,
         "limited": false,
-        "points": 17614,
+        "points": 17621,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 110
+            "count": 112
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 47
+            "count": 49
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 30
+            "count": 29
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 23
+            "count": 22
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 9
+            "count": 8
           },
           {
             "id": "multimodal",
@@ -6522,10 +6522,10 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 489,
+        "rawStoryHits": 490,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 29,
-        "storyCoverage": 0.6134969325153374,
+        "storyCoverage": 0.6122448979591837,
         "estimatedRelevantDiscussions": 47,
         "isEstimated": true,
         "rawCommentHits": 10741,
@@ -6609,10 +6609,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": false,
-        "rawCommentHits": 527,
+        "rawCommentHits": 528,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 243,
-        "commentCoverage": 0.5692599620493358,
+        "commentCoverage": 0.5681818181818182,
         "limited": false,
         "points": 157,
         "themes": [
@@ -6690,17 +6690,17 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 59,
         "isEstimated": false,
-        "rawCommentHits": 1000,
+        "rawCommentHits": 1002,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 286,
-        "commentCoverage": 0.3,
+        "commentCoverage": 0.2994011976047904,
         "limited": false,
         "points": 922,
         "themes": [
           {
             "id": "price",
             "label": "Price",
-            "count": 71
+            "count": 72
           },
           {
             "id": "coding",
@@ -6720,7 +6720,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 16
+            "count": 17
           },
           {
             "id": "writing",
@@ -6770,28 +6770,28 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 169,
-        "fetchedStoryCount": 169,
+        "rawStoryHits": 168,
+        "fetchedStoryCount": 168,
         "validatedStoryCount": 29,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": false,
-        "rawCommentHits": 4371,
+        "rawCommentHits": 4375,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 215,
-        "commentCoverage": 0.06863417982155114,
+        "validatedCommentCount": 216,
+        "commentCoverage": 0.06857142857142857,
         "limited": false,
-        "points": 1848,
+        "points": 1861,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 51
+            "count": 53
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 50
+            "count": 49
           },
           {
             "id": "local",
@@ -6801,12 +6801,12 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 21
+            "count": 20
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 19
+            "count": 20
           },
           {
             "id": "writing",
@@ -6967,18 +6967,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding",
-          "speed"
-        ],
-        "excerpt": "Anthropic is losing bigtime against Open AI in coding space. I was using Claude code upto last march. Not an enterprise customer, but a responsible AI user where i don't over…",
-        "source": "Hacker News",
-        "author": "sreekanth850",
-        "publishedAt": "2026-07-18T16:20:50.000Z",
-        "url": "https://news.ycombinator.com/item?id=48959477"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "writing",
           "multimodal"
         ],
@@ -6987,6 +6975,18 @@
         "author": "rdtsc",
         "publishedAt": "2026-07-19T04:32:44.000Z",
         "url": "https://news.ycombinator.com/item?id=48964999"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "speed"
+        ],
+        "excerpt": "Anthropic is losing bigtime against Open AI in coding space. I was using Claude code upto last march. Not an enterprise customer, but a responsible AI user where i don't over…",
+        "source": "Hacker News",
+        "author": "sreekanth850",
+        "publishedAt": "2026-07-18T16:20:50.000Z",
+        "url": "https://news.ycombinator.com/item?id=48959477"
       },
       {
         "modelId": "gemini",
@@ -7299,17 +7299,6 @@
       {
         "modelId": "qwen",
         "themes": [
-          "price"
-        ],
-        "excerpt": "I'm haven't found an announcement page, but there's a banner on the website announcing Qwen 3.8 and redirecting to this page.Looks like they're previewing the model only on their…",
-        "source": "Hacker News",
-        "author": "lebovic",
-        "publishedAt": "2026-07-19T08:59:20.000Z",
-        "url": "https://news.ycombinator.com/item?id=48966205"
-      },
-      {
-        "modelId": "qwen",
-        "themes": [
           "speed",
           "price"
         ],
@@ -7318,6 +7307,17 @@
         "author": "SwellJoe",
         "publishedAt": "2026-07-19T09:30:08.000Z",
         "url": "https://news.ycombinator.com/item?id=48966391"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "I'm haven't found an announcement page, but there's a banner on the website announcing Qwen 3.8 and redirecting to this page.Looks like they're previewing the model only on their…",
+        "source": "Hacker News",
+        "author": "lebovic",
+        "publishedAt": "2026-07-19T08:59:20.000Z",
+        "url": "https://news.ycombinator.com/item?id=48966205"
       },
       {
         "modelId": "qwen",
