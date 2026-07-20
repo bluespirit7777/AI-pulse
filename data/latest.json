@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-20T15:15:24.624Z",
+  "updatedAt": "2026-07-20T15:30:31.188Z",
   "build": {
-    "sha": "17e15440209a9d4f50ec6fee217c4e6053cb5308",
-    "shortSha": "17e1544",
+    "sha": "e66ce522dc81e3ba5eff1dbdd1e165832886f3d9",
+    "shortSha": "e66ce52",
     "ref": "main",
-    "builtAt": "2026-07-20T15:15:35.947Z"
+    "builtAt": "2026-07-20T15:30:43.213Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 10.6,
     "estimatedDatasets": 3,
-    "buildSha": "17e1544",
-    "lastSuccessfulUpdate": "2026-07-20T15:15:24.624Z"
+    "buildSha": "e66ce52",
+    "lastSuccessfulUpdate": "2026-07-20T15:30:31.188Z"
   },
   "ticker": [
     "CHINA DELIVERS A ONE-TWO PUNCH TO AMERICA’S AI DOMINANCE",
@@ -23,10 +23,10 @@
     "AGENTIC ORCHESTRATION: ENTERPRISE AI ORGANIZATIONS HAVE A DEPLOYMENT PROBLEM, NOT A PLATFORM PROBLEM — AND MO…",
     "APPLE’S LAWSUIT COULDN’T COME AT A WORSE TIME FOR OPENAI",
     "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
+    "YOUTUBE CLARIFIES POLICIES AROUND AI SLOP AND UPSETTING VIDEOS",
     "AI IS MORE LIKELY THAN HUMANS TO FORM BIASES WHEN HIRING",
     "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION",
-    "ANTHROPIC RELEASES CLAUDE SCIENCE, A PRODUCT AIMED AT RESEARCHERS, THE PHARMA INDUSTRY",
-    "HOW GOOGLE’S NEW GEMINI RATES WORK AND HOW TO TRACK YOUR USAGE"
+    "ANTHROPIC RELEASES CLAUDE SCIENCE, A PRODUCT AIMED AT RESEARCHERS, THE PHARMA INDUSTRY"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -238,6 +238,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
+      "clusterId": "1039oce",
+      "title": "YouTube clarifies policies around AI slop and upsetting videos",
+      "desc": "YouTube has updated its monetization policies to more clearly define the kinds of AI-generated and low-quality videos that can’t earn ad revenue.",
+      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
+      "dateISO": "2026-07-20T15:23:06.000Z",
+      "date": "JUL 20 2026",
+      "category": "market",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://www.technologyreview.com/2026/07/20/1140655/ai-biases-hiring-humans/",
@@ -1187,33 +1211,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/mufg",
-      "clusterId": "oy4d1k",
-      "title": "MUFG aims to become AI-native with OpenAI",
-      "desc": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-      "url": "https://openai.com/index/mufg",
-      "dateISO": "2026-07-07T00:00:00.000Z",
-      "date": "JUL 07 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/mufg"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1222,7 +1219,7 @@
       "category": "product",
       "title": "China delivers a one-two punch to America’s AI dominance",
       "summary": "China's leading AI companies are ramping up the pressure on Silicon Valley, as Moonshot and Alibaba unveiled models they claim can go toe-to-toe with the best from OpenAI and Anth…",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "date": "JUL 20 2026",
@@ -1497,6 +1494,18 @@
       "logoKey": "other",
       "date": "JUL 20 2026",
       "verification": "single",
+      "impact": "notable",
+      "h": "YouTube clarifies policies around AI slop and upsetting videos",
+      "p": "YouTube has updated its monetization policies to more clearly define the kinds of AI-generated and low-quality videos that can’t earn ad revenue.",
+      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 20 2026",
+      "verification": "single",
       "impact": "emerging",
       "h": "Beyond grep: The case for a context-rich AI coding harness",
       "p": "Augment Code's Vinay Perneti talks models, harnesses, and context.",
@@ -1574,18 +1583,6 @@
       "p": "Last year, Sam Altman invited author Dave Eggers to give a talk to around 200 OpenAI staffers. The man has written countless novels, screenplays, pieces of journalism, started McSweeney's, and founded multiple schools and nonprofits that support writers and t…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/967630/dave-eggers-openai-chatgpt-silencing-an-entire-generation",
       "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 18 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Kimi: Threat or menace?",
-      "p": "Chinese company Moonshot AI released a new version of its Kimi model this week, prompting concern about \"full AI communism.\"",
-      "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1689,11 +1686,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 205.705,
-      "changePct": 1.427446529910116,
+      "price": 206.255,
+      "changePct": 1.6986378214532816,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 28769931,
+      "volume": 31587279,
       "ohlc": [
         {
           "d": "04-20",
@@ -2134,22 +2131,22 @@
           "o": 206.03799438476562,
           "h": 207.74000549316406,
           "l": 204.58009338378906,
-          "c": 205.7050018310547
+          "c": 206.2550048828125
         }
       ],
-      "relVolume": 0.1984378140473893,
-      "marketCap": 5019202000000
+      "relVolume": 0.2178701991487225,
+      "marketCap": 5032622000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 396.53,
-      "changePct": 0.6881294511903964,
+      "price": 397.595,
+      "changePct": 0.9585581804574367,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 7911306,
+      "volume": 8775389,
       "ohlc": [
         {
           "d": "04-20",
@@ -2588,24 +2585,24 @@
         {
           "d": "07-20",
           "o": 391.1000061035156,
-          "h": 396.7799987792969,
+          "h": 398.1300048828125,
           "l": 389.6700134277344,
-          "c": 396.5299987792969
+          "c": 397.5950012207031
         }
       ],
-      "relVolume": 0.16885702028297558,
-      "marketCap": 2946217900000
+      "relVolume": 0.1872998008627148,
+      "marketCap": 2954130850000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 378.55,
-      "changePct": 2.0818168703297912,
+      "price": 381.54,
+      "changePct": 2.8881218780750166,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 4154119,
+      "volume": 4483410,
       "ohlc": [
         {
           "d": "04-20",
@@ -3046,22 +3043,22 @@
           "o": 378.760009765625,
           "h": 382.760009765625,
           "l": 375.9599914550781,
-          "c": 378.54998779296875
+          "c": 381.5400085449219
         }
       ],
-      "relVolume": 0.15875590755503988,
-      "marketCap": 1862466000000
+      "relVolume": 0.17134025854611806,
+      "marketCap": 1877176800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 356.57,
-      "changePct": 2.826086057337706,
+      "price": 356.92,
+      "changePct": 2.927019273764871,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 7936579,
+      "volume": 8297730,
       "ohlc": [
         {
           "d": "04-20",
@@ -3502,22 +3499,22 @@
           "o": 351.1499938964844,
           "h": 359.6700134277344,
           "l": 350.5199890136719,
-          "c": 356.57000732421875
+          "c": 356.9200134277344
         }
       ],
-      "relVolume": 0.2244778075639203,
-      "marketCap": 4350154000000
+      "relVolume": 0.2346925845704262,
+      "marketCap": 4354424000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 250.875,
-      "changePct": 1.4743373924893528,
+      "price": 251.38,
+      "changePct": 1.6786026076896325,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 8454340,
+      "volume": 9255881,
       "ohlc": [
         {
           "d": "04-20",
@@ -3956,24 +3953,24 @@
         {
           "d": "07-20",
           "o": 248.75,
-          "h": 251.10000610351562,
+          "h": 251.41000366210938,
           "l": 248.1199951171875,
-          "c": 250.875
+          "c": 251.3800048828125
         }
       ],
-      "relVolume": 0.13796017102848485,
-      "marketCap": 2684362500000
+      "relVolume": 0.15103993047113118,
+      "marketCap": 2689766000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 647.625,
-      "changePct": 0.24999461462848305,
+      "price": 648.34,
+      "changePct": 0.36067817133191005,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 3070531,
+      "volume": 3329383,
       "ohlc": [
         {
           "d": "04-20",
@@ -4412,24 +4409,24 @@
         {
           "d": "07-20",
           "o": 646.7000122070312,
-          "h": 647.75,
+          "h": 648.9600219726562,
           "l": 636.010498046875,
-          "c": 647.625
+          "c": 648.3400268554688
         }
       ],
-      "relVolume": 0.1468605496513263,
-      "marketCap": 1632015000000
+      "relVolume": 0.15924119228230613,
+      "marketCap": 1633816800000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 402.9,
-      "changePct": 1.1371335278311552,
+      "price": 404.44,
+      "changePct": 1.5237109718650248,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 4241298,
+      "volume": 4624831,
       "ohlc": [
         {
           "d": "04-20",
@@ -4870,22 +4867,22 @@
           "o": 407.7049865722656,
           "h": 409.8800048828125,
           "l": 400.1449890136719,
-          "c": 402.8999938964844
+          "c": 404.44000244140625
         }
       ],
-      "relVolume": 0.26419368191035797,
-      "marketCap": 2091051000000
+      "relVolume": 0.2880842445174008,
+      "marketCap": 2099043600000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 507.61,
-      "changePct": 2.390264513577786,
+      "price": 512.38,
+      "changePct": 3.35242754352953,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 10526606,
+      "volume": 11203336,
       "ohlc": [
         {
           "d": "04-20",
@@ -5326,22 +5323,22 @@
           "o": 516.9949951171875,
           "h": 522.4400024414062,
           "l": 506.1000061035156,
-          "c": 507.6099853515625
+          "c": 512.3800048828125
         }
       ],
-      "relVolume": 0.3591032691662809,
-      "marketCap": 822328200000
+      "relVolume": 0.3821891484461644,
+      "marketCap": 830055600000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 132.71,
-      "changePct": -0.00022351759200127188,
+      "price": 133.65,
+      "changePct": 0.9593510853819008,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 8842460,
+      "volume": 9975401,
       "ohlc": [
         {
           "d": "04-20",
@@ -5782,22 +5779,22 @@
           "o": 131.8800048828125,
           "h": 135.3800048828125,
           "l": 131.82000732421875,
-          "c": 132.71029663085938
+          "c": 133.64999389648438
         }
       ],
-      "relVolume": 0.1959526644475218,
-      "marketCap": 318504000000
+      "relVolume": 0.22105911758520516,
+      "marketCap": 320760000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 121.44,
-      "changePct": -3.931651828749098,
+      "price": 122.41,
+      "changePct": -3.1643065296413524,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 14391574,
+      "volume": 15478264,
       "ohlc": [
         {
           "d": "04-20",
@@ -6238,11 +6235,11 @@
           "o": 124.2699966430664,
           "h": 125.48970031738281,
           "l": 120.02999877929688,
-          "c": 121.44000244140625
+          "c": 122.41000366210938
         }
       ],
-      "relVolume": 0.36170307576096683,
-      "marketCap": 341246400000
+      "relVolume": 0.38901482883249916,
+      "marketCap": 343972100000
     }
   ],
   "compute": [
@@ -6260,15 +6257,15 @@
       "rate": "$3.59 – $4.39/hr",
       "trend": "↑ 6% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $8.13/hr",
-      "trend": "↓ 4% vs 7d ago",
+      "rate": "$5.89 – $7.25/hr",
+      "trend": "↓ 10% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6289,14 +6286,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "↑ 32% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$0.40 – $1.49/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-20T15:15:24.624Z",
+    "updatedAt": "2026-07-20T15:30:31.188Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6305,23 +6302,23 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 293,
-        "fetchedStoryCount": 293,
+        "rawStoryHits": 256,
+        "fetchedStoryCount": 194,
         "validatedStoryCount": 162,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 162,
-        "isEstimated": false,
-        "rawCommentHits": 2033,
+        "storyCoverage": 0.7578125,
+        "estimatedRelevantDiscussions": 214,
+        "isEstimated": true,
+        "rawCommentHits": 2034,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 297,
-        "commentCoverage": 0.14756517461878996,
+        "commentCoverage": 0.14749262536873156,
         "limited": false,
         "points": 1472,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 78
+            "count": 77
           },
           {
             "id": "coding",
@@ -6397,32 +6394,32 @@
         "storyCoverage": 0.2915451895043732,
         "estimatedRelevantDiscussions": 1019,
         "isEstimated": true,
-        "rawCommentHits": 6512,
+        "rawCommentHits": 6514,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.04606879606879607,
+        "commentCoverage": 0.0460546515198035,
         "limited": false,
-        "points": 18529,
+        "points": 18536,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 163
+            "count": 164
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 66
+            "count": 65
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 31
+            "count": 32
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 25
+            "count": 24
           },
           {
             "id": "speed",
@@ -6437,7 +6434,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 8
+            "count": 9
           },
           {
             "id": "reliability",
@@ -6447,7 +6444,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 2
+            "count": 3
           },
           {
             "id": "safety",
@@ -6483,12 +6480,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 114,
         "isEstimated": false,
-        "rawCommentHits": 1065,
+        "rawCommentHits": 1064,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
-        "commentCoverage": 0.28169014084507044,
+        "commentCoverage": 0.2819548872180451,
         "limited": false,
-        "points": 2136,
+        "points": 2137,
         "themes": [
           {
             "id": "coding",
@@ -6551,7 +6548,7 @@
           },
           {
             "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
-            "points": 279,
+            "points": 280,
             "comments": 119,
             "url": "https://github.com/juggler-ai/juggler",
             "date": "JUL 12 2026"
@@ -6569,17 +6566,17 @@
         "storyCoverage": 0.594059405940594,
         "estimatedRelevantDiscussions": 54,
         "isEstimated": true,
-        "rawCommentHits": 10869,
+        "rawCommentHits": 10878,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 166,
-        "commentCoverage": 0.02760143527463428,
+        "validatedCommentCount": 167,
+        "commentCoverage": 0.027578599007170437,
         "limited": false,
         "points": 2404,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 45
+            "count": 46
           },
           {
             "id": "reasoning",
@@ -6614,7 +6611,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 2
+            "count": 3
           },
           {
             "id": "safety",
@@ -6725,33 +6722,33 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 73,
-        "fetchedStoryCount": 73,
+        "rawStoryHits": 70,
+        "fetchedStoryCount": 70,
         "validatedStoryCount": 58,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 58,
         "isEstimated": false,
-        "rawCommentHits": 1026,
+        "rawCommentHits": 1029,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 288,
-        "commentCoverage": 0.29239766081871343,
+        "commentCoverage": 0.2915451895043732,
         "limited": false,
-        "points": 929,
+        "points": 930,
         "themes": [
           {
             "id": "price",
             "label": "Price",
-            "count": 76
+            "count": 75
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 71
+            "count": 72
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 53
+            "count": 52
           },
           {
             "id": "speed",
@@ -6787,7 +6784,7 @@
         "topThreads": [
           {
             "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
-            "points": 279,
+            "points": 280,
             "comments": 119,
             "url": "https://github.com/juggler-ai/juggler",
             "date": "JUL 12 2026"
@@ -6807,17 +6804,17 @@
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
         "rawStoryHits": 172,
-        "fetchedStoryCount": 171,
+        "fetchedStoryCount": 172,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.9941860465116279,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 32,
-        "isEstimated": true,
-        "rawCommentHits": 4439,
+        "isEstimated": false,
+        "rawCommentHits": 4440,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 215,
-        "commentCoverage": 0.06758278891642262,
+        "commentCoverage": 0.06756756756756757,
         "limited": false,
-        "points": 2911,
+        "points": 2912,
         "themes": [
           {
             "id": "reasoning",
@@ -6881,7 +6878,7 @@
           {
             "title": "Qwen 3.8",
             "points": 925,
-            "comments": 655,
+            "comments": 656,
             "url": "https://twitter.com/Alibaba_Qwen/status/2078759124914098291",
             "date": "JUL 19 2026"
           }
@@ -6982,6 +6979,18 @@
       {
         "modelId": "claude",
         "themes": [
+          "price",
+          "multimodal"
+        ],
+        "excerpt": "I read the article you linked:https://www.chinatalk.media/p/how-to-buy-cheap-claude-tokens...I know that Anthropic claims that \"large-scale coordinated \"distillation attacks\"\"…",
+        "source": "Hacker News",
+        "author": "Certhas",
+        "publishedAt": "2026-07-20T15:29:37.000Z",
+        "url": "https://news.ycombinator.com/item?id=48980254"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "writing",
           "local"
         ],
@@ -7013,18 +7022,6 @@
         "author": "lucideer",
         "publishedAt": "2026-07-20T14:48:39.000Z",
         "url": "https://news.ycombinator.com/item?id=48979646"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "reasoning",
-          "writing"
-        ],
-        "excerpt": "…replaced soon [0], I think it follows that then he believes Claude can write a native app as well as a native app dev.0 -…",
-        "source": "Hacker News",
-        "author": "weakfish",
-        "publishedAt": "2026-07-20T01:55:22.000Z",
-        "url": "https://news.ycombinator.com/item?id=48973580"
       },
       {
         "modelId": "gemini",
