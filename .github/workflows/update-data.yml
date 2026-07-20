@@ -39,7 +39,31 @@ jobs:
           git add data/latest.json data/range.json data/stock-network.json data/history
           if git diff --cached --quiet; then
             echo "No data changes."
-          else
-            git commit -m "chore: refresh data snapshot [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh data snapshot [skip ci]"
+          # This runs every 30 min and can race a manual push (or the YouTube
+          # workflow) landing on main between checkout and push. A bare `git
+          # push` then gets rejected as non-fast-forward. Retry: fetch + rebase
+          # our one generated-data commit onto the new tip and push again. If
+          # the rebase itself conflicts (rare — would need the same JSON keys
+          # touched differently by a concurrent run), drop our old commit
+          # object and re-commit the already-regenerated working tree fresh on
+          # top of the new tip instead of hand-resolving a diff nobody reads.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $i."
+              exit 0
+            fi
+            echo "Push rejected (attempt $i) — remote moved, rebasing and retrying..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              git reset --soft origin/main
+              git add data/latest.json data/range.json data/stock-network.json data/history
+              git commit -m "chore: refresh data snapshot [skip ci]"
+            fi
+            sleep $((RANDOM % 5 + 1))
+          done
+          echo "::error::Failed to push data snapshot after 5 attempts."
+          exit 1

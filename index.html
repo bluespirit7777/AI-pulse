@@ -2,6 +2,16 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Defense-in-depth against XSS from feed/API content: every dynamic value is
+     already HTML-escaped before insertion (see esc() in js/util.js), but this
+     is a second layer that blocks injected <script>/inline-handler execution
+     even if an escaping bug ever slipped through. Scoped to what the page
+     actually loads: same-origin scripts/data, Google Fonts, and the data:
+     favicon — nothing else is fetched or embedded. GitHub Pages serves no
+     custom HTTP headers, so a <meta> tag is the only way to set this here;
+     it can't cover frame-ancestors (header-only), but frame-src 'none' still
+     blocks this page from embedding iframes of its own. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>AI Market Pulse</title>
 <meta name="description" content="A quiet view of a loud industry. Auto-refreshing AI news wire, frontier model releases, rankings, and an AI stock snapshot — every story linked to its original source.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E2A37'/%3E%3Cg stroke='%23EAF4F6' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='32' y1='11' x2='32' y2='45'/%3E%3Cline x1='15' y1='28' x2='49' y2='28'/%3E%3Cline x1='20' y1='16' x2='44' y2='40'/%3E%3Cline x1='44' y1='16' x2='20' y2='40'/%3E%3C/g%3E%3Cpath d='M0 48 Q16 42 32 48 T64 48 V64 H0 Z' fill='%233E8FA3' opacity='.7'/%3E%3C/svg%3E">

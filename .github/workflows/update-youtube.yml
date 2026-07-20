@@ -41,7 +41,28 @@ jobs:
           git add data/youtube-trending.json
           if git diff --cached --quiet; then
             echo "No data changes."
-          else
-            git commit -m "chore: refresh YouTube trending videos [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh YouTube trending videos [skip ci]"
+          # Same race as update-data.yml: this can land between a manual push
+          # and the twice-hourly data workflow's own push. Retry with a
+          # fetch+rebase; if the rebase itself conflicts, drop the old commit
+          # object and re-commit the already-regenerated working tree fresh on
+          # top of the new tip.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $i."
+              exit 0
+            fi
+            echo "Push rejected (attempt $i) — remote moved, rebasing and retrying..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              git reset --soft origin/main
+              git add data/youtube-trending.json
+              git commit -m "chore: refresh YouTube trending videos [skip ci]"
+            fi
+            sleep $((RANDOM % 5 + 1))
+          done
+          echo "::error::Failed to push YouTube snapshot after 5 attempts."
+          exit 1
