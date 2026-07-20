@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-20T13:45:26.245Z",
+  "updatedAt": "2026-07-20T14:00:37.938Z",
   "build": {
-    "sha": "1056ad47754c9c42c319535d37b6e397cd430b71",
-    "shortSha": "1056ad4",
+    "sha": "9bee47a39ec138e1ec91ae70c1f945539389446a",
+    "shortSha": "9bee47a",
     "ref": "main",
-    "builtAt": "2026-07-20T13:45:39.184Z"
+    "builtAt": "2026-07-20T14:00:50.096Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 10.6,
-    "estimatedDatasets": 4,
-    "buildSha": "1056ad4",
-    "lastSuccessfulUpdate": "2026-07-20T13:45:26.245Z"
+    "estimatedDatasets": 3,
+    "buildSha": "9bee47a",
+    "lastSuccessfulUpdate": "2026-07-20T14:00:37.938Z"
   },
   "ticker": [
     "CHINA DELIVERS A ONE-TWO PUNCH TO AMERICA’S AI DOMINANCE",
@@ -355,8 +355,8 @@
       "category": "analysis",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 45,
-      "impact": "notable",
+      "significance": 44,
+      "impact": "emerging",
       "verification": "analysis",
       "sourceCount": 1,
       "sources": [
@@ -1111,30 +1111,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
-      "clusterId": "xcrnqh",
-      "title": "Nonprofit Current AI is racing to build the World Wide Web of AI, free for all",
-      "desc": "Current AI, a non-profit building AI that leaves no one culture behind, has made remarkable progress across devices, AI chat and more.",
-      "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
-      "dateISO": "2026-07-19T14:00:00.000Z",
-      "date": "JUL 19 2026",
-      "category": "market",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://openai.com/index/a-scorecard-for-the-ai-age",
       "clusterId": "17gsr94",
       "title": "A scorecard for the AI age",
@@ -1209,6 +1185,33 @@
       ],
       "sourceName": "Ars Technica",
       "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/mufg",
+      "clusterId": "oy4d1k",
+      "title": "MUFG aims to become AI-native with OpenAI",
+      "desc": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+      "url": "https://openai.com/index/mufg",
+      "dateISO": "2026-07-07T00:00:00.000Z",
+      "date": "JUL 07 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/mufg"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
         "gpt"
       ]
     }
@@ -1556,7 +1559,7 @@
       "verification": "single",
       "impact": "emerging",
       "h": "Nonprofit Current AI is racing to build the World Wide Web of AI, free for all",
-      "p": "Current AI, a non-profit building AI that leaves no one culture behind, has made remarkable progress across devices, AI chat and more.",
+      "p": "Current AI, a nonprofit building AI that leaves no one culture behind, has made remarkable progress across devices, AI chat, and more.",
       "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
@@ -1686,11 +1689,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 206.88,
-      "changePct": 2.0068080337326,
+      "price": 205.85,
+      "changePct": 1.4989441257912284,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 10973840,
+      "volume": 14941133,
       "ohlc": [
         {
           "d": "04-20",
@@ -2131,22 +2134,22 @@
           "o": 206.03799438476562,
           "h": 207.74000549316406,
           "l": 205.0800018310547,
-          "c": 206.8800048828125
+          "c": 205.85000610351562
         }
       ],
-      "relVolume": 0.07569099909575044,
-      "marketCap": 5047872000000
+      "relVolume": 0.10305501851607889,
+      "marketCap": 5022740000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 391.89,
-      "changePct": -0.49006973741492826,
+      "price": 390.62,
+      "changePct": -0.8125802905516396,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 2616940,
+      "volume": 3861282,
       "ohlc": [
         {
           "d": "04-20",
@@ -2587,22 +2590,22 @@
           "o": 391.1000061035156,
           "h": 392.8999938964844,
           "l": 389.6700134277344,
-          "c": 391.8900146484375
+          "c": 390.6199035644531
         }
       ],
-      "relVolume": 0.055855340529026444,
-      "marketCap": 2911742700000
+      "relVolume": 0.0824142781220052,
+      "marketCap": 2902306600000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 379.96,
-      "changePct": 2.4620460085239864,
+      "price": 377.09,
+      "changePct": 1.6881077561954603,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 1494361,
+      "volume": 2190440,
       "ohlc": [
         {
           "d": "04-20",
@@ -3042,23 +3045,23 @@
           "d": "07-20",
           "o": 378.760009765625,
           "h": 382.760009765625,
-          "l": 376.989990234375,
-          "c": 379.9599914550781
+          "l": 376.79998779296875,
+          "c": 377.0899963378906
         }
       ],
-      "relVolume": 0.05710925391637961,
-      "marketCap": 1869403200000
+      "relVolume": 0.08371096016865708,
+      "marketCap": 1855282799999.9998
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 358.95,
-      "changePct": 3.5124213684129284,
+      "price": 358.42,
+      "changePct": 3.3595826580030783,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 2965117,
+      "volume": 4566119,
       "ohlc": [
         {
           "d": "04-20",
@@ -3497,24 +3500,24 @@
         {
           "d": "07-20",
           "o": 351.1499938964844,
-          "h": 359,
+          "h": 359.35931396484375,
           "l": 350.5199890136719,
-          "c": 358.95001220703125
+          "c": 358.4200134277344
         }
       ],
-      "relVolume": 0.08386522245044227,
-      "marketCap": 4379190000000
+      "relVolume": 0.12914788376653974,
+      "marketCap": 4372724000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 249.955,
-      "changePct": 1.102215002470303,
+      "price": 248.59,
+      "changePct": 0.5500953095717226,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 2744952,
+      "volume": 4216420,
       "ohlc": [
         {
           "d": "04-20",
@@ -3953,24 +3956,24 @@
         {
           "d": "07-20",
           "o": 248.75,
-          "h": 250.22000122070312,
+          "h": 250.77999877929688,
           "l": 248.1199951171875,
-          "c": 249.9550018310547
+          "c": 248.58999633789062
         }
       ],
-      "relVolume": 0.044792857560138524,
-      "marketCap": 2674518500000
+      "relVolume": 0.06880466415213063,
+      "marketCap": 2659913000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 645.155,
-      "changePct": -0.1323478670338545,
+      "price": 636.98,
+      "changePct": -1.397815693312729,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 963135,
+      "volume": 1504845,
       "ohlc": [
         {
           "d": "04-20",
@@ -4410,23 +4413,23 @@
           "d": "07-20",
           "o": 646.7000122070312,
           "h": 646.7899780273438,
-          "l": 638.4099731445312,
-          "c": 645.155029296875
+          "l": 636.010498046875,
+          "c": 636.97998046875
         }
       ],
-      "relVolume": 0.046065822324682655,
-      "marketCap": 1625790600000
+      "relVolume": 0.07197529151799807,
+      "marketCap": 1605189600000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 409.255,
-      "changePct": 2.732386951588305,
+      "price": 404.84,
+      "changePct": 1.6241186083303942,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 1703166,
+      "volume": 2308911,
       "ohlc": [
         {
           "d": "04-20",
@@ -4866,23 +4869,23 @@
           "d": "07-20",
           "o": 407.7049865722656,
           "h": 409.8800048828125,
-          "l": 405.4100036621094,
-          "c": 409.2550048828125
+          "l": 403.3999938964844,
+          "c": 404.8399963378906
         }
       ],
-      "relVolume": 0.10609150699727696,
-      "marketCap": 2124033450000
+      "relVolume": 0.14382382428523688,
+      "marketCap": 2101119599999.9998
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 521.21,
-      "changePct": 5.133534715529591,
+      "price": 512.583,
+      "changePct": 3.3933753662035437,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 4714437,
+      "volume": 6053315,
       "ohlc": [
         {
           "d": "04-20",
@@ -5322,23 +5325,23 @@
           "d": "07-20",
           "o": 516.9949951171875,
           "h": 522.4400024414062,
-          "l": 510.6300048828125,
-          "c": 521.2100219726562
+          "l": 510.1300048828125,
+          "c": 512.5830078125
         }
       ],
-      "relVolume": 0.1608276911835091,
-      "marketCap": 844360200000
+      "relVolume": 0.20650200129018656,
+      "marketCap": 830384460000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 135.1,
-      "changePct": 2.054691887276305,
+      "price": 133.055,
+      "changePct": 0.5098865146335908,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 2957949,
+      "volume": 4425676,
       "ohlc": [
         {
           "d": "04-20",
@@ -5779,22 +5782,22 @@
           "o": 131.8800048828125,
           "h": 135.3800048828125,
           "l": 131.82000732421875,
-          "c": 135.10000610351562
+          "c": 133.05499267578125
         }
       ],
-      "relVolume": 0.06554940456048233,
-      "marketCap": 324240000000
+      "relVolume": 0.09807485746969175,
+      "marketCap": 319332000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 124.455,
-      "changePct": -1.5465562648667872,
+      "price": 121.82,
+      "changePct": -3.631123341854564,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 3008036,
+      "volume": 5627179,
       "ohlc": [
         {
           "d": "04-20",
@@ -6234,12 +6237,12 @@
           "d": "07-20",
           "o": 124.2699966430664,
           "h": 125.48970031738281,
-          "l": 123.45999908447266,
-          "c": 124.45500183105469
+          "l": 121.66999816894531,
+          "c": 121.81990051269531
         }
       ],
-      "relVolume": 0.07560089488472321,
-      "marketCap": 349718550000
+      "relVolume": 0.1414277515550086,
+      "marketCap": 342314200000
     }
   ],
   "compute": [
@@ -6249,15 +6252,15 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "↑ 11% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.75/hr",
-      "trend": "↑ 10% vs 7d ago",
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "↑ 8% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6265,7 +6268,7 @@
       "rate": "$5.89 – $7.13/hr",
       "trend": "↓ 11% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6289,11 +6292,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "↑ 32% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-20T13:45:26.245Z",
+    "updatedAt": "2026-07-20T14:00:37.938Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6303,15 +6306,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 295,
-        "fetchedStoryCount": 195,
+        "fetchedStoryCount": 200,
         "validatedStoryCount": 163,
-        "storyCoverage": 0.6610169491525424,
-        "estimatedRelevantDiscussions": 247,
+        "storyCoverage": 0.6779661016949152,
+        "estimatedRelevantDiscussions": 240,
         "isEstimated": true,
-        "rawCommentHits": 2028,
+        "rawCommentHits": 2029,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 297,
-        "commentCoverage": 0.14792899408284024,
+        "commentCoverage": 0.14785608674223755,
         "limited": false,
         "points": 1475,
         "themes": [
@@ -6323,7 +6326,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 41
+            "count": 40
           },
           {
             "id": "writing",
@@ -6336,13 +6339,13 @@
             "count": 20
           },
           {
-            "id": "speed",
-            "label": "Speed",
-            "count": 14
-          },
-          {
             "id": "multimodal",
             "label": "Image/video",
+            "count": 15
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
             "count": 14
           },
           {
@@ -6388,48 +6391,43 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1029,
+        "rawStoryHits": 1030,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.2915451895043732,
-        "estimatedRelevantDiscussions": 1022,
+        "storyCoverage": 0.2912621359223301,
+        "estimatedRelevantDiscussions": 1023,
         "isEstimated": true,
-        "rawCommentHits": 6496,
+        "rawCommentHits": 6498,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.046182266009852216,
+        "commentCoverage": 0.046168051708217916,
         "limited": false,
-        "points": 18657,
+        "points": 18666,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 160
+            "count": 162
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 65
+            "count": 66
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 30
+            "count": 32
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 25
+            "count": 24
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 11
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 7
+            "count": 9
           },
           {
             "id": "context",
@@ -6440,6 +6438,11 @@
             "id": "local",
             "label": "Local use",
             "count": 7
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 6
           },
           {
             "id": "multimodal",
@@ -6475,11 +6478,11 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 123,
-        "fetchedStoryCount": 122,
+        "fetchedStoryCount": 123,
         "validatedStoryCount": 114,
-        "storyCoverage": 0.991869918699187,
-        "estimatedRelevantDiscussions": 115,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 114,
+        "isEstimated": false,
         "rawCommentHits": 1061,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
@@ -6560,16 +6563,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 502,
+        "rawStoryHits": 503,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.5976095617529881,
+        "storyCoverage": 0.5964214711729622,
         "estimatedRelevantDiscussions": 54,
         "isEstimated": true,
-        "rawCommentHits": 10849,
+        "rawCommentHits": 10853,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 166,
-        "commentCoverage": 0.027652318186007926,
+        "commentCoverage": 0.027642126600939832,
         "limited": false,
         "points": 2403,
         "themes": [
@@ -6647,10 +6650,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 32,
         "isEstimated": false,
-        "rawCommentHits": 565,
+        "rawCommentHits": 564,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 247,
-        "commentCoverage": 0.5309734513274337,
+        "commentCoverage": 0.5319148936170213,
         "limited": false,
         "points": 165,
         "themes": [
@@ -6722,16 +6725,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 68,
-        "fetchedStoryCount": 68,
+        "rawStoryHits": 69,
+        "fetchedStoryCount": 69,
         "validatedStoryCount": 58,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 58,
         "isEstimated": false,
-        "rawCommentHits": 1018,
+        "rawCommentHits": 1026,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 287,
-        "commentCoverage": 0.29469548133595286,
+        "commentCoverage": 0.29239766081871343,
         "limited": false,
         "points": 929,
         "themes": [
@@ -6809,12 +6812,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": false,
-        "rawCommentHits": 4422,
+        "rawCommentHits": 4428,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 215,
-        "commentCoverage": 0.06784260515603799,
+        "commentCoverage": 0.06775067750677506,
         "limited": false,
-        "points": 2901,
+        "points": 2902,
         "themes": [
           {
             "id": "coding",
@@ -6824,12 +6827,12 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 49
+            "count": 48
           },
           {
             "id": "local",
             "label": "Local use",
-            "count": 45
+            "count": 44
           },
           {
             "id": "speed",
@@ -6844,7 +6847,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 11
+            "count": 12
           },
           {
             "id": "multimodal",
@@ -6877,8 +6880,8 @@
           },
           {
             "title": "Qwen 3.8",
-            "points": 916,
-            "comments": 642,
+            "points": 917,
+            "comments": 645,
             "url": "https://twitter.com/Alibaba_Qwen/status/2078759124914098291",
             "date": "JUL 19 2026"
           }
@@ -6923,18 +6926,6 @@
       {
         "modelId": "gpt",
         "themes": [
-          "writing",
-          "reliability"
-        ],
-        "excerpt": "…a lot better and now it's very easy to ask questions to ChatGPT)…",
-        "source": "Hacker News",
-        "author": "agajews",
-        "publishedAt": "2026-07-15T21:06:16.000Z",
-        "url": "https://news.ycombinator.com/item?id=48927002"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
           "coding",
           "speed"
         ],
@@ -6943,6 +6934,18 @@
         "author": "toddmorey",
         "publishedAt": "2026-07-17T14:42:25.000Z",
         "url": "https://news.ycombinator.com/item?id=48947972"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "writing",
+          "reliability"
+        ],
+        "excerpt": "…a lot better and now it's very easy to ask questions to ChatGPT)…",
+        "source": "Hacker News",
+        "author": "agajews",
+        "publishedAt": "2026-07-15T21:06:16.000Z",
+        "url": "https://news.ycombinator.com/item?id=48927002"
       },
       {
         "modelId": "gpt",
@@ -7017,13 +7020,13 @@
         "modelId": "claude",
         "themes": [
           "coding",
-          "reasoning"
+          "writing"
         ],
-        "excerpt": "…of the article is about making money by selling access to Claude cheaply in China. Not about Chinese labs orchestrating a way to get their hands on Claude output.Your credit…",
+        "excerpt": "As a counter argument - I assume that Anthropic is using AI to write Claude Code.I've read and heard in videos that Javascript is a pretty good language for AI to write code in.…",
         "source": "Hacker News",
-        "author": "Certhas",
-        "publishedAt": "2026-07-19T11:13:52.000Z",
-        "url": "https://news.ycombinator.com/item?id=48966978"
+        "author": "pianopatrick",
+        "publishedAt": "2026-07-19T22:16:44.000Z",
+        "url": "https://news.ycombinator.com/item?id=48972154"
       },
       {
         "modelId": "gemini",
