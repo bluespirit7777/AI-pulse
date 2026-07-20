@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T21:15:27.752Z",
+  "generatedAt": "2026-07-20T21:30:33.358Z",
   "historyDepthDays": 10.9,
   "ranges": {
     "24H": {
@@ -9,7 +9,7 @@
         "perplexity": 0,
         "gpt": 3,
         "claude": 1,
-        "gemini": 0,
+        "gemini": 1,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -31,7 +31,7 @@
         "perplexity": 0,
         "gpt": 3,
         "claude": 1,
-        "gemini": 0,
+        "gemini": 1,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -48,12 +48,13 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "analysis": 3,
         "research": 1,
         "product": 3,
         "general": 4,
         "market": 2,
-        "opensource": 1
+        "opensource": 1,
+        "analysis": 1,
+        "compute": 1
       },
       "topEntities": [
         {
@@ -67,12 +68,17 @@
           "delta": 1
         },
         {
+          "id": "gemini",
+          "count": 1,
+          "delta": 1
+        },
+        {
           "id": "qwen",
           "count": 1,
           "delta": 1
         }
       ],
-      "eventCount": 14,
+      "eventCount": 13,
       "previousWindowComplete": true
     },
     "7D": {
@@ -82,7 +88,7 @@
         "perplexity": 0,
         "gpt": 99,
         "claude": 70,
-        "gemini": 75,
+        "gemini": 76,
         "grok": 6,
         "llama": 0,
         "deepseek": 0,
@@ -110,7 +116,7 @@
         "product": 48,
         "research": 9,
         "adoption": 20,
-        "compute": 10
+        "compute": 11
       },
       "topEntities": [
         {
@@ -120,7 +126,7 @@
         },
         {
           "id": "gemini",
-          "count": 75,
+          "count": 76,
           "delta": null
         },
         {
@@ -154,7 +160,7 @@
           "delta": null
         }
       ],
-      "eventCount": 506,
+      "eventCount": 507,
       "previousWindowComplete": false
     },
     "30D": {
@@ -164,7 +170,7 @@
         "perplexity": 0,
         "gpt": 413,
         "claude": 471,
-        "gemini": 202,
+        "gemini": 203,
         "grok": 14,
         "llama": 3,
         "deepseek": 7,
@@ -190,7 +196,7 @@
         "general": 903,
         "analysis": 141,
         "adoption": 100,
-        "compute": 25,
+        "compute": 26,
         "opensource": 26,
         "market": 22
       },
@@ -207,7 +213,7 @@
         },
         {
           "id": "gemini",
-          "count": 202,
+          "count": 203,
           "delta": null
         },
         {
@@ -236,7 +242,7 @@
           "delta": null
         }
       ],
-      "eventCount": 1715,
+      "eventCount": 1716,
       "previousWindowComplete": false
     }
   },
@@ -406,7 +412,7 @@
       "counts": {
         "capital": 7,
         "adoption": 20,
-        "compute": 6,
+        "compute": 7,
         "analysis": 30,
         "policy": 13,
         "product": 35,
