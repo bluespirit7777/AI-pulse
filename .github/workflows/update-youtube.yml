@@ -49,6 +49,14 @@ jobs:
           # fetch+rebase; if the rebase itself conflicts, drop the old commit
           # object and re-commit the already-regenerated working tree fresh on
           # top of the new tip.
+          # `git rebase --abort` is guarded with `|| true`: rebase can fail at
+          # its own pre-flight check (an unrelated dirty file elsewhere in the
+          # tree) without ever actually starting, in which case `--abort` has
+          # nothing to abort and errors "no rebase in progress" — harmless,
+          # but fatal to the whole script under Actions' default `set -e` if
+          # left unguarded. (This is the exact bug that hit update-data.yml:
+          # exit 128 from an unguarded `--abort`, root-caused by a generated
+          # file the old `git add` list had missed.)
           for i in 1 2 3 4 5; do
             if git push; then
               echo "Pushed on attempt $i."
@@ -57,10 +65,10 @@ jobs:
             echo "Push rejected (attempt $i) — remote moved, rebasing and retrying..."
             git fetch origin main
             if ! git rebase origin/main; then
-              git rebase --abort
+              git rebase --abort 2>/dev/null || true
               git reset --soft origin/main
               git add data/youtube-trending.json
-              git commit -m "chore: refresh YouTube trending videos [skip ci]"
+              git commit -m "chore: refresh YouTube trending videos [skip ci]" || echo "Nothing to commit — remote already matches."
             fi
             sleep $((RANDOM % 5 + 1))
           done

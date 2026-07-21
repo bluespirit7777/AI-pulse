@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest.json data/range.json data/stock-network.json data/history
+          git add data/
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
@@ -45,11 +45,22 @@ jobs:
           # This runs every 30 min and can race a manual push (or the YouTube
           # workflow) landing on main between checkout and push. A bare `git
           # push` then gets rejected as non-fast-forward. Retry: fetch + rebase
-          # our one generated-data commit onto the new tip and push again. If
-          # the rebase itself conflicts (rare — would need the same JSON keys
-          # touched differently by a concurrent run), drop our old commit
-          # object and re-commit the already-regenerated working tree fresh on
-          # top of the new tip instead of hand-resolving a diff nobody reads.
+          # our one generated-data commit onto the new tip and push again.
+          # `git add data/` (not a fixed file list) so every file the build
+          # script writes is always included — a previously-missed one
+          # (data/compute-history.json) sat unstaged forever, which is
+          # harmless for a plain push but made `git rebase` refuse to run at
+          # all ("You have unstaged changes"), since rebase requires a clean
+          # tree regardless of which paths it's touching.
+          # `git rebase --abort` is guarded with `|| true`: when rebase fails
+          # at that same pre-flight check, it never actually starts, so
+          # `--abort` has nothing to abort and errors "no rebase in progress"
+          # — harmless, but fatal to the whole script under Actions' default
+          # `set -e` if left unguarded (this is what actually produced the
+          # exit-128 failure). If the rebase attempt didn't leave a clean
+          # fast-forward, drop our old commit object and re-commit the
+          # already-regenerated working tree fresh on top of the new tip
+          # instead of hand-resolving a diff nobody reads.
           for i in 1 2 3 4 5; do
             if git push; then
               echo "Pushed on attempt $i."
@@ -58,10 +69,10 @@ jobs:
             echo "Push rejected (attempt $i) — remote moved, rebasing and retrying..."
             git fetch origin main
             if ! git rebase origin/main; then
-              git rebase --abort
+              git rebase --abort 2>/dev/null || true
               git reset --soft origin/main
-              git add data/latest.json data/range.json data/stock-network.json data/history
-              git commit -m "chore: refresh data snapshot [skip ci]"
+              git add data/
+              git commit -m "chore: refresh data snapshot [skip ci]" || echo "Nothing to commit — remote already matches."
             fi
             sleep $((RANDOM % 5 + 1))
           done
