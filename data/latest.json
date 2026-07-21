@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-21T17:00:39.676Z",
+  "updatedAt": "2026-07-21T17:15:24.178Z",
   "build": {
-    "sha": "131990a4e449e4511c17194cd1fb4f35953a93dc",
-    "shortSha": "131990a",
+    "sha": "732dc2c07950bb3dd5bb407ec41eba4c751fb45d",
+    "shortSha": "732dc2c",
     "ref": "main",
-    "builtAt": "2026-07-21T17:00:53.286Z"
+    "builtAt": "2026-07-21T17:15:37.404Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 11.7,
-    "estimatedDatasets": 3,
-    "buildSha": "131990a",
-    "lastSuccessfulUpdate": "2026-07-21T17:00:39.676Z"
+    "estimatedDatasets": 4,
+    "buildSha": "732dc2c",
+    "lastSuccessfulUpdate": "2026-07-21T17:15:24.178Z"
   },
   "ticker": [
     "NVIDIA WANTS TO OWN EVERY CHIP INSIDE AI DATA CENTERS",
-    "CHINA DELIVERS A ONE-TWO PUNCH TO AMERICA’S AI DOMINANCE",
+    "INTRODUCING THE CHATGPT FOR SMALL BUSINESS PROGRAM",
     "GOOGLE LAUNCHES A CHEAPER ALTERNATIVE TO LARGE AI SECURITY MODELS LIKE MYTHOS",
+    "CHINA DELIVERS A ONE-TWO PUNCH TO AMERICA’S AI DOMINANCE",
     "GOOGLE IS WORKING ON A NEW AI CHIP DESIGNED TO MAKE GEMINI MORE EFFICIENT",
     "OPENAI IS SCARED OF OPEN-WEIGHT MODELS. SHOULD THE US BE?",
+    "GOOGLE RELEASES THREE NEW GEMINI MODELS — BUT NO 3.5 PRO",
     "ANTHROPIC LAUNCHES CLAUDE TAG, A TOOL THAT WORKS LIKE A VIRTUAL EMPLOYEE WITHIN SLACK",
     "AGENTIC ORCHESTRATION: ENTERPRISE AI ORGANIZATIONS HAVE A DEPLOYMENT PROBLEM, NOT A PLATFORM PROBLEM — AND MO…",
-    "GOOGLE REVEALS FASTER AND CHEAPER GEMINI 3.6 FLASH, SAYS 3.5 PRO IS STILL IN TESTING",
-    "ANTHROPIC’S $1.5 BILLION BOOK PIRACY SETTLEMENT APPROVED BY JUDGE",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN"
+    "GOOGLE ANNOUNCES GEMINI 3.6 FLASH AND CYBERSECURITY AI, TEASES 3.5 PRO AND GEMINI 4"
   ],
   "signals": [
     {
@@ -56,39 +56,30 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
-      "clusterId": "1l2awct",
-      "title": "China delivers a one-two punch to America’s AI dominance",
-      "desc": "China's leading AI companies are ramping up the pressure on Silicon Valley, as Moonshot and Alibaba unveiled models they claim can go toe-to-toe with the best from OpenAI and Anthropic at a fraction of the cost. The rapid-fire releases suggest America's lead at the AI frontier is increasingly tight, just as the technology is becoming […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
-      "dateISO": "2026-07-20T10:16:33.000Z",
-      "date": "JUL 20 2026",
+      "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "clusterId": "1u60nl7",
+      "title": "Introducing the ChatGPT for small business program",
+      "desc": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "dateISO": "2026-07-21T17:00:00.000Z",
+      "date": "JUL 21 2026",
       "category": "product",
-      "catConfidence": 0.6,
+      "catConfidence": 0.75,
       "family": "product",
-      "significance": 73,
+      "significance": 76,
       "impact": "high",
-      "verification": "corroborated",
-      "sourceCount": 3,
+      "verification": "official",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
         }
       ],
-      "sourceName": "The Verge",
+      "sourceName": "OpenAI",
       "entityIds": [
-        "gpt",
-        "claude",
-        "qwen"
+        "chatgpt",
+        "gpt"
       ]
     },
     {
@@ -116,6 +107,42 @@
       "entityIds": [
         "claude",
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "clusterId": "1l2awct",
+      "title": "China delivers a one-two punch to America’s AI dominance",
+      "desc": "China's leading AI companies are ramping up the pressure on Silicon Valley, as Moonshot and Alibaba unveiled models they claim can go toe-to-toe with the best from OpenAI and Anthropic at a fraction of the cost. The rapid-fire releases suggest America's lead at the AI frontier is increasingly tight, just as the technology is becoming […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "dateISO": "2026-07-20T10:16:33.000Z",
+      "date": "JUL 20 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 72,
+      "impact": "high",
+      "verification": "corroborated",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "claude",
+        "qwen"
       ]
     },
     {
@@ -168,6 +195,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/",
+      "clusterId": "10zndm4",
+      "title": "Google releases three new Gemini models — but no 3.5 Pro",
+      "desc": "Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and Flash Cyber, but the continued absence of Gemini 3.5 Pro raises fresh questions about its AI strategy.",
+      "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/",
+      "dateISO": "2026-07-21T17:11:50.000Z",
+      "date": "JUL 21 2026",
+      "category": "capital",
+      "catConfidence": 0.43,
+      "family": "market",
+      "significance": 61,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -249,7 +302,7 @@
     {
       "id": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
       "clusterId": "1okx6by",
-      "title": "Google reveals faster and cheaper Gemini 3.6 Flash, says 3.5 Pro is still in testing",
+      "title": "Google announces Gemini 3.6 Flash and cybersecurity AI, teases 3.5 Pro and Gemini 4",
       "desc": "There are new 3.6 and 3.5 models today, but Google is already training Gemini 4.",
       "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
       "dateISO": "2026-07-21T16:58:25.000Z",
@@ -270,32 +323,6 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
-      "clusterId": "uic91u",
-      "title": "Anthropic’s $1.5 billion book piracy settlement approved by judge",
-      "desc": "A federal judge has signed off on Anthropic's $1.5 billion class action settlement with authors who accused the company of training its AI models on copyrighted books, as reported earlier by Reuters. In an order on Monday, Judge Araceli Martínez-Olguín writes that the settlement will provide \"meaningful relief,\" offering authors around $3,000 for each book […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
-      "dateISO": "2026-07-21T16:53:37.000Z",
-      "date": "JUL 21 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -451,32 +478,6 @@
       "entityIds": []
     },
     {
-      "id": "https://openai.com/index/safety-alignment-long-horizon-models",
-      "clusterId": "3yxhib",
-      "title": "Safety and alignment in an era of long-horizon models",
-      "desc": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
-      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
-      "dateISO": "2026-07-20T10:00:00.000Z",
-      "date": "JUL 20 2026",
-      "category": "market",
-      "catConfidence": 0.44,
-      "family": "market",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/safety-alignment-long-horizon-models"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
       "clusterId": "yj5148",
       "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
@@ -505,6 +506,32 @@
       "entityIds": [
         "claude",
         "qwen"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/safety-alignment-long-horizon-models",
+      "clusterId": "3yxhib",
+      "title": "Safety and alignment in an era of long-horizon models",
+      "desc": "OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.",
+      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+      "dateISO": "2026-07-20T10:00:00.000Z",
+      "date": "JUL 20 2026",
+      "category": "market",
+      "catConfidence": 0.44,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/safety-alignment-long-horizon-models"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -964,30 +991,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/20/x-relaunches-a-rebuilt-android-app-after-year-long-effort/",
-      "clusterId": "e0wu4m",
-      "title": "X relaunches a rebuilt Android app after year-long effort",
-      "desc": "X says the rebuilt version of its Android app is now available globally.",
-      "url": "https://techcrunch.com/2026/07/20/x-relaunches-a-rebuilt-android-app-after-year-long-effort/",
-      "dateISO": "2026-07-20T19:37:39.000Z",
-      "date": "JUL 20 2026",
-      "category": "product",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/20/x-relaunches-a-rebuilt-android-app-after-year-long-effort/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
       "clusterId": "1cxwxyf",
       "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
@@ -1208,33 +1211,24 @@
     {
       "family": "product",
       "category": "product",
-      "title": "China delivers a one-two punch to America’s AI dominance",
-      "summary": "China's leading AI companies are ramping up the pressure on Silicon Valley, as Moonshot and Alibaba unveiled models they claim can go toe-to-toe with the best from OpenAI and Anth…",
-      "significance": 73,
+      "title": "Introducing the ChatGPT for small business program",
+      "summary": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
+      "significance": 76,
       "impact": "high",
-      "verification": "corroborated",
-      "date": "JUL 20 2026",
-      "dateISO": "2026-07-20T10:16:33.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
-      "sourceCount": 3,
+      "verification": "official",
+      "date": "JUL 21 2026",
+      "dateISO": "2026-07-21T17:00:00.000Z",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
         }
       ],
       "entityIds": [
-        "gpt",
-        "claude",
-        "qwen"
+        "chatgpt",
+        "gpt"
       ],
       "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
     },
@@ -1310,12 +1304,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 19,
+    "chatgpt": 20,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 70,
-    "claude": 71,
-    "gemini": 33,
+    "gpt": 71,
+    "claude": 70,
+    "gemini": 34,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1398,6 +1392,17 @@
       "logoKey": "openai",
       "items": [
         {
+          "h": "Introducing the ChatGPT for small business program",
+          "d": "JUL 21 2026",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "high"
+        },
+        {
           "h": "A scorecard for the AI age",
           "d": "JUL 17 2026",
           "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
@@ -1434,17 +1439,6 @@
           "h": "HP Inc. launches Frontier strategic partnership with OpenAI",
           "d": "JUN 28 2026",
           "url": "https://openai.com/index/hp-frontier-partnership",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "OpenAI and Broadcom unveil LLM-optimized inference chip",
-          "d": "JUN 24 2026",
-          "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1501,22 +1495,22 @@
       "date": "JUL 21 2026",
       "verification": "single",
       "impact": "notable",
-      "h": "Google reveals faster and cheaper Gemini 3.6 Flash, says 3.5 Pro is still in te…",
-      "p": "There are new 3.6 and 3.5 models today, but Google is already training Gemini 4.",
-      "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
-      "sourceName": "Ars Technica",
+      "h": "Google releases three new Gemini models — but no 3.5 Pro",
+      "p": "Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and Flash Cyber, but the continued absence of Gemini 3.5 Pro raises fresh questions about its AI strategy.",
+      "url": "https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/",
+      "sourceName": "TechCrunch",
       "sourceCount": 1
     },
     {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
+      "org": "GOOGLE",
+      "logoKey": "google",
       "date": "JUL 21 2026",
       "verification": "single",
       "impact": "notable",
-      "h": "Anthropic’s $1.5 billion book piracy settlement approved by judge",
-      "p": "A federal judge has signed off on Anthropic's $1.5 billion class action settlement with authors who accused the company of training its AI models on copyrighted books, as reported earlier by Reuters. In an order on Monday, Judge Araceli Martínez-Olguín writes…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
-      "sourceName": "The Verge",
+      "h": "Google announces Gemini 3.6 Flash and cybersecurity AI, teases 3.5 Pro and Gemi…",
+      "p": "There are new 3.6 and 3.5 models today, but Google is already training Gemini 4.",
+      "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
+      "sourceName": "Ars Technica",
       "sourceCount": 1
     },
     {
@@ -1692,11 +1686,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 205.47,
-      "changePct": 1.0773329666259777,
+      "price": 206.16,
+      "changePct": 1.4167674636496579,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 55467426,
+      "volume": 58850105,
       "ohlc": [
         {
           "d": "04-21",
@@ -2137,22 +2131,22 @@
           "o": 207.5399932861328,
           "h": 208.64999389648438,
           "l": 204.01010131835938,
-          "c": 205.47000122070312
+          "c": 206.16000366210938
         }
       ],
-      "relVolume": 0.4038241673661296,
-      "marketCap": 5013468000000
+      "relVolume": 0.4284513698370337,
+      "marketCap": 5030304000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 398.705,
-      "changePct": -0.8911536196544457,
+      "price": 398.45,
+      "changePct": -0.9545343548998011,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 11883775,
+      "volume": 12298723,
       "ohlc": [
         {
           "d": "04-21",
@@ -2593,22 +2587,22 @@
           "o": 398.80499267578125,
           "h": 401.4700012207031,
           "l": 396.32000732421875,
-          "c": 398.7049865722656
+          "c": 398.45001220703125
         }
       ],
-      "relVolume": 0.26255796036943513,
-      "marketCap": 2962378150000
+      "relVolume": 0.2717257459038614,
+      "marketCap": 2960483500000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 386.65,
-      "changePct": 2.2450788428595723,
+      "price": 386.27,
+      "changePct": 2.144590986097216,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7175402,
+      "volume": 7399445,
       "ohlc": [
         {
           "d": "04-21",
@@ -3049,22 +3043,22 @@
           "o": 390.0199890136719,
           "h": 390.5834045410156,
           "l": 379.2200012207031,
-          "c": 386.6499938964844
+          "c": 386.2699890136719
         }
       ],
-      "relVolume": 0.29127291717535087,
-      "marketCap": 1902318000000
+      "relVolume": 0.30036755161990425,
+      "marketCap": 1900448400000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 349.395,
-      "changePct": -0.7372372205741491,
+      "price": 349.18,
+      "changePct": -0.7983174625854257,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 10470554,
+      "volume": 10746451,
       "ohlc": [
         {
           "d": "04-21",
@@ -3505,22 +3499,22 @@
           "o": 350.8299865722656,
           "h": 351.1400146484375,
           "l": 347.5899963378906,
-          "c": 349.3949890136719
+          "c": 349.17999267578125
         }
       ],
-      "relVolume": 0.30465137593590963,
-      "marketCap": 4262619000000
+      "relVolume": 0.31267887865129507,
+      "marketCap": 4259996000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 247.985,
-      "changePct": -0.8020340168628567,
+      "price": 248.3,
+      "changePct": -0.6760280028284822,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 11950358,
+      "volume": 12432265,
       "ohlc": [
         {
           "d": "04-21",
@@ -3961,22 +3955,22 @@
           "o": 249.1219940185547,
           "h": 249.33999633789062,
           "l": 246.72000122070312,
-          "c": 247.98500061035156
+          "c": 248.3000030517578
         }
       ],
-      "relVolume": 0.20213216832014003,
-      "marketCap": 2653439500000
+      "relVolume": 0.21028329708453802,
+      "marketCap": 2656810000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 648.31,
-      "changePct": 0.3808968128278448,
+      "price": 646.495,
+      "changePct": 0.09987141838393906,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 3466387,
+      "volume": 3715177,
       "ohlc": [
         {
           "d": "04-21",
@@ -4417,22 +4411,22 @@
           "o": 654.1300048828125,
           "h": 655.8800048828125,
           "l": 643.2000122070312,
-          "c": 648.3099975585938
+          "c": 646.4949951171875
         }
       ],
-      "relVolume": 0.1735016568659519,
-      "marketCap": 1633741199999.9998
+      "relVolume": 0.1859542414191712,
+      "marketCap": 1629167400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 422.57,
-      "changePct": 5.038533469128848,
+      "price": 423.855,
+      "changePct": 5.357947762218676,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 9401945,
+      "volume": 10019464,
       "ohlc": [
         {
           "d": "04-21",
@@ -4871,24 +4865,24 @@
         {
           "d": "07-21",
           "o": 418.739990234375,
-          "h": 422.8900146484375,
+          "h": 423.8699951171875,
           "l": 413.55999755859375,
-          "c": 422.57000732421875
+          "c": 423.8550109863281
         }
       ],
-      "relVolume": 0.6126444507361453,
-      "marketCap": 2193138300000
+      "relVolume": 0.6528828895457888,
+      "marketCap": 2199807450000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 542.25,
-      "changePct": 7.681154976109907,
+      "price": 540.89,
+      "changePct": 7.41108620080914,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 15412981,
+      "volume": 15944495,
       "ohlc": [
         {
           "d": "04-21",
@@ -5329,22 +5323,22 @@
           "o": 525.760009765625,
           "h": 543,
           "l": 522.60009765625,
-          "c": 542.25
+          "c": 540.8900146484375
         }
       ],
-      "relVolume": 0.5447626658447914,
-      "marketCap": 878445000000
+      "relVolume": 0.5635487127213709,
+      "marketCap": 876241800000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 133.025,
-      "changePct": -1.3533645713225302,
+      "price": 132.45,
+      "changePct": -1.7797619923213839,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 12892749,
+      "volume": 13492998,
       "ohlc": [
         {
           "d": "04-21",
@@ -5785,22 +5779,22 @@
           "o": 133.97500610351562,
           "h": 134.67999267578125,
           "l": 131.22500610351562,
-          "c": 133.02499389648438
+          "c": 132.4499969482422
         }
       ],
-      "relVolume": 0.2937802504643313,
-      "marketCap": 319260000000
+      "relVolume": 0.30745780686141655,
+      "marketCap": 317880000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 126.11,
-      "changePct": 3.8968557126082817,
+      "price": 126.23,
+      "changePct": 3.9957210522832276,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 13142059,
+      "volume": 13926715,
       "ohlc": [
         {
           "d": "04-21",
@@ -6241,11 +6235,11 @@
           "o": 122.80999755859375,
           "h": 126.91999816894531,
           "l": 122.20999908447266,
-          "c": 126.11000061035156
+          "c": 126.2300033569336
         }
       ],
-      "relVolume": 0.32807932783732613,
-      "marketCap": 354369100000
+      "relVolume": 0.34766753795444133,
+      "marketCap": 354706300000
     }
   ],
   "compute": [
@@ -6260,10 +6254,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.08 – $4.64/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.61/hr",
+      "trend": "↑ 7% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6295,11 +6289,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "↑ 32% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-21T17:00:39.676Z",
+    "updatedAt": "2026-07-21T17:15:24.178Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6309,27 +6303,27 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 303,
-        "fetchedStoryCount": 196,
+        "fetchedStoryCount": 233,
         "validatedStoryCount": 166,
-        "storyCoverage": 0.6468646864686468,
-        "estimatedRelevantDiscussions": 257,
+        "storyCoverage": 0.768976897689769,
+        "estimatedRelevantDiscussions": 216,
         "isEstimated": true,
-        "rawCommentHits": 2123,
+        "rawCommentHits": 2124,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 296,
-        "commentCoverage": 0.1413094677343382,
+        "validatedCommentCount": 297,
+        "commentCoverage": 0.14124293785310735,
         "limited": false,
         "points": 1454,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 69
+            "count": 70
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 30
+            "count": 31
           },
           {
             "id": "writing",
@@ -6400,22 +6394,22 @@
         "storyCoverage": 0.2857142857142857,
         "estimatedRelevantDiscussions": 1040,
         "isEstimated": true,
-        "rawCommentHits": 6642,
+        "rawCommentHits": 6645,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 298,
-        "commentCoverage": 0.045167118337850046,
+        "commentCoverage": 0.045146726862302484,
         "limited": false,
-        "points": 17967,
+        "points": 17974,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 140
+            "count": 144
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 69
+            "count": 71
           },
           {
             "id": "price",
@@ -6435,7 +6429,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 11
+            "count": 10
           },
           {
             "id": "context",
@@ -6481,22 +6475,22 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 139,
-        "fetchedStoryCount": 139,
+        "fetchedStoryCount": 133,
         "validatedStoryCount": 129,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 129,
-        "isEstimated": false,
-        "rawCommentHits": 1153,
+        "storyCoverage": 0.9568345323741008,
+        "estimatedRelevantDiscussions": 135,
+        "isEstimated": true,
+        "rawCommentHits": 1155,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 293,
-        "commentCoverage": 0.26019080659150046,
+        "validatedCommentCount": 294,
+        "commentCoverage": 0.2597402597402597,
         "limited": false,
-        "points": 2420,
+        "points": 2447,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 51
+            "count": 52
           },
           {
             "id": "reasoning",
@@ -6506,12 +6500,12 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 31
+            "count": 30
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 26
+            "count": 27
           },
           {
             "id": "writing",
@@ -6541,7 +6535,7 @@
           {
             "id": "context",
             "label": "Context limits",
-            "count": 4
+            "count": 3
           }
         ],
         "topThreads": [
@@ -6553,11 +6547,11 @@
             "date": "JUL 16 2026"
           },
           {
-            "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
-            "points": 280,
-            "comments": 119,
-            "url": "https://github.com/juggler-ai/juggler",
-            "date": "JUL 12 2026"
+            "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+            "points": 288,
+            "comments": 218,
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+            "date": "JUL 21 2026"
           }
         ]
       },
@@ -6572,10 +6566,10 @@
         "storyCoverage": 0.5813953488372093,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 10866,
+        "rawCommentHits": 10867,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 168,
-        "commentCoverage": 0.027609055770292656,
+        "commentCoverage": 0.027606515137572465,
         "limited": false,
         "points": 2410,
         "themes": [
@@ -6642,8 +6636,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 79,
-        "fetchedStoryCount": 79,
+        "rawStoryHits": 80,
+        "fetchedStoryCount": 80,
         "validatedStoryCount": 31,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
@@ -6723,16 +6717,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 74,
-        "fetchedStoryCount": 74,
+        "rawStoryHits": 70,
+        "fetchedStoryCount": 70,
         "validatedStoryCount": 61,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 61,
         "isEstimated": false,
-        "rawCommentHits": 1111,
+        "rawCommentHits": 1113,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 289,
-        "commentCoverage": 0.27002700270027,
+        "commentCoverage": 0.2695417789757412,
         "limited": false,
         "points": 937,
         "themes": [
@@ -6749,7 +6743,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 64
+            "count": 63
           },
           {
             "id": "speed",
@@ -6762,14 +6756,14 @@
             "count": 14
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 6
-          },
-          {
             "id": "context",
             "label": "Context limits",
             "count": 6
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 5
           },
           {
             "id": "multimodal",
@@ -6804,27 +6798,27 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 180,
-        "fetchedStoryCount": 180,
+        "rawStoryHits": 182,
+        "fetchedStoryCount": 182,
         "validatedStoryCount": 34,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": false,
-        "rawCommentHits": 4532,
+        "rawCommentHits": 4531,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 231,
-        "commentCoverage": 0.06619593998234775,
+        "commentCoverage": 0.06621054954756124,
         "limited": false,
-        "points": 3751,
+        "points": 3757,
         "themes": [
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 47
-          },
           {
             "id": "reasoning",
             "label": "Reasoning",
+            "count": 48
+          },
+          {
+            "id": "coding",
+            "label": "Coding",
             "count": 47
           },
           {
@@ -6835,7 +6829,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 22
+            "count": 23
           },
           {
             "id": "price",
