@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T20:00:37.292Z",
+  "generatedAt": "2026-07-21T20:15:25.707Z",
   "historyDepthDays": 11.8,
   "ranges": {
     "24H": {
@@ -7,8 +7,8 @@
         "chatgpt": 1,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 1,
-        "claude": 4,
+        "gpt": 3,
+        "claude": 3,
         "gemini": 6,
         "grok": 0,
         "llama": 0,
@@ -29,8 +29,8 @@
         "chatgpt": 1,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": -5,
-        "claude": 0,
+        "gpt": -3,
+        "claude": -2,
         "gemini": 6,
         "grok": 0,
         "llama": 0,
@@ -55,7 +55,8 @@
         "adoption": 1,
         "capital": 2,
         "product": 2,
-        "orggov": 1
+        "orggov": 1,
+        "opensource": 1
       },
       "topEntities": [
         {
@@ -64,9 +65,14 @@
           "delta": 6
         },
         {
+          "id": "gpt",
+          "count": 3,
+          "delta": -3
+        },
+        {
           "id": "claude",
-          "count": 4,
-          "delta": 0
+          "count": 3,
+          "delta": -2
         },
         {
           "id": "chatgpt",
@@ -74,17 +80,12 @@
           "delta": 1
         },
         {
-          "id": "gpt",
-          "count": 1,
-          "delta": -5
-        },
-        {
           "id": "nvidia",
           "count": 1,
           "delta": 1
         }
       ],
-      "eventCount": 33,
+      "eventCount": 34,
       "previousWindowComplete": true
     },
     "7D": {
@@ -92,7 +93,7 @@
         "chatgpt": 22,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 114,
+        "gpt": 116,
         "claude": 56,
         "gemini": 60,
         "grok": 2,
@@ -113,11 +114,11 @@
       "entityDelta": {},
       "categoryCounts": {
         "product": 47,
-        "general": 236,
+        "general": 237,
         "capital": 51,
         "adoption": 23,
-        "opensource": 9,
-        "policy": 33,
+        "opensource": 10,
+        "policy": 27,
         "orggov": 10,
         "analysis": 29,
         "compute": 7,
@@ -127,7 +128,7 @@
       "topEntities": [
         {
           "id": "gpt",
-          "count": 114,
+          "count": 116,
           "delta": null
         },
         {
@@ -161,7 +162,7 @@
           "delta": null
         }
       ],
-      "eventCount": 452,
+      "eventCount": 448,
       "previousWindowComplete": false
     },
     "30D": {
@@ -169,7 +170,7 @@
         "chatgpt": 162,
         "copilot": 12,
         "perplexity": 0,
-        "gpt": 455,
+        "gpt": 457,
         "claude": 524,
         "gemini": 227,
         "grok": 14,
@@ -194,11 +195,11 @@
         "product": 232,
         "capital": 95,
         "research": 76,
-        "general": 1007,
+        "general": 1009,
         "analysis": 157,
         "adoption": 110,
         "compute": 29,
-        "opensource": 29,
+        "opensource": 30,
         "market": 26
       },
       "topEntities": [
@@ -209,7 +210,7 @@
         },
         {
           "id": "gpt",
-          "count": 455,
+          "count": 457,
           "delta": null
         },
         {
@@ -243,7 +244,7 @@
           "delta": null
         }
       ],
-      "eventCount": 1906,
+      "eventCount": 1909,
       "previousWindowComplete": false
     }
   },
@@ -428,12 +429,12 @@
       "date": "2026-07-21",
       "counts": {
         "compute": 6,
-        "opensource": 4,
+        "opensource": 5,
         "product": 36,
         "adoption": 19,
         "capital": 9,
         "market": 6,
-        "general": 158,
+        "general": 160,
         "policy": 13,
         "research": 9,
         "analysis": 28,
