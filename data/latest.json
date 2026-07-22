@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-07-22T17:45:24.742Z",
+  "updatedAt": "2026-07-22T18:00:34.537Z",
   "build": {
-    "sha": "fd93fb7616c6a7858fbf67978821dceaee7b82d0",
-    "shortSha": "fd93fb7",
+    "sha": "e8a54e72c6f3e6d1f9001d894b47163528f2de14",
+    "shortSha": "e8a54e7",
     "ref": "main",
-    "builtAt": "2026-07-22T17:45:37.850Z"
+    "builtAt": "2026-07-22T18:01:00.748Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 12.7,
-    "estimatedDatasets": 3,
-    "buildSha": "fd93fb7",
-    "lastSuccessfulUpdate": "2026-07-22T17:45:24.742Z"
+    "historyDepthDays": 12.8,
+    "estimatedDatasets": 4,
+    "buildSha": "e8a54e7",
+    "lastSuccessfulUpdate": "2026-07-22T18:00:34.537Z"
   },
   "ticker": [
     "OPENAI’S AI SPENDING SPREE HAS BALLOONED TO $750B",
+    "AMD COMMITS UP TO $5 BILLION TO ANTHROPIC",
     "BUILDING AI INFRASTRUCTURE WITH THE EFFINGHAM COUNTY COMMUNITY",
+    "MENLO VENTURES’ MATT MURPHY EXPLAINS WHAT AI STARTUPS FOUNDERS MUST DO DIFFERENTLY",
     "ACCELERATING THE FRONTIERS OF SCIENTIFIC DISCOVERY: GOOGLE’S $40M COMMITMENT TO THE GENESIS MISSION",
+    "HERE’S WHAT SAMSUNG’S SMART GLASSES ACTUALLY LOOK LIKE",
     "THE ANTHROPIC-PHYSICAL INTELLIGENCE RUMOR ROILING AI TWITTER",
-    "ANTHROPIC’S LANDMARK $1.5B COPYRIGHT SETTLEMENT IS APPROVED",
     "INTRODUCING OPENAI PRESENCE",
-    "OPENAI MODELS ESCAPED CONTAINMENT AND HACKED HUGGING FACE",
-    "AMERICA NEEDS TO STOP GETTING SHOCKED BY CHINESE AI",
-    "NVIDIA WANTS TO OWN EVERY CHIP INSIDE AI DATA CENTERS",
-    "INTRODUCING THE CHATGPT FOR SMALL BUSINESS PROGRAM"
+    "US JUDGE APPROVES ANTHROPIC'S $1.5 BILLION SETTLEMENT OF COPYRIGHT LAWSUIT",
+    "OPENAI MODELS ESCAPED CONTAINMENT AND HACKED HUGGING FACE"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "capital",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 77,
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -53,6 +53,33 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
+      "clusterId": "1bemdfu",
+      "title": "AMD commits up to $5 billion to Anthropic",
+      "desc": "AMD says it's going to invest up to $5 billion in Anthropic, while helping to expand the AI company's computing power, according to an announcement on Wednesday. As part of the new partnership, Anthropic will deploy up to 2 gigawatts of AMD's Instinct MI450 AI GPUs using the chipmaker's new Helios rack-scale system, as reported […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
+      "dateISO": "2026-07-22T14:44:27.000Z",
+      "date": "JUL 22 2026",
+      "category": "capital",
+      "catConfidence": 0.58,
+      "family": "market",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude",
+        "amd"
       ]
     },
     {
@@ -82,6 +109,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
+      "clusterId": "wyepjs",
+      "title": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differently",
+      "desc": "Anthropic leaped to a $47 billion revenue run rate by May, compared to $9 billion in 2025. It’s the kind of growth that Menlo Ventures’ Matt Murphy says he’s never seen in 25 years of investing, not in the internet wave, not in mobile, not in the first cloud boom. Menlo led Anthropic’s $500M Series D, and Murphy has had a front-row seat as the company went from a pre-revenue, […]",
+      "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
+      "dateISO": "2026-07-22T14:00:00.000Z",
+      "date": "JUL 22 2026",
+      "category": "capital",
+      "catConfidence": 0.63,
+      "family": "market",
+      "significance": 74,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
       "clusterId": "14ot9ur",
       "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
@@ -103,6 +156,32 @@
         }
       ],
       "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
+      "clusterId": "1j3fu5a",
+      "title": "Here’s what Samsung’s smart glasses actually look like",
+      "desc": "Samsung has given us our first chance to check out its upcoming smart glasses in person, revealing two new designs and the first specs in the process, including an impressive 9-hour battery life. The glasses, developed in collaboration with Google and the eyewear brands Gentle Monster and Warby Parker, are due to launch this fall. […]",
+      "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
+      "dateISO": "2026-07-22T16:35:34.000Z",
+      "date": "JUL 22 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker"
+        }
+      ],
+      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -135,40 +214,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
-      "clusterId": "79mged",
-      "title": "Anthropic’s landmark $1.5B copyright settlement is approved",
-      "desc": "The final approval settles one case, but it doesn't resolve the broader issue of using copyrighted works to train AI models.",
-      "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
-      "dateISO": "2026-07-21T00:12:24.000Z",
-      "date": "JUL 21 2026",
-      "category": "policy",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 70,
-      "impact": "high",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/introducing-openai-presence",
       "clusterId": "i5vc68",
       "title": "Introducing OpenAI Presence",
@@ -195,6 +240,40 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5",
+      "clusterId": "1bmyr0c",
+      "title": "US judge approves Anthropic's $1.5 billion settlement of copyright lawsuit",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5",
+      "dateISO": "2026-07-20T20:49:00.000Z",
+      "date": "JUL 20 2026",
+      "category": "policy",
+      "catConfidence": 0.83,
+      "family": "market",
+      "significance": 68,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
       "clusterId": "1kpozot",
       "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
@@ -205,7 +284,7 @@
       "category": "opensource",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 67,
+      "significance": 66,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -218,37 +297,6 @@
       "sourceName": "Wired",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-      "clusterId": "vll3fo",
-      "title": "America needs to stop getting shocked by Chinese AI",
-      "desc": "Last week, two Chinese AI companies unveiled models they say can credibly compete with the best systems from OpenAI and Anthropic. The response was swift and predictable. Markets wobbled, commentators declared Silicon Valley shooketh, and policymakers reached for the familiar language of arms races and wake-up calls. In one headline, The Associated Press said a […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-      "dateISO": "2026-07-21T11:08:56.000Z",
-      "date": "JUL 21 2026",
-      "category": "product",
-      "catConfidence": 0.5,
-      "family": "product",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt",
-        "claude"
       ]
     },
     {
@@ -494,32 +542,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
-      "clusterId": "1ep6gx0",
-      "title": "Google is working on a new AI chip designed to make Gemini more efficient",
-      "desc": "Alphabet, Google's parent company, is reportedly working on a new chip designed to make its Gemini models run much more efficiently.",
-      "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
-      "dateISO": "2026-07-20T21:21:15.000Z",
-      "date": "JUL 20 2026",
-      "category": "compute",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
       "clusterId": "1plopr",
       "title": "3 Google updates from Galaxy Unpacked 2026",
@@ -698,7 +720,7 @@
       "category": "compute",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 50,
+      "significance": 49,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -819,32 +841,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
-      "clusterId": "1okx6by",
-      "title": "Google announces Gemini 3.6 Flash and cybersecurity AI, teases 3.5 Pro and Gemini 4",
-      "desc": "There are new 3.6 and 3.5 models today, but Google is already training Gemini 4.",
-      "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
-      "dateISO": "2026-07-21T16:58:25.000Z",
-      "date": "JUL 21 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
       "clusterId": "uic91u",
       "title": "Anthropic’s $1.5 billion book piracy settlement approved by judge",
@@ -868,6 +864,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
+      "clusterId": "1okx6by",
+      "title": "Google announces Gemini 3.6 Flash and cybersecurity AI, teases 3.5 Pro and Gemini 4",
+      "desc": "There are new 3.6 and 3.5 models today, but Google is already training Gemini 4.",
+      "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/",
+      "dateISO": "2026-07-21T16:58:25.000Z",
+      "date": "JUL 21 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -1183,64 +1205,38 @@
         "chatgpt",
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "clusterId": "1kkn0cr",
-      "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
-      "desc": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
-      "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "dateISO": "2026-06-18T08:00:00.000Z",
-      "date": "JUN 18 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/diagnose-rare-childhood-diseases"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
-      "category": "adoption",
-      "title": "Introducing OpenAI Presence",
-      "summary": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
-      "significance": 68,
-      "impact": "notable",
-      "verification": "official",
+      "category": "product",
+      "title": "Here’s what Samsung’s smart glasses actually look like",
+      "summary": "Samsung has given us our first chance to check out its upcoming smart glasses in person, revealing two new designs and the first specs in the process, including an impressive 9-ho…",
+      "significance": 73,
+      "impact": "high",
+      "verification": "single",
       "date": "JUL 22 2026",
-      "dateISO": "2026-07-22T05:30:00.000Z",
-      "url": "https://openai.com/index/introducing-openai-presence",
+      "dateISO": "2026-07-22T16:35:34.000Z",
+      "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-openai-presence"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, the partnership shifts who gets access to whose models, compute or customers."
     },
     {
       "family": "market",
       "category": "capital",
       "title": "OpenAI’s AI spending spree has ballooned to $750B",
       "summary": "OpenAI will spend the equivalent of Sweden's GDP on infrastructure through 2030.",
-      "significance": 77,
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "date": "JUL 22 2026",
@@ -1310,8 +1306,8 @@
     "chatgpt": 19,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 76,
-    "claude": 75,
+    "gpt": 75,
+    "claude": 76,
     "gemini": 36,
     "grok": 0,
     "llama": 0,
@@ -1324,7 +1320,7 @@
     "oracle": 1,
     "coreweave": 0,
     "nvidia": 1,
-    "amd": 0,
+    "amd": 1,
     "tsmc": 0,
     "broadcom": 1
   },
@@ -1342,17 +1338,6 @@
           "sourceName": "The Verge",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "notable"
-        },
-        {
-          "h": "America needs to stop getting shocked by Chinese AI",
-          "d": "JUL 21 2026",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 2,
-          "verification": "corroborated",
           "impact": "notable"
         },
         {
@@ -1386,6 +1371,17 @@
           "sourceName": "Anthropic",
           "sourceCount": 1,
           "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Anthropic launches AI drug discovery program, joining tech giants in betting on healthcare",
+          "d": "JUN 30 2026",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNck84aEo5SERWUzlnMzBaY3ZYdnhRZ3gtMkgtSmlUS3gtamhsRUR5ZkNwbEtCUk5BOEkwY1NvMmpSVDlfLTc5WWg0c0xqX1lLR3ZRMV9qSmQ3bnFlWlBUQU16N1pTWGVwZXpjekVUV2JKc3lUbGxPdXNGZXJTLVRMV1UtZ0xEQ0pSM2c5XzB0N2s1RWdJcmlHc3NaaGvSAaIBQVVfeXFMT0lDWjZWV1hWcWs4YXNsWERycW1sM2p4dkFaMERBcm1Jd1BmbjhaeXdyMnlBYzF2Z00yVVNLeHJvLWxSTzlBSGFVYWlNRmxndkczM2FqdjM3YVJ4azlUd2xyU2ItR1ExTDc2WVVmT0pRWWd2eUdvcHRHdnJ2SFdXaDFZVDZ5MEdpLXpycVpXYzRvMW1lZUQzdGQ0cWxha0dmcWln?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "CNBC",
+          "sourceCount": 1,
+          "verification": "single",
           "impact": "emerging"
         }
       ]
@@ -1455,6 +1451,17 @@
       "lab": "Google · Gemini",
       "logoKey": "google",
       "items": [
+        {
+          "h": "Here’s what Samsung’s smart glasses actually look like",
+          "d": "JUL 22 2026",
+          "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "high"
+        },
         {
           "h": "Meta made its own AI detection system. It should have just used Google’s",
           "d": "JUL 22 2026",
@@ -1528,6 +1535,30 @@
       "sourceCount": 1
     },
     {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "JUL 22 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "AMD commits up to $5 billion to Anthropic",
+      "p": "AMD says it's going to invest up to $5 billion in Anthropic, while helping to expand the AI company's computing power, according to an announcement on Wednesday. As part of the new partnership, Anthropic will deploy up to 2 gigawatts of AMD's Instinct MI450 A…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "JUL 22 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differen…",
+      "p": "Anthropic leaped to a $47 billion revenue run rate by May, compared to $9 billion in 2025. It’s the kind of growth that Menlo Ventures’ Matt Murphy says he’s never seen in 25 years of investing, not in the internet wave, not in mobile, not in the first cloud…",
+      "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "GOOGLE",
       "logoKey": "google",
       "date": "JUL 22 2026",
@@ -1573,30 +1604,6 @@
       "p": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
       "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
       "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "JUL 22 2026",
-      "verification": "official",
-      "impact": "notable",
-      "h": "3 Google updates from Galaxy Unpacked 2026",
-      "p": "We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.",
-      "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
-      "sourceName": "Google",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 22 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Passionfroot raises $15M to expand its B2B creator marketplace to the US",
-      "p": "Passionfroot, a German startup building a marketplace connecting B2B creators with brands, has raised $15M in a Series A round led by Insight Partners.",
-      "url": "https://techcrunch.com/2026/07/22/passionfroot-raises-15m-to-expand-its-b2b-creator-marketplace-to-the-us/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1724,11 +1731,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 214,
-      "changePct": 3.2370142945612566,
+      "price": 213.79,
+      "changePct": 3.135703705208636,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 83628181,
+      "volume": 86050689,
       "ohlc": [
         {
           "d": "04-22",
@@ -2169,22 +2176,22 @@
           "o": 205.80499267578125,
           "h": 214.38999938964844,
           "l": 204.9499969482422,
-          "c": 214
+          "c": 213.7899932861328
         }
       ],
-      "relVolume": 0.6118304150346018,
-      "marketCap": 5221600000000
+      "relVolume": 0.6295536759897173,
+      "marketCap": 5216476000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 387.68,
-      "changePct": -2.531742884781584,
+      "price": 387.26,
+      "changePct": -2.637332554211188,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 13934161,
+      "volume": 14258063,
       "ohlc": [
         {
           "d": "04-22",
@@ -2624,23 +2631,23 @@
           "d": "07-22",
           "o": 399.5799865722656,
           "h": 401,
-          "l": 387.1499938964844,
-          "c": 387.67999267578125
+          "l": 387.1199951171875,
+          "c": 387.260009765625
         }
       ],
-      "relVolume": 0.31519332342569156,
-      "marketCap": 2880462400000
+      "relVolume": 0.3225200471404691,
+      "marketCap": 2877341800000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 396.79,
-      "changePct": 2.6623566739771993,
+      "price": 396.5,
+      "changePct": 2.58732212160414,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7167531,
+      "volume": 7567407,
       "ohlc": [
         {
           "d": "04-22",
@@ -3079,24 +3086,24 @@
         {
           "d": "07-22",
           "o": 380.5400085449219,
-          "h": 397.8489990234375,
+          "h": 398.1600036621094,
           "l": 380,
-          "c": 396.7900085449219
+          "c": 396.5
         }
       ],
-      "relVolume": 0.29644141559210996,
-      "marketCap": 1952206800000
+      "relVolume": 0.3129798592348805,
+      "marketCap": 1950780000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 347.88,
-      "changePct": 0.21028690743569617,
+      "price": 347.03,
+      "changePct": -0.03456578404068213,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 12170580,
+      "volume": 12751971,
       "ohlc": [
         {
           "d": "04-22",
@@ -3537,22 +3544,22 @@
           "o": 348.1549987792969,
           "h": 349.94000244140625,
           "l": 346.19000244140625,
-          "c": 347.8800048828125
+          "c": 347.0299987792969
         }
       ],
-      "relVolume": 0.3699930200206238,
-      "marketCap": 4244136000000
+      "relVolume": 0.3876676593478219,
+      "marketCap": 4233765999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 242.93,
-      "changePct": -1.8662938069164996,
+      "price": 242.59,
+      "changePct": -2.0036383165909912,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 14835747,
+      "volume": 15434832,
       "ohlc": [
         {
           "d": "04-22",
@@ -3992,23 +3999,23 @@
           "d": "07-22",
           "o": 248.1300048828125,
           "h": 248.4499969482422,
-          "l": 242.80999755859375,
-          "c": 242.92999267578125
+          "l": 242.55999755859375,
+          "c": 242.58999633789062
         }
       ],
-      "relVolume": 0.2598835654124741,
-      "marketCap": 2599351000000
+      "relVolume": 0.2703779709712324,
+      "marketCap": 2595713000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 627.095,
-      "changePct": -2.5962670537665113,
+      "price": 625.607,
+      "changePct": -2.827311585322325,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 5626962,
+      "volume": 5856830,
       "ohlc": [
         {
           "d": "04-22",
@@ -4448,23 +4455,23 @@
           "d": "07-22",
           "o": 647.7000122070312,
           "h": 648.9979858398438,
-          "l": 627,
-          "c": 627.094970703125
+          "l": 625.0401000976562,
+          "c": 625.6074829101562
         }
       ],
-      "relVolume": 0.28613550466238247,
-      "marketCap": 1580279400000
+      "relVolume": 0.2978244757600605,
+      "marketCap": 1576529640000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 422.655,
-      "changePct": -0.4604193588728167,
+      "price": 421.54,
+      "changePct": -0.7230109777326102,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6126009,
+      "volume": 6278720,
       "ohlc": [
         {
           "d": "04-22",
@@ -4905,22 +4912,22 @@
           "o": 414.9049987792969,
           "h": 424.80999755859375,
           "l": 414.21759033203125,
-          "c": 422.6549987792969
+          "c": 421.5400085449219
         }
       ],
-      "relVolume": 0.39339999589004854,
-      "marketCap": 2193579449999.9998
+      "relVolume": 0.4032067896398398,
+      "marketCap": 2187792600000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 557.32,
-      "changePct": 2.3675941354320615,
+      "price": 555.59,
+      "changePct": 2.0498566077959484,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 15164743,
+      "volume": 15605437,
       "ohlc": [
         {
           "d": "04-22",
@@ -5361,22 +5368,22 @@
           "o": 526.875,
           "h": 558.4199829101562,
           "l": 526.875,
-          "c": 557.3198852539062
+          "c": 555.5900268554688
         }
       ],
-      "relVolume": 0.5330899439745139,
-      "marketCap": 902858400000.0001
+      "relVolume": 0.5485817686476986,
+      "marketCap": 900055800000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 124.09,
-      "changePct": -6.460128967014746,
+      "price": 123.76,
+      "changePct": -6.708880808225805,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 21833928,
+      "volume": 23030176,
       "ohlc": [
         {
           "d": "04-22",
@@ -5816,23 +5823,23 @@
           "d": "07-22",
           "o": 132.22000122070312,
           "h": 132.30999755859375,
-          "l": 124.06500244140625,
-          "c": 124.08999633789062
+          "l": 123.57129669189453,
+          "c": 123.76000213623047
         }
       ],
-      "relVolume": 0.5174383140470367,
-      "marketCap": 297816000000
+      "relVolume": 0.5457879792241931,
+      "marketCap": 297024000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 126.08,
-      "changePct": -0.7634798877635324,
+      "price": 125.5,
+      "changePct": -1.2199945017918417,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 13461703,
+      "volume": 14049294,
       "ohlc": [
         {
           "d": "04-22",
@@ -6273,11 +6280,11 @@
           "o": 126.18000030517578,
           "h": 128.83999633789062,
           "l": 125.25,
-          "c": 126.08000183105469
+          "c": 125.5
         }
       ],
-      "relVolume": 0.33407791518075397,
-      "marketCap": 354284800000
+      "relVolume": 0.34866011003819325,
+      "marketCap": 352655000000
     }
   ],
   "compute": [
@@ -6292,18 +6299,18 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.39/hr",
-      "trend": "↑ 4% vs 8d ago",
+      "rate": "$3.59 – $4.91/hr",
+      "trend": "↑ 11% vs 8d ago",
       "trendClass": "trend-up",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $6.88/hr",
-      "trend": "↓ 13% vs 8d ago",
+      "rate": "$5.89 – $7.13/hr",
+      "trend": "↓ 11% vs 8d ago",
       "trendClass": "trend-down",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6331,7 +6338,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-22T17:45:24.742Z",
+    "updatedAt": "2026-07-22T18:00:34.537Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6346,12 +6353,12 @@
         "storyCoverage": 0.9615384615384616,
         "estimatedRelevantDiscussions": 178,
         "isEstimated": true,
-        "rawCommentHits": 2180,
+        "rawCommentHits": 2181,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 298,
-        "commentCoverage": 0.13761467889908258,
+        "commentCoverage": 0.1375515818431912,
         "limited": false,
-        "points": 2837,
+        "points": 2917,
         "themes": [
           {
             "id": "reasoning",
@@ -6391,7 +6398,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 7
+            "count": 6
           },
           {
             "id": "context",
@@ -6407,8 +6414,8 @@
         "topThreads": [
           {
             "title": "Advertise in ChatGPT",
-            "points": 1030,
-            "comments": 793,
+            "points": 1034,
+            "comments": 794,
             "url": "https://ads.openai.com/",
             "date": "JUL 21 2026"
           },
@@ -6426,18 +6433,18 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1065,
+        "rawStoryHits": 1064,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.28169014084507044,
-        "estimatedRelevantDiscussions": 1058,
+        "storyCoverage": 0.2819548872180451,
+        "estimatedRelevantDiscussions": 1057,
         "isEstimated": true,
-        "rawCommentHits": 6591,
+        "rawCommentHits": 6588,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
-        "commentCoverage": 0.04551661356395084,
+        "commentCoverage": 0.04553734061930783,
         "limited": false,
-        "points": 18342,
+        "points": 18343,
         "themes": [
           {
             "id": "coding",
@@ -6513,17 +6520,17 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 144,
-        "fetchedStoryCount": 144,
+        "fetchedStoryCount": 139,
         "validatedStoryCount": 133,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 133,
-        "isEstimated": false,
-        "rawCommentHits": 1233,
+        "storyCoverage": 0.9652777777777778,
+        "estimatedRelevantDiscussions": 138,
+        "isEstimated": true,
+        "rawCommentHits": 1232,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.24330900243309003,
+        "commentCoverage": 0.2435064935064935,
         "limited": false,
-        "points": 3279,
+        "points": 3280,
         "themes": [
           {
             "id": "coding",
@@ -6579,7 +6586,7 @@
         "topThreads": [
           {
             "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
-            "points": 731,
+            "points": 732,
             "comments": 554,
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
             "date": "JUL 21 2026"
@@ -6604,10 +6611,10 @@
         "storyCoverage": 0.5535055350553506,
         "estimatedRelevantDiscussions": 67,
         "isEstimated": true,
-        "rawCommentHits": 10955,
+        "rawCommentHits": 19940,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 159,
-        "commentCoverage": 0.02738475581926061,
+        "commentCoverage": 0.015045135406218655,
         "limited": false,
         "points": 2412,
         "themes": [
@@ -6624,12 +6631,12 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 20
+            "count": 19
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 15
+            "count": 14
           },
           {
             "id": "writing",
@@ -6755,16 +6762,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 65,
-        "fetchedStoryCount": 65,
+        "rawStoryHits": 69,
+        "fetchedStoryCount": 69,
         "validatedStoryCount": 59,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 59,
         "isEstimated": false,
-        "rawCommentHits": 1061,
+        "rawCommentHits": 1093,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
-        "commentCoverage": 0.2827521206409048,
+        "commentCoverage": 0.2744739249771272,
         "limited": false,
         "points": 918,
         "themes": [
@@ -6837,10 +6844,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 33,
         "isEstimated": false,
-        "rawCommentHits": 4565,
+        "rawCommentHits": 4567,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 237,
-        "commentCoverage": 0.06571741511500548,
+        "commentCoverage": 0.06568863586599519,
         "limited": false,
         "points": 3653,
         "themes": [
