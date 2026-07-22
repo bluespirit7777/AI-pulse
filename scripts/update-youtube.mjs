@@ -28,10 +28,17 @@ const OUT_PATH = path.join(__dirname, '..', 'data', 'youtube-trending.json');
 const FETCH_TIMEOUT_MS = 15000;
 const WINDOW_DAYS = 7;
 const MAX_RESULTS = 5;
-// search.list costs the same 100 quota units regardless of maxResults, so
-// pulling a bigger pool here is free — it just gives filterOutShorts()
-// something left to work with instead of starving the final top-5.
-const SEARCH_POOL_SIZE = 15;
+// search.list costs the same flat 100 quota units regardless of maxResults
+// (and videos.list costs 1 unit regardless of how many of its up-to-50 ids are
+// requested), so pulling a bigger pool here is free — up to YouTube's hard cap
+// of 50 per call. 15 wasn't enough: search ranks this pool by view count
+// within the trailing week, and Shorts' view counts get inflated fast by the
+// swipe-feed algorithm, so the top slice by view count skews heavily toward
+// Shorts for ANY query — confirmed via onStage diagnostics on 2026-07-22,
+// where Gemini AI lost 11/15 and ChatGPT lost 11/13 to the Shorts filter,
+// leaving ChatGPT with only 2 long-form survivors. 50 gives the Shorts filter
+// enough of a starting pool to still fill a real top-5 afterward.
+const SEARCH_POOL_SIZE = 50;
 const TRACKED_KEYS = ['claude', 'gpt', 'gemini']; // the 3 the user asked for — not the full registry
 
 async function fetchWithTimeout(url) {

@@ -269,8 +269,15 @@ extra quota. This is a genuine best-effort heuristic, not a guarantee: a
 landscape video that happens to run under 3 minutes could still be excluded,
 and there's no way to distinguish that case from the public API alone. To
 keep the final top-5 full even after this filter runs, the initial
-`search.list` call pulls a larger pool (15 results) than it shows (5) —
-free, since `search.list`'s 100-unit cost doesn't depend on `maxResults`.
+`search.list` call pulls a larger pool (50 results — YouTube's hard cap on
+`maxResults`) than it shows (5) — free, since `search.list`'s 100-unit cost
+doesn't depend on `maxResults`. A pool of 15 wasn't enough: this pool is
+ranked by view count within the trailing week, and Shorts' view counts get
+inflated fast by the swipe-feed algorithm, so the *entire* top slice by view
+count can skew heavily toward Shorts for any query — confirmed via
+diagnostic logging on 2026-07-22, where Gemini AI lost 11/15 and ChatGPT
+lost 11/13 of their pool to this filter, leaving ChatGPT with only 2
+long-form survivors that week.
 
 **Graceful absence.** If `YOUTUBE_API_KEY` isn't configured, or a given
 run's fetch fails for one model, the card shows an honest "unavailable"
