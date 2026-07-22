@@ -59,7 +59,10 @@ async function fetchModelVideos(query, apiKey, now) {
     statsJson = await statsRes.json();
   }
 
-  return buildTopVideos(searchJson, statsJson, { maxResults: MAX_RESULTS });
+  return buildTopVideos(searchJson, statsJson, {
+    maxResults: MAX_RESULTS,
+    onStage: (label, count) => console.log(`[youtube]   ${query} — ${label}: ${count}`),
+  });
 }
 
 async function main() {

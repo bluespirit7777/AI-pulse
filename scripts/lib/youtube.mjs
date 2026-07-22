@@ -172,12 +172,22 @@ export function daysAgoISO(days, now = Date.now()) {
 // request a bigger pool than maxResults from search.list (free — search.list
 // costs the same 100 units regardless of maxResults) so there's still enough
 // left after filtering to fill out a real top-5.
-export function buildTopVideos(searchJson, statsJson, { maxResults = 5 } = {}) {
+// `onStage(label, count)` is an optional diagnostic hook, called after each
+// filter stage — the caller can log per-stage survivor counts to see WHICH
+// filter (if any) is responsible when a query legitimately returns zero
+// results, instead of guessing. No-op by default; ignored entirely by tests.
+export function buildTopVideos(searchJson, statsJson, { maxResults = 5, onStage } = {}) {
+  const report = onStage || (() => {});
   const parsed = parseSearchResponse(searchJson);
-  const relevant = filterEnglish(filterAiRelevant(parsed));
+  report('raw search results', parsed.length);
+  const afterRelevance = filterAiRelevant(parsed);
+  report('after AI-relevance filter', afterRelevance.length);
+  const relevant = filterEnglish(afterRelevance);
+  report('after English filter', relevant.length);
   const detailsMap = parseVideosDetailsResponse(statsJson);
   const withDetails = mergeVideoDetails(relevant, detailsMap);
   const longForm = filterOutShorts(withDetails);
+  report('after Shorts filter', longForm.length);
   return longForm
     .slice()
     .sort((a, b) => (b.viewCount ?? -1) - (a.viewCount ?? -1))

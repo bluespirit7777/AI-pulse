@@ -186,6 +186,34 @@ test('buildTopVideos filters relevance + Shorts, attaches details, re-sorts by r
   assert.equal(out[1].videoId, 'a');
 });
 
+test('buildTopVideos reports per-stage survivor counts via onStage, in pipeline order', () => {
+  const searchJson = {
+    items: [
+      { id: { videoId: 'a' }, snippet: { title: 'ChatGPT tips', description: '', channelTitle: 'C1', publishedAt: '2026-07-10T00:00:00Z' } },
+      { id: { videoId: 'z' }, snippet: { title: 'Gemini Horoscope', description: 'zodiac forecast', channelTitle: 'C3', publishedAt: '2026-07-11T00:00:00Z' } },
+      { id: { videoId: 's' }, snippet: { title: 'ChatGPT in 30 seconds', description: '', channelTitle: 'C4', publishedAt: '2026-07-11T00:00:00Z' } },
+    ],
+  };
+  const statsJson = { items: [
+    { id: 'a', statistics: { viewCount: '1000' }, contentDetails: { duration: 'PT5M' } },
+    { id: 's', statistics: { viewCount: '999999' }, contentDetails: { duration: 'PT30S' } },
+  ] };
+  const stages = [];
+  buildTopVideos(searchJson, statsJson, { maxResults: 5, onStage: (label, count) => stages.push([label, count]) });
+  assert.deepEqual(stages, [
+    ['raw search results', 3],
+    ['after AI-relevance filter', 2], // zodiac entry dropped
+    ['after English filter', 2],
+    ['after Shorts filter', 1], // the Short dropped
+  ]);
+});
+
+test('buildTopVideos works with no onStage passed (default no-op, matches every other call site)', () => {
+  const searchJson = { items: [{ id: { videoId: 'a' }, snippet: { title: 'ChatGPT tips', description: '', channelTitle: 'C1', publishedAt: '2026-07-10T00:00:00Z' } }] };
+  const statsJson = { items: [{ id: 'a', statistics: { viewCount: '1000' }, contentDetails: { duration: 'PT5M' } }] };
+  assert.doesNotThrow(() => buildTopVideos(searchJson, statsJson, { maxResults: 5 }));
+});
+
 test('buildTopVideos caps results to maxResults', () => {
   const searchJson = { items: Array.from({ length: 8 }, (_, i) => ({
     id: { videoId: `v${i}` }, snippet: { title: `ChatGPT video ${i}`, description: '', channelTitle: 'C', publishedAt: '2026-07-10T00:00:00Z' },
