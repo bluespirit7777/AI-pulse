@@ -32,19 +32,22 @@ export const LEADERBOARD_OVERALL_DISCLAIMER = 'Editorial synthesis—not a unive
 
 // "Overall balance" — every model scored on Artificial Analysis' Intelligence
 // Index (AAII), a real 0–100 composite that weights agents, coding, general
-// capability and scientific reasoning at 25% each. Order is grounded in the
-// public Jul 2026 leaderboard: Claude Fable 5 leads (~60), GPT-5.6 Sol ~1pt
-// behind (~59), then Opus 4.8 and Gemini 3.1 Pro, with Qwen 3.7 Max the top
-// open/Chinese model at #5 and Grok 4.5 mid-pack. The blend itself is still an
-// editorial framing (which index, which weighting), which is why this view
-// carries the disclaimer — but no model is left unscored.
+// capability and scientific reasoning. Order is grounded in the public Jul
+// 2026 leaderboard (artificialanalysis.ai/models pages, checked Jul 22 2026):
+// Claude Fable 5 leads (60), GPT-5.6 Sol ~1pt behind (59), then Opus 4.8 (56).
+// Grok 4.5 jumped to 54 (a 16pt gain over Grok 4.3) and now sits ahead of both
+// Gemini 3.1 Pro and Qwen 3.7 Max, which have both settled at 46 as newer
+// entrants raised the bar — a real ranking flip from the previous snapshot,
+// where Gemini and Qwen led Grok. The blend itself is still an editorial
+// framing (which index, which weighting), which is why this view carries the
+// disclaimer — but no model is left unscored.
 export const leaderboardOverall = [
   { rank: 1, model: 'Claude Fable 5', org: 'Anthropic', score: 60, scoreUnit: ' AAII', stat: 'Leads the intelligence index', note: `Tops Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) — a 0–100 blend of agents, coding, general capability and science` },
   { rank: 2, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 59, scoreUnit: ' AAII', stat: 'Second, ~1pt back', note: `Within ~1pt of the lead on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot); broadest mainstream reach and distribution` },
   { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', score: 56, scoreUnit: ' AAII', stat: 'Frontier tier', note: `High on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot); leads codebase-comprehension sub-scores` },
-  { rank: 4, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 55, scoreUnit: ' AAII', stat: 'Frontier tier', note: `Just behind the leaders on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot); extended thinking on by default, huge reach via Search/Workspace/Android` },
-  { rank: 5, model: 'Qwen 3.7 Max', org: 'Alibaba', score: 52, scoreUnit: ' AAII', stat: 'Top open/Chinese model', note: `Highest-ranked open-weight / Chinese model on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot)` },
-  { rank: 6, model: 'Grok 4.5', org: 'xAI', score: 50, scoreUnit: ' AAII', stat: '2M-token context', note: `Mid-pack on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot); reception coloured by X-platform controversy` },
+  { rank: 4, model: 'Grok 4.5', org: 'xAI', score: 54, scoreUnit: ' AAII', stat: '2M-token context', note: `Jumped to #4 on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot), up 16pts from Grok 4.3; reception still coloured by X-platform controversy` },
+  { rank: 5, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 46, scoreUnit: ' AAII', stat: 'Frontier tier', note: `Now mid-pack on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) as newer entrants raised the bar; extended thinking on by default, huge reach via Search/Workspace/Android` },
+  { rank: 6, model: 'Qwen 3.7 Max', org: 'Alibaba', score: 46, scoreUnit: ' AAII', stat: 'Top open/Chinese model', note: `Ties Gemini 3.1 Pro on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) but ranks just behind it on the site's own ordering; still the top open-weight / Chinese model` },
 ];
 
 // "Reasoning" — Scale Labs' Humanity's Last Exam (HLE %). The top four carry
