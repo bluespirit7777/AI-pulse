@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T00:15:24.753Z",
+  "generatedAt": "2026-07-22T00:30:31.735Z",
   "historyDepthDays": 12,
   "ranges": {
     "24H": {
@@ -7,7 +7,7 @@
         "chatgpt": 2,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 7,
+        "gpt": 8,
         "claude": 8,
         "gemini": 8,
         "grok": 0,
@@ -30,12 +30,12 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": -3,
-        "claude": 1,
+        "claude": 0,
         "gemini": 5,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
-        "qwen": -2,
+        "qwen": -3,
         "mistral": 0,
         "azure": 0,
         "aws": 0,
@@ -54,23 +54,23 @@
         "compute": 2,
         "product": 8,
         "orggov": 2,
-        "opensource": 3
+        "opensource": 4
       },
       "topEntities": [
         {
+          "id": "gpt",
+          "count": 8,
+          "delta": -3
+        },
+        {
           "id": "claude",
           "count": 8,
-          "delta": 1
+          "delta": 0
         },
         {
           "id": "gemini",
           "count": 8,
           "delta": 5
-        },
-        {
-          "id": "gpt",
-          "count": 7,
-          "delta": -3
         },
         {
           "id": "chatgpt",
@@ -83,7 +83,7 @@
           "delta": 2
         }
       ],
-      "eventCount": 50,
+      "eventCount": 51,
       "previousWindowComplete": true
     },
     "7D": {
@@ -92,12 +92,12 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": 118,
-        "claude": 64,
+        "claude": 65,
         "gemini": 71,
         "grok": 2,
         "llama": 0,
         "deepseek": 0,
-        "qwen": 7,
+        "qwen": 8,
         "mistral": 0,
         "azure": 0,
         "aws": 0,
@@ -111,11 +111,11 @@
       },
       "entityDelta": {},
       "categoryCounts": {
-        "capital": 53,
         "adoption": 26,
-        "general": 266,
-        "product": 50,
-        "opensource": 13,
+        "capital": 51,
+        "general": 267,
+        "product": 51,
+        "opensource": 14,
         "policy": 29,
         "orggov": 11,
         "analysis": 35,
@@ -136,7 +136,7 @@
         },
         {
           "id": "claude",
-          "count": 64,
+          "count": 65,
           "delta": null
         },
         {
@@ -146,7 +146,7 @@
         },
         {
           "id": "qwen",
-          "count": 7,
+          "count": 8,
           "delta": null
         },
         {
@@ -160,7 +160,7 @@
           "delta": null
         }
       ],
-      "eventCount": 502,
+      "eventCount": 503,
       "previousWindowComplete": false
     },
     "30D": {
@@ -168,13 +168,13 @@
         "chatgpt": 160,
         "copilot": 13,
         "perplexity": 0,
-        "gpt": 482,
-        "claude": 568,
+        "gpt": 484,
+        "claude": 569,
         "gemini": 249,
         "grok": 14,
         "llama": 3,
         "deepseek": 7,
-        "qwen": 54,
+        "qwen": 55,
         "mistral": 0,
         "azure": 0,
         "aws": 0,
@@ -190,25 +190,25 @@
       "categoryCounts": {
         "orggov": 50,
         "policy": 104,
-        "product": 256,
+        "product": 257,
         "capital": 98,
         "research": 80,
-        "general": 1080,
+        "general": 1081,
         "analysis": 173,
         "adoption": 106,
         "compute": 32,
-        "opensource": 34,
+        "opensource": 35,
         "market": 30
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 568,
+          "count": 569,
           "delta": null
         },
         {
           "id": "gpt",
-          "count": 482,
+          "count": 484,
           "delta": null
         },
         {
@@ -223,7 +223,7 @@
         },
         {
           "id": "qwen",
-          "count": 54,
+          "count": 55,
           "delta": null
         },
         {
@@ -242,7 +242,7 @@
           "delta": null
         }
       ],
-      "eventCount": 2043,
+      "eventCount": 2046,
       "previousWindowComplete": false
     }
   },
@@ -442,12 +442,12 @@
     {
       "date": "2026-07-22",
       "counts": {
-        "product": 33,
+        "product": 34,
         "compute": 6,
-        "opensource": 4,
+        "opensource": 5,
         "capital": 7,
         "adoption": 18,
-        "general": 130,
+        "general": 131,
         "orggov": 4,
         "policy": 10,
         "research": 7,

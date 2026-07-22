@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-22T00:15:24.753Z",
+  "updatedAt": "2026-07-22T00:30:31.735Z",
   "build": {
-    "sha": "cf2db3774d98190ede77d535e457721fdec789f2",
-    "shortSha": "cf2db37",
+    "sha": "a681dbcf3b9fa86878f34520d0d7e7c204d5f009",
+    "shortSha": "a681dbc",
     "ref": "main",
-    "builtAt": "2026-07-22T00:15:37.160Z"
+    "builtAt": "2026-07-22T00:30:45.304Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,52 +12,47 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 12,
-    "estimatedDatasets": 3,
-    "buildSha": "cf2db37",
-    "lastSuccessfulUpdate": "2026-07-22T00:15:24.753Z"
+    "estimatedDatasets": 4,
+    "buildSha": "a681dbc",
+    "lastSuccessfulUpdate": "2026-07-22T00:30:31.735Z"
   },
   "ticker": [
-    "AMERICA NEEDS TO STOP GETTING SHOCKED BY CHINESE AI",
+    "OPENAI MODELS ESCAPED CONTAINMENT AND HACKED HUGGING FACE",
     "NVIDIA WANTS TO OWN EVERY CHIP INSIDE AI DATA CENTERS",
     "INTRODUCING THE CHATGPT FOR SMALL BUSINESS PROGRAM",
+    "CHINA DELIVERS A ONE-TWO PUNCH TO AMERICA’S AI DOMINANCE",
     "GOOGLE LAUNCHES A CHEAPER ALTERNATIVE TO LARGE AI SECURITY MODELS LIKE MYTHOS",
-    "OPENAI AND HUGGING FACE PARTNER TO ADDRESS SECURITY INCIDENT DURING MODEL EVALUATION",
     "GOOGLE IS WORKING ON A NEW AI CHIP DESIGNED TO MAKE GEMINI MORE EFFICIENT",
     "OPENAI IS SCARED OF OPEN-WEIGHT MODELS. SHOULD THE US BE?",
+    "OPENAI AND HUGGING FACE PARTNER TO ADDRESS SECURITY INCIDENT DURING MODEL EVALUATION",
     "GOOGLE RELEASES THREE NEW GEMINI MODELS — BUT NO 3.5 PRO",
-    "AGENTIC ORCHESTRATION: ENTERPRISE AI ORGANIZATIONS HAVE A DEPLOYMENT PROBLEM, NOT A PLATFORM PROBLEM — AND MO…",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN"
+    "AGENTIC ORCHESTRATION: ENTERPRISE AI ORGANIZATIONS HAVE A DEPLOYMENT PROBLEM, NOT A PLATFORM PROBLEM — AND MO…"
   ],
   "signals": [
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-      "clusterId": "vll3fo",
-      "title": "America needs to stop getting shocked by Chinese AI",
-      "desc": "Last week, two Chinese AI companies unveiled models they say can credibly compete with the best systems from OpenAI and Anthropic. The response was swift and predictable. Markets wobbled, commentators declared Silicon Valley shooketh, and policymakers reached for the familiar language of arms races and wake-up calls. In one headline, The Associated Press said a […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-      "dateISO": "2026-07-21T11:08:56.000Z",
+      "id": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "clusterId": "1kpozot",
+      "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
+      "desc": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the open internet to pull off the attack.",
+      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "dateISO": "2026-07-21T22:50:01.000Z",
       "date": "JUL 21 2026",
-      "category": "product",
-      "catConfidence": 0.5,
+      "category": "opensource",
+      "catConfidence": 0.67,
       "family": "product",
       "significance": 75,
       "impact": "high",
-      "verification": "corroborated",
-      "sourceCount": 2,
+      "verification": "single",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
         }
       ],
-      "sourceName": "The Verge",
+      "sourceName": "Wired",
       "entityIds": [
-        "gpt",
-        "claude"
+        "gpt"
       ]
     },
     {
@@ -114,6 +109,42 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "clusterId": "1l2awct",
+      "title": "China delivers a one-two punch to America’s AI dominance",
+      "desc": "China's leading AI companies are ramping up the pressure on Silicon Valley, as Moonshot and Alibaba unveiled models they claim can go toe-to-toe with the best from OpenAI and Anthropic at a fraction of the cost. The rapid-fire releases suggest America's lead at the AI frontier is increasingly tight, just as the technology is becoming […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "dateISO": "2026-07-20T10:16:33.000Z",
+      "date": "JUL 20 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 69,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "claude",
+        "qwen"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model",
       "clusterId": "2ziwvm",
       "title": "Google launches a cheaper alternative to large AI security models like Mythos",
@@ -124,8 +155,8 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 70,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -138,44 +169,6 @@
       "entityIds": [
         "claude",
         "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "clusterId": "1vfj8jd",
-      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-      "desc": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "dateISO": "2026-07-21T07:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "opensource",
-      "catConfidence": 0.44,
-      "family": "product",
-      "significance": 69,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968988/openai-hugging-face-hack-ai"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -226,6 +219,36 @@
         }
       ],
       "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "clusterId": "1vfj8jd",
+      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+      "desc": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "dateISO": "2026-07-21T07:00:00.000Z",
+      "date": "JUL 21 2026",
+      "category": "opensource",
+      "catConfidence": 0.44,
+      "family": "product",
+      "significance": 59,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
+        }
+      ],
+      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -509,30 +532,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
-      "clusterId": "1ac4gap",
-      "title": "Neill Blomkamp’s new zombie AI ‘film’ is just slop warmed over",
-      "desc": "On Monday, District 9 and Gran Turismo director Neill Blomkamp unveiled his latest project: a 13-minute sci-fi short titled Nightborne that's loosely based on Peter Watts' 2014 novel Echopraxia. The short comes from Blomkamp's new AI startup / production company, Barley Studios, and features characters whose voices and faces are modeled after human actors. But […]",
-      "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
-      "dateISO": "2026-07-21T22:06:43.000Z",
-      "date": "JUL 21 2026",
-      "category": "product",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
       "id": "https://www.wired.com/story/big-interview-stanford-students-booing-sundar-pichai/",
       "clusterId": "1pve3e",
       "title": "‘It’s a Modern-Day Draft’: Why Stanford Students Walked Out on Sundar Pichai’s Commencement Speech",
@@ -740,32 +739,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1STEpkV0VLajlBMFFERkROS2RUVTBjUXJseDctQWhpdFZ2dXRyd0paRTRneTRKMU5XdzBaSjVZeUpiOGQxM3liVzVDNGNUT1NRc1ViMjJqX3ZWYTJBejNPUUZNZXhZa0dkaGk0?oc=5",
-      "clusterId": "6wpgte",
-      "title": "Apply for Anthropic’s AI for Science rare disease research grants",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1STEpkV0VLajlBMFFERkROS2RUVTBjUXJseDctQWhpdFZ2dXRyd0paRTRneTRKMU5XdzBaSjVZeUpiOGQxM3liVzVDNGNUT1NRc1ViMjJqX3ZWYTJBejNPUUZNZXhZa0dkaGk0?oc=5",
-      "dateISO": "2026-07-20T17:11:25.000Z",
-      "date": "JUL 20 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1STEpkV0VLajlBMFFERkROS2RUVTBjUXJseDctQWhpdFZ2dXRyd0paRTRneTRKMU5XdzBaSjVZeUpiOGQxM3liVzVDNGNUT1NRc1ViMjJqX3ZWYTJBejNPUUZNZXhZa0dkaGk0?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/openai-frontier-governance-framework",
       "clusterId": "6emnhr",
       "title": "OpenAI’s Frontier Governance Framework",
@@ -814,6 +787,32 @@
       ],
       "sourceName": "Wired",
       "entityIds": []
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1STEpkV0VLajlBMFFERkROS2RUVTBjUXJseDctQWhpdFZ2dXRyd0paRTRneTRKMU5XdzBaSjVZeUpiOGQxM3liVzVDNGNUT1NRc1ViMjJqX3ZWYTJBejNPUUZNZXhZa0dkaGk0?oc=5",
+      "clusterId": "6wpgte",
+      "title": "Apply for Anthropic’s AI for Science rare disease research grants",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1STEpkV0VLajlBMFFERkROS2RUVTBjUXJseDctQWhpdFZ2dXRyd0paRTRneTRKMU5XdzBaSjVZeUpiOGQxM3liVzVDNGNUT1NRc1ViMjJqX3ZWYTJBejNPUUZNZXhZa0dkaGk0?oc=5",
+      "dateISO": "2026-07-20T17:11:25.000Z",
+      "date": "JUL 20 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1STEpkV0VLajlBMFFERkROS2RUVTBjUXJseDctQWhpdFZ2dXRyd0paRTRneTRKMU5XdzBaSjVZeUpiOGQxM3liVzVDNGNUT1NRc1ViMjJqX3ZWYTJBejNPUUZNZXhZa0dkaGk0?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
     },
     {
       "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5",
@@ -1213,31 +1212,26 @@
   "waves": [
     {
       "family": "product",
-      "category": "product",
-      "title": "America needs to stop getting shocked by Chinese AI",
-      "summary": "Last week, two Chinese AI companies unveiled models they say can credibly compete with the best systems from OpenAI and Anthropic. The response was swift and predictable. Markets…",
+      "category": "opensource",
+      "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
+      "summary": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the open internet to pull off the attack.",
       "significance": 75,
       "impact": "high",
-      "verification": "corroborated",
+      "verification": "single",
       "date": "JUL 21 2026",
-      "dateISO": "2026-07-21T11:08:56.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
-      "sourceCount": 2,
+      "dateISO": "2026-07-21T22:50:01.000Z",
+      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
         }
       ],
       "entityIds": [
-        "gpt",
-        "claude"
+        "gpt"
       ],
-      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, open weights let anyone run and build on the model, widening who can compete."
     },
     {
       "family": "market",
@@ -1314,13 +1308,13 @@
     "chatgpt": 19,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 71,
+    "gpt": 72,
     "claude": 72,
     "gemini": 33,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
-    "qwen": 4,
+    "qwen": 5,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
@@ -1346,18 +1340,18 @@
           "sourceName": "The Verge",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "high"
+          "impact": "notable"
         },
         {
-          "h": "America needs to stop getting shocked by Chinese AI",
-          "d": "JUL 21 2026",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
+          "h": "China delivers a one-two punch to America’s AI dominance",
+          "d": "JUL 20 2026",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "The Verge",
-          "sourceCount": 2,
+          "sourceCount": 3,
           "verification": "corroborated",
-          "impact": "high"
+          "impact": "notable"
         },
         {
           "h": "Introducing a way to reflect on how you use Claude",
@@ -1513,18 +1507,6 @@
       "logoKey": "other",
       "date": "JUL 21 2026",
       "verification": "single",
-      "impact": "notable",
-      "h": "Neill Blomkamp’s new zombie AI ‘film’ is just slop warmed over",
-      "p": "On Monday, District 9 and Gran Turismo director Neill Blomkamp unveiled his latest project: a 13-minute sci-fi short titled Nightborne that's loosely based on Peter Watts' 2014 novel Echopraxia. The short comes from Blomkamp's new AI startup / production comp…",
-      "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 21 2026",
-      "verification": "single",
       "impact": "emerging",
       "h": "Jack Dorsey is taking on Slack with Buzz, a group chat platform for teams and t…",
       "p": "Buzz is a group chat platform for the workplace that puts humans and their AI agents in the same conversation.",
@@ -1591,9 +1573,33 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYTZ6VGQyajZtTWlFeVhiZkpmTnFLSG5jbU1Gb2llZndJZjByTC01SjVLS1R0Z1FTSTRmeDM4VUJ0X1VIby10bVBNU2QtRHpoZFE5MFlPMG43aURMUjNvMEN4WkZsUXBZdFRlci12MTlqbkRJX0VtcW9paUFuc3N1YTR5bXlIUldYcE9QWmR2TkFyTkV3aFFUQXZXMUxJYUptQmwxdEpmU2NtdDBELWsxTnhR?oc=5",
       "sourceName": "AP News",
       "sourceCount": 1
+    },
+    {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "JUL 14 2026",
+      "verification": "corroborated",
+      "impact": "emerging",
+      "h": "Lawsuit claims Meta's layoff decisions were made by AI, not humans",
+      "p": "Meta denies using AI to terminate workers with disabilities and medical problems.",
+      "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-claims-metas-layoff-decisions-were-made-by-ai-not-humans/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 6
     }
   ],
   "feed": [
+    {
+      "name": "OpenAI Models Escaped Containment and Hacked Hugging Face",
+      "org": "Wired",
+      "date": "JUL 21 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the ope…",
+      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "sourceName": "Wired",
+      "verification": "single",
+      "impact": "high"
+    },
     {
       "name": "OpenAI and Hugging Face partner to address security inciden…",
       "org": "OpenAI",
@@ -6195,18 +6201,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.19/hr",
-      "trend": "→ 2% vs 8d ago",
+      "rate": "$1.83 – $3.19/hr",
+      "trend": "→ 1% vs 8d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.39/hr",
-      "trend": "↓ 5% vs 8d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.39/hr",
+      "trend": "↑ 4% vs 8d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6242,7 +6248,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-22T00:15:24.753Z",
+    "updatedAt": "2026-07-22T00:30:31.735Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6252,17 +6258,17 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 306,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 229,
         "validatedStoryCount": 167,
-        "storyCoverage": 0.9803921568627451,
-        "estimatedRelevantDiscussions": 170,
+        "storyCoverage": 0.7483660130718954,
+        "estimatedRelevantDiscussions": 223,
         "isEstimated": true,
-        "rawCommentHits": 2187,
+        "rawCommentHits": 2186,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.13717421124828533,
+        "commentCoverage": 0.1372369624885636,
         "limited": false,
-        "points": 1704,
+        "points": 1708,
         "themes": [
           {
             "id": "reasoning",
@@ -6272,7 +6278,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 32
+            "count": 33
           },
           {
             "id": "writing",
@@ -6282,12 +6288,12 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 20
+            "count": 21
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 14
+            "count": 13
           },
           {
             "id": "speed",
@@ -6325,8 +6331,8 @@
           },
           {
             "title": "Advertise in ChatGPT",
-            "points": 256,
-            "comments": 258,
+            "points": 260,
+            "comments": 263,
             "url": "https://ads.openai.com/",
             "date": "JUL 21 2026"
           }
@@ -6337,23 +6343,23 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1059,
+        "rawStoryHits": 1058,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.28328611898017,
-        "estimatedRelevantDiscussions": 1052,
+        "storyCoverage": 0.2835538752362949,
+        "estimatedRelevantDiscussions": 1051,
         "isEstimated": true,
-        "rawCommentHits": 6649,
+        "rawCommentHits": 6647,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 297,
-        "commentCoverage": 0.04511956685215822,
+        "commentCoverage": 0.045133142771174965,
         "limited": false,
-        "points": 18045,
+        "points": 18059,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 134
+            "count": 136
           },
           {
             "id": "reasoning",
@@ -6368,7 +6374,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 24
+            "count": 25
           },
           {
             "id": "speed",
@@ -6378,7 +6384,7 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 7
+            "count": 6
           },
           {
             "id": "context",
@@ -6424,32 +6430,32 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 144,
-        "fetchedStoryCount": 144,
+        "fetchedStoryCount": 140,
         "validatedStoryCount": 133,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 133,
-        "isEstimated": false,
+        "storyCoverage": 0.9722222222222222,
+        "estimatedRelevantDiscussions": 137,
+        "isEstimated": true,
         "rawCommentHits": 1212,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
         "commentCoverage": 0.24752475247524752,
         "limited": false,
-        "points": 2859,
+        "points": 2869,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 48
+            "count": 49
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 45
+            "count": 44
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 31
+            "count": 32
           },
           {
             "id": "multimodal",
@@ -6490,8 +6496,8 @@
         "topThreads": [
           {
             "title": "Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
-            "points": 589,
-            "comments": 467,
+            "points": 592,
+            "comments": 472,
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
             "date": "JUL 21 2026"
           },
@@ -6585,8 +6591,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 79,
-        "fetchedStoryCount": 79,
+        "rawStoryHits": 80,
+        "fetchedStoryCount": 80,
         "validatedStoryCount": 30,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
@@ -6672,17 +6678,17 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 59,
         "isEstimated": false,
-        "rawCommentHits": 1065,
+        "rawCommentHits": 1114,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 290,
-        "commentCoverage": 0.28169014084507044,
+        "commentCoverage": 0.26929982046678635,
         "limited": false,
         "points": 922,
         "themes": [
           {
             "id": "price",
             "label": "Price",
-            "count": 73
+            "count": 74
           },
           {
             "id": "coding",
@@ -6712,7 +6718,7 @@
           {
             "id": "context",
             "label": "Context limits",
-            "count": 5
+            "count": 4
           },
           {
             "id": "reliability",
@@ -6748,10 +6754,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 32,
         "isEstimated": false,
-        "rawCommentHits": 4535,
+        "rawCommentHits": 4532,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 235,
-        "commentCoverage": 0.06615214994487321,
+        "commentCoverage": 0.06619593998234775,
         "limited": false,
         "points": 3624,
         "themes": [
@@ -6862,17 +6868,6 @@
       {
         "modelId": "gpt",
         "themes": [
-          "price"
-        ],
-        "excerpt": "…ot-bard-of...https://www.wired.com/story/google-openai-gemini-chatgpt-art...https://www.popsci.com/technology/google-ai-in-paris/I wish I could say this only happened…",
-        "source": "Hacker News",
-        "author": "spwa4",
-        "publishedAt": "2026-07-20T14:56:42.000Z",
-        "url": "https://news.ycombinator.com/item?id=48979756"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
           "writing",
           "multimodal"
         ],
@@ -6881,6 +6876,17 @@
         "author": "rbuccigrossi",
         "publishedAt": "2026-07-20T03:17:20.000Z",
         "url": "https://news.ycombinator.com/item?id=48973993"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…ot-bard-of...https://www.wired.com/story/google-openai-gemini-chatgpt-art...https://www.popsci.com/technology/google-ai-in-paris/I wish I could say this only happened…",
+        "source": "Hacker News",
+        "author": "spwa4",
+        "publishedAt": "2026-07-20T14:56:42.000Z",
+        "url": "https://news.ycombinator.com/item?id=48979756"
       },
       {
         "modelId": "gpt",
@@ -7011,17 +7017,6 @@
       {
         "modelId": "gemini",
         "themes": [
-          "price"
-        ],
-        "excerpt": "…the Kimi K3 release, which extremely likely cancelled the Gemini 4 pro rollout (probably because Kimi K3 outperforms not just Gemini, but Gemini 4 pro as well. So in case…",
-        "source": "Hacker News",
-        "author": "spwa4",
-        "publishedAt": "2026-07-21T08:11:44.000Z",
-        "url": "https://news.ycombinator.com/item?id=48989499"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
           "coding",
           "speed"
         ],
@@ -7030,6 +7025,17 @@
         "author": "spwa4",
         "publishedAt": "2026-07-21T16:03:37.000Z",
         "url": "https://news.ycombinator.com/item?id=48994143"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…the Kimi K3 release, which extremely likely cancelled the Gemini 4 pro rollout (probably because Kimi K3 outperforms not just Gemini, but Gemini 4 pro as well. So in case…",
+        "source": "Hacker News",
+        "author": "spwa4",
+        "publishedAt": "2026-07-21T08:11:44.000Z",
+        "url": "https://news.ycombinator.com/item?id=48989499"
       },
       {
         "modelId": "grok",
