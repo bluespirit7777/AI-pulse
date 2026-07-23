@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-23T17:15:25.599Z",
+  "updatedAt": "2026-07-23T17:30:31.340Z",
   "build": {
-    "sha": "5aa06367cbfd6cdce79dade3250f6e795d0f2db6",
-    "shortSha": "5aa0636",
+    "sha": "cac6771dcb766723e8546b6f4dfe27f79668b2ef",
+    "shortSha": "cac6771",
     "ref": "main",
-    "builtAt": "2026-07-23T17:15:39.626Z"
+    "builtAt": "2026-07-23T17:30:44.683Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 13.7,
-    "estimatedDatasets": 4,
-    "buildSha": "5aa0636",
-    "lastSuccessfulUpdate": "2026-07-23T17:15:25.599Z"
+    "estimatedDatasets": 3,
+    "buildSha": "cac6771",
+    "lastSuccessfulUpdate": "2026-07-23T17:30:31.340Z"
   },
   "ticker": [
     "OPENAI MAKES CHATGPT HEALTH AVAILABLE TO ALL U.S. USERS",
     "APPLE’S OPENAI LAWSUIT IS ABOUT WHO GETS TO DEFINE THE POST-SMARTPHONE ERA",
-    "WORK WITH DOCS, SHEETS, AND SLIDES IN CHATGPT",
     "GOOGLE JUST HAD ITS FIRST NEGATIVE CASH FLOW QUARTER DUE TO MASSIVE AI SPENDING",
+    "WORK WITH DOCS, SHEETS, AND SLIDES IN CHATGPT",
     "TREASURY THREATENS SANCTIONS AFTER WHITE HOUSE CLAIMS MOONSHOT DISTILLED ANTHROPIC’S FABLE",
     "CHINA’S OPEN AI MODELS ARE CHALLENGING SILICON VALLEY’S PLAYBOOK",
     "OPENAI’S AI SPENDING SPREE HAS BALLOONED TO $750B",
-    "BUILDING AI INFRASTRUCTURE WITH THE EFFINGHAM COUNTY COMMUNITY",
     "AMD COMMITS UP TO $5 BILLION TO ANTHROPIC",
-    "MENLO VENTURES’ MATT MURPHY EXPLAINS WHAT AI STARTUPS FOUNDERS MUST DO DIFFERENTLY"
+    "MENLO VENTURES’ MATT MURPHY EXPLAINS WHAT AI STARTUPS FOUNDERS MUST DO DIFFERENTLY",
+    "BUILDING AI INFRASTRUCTURE WITH THE EFFINGHAM COUNTY COMMUNITY"
   ],
   "signals": [
     {
@@ -40,11 +40,15 @@
       "category": "adoption",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 81,
+      "significance": 88,
       "impact": "high",
       "verification": "corroborated",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=lR58Dge8jE8"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/"
@@ -87,32 +91,6 @@
       ]
     },
     {
-      "id": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
-      "clusterId": "1wri8ul",
-      "title": "Work with docs, sheets, and slides in ChatGPT",
-      "desc": "See how you can use ChatGPT to bring context together from your apps and files, make focused edits, analyze data, and use templates to create polished documents, spreadsheets, and presentations for you to review and share. Learn more: https://learn.chatgpt.com/ Chapters: 00:00 Documents, spreadsheets, and slides 00:10 Updating a launch plan 00:32 Analyzing video performance 00:44 Creating a presen",
-      "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
-      "dateISO": "2026-07-23T14:17:31.000Z",
-      "date": "JUL 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 75,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending/",
       "clusterId": "18pqz3w",
       "title": "Google just had its first negative cash flow quarter due to massive AI spending",
@@ -136,6 +114,32 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
+      "clusterId": "1wri8ul",
+      "title": "Work with docs, sheets, and slides in ChatGPT",
+      "desc": "See how you can use ChatGPT to bring context together from your apps and files, make focused edits, analyze data, and use templates to create polished documents, spreadsheets, and presentations for you to review and share. Learn more: https://learn.chatgpt.com/ Chapters: 00:00 Documents, spreadsheets, and slides 00:10 Updating a launch plan 00:32 Analyzing video performance 00:44 Creating a presen",
+      "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
+      "dateISO": "2026-07-23T14:17:31.000Z",
+      "date": "JUL 23 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 74,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt"
       ]
     },
     {
@@ -218,32 +222,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "clusterId": "1msd1dg",
-      "title": "Building AI infrastructure with the Effingham County community",
-      "desc": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
-      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "dateISO": "2026-07-22T13:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 64,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
       "clusterId": "1bemdfu",
       "title": "AMD commits up to $5 billion to Anthropic",
@@ -297,29 +275,29 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
-      "clusterId": "1j3fu5a",
-      "title": "Here’s what Samsung’s smart glasses actually look like",
-      "desc": "Samsung has given us our first chance to check out its upcoming smart glasses in person, revealing two new designs and the first specs in the process, including an impressive 9-hour battery life. The glasses, developed in collaboration with Google and the eyewear brands Gentle Monster and Warby Parker, are due to launch this fall. […]",
-      "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
-      "dateISO": "2026-07-22T16:35:34.000Z",
+      "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+      "clusterId": "1msd1dg",
+      "title": "Building AI infrastructure with the Effingham County community",
+      "desc": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
+      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
+      "dateISO": "2026-07-22T13:00:00.000Z",
       "date": "JUL 22 2026",
-      "category": "product",
+      "category": "capital",
       "catConfidence": 0.6,
-      "family": "product",
-      "significance": 62,
+      "family": "market",
+      "significance": 63,
       "impact": "notable",
-      "verification": "single",
+      "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
         }
       ],
-      "sourceName": "The Verge",
+      "sourceName": "OpenAI",
       "entityIds": [
-        "gemini"
+        "gpt"
       ]
     },
     {
@@ -344,6 +322,32 @@
         }
       ],
       "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
+      "clusterId": "1j3fu5a",
+      "title": "Here’s what Samsung’s smart glasses actually look like",
+      "desc": "Samsung has given us our first chance to check out its upcoming smart glasses in person, revealing two new designs and the first specs in the process, including an impressive 9-hour battery life. The glasses, developed in collaboration with Google and the eyewear brands Gentle Monster and Warby Parker, are due to launch this fall. […]",
+      "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
+      "dateISO": "2026-07-22T16:35:34.000Z",
+      "date": "JUL 22 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 61,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker"
+        }
+      ],
+      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -505,32 +509,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
-      "clusterId": "1ejsf9d",
-      "title": "Anthropic’s $1.5B copyright settlement approved; only 350 authors opted out",
-      "desc": "Anthropic blocks authors from opting out of $1.5B settlement at last minute.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
-      "dateISO": "2026-07-21T17:33:14.000Z",
-      "date": "JUL 21 2026",
-      "category": "policy",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/stargate-michigan-data-center",
       "clusterId": "1145igk",
       "title": "Building the infrastructure for the Intelligence Age in Michigan",
@@ -614,6 +592,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
+      "clusterId": "1ejsf9d",
+      "title": "Anthropic’s $1.5B copyright settlement approved; only 350 authors opted out",
+      "desc": "Anthropic blocks authors from opting out of $1.5B settlement at last minute.",
+      "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
+      "dateISO": "2026-07-21T17:33:14.000Z",
+      "date": "JUL 21 2026",
+      "category": "policy",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -707,33 +711,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
-      "clusterId": "1u60nl7",
-      "title": "Introducing the ChatGPT for small business program",
-      "desc": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
-      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
-      "dateISO": "2026-07-21T17:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "product",
-      "catConfidence": 0.75,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
       "clusterId": "1ddchx5",
       "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
@@ -756,6 +733,33 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "clusterId": "1u60nl7",
+      "title": "Introducing the ChatGPT for small business program",
+      "desc": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "dateISO": "2026-07-21T17:00:00.000Z",
+      "date": "JUL 21 2026",
+      "category": "product",
+      "catConfidence": 0.75,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
     },
     {
       "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
@@ -908,7 +912,7 @@
       "category": "product",
       "catConfidence": 0.5,
       "family": "product",
-      "significance": 50,
+      "significance": 49,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -1141,14 +1145,18 @@
       "category": "adoption",
       "title": "OpenAI makes ChatGPT Health available to all U.S. users",
       "summary": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
-      "significance": 81,
+      "significance": 88,
       "impact": "high",
       "verification": "corroborated",
       "date": "JUL 23 2026",
       "dateISO": "2026-07-23T17:00:00.000Z",
       "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=lR58Dge8jE8"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/"
@@ -1465,7 +1473,7 @@
       "p": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
       "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
       "sourceName": "TechCrunch",
-      "sourceCount": 2
+      "sourceCount": 3
     },
     {
       "org": "META",
@@ -1676,11 +1684,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 209.97,
-      "changePct": -0.9855684060890095,
+      "price": 210.165,
+      "changePct": -0.8936170396480994,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 58868658,
+      "volume": 60486561,
       "ohlc": [
         {
           "d": "04-23",
@@ -2121,22 +2129,22 @@
           "o": 209.39500427246094,
           "h": 210.8686981201172,
           "l": 205.9600067138672,
-          "c": 209.97000122070312
+          "c": 210.1649932861328
         }
       ],
-      "relVolume": 0.4332260215300653,
-      "marketCap": 5123268000000
+      "relVolume": 0.4451324876144723,
+      "marketCap": 5128026000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 381.34,
-      "changePct": -2.305682247383462,
+      "price": 381.21,
+      "changePct": -2.3389877974250117,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 16600385,
+      "volume": 16926010,
       "ohlc": [
         {
           "d": "04-23",
@@ -2577,22 +2585,22 @@
           "o": 389.9649963378906,
           "h": 391.7799987792969,
           "l": 377.3999938964844,
-          "c": 381.3399963378906
+          "c": 381.2099914550781
         }
       ],
-      "relVolume": 0.38089312318004426,
-      "marketCap": 2833356200000
+      "relVolume": 0.3883645356343639,
+      "marketCap": 2832390300000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 391.69,
-      "changePct": -1.2902888406765687,
+      "price": 392.23,
+      "changePct": -1.1542014063265467,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 6453511,
+      "volume": 6619208,
       "ohlc": [
         {
           "d": "04-23",
@@ -3033,22 +3041,22 @@
           "o": 392.19000244140625,
           "h": 397.6000061035156,
           "l": 386.82000732421875,
-          "c": 391.69000244140625
+          "c": 392.2300109863281
         }
       ],
-      "relVolume": 0.27615112696083655,
-      "marketCap": 1927114800000
+      "relVolume": 0.28324144001430923,
+      "marketCap": 1929771600000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 320.09,
-      "changePct": -6.431056223658194,
+      "price": 320.07,
+      "changePct": -6.436899426875434,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 45999286,
+      "volume": 46985044,
       "ohlc": [
         {
           "d": "04-23",
@@ -3489,22 +3497,22 @@
           "o": 321.1300048828125,
           "h": 324.489990234375,
           "l": 314.9100036621094,
-          "c": 320.0899963378906
+          "c": 320.07000732421875
         }
       ],
-      "relVolume": 1.389341141551746,
-      "marketCap": 3905097999999.9995
+      "relVolume": 1.419114519882309,
+      "marketCap": 3904854000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 234.675,
-      "changePct": -4.155606615527757,
+      "price": 234.325,
+      "changePct": -4.298553764717393,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 27343766,
+      "volume": 27928753,
       "ohlc": [
         {
           "d": "04-23",
@@ -3945,22 +3953,22 @@
           "o": 236.32000732421875,
           "h": 238.3498992919922,
           "l": 232.05160522460938,
-          "c": 234.6750030517578
+          "c": 234.3249969482422
         }
       ],
-      "relVolume": 0.4903923683648662,
-      "marketCap": 2511022500000
+      "relVolume": 0.5008837235202848,
+      "marketCap": 2507277500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 606.58,
-      "changePct": -3.2829960587036044,
+      "price": 605.625,
+      "changePct": -3.4352701017648397,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8132742,
+      "volume": 8380124,
       "ohlc": [
         {
           "d": "04-23",
@@ -4401,22 +4409,22 @@
           "o": 608.4099731445312,
           "h": 614.635009765625,
           "l": 597.219970703125,
-          "c": 606.5800170898438
+          "c": 605.625
         }
       ],
-      "relVolume": 0.4157945593756902,
-      "marketCap": 1528581600000
+      "relVolume": 0.42844221126080806,
+      "marketCap": 1526175000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 417.905,
-      "changePct": -0.7846425162812707,
+      "price": 417.72,
+      "changePct": -0.8285630220495863,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 5187707,
+      "volume": 5333264,
       "ohlc": [
         {
           "d": "04-23",
@@ -4857,22 +4865,22 @@
           "o": 415.8399963378906,
           "h": 420.8399963378906,
           "l": 411.79998779296875,
-          "c": 417.9049987792969
+          "c": 417.7200012207031
         }
       ],
-      "relVolume": 0.3442996213021207,
-      "marketCap": 2168926949999.9998
+      "relVolume": 0.3539600011149885,
+      "marketCap": 2167966800000.0002
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 533.255,
-      "changePct": -3.453553422197666,
+      "price": 535.32,
+      "changePct": -3.079682298501278,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 15492210,
+      "volume": 16231275,
       "ohlc": [
         {
           "d": "04-23",
@@ -5313,22 +5321,22 @@
           "o": 544.739990234375,
           "h": 558.159912109375,
           "l": 525,
-          "c": 533.2550048828125
+          "c": 535.3200073242188
         }
       ],
-      "relVolume": 0.5498469503375185,
-      "marketCap": 863873100000
+      "relVolume": 0.5760777228581078,
+      "marketCap": 867218400000.0001
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 122.1,
-      "changePct": -1.9828218887005034,
+      "price": 122.04,
+      "changePct": -2.0309856189250635,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 16250827,
+      "volume": 16686933,
       "ohlc": [
         {
           "d": "04-23",
@@ -5769,22 +5777,22 @@
           "o": 125.93499755859375,
           "h": 126.38999938964844,
           "l": 120.7300033569336,
-          "c": 122.0999984741211
+          "c": 122.04000091552734
         }
       ],
-      "relVolume": 0.38793905155041797,
-      "marketCap": 293040000000
+      "relVolume": 0.39834975544969936,
+      "marketCap": 292896000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 121.1,
-      "changePct": -3.766686269635809,
+      "price": 120.66,
+      "changePct": -4.11633250677515,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 17109938,
+      "volume": 17590673,
       "ohlc": [
         {
           "d": "04-23",
@@ -6225,11 +6233,11 @@
           "o": 123.95999908447266,
           "h": 124.69999694824219,
           "l": 119.69999694824219,
-          "c": 121.0999984741211
+          "c": 120.66000366210938
         }
       ],
-      "relVolume": 0.43111681960114623,
-      "marketCap": 340291000000
+      "relVolume": 0.4432298351054079,
+      "marketCap": 339054600000
     }
   ],
   "compute": [
@@ -6239,7 +6247,7 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "→ 2% vs 9d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6247,7 +6255,7 @@
       "rate": "$2.94 – $4.39/hr",
       "trend": "↓ 5% vs 9d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6283,7 +6291,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-23T17:15:25.599Z",
+    "updatedAt": "2026-07-23T17:30:31.340Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6292,18 +6300,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 315,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 275,
+        "fetchedStoryCount": 209,
         "validatedStoryCount": 176,
-        "storyCoverage": 0.9523809523809523,
-        "estimatedRelevantDiscussions": 185,
+        "storyCoverage": 0.76,
+        "estimatedRelevantDiscussions": 232,
         "isEstimated": true,
-        "rawCommentHits": 2258,
+        "rawCommentHits": 2259,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.1328609388839681,
+        "commentCoverage": 0.13280212483399734,
         "limited": false,
-        "points": 4601,
+        "points": 4618,
         "themes": [
           {
             "id": "reasoning",
@@ -6338,7 +6346,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 7
+            "count": 6
           },
           {
             "id": "reliability",
@@ -6366,7 +6374,7 @@
           },
           {
             "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
-            "points": 1049,
+            "points": 1050,
             "comments": 595,
             "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
             "date": "JUL 22 2026"
@@ -6378,23 +6386,23 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1076,
+        "rawStoryHits": 1077,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.2788104089219331,
-        "estimatedRelevantDiscussions": 1069,
+        "storyCoverage": 0.2785515320334262,
+        "estimatedRelevantDiscussions": 1070,
         "isEstimated": true,
-        "rawCommentHits": 6530,
+        "rawCommentHits": 6527,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
-        "commentCoverage": 0.045941807044410414,
+        "commentCoverage": 0.04596292324191818,
         "limited": false,
-        "points": 18089,
+        "points": 18090,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 129
+            "count": 130
           },
           {
             "id": "reasoning",
@@ -6409,7 +6417,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 15
+            "count": 16
           },
           {
             "id": "price",
@@ -6475,7 +6483,7 @@
         "validatedCommentCount": 298,
         "commentCoverage": 0.2401921537229784,
         "limited": false,
-        "points": 3485,
+        "points": 3486,
         "themes": [
           {
             "id": "coding",
@@ -6550,18 +6558,18 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 539,
+        "rawStoryHits": 538,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 39,
-        "storyCoverage": 0.5565862708719852,
+        "storyCoverage": 0.5576208178438662,
         "estimatedRelevantDiscussions": 70,
         "isEstimated": true,
-        "rawCommentHits": 10870,
+        "rawCommentHits": 10874,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 155,
-        "commentCoverage": 0.027598896044158234,
+        "commentCoverage": 0.027588743792532646,
         "limited": false,
-        "points": 2594,
+        "points": 2595,
         "themes": [
           {
             "id": "coding",
@@ -6571,7 +6579,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 28
+            "count": 27
           },
           {
             "id": "price",
@@ -6626,23 +6634,23 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 75,
-        "fetchedStoryCount": 75,
+        "rawStoryHits": 76,
+        "fetchedStoryCount": 76,
         "validatedStoryCount": 30,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
-        "rawCommentHits": 583,
+        "rawCommentHits": 586,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 236,
-        "commentCoverage": 0.5145797598627787,
+        "validatedCommentCount": 237,
+        "commentCoverage": 0.5119453924914675,
         "limited": false,
-        "points": 326,
+        "points": 327,
         "themes": [
           {
             "id": "local",
             "label": "Local use",
-            "count": 114
+            "count": 115
           },
           {
             "id": "reasoning",
@@ -6652,7 +6660,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 44
+            "count": 45
           },
           {
             "id": "speed",
@@ -6688,7 +6696,7 @@
         "topThreads": [
           {
             "title": "Show HN: Cactus Hybrid: We taught Gemma 4 to know when it's wrong",
-            "points": 177,
+            "points": 178,
             "comments": 38,
             "url": "https://github.com/cactus-compute/cactus-hybrid",
             "date": "JUL 22 2026"
@@ -6707,8 +6715,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 76,
-        "fetchedStoryCount": 76,
+        "rawStoryHits": 82,
+        "fetchedStoryCount": 82,
         "validatedStoryCount": 64,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 64,
@@ -6718,7 +6726,7 @@
         "validatedCommentCount": 291,
         "commentCoverage": 0.27223230490018147,
         "limited": false,
-        "points": 1104,
+        "points": 1105,
         "themes": [
           {
             "id": "price",
@@ -6789,15 +6797,15 @@
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
         "rawStoryHits": 199,
-        "fetchedStoryCount": 191,
+        "fetchedStoryCount": 199,
         "validatedStoryCount": 36,
-        "storyCoverage": 0.9597989949748744,
-        "estimatedRelevantDiscussions": 38,
-        "isEstimated": true,
-        "rawCommentHits": 4541,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 36,
+        "isEstimated": false,
+        "rawCommentHits": 4546,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 242,
-        "commentCoverage": 0.06606474344857961,
+        "validatedCommentCount": 241,
+        "commentCoverage": 0.06599208095028597,
         "limited": false,
         "points": 3670,
         "themes": [
@@ -6824,7 +6832,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 22
+            "count": 21
           },
           {
             "id": "multimodal",
@@ -6978,6 +6986,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "price"
+        ],
+        "excerpt": "…of service:https://www.chinatalk.media/p/how-to-buy-cheap-claude-tokens...…",
+        "source": "Hacker News",
+        "author": "skybrian",
+        "publishedAt": "2026-07-22T20:48:09.000Z",
+        "url": "https://news.ycombinator.com/item?id=49013210"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "speed",
           "price"
         ],
@@ -6986,17 +7005,6 @@
         "author": "6gvONxR4sf7o",
         "publishedAt": "2026-07-22T22:36:52.000Z",
         "url": "https://news.ycombinator.com/item?id=49014422"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "price"
-        ],
-        "excerpt": "…of service:https://www.chinatalk.media/p/how-to-buy-cheap-claude-tokens...…",
-        "source": "Hacker News",
-        "author": "skybrian",
-        "publishedAt": "2026-07-22T20:48:09.000Z",
-        "url": "https://news.ycombinator.com/item?id=49013210"
       },
       {
         "modelId": "claude",
