@@ -39,12 +39,26 @@ scripts/update-youtube.mjs ──uses──> scripts/lib/youtube.mjs (search/vid
         ▼  validate.mjs (same CI gate, checks are skipped if the file is absent)
         ▼
    git commit + push  ──►  GitHub Pages redeploys
+
+Hugging Face model API + GitHub releases API  (both keyless; GitHub uses the
+        │  free GITHUB_TOKEN in Actions to raise the rate limit)
+        │  (.github/workflows/update-launchradar.yml, its OWN fast :12/:42 cron —
+        │   the low-latency "be first to know" launch scan)
+        ▼
+scripts/update-launchradar.mjs ──uses──> scripts/lib/launchradar.mjs (URL building, response parsing, the new-release diff)
+        │
+        ├─► data/launch-radar.json  (newest model-hub uploads + official SDK releases, each flagged new-vs-seen — OPTIONAL: absent until the first run)
+        └─► opens a GitHub issue (emails the repo owner) when a genuinely-new release is detected — the free alert channel
+        │
+        ▼
+   git commit + push  ──►  GitHub Pages redeploys
         │
         ▼
 index.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
         ├─ js/nav.js           5-item IA router: panel/tab activation, legacy-hash map, depth rail, anchor correction
         ├─ js/briefing.js      Today's 60-second briefing (compact references into waves/releases, no duplicate cards)
+        ├─ js/launchradar.js   Launch Radar panel (newest model/SDK releases; hides itself if data absent)
         ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
         ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected")
         ├─ js/river.js         signal river (chronological, declutered filters, expand/archive)

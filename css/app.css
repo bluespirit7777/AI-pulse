@@ -167,6 +167,32 @@ html, body { overflow-x: clip; }
 .src-headline { font-family: var(--font-body); font-size: 13.5px; line-height: 1.4; color: var(--sea); text-decoration: none; font-weight: 600; }
 .src-headline:hover { text-decoration: underline; }
 .src-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+
+/* ---------- Launch Radar (newest model/SDK releases, earliest launch signal) ---------- */
+.launch-radar { margin: 0 0 26px; padding: 16px 18px; border: 1px solid var(--border-strong);
+  border-radius: 12px; background: var(--panel); }
+.lr-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 12px; }
+.lr-kicker { font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: .02em;
+  color: var(--deep); display: inline-flex; align-items: center; gap: 7px; }
+.lr-note { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+.lr-pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--coral);
+  box-shadow: 0 0 0 0 var(--coral); animation: lrPulse 2s ease-out infinite; }
+@keyframes lrPulse { 0% { box-shadow: 0 0 0 0 rgba(192,106,92,.5); } 100% { box-shadow: 0 0 0 8px rgba(192,106,92,0); } }
+@media (prefers-reduced-motion: reduce) { .lr-pulse { animation: none; } }
+.lr-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.lr-item { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 9px;
+  padding: 7px 0; border-top: 1px solid var(--border); }
+.lr-item:first-child { border-top: none; }
+.lr-badge { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .03em;
+  text-transform: uppercase; color: var(--lr-accent); border: 1px solid var(--lr-accent);
+  border-radius: 5px; padding: 1px 6px; opacity: .9; white-space: nowrap; }
+.lr-title { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--ink);
+  text-decoration: none; }
+.lr-title:hover { text-decoration: underline; }
+.lr-new { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: .05em;
+  color: #fff; background: var(--coral); border-radius: 4px; padding: 1px 5px; }
+.lr-meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); margin-left: auto; white-space: nowrap; }
+.lr-item--new .lr-title { color: var(--deep); }
 .drawer-src-empty { font-family: var(--font-mono); font-size: 11.5px; line-height: 1.55; color: var(--ink-dim); margin: 0; }
 .drawer-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 14px; }
 .drawer-links { font-family: var(--font-mono); font-size: 12px; }

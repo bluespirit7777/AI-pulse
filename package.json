@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node scripts/update-data.mjs",
     "validate": "node scripts/validate.mjs",
-    "test": "node --test test/signals.test.mjs test/history.test.mjs test/stocks.test.mjs test/dates.test.mjs test/models.test.mjs test/community.test.mjs test/leaderboard.test.mjs test/text.test.mjs test/compute.test.mjs test/chart.test.mjs test/youtube.test.mjs",
+    "test": "node --test test/signals.test.mjs test/history.test.mjs test/stocks.test.mjs test/dates.test.mjs test/models.test.mjs test/community.test.mjs test/leaderboard.test.mjs test/text.test.mjs test/compute.test.mjs test/chart.test.mjs test/youtube.test.mjs test/launchradar.test.mjs",
     "check": "npm run validate && npm test"
   },
   "engines": {

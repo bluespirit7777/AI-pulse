@@ -58,4 +58,18 @@ export async function loadYouTubeTrending() {
   }
 }
 
+// data/launch-radar.json — newest model-hub uploads + official SDK/model
+// GitHub releases, diffed for genuinely-new entries, refreshed on a fast cron
+// by scripts/update-launchradar.mjs. Absent/malformed is not an error: the
+// Launch Radar panel just hides itself rather than showing a broken state.
+export async function loadLaunchRadar() {
+  try {
+    const res = await fetch('data/launch-radar.json' + BUST(), { cache: 'no-store' });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 export const RANGE_KEYS = ['24H', '7D', '30D'];

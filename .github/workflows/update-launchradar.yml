@@ -1,0 +1,101 @@
+name: Update Launch Radar
+
+on:
+  schedule:
+    # Twice hourly at :12 and :42 — offset from the data (:07/:37) and YouTube
+    # (:22) jobs so the four don't collide on the same push. This is the
+    # low-latency "be first to know" scan; it's cheap (keyless, tiny responses).
+    - cron: '12,42 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write   # so a genuinely-new release can open an alert issue (emails the owner)
+
+concurrency:
+  group: update-launchradar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Scan for new model / SDK releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # raises GitHub API rate limit; also used by HF (ignored there)
+        run: node scripts/update-launchradar.mjs
+
+      - name: Alert on newly detected releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Extract the newly-detected items the scan just wrote. If none, do
+          # nothing. If some, open ONE issue listing them — GitHub emails the
+          # repo owner on new issues in a repo they watch, which is the free,
+          # zero-credential "alert" channel. isNew fires once per id (known ids
+          # persist across runs), so each real launch alerts exactly once.
+          NEW_JSON=$(node -e "
+            try {
+              const d = require('./data/launch-radar.json');
+              const n = d.newlyDetected || [];
+              if (!n.length) { process.exit(0); }
+              const lines = n.map(x => '- **' + x.label + '** — [' + x.title + '](' + x.url + ')  ·  ' + (x.at||'').slice(0,10) + '  ·  ' + x.source);
+              console.log(lines.join('\n'));
+            } catch (e) { process.exit(0); }
+          ")
+          if [ -z "$NEW_JSON" ]; then
+            echo "No newly detected releases — no alert."
+            exit 0
+          fi
+          COUNT=$(printf '%s\n' "$NEW_JSON" | grep -c '^- ' || true)
+          echo "Opening alert issue for $COUNT new release(s)."
+          printf '🚨 Launch Radar detected %s new release(s):\n\n%s\n\n_Detected by the automated Launch Radar scan — the earliest machine signal (model-hub uploads + official SDK releases), typically ahead of any blog post. Auto-generated; close when reviewed._\n' "$COUNT" "$NEW_JSON" > /tmp/issue-body.md
+          gh issue create \
+            --title "🚨 New AI release detected ($COUNT) — $(date -u '+%Y-%m-%d %H:%M UTC')" \
+            --body-file /tmp/issue-body.md \
+            --label "launch-radar" 2>/dev/null \
+          || gh issue create \
+            --title "🚨 New AI release detected ($COUNT) — $(date -u '+%Y-%m-%d %H:%M UTC')" \
+            --body-file /tmp/issue-body.md
+          # the fallback drops --label in case the label doesn't exist yet (a
+          # missing label is the one non-fatal reason `gh issue create` rejects)
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/launch-radar.json
+          if git diff --cached --quiet; then
+            echo "No radar changes."
+            exit 0
+          fi
+          git commit -m "chore: refresh launch radar [skip ci]"
+          # Same push-race hardening as the other pipelines: main gets written
+          # to frequently, so retry with fetch+rebase. `git rebase --abort` is
+          # guarded (|| true) because a rebase that fails its pre-flight check
+          # never starts, and an unguarded --abort would exit-128 the step.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $i."
+              exit 0
+            fi
+            echo "Push rejected (attempt $i) — remote moved, rebasing and retrying..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort 2>/dev/null || true
+              git reset --soft origin/main
+              git add data/launch-radar.json
+              git commit -m "chore: refresh launch radar [skip ci]" || echo "Nothing to commit — remote already matches."
+            fi
+            sleep $((RANDOM % 5 + 1))
+          done
+          echo "::error::Failed to push launch radar after 5 attempts."
+          exit 1

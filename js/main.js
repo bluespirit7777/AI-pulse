@@ -1,7 +1,7 @@
 // Orchestrator: loads data, renders every section, wires the time-range toggle
 // and a silent periodic refresh. The site is fully functional with only
 // latest.json; entities.json and range.json enrich it when present.
-import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTrending } from './data.js';
+import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTrending, loadLaunchRadar } from './data.js';
 import { createOceanMap } from './oceanmap.js';
 import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
@@ -11,6 +11,7 @@ import { createStockNetwork } from './stocknetwork.js';
 import { renderCurated, renderLive, animateBars, renderYouTubeTrending } from './sections.js';
 import { renderDataHealth } from './datahealth.js';
 import { renderBriefing } from './briefing.js';
+import { renderLaunchRadar } from './launchradar.js';
 import { initNav, notifyDataReady } from './nav.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
 
@@ -148,6 +149,12 @@ async function boot() {
   loadYouTubeTrending().then(renderYouTubeTrending)
     .catch((err) => { console.warn('[youtube] load skipped', err.message); renderYouTubeTrending(null); });
 
+  // Launch Radar — newest model-hub uploads + SDK releases (independent load,
+  // refreshed on its own fast cron). renderLaunchRadar hides the panel itself
+  // if the data is missing, so a failure here is silent, not a broken block.
+  loadLaunchRadar().then((radar) => renderLaunchRadar($('#launch-radar'), radar))
+    .catch((err) => console.warn('[radar] load skipped', err.message));
+
   // silent refresh — keeps an open tab from going stale without a reload
   setInterval(async () => {
     try {
@@ -158,6 +165,7 @@ async function boot() {
       paintHistoryNote();
       renderTide($('#tide'), ranges);
       applyRange(range);
+      loadLaunchRadar().then((radar) => renderLaunchRadar($('#launch-radar'), radar)).catch(() => {});
     } catch (err) {
       console.warn('[data] refresh skipped', err.message);
     }

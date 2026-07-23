@@ -45,6 +45,13 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    community coverage, history depth, how many datasets are estimates, the
    build SHA, and when data last updated successfully. Full detail in a drawer.
 
+At the top of **Today**, a **Launch Radar** panel surfaces the newest model
+releases the moment the machinery moves — Hugging Face model-hub uploads (open
+labs) and official SDK/model GitHub releases (closed labs) — the earliest
+machine signal of a launch, typically ahead of any blog post. Anything new
+since the last scan is flagged, and the pipeline opens a GitHub issue (which
+emails the maintainer) so you hear about a launch first.
+
 Every item carries a **freshness / confidence / provenance** chip
 (Live · Auto · Curated · Estimated, plus corroboration strength).
 
