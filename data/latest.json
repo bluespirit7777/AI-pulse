@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-23T22:45:22.387Z",
+  "updatedAt": "2026-07-23T23:00:36.751Z",
   "build": {
-    "sha": "683f0b42063ccc7060e93be898e798f8e9eff09a",
-    "shortSha": "683f0b4",
+    "sha": "f857c76b27b4c775fc3e2e4cc79304db3b7c46e4",
+    "shortSha": "f857c76",
     "ref": "main",
-    "builtAt": "2026-07-23T22:45:34.706Z"
+    "builtAt": "2026-07-23T23:00:51.633Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 13.9,
-    "estimatedDatasets": 2,
-    "buildSha": "683f0b4",
-    "lastSuccessfulUpdate": "2026-07-23T22:45:22.387Z"
+    "historyDepthDays": 14,
+    "estimatedDatasets": 3,
+    "buildSha": "f857c76",
+    "lastSuccessfulUpdate": "2026-07-23T23:00:36.751Z"
   },
   "ticker": [
     "OPENAI MAKES CHATGPT HEALTH AVAILABLE TO ALL US USERS",
@@ -394,7 +394,7 @@
       "category": "policy",
       "catConfidence": 0.83,
       "family": "market",
-      "significance": 56,
+      "significance": 55,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -552,32 +552,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/ntt-data",
-      "clusterId": "1sgidqg",
-      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
-      "desc": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
-      "url": "https://openai.com/index/ntt-data",
-      "dateISO": "2026-07-22T00:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "adoption",
-      "catConfidence": 0.53,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/ntt-data"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/",
       "clusterId": "1nsbqk9",
       "title": "Google’s Gemini nears billion-user milestone",
@@ -622,6 +596,32 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/health-in-chatgpt"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/ntt-data",
+      "clusterId": "1sgidqg",
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "desc": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
+      "url": "https://openai.com/index/ntt-data",
+      "dateISO": "2026-07-22T00:00:00.000Z",
+      "date": "JUL 22 2026",
+      "category": "adoption",
+      "catConfidence": 0.53,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/ntt-data"
         }
       ],
       "sourceName": "OpenAI",
@@ -1244,8 +1244,8 @@
     "chatgpt": 23,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 76,
-    "claude": 75,
+    "gpt": 77,
+    "claude": 74,
     "gemini": 36,
     "grok": 0,
     "llama": 0,
@@ -1631,6 +1631,17 @@
       "sourceCount": 7
     },
     {
+      "field": "Biology",
+      "date": "JUN 30 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "Introducing GeneBench-Pro",
+      "p": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
+      "url": "https://openai.com/index/introducing-genebench-pro",
+      "sourceName": "OpenAI",
+      "sourceCount": 2
+    },
+    {
       "field": "Reasoning",
       "date": "JUN 25 2026",
       "verification": "official",
@@ -1660,17 +1671,6 @@
       "h": "Using AI to help physicians diagnose rare genetic diseases affecting children",
       "p": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
       "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "field": "Reasoning",
-      "date": "JUN 17 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "Introducing LifeSciBench",
-      "p": "Introducing LifeSciBench, an expert-authored, expert-reviewed benchmark for evaluating how AI systems handle real-world life science research tasks and decisions.",
-      "url": "https://openai.com/index/introducing-life-sci-bench",
       "sourceName": "OpenAI",
       "sourceCount": 1
     }
@@ -6182,7 +6182,7 @@
       "rate": "$3.59 – $4.39/hr",
       "trend": "↑ 4% vs 9d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6211,14 +6211,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "↑ 32% vs 9d ago",
+      "rate": "$0.59 – $1.49/hr",
+      "trend": "↑ 10% vs 9d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-23T22:45:22.387Z",
+    "updatedAt": "2026-07-23T23:00:36.751Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6227,18 +6227,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 212,
-        "fetchedStoryCount": 212,
+        "rawStoryHits": 318,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 178,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 178,
-        "isEstimated": false,
-        "rawCommentHits": 2265,
+        "storyCoverage": 0.9433962264150944,
+        "estimatedRelevantDiscussions": 189,
+        "isEstimated": true,
+        "rawCommentHits": 2266,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.13245033112582782,
+        "commentCoverage": 0.1323918799646955,
         "limited": false,
-        "points": 4767,
+        "points": 4770,
         "themes": [
           {
             "id": "reasoning",
@@ -6319,17 +6319,17 @@
         "storyCoverage": 0.27726432532347506,
         "estimatedRelevantDiscussions": 1075,
         "isEstimated": true,
-        "rawCommentHits": 6461,
+        "rawCommentHits": 6459,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 295,
-        "commentCoverage": 0.04643244079863798,
+        "commentCoverage": 0.046446818392940084,
         "limited": false,
-        "points": 18143,
+        "points": 18144,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 137
+            "count": 136
           },
           {
             "id": "reasoning",
@@ -6349,7 +6349,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 12
+            "count": 13
           },
           {
             "id": "safety",
@@ -6405,10 +6405,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 137,
         "isEstimated": false,
-        "rawCommentHits": 1248,
+        "rawCommentHits": 1247,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 298,
-        "commentCoverage": 0.2403846153846154,
+        "commentCoverage": 0.24057738572574178,
         "limited": false,
         "points": 3496,
         "themes": [
@@ -6428,14 +6428,14 @@
             "count": 45
           },
           {
-            "id": "multimodal",
-            "label": "Image/video",
+            "id": "speed",
+            "label": "Speed",
             "count": 19
           },
           {
-            "id": "speed",
-            "label": "Speed",
-            "count": 18
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 19
           },
           {
             "id": "reliability",
@@ -6485,16 +6485,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 544,
+        "rawStoryHits": 545,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 39,
-        "storyCoverage": 0.5514705882352942,
+        "storyCoverage": 0.5504587155963303,
         "estimatedRelevantDiscussions": 71,
         "isEstimated": true,
-        "rawCommentHits": 10855,
+        "rawCommentHits": 10856,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 153,
-        "commentCoverage": 0.027637033625057577,
+        "commentCoverage": 0.02763448784082535,
         "limited": false,
         "points": 2600,
         "themes": [
@@ -6642,8 +6642,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 70,
-        "fetchedStoryCount": 70,
+        "rawStoryHits": 85,
+        "fetchedStoryCount": 85,
         "validatedStoryCount": 67,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
