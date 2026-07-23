@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T20:30:33.909Z",
+  "generatedAt": "2026-07-23T20:37:15.468Z",
   "historyDepthDays": 13.9,
   "ranges": {
     "24H": {
@@ -20,8 +20,8 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 1,
-        "amd": 0,
+        "nvidia": 2,
+        "amd": 1,
         "tsmc": 0,
         "broadcom": 0
       },
@@ -42,8 +42,8 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 1,
-        "amd": -2,
+        "nvidia": 2,
+        "amd": -1,
         "tsmc": 0,
         "broadcom": 0
       },
@@ -54,7 +54,7 @@
         "capital": 4,
         "compute": 1,
         "product": 7,
-        "adoption": 1,
+        "adoption": 2,
         "orggov": 1
       },
       "topEntities": [
@@ -80,11 +80,16 @@
         },
         {
           "id": "nvidia",
+          "count": 2,
+          "delta": 2
+        },
+        {
+          "id": "amd",
           "count": 1,
-          "delta": 1
+          "delta": -1
         }
       ],
-      "eventCount": 30,
+      "eventCount": 31,
       "previousWindowComplete": true
     },
     "7D": {
@@ -105,8 +110,8 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 8,
-        "amd": 2,
+        "nvidia": 9,
+        "amd": 3,
         "tsmc": 0,
         "broadcom": 0
       },
@@ -122,7 +127,7 @@
         "market": 10,
         "research": 4,
         "opensource": 14,
-        "adoption": 12
+        "adoption": 13
       },
       "topEntities": [
         {
@@ -147,7 +152,7 @@
         },
         {
           "id": "nvidia",
-          "count": 8,
+          "count": 9,
           "delta": null
         },
         {
@@ -157,11 +162,11 @@
         },
         {
           "id": "amd",
-          "count": 2,
+          "count": 3,
           "delta": null
         }
       ],
-      "eventCount": 375,
+      "eventCount": 376,
       "previousWindowComplete": false
     },
     "30D": {
@@ -182,8 +187,8 @@
         "gcp": 4,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 21,
-        "amd": 2,
+        "nvidia": 22,
+        "amd": 3,
         "tsmc": 0,
         "broadcom": 14
       },
@@ -196,7 +201,7 @@
         "research": 74,
         "general": 1134,
         "analysis": 178,
-        "adoption": 123,
+        "adoption": 124,
         "compute": 37,
         "market": 35,
         "opensource": 29
@@ -229,7 +234,7 @@
         },
         {
           "id": "nvidia",
-          "count": 21,
+          "count": 22,
           "delta": null
         },
         {
@@ -243,7 +248,7 @@
           "delta": null
         }
       ],
-      "eventCount": 2157,
+      "eventCount": 2158,
       "previousWindowComplete": false
     }
   },
@@ -463,7 +468,7 @@
         "opensource": 6,
         "capital": 19,
         "product": 41,
-        "adoption": 23,
+        "adoption": 24,
         "compute": 7,
         "analysis": 29,
         "general": 145,
