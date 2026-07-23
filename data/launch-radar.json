@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T18:48:49.541Z",
+  "updatedAt": "2026-07-23T22:34:46.985Z",
   "firstRun": false,
   "sources": [
     {
@@ -51,15 +51,27 @@
   "newCount": 1,
   "newlyDetected": [
     {
-      "id": "gh:anthropics/anthropic-sdk-python@v0.119.0",
-      "label": "Claude",
-      "title": "anthropic-sdk-python v0.119.0",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
-      "at": "2026-07-23T17:34:23.000Z",
+      "id": "gh:openai/openai-python@v2.48.0",
+      "label": "OpenAI",
+      "title": "openai-python v2.48.0",
+      "url": "https://github.com/openai/openai-python/releases/tag/v2.48.0",
+      "at": "2026-07-23T20:15:00.000Z",
       "source": "github"
     }
   ],
   "entries": [
+    {
+      "id": "gh:openai/openai-python@v2.48.0",
+      "source": "github",
+      "org": "OpenAI",
+      "label": "OpenAI",
+      "title": "openai-python v2.48.0",
+      "kind": "sdk-release",
+      "at": "2026-07-23T20:15:00.000Z",
+      "url": "https://github.com/openai/openai-python/releases/tag/v2.48.0",
+      "isNew": true,
+      "firstSeenAt": "2026-07-23T22:34:46.985Z"
+    },
     {
       "id": "gh:anthropics/anthropic-sdk-python@v0.119.0",
       "source": "github",
@@ -69,7 +81,7 @@
       "kind": "sdk-release",
       "at": "2026-07-23T17:34:23.000Z",
       "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
-      "isNew": true,
+      "isNew": false,
       "firstSeenAt": "2026-07-23T18:48:49.541Z"
     },
     {
@@ -407,21 +419,10 @@
       "url": "https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B",
       "isNew": false,
       "firstSeenAt": "2026-07-23T14:29:27.103Z"
-    },
-    {
-      "id": "gh:openai/openai-python@v2.43.0",
-      "source": "github",
-      "org": "OpenAI",
-      "label": "OpenAI",
-      "title": "openai-python v2.43.0",
-      "kind": "sdk-release",
-      "at": "2026-06-17T17:05:59.000Z",
-      "url": "https://github.com/openai/openai-python/releases/tag/v2.43.0",
-      "isNew": false,
-      "firstSeenAt": "2026-07-23T14:29:27.103Z"
     }
   ],
   "knownIds": [
+    "gh:openai/openai-python@v2.48.0",
     "gh:anthropics/anthropic-sdk-python@v0.119.0",
     "gh:googleapis/python-genai@v2.14.0",
     "gh:openai/openai-python@v2.47.0",
@@ -451,7 +452,6 @@
     "hf:Qwen/Qwen3-ASR-1.7B-hf",
     "gh:openai/openai-python@v2.44.0",
     "hf:Qwen/Qwen-AgentWorld-35B-A3B",
-    "gh:openai/openai-python@v2.43.0",
     "hf:moonshotai/Kimi-K2.7-Code",
     "hf:Qwen/Qwen-Image-Bench",
     "hf:mistralai/Mistral-Medium-3.5-128B-EAGLE",
@@ -487,6 +487,7 @@
     "hf:meta-llama/Llama-4-Scout-17B-16E-Original",
     "hf:meta-llama/Llama-4-Maverick-17B-128E",
     "hf:meta-llama/Llama-4-Scout-17B-16E",
+    "gh:openai/openai-python@v2.43.0",
     "gh:anthropics/anthropic-sdk-python@v0.115.1"
   ]
 }
