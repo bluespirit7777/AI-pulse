@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-23T18:30:30.209Z",
+  "updatedAt": "2026-07-23T18:45:26.012Z",
   "build": {
-    "sha": "df5327bb6b006c51c6c4c51105ab4f3484836db7",
-    "shortSha": "df5327b",
+    "sha": "9905e392bb1d41078c87c191b6e4ac04c4e81b5e",
+    "shortSha": "9905e39",
     "ref": "main",
-    "builtAt": "2026-07-23T18:30:43.017Z"
+    "builtAt": "2026-07-23T18:45:38.584Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 13.8,
-    "estimatedDatasets": 3,
-    "buildSha": "df5327b",
-    "lastSuccessfulUpdate": "2026-07-23T18:30:30.209Z"
+    "estimatedDatasets": 4,
+    "buildSha": "9905e39",
+    "lastSuccessfulUpdate": "2026-07-23T18:45:26.012Z"
   },
   "ticker": [
     "OPENAI MAKES CHATGPT HEALTH AVAILABLE TO ALL US USERS",
@@ -75,7 +75,7 @@
       "category": "policy",
       "catConfidence": 0.71,
       "family": "market",
-      "significance": 77,
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -457,58 +457,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/ntt-data",
-      "clusterId": "1sgidqg",
-      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
-      "desc": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
-      "url": "https://openai.com/index/ntt-data",
-      "dateISO": "2026-07-22T00:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "adoption",
-      "catConfidence": 0.53,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/ntt-data"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
-      "clusterId": "1kpozot",
-      "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
-      "desc": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the open internet to pull off the attack.",
-      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
-      "dateISO": "2026-07-21T22:50:01.000Z",
-      "date": "JUL 21 2026",
-      "category": "opensource",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/stargate-michigan-data-center",
       "clusterId": "1145igk",
       "title": "Building the infrastructure for the Intelligence Age in Michigan",
@@ -595,6 +543,58 @@
       ]
     },
     {
+      "id": "https://openai.com/index/ntt-data",
+      "clusterId": "1sgidqg",
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "desc": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
+      "url": "https://openai.com/index/ntt-data",
+      "dateISO": "2026-07-22T00:00:00.000Z",
+      "date": "JUL 22 2026",
+      "category": "adoption",
+      "catConfidence": 0.53,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/ntt-data"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "clusterId": "1kpozot",
+      "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
+      "desc": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the open internet to pull off the attack.",
+      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "dateISO": "2026-07-21T22:50:01.000Z",
+      "date": "JUL 21 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
       "clusterId": "1ejsf9d",
       "title": "Anthropic’s $1.5B copyright settlement approved; only 350 authors opted out",
@@ -671,30 +671,6 @@
       "entityIds": [
         "nvidia"
       ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-      "clusterId": "1ddchx5",
-      "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
-      "desc": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
-      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-      "dateISO": "2026-07-23T15:00:00.000Z",
-      "date": "JUL 23 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
     },
     {
       "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
@@ -779,6 +755,30 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "clusterId": "1ddchx5",
+      "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
+      "desc": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
+      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "dateISO": "2026-07-23T15:00:00.000Z",
+      "date": "JUL 23 2026",
+      "category": "capital",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
+        }
+      ],
+      "sourceName": "TechCrunch",
       "entityIds": []
     },
     {
@@ -943,6 +943,34 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/",
+      "clusterId": "nm35j5",
+      "title": "Yope raises $12.3M to build a private social network without algorithms or ads",
+      "desc": "Yope, a fast-growing social app focused on private groups of friends and family, has raised $12.3 million in seed funding. Instead of chasing creators and algorithmic feeds, the startup is betting that the future of social networking lies in small, private communities powered by messaging, photo sharing, and AI features designed to strengthen real-world relationships.",
+      "url": "https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/",
+      "dateISO": "2026-07-22T18:13:58.000Z",
+      "date": "JUL 22 2026",
+      "category": "capital",
+      "catConfidence": 0.78,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://techcrunch.com/2026/07/22/servicenow-bets-40m-on-indian-firm-businessnext-at-700m-valuation-to-deepen-banking-ai-push/",
       "clusterId": "rxuzw5",
       "title": "ServiceNow bets $40 million on Indian banking software specialist to expand its financial services push",
@@ -1027,32 +1055,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-      "clusterId": "y8aew3",
-      "title": "Meta made its own AI detection system. It should have just used Google’s",
-      "desc": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the company's new AI model. But […]",
-      "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-      "dateISO": "2026-07-22T11:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "product",
-      "catConfidence": 0.43,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
       "clusterId": "708tpf",
       "title": "Anthropic releases Claude Science, a product aimed at researchers, the pharma industry",
@@ -1103,29 +1105,29 @@
       ]
     },
     {
-      "id": "https://openai.com/index/advancing-the-next-era-of-national-science",
-      "clusterId": "1qnvfs5",
-      "title": "Advancing the next era of national science",
-      "desc": "OpenAI outlines its commitment to advancing American science working with the U.S. Department of Energy and national labs to use frontier AI to accelerate discovery.",
-      "url": "https://openai.com/index/advancing-the-next-era-of-national-science",
-      "dateISO": "2026-07-22T12:00:00.000Z",
+      "id": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
+      "clusterId": "y8aew3",
+      "title": "Meta made its own AI detection system. It should have just used Google’s",
+      "desc": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the company's new AI model. But […]",
+      "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
+      "dateISO": "2026-07-22T11:00:00.000Z",
       "date": "JUL 22 2026",
-      "category": "general",
-      "catConfidence": 0.3,
+      "category": "product",
+      "catConfidence": 0.43,
       "family": "product",
-      "significance": 45,
+      "significance": 46,
       "impact": "notable",
-      "verification": "official",
+      "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/advancing-the-next-era-of-national-science"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
         }
       ],
-      "sourceName": "OpenAI",
+      "sourceName": "The Verge",
       "entityIds": [
-        "gpt"
+        "gemini"
       ]
     }
   ],
@@ -1167,7 +1169,7 @@
       "category": "policy",
       "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
       "summary": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI…",
-      "significance": 77,
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "date": "JUL 23 2026",
@@ -1444,6 +1446,18 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
+      "date": "JUL 22 2026",
+      "verification": "corroborated",
+      "impact": "notable",
+      "h": "Yope raises $12.3M to build a private social network without algorithms or ads",
+      "p": "Yope, a fast-growing social app focused on private groups of friends and family, has raised $12.3 million in seed funding. Instead of chasing creators and algorithmic feeds, the startup is betting that the future of social networking lies in small, private co…",
+      "url": "https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 2
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "JUL 23 2026",
       "verification": "single",
       "impact": "notable",
@@ -1522,18 +1536,6 @@
       "h": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name inv…",
       "p": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
       "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "JUL 23 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Google’s Gemini nears billion-user milestone",
-      "p": "Gemini had over 750 million monthly users in February.",
-      "url": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1674,11 +1676,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 208.56,
-      "changePct": -1.650476299299647,
+      "price": 207.745,
+      "changePct": -2.034802645988894,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 67780627,
+      "volume": 70203739,
       "ohlc": [
         {
           "d": "04-23",
@@ -2119,22 +2121,22 @@
           "o": 209.39500427246094,
           "h": 210.8686981201172,
           "l": 205.9600067138672,
-          "c": 208.55999755859375
+          "c": 207.7449951171875
         }
       ],
-      "relVolume": 0.49881095254495733,
-      "marketCap": 5088864000000
+      "relVolume": 0.516643109878691,
+      "marketCap": 5068978000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 381.68,
-      "changePct": -2.2185796340001507,
+      "price": 381.67,
+      "changePct": -2.22113618678503,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 18623070,
+      "volume": 19064799,
       "ohlc": [
         {
           "d": "04-23",
@@ -2575,22 +2577,22 @@
           "o": 389.9649963378906,
           "h": 391.7799987792969,
           "l": 377.3999938964844,
-          "c": 381.67999267578125
+          "c": 381.6700134277344
         }
       ],
-      "relVolume": 0.4273033002246988,
-      "marketCap": 2835882400000
+      "relVolume": 0.4374387000006195,
+      "marketCap": 2835808100000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 390.21,
-      "changePct": -1.6632660830429442,
+      "price": 390.01,
+      "changePct": -1.7136634245120426,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7343744,
+      "volume": 7516510,
       "ohlc": [
         {
           "d": "04-23",
@@ -3031,22 +3033,22 @@
           "o": 392.19000244140625,
           "h": 397.6000061035156,
           "l": 386.82000732421875,
-          "c": 390.2099914550781
+          "c": 390.010009765625
         }
       ],
-      "relVolume": 0.31424494073255343,
-      "marketCap": 1919833200000
+      "relVolume": 0.32163774220147723,
+      "marketCap": 1918849200000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 319.555,
-      "changePct": -6.587448888698575,
+      "price": 319.06,
+      "changePct": -6.732146226383534,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 50489561,
+      "volume": 51660680,
       "ohlc": [
         {
           "d": "04-23",
@@ -3487,22 +3489,22 @@
           "o": 321.1300048828125,
           "h": 324.489990234375,
           "l": 314.9100036621094,
-          "c": 319.55499267578125
+          "c": 319.05999755859375
         }
       ],
-      "relVolume": 1.5249633291305111,
-      "marketCap": 3898571000000
+      "relVolume": 1.5603352653025844,
+      "marketCap": 3892532000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 233.99,
-      "changePct": -4.435368731728871,
+      "price": 233.82,
+      "changePct": -4.504798245597636,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 30436993,
+      "volume": 31000261,
       "ohlc": [
         {
           "d": "04-23",
@@ -3943,22 +3945,22 @@
           "o": 236.32000732421875,
           "h": 238.3498992919922,
           "l": 232.05160522460938,
-          "c": 233.99000549316406
+          "c": 233.82000732421875
         }
       ],
-      "relVolume": 0.5458673499171568,
-      "marketCap": 2503693000000
+      "relVolume": 0.5559691891643235,
+      "marketCap": 2501874000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 605.885,
-      "changePct": -3.393812478997481,
+      "price": 606.62,
+      "changePct": -3.276621705907215,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 9280509,
+      "volume": 9436877,
       "ohlc": [
         {
           "d": "04-23",
@@ -4399,22 +4401,22 @@
           "o": 608.4099731445312,
           "h": 614.635009765625,
           "l": 597.219970703125,
-          "c": 605.885009765625
+          "c": 606.6199951171875
         }
       ],
-      "relVolume": 0.47447529387224224,
-      "marketCap": 1526830200000
+      "relVolume": 0.4824697640841902,
+      "marketCap": 1528682400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 414.905,
-      "changePct": -1.4968763333463506,
+      "price": 414.955,
+      "changePct": -1.48500866781542,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6105445,
+      "volume": 6287610,
       "ohlc": [
         {
           "d": "04-23",
@@ -4855,22 +4857,22 @@
           "o": 415.8399963378906,
           "h": 420.8399963378906,
           "l": 411.79998779296875,
-          "c": 414.9049987792969
+          "c": 414.9549865722656
         }
       ],
-      "relVolume": 0.4052083900229767,
-      "marketCap": 2153356949999.9998
+      "relVolume": 0.4172983828684672,
+      "marketCap": 2153616450000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 535.88,
-      "changePct": -2.978316182056772,
+      "price": 536.36,
+      "changePct": -2.891393052006354,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 18260597,
+      "volume": 18812227,
       "ohlc": [
         {
           "d": "04-23",
@@ -5311,22 +5313,22 @@
           "o": 544.739990234375,
           "h": 558.159912109375,
           "l": 525,
-          "c": 535.8798828125
+          "c": 536.3599853515625
         }
       ],
-      "relVolume": 0.6481020830335013,
-      "marketCap": 868125600000
+      "relVolume": 0.6676804435911419,
+      "marketCap": 868903200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 122.3,
-      "changePct": -1.8222659136449553,
+      "price": 122.14,
+      "changePct": -1.9507106936893936,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 18934375,
+      "volume": 19461664,
       "ohlc": [
         {
           "d": "04-23",
@@ -5767,22 +5769,22 @@
           "o": 125.93499755859375,
           "h": 126.38999938964844,
           "l": 120.7300033569336,
-          "c": 122.30000305175781
+          "c": 122.13999938964844
         }
       ],
-      "relVolume": 0.45200059536662013,
-      "marketCap": 293520000000
+      "relVolume": 0.4645880159669975,
+      "marketCap": 293136000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 119.64,
-      "changePct": -4.926889008797085,
+      "price": 119.86,
+      "changePct": -4.752062858840434,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 20406531,
+      "volume": 21157142,
       "ohlc": [
         {
           "d": "04-23",
@@ -6223,21 +6225,21 @@
           "o": 123.95999908447266,
           "h": 124.69999694824219,
           "l": 119.5,
-          "c": 119.63999938964844
+          "c": 119.86000061035156
         }
       ],
-      "relVolume": 0.5141806325547291,
-      "marketCap": 336188400000
+      "relVolume": 0.5330936775393245,
+      "marketCap": 336806600000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.47 – $3.19/hr",
-      "trend": "↓ 8% vs 9d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$1.99 – $3.19/hr",
+      "trend": "→ 2% vs 9d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6281,7 +6283,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-23T18:30:30.209Z",
+    "updatedAt": "2026-07-23T18:45:26.012Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6291,22 +6293,22 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 315,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 279,
         "validatedStoryCount": 176,
-        "storyCoverage": 0.9523809523809523,
-        "estimatedRelevantDiscussions": 185,
+        "storyCoverage": 0.8857142857142857,
+        "estimatedRelevantDiscussions": 199,
         "isEstimated": true,
-        "rawCommentHits": 2262,
+        "rawCommentHits": 2265,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.13262599469496023,
+        "commentCoverage": 0.13245033112582782,
         "limited": false,
-        "points": 4660,
+        "points": 4664,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 78
+            "count": 79
           },
           {
             "id": "writing",
@@ -6365,7 +6367,7 @@
           {
             "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
             "points": 1059,
-            "comments": 597,
+            "comments": 598,
             "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
             "date": "JUL 22 2026"
           }
@@ -6376,33 +6378,33 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1076,
+        "rawStoryHits": 1075,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.2788104089219331,
-        "estimatedRelevantDiscussions": 1069,
+        "storyCoverage": 0.27906976744186046,
+        "estimatedRelevantDiscussions": 1068,
         "isEstimated": true,
-        "rawCommentHits": 6512,
+        "rawCommentHits": 6514,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.04606879606879607,
+        "commentCoverage": 0.0460546515198035,
         "limited": false,
-        "points": 18102,
+        "points": 18105,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 134
+            "count": 133
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 74
+            "count": 76
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 33
+            "count": 32
           },
           {
             "id": "price",
@@ -6422,7 +6424,7 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 7
+            "count": 6
           },
           {
             "id": "multimodal",
@@ -6463,17 +6465,17 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 149,
-        "fetchedStoryCount": 149,
+        "fetchedStoryCount": 147,
         "validatedStoryCount": 136,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 136,
-        "isEstimated": false,
-        "rawCommentHits": 1250,
+        "storyCoverage": 0.9865771812080537,
+        "estimatedRelevantDiscussions": 138,
+        "isEstimated": true,
+        "rawCommentHits": 1249,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 298,
-        "commentCoverage": 0.24,
+        "commentCoverage": 0.2401921537229784,
         "limited": false,
-        "points": 3489,
+        "points": 3490,
         "themes": [
           {
             "id": "coding",
@@ -6548,10 +6550,10 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 536,
+        "rawStoryHits": 535,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 39,
-        "storyCoverage": 0.5597014925373134,
+        "storyCoverage": 0.5607476635514018,
         "estimatedRelevantDiscussions": 70,
         "isEstimated": true,
         "rawCommentHits": 10863,
@@ -6559,7 +6561,7 @@
         "validatedCommentCount": 153,
         "commentCoverage": 0.027616680475006903,
         "limited": false,
-        "points": 2597,
+        "points": 2598,
         "themes": [
           {
             "id": "coding",
@@ -6635,7 +6637,7 @@
         "validatedCommentCount": 236,
         "commentCoverage": 0.5093378607809848,
         "limited": false,
-        "points": 329,
+        "points": 330,
         "themes": [
           {
             "id": "local",
@@ -6686,7 +6688,7 @@
         "topThreads": [
           {
             "title": "Show HN: Cactus Hybrid: We taught Gemma 4 to know when it's wrong",
-            "points": 180,
+            "points": 181,
             "comments": 39,
             "url": "https://github.com/cactus-compute/cactus-hybrid",
             "date": "JUL 22 2026"
@@ -6705,18 +6707,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 73,
-        "fetchedStoryCount": 73,
+        "rawStoryHits": 77,
+        "fetchedStoryCount": 77,
         "validatedStoryCount": 65,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 65,
         "isEstimated": false,
-        "rawCommentHits": 1105,
+        "rawCommentHits": 1104,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 291,
-        "commentCoverage": 0.27149321266968324,
+        "commentCoverage": 0.2717391304347826,
         "limited": false,
-        "points": 1109,
+        "points": 1110,
         "themes": [
           {
             "id": "reasoning",
@@ -6792,10 +6794,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 37,
         "isEstimated": false,
-        "rawCommentHits": 4549,
+        "rawCommentHits": 4545,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 242,
-        "commentCoverage": 0.06594856012310397,
+        "commentCoverage": 0.066006600660066,
         "limited": false,
         "points": 3672,
         "themes": [
