@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-23T14:29:27.103Z",
-  "firstRun": true,
+  "updatedAt": "2026-07-23T18:48:49.541Z",
+  "firstRun": false,
   "sources": [
     {
       "name": "HF:Qwen",
@@ -48,9 +48,30 @@
       "count": 0
     }
   ],
-  "newCount": 0,
-  "newlyDetected": [],
+  "newCount": 1,
+  "newlyDetected": [
+    {
+      "id": "gh:anthropics/anthropic-sdk-python@v0.119.0",
+      "label": "Claude",
+      "title": "anthropic-sdk-python v0.119.0",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
+      "at": "2026-07-23T17:34:23.000Z",
+      "source": "github"
+    }
+  ],
   "entries": [
+    {
+      "id": "gh:anthropics/anthropic-sdk-python@v0.119.0",
+      "source": "github",
+      "org": "Anthropic",
+      "label": "Claude",
+      "title": "anthropic-sdk-python v0.119.0",
+      "kind": "sdk-release",
+      "at": "2026-07-23T17:34:23.000Z",
+      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.119.0",
+      "isNew": true,
+      "firstSeenAt": "2026-07-23T18:48:49.541Z"
+    },
     {
       "id": "gh:googleapis/python-genai@v2.14.0",
       "source": "github",
@@ -192,18 +213,6 @@
       "kind": "sdk-release",
       "at": "2026-07-02T19:07:55.000Z",
       "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.116.0",
-      "isNew": false,
-      "firstSeenAt": "2026-07-23T14:29:27.103Z"
-    },
-    {
-      "id": "gh:anthropics/anthropic-sdk-python@v0.115.1",
-      "source": "github",
-      "org": "Anthropic",
-      "label": "Claude",
-      "title": "anthropic-sdk-python v0.115.1",
-      "kind": "sdk-release",
-      "at": "2026-07-01T21:54:06.000Z",
-      "url": "https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.115.1",
       "isNew": false,
       "firstSeenAt": "2026-07-23T14:29:27.103Z"
     },
@@ -413,6 +422,7 @@
     }
   ],
   "knownIds": [
+    "gh:anthropics/anthropic-sdk-python@v0.119.0",
     "gh:googleapis/python-genai@v2.14.0",
     "gh:openai/openai-python@v2.47.0",
     "gh:anthropics/anthropic-sdk-python@v0.118.0",
@@ -425,7 +435,6 @@
     "gh:openai/openai-python@v2.45.0",
     "gh:googleapis/python-genai@v2.11.0",
     "gh:anthropics/anthropic-sdk-python@v0.116.0",
-    "gh:anthropics/anthropic-sdk-python@v0.115.1",
     "hf:mistralai/Leanstral-1.5-119B-A6B",
     "hf:deepseek-ai/eagle3_gemma4_12b_ttt7",
     "hf:deepseek-ai/eagle3_qwen3_14b_ttt7",
@@ -477,6 +486,7 @@
     "hf:meta-llama/Llama-4-Scout-17B-16E-Instruct-Original",
     "hf:meta-llama/Llama-4-Scout-17B-16E-Original",
     "hf:meta-llama/Llama-4-Maverick-17B-128E",
-    "hf:meta-llama/Llama-4-Scout-17B-16E"
+    "hf:meta-llama/Llama-4-Scout-17B-16E",
+    "gh:anthropics/anthropic-sdk-python@v0.115.1"
   ]
 }
