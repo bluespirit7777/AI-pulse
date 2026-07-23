@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-23T18:45:26.012Z",
+  "updatedAt": "2026-07-23T19:00:36.733Z",
   "build": {
-    "sha": "9905e392bb1d41078c87c191b6e4ac04c4e81b5e",
-    "shortSha": "9905e39",
+    "sha": "6e4c8a76c1adb273db91e4a6a8e94ca1194af292",
+    "shortSha": "6e4c8a7",
     "ref": "main",
-    "builtAt": "2026-07-23T18:45:38.584Z"
+    "builtAt": "2026-07-23T19:00:50.776Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 13.8,
-    "estimatedDatasets": 4,
-    "buildSha": "9905e39",
-    "lastSuccessfulUpdate": "2026-07-23T18:45:26.012Z"
+    "estimatedDatasets": 3,
+    "buildSha": "6e4c8a7",
+    "lastSuccessfulUpdate": "2026-07-23T19:00:36.733Z"
   },
   "ticker": [
     "OPENAI MAKES CHATGPT HEALTH AVAILABLE TO ALL US USERS",
     "APPLE’S OPENAI LAWSUIT IS ABOUT WHO GETS TO DEFINE THE POST-SMARTPHONE ERA",
+    "CLAUDE’S VOICE MODE IS NOW AVAILABLE FOR OPUS AND SONNET",
     "WORK WITH DOCS, SHEETS, AND SLIDES IN CHATGPT",
     "GOOGLE JUST HAD ITS FIRST NEGATIVE CASH FLOW QUARTER DUE TO MASSIVE AI SPENDING",
     "TREASURY THREATENS SANCTIONS AFTER WHITE HOUSE CLAIMS MOONSHOT DISTILLED ANTHROPIC’S FABLE",
     "CHINA’S OPEN AI MODELS ARE CHALLENGING SILICON VALLEY’S PLAYBOOK",
     "OPENAI’S AI SPENDING SPREE HAS BALLOONED TO $750B",
     "AMD COMMITS UP TO $5 BILLION TO ANTHROPIC",
-    "BUILDING AI INFRASTRUCTURE WITH THE EFFINGHAM COUNTY COMMUNITY",
-    "MENLO VENTURES’ MATT MURPHY EXPLAINS WHAT AI STARTUPS FOUNDERS MUST DO DIFFERENTLY"
+    "BUILDING AI INFRASTRUCTURE WITH THE EFFINGHAM COUNTY COMMUNITY"
   ],
   "signals": [
     {
@@ -88,6 +88,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+      "clusterId": "764nmr",
+      "title": "Claude’s voice mode is now available for Opus and Sonnet",
+      "desc": "Until now, voice mode has only been available on Claude Haiku, Anthropic's faster but less powerful model. Now the company is making its Opus and Sonnet models available in voice mode, and extending its reach into apps like Gmail, Slack, and Canva. When Anthropic launched voice mode earlier this year, it was primarily focused on […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+      "dateISO": "2026-07-23T19:00:00.000Z",
+      "date": "JUL 23 2026",
+      "category": "product",
+      "catConfidence": 0.78,
+      "family": "product",
+      "significance": 74,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -275,58 +301,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
-      "clusterId": "wyepjs",
-      "title": "Menlo Ventures’ Matt Murphy explains what AI startups founders must do differently",
-      "desc": "Anthropic leaped to a $47 billion revenue run rate by May, compared to $9 billion in 2025. It’s the kind of growth that Menlo Ventures’ Matt Murphy says he’s never seen in 25 years of investing, not in the internet wave, not in mobile, not in the first cloud boom. Menlo led Anthropic’s $500M Series D, and Murphy has had a front-row seat as the company went from a pre-revenue, […]",
-      "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/",
-      "dateISO": "2026-07-22T14:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.63,
-      "family": "market",
-      "significance": 62,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/podcast/menlo-ventures-matt-murphy-explains-what-ai-startups-founders-must-do-differently/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "clusterId": "14ot9ur",
-      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
-      "desc": "Google commits $40M in AI tokens and credits for the Genesis Mission",
-      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "dateISO": "2026-07-22T13:38:54.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 62,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/tech/969382/samsung-google-smart-glasses-gentle-monster-warby-parker",
       "clusterId": "1j3fu5a",
       "title": "Here’s what Samsung’s smart glasses actually look like",
@@ -348,6 +322,32 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
+      "clusterId": "14ot9ur",
+      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
+      "desc": "Google commits $40M in AI tokens and credits for the Genesis Mission",
+      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
+      "dateISO": "2026-07-22T13:38:54.000Z",
+      "date": "JUL 22 2026",
+      "category": "capital",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 61,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
       ]
@@ -376,6 +376,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+      "clusterId": "1op9g6f",
+      "title": "Anthropic updates Claude voice mode with more capable models",
+      "desc": "Claude's new voice model will let you reschedule your meeting or draft an email",
+      "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+      "dateISO": "2026-07-23T19:00:00.000Z",
+      "date": "JUL 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -517,32 +543,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/health-in-chatgpt",
-      "clusterId": "1xinwnz",
-      "title": "Launching Health in ChatGPT",
-      "desc": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
-      "url": "https://openai.com/index/health-in-chatgpt",
-      "dateISO": "2026-07-23T00:00:00.000Z",
-      "date": "JUL 23 2026",
-      "category": "product",
-      "catConfidence": 0.43,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/health-in-chatgpt"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/ntt-data",
       "clusterId": "1sgidqg",
       "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
@@ -621,29 +621,29 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
-      "clusterId": "p2iamt",
-      "title": "Experts say exploiting Anthropic’s Fable isn’t how Kimi K3 got so good",
-      "desc": "\"I don't think you get a model this strong and this quickly on the heels of Fable doing strictly distillation,\" one expert told TechCrunch.",
-      "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
-      "dateISO": "2026-07-23T11:00:00.000Z",
+      "id": "https://openai.com/index/health-in-chatgpt",
+      "clusterId": "1xinwnz",
+      "title": "Launching Health in ChatGPT",
+      "desc": "Health in ChatGPT now lets eligible U.S. users securely connect medical records and Apple Health to get more personalized insights and better understand their health.",
+      "url": "https://openai.com/index/health-in-chatgpt",
+      "dateISO": "2026-07-23T00:00:00.000Z",
       "date": "JUL 23 2026",
-      "category": "general",
-      "catConfidence": 0.3,
+      "category": "product",
+      "catConfidence": 0.43,
       "family": "product",
       "significance": 53,
       "impact": "notable",
-      "verification": "single",
+      "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/health-in-chatgpt"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "OpenAI",
       "entityIds": [
-        "claude"
+        "chatgpt"
       ]
     },
     {
@@ -673,6 +673,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
+      "clusterId": "p2iamt",
+      "title": "Experts say exploiting Anthropic’s Fable isn’t how Kimi K3 got so good",
+      "desc": "\"I don't think you get a model this strong and this quickly on the heels of Fable doing strictly distillation,\" one expert told TechCrunch.",
+      "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
+      "dateISO": "2026-07-23T11:00:00.000Z",
+      "date": "JUL 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
       "clusterId": "1u60nl7",
       "title": "Introducing the ChatGPT for small business program",
@@ -697,6 +723,40 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVeFZoaVpfX1hnTlJPS05nQWZYRnB6bUdOc3pzSmlyX3dpN3BleUlVQm53Z3Bxd29JOUw1MENDMWk5VF9CX1VSU0Q2eV9zMXZWNUVOb2V4N2VaUQ?oc=5",
+      "clusterId": "hg7ob7",
+      "title": "Introducing Claude Opus 4.8",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVeFZoaVpfX1hnTlJPS05nQWZYRnB6bUdOc3pzSmlyX3dpN3BleUlVQm53Z3Bxd29JOUw1MENDMWk5VF9CX1VSU0Q2eV9zMXZWNUVOb2V4N2VaUQ?oc=5",
+      "dateISO": "2026-05-28T07:00:00.000Z",
+      "date": "MAY 28 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVeFZoaVpfX1hnTlJPS05nQWZYRnB6bUdOc3pzSmlyX3dpN3BleUlVQm53Z3Bxd29JOUw1MENDMWk5VF9CX1VSU0Q2eV9zMXZWNUVOb2V4N2VaUQ?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -953,7 +1013,7 @@
       "category": "capital",
       "catConfidence": 0.78,
       "family": "market",
-      "significance": 48,
+      "significance": 47,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -1052,82 +1112,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
-      "clusterId": "708tpf",
-      "title": "Anthropic releases Claude Science, a product aimed at researchers, the pharma industry",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5",
-      "dateISO": "2026-06-30T07:00:00.000Z",
-      "date": "JUN 30 2026",
-      "category": "research",
-      "catConfidence": 0.43,
-      "family": "research",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 7,
-      "sources": [
-        {
-          "name": "Massachusetts Biotechnology Council",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNM3loSnFaZjI2VEo0MS1ZQWY3NWdTaFJfd2NoZWNXRkl1TEwtelV3c0U2SFdac1RqbFl1dlFBOEE4b3EwTU1fc1JUenNiVG5zUEpUdVkxZjNpZnRJWmpqU0RGbmQ3ZTVlMnJncFJJUGMwbE4zbkdfU2wzU2Zsb0FSUDBtTnowQUNDYmxhLUs1T3hHY2lqWnB5VW9Tb1VuTDdfOEFTSFpTWXY5dmhXbFRJbV9TOW9wUFFydVZoUlJmSmtwZw?oc=5"
-        },
-        {
-          "name": "STAT",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
-        },
-        {
-          "name": "Northeastern Global News",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWFMLUFicUpQcmdVbGVZS1VmekY5c3Bmc0pFQmxtX01mRnd0aFNmNTVkUm45R1FWMy1HWFlfOEU3TWpsZEZDeUZiOUs1QXNFRE1jQ2ktRTgzT2p1dU1hbkM5WWhZVXlRckVhaUU4Y0huZ19nLWctVVEzVW0weDdWRU45dlAtTjVFSFdIcW55YXVWa0dGS3dLY3diUDJsV19QdVZQLUluWWFwNkZWX0pVc2VBWWlwbU0?oc=5"
-        },
-        {
-          "name": "MIT Technology Review",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
-        }
-      ],
-      "sourceName": "STAT",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-      "clusterId": "y8aew3",
-      "title": "Meta made its own AI detection system. It should have just used Google’s",
-      "desc": "IIn March, Meta's Oversight Board called on the company to \"meet its public commitments and employ its own tools\" to help quell the spread of deceptive generative AI content across platforms. Meta responded in July by introducing Content Seal - an invisible watermarking technology that flags images generated by the company's new AI model. But […]",
-      "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
-      "dateISO": "2026-07-22T11:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "product",
-      "catConfidence": 0.43,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
       ]
     }
   ],
@@ -1240,7 +1224,7 @@
     "copilot": 1,
     "perplexity": 0,
     "gpt": 78,
-    "claude": 76,
+    "claude": 75,
     "gemini": 35,
     "grok": 0,
     "llama": 0,
@@ -1263,6 +1247,17 @@
       "logoKey": "anthropic",
       "items": [
         {
+          "h": "Claude’s voice mode is now available for Opus and Sonnet",
+          "d": "JUL 23 2026",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "high"
+        },
+        {
           "h": "Introducing Claude for Teachers",
           "d": "JUL 14 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
@@ -1277,17 +1272,6 @@
           "h": "Introducing a way to reflect on how you use Claude",
           "d": "JUL 09 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Introducing Claude Sonnet 5",
-          "d": "JUN 30 2026",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Anthropic",
@@ -1444,6 +1428,30 @@
   ],
   "wire": [
     {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "JUL 23 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Anthropic updates Claude voice mode with more capable models",
+      "p": "Claude's new voice model will let you reschedule your meeting or draft an email",
+      "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "JUL 23 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Meta’s New Feel-Good AI Ad Uses a Song About the World Ending",
+      "p": "The clip features the David Bowie track “Five Years,” which includes lyrics such as “Earth was really dying (dying).”",
+      "url": "https://www.wired.com/story/meta-david-bowie-apocalypse-ad-is-optimistic-actually/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 22 2026",
@@ -1513,30 +1521,6 @@
       "p": "Google continues to report big quarterly revenue, but its AI spending has skyrocketed.",
       "url": "https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending/",
       "sourceName": "Ars Technica",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 23 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Nvidia is sending GPUs to the moon",
-      "p": "If there's a place in the universe without GPUs, Nvidia is sending them there.",
-      "url": "https://techcrunch.com/2026/07/23/nvidia-is-sending-gpus-to-the-moon/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 23 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name inv…",
-      "p": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
-      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1676,11 +1660,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 207.745,
-      "changePct": -2.034802645988894,
+      "price": 207.69,
+      "changePct": -2.0607352482780437,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 70203739,
+      "volume": 72293079,
       "ohlc": [
         {
           "d": "04-23",
@@ -2121,22 +2105,22 @@
           "o": 209.39500427246094,
           "h": 210.8686981201172,
           "l": 205.9600067138672,
-          "c": 207.7449951171875
+          "c": 207.69000244140625
         }
       ],
-      "relVolume": 0.516643109878691,
-      "marketCap": 5068978000000
+      "relVolume": 0.5320189734803995,
+      "marketCap": 5067636000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 381.67,
-      "changePct": -2.22113618678503,
+      "price": 382.1,
+      "changePct": -2.110977689112392,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 19064799,
+      "volume": 19535007,
       "ohlc": [
         {
           "d": "04-23",
@@ -2577,22 +2561,22 @@
           "o": 389.9649963378906,
           "h": 391.7799987792969,
           "l": 377.3999938964844,
-          "c": 381.6700134277344
+          "c": 382.1000061035156
         }
       ],
-      "relVolume": 0.4374387000006195,
-      "marketCap": 2835808100000
+      "relVolume": 0.44822754578125906,
+      "marketCap": 2839003000000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 390.01,
-      "changePct": -1.7136634245120426,
+      "price": 390.025,
+      "changePct": -1.7098872769977242,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7516510,
+      "volume": 7684119,
       "ohlc": [
         {
           "d": "04-23",
@@ -3033,22 +3017,22 @@
           "o": 392.19000244140625,
           "h": 397.6000061035156,
           "l": 386.82000732421875,
-          "c": 390.010009765625
+          "c": 390.0249938964844
         }
       ],
-      "relVolume": 0.32163774220147723,
-      "marketCap": 1918849200000
+      "relVolume": 0.32880987133223705,
+      "marketCap": 1918923000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 319.06,
-      "changePct": -6.732146226383534,
+      "price": 318.965,
+      "changePct": -6.7599170532770785,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 51660680,
+      "volume": 52671268,
       "ohlc": [
         {
           "d": "04-23",
@@ -3489,22 +3473,22 @@
           "o": 321.1300048828125,
           "h": 324.489990234375,
           "l": 314.9100036621094,
-          "c": 319.05999755859375
+          "c": 318.9649963378906
         }
       ],
-      "relVolume": 1.5603352653025844,
-      "marketCap": 3892532000000
+      "relVolume": 1.59085859745949,
+      "marketCap": 3891372999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 233.82,
-      "changePct": -4.504798245597636,
+      "price": 233.73,
+      "changePct": -4.541560179204299,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 31000261,
+      "volume": 31652914,
       "ohlc": [
         {
           "d": "04-23",
@@ -3945,22 +3929,22 @@
           "o": 236.32000732421875,
           "h": 238.3498992919922,
           "l": 232.05160522460938,
-          "c": 233.82000732421875
+          "c": 233.72999572753906
         }
       ],
-      "relVolume": 0.5559691891643235,
-      "marketCap": 2501874000000
+      "relVolume": 0.5676740893009921,
+      "marketCap": 2500911000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 606.62,
-      "changePct": -3.276621705907215,
+      "price": 606.67,
+      "changePct": -3.2686513319526456,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 9436877,
+      "volume": 10151017,
       "ohlc": [
         {
           "d": "04-23",
@@ -4401,22 +4385,22 @@
           "o": 608.4099731445312,
           "h": 614.635009765625,
           "l": 597.219970703125,
-          "c": 606.6199951171875
+          "c": 606.6699829101562
         }
       ],
-      "relVolume": 0.4824697640841902,
-      "marketCap": 1528682400000
+      "relVolume": 0.5189808850114931,
+      "marketCap": 1528808400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 414.955,
-      "changePct": -1.48500866781542,
+      "price": 414.35,
+      "changePct": -1.6286378506512977,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6287610,
+      "volume": 6477892,
       "ohlc": [
         {
           "d": "04-23",
@@ -4857,22 +4841,22 @@
           "o": 415.8399963378906,
           "h": 420.8399963378906,
           "l": 411.79998779296875,
-          "c": 414.9549865722656
+          "c": 414.3500061035156
         }
       ],
-      "relVolume": 0.4172983828684672,
-      "marketCap": 2153616450000
+      "relVolume": 0.42992708771641064,
+      "marketCap": 2150476500000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 536.36,
-      "changePct": -2.891393052006354,
+      "price": 535,
+      "changePct": -3.1375979004074863,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 18812227,
+      "volume": 19214731,
       "ohlc": [
         {
           "d": "04-23",
@@ -5313,22 +5297,22 @@
           "o": 544.739990234375,
           "h": 558.159912109375,
           "l": 525,
-          "c": 536.3599853515625
+          "c": 535.0001220703125
         }
       ],
-      "relVolume": 0.6676804435911419,
-      "marketCap": 868903200000
+      "relVolume": 0.6819660488662223,
+      "marketCap": 866700000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 122.14,
-      "changePct": -1.9507106936893936,
+      "price": 122.445,
+      "changePct": -1.7058681907408657,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 19461664,
+      "volume": 20072406,
       "ohlc": [
         {
           "d": "04-23",
@@ -5769,22 +5753,22 @@
           "o": 125.93499755859375,
           "h": 126.38999938964844,
           "l": 120.7300033569336,
-          "c": 122.13999938964844
+          "c": 122.44499969482422
         }
       ],
-      "relVolume": 0.4645880159669975,
-      "marketCap": 293136000000
+      "relVolume": 0.4791676230369642,
+      "marketCap": 293868000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 119.86,
-      "changePct": -4.752062858840434,
+      "price": 120.1,
+      "changePct": -4.561346178330433,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 21157142,
+      "volume": 21877174,
       "ohlc": [
         {
           "d": "04-23",
@@ -6225,11 +6209,11 @@
           "o": 123.95999908447266,
           "h": 124.69999694824219,
           "l": 119.5,
-          "c": 119.86000061035156
+          "c": 120.0999984741211
         }
       ],
-      "relVolume": 0.5330936775393245,
-      "marketCap": 336806600000
+      "relVolume": 0.5512362275503796,
+      "marketCap": 337481000000
     }
   ],
   "compute": [
@@ -6244,10 +6228,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.39/hr",
-      "trend": "↑ 4% vs 9d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$2.93 – $4.91/hr",
+      "trend": "→ 2% vs 9d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6283,7 +6267,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-23T18:45:26.012Z",
+    "updatedAt": "2026-07-23T19:00:36.733Z",
     "window": "30D",
     "source": "Hacker News",
     "models": [
@@ -6293,17 +6277,17 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 315,
-        "fetchedStoryCount": 279,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 176,
-        "storyCoverage": 0.8857142857142857,
-        "estimatedRelevantDiscussions": 199,
+        "storyCoverage": 0.9523809523809523,
+        "estimatedRelevantDiscussions": 185,
         "isEstimated": true,
-        "rawCommentHits": 2265,
+        "rawCommentHits": 2269,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.13245033112582782,
+        "commentCoverage": 0.13221683561040107,
         "limited": false,
-        "points": 4664,
+        "points": 4675,
         "themes": [
           {
             "id": "reasoning",
@@ -6311,14 +6295,14 @@
             "count": 79
           },
           {
-            "id": "writing",
-            "label": "Writing",
+            "id": "coding",
+            "label": "Coding",
             "count": 32
           },
           {
-            "id": "coding",
-            "label": "Coding",
-            "count": 31
+            "id": "writing",
+            "label": "Writing",
+            "count": 32
           },
           {
             "id": "price",
@@ -6366,8 +6350,8 @@
           },
           {
             "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
-            "points": 1059,
-            "comments": 598,
+            "points": 1063,
+            "comments": 600,
             "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
             "date": "JUL 22 2026"
           }
@@ -6384,17 +6368,17 @@
         "storyCoverage": 0.27906976744186046,
         "estimatedRelevantDiscussions": 1068,
         "isEstimated": true,
-        "rawCommentHits": 6514,
+        "rawCommentHits": 6509,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 294,
-        "commentCoverage": 0.0460546515198035,
+        "commentCoverage": 0.04609002919035182,
         "limited": false,
-        "points": 18105,
+        "points": 18106,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 133
+            "count": 132
           },
           {
             "id": "reasoning",
@@ -6404,7 +6388,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 32
+            "count": 33
           },
           {
             "id": "price",
@@ -6414,7 +6398,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 14
+            "count": 13
           },
           {
             "id": "safety",
@@ -6434,7 +6418,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 3
+            "count": 4
           },
           {
             "id": "context",
@@ -6465,11 +6449,11 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 149,
-        "fetchedStoryCount": 147,
+        "fetchedStoryCount": 149,
         "validatedStoryCount": 136,
-        "storyCoverage": 0.9865771812080537,
-        "estimatedRelevantDiscussions": 138,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 136,
+        "isEstimated": false,
         "rawCommentHits": 1249,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 298,
@@ -6556,10 +6540,10 @@
         "storyCoverage": 0.5607476635514018,
         "estimatedRelevantDiscussions": 70,
         "isEstimated": true,
-        "rawCommentHits": 10863,
+        "rawCommentHits": 10862,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 153,
-        "commentCoverage": 0.027616680475006903,
+        "commentCoverage": 0.02761922297919352,
         "limited": false,
         "points": 2598,
         "themes": [
@@ -6632,10 +6616,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": false,
-        "rawCommentHits": 589,
+        "rawCommentHits": 588,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 236,
-        "commentCoverage": 0.5093378607809848,
+        "commentCoverage": 0.5102040816326531,
         "limited": false,
         "points": 330,
         "themes": [
@@ -6707,8 +6691,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 77,
-        "fetchedStoryCount": 77,
+        "rawStoryHits": 83,
+        "fetchedStoryCount": 83,
         "validatedStoryCount": 65,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 65,
@@ -6721,14 +6705,14 @@
         "points": 1110,
         "themes": [
           {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 66
-          },
-          {
             "id": "price",
             "label": "Price",
             "count": 66
+          },
+          {
+            "id": "reasoning",
+            "label": "Reasoning",
+            "count": 65
           },
           {
             "id": "coding",
@@ -6910,6 +6894,17 @@
         "themes": [
           "coding"
         ],
+        "excerpt": "I just tried this prompt in ChatGPT: Show me all environment variables that start with PIP_ or UV_ or CAAS_ARTIFACTORY_ I got back a bunch of values like this:…",
+        "source": "Hacker News",
+        "author": "simonw",
+        "publishedAt": "2026-07-23T18:58:50.000Z",
+        "url": "https://news.ycombinator.com/item?id=49026454"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "coding"
+        ],
         "excerpt": "…impossible to create tools like its groundbreaking chatbot ChatGPT without access to copyrighted material, as pressure grows on artificial intelligence firms over the content…",
         "source": "Hacker News",
         "author": "hashstring",
@@ -6927,18 +6922,6 @@
         "author": "kingkongjaffa",
         "publishedAt": "2026-07-21T09:12:31.000Z",
         "url": "https://news.ycombinator.com/item?id=48989871"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
-          "coding",
-          "writing"
-        ],
-        "excerpt": "Opus doesn't have access to an image model, while ChatGPT does (it's not multi-modal, but it can prompt OpenAI's image model). So Opus by default is forced to write code to…",
-        "source": "Hacker News",
-        "author": "vidarh",
-        "publishedAt": "2026-07-22T08:40:12.000Z",
-        "url": "https://news.ycombinator.com/item?id=49003571"
       },
       {
         "modelId": "claude",
