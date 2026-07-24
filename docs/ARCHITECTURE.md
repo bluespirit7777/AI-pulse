@@ -12,6 +12,7 @@ publisher RSS + official lab YouTube (Atom) + Yahoo Finance
         ▼
 scripts/update-data.mjs ──uses──> scripts/lib/signals.mjs  (clustering, scoring, verification, topics, community ranking)
                           ├──uses──> scripts/lib/discourse.mjs (official-forum search URL + response parsing for Community Pulse)
+                          ├──uses──> scripts/lib/github-discussions.mjs (official GitHub Discussions GraphQL body + response parsing for Community Pulse; needs GITHUB_TOKEN)
                           ├──uses──> scripts/lib/history.mjs (ranges, event history)
                           ├──uses──> scripts/lib/stocks.mjs  (returns, correlations, volumes)
                           ├──uses──> scripts/lib/models.mjs  (canonical model registry — one source of truth)
@@ -135,6 +136,7 @@ so the flip is an instant swap, not a spin.
 | `scripts/lib/compute.mjs` | Pure, tested: merges live Vast.ai + RunPod GPU offers into a real price range, filters marketplace placeholder prices, computes a real trend from rolling history. |
 | `scripts/lib/text.mjs` | Pure, tested: HTML entity decoding + tag stripping shared by feed parsing and HN comment sanitizing (entities MUST decode before tags strip, or entity-encoded tags survive). |
 | `scripts/lib/discourse.mjs` | Pure, tested: Discourse forum search URL building + response parsing for Community Pulse's first-party source (OpenAI & Google official forums). |
+| `scripts/lib/github-discussions.mjs` | Pure, tested: GitHub Discussions GraphQL request-body building + response parsing for Community Pulse's first-party source on labs with no public forum (Claude, Grok, Qwen, plus Gemini). |
 | `scripts/lib/chart.mjs` | Pure, tested: shapes/rounds the daily OHLC candle series and the price→pixel scaling for the stock drawer's native SVG candlestick chart. |
 | `scripts/validate.mjs` | Schema/sanity gate run in CI (latest.json incl. dataHealth + community + range.json + stock-network.json). |
 | `test/*.test.mjs` | Unit tests (`node --test`). |

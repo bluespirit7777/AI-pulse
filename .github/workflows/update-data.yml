@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  discussions: read   # Community Pulse's GitHub Discussions source (reads PUBLIC discussions on other labs' repos — this scope only governs this repo's own, harmless to declare)
 
 concurrency:
   group: update-data
@@ -27,6 +28,8 @@ jobs:
           node-version: '20'
 
       - name: Fetch latest data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # Community Pulse's GitHub Discussions source (GraphQL needs auth even for public repos); absent locally is a graceful per-model skip, never an error
         run: node scripts/update-data.mjs
 
       - name: Validate data + run unit tests

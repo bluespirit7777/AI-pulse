@@ -43,6 +43,7 @@ import { buildCandleSeries } from './lib/chart.mjs';
 import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
 import { shortDateUTC } from './lib/dates.mjs';
 import { buildDiscourseSearchUrl, discourseAfterDate, parseDiscourseSearch } from './lib/discourse.mjs';
+import { buildDiscussionsQueryBody, buildAuthHeaders, parseDiscussionsResponse, windowedDiscussions } from './lib/github-discussions.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -281,9 +282,28 @@ const DISCOURSE_FORUMS = {
   gemini: { base: 'https://discuss.ai.google.dev', sourceName: 'Google AI forum', query: 'Gemini 3' },
 };
 
+// Official GitHub Discussions boards on each lab's own tooling repo — fills
+// the gap for labs with no public Discourse forum (Anthropic, xAI, Alibaba),
+// confirmed active with real, dated, moderator-answered threads during
+// research. Added for Gemini too (alongside its Discourse forum) since
+// gemini-cli's board is extremely high-volume and genuinely additive. Unlike
+// Discourse this needs a Bearer token for every call (GraphQL has no
+// anonymous access even for public repos) — GITHUB_DISCUSSIONS_TOKEN below.
+const GITHUB_DISCUSSIONS_REPOS = {
+  claude: { owner: 'anthropics', name: 'claude-code-action', sourceName: 'Anthropic GitHub' },
+  gemini: { owner: 'google-gemini', name: 'gemini-cli', sourceName: 'Google GitHub' },
+  grok: { owner: 'xai-org', name: 'grok-build', sourceName: 'xAI GitHub' },
+  qwen: { owner: 'QwenLM', name: 'Qwen3.6', sourceName: 'Qwen GitHub' },
+};
+const GITHUB_DISCUSSIONS_FETCH = 15; // newest N discussions per repo per run
+
 const COMMUNITY_MODELS = MODEL_KEYS.map((key) => {
   const m = MODEL_REGISTRY[key];
-  return { key, model: m.name, version: m.version, org: m.org, q: m.hnQuery, discourse: DISCOURSE_FORUMS[key] || null };
+  return {
+    key, model: m.name, version: m.version, org: m.org, q: m.hnQuery,
+    discourse: DISCOURSE_FORUMS[key] || null,
+    ghDiscussions: GITHUB_DISCUSSIONS_REPOS[key] || null,
+  };
 });
 
 // Strip HTML/entities from an HN comment and cut to ~180 chars on word
@@ -350,7 +370,27 @@ async function fetchModelDiscourse(forum, sinceMs) {
   return { sourceName: forum.sourceName, discussions: parsed.topics.length, isEstimated: parsed.more, posts: parsed.posts };
 }
 
-async function fetchModelCommunity(m, now, usedCommentIds) {
+// One model's official GitHub Discussions board. GraphQL requires a Bearer
+// token for every request (even public repos) — the caller only invokes this
+// when a token is present; there's no "unauthenticated but limited" fallback
+// the way Discourse/HN have. Discussions being disabled on the target repo, or
+// the token lacking `discussions:read`, surfaces as a normal ok:false — caught
+// like any other per-source failure, never crashes the model's whole fetch.
+const GITHUB_GRAPHQL_URL = 'https://api.github.com/graphql';
+
+async function fetchModelGithubDiscussions(repoCfg, token, sinceMs) {
+  const body = buildDiscussionsQueryBody({ owner: repoCfg.owner, name: repoCfg.name, first: GITHUB_DISCUSSIONS_FETCH });
+  const res = await fetchWithTimeout(GITHUB_GRAPHQL_URL, {
+    method: 'POST', headers: buildAuthHeaders(token), body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const parsed = parseDiscussionsResponse(await res.json(), { owner: repoCfg.owner, name: repoCfg.name, label: repoCfg.sourceName, org: repoCfg.owner });
+  if (!parsed.ok) throw new Error(parsed.errorMessage || 'unknown GraphQL error');
+  const { inWindow, isEstimated } = windowedDiscussions(parsed.discussions, new Date(sinceMs).toISOString());
+  return { sourceName: repoCfg.sourceName, discussions: inWindow.length, isEstimated, items: inWindow };
+}
+
+async function fetchModelCommunity(m, now, usedCommentIds, ghToken) {
   const sinceMs = now - 30 * 24 * 3600 * 1000;
   const since = Math.floor(sinceMs / 1000); // last 30 days (HN Algolia uses epoch seconds)
   const base = 'https://hn.algolia.com/api/v1/search';
@@ -362,9 +402,10 @@ async function fetchModelCommunity(m, now, usedCommentIds) {
     limited: true, points: 0, themes: [], topThreads: [], sources: [],
   };
   const comments = [];             // HN representative voices
-  const forumComments = [];        // first-party forum representative voices
+  const forumComments = [];        // first-party Discourse forum representative voices
+  const ghComments = [];           // first-party GitHub Discussions representative voices
   const themeCounts = {};          // combined across sources; model.themes built at the end
-  const chosenTexts = [];          // near-duplicate guard shared across HN + forum
+  const chosenTexts = [];          // near-duplicate guard shared across all sources
   let hnDiscussions = 0, hnEstimated = true;
   try {
     const [storiesData, commentsData] = await Promise.all([
@@ -485,18 +526,58 @@ async function fetchModelCommunity(m, now, usedCommentIds) {
     }
   }
 
-  // ---- combine: interleave voices (forum-first, so the first-party source is
-  // visible in the top few), rebuild themes over both, honest per-source totals ----
+  // ---- official GitHub Discussions board, when one is configured AND a token
+  // is available. GraphQL needs auth for every call (unlike Discourse/HN), so
+  // a missing token is a silent, expected skip — not an error — same
+  // graceful-absence contract as YOUTUBE_API_KEY: the source just doesn't
+  // contribute this run rather than failing the whole model. ----
+  let ghDiscussions = 0, ghEstimated = false, ghSourceName = null;
+  if (m.ghDiscussions && ghToken) {
+    try {
+      const gh = await fetchModelGithubDiscussions(m.ghDiscussions, ghToken, sinceMs);
+      ghSourceName = gh.sourceName;
+      ghDiscussions = gh.discussions;
+      ghEstimated = gh.isEstimated;
+      const scored = gh.items.map((d) => ({ d, topics: classifyTopics(`${d.title} ${d.bodyText}`).slice(0, 2) }));
+      for (const gd of scored) for (const tid of gd.topics) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
+      // up to 2 representative voices, newest-first (items already sorted),
+      // deduped against every other source; one voice per discussion thread.
+      for (const gd of scored) {
+        if (ghComments.length >= 2) break;
+        if (!gd.topics.length) continue;
+        const uid = `gh:${gd.d.id}`;
+        if (usedCommentIds.has(uid)) continue;
+        const text = gd.d.bodyText || gd.d.title;
+        if (chosenTexts.some((t) => similarity(t, text) > 0.6)) continue;
+        chosenTexts.push(text);
+        usedCommentIds.add(uid);
+        ghComments.push({
+          modelId: m.key, themes: gd.topics,
+          excerpt: sanitizeExcerpt(text, 180),
+          source: gh.sourceName, author: gd.d.author,
+          publishedAt: gd.d.createdAt, url: gd.d.url,
+        });
+      }
+    } catch (err) {
+      console.error(`[community] ${m.key} github: ${err.message}`);
+    }
+  }
+
+  // ---- combine: interleave voices (first-party sources first — forum, then
+  // GitHub, then HN — so first-party visibility isn't crowded out), rebuild
+  // themes over all sources, honest per-source totals ----
   const merged = [];
-  const hnQ = comments.slice(), fQ = forumComments.slice();
-  while (hnQ.length || fQ.length) {
+  const hnQ = comments.slice(), fQ = forumComments.slice(), gQ = ghComments.slice();
+  while (hnQ.length || fQ.length || gQ.length) {
     if (fQ.length) merged.push(fQ.shift());
+    if (gQ.length) merged.push(gQ.shift());
     if (hnQ.length) merged.push(hnQ.shift());
   }
   model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
   model.sources = [{ name: 'Hacker News', discussions: hnDiscussions, isEstimated: hnEstimated }];
   if (forumSourceName) model.sources.push({ name: forumSourceName, discussions: forumDiscussions, isEstimated: forumEstimated });
-  model.estimatedRelevantDiscussions = hnDiscussions + forumDiscussions;
+  if (ghSourceName) model.sources.push({ name: ghSourceName, discussions: ghDiscussions, isEstimated: ghEstimated });
+  model.estimatedRelevantDiscussions = hnDiscussions + forumDiscussions + ghDiscussions;
   model.isEstimated = model.sources.some((s) => s.isEstimated);
   model.limited = model.estimatedRelevantDiscussions < COMMUNITY_LIMITED_MIN;
 
@@ -831,12 +912,18 @@ async function main() {
   console.log('Fetching community pulse…');
   // shared across models so a comment excerpt is never reused between bubbles
   const usedCommentIds = new Set();
+  // GitHub Discussions (GraphQL) needs a Bearer token for every call, unlike
+  // Discourse/HN. In Actions the free, zero-setup GITHUB_TOKEN covers this;
+  // running locally without one, that source is silently skipped per model
+  // (see fetchModelCommunity) rather than failing the build.
+  const ghToken = process.env.GITHUB_TOKEN || '';
+  if (!ghToken) console.log('  (GITHUB_TOKEN not set — GitHub Discussions source skipped this run)');
   const communityResults = [];
-  for (const cm of COMMUNITY_MODELS) communityResults.push(await fetchModelCommunity(cm, now, usedCommentIds));
+  for (const cm of COMMUNITY_MODELS) communityResults.push(await fetchModelCommunity(cm, now, usedCommentIds, ghToken));
   const community = {
     updatedAt: new Date(now).toISOString(),
     window: '30D',
-    source: 'Hacker News + official model forums',
+    source: 'Hacker News + official model forums + GitHub Discussions',
     models: communityResults.map((r) => r.model),
     comments: communityResults.flatMap((r) => r.comments),
   };

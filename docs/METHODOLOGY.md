@@ -317,29 +317,44 @@ verified or refreshed. The dead-band (±3%) mirrors `stocks.mjs`'s
 
 A horizontal model selector + a two-column info/themes panel + a short list of
 representative comments — **not** a comment feed and **not** a sentiment score.
-Built entirely at fetch time from two free, no-key sources: the **Hacker News
-Algolia API** (third-party discussion, all models) and, for the labs that run
-one, each lab's **official developer forum** (Discourse) — OpenAI's
-`community.openai.com` and Google's `discuss.ai.google.dev` today. Anthropic,
-xAI, Alibaba and Meta publish no public forum, so those models are HN-only —
-an honest asymmetry surfaced in each panel's per-model **Sources** row (e.g.
-"Hacker News ≈190 · OpenAI forum ≈43"). The frontend (`js/community.js`) is
-plain document flow: real `role="tab"` buttons (not interactive elements nested
-inside an SVG), a CSS grid panel, no absolute positioning, no runtime
-measurement, no connector lines.
+Built entirely at fetch time from three free sources: the no-key **Hacker News
+Algolia API** (third-party discussion, all models); each lab's **official
+developer forum** (Discourse, no key) where one exists — OpenAI's
+`community.openai.com` and Google's `discuss.ai.google.dev`; and each lab's
+**official GitHub Discussions board**, on their own tooling repo, for the labs
+with no public forum — `anthropics/claude-code-action` (Claude),
+`xai-org/grok-build` (Grok), `QwenLM/Qwen3.6` (Qwen) — plus `google-gemini/
+gemini-cli` added alongside Gemini's forum since it's extremely high-volume.
+Meta publishes neither, so Llama stays HN-only. Every asymmetry is surfaced in
+each panel's per-model **Sources** row (e.g. "Hacker News ≈190 · OpenAI forum
+≈43"). The frontend (`js/community.js`) is plain document flow: real
+`role="tab"` buttons (not interactive elements nested inside an SVG), a CSS
+grid panel, no absolute positioning, no runtime measurement, no connector
+lines.
 
-- **Forum relevance is by scope, not keyword regex.** The HN path guards against
-  ambiguity (the "grok"/"llama" problem below) because HN is general. A lab's
-  own forum is different: it's already lab-specific, and the query targets the
-  current model generation (`GPT-5`, `Gemini 3`), so a returned topic IS relevant
-  discussion — forum users rarely repeat the brand name on the brand's own forum
-  (a real GPT-5.6 thread titled just "5.6 pro model has been downgraded…"), so
-  applying the HN mention-regex there would wrongly reject most of it. See
-  `scripts/lib/discourse.mjs` (pure, tested) and `DISCOURSE_FORUMS` in
-  `update-data.mjs`. A forum's discussion count is exact when the search returned
-  the complete set, or flagged estimated (a floor) when more results exist.
-  Representative forum voices are interleaved forum-first with HN ones so the
-  first-party source is visible, deduped, one voice per thread.
+- **Forum & GitHub relevance is by scope, not keyword regex.** The HN path
+  guards against ambiguity (the "grok"/"llama" problem below) because HN is
+  general. A lab's own forum or Discussions board is different: it's already
+  lab-specific (the query targets the current model generation on the forum;
+  the repo itself IS the lab's tooling on GitHub), so a returned thread IS
+  relevant — participants rarely repeat the brand name on the brand's own
+  turf (a real GPT-5.6 thread titled just "5.6 pro model has been
+  downgraded…"), so applying the HN mention-regex there would wrongly reject
+  most of it. See `scripts/lib/discourse.mjs` and `scripts/lib/
+  github-discussions.mjs` (both pure, tested) plus `DISCOURSE_FORUMS` /
+  `GITHUB_DISCUSSIONS_REPOS` in `update-data.mjs`. A source's discussion count
+  is exact when the fetch captured the complete window, or flagged estimated
+  (a floor) when more may exist beyond what was fetched. Representative voices
+  are interleaved first-party-first (forum, then GitHub, then HN) so the
+  first-party sources stay visible, deduped, one voice per thread.
+- **GitHub Discussions needs auth for every call — unlike Discourse/HN.**
+  GraphQL has no anonymous access, even to public repos. In Actions the free,
+  zero-setup `GITHUB_TOKEN` covers it (`discussions: read` permission,
+  `update-data.yml`); running the build locally without one, this source is
+  silently skipped per model — logged, never an error, same graceful-absence
+  contract as `YOUTUBE_API_KEY`. A bad/expired token fails the SAME way
+  (caught per-model, logged, the rest of the build unaffected) — verified by
+  running the build with a deliberately invalid token.
 
 - **Contextual matching, not raw keyword hits (correctness pass).** Every story
   and comment is validated by `matchModelMention`/`isValidatedMention`: per-model
