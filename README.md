@@ -30,13 +30,15 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    two valid trading bars); toggle between curated **business ties** and 30-day
    **price-return correlation** (kept separate). Accessible table fallback.
 6. **Community Pulse** ("Community Current") — a horizontal model selector sized
-   by relevant discussion volume, blended from **Hacker News** (all models),
-   each lab's **official developer forum** where one exists (OpenAI &amp;
-   Google), and each lab's **official GitHub Discussions board** for the labs
-   with no public forum (Claude, Grok, Qwen — plus Gemini's, added alongside
-   its forum). The per-model *Sources* row shows the split, e.g. "Hacker News
-   ≈190 · OpenAI forum ≈43". Contextually matched (with ambiguous
-   "grok"/"llama" noise rejected on HN; forum/GitHub relevance is by scope), a
+   by **new model / feature / discovery** discussion volume specifically (not
+   general support, pricing, or comparison chatter), blended from **Hacker
+   News** (all models), each lab's **official developer forum** where one
+   exists (OpenAI &amp; Google), and each lab's **official GitHub Discussions
+   board** for the labs with no public forum (Claude, Grok, Qwen — plus
+   Gemini's, added alongside its forum). The per-model *Sources* row shows the
+   split, e.g. "Hacker News ≈190 · OpenAI forum ≈43". Contextually matched
+   (with ambiguous "grok"/"llama" noise rejected on HN; forum/GitHub relevance
+   is by scope) AND matched to release/discovery language, a
    two-column panel of stats + theme wave bars, and relevance-ranked
    representative comments interleaving first-party + HN voices. Discussion
    counts are exact when the full result set was captured, and clearly marked

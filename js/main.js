@@ -10,7 +10,6 @@ import { renderCommunity } from './community.js';
 import { createStockNetwork } from './stocknetwork.js';
 import { renderCurated, renderLive, animateBars, renderYouTubeTrending } from './sections.js';
 import { renderDataHealth } from './datahealth.js';
-import { renderBriefing } from './briefing.js';
 import { renderLaunchRadar } from './launchradar.js';
 import { initNav, notifyDataReady } from './nav.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
@@ -90,7 +89,6 @@ function applyRange(next) {
 
 function renderDynamic() {
   renderLive(data);
-  renderBriefing($('#briefing'), data);
   renderWaveforms($('#waves'), data.signals || [], data.waves || []);
   renderRiver($('#river'), data.signals || [], Date.now(), entityNameById);
   renderCommunity($('#community'), data.community || {});

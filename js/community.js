@@ -27,7 +27,7 @@ export function renderCommunity(root, community) {
   const models = community?.models || [];
   const comments = community?.comments || [];
   if (!models.length) {
-    root.innerHTML = `<p class="empty-state">Community discussion is unavailable right now — it refreshes from Hacker News and the labs' official forums each cycle. Check back shortly.</p>`;
+    root.innerHTML = `<p class="empty-state">New-model/feature discussion is unavailable right now — it refreshes from Hacker News and the labs' official forums each cycle. Check back shortly.</p>`;
     return;
   }
 
@@ -47,7 +47,7 @@ export function renderCommunity(root, community) {
             id="cc-tab-${esc(m.key)}" data-key="${esc(m.key)}"
             aria-selected="${m.key === state.modelId}" aria-controls="cc-panel" tabindex="${m.key === state.modelId ? '0' : '-1'}"
             style="--scale:${scale.toFixed(3)};--accent:${color}"
-            aria-label="${esc(m.model)}: ${m.isEstimated ? 'approximately ' : ''}${fmt(disc)} relevant discussions${m.limited ? ', limited sample' : ''}">
+            aria-label="${esc(m.model)}: ${m.isEstimated ? 'approximately ' : ''}${fmt(disc)} new model/feature discussions${m.limited ? ', limited sample' : ''}">
             <span class="cc-tab-name">${esc(m.model)}</span>
             <span class="cc-tab-count">${m.isEstimated ? '≈' : ''}${fmt(disc)}</span>
           </button>`;
@@ -55,7 +55,7 @@ export function renderCommunity(root, community) {
       </div>
       <div class="cc-panel" id="cc-panel" role="tabpanel" aria-labelledby="cc-tab-${esc(state.modelId)}"></div>
     </div>
-    <p class="cc-foot">Discussion volume and themes come from a <b>sample</b> of <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> plus each lab's <b>official developer forum</b> where one exists (OpenAI &amp; Google today), over ${esc(community.window || '30D')} — matched to each model with contextual validation, not a raw keyword count and not a sentiment score. Per-model sources are shown in each panel. Updated ${esc(timeAgo(community.updatedAt))}.</p>
+    <p class="cc-foot">Focused on <b>new models, features and discoveries</b> — not general support/pricing chatter. Volume and themes come from a <b>sample</b> of <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> plus each lab's <b>official developer forum/Discussions board</b> where one exists, over ${esc(community.window || '30D')} — matched to each model AND to release/discovery language, not a raw keyword count and not a sentiment score. Per-model sources are shown in each panel. Updated ${esc(timeAgo(community.updatedAt))}.</p>
   `;
 
   const tabs = Array.from(root.querySelectorAll('.cc-tab'));
@@ -108,7 +108,7 @@ export function renderCommunity(root, community) {
             <span class="cc-info-org">${esc(m.org || '')}${m.version && m.version !== m.model ? ' · ' + esc(m.version) : ''}</span>
           </div>
           <dl class="cc-facts">
-            <div><dt>Relevant discussions</dt><dd>${m.isEstimated ? '≈' : ''}${fmt(discussionCount(m))}</dd></div>
+            <div><dt>New model/feature discussions</dt><dd>${m.isEstimated ? '≈' : ''}${fmt(discussionCount(m))}</dd></div>
             ${(m.sources && m.sources.length) ? `<div><dt>Sources</dt><dd class="cc-sources">${m.sources.map((s) => `${esc(s.name)} ${s.isEstimated ? '≈' : ''}${fmt(s.discussions)}`).join(' · ')}</dd></div>` : ''}
             <div><dt>Validated comments</dt><dd>${fmt(m.validatedCommentCount)}</dd></div>
             <div><dt>HN coverage</dt><dd>${pct(m.storyCoverage)} stories · ${pct(m.commentCoverage)} comments</dd></div>

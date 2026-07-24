@@ -276,19 +276,6 @@ function wireLocalTabs() {
   });
 }
 
-// "See the full waves →" style buttons rendered inside content (e.g. the
-// Today briefing) — a real tab switch, not a duplicate card.
-function wireGotoButtons() {
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('[data-goto-tab]');
-    if (!btn) return;
-    const tab = btn.dataset.gotoTab;
-    for (const [panel, tabs] of Object.entries(PANEL_TABS)) {
-      if (tabs.includes(tab)) { goTo(panel, tab); return; }
-    }
-  });
-}
-
 function handleHash({ push } = { push: false }) {
   if (location.hash === FULL_HASH) { activateFullPage({ push: false }); return; }
   const resolved = resolveHash(location.hash);
@@ -300,7 +287,6 @@ export function initNav() {
   normalizeLocalNav();
   wireTopnav();
   wireLocalTabs();
-  wireGotoButtons();
 
   window.addEventListener('popstate', () => handleHash({ push: false }));
 

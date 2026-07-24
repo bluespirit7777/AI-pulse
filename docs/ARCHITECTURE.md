@@ -59,7 +59,6 @@ scripts/update-launchradar.mjs ──uses──> scripts/lib/launchradar.mjs (UR
 index.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
         ├─ js/nav.js           5-item IA router: panel/tab activation, legacy-hash map, depth rail, anchor correction
-        ├─ js/briefing.js      Today's 60-second briefing (compact references into waves/releases, no duplicate cards)
         ├─ js/launchradar.js   Launch Radar panel (newest model/SDK releases; hides itself if data absent)
         ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
         ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected")
@@ -75,7 +74,7 @@ index.html ──module──> js/main.js
 The page uses a 5-item IA — **Today / Ecosystem / Models / Markets /
 Research** — each a `.topsection` toggled by `js/nav.js`. Only ONE top panel
 is shown at a time (the others carry `hidden`); within the shown panel, ALL
-of its subsections render stacked (Today shows Briefing + Waves + River +
+of its subsections render stacked (Today shows Launch Radar + Waves + River +
 Tide together, Models shows all six, etc.). The `.local-tabs` bar under a
 section is therefore a "jump to a section" nav, not a tablist — `js/nav.js`'s
 `normalizeLocalNav()` strips the tablist/tabpanel ARIA the HTML still carries

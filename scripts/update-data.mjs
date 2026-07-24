@@ -34,6 +34,7 @@ import {
   communityStoryCoverage,
   similarity,
   TOPICS,
+  isReleaseDiscussion,
 } from './lib/signals.mjs';
 import { computeReturns, correlationPairs, relativeVolume, average, direction, dailyChange, DAILY_CHANGE_REVIEW_PCT, periodChange, WEEK_TRADING_DAYS, MONTH_TRADING_DAYS } from './lib/stocks.mjs';
 import { toCompactEvent, mergeTodayEvents, dayKey, buildRangesDoc, HISTORY_RETENTION_DAYS } from './lib/history.mjs';
@@ -360,14 +361,20 @@ async function fetchAlgoliaPaginated(urlBase, maxPages = HN_MAX_PAGES) {
 
 // One model's first-party forum (Discourse) discussion. Validated by SCOPE, not
 // keyword regex: the forum is the lab's own, the query targets the current model
-// generation, so returned topics are relevant discussion (see DISCOURSE_FORUMS).
-// `more` from search means the visible set is a floor → the source is estimated.
+// generation, so returned topics are relevant discussion (see DISCOURSE_FORUMS)
+// — but Community Pulse's brief is specifically new models/features/discoveries,
+// so isReleaseDiscussion further narrows to release/discovery language, same as
+// the HN filters above (a support thread on the official forum is still support
+// noise, not launch news). `more` from search means the visible set was already
+// a floor before this narrowing → the source stays flagged estimated.
 async function fetchModelDiscourse(forum, sinceMs) {
   const query = `${forum.query} after:${discourseAfterDate(sinceMs)} order:latest`;
   const res = await fetchWithTimeout(buildDiscourseSearchUrl({ base: forum.base, query }));
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const parsed = parseDiscourseSearch(await res.json(), { base: forum.base, sinceISO: new Date(sinceMs).toISOString() });
-  return { sourceName: forum.sourceName, discussions: parsed.topics.length, isEstimated: parsed.more, posts: parsed.posts };
+  const topics = parsed.topics.filter((t) => isReleaseDiscussion(t.title));
+  const posts = parsed.posts.filter((p) => isReleaseDiscussion(p.blurb));
+  return { sourceName: forum.sourceName, discussions: topics.length, isEstimated: parsed.more, posts };
 }
 
 // One model's official GitHub Discussions board. GraphQL requires a Bearer
@@ -387,7 +394,11 @@ async function fetchModelGithubDiscussions(repoCfg, token, sinceMs) {
   const parsed = parseDiscussionsResponse(await res.json(), { owner: repoCfg.owner, name: repoCfg.name, label: repoCfg.sourceName, org: repoCfg.owner });
   if (!parsed.ok) throw new Error(parsed.errorMessage || 'unknown GraphQL error');
   const { inWindow, isEstimated } = windowedDiscussions(parsed.discussions, new Date(sinceMs).toISOString());
-  return { sourceName: repoCfg.sourceName, discussions: inWindow.length, isEstimated, items: inWindow };
+  // Same release/discovery narrowing as the Discourse and HN sources — a repo's
+  // Discussions board is scoped to the lab's own tooling, but still carries
+  // plenty of plain support/how-to threads that aren't launch news.
+  const releaseItems = inWindow.filter((d) => isReleaseDiscussion(`${d.title} ${d.bodyText}`));
+  return { sourceName: repoCfg.sourceName, discussions: releaseItems.length, isEstimated, items: releaseItems };
 }
 
 async function fetchModelCommunity(m, now, usedCommentIds, ghToken) {
@@ -414,8 +425,14 @@ async function fetchModelCommunity(m, now, usedCommentIds, ghToken) {
     ]);
 
     // ---- stories: exact count when fully paginated, explicit estimate otherwise ----
+    // Community Pulse's brief is new models/features/discoveries, not general
+    // discussion — isValidatedMention alone only confirms the story IS about
+    // this model; isReleaseDiscussion additionally requires release/discovery
+    // language (see scripts/lib/signals.mjs), so a support thread or "X vs Y"
+    // comparison about a real model doesn't count toward the headline number.
     const storyHits = storiesData.hits.filter((h) => h.title);
-    const validatedStories = storyHits.filter((h) => isValidatedMention(`${h.title} ${h.story_text || ''}`, m.key));
+    const validatedStories = storyHits.filter((h) =>
+      isValidatedMention(`${h.title} ${h.story_text || ''}`, m.key) && isReleaseDiscussion(`${h.title} ${h.story_text || ''}`));
     model.rawStoryHits = storiesData.nbHits || storyHits.length;
     model.fetchedStoryCount = storiesData.fetchedCount;
     model.validatedStoryCount = validatedStories.length;
@@ -438,7 +455,9 @@ async function fetchModelCommunity(m, now, usedCommentIds, ghToken) {
 
     const decoded = rawComments.map((h) => ({ h, text: decodeEntities(h.comment_text) }));
     const scored = decoded.map((c) => ({ ...c, matchConfidence: matchModelMention(c.text, m.key) }));
-    const validated = scored.filter((c) => c.matchConfidence >= COMMUNITY_MATCH_THRESHOLD);
+    // Same release/discovery focus as the story filter above — a comment can
+    // be validly about the model and still be pure support/complaint noise.
+    const validated = scored.filter((c) => c.matchConfidence >= COMMUNITY_MATCH_THRESHOLD && isReleaseDiscussion(c.text));
     model.validatedCommentCount = validated.length;
 
     for (const c of validated) {
@@ -923,7 +942,7 @@ async function main() {
   const community = {
     updatedAt: new Date(now).toISOString(),
     window: '30D',
-    source: 'Hacker News + official model forums + GitHub Discussions',
+    source: 'Hacker News + official model forums + GitHub Discussions — new models, features & discoveries',
     models: communityResults.map((r) => r.model),
     comments: communityResults.flatMap((r) => r.comments),
   };

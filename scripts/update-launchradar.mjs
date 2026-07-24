@@ -44,12 +44,11 @@ const HF_SOURCES = [
   { org: 'moonshotai', label: 'Kimi' },
 ];
 
-// Closed labs: their official SDK/tooling repos cut a release (often adding a
-// new model constant) at launch. `label` is the lab the release speaks for.
+// Closed labs' official product/tooling repos, where a release genuinely
+// signals something shipping (not a routine Python client-library bump —
+// openai-python/anthropic-sdk-python/python-genai were dropped: those cut
+// releases on every minor API tweak, which is noise, not launch signal).
 const GH_SOURCES = [
-  { repo: 'openai/openai-python', label: 'OpenAI', org: 'OpenAI' },
-  { repo: 'anthropics/anthropic-sdk-python', label: 'Claude', org: 'Anthropic' },
-  { repo: 'googleapis/python-genai', label: 'Gemini', org: 'Google' },
   { repo: 'xai-org/grok-build', label: 'Grok', org: 'xAI' },
 ];
 

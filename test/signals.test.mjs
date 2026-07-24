@@ -11,6 +11,7 @@ import {
   isProductRelease, classifyTopics, extractAction, eventRelation,
   matchModelMention, isValidatedMention, COMMUNITY_MATCH_THRESHOLD, CATEGORIES,
   whyItMatters, applyIntegrityCaps, LOW_CATEGORY_CONFIDENCE, GENERAL_SIGNIFICANCE_CAP,
+  isReleaseDiscussion,
 } from '../scripts/lib/signals.mjs';
 
 const NODES = [
@@ -124,6 +125,26 @@ test('classifyTopics tags community discussion themes, multi-topic aware', () =>
   assert.ok(r.includes('price'));
   assert.ok(r.includes('local'));
   assert.deepEqual(classifyTopics('a plain sentence about nothing in particular'), []);
+});
+
+test('isReleaseDiscussion accepts real new-model/feature/discovery language', () => {
+  assert.equal(isReleaseDiscussion('OpenAI just announced GPT-5.6 with a new coding mode'), true);
+  assert.equal(isReleaseDiscussion('Anthropic released Claude Fable 5 today'), true);
+  assert.equal(isReleaseDiscussion('Gemini 3.5 Flash is now generally available'), true);
+  assert.equal(isReleaseDiscussion('Qwen3.6 just dropped, open-weight and Apache licensed'), true);
+  assert.equal(isReleaseDiscussion('Researchers found that scaling laws hold at this size'), true);
+  assert.equal(isReleaseDiscussion('New benchmark shows state-of-the-art results on ARC-AGI-2'), true);
+  assert.equal(isReleaseDiscussion('The team unveiled a new agentic capability in preview'), true);
+});
+
+test('isReleaseDiscussion rejects general support/complaint/comparison chatter', () => {
+  assert.equal(isReleaseDiscussion('the returned model is a downgrade, my subscription is broken'), false);
+  assert.equal(isReleaseDiscussion('is ChatGPT better than Claude for coding?'), false);
+  assert.equal(isReleaseDiscussion('this is way too expensive for what it does'), false);
+  assert.equal(isReleaseDiscussion('I keep getting rate limited, so annoying'), false);
+  assert.equal(isReleaseDiscussion('a plain sentence about nothing in particular'), false);
+  assert.equal(isReleaseDiscussion(''), false);
+  assert.equal(isReleaseDiscussion(null), false);
 });
 
 test('all CATEGORIES are covered by waveFamily without throwing', () => {

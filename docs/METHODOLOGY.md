@@ -317,6 +317,17 @@ verified or refreshed. The dead-band (±3%) mirrors `stocks.mjs`'s
 
 A horizontal model selector + a two-column info/themes panel + a short list of
 representative comments — **not** a comment feed and **not** a sentiment score.
+**Scoped to new models, new features, and new discoveries specifically** — not
+general chatter. Support threads, pricing complaints, "is X better than Y"
+comparisons and bug reports are deliberately excluded, even when they're
+genuinely about the tracked model, via `isReleaseDiscussion` in
+`scripts/lib/signals.mjs`: a keyword classifier for release/discovery language
+("released", "just dropped", "now available", "discovered that", "state of
+the art", …), applied as an ADDITIONAL gate on top of the existing per-model
+relevance checks, on every source. This is deliberately permissive-leaning —
+a false negative (missing a real release thread with unusual phrasing) is a
+bigger honesty risk here than a false positive.
+
 Built entirely at fetch time from three free sources: the no-key **Hacker News
 Algolia API** (third-party discussion, all models); each lab's **official
 developer forum** (Discourse, no key) where one exists — OpenAI's
@@ -331,6 +342,13 @@ each panel's per-model **Sources** row (e.g. "Hacker News ≈190 · OpenAI forum
 `role="tab"` buttons (not interactive elements nested inside an SVG), a CSS
 grid panel, no absolute positioning, no runtime measurement, no connector
 lines.
+
+- **Narrowing the scope narrows the sample — by design, and that's honest, not
+  a bug.** Verified with a real local build after adding the filter: most
+  models still have a healthy sample (Claude 122, Gemini 47, GPT 33), but Qwen
+  dropped to 6 and correctly flips to the existing "Limited sample" badge —
+  the same honesty mechanism that already handled small samples, now doing so
+  for a narrower, more specific population.
 
 - **Forum & GitHub relevance is by scope, not keyword regex.** The HN path
   guards against ambiguity (the "grok"/"llama" problem below) because HN is

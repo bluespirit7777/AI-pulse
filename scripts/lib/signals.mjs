@@ -497,6 +497,23 @@ export function classifyTopics(text) {
   return out;
 }
 
+// ---------- release/discovery relevance (Community Pulse's focus) ----------
+// Community Pulse's brief: new models, new features, new discoveries — not
+// general chatter (bug reports, pricing gripes, "is X better than Y"). This is
+// a SEPARATE gate from matchModelMention/isValidatedMention above (which only
+// answer "is this about the model at all" — a comment can be validly about a
+// model and still be pure support/complaint noise). Deliberately keyword-based
+// and permissive-leaning: release-announcement language is fairly consistent
+// ("released", "just dropped", "now available", "discovered that"), so a false
+// negative (missing a real release thread with unusual phrasing) is the bigger
+// honesty risk here than a false positive, unlike the ambiguity-guarded
+// TOPIC_RULES above.
+const RELEASE_DISCOVERY_SIGNALS = /\b(releas(e|ed|es|ing)|launch(ed|es|ing)?|announc(e|ed|es|ing)|unveil(ed|s|ing)?|debut(ed|s|ing)?|introduc(e|ed|es|ing)|now available|generally available|\bga\b|roll(ed|ing)?\s*out|ships?|shipped|shipping|new (model|feature|version|update|release|capability)|just dropped|drops?\s*today|early access|beta\s*(access|release)?|preview\s*(access|release)?|comes?\s*to|adds?\s*support|breakthrough|discover(ed|s|y|ies|ing)?|found that|researchers?\s*(show|found|discover(ed)?)|new (paper|research|study|benchmark)|state.of.the.art|\bsota\b|open.sourc(e|ed|ing)|open.weight)\b/i;
+
+export function isReleaseDiscussion(text) {
+  return RELEASE_DISCOVERY_SIGNALS.test(String(text || ''));
+}
+
 // ---------- contextual model matching (Community Pulse) ----------
 // Raw keyword search over-counts: "grok" the verb, "llama" the animal or
 // llama.cpp-as-tool, and comments that merely mention a company. This returns a

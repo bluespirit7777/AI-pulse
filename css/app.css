@@ -595,30 +595,4 @@ body.drawer-open { overflow: hidden; }
 .dh-facts dd { margin: 0; font-family: var(--font-mono); color: var(--teal); font-weight: 600; text-align: right; }
 .dh-note { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); line-height: 1.6; margin-top: 14px; }
 
-/* ---------- Today briefing: compact references, never duplicate cards ---------- */
-.briefing { background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px; box-shadow: 0 6px 24px rgba(18,48,62,.07); }
-.briefing-lede { margin: 0 0 18px; font-size: 15px; color: var(--ink-soft); line-height: 1.6; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.briefing-h { display: block; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 8px; }
-.briefing-waves { margin-bottom: 18px; }
-.briefing-list { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
-.briefing-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; border-bottom: 1px dashed var(--border); padding-bottom: 8px; }
-.briefing-list li:last-child { border-bottom: none; padding-bottom: 0; }
-.briefing-fam { font-family: var(--font-mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--sea); flex-shrink: 0; }
-.briefing-title { font-family: var(--font-body); font-weight: 700; font-size: 14.5px; color: var(--ink); flex-basis: 100%; }
-.briefing-why { font-size: 13px; color: var(--ink-soft); }
-.briefing-release { margin-bottom: 18px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-/* .src-link is `white-space:nowrap` by default (right for short labels like
-   "Read original ↗" elsewhere) — wrong here, where it wraps a full release
-   headline that can be longer than the viewport on narrow screens. */
-.briefing-release .src-link { white-space: normal; word-break: break-word; min-width: 0; }
-.briefing-d { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
-.briefing-more { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
-.briefing-goto {
-  font-family: var(--font-mono); font-size: 11.5px; color: var(--teal); background: var(--foam);
-  border: 1px solid var(--border-strong); border-radius: 999px; padding: 8px 14px; min-height: 40px; cursor: pointer;
-  transition: background .18s ease, color .18s ease;
-}
-.briefing-goto:hover { background: var(--deep); color: #fff; }
-.briefing-goto:focus-visible { outline: 2px solid var(--deep); outline-offset: 2px; }
-.briefing-updated { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); margin: 0; line-height: 1.6; }
 @media (max-width: 640px) { .dh-drawer { width: 100vw; } }
