@@ -42,6 +42,7 @@ import { GPU_CATALOG, mergeGpuPricing, formatRate, computeTrend } from './lib/co
 import { buildCandleSeries } from './lib/chart.mjs';
 import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
 import { shortDateUTC } from './lib/dates.mjs';
+import { buildDiscourseSearchUrl, discourseAfterDate, parseDiscourseSearch } from './lib/discourse.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'data');
@@ -266,9 +267,23 @@ function truncate(s, n) {
 // name/version/org come from the canonical MODEL_REGISTRY (scripts/lib/models.mjs)
 // — the same source Ocean Map (entities.json, kept in sync by hand) and the
 // Leaderboard reference — so a version bump can't drift between sections.
+// Official first-party developer forums (Discourse) for the labs that run one.
+// Only OpenAI and Google publish a public forum; Anthropic/xAI/Alibaba/Meta
+// don't (Anthropic's claude.com/community is a marketing page that links out to
+// Discord/Reddit), so those models stay HN-only for now — honestly asymmetric,
+// surfaced per-model in the `sources` breakdown. The forum is lab-specific, so
+// a search for the flagship generation returns discussion ABOUT that model:
+// unlike HN (where "Gemini" could be the zodiac sign), the forum + version
+// query IS the relevance guard, so no keyword-mention regex is applied here —
+// forum users rarely repeat the brand name on the brand's own forum.
+const DISCOURSE_FORUMS = {
+  gpt: { base: 'https://community.openai.com', sourceName: 'OpenAI forum', query: 'GPT-5' },
+  gemini: { base: 'https://discuss.ai.google.dev', sourceName: 'Google AI forum', query: 'Gemini 3' },
+};
+
 const COMMUNITY_MODELS = MODEL_KEYS.map((key) => {
   const m = MODEL_REGISTRY[key];
-  return { key, model: m.name, version: m.version, org: m.org, q: m.hnQuery };
+  return { key, model: m.name, version: m.version, org: m.org, q: m.hnQuery, discourse: DISCOURSE_FORUMS[key] || null };
 });
 
 // Strip HTML/entities from an HN comment and cut to ~180 chars on word
@@ -323,17 +338,34 @@ async function fetchAlgoliaPaginated(urlBase, maxPages = HN_MAX_PAGES) {
   return { hits, nbHits, fetchedCount };
 }
 
+// One model's first-party forum (Discourse) discussion. Validated by SCOPE, not
+// keyword regex: the forum is the lab's own, the query targets the current model
+// generation, so returned topics are relevant discussion (see DISCOURSE_FORUMS).
+// `more` from search means the visible set is a floor → the source is estimated.
+async function fetchModelDiscourse(forum, sinceMs) {
+  const query = `${forum.query} after:${discourseAfterDate(sinceMs)} order:latest`;
+  const res = await fetchWithTimeout(buildDiscourseSearchUrl({ base: forum.base, query }));
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const parsed = parseDiscourseSearch(await res.json(), { base: forum.base, sinceISO: new Date(sinceMs).toISOString() });
+  return { sourceName: forum.sourceName, discussions: parsed.topics.length, isEstimated: parsed.more, posts: parsed.posts };
+}
+
 async function fetchModelCommunity(m, now, usedCommentIds) {
-  const since = Math.floor(now / 1000) - 30 * 24 * 3600; // last 30 days
+  const sinceMs = now - 30 * 24 * 3600 * 1000;
+  const since = Math.floor(sinceMs / 1000); // last 30 days (HN Algolia uses epoch seconds)
   const base = 'https://hn.algolia.com/api/v1/search';
   const model = {
     key: m.key, model: m.model, version: m.version, org: m.org,
     rawStoryHits: 0, fetchedStoryCount: 0, validatedStoryCount: 0, storyCoverage: 1,
     estimatedRelevantDiscussions: 0, isEstimated: true,
     rawCommentHits: 0, fetchedCommentCount: 0, validatedCommentCount: 0, commentCoverage: 1,
-    limited: true, points: 0, themes: [], topThreads: [],
+    limited: true, points: 0, themes: [], topThreads: [], sources: [],
   };
-  const comments = [];
+  const comments = [];             // HN representative voices
+  const forumComments = [];        // first-party forum representative voices
+  const themeCounts = {};          // combined across sources; model.themes built at the end
+  const chosenTexts = [];          // near-duplicate guard shared across HN + forum
+  let hnDiscussions = 0, hnEstimated = true;
   try {
     const [storiesData, commentsData] = await Promise.all([
       fetchAlgoliaPaginated(`${base}?query=${encodeURIComponent(m.q)}&tags=story&numericFilters=created_at_i>${since}`),
@@ -351,8 +383,8 @@ async function fetchModelCommunity(m, now, usedCommentIds) {
       validatedCount: validatedStories.length, sampleSize: storyHits.length,
     });
     model.storyCoverage = cov.coverage;
-    model.isEstimated = cov.isEstimated;
-    model.estimatedRelevantDiscussions = cov.estimatedRelevantDiscussions;
+    hnDiscussions = cov.estimatedRelevantDiscussions;
+    hnEstimated = cov.isEstimated;
     model.points = validatedStories.reduce((s, h) => s + (h.points || 0), 0);
     model.topThreads = validatedStories.slice().sort((a, b) => (b.points || 0) - (a.points || 0)).slice(0, 2)
       .map((h) => ({ title: truncate(h.title, 90), points: h.points || 0, comments: h.num_comments || 0, url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, date: shortDateUTC(new Date((h.created_at_i || 0) * 1000)) }));
@@ -368,12 +400,10 @@ async function fetchModelCommunity(m, now, usedCommentIds) {
     const validated = scored.filter((c) => c.matchConfidence >= COMMUNITY_MATCH_THRESHOLD);
     model.validatedCommentCount = validated.length;
 
-    const themeCounts = {};
     for (const c of validated) {
       c.topics = classifyTopics(c.text).slice(0, 2); // a comment may carry up to 2 themes
       for (const tid of c.topics) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
     }
-    model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
 
     // Representative comments: ranked by a composite relevance score — model-
     // match confidence, then theme specificity, contextual completeness and
@@ -397,9 +427,8 @@ async function fetchModelCommunity(m, now, usedCommentIds) {
       })
       .sort((a, b) => b.score - a.score);
 
-    const chosenTexts = [];
     for (const c of candidates) {
-      if (comments.length >= 6) break; // 3 shown + "show one more" + a couple spare
+      if (comments.length >= 4) break; // leave room for first-party forum voices
       if (chosenTexts.some((t) => similarity(t, c.text) > 0.6)) continue; // near-duplicate of an already-picked comment
       chosenTexts.push(c.text);
       usedCommentIds.add(c.h.objectID);
@@ -411,11 +440,67 @@ async function fetchModelCommunity(m, now, usedCommentIds) {
         url: `https://news.ycombinator.com/item?id=${c.h.objectID}`,
       });
     }
-    model.limited = model.estimatedRelevantDiscussions < COMMUNITY_LIMITED_MIN;
   } catch (err) {
-    console.error(`[community] ${m.key}: ${err.message}`);
+    console.error(`[community] ${m.key} HN: ${err.message}`);
   }
-  return { model, comments };
+
+  // ---- first-party forum (Discourse), when the lab runs one ----
+  let forumDiscussions = 0, forumEstimated = false, forumSourceName = null;
+  if (m.discourse) {
+    try {
+      const forum = await fetchModelDiscourse(m.discourse, sinceMs);
+      forumSourceName = forum.sourceName;
+      forumDiscussions = forum.discussions;
+      forumEstimated = forum.isEstimated;
+      // forum post themes feed the SAME combined theme tally as HN
+      const scored = forum.posts
+        .map((p) => ({ p, topics: classifyTopics(p.blurb).slice(0, 2) }))
+        .sort((a, b) => String(b.p.createdAt).localeCompare(String(a.p.createdAt)));
+      for (const fp of scored) for (const tid of fp.topics) themeCounts[tid] = (themeCounts[tid] || 0) + 1;
+      // up to 2 representative forum voices, newest-first, deduped against HN.
+      // Guards: a voice must carry at least one classified theme (every shown
+      // comment does, and the validator enforces it), and only ONE voice per
+      // topic — two posts in the same thread would share a topic URL, which the
+      // validator rejects as a duplicate.
+      const usedTopics = new Set();
+      for (const fp of scored) {
+        if (forumComments.length >= 2) break;
+        if (!fp.topics.length || usedTopics.has(fp.p.topicId)) continue;
+        const uid = `disc:${fp.p.id}`;
+        if (usedCommentIds.has(uid)) continue;
+        const text = decodeEntities(fp.p.blurb);
+        if (chosenTexts.some((t) => similarity(t, text) > 0.6)) continue;
+        chosenTexts.push(text);
+        usedCommentIds.add(uid);
+        usedTopics.add(fp.p.topicId);
+        forumComments.push({
+          modelId: m.key, themes: fp.topics,
+          excerpt: sanitizeExcerpt(fp.p.blurb, 180, m.discourse.query),
+          source: forum.sourceName, author: fp.p.username || 'member',
+          publishedAt: fp.p.createdAt, url: fp.p.url,
+        });
+      }
+    } catch (err) {
+      console.error(`[community] ${m.key} forum: ${err.message}`);
+    }
+  }
+
+  // ---- combine: interleave voices (forum-first, so the first-party source is
+  // visible in the top few), rebuild themes over both, honest per-source totals ----
+  const merged = [];
+  const hnQ = comments.slice(), fQ = forumComments.slice();
+  while (hnQ.length || fQ.length) {
+    if (fQ.length) merged.push(fQ.shift());
+    if (hnQ.length) merged.push(hnQ.shift());
+  }
+  model.themes = TOPICS.filter((t) => themeCounts[t.id]).map((t) => ({ id: t.id, label: t.label, count: themeCounts[t.id] })).sort((a, b) => b.count - a.count);
+  model.sources = [{ name: 'Hacker News', discussions: hnDiscussions, isEstimated: hnEstimated }];
+  if (forumSourceName) model.sources.push({ name: forumSourceName, discussions: forumDiscussions, isEstimated: forumEstimated });
+  model.estimatedRelevantDiscussions = hnDiscussions + forumDiscussions;
+  model.isEstimated = model.sources.some((s) => s.isEstimated);
+  model.limited = model.estimatedRelevantDiscussions < COMMUNITY_LIMITED_MIN;
+
+  return { model, comments: merged };
 }
 
 function clamp01(v) { return Math.max(0, Math.min(1, v)); }
@@ -751,7 +836,7 @@ async function main() {
   const community = {
     updatedAt: new Date(now).toISOString(),
     window: '30D',
-    source: 'Hacker News',
+    source: 'Hacker News + official model forums',
     models: communityResults.map((r) => r.model),
     comments: communityResults.flatMap((r) => r.comments),
   };

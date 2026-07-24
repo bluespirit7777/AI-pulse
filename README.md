@@ -30,12 +30,15 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    two valid trading bars); toggle between curated **business ties** and 30-day
    **price-return correlation** (kept separate). Accessible table fallback.
 6. **Community Pulse** ("Community Current") — a horizontal model selector sized
-   by relevant discussion volume (contextually matched, with ambiguous
-   "grok"/"llama" noise rejected), a two-column panel of stats + theme wave
-   bars, and relevance-ranked representative HN comments. Discussion counts are
-   exact when the full result set was paginated, and clearly marked "≈
-   estimated" with coverage shown otherwise — never presented as an exact count
-   they aren't.
+   by relevant discussion volume, blended from **Hacker News** (all models) and
+   each lab's **official developer forum** where one exists (OpenAI &amp; Google
+   today; the per-model *Sources* row shows the split, e.g. "Hacker News ≈190 ·
+   OpenAI forum ≈43"). Contextually matched (with ambiguous "grok"/"llama" noise
+   rejected on HN; forum relevance is by scope), a two-column panel of stats +
+   theme wave bars, and relevance-ranked representative comments interleaving
+   forum + HN voices. Discussion counts are exact when the full result set was
+   captured, and clearly marked "≈ estimated" otherwise — never presented as an
+   exact count they aren't.
 7. **Explore the depths** — frontier releases (incl. official-lab YouTube launch
    videos), a 4-view leaderboard (Overall balance / Reasoning / Agentic coding /
    Cost efficiency — Overall labelled as editorial synthesis, the rest citing a

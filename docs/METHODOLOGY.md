@@ -317,10 +317,29 @@ verified or refreshed. The dead-band (±3%) mirrors `stocks.mjs`'s
 
 A horizontal model selector + a two-column info/themes panel + a short list of
 representative comments — **not** a comment feed and **not** a sentiment score.
-Built entirely at fetch time from the free, no-key **Hacker News Algolia API**.
-The frontend (`js/community.js`) is plain document flow: real `role="tab"`
-buttons (not interactive elements nested inside an SVG), a CSS grid panel, no
-absolute positioning, no runtime measurement, no connector lines.
+Built entirely at fetch time from two free, no-key sources: the **Hacker News
+Algolia API** (third-party discussion, all models) and, for the labs that run
+one, each lab's **official developer forum** (Discourse) — OpenAI's
+`community.openai.com` and Google's `discuss.ai.google.dev` today. Anthropic,
+xAI, Alibaba and Meta publish no public forum, so those models are HN-only —
+an honest asymmetry surfaced in each panel's per-model **Sources** row (e.g.
+"Hacker News ≈190 · OpenAI forum ≈43"). The frontend (`js/community.js`) is
+plain document flow: real `role="tab"` buttons (not interactive elements nested
+inside an SVG), a CSS grid panel, no absolute positioning, no runtime
+measurement, no connector lines.
+
+- **Forum relevance is by scope, not keyword regex.** The HN path guards against
+  ambiguity (the "grok"/"llama" problem below) because HN is general. A lab's
+  own forum is different: it's already lab-specific, and the query targets the
+  current model generation (`GPT-5`, `Gemini 3`), so a returned topic IS relevant
+  discussion — forum users rarely repeat the brand name on the brand's own forum
+  (a real GPT-5.6 thread titled just "5.6 pro model has been downgraded…"), so
+  applying the HN mention-regex there would wrongly reject most of it. See
+  `scripts/lib/discourse.mjs` (pure, tested) and `DISCOURSE_FORUMS` in
+  `update-data.mjs`. A forum's discussion count is exact when the search returned
+  the complete set, or flagged estimated (a floor) when more results exist.
+  Representative forum voices are interleaved forum-first with HN ones so the
+  first-party source is visible, deduped, one voice per thread.
 
 - **Contextual matching, not raw keyword hits (correctness pass).** Every story
   and comment is validated by `matchModelMention`/`isValidatedMention`: per-model
@@ -337,9 +356,11 @@ absolute positioning, no runtime measurement, no connector lines.
   sample scaled up to the full raw-hit total, explicitly flagged
   (`isEstimated: true`, shown with an "≈" and an "Estimated" badge in the UI).
   An extrapolated number is never presented as an exact one — see
-  `communityStoryCoverage` in `scripts/lib/signals.mjs`. Coverage (stories AND
-  comments) is exposed in the model panel's "Data coverage" row. A model whose
-  discussion count is small gets a **dashed selector ring** ("Limited sample").
+  `communityStoryCoverage` in `scripts/lib/signals.mjs`. HN coverage (stories AND
+  comments) is exposed in the model panel's "HN coverage" row; the headline
+  discussion count and "≈" flag combine HN with the forum where present. A model
+  whose total discussion count is small gets a **dashed selector ring**
+  ("Limited sample").
 - **Up to 2 themes per comment**, classified from *validated* HN comments
   across 10 plain-language topics (coding, reasoning, writing, speed, price,
   reliability, context, image/video, local, safety) — see `classifyTopics`. The

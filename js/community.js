@@ -27,7 +27,7 @@ export function renderCommunity(root, community) {
   const models = community?.models || [];
   const comments = community?.comments || [];
   if (!models.length) {
-    root.innerHTML = `<p class="empty-state">Community discussion is unavailable right now — it refreshes from Hacker News each cycle. Check back shortly.</p>`;
+    root.innerHTML = `<p class="empty-state">Community discussion is unavailable right now — it refreshes from Hacker News and the labs' official forums each cycle. Check back shortly.</p>`;
     return;
   }
 
@@ -55,7 +55,7 @@ export function renderCommunity(root, community) {
       </div>
       <div class="cc-panel" id="cc-panel" role="tabpanel" aria-labelledby="cc-tab-${esc(state.modelId)}"></div>
     </div>
-    <p class="cc-foot">Discussion volume and themes come from a <b>sample</b> of <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> stories and comments (${esc(community.window || '30D')}), matched to each model with contextual validation — not a raw keyword count and not a sentiment score. Updated ${esc(timeAgo(community.updatedAt))}.</p>
+    <p class="cc-foot">Discussion volume and themes come from a <b>sample</b> of <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a> plus each lab's <b>official developer forum</b> where one exists (OpenAI &amp; Google today), over ${esc(community.window || '30D')} — matched to each model with contextual validation, not a raw keyword count and not a sentiment score. Per-model sources are shown in each panel. Updated ${esc(timeAgo(community.updatedAt))}.</p>
   `;
 
   const tabs = Array.from(root.querySelectorAll('.cc-tab'));
@@ -109,8 +109,9 @@ export function renderCommunity(root, community) {
           </div>
           <dl class="cc-facts">
             <div><dt>Relevant discussions</dt><dd>${m.isEstimated ? '≈' : ''}${fmt(discussionCount(m))}</dd></div>
+            ${(m.sources && m.sources.length) ? `<div><dt>Sources</dt><dd class="cc-sources">${m.sources.map((s) => `${esc(s.name)} ${s.isEstimated ? '≈' : ''}${fmt(s.discussions)}`).join(' · ')}</dd></div>` : ''}
             <div><dt>Validated comments</dt><dd>${fmt(m.validatedCommentCount)}</dd></div>
-            <div><dt>Data coverage</dt><dd>${pct(m.storyCoverage)} stories · ${pct(m.commentCoverage)} comments</dd></div>
+            <div><dt>HN coverage</dt><dd>${pct(m.storyCoverage)} stories · ${pct(m.commentCoverage)} comments</dd></div>
           </dl>
           <p class="cc-status">
             ${m.isEstimated ? '<span class="cc-badge cc-badge--estimate">Estimated</span>' : '<span class="cc-badge cc-badge--exact">Exact count</span>'}
@@ -142,7 +143,7 @@ export function renderCommunity(root, community) {
                 <p class="cc-comment-excerpt">${esc(c.excerpt)}</p>
                 <div class="cc-comment-meta">
                   <span>${esc(c.author || 'anon')} · ${esc(timeAgo(c.publishedAt))}</span>
-                  <a href="${esc(c.url)}" target="_blank" rel="noopener">Read on Hacker News</a>
+                  <a href="${esc(c.url)}" target="_blank" rel="noopener">Read on ${esc(c.source || 'source')}</a>
                 </div>
               </li>`).join('')}
           </ul>
