@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-07-24T06:45:49.932Z",
+  "updatedAt": "2026-07-24T07:00:42.553Z",
   "build": {
-    "sha": "089d1e0e73b2a0ececdf05a7c611e0e0ab561ca2",
-    "shortSha": "089d1e0",
+    "sha": "d31cb1fa8cdde8618348aeb8addd6c83943dd3f8",
+    "shortSha": "d31cb1f",
     "ref": "main",
-    "builtAt": "2026-07-24T06:46:04.922Z"
+    "builtAt": "2026-07-24T07:01:00.594Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 11,
+    "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 14.3,
     "estimatedDatasets": 4,
-    "buildSha": "089d1e0",
-    "lastSuccessfulUpdate": "2026-07-24T06:45:49.932Z"
+    "buildSha": "d31cb1f",
+    "lastSuccessfulUpdate": "2026-07-24T07:00:42.553Z"
   },
   "ticker": [
     "OPENAI MAKES CHATGPT HEALTH AVAILABLE TO ALL US USERS",
-    "APPLE’S OPENAI LAWSUIT IS ABOUT WHO GETS TO DEFINE THE POST-SMARTPHONE ERA",
     "AMD TAKES ON NVIDIA WITH ITS HELIOS AI RACK-SCALE SYSTEM",
     "AEGISAI, FOUNDED BY FORMER GOOGLE SECURITY EXECS, LANDS $36M TO STOP AI-DRIVEN SPEAR PHISHING",
     "CLAUDE’S VOICE MODE IS NOW AVAILABLE FOR OPUS AND SONNET",
+    "WORK WITH DOCS, SHEETS, AND SLIDES IN CHATGPT",
     "GOOGLE JUST HAD ITS FIRST NEGATIVE CASH FLOW QUARTER DUE TO MASSIVE AI SPENDING",
     "TREASURY THREATENS SANCTIONS AFTER WHITE HOUSE CLAIMS MOONSHOT DISTILLED ANTHROPIC’S FABLE",
     "CHINA’S OPEN AI MODELS ARE CHALLENGING SILICON VALLEY’S PLAYBOOK",
-    "ANTHROPIC LAUNCHES CLAUDE TAG, A TOOL THAT WORKS LIKE A VIRTUAL EMPLOYEE WITHIN SLACK",
-    "AMD COMMITS UP TO $5 BILLION TO ANTHROPIC"
+    "AMD COMMITS UP TO $5 BILLION TO ANTHROPIC",
+    "BUILDING AI INFRASTRUCTURE WITH THE EFFINGHAM COUNTY COMMUNITY"
   ],
   "signals": [
     {
@@ -40,11 +40,15 @@
       "category": "adoption",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 75,
+      "significance": 81,
       "impact": "high",
       "verification": "corroborated",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=lR58Dge8jE8"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/"
@@ -57,32 +61,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-      "clusterId": "ns88nm",
-      "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
-      "desc": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI’s future. By now I’m sure most Decoder listeners are familiar with Apple’s allegations in this case. The company says a number of ex-Apple employees at […]",
-      "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
-      "dateISO": "2026-07-23T14:00:00.000Z",
-      "date": "JUL 23 2026",
-      "category": "policy",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 71,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
         "gpt"
       ]
     },
@@ -166,6 +144,32 @@
       ]
     },
     {
+      "id": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
+      "clusterId": "1wri8ul",
+      "title": "Work with docs, sheets, and slides in ChatGPT",
+      "desc": "See how you can use ChatGPT to bring context together from your apps and files, make focused edits, analyze data, and use templates to create polished documents, spreadsheets, and presentations for you to review and share. Learn more: https://learn.chatgpt.com/ Chapters: 00:00 Documents, spreadsheets, and slides 00:10 Updating a launch plan 00:32 Analyzing video performance 00:44 Creating a presen",
+      "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
+      "dateISO": "2026-07-23T14:17:31.000Z",
+      "date": "JUL 23 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 68,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending/",
       "clusterId": "18pqz3w",
       "title": "Google just had its first negative cash flow quarter due to massive AI spending",
@@ -241,44 +245,6 @@
       "sourceName": "Wired",
       "entityIds": [
         "gpt",
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
-      "clusterId": "enwy17",
-      "title": "Anthropic launches Claude Tag, a tool that works like a virtual employee within Slack",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "Fortune",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYVQ5VktmelZuekFOV3k5TDBQN3E0VHpCNnVqOExoTDNLUzlqTGJfemlja1ZVMU4tdFh0WDc2VFRaY1BYODNyb1VBcVJhMTZvMnl0LVFaN0R1ODZ5SHRHSDdwaW4wRFJwS0t6N3RkN3hEZ053RDA0VEhndzJCNjZCWVZtSnN2VkFIY2NZdDA0RVNDeXlVV0EwaDBLeTF2SlhWYldvaldZWTFnUXByYlE?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXZ2NGkzVnpxZ1NkOHloUkVWRmVMcGNYSG82TTBYWXRuZHh6UW8xV1I2TDlpWkJpMGRoaHplMFJfa3dHdDlyOUUzWVM1VkpsRDRCTlZ1blFoZXgwVU1WWDE5OHB1Y2NDVDRtRm40bUpOTVhMOUNFV3QyN1FqajVUenFxaXBOR1prQ3BoQkh6dURSaUtLWDlxTTBYUzUxdnZuSjVVc1YtUHo?oc=5"
-        },
-        {
-          "name": "SiliconANGLE",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUFNZZUdRd2RVQWRpb1hFT2l3cEl6NE5pYlM1cHoxbVVEVjdoaEdGU3h5cklyamk2LUdWSkx4OG1nd2ZHcFNMUXI2RFZwR1Zscmc1TkxhT1pQeFJ2X1RxNHFWNUtMaERlSHJkb0dSYjV1YllpalhLbmUtbXZQakxJd1o0cTdLa0FWNlg2ZDlsMkdOTldwcVJZNjNPZ3FVbTYtRW43QktR?oc=5"
-        }
-      ],
-      "sourceName": "Fortune",
-      "entityIds": [
         "claude"
       ]
     },
@@ -452,6 +418,36 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5",
+      "clusterId": "1bmyr0c",
+      "title": "US judge approves Anthropic's $1.5 billion settlement of copyright lawsuit",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5",
+      "dateISO": "2026-07-21T12:14:20.000Z",
+      "date": "JUL 21 2026",
+      "category": "policy",
+      "catConfidence": 0.83,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa1Ztc1Z3QjhWekJJTmEySVd4OUFoNkxzQWdkeWRqY0lSNkEwT1FEam1MR21fNE1LSlpFcjZvZnJIZmZwS1Rsa3RJM01uWkFLOTNWUzQycGVlcUhYaWcxNENFT1A4Nks2YUQxLXdOaWxpenBCNVVUdFFrYm5NRGdXLWNWeno2OVNkc1VWTDNDWGFnbFhRbUNON1V3Z1ljNGR3d19DUmlMNFJIWXg1UU5n?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVeFZoaVpfX1hnTlJPS05nQWZYRnB6bUdOc3pzSmlyX3dpN3BleUlVQm53Z3Bxd29JOUw1MENDMWk5VF9CX1VSU0Q2eV9zMXZWNUVOb2V4N2VaUQ?oc=5",
       "clusterId": "hg7ob7",
       "title": "Introducing Claude Opus 4.8",
@@ -481,6 +477,40 @@
         }
       ],
       "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
+      "clusterId": "enwy17",
+      "title": "Anthropic launches Claude Tag, a tool that works like a virtual employee within Slack",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
+      "dateISO": "2026-06-23T07:00:00.000Z",
+      "date": "JUN 23 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYVQ5VktmelZuekFOV3k5TDBQN3E0VHpCNnVqOExoTDNLUzlqTGJfemlja1ZVMU4tdFh0WDc2VFRaY1BYODNyb1VBcVJhMTZvMnl0LVFaN0R1ODZ5SHRHSDdwaW4wRFJwS0t6N3RkN3hEZ053RDA0VEhndzJCNjZCWVZtSnN2VkFIY2NZdDA0RVNDeXlVV0EwaDBLeTF2SlhWYldvaldZWTFnUXByYlE?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXZ2NGkzVnpxZ1NkOHloUkVWRmVMcGNYSG82TTBYWXRuZHh6UW8xV1I2TDlpWkJpMGRoaHplMFJfa3dHdDlyOUUzWVM1VkpsRDRCTlZ1blFoZXgwVU1WWDE5OHB1Y2NDVDRtRm40bUpOTVhMOUNFV3QyN1FqajVUenFxaXBOR1prQ3BoQkh6dURSaUtLWDlxTTBYUzUxdnZuSjVVc1YtUHo?oc=5"
+        }
+      ],
+      "sourceName": "Fortune",
       "entityIds": [
         "claude"
       ]
@@ -702,32 +732,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
-      "clusterId": "1kpozot",
-      "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
-      "desc": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the open internet to pull off the attack.",
-      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
-      "dateISO": "2026-07-21T22:50:01.000Z",
-      "date": "JUL 21 2026",
-      "category": "opensource",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
       "clusterId": "yj5148",
       "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
@@ -782,6 +786,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "clusterId": "1kpozot",
+      "title": "OpenAI Models Escaped Containment and Hacked Hugging Face",
+      "desc": "The cybersecurity-focused models, including GPT-5.6 Sol, broke out of a testing sandbox, exploited a zero-day, and gained access to the open internet to pull off the attack.",
+      "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/",
+      "dateISO": "2026-07-21T22:50:01.000Z",
+      "date": "JUL 21 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-models-escaped-containment-and-hacked-huggingface/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -865,12 +895,12 @@
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
         },
         {
-          "name": "Northeastern Global News",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
-        },
-        {
           "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
+        },
+        {
+          "name": "Northeastern Global News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
         },
         {
           "name": "TechCrunch",
@@ -908,30 +938,6 @@
         }
       ],
       "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-      "clusterId": "1ddchx5",
-      "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
-      "desc": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
-      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
-      "dateISO": "2026-07-23T15:00:00.000Z",
-      "date": "JUL 23 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
-        }
-      ],
-      "sourceName": "TechCrunch",
       "entityIds": []
     },
     {
@@ -1007,6 +1013,30 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "clusterId": "1ddchx5",
+      "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
+      "desc": "Etched, founded by three Harvard dropouts, has created new chips and memory components that speed up inference on any AI model -- no GPUs required, it says.",
+      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "dateISO": "2026-07-23T15:00:00.000Z",
+      "date": "JUL 23 2026",
+      "category": "capital",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
+        }
+      ],
+      "sourceName": "TechCrunch",
       "entityIds": []
     },
     {
@@ -1110,32 +1140,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-frontier-governance-framework",
-      "clusterId": "6emnhr",
-      "title": "OpenAI’s Frontier Governance Framework",
-      "desc": "Explore OpenAI’s Frontier Governance Framework and how our AI safety, security, and risk practices align with emerging EU and California regulations.",
-      "url": "https://openai.com/index/openai-frontier-governance-framework",
-      "dateISO": "2026-05-28T00:00:00.000Z",
-      "date": "MAY 28 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-frontier-governance-framework"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1144,14 +1148,18 @@
       "category": "adoption",
       "title": "OpenAI makes ChatGPT Health available to all US users",
       "summary": "Users can also integrate their personal data from services like Apple Health, Function, and MyFitnessPal.",
-      "significance": 75,
+      "significance": 81,
       "impact": "high",
       "verification": "corroborated",
       "date": "JUL 23 2026",
       "dateISO": "2026-07-23T17:00:00.000Z",
       "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=lR58Dge8jE8"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/"
@@ -1169,26 +1177,26 @@
     },
     {
       "family": "market",
-      "category": "policy",
-      "title": "Apple’s OpenAI lawsuit is about who gets to define the post-smartphone era",
-      "summary": "Today on Decoder, I’m talking with Hayden Field, The Verge’s senior AI reporter, about the major trade secrets lawsuit between Apple and OpenAI and what this tells us about OpenAI…",
-      "significance": 71,
+      "category": "capital",
+      "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
+      "summary": "AegisAI co-founders developed AI agents that quickly analyze each message as a human would, paying attention to small anomalies that even the most elaborate checklist wouldn’t cat…",
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "date": "JUL 23 2026",
-      "dateISO": "2026-07-23T14:00:00.000Z",
-      "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
+      "dateISO": "2026-07-23T18:38:34.000Z",
+      "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "However it resolves, the case could set a precedent for how models may be built, trained or licensed."
+      "whyItMatters": "If it holds up, where the money flows signals which bets investors expect to pay off."
     },
     {
       "family": "research",
@@ -1216,12 +1224,12 @@
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
         },
         {
-          "name": "Northeastern Global News",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
-        },
-        {
           "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
+        },
+        {
+          "name": "Northeastern Global News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
         },
         {
           "name": "TechCrunch",
@@ -1239,10 +1247,10 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 20,
+    "chatgpt": 21,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 77,
+    "gpt": 76,
     "claude": 74,
     "gemini": 36,
     "grok": 0,
@@ -1310,15 +1318,15 @@
           "impact": "emerging"
         },
         {
-          "h": "Anthropic launches Claude Tag, a tool that works like a virtual employee within Slack",
-          "d": "JUN 23 2026",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5",
+          "h": "Anthropic launches Claude Sonnet 5 as a cheaper way to run agents",
+          "d": "JUN 30 2026",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPYlk5UjUzQ3hOVkZIcHQ3cWNBY29hU1J4Zm1qcHlPckZvRTZWbzRhLXFaRDdnZkVXZm43SHFoX3BqeVFvaTluSm42eXRkWFpNSjczV3k2R2tYZFJLT2VnUkw0WVdueUhXblJWTDJneG5jcHpFLVRLSlFJZExQUG5CLURiWWNlUFZNdmNSOFdXWklXcTZiVDBXZ24ydGhCS25JREE?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Fortune",
-          "sourceCount": 4,
-          "verification": "corroborated",
-          "impact": "notable"
+          "sourceName": "TechCrunch",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
         }
       ]
     },
@@ -1326,6 +1334,17 @@
       "lab": "OpenAI · ChatGPT",
       "logoKey": "openai",
       "items": [
+        {
+          "h": "Work with docs, sheets, and slides in ChatGPT",
+          "d": "JUL 23 2026",
+          "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
         {
           "h": "Introducing OpenAI Presence",
           "d": "JUL 22 2026",
@@ -1363,17 +1382,6 @@
           "h": "Introducing GPT-Live",
           "d": "JUL 08 2026",
           "url": "https://openai.com/index/introducing-gpt-live",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "HP Inc. launches Frontier strategic partnership with OpenAI",
-          "d": "JUN 28 2026",
-          "url": "https://openai.com/index/hp-frontier-partnership",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -6172,14 +6180,14 @@
       "rate": "$1.78 – $3.19/hr",
       "trend": "→ 2% vs 10d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.94 – $4.39/hr",
-      "trend": "↓ 5% vs 10d ago",
-      "trendClass": "trend-down",
+      "rate": "$3.07 – $4.39/hr",
+      "trend": "→ 3% vs 10d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6216,25 +6224,25 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-24T06:45:49.932Z",
+    "updatedAt": "2026-07-24T07:00:42.553Z",
     "window": "30D",
-    "source": "Hacker News + official model forums",
+    "source": "Hacker News + official model forums + GitHub Discussions",
     "models": [
       {
         "key": "gpt",
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 213,
-        "fetchedStoryCount": 213,
+        "rawStoryHits": 318,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 179,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 222,
+        "storyCoverage": 0.9433962264150944,
+        "estimatedRelevantDiscussions": 233,
         "isEstimated": true,
-        "rawCommentHits": 2008,
+        "rawCommentHits": 2277,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 296,
-        "commentCoverage": 0.14940239043824702,
+        "commentCoverage": 0.13175230566534915,
         "limited": false,
         "points": 4831,
         "themes": [
@@ -6300,7 +6308,7 @@
           {
             "title": "Advertise in ChatGPT",
             "points": 1084,
-            "comments": 830,
+            "comments": 831,
             "url": "https://ads.openai.com/",
             "date": "JUL 21 2026"
           }
@@ -6308,8 +6316,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 179,
-            "isEstimated": false
+            "discussions": 190,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6323,28 +6331,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1081,
+        "rawStoryHits": 1079,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 298,
-        "storyCoverage": 0.27752081406105455,
-        "estimatedRelevantDiscussions": 1074,
+        "storyCoverage": 0.27803521779425394,
+        "estimatedRelevantDiscussions": 1076,
         "isEstimated": true,
-        "rawCommentHits": 6438,
+        "rawCommentHits": 6441,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 293,
-        "commentCoverage": 0.046598322460391424,
+        "commentCoverage": 0.04657661853749418,
         "limited": false,
-        "points": 18193,
+        "points": 18194,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 135
+            "count": 141
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 75
+            "count": 78
           },
           {
             "id": "writing",
@@ -6354,7 +6362,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 17
+            "count": 16
           },
           {
             "id": "speed",
@@ -6406,8 +6414,13 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 1074,
+            "discussions": 1072,
             "isEstimated": true
+          },
+          {
+            "name": "Anthropic GitHub",
+            "discussions": 4,
+            "isEstimated": false
           }
         ]
       },
@@ -6416,11 +6429,11 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 150,
-        "fetchedStoryCount": 146,
+        "rawStoryHits": 151,
+        "fetchedStoryCount": 151,
         "validatedStoryCount": 138,
-        "storyCoverage": 0.9733333333333334,
-        "estimatedRelevantDiscussions": 186,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 189,
         "isEstimated": true,
         "rawCommentHits": 1243,
         "fetchedCommentCount": 300,
@@ -6432,12 +6445,12 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 73
+            "count": 79
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 50
+            "count": 51
           },
           {
             "id": "price",
@@ -6462,7 +6475,12 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 15
+            "count": 16
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 8
           },
           {
             "id": "safety",
@@ -6470,14 +6488,9 @@
             "count": 6
           },
           {
-            "id": "local",
-            "label": "Local use",
-            "count": 5
-          },
-          {
             "id": "context",
             "label": "Context limits",
-            "count": 2
+            "count": 3
           }
         ],
         "topThreads": [
@@ -6499,13 +6512,18 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 142,
-            "isEstimated": true
+            "discussions": 138,
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
             "discussions": 44,
             "isEstimated": true
+          },
+          {
+            "name": "Google GitHub",
+            "discussions": 7,
+            "isEstimated": false
           }
         ]
       },
@@ -6520,10 +6538,10 @@
         "storyCoverage": 0.5424954792043399,
         "estimatedRelevantDiscussions": 74,
         "isEstimated": true,
-        "rawCommentHits": 10844,
+        "rawCommentHits": 10841,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 150,
-        "commentCoverage": 0.02766506824050166,
+        "commentCoverage": 0.027672723918457705,
         "limited": false,
         "points": 2601,
         "themes": [
@@ -6589,6 +6607,11 @@
             "name": "Hacker News",
             "discussions": 74,
             "isEstimated": true
+          },
+          {
+            "name": "xAI GitHub",
+            "discussions": 0,
+            "isEstimated": false
           }
         ]
       },
@@ -6597,8 +6620,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 77,
-        "fetchedStoryCount": 77,
+        "rawStoryHits": 75,
+        "fetchedStoryCount": 75,
         "validatedStoryCount": 30,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
@@ -6685,16 +6708,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 71,
-        "fetchedStoryCount": 71,
+        "rawStoryHits": 76,
+        "fetchedStoryCount": 76,
         "validatedStoryCount": 67,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 67,
         "isEstimated": false,
-        "rawCommentHits": 1098,
+        "rawCommentHits": 1097,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 292,
-        "commentCoverage": 0.273224043715847,
+        "commentCoverage": 0.27347310847766637,
         "limited": false,
         "points": 1117,
         "themes": [
@@ -6777,29 +6800,29 @@
         "fetchedStoryCount": 202,
         "validatedStoryCount": 34,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 34,
+        "estimatedRelevantDiscussions": 43,
         "isEstimated": false,
-        "rawCommentHits": 4518,
+        "rawCommentHits": 4519,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 242,
-        "commentCoverage": 0.06640106241699867,
+        "commentCoverage": 0.066386368665634,
         "limited": false,
         "points": 3466,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 53
+            "count": 57
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 51
+            "count": 53
           },
           {
             "id": "local",
             "label": "Local use",
-            "count": 35
+            "count": 36
           },
           {
             "id": "speed",
@@ -6809,12 +6832,12 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 22
+            "count": 23
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 19
+            "count": 20
           },
           {
             "id": "writing",
@@ -6857,6 +6880,11 @@
           {
             "name": "Hacker News",
             "discussions": 34,
+            "isEstimated": false
+          },
+          {
+            "name": "Qwen GitHub",
+            "discussions": 9,
             "isEstimated": false
           }
         ]
@@ -6933,6 +6961,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "coding"
+        ],
+        "excerpt": "Any idea of having this feature soon? As with the current cursor claude code plugin, whenever my max plan agents to work in the background I can't see what's happening, I need to…",
+        "source": "Anthropic GitHub",
+        "author": "sbmalik",
+        "publishedAt": "2026-07-21T10:00:40.000Z",
+        "url": "https://github.com/anthropics/claude-code-action/discussions/1535"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "coding",
           "speed"
         ],
@@ -6941,6 +6980,17 @@
         "author": "ryanmerket",
         "publishedAt": "2026-07-23T16:56:56.000Z",
         "url": "https://news.ycombinator.com/item?id=49024737"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "uses: anthropics/claude-code-action@v1",
+        "source": "Anthropic GitHub",
+        "author": "ahmedelaswany774-maker",
+        "publishedAt": "2026-07-07T09:42:15.000Z",
+        "url": "https://github.com/anthropics/claude-code-action/discussions/1476"
       },
       {
         "modelId": "claude",
@@ -6993,6 +7043,18 @@
         "modelId": "gemini",
         "themes": [
           "coding",
+          "local"
+        ],
+        "excerpt": "Tura — local, open-source coding agent Tura is a local, open-source coding agent for developers who are tired of vague skill claims, token-saving extensions with no evidence, and…",
+        "source": "Google GitHub",
+        "author": "Yohjisakamoto",
+        "publishedAt": "2026-07-20T10:42:48.000Z",
+        "url": "https://github.com/google-gemini/gemini-cli/discussions/28466"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding",
           "safety"
         ],
         "excerpt": "…eventually deliver a capable model + agent combination (Gemini 3.1 Pro still seems pretty strong, but Antigravity was inept the last time I tried to use it.)I'm happy if…",
@@ -7011,6 +7073,18 @@
         "author": "Kellerman_Paulo",
         "publishedAt": "2026-07-24T03:03:55.388Z",
         "url": "https://discuss.ai.google.dev/t/gemini-api-project-restricted-for-quota-circumvention-appeal-pending/175958"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding",
+          "local"
+        ],
+        "excerpt": "Maintainer disclosure: I build Better Agent. I wanted a way to run Gemini CLI alongside Claude and Codex without losing each provider’s native session semantics or scattering work…",
+        "source": "Google GitHub",
+        "author": "ofekron",
+        "publishedAt": "2026-07-20T00:17:11.000Z",
+        "url": "https://github.com/google-gemini/gemini-cli/discussions/28449"
       },
       {
         "modelId": "gemini",
@@ -7185,6 +7259,18 @@
         "modelId": "qwen",
         "themes": [
           "coding",
+          "local"
+        ],
+        "excerpt": "I wish you guys would retrain the model to be more up to date with Godot 4.7 coding. I have a heck of a time reminding the model to read the godot 4.7 docs and not to guess. i run…",
+        "source": "Qwen GitHub",
+        "author": "MrElusive1",
+        "publishedAt": "2026-07-23T04:50:22.000Z",
+        "url": "https://github.com/QwenLM/Qwen3.6/discussions/200"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "coding",
           "price"
         ],
         "excerpt": "…to Z.ai ($17/mo), and pay API rates for MiMo v2.5, Hy3, Qwen 3.7 Plus, & DeepSeek v4 to the original providers (Xiaomi, Tencent, Alibaba, &…",
@@ -7192,6 +7278,17 @@
         "author": "ignoramous",
         "publishedAt": "2026-07-22T02:54:16.000Z",
         "url": "https://news.ycombinator.com/item?id=49001259"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "想请教一下，关于qwen3.6 dense 相较于qwen 3.5是如何提升在agent coding上能力的训练细节，是否会在qwen 3.6的技术报告中详细说明，以及技术报告的上线时间！",
+        "source": "Qwen GitHub",
+        "author": "xiao-longlong",
+        "publishedAt": "2026-07-16T05:18:39.000Z",
+        "url": "https://github.com/QwenLM/Qwen3.6/discussions/198"
       },
       {
         "modelId": "qwen",
