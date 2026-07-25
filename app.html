@@ -131,7 +131,16 @@
   .brand h1 a{color:inherit;text-decoration:none;}
   .brand h1 a:hover,.brand h1 a:focus-visible{color:var(--teal);}
   .brand .sub{font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--ink-soft);letter-spacing:.13em;}
-  .header-right{display:flex;align-items:center;gap:14px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);flex-wrap:wrap;}
+  .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);}
+  .header-right-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end;}
+  .landing-link{
+    display:inline-flex;align-items:center;gap:6px;
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;
+    color:var(--ink-soft);background:var(--panel-solid);border:1px solid var(--border);
+    padding:6px 12px;border-radius:20px;white-space:nowrap;text-decoration:none;
+    transition:color .2s,border-color .2s,background .2s;
+  }
+  .landing-link:hover,.landing-link:focus-visible{color:var(--deep);border-color:var(--border-strong);background:var(--foam);}
   .live-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:6px;}
   @media (prefers-reduced-motion: no-preference){
     .live-dot{animation:breathe 4s ease-in-out infinite;}
@@ -663,9 +672,12 @@
       <span class="sub">A QUIET VIEW OF A LOUD INDUSTRY</span>
     </div>
     <div class="header-right">
-      <span><span class="live-dot"></span>LIVE</span>
-      <span class="clock" id="clock">--:--:--</span>
-      <span class="snapshot-pill" id="snapshot-pill">Loading latest snapshot…</span>
+      <div class="header-right-top">
+        <span><span class="live-dot"></span>LIVE</span>
+        <span class="clock" id="clock">--:--:--</span>
+        <span class="snapshot-pill" id="snapshot-pill">Loading latest snapshot…</span>
+      </div>
+      <a class="landing-link" href="./" title="Back to the landing page">Landing page</a>
     </div>
   </div>
 
