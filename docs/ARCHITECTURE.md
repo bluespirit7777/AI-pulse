@@ -56,7 +56,12 @@ scripts/update-launchradar.mjs ──uses──> scripts/lib/launchradar.mjs (UR
    git commit + push  ──►  GitHub Pages redeploys
         │
         ▼
-index.html ──module──> js/main.js
+index.html (landing) ──module──> js/landing.js  (previews the dashboard from the same
+        │                                        sources: curated.js + data/latest.json)
+        ├─ js/deeplink.js      forwards legacy root deep links (#panel-*/#tab-*/#sec-*/#full) to app.html
+        │
+        ▼  "Enter the dashboard"
+app.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
         ├─ js/nav.js           5-item IA router: panel/tab activation, legacy-hash map, depth rail, anchor correction
         ├─ js/launchradar.js   Launch Radar panel (newest model/SDK releases; hides itself if data absent)
@@ -117,8 +122,11 @@ so the flip is an instant swap, not a spin.
 
 | Path | Role |
 |------|------|
-| `index.html` | Page shell + base styles (design tokens in `:root`). |
-| `css/app.css` | Component styles. |
+| `index.html` | Landing page (site root) — self-contained styles; previews the dashboard from the same data sources. |
+| `app.html` | The dashboard. Page shell + base styles (design tokens in `:root`). |
+| `js/landing.js` | Landing controller — renders every landing figure from `curated.js` + `data/latest.json`. |
+| `js/deeplink.js` | Forwards legacy root deep links to `app.html` (blocking, runs pre-paint). |
+| `css/app.css` | Component styles (dashboard). |
 | `js/*.js` | ES modules (no bundler, no framework — served as-is). |
 | `data/latest.json` | Current data. The site is fully functional with only this. |
 | `data/range.json` | Real per-range stats + daily category history. Optional — absence falls back to "accumulating". |

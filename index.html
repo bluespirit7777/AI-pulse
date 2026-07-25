@@ -2,1023 +2,435 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Defense-in-depth against XSS from feed/API content: every dynamic value is
-     already HTML-escaped before insertion (see esc() in js/util.js), but this
-     is a second layer that blocks injected <script>/inline-handler execution
-     even if an escaping bug ever slipped through. Scoped to what the page
-     actually loads: same-origin scripts/data, Google Fonts, and the data:
-     favicon — nothing else is fetched or embedded. GitHub Pages serves no
-     custom HTTP headers, so a <meta> tag is the only way to set this here;
-     it can't cover frame-ancestors (header-only), but frame-src 'none' still
-     blocks this page from embedding iframes of its own. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
-<title>AI Market Pulse</title>
-<meta name="description" content="A quiet view of a loud industry. Auto-refreshing AI news wire, frontier model releases, rankings, and an AI stock snapshot — every story linked to its original source.">
+<!-- Same defense-in-depth policy as app.html. Note script-src has no
+     'unsafe-inline', so this page carries NO inline <script> — all behaviour
+     lives in js/deeplink.js and js/landing.js. media-src is spelled out for
+     the hero video even though default-src would already cover it. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+<title>AI Market Pulse — A quiet view of a loud industry</title>
+<meta name="description" content="AI news, benchmarks and prices — sorted by depth, not by noise. A calm daily read on frontier model releases, rankings and compute costs, every figure linked to its source.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E2A37'/%3E%3Cg stroke='%23EAF4F6' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='32' y1='11' x2='32' y2='45'/%3E%3Cline x1='15' y1='28' x2='49' y2='28'/%3E%3Cline x1='20' y1='16' x2='44' y2='40'/%3E%3Cline x1='44' y1='16' x2='20' y2='40'/%3E%3C/g%3E%3Cpath d='M0 48 Q16 42 32 48 T64 48 V64 H0 Z' fill='%233E8FA3' opacity='.7'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://bluespirit7777.github.io/AI-pulse/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AI Market Pulse">
-<meta property="og:description" content="A quiet view of a loud industry — auto-refreshing AI news, model rankings, and market data, every story linked to its source.">
+<meta property="og:title" content="AI Market Pulse — A quiet view of a loud industry">
+<meta property="og:description" content="AI news, benchmarks and prices — sorted by depth, not by noise.">
 <meta property="og:url" content="https://bluespirit7777.github.io/AI-pulse/">
 <meta property="og:image" content="https://bluespirit7777.github.io/AI-pulse/assets/ocean.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AI Market Pulse">
-<meta name="twitter:description" content="A quiet view of a loud industry — auto-refreshing AI news, model rankings, and market data, every story linked to its source.">
+<meta name="twitter:title" content="AI Market Pulse — A quiet view of a loud industry">
+<meta name="twitter:description" content="AI news, benchmarks and prices — sorted by depth, not by noise.">
 <meta name="twitter:image" content="https://bluespirit7777.github.io/AI-pulse/assets/ocean.jpg">
+
+<!-- Forwards legacy dashboard deep links to app.html. Must stay a blocking
+     classic script in <head> — see the comment block in the file. -->
+<script src="js/deeplink.js"></script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<!-- Byte-identical to app.html's font request on purpose: the dashboard is one
+     click away and shares the browser's font cache, so arriving there costs
+     no extra font download. -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/app.css">
-
 
 <style>
-  :root{
-    --ink:#0E2A37;
-    --ink-soft:#2E4B57;
-    --ink-dim:#456170;
-    --panel:rgba(250,253,254,0.95);
-    --panel-solid:#FAFDFE;
-    --border:rgba(18,48,62,0.12);
-    --border-strong:rgba(18,48,62,0.22);
-    --teal:#2E7D82;
-    --sea:#3E8FA3;
-    --sand:#B08D52;
-    --coral:#C06A5C;
-    /* --coral on --panel-solid measures ~3.76:1 — fails WCAG AA for normal-
-       sized text (needs 4.5:1). This darker variant is for TEXT only; the
-       original --coral stays for large shapes, borders, chart marks and
-       decorative accents where the AA text threshold doesn't apply. */
-    --coral-text:#9C4739;
-    --deep:#1B4B5A;
-    --foam:#EAF4F6;
-    --font-display:'Cormorant Garamond',serif;
-    --font-mono:'IBM Plex Mono',monospace;
-    --font-body:'Karla',sans-serif;
-    /* thin white outline for text that sits directly on the ocean photo with
-       no panel behind it — keeps each text's own colour, adds legibility */
-    --text-outline:
-      -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff,
-      -0.5px 0.5px 0 #fff, 0.5px 0.5px 0 #fff,
-      0 0 1px rgba(255,255,255,.8);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    color:var(--ink);
-    font-family:var(--font-body);
-    font-size:16px;
-    line-height:1.62;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-    min-height:100vh;
-  }
+:root{
+  /* Palette is app.html's, not the mockup's — the landing and the dashboard
+     have to read as one product, and these are the tokens the dashboard's
+     charts, links and accents are already built on. */
+  --foam:#F4FAFB;
+  --paper:#FDFEFE;
+  --glass:#E3EDEF;
+  --shallow:#B9D4D7;
+  --tide:#3E8FA3;   /* app.html --sea  */
+  --mid:#2E7D82;    /* app.html --teal */
+  --deep:#1B4B5A;   /* app.html --deep */
+  --ink:#0E2A37;    /* app.html --ink  */
+  --warm:#B08D52;   /* app.html --sand accent */
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Karla',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --maxw:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--foam) 0%,#EFF7F8 16%,#E8F3F4 38%,#E1EFF1 56%,#E8F3F4 74%,var(--foam) 92%);
+  background-attachment:fixed;
+  color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--mid);text-decoration:none}
+a:hover{color:var(--warm)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.005em;margin:0;text-wrap:pretty}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tide);font-weight:500}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--paper);color:var(--deep);padding:10px 16px;border-radius:0 0 10px 0}
+.skip-link:focus{left:0}
+:focus-visible{outline:2px solid var(--warm);outline-offset:3px;border-radius:4px}
 
-  /* ---------- ocean background: user's photo, slow drift ---------- */
-  .ocean-bg{
-    position:fixed;inset:-4%;z-index:-2;
-    background:url(assets/ocean.jpg) center/cover no-repeat;
-  }
-  @media (prefers-reduced-motion: no-preference){
-    .ocean-bg{animation:drift 60s ease-in-out infinite alternate;}
-  }
-  @keyframes drift{
-    0%{transform:scale(1) translate(0,0);}
-    100%{transform:scale(1.06) translate(-1%,1%);}
-  }
-  .ocean-veil{
-    position:fixed;inset:0;z-index:-1;
-    background:linear-gradient(180deg, rgba(234,244,246,0.6) 0%, rgba(234,244,246,0.7) 40%, rgba(234,244,246,0.8) 100%);
-  }
+/* ---------- nav ---------- */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:60;backdrop-filter:blur(14px) saturate(1.3);background:rgba(253,254,254,.88);border-bottom:1px solid rgba(185,212,215,.55)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:baseline;gap:10px;margin-right:auto}
+.brand b{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--deep)}
+.brand span{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--tide)}
+nav.links{display:flex;gap:2px}
+nav.links a{font-size:13px;padding:7px 13px;border-radius:999px;color:var(--mid);transition:.25s}
+nav.links a:hover{background:var(--glass);color:var(--deep)}
+nav.links a.on{background:var(--deep);color:var(--paper)}
+.navcta{font-size:12.5px;font-weight:500;letter-spacing:.03em;padding:9px 17px;border-radius:999px;background:var(--deep);color:var(--paper);white-space:nowrap;transition:.3s}
+.navcta:hover{background:var(--ink);color:var(--paper)}
+.live{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);font-variant-numeric:tabular-nums}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--warm)}
+@media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.6s ease-in-out infinite}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
 
-  /* ---------- gentle animated waves (signature element) ---------- */
-  .waves{
-    position:fixed;left:0;right:0;bottom:0;height:110px;z-index:0;pointer-events:none;opacity:.8;
-  }
-  .waves svg{position:absolute;bottom:0;left:0;width:200%;height:100%;}
-  @media (prefers-reduced-motion: no-preference){
-    .wave-a{animation:waveMove 18s linear infinite;}
-    .wave-b{animation:waveMove 26s linear infinite reverse;opacity:.6;}
-  }
-  @keyframes waveMove{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-50%);}
-  }
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero .media{position:absolute;inset:-6% 0;z-index:-2}
+.hero .media img,.hero .media video{width:100%;height:100%;object-fit:cover;display:block}
+/* The still is the base layer and the video only reveals itself once it has
+   actually decoded a frame (see .ok in js/landing.js), so a blocked, failed
+   or data-saver-skipped video degrades to the poster instead of a blank box. */
+.hero .media video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.hero .media video.ok{opacity:1}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(244,250,251,.82) 0%,rgba(244,250,251,.34) 34%,rgba(244,250,251,.56) 64%,var(--foam) 100%)}
+.hero .wrap{padding-top:140px;padding-bottom:60px;position:relative}
+.hero h1{font-size:clamp(56px,8.6vw,124px);line-height:.94;color:var(--deep);max-width:15ch}
+.hero h1 em{font-style:italic;color:var(--mid)}
+.hero .eyebrow{color:var(--deep);background:rgba(253,254,254,.82);backdrop-filter:blur(8px);padding:6px 13px;border-radius:999px;width:max-content}
+.hero .lede{margin-top:24px;font-family:var(--serif);font-size:clamp(19px,1.5vw,25px);line-height:1.5;color:var(--mid);max-width:38ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-size:13.5px;letter-spacing:.04em;font-weight:500;transition:.3s;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn.p{background:var(--deep);color:var(--paper)}
+.btn.p:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.btn.s{border-color:rgba(62,143,163,.45);color:var(--deep);background:rgba(253,254,254,.55)}
+.btn.s:hover{background:var(--paper);color:var(--deep)}
+.scrolltip{position:absolute;right:32px;bottom:60px;writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:12px;padding:14px 10px;border-radius:14px;background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);box-shadow:0 14px 34px -20px rgba(27,75,90,.55)}
+.scrolltip:after{content:"";width:1px;height:52px;background:linear-gradient(var(--mid),transparent)}
+@media (prefers-reduced-motion:no-preference){.scrolltip:after{animation:drop 2.8s ease-in-out infinite}}
+@keyframes drop{0%,100%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
 
-  a{color:inherit;}
-  ::selection{background:var(--sea);color:#fff;}
+/* ---------- ticker ---------- */
+.ticker{border-top:1px solid rgba(185,212,215,.4);border-bottom:1px solid rgba(185,212,215,.4);background:rgba(253,254,254,.62);backdrop-filter:blur(6px);overflow:hidden;position:relative;z-index:2}
+.ticker .row{display:flex;gap:44px;padding:12px 0;width:max-content}
+@media (prefers-reduced-motion:no-preference){
+  .ticker .row.go{animation:slide 62s linear infinite}
+  .ticker:hover .row,.ticker:focus-within .row{animation-play-state:paused}
+}
+@keyframes slide{to{transform:translateX(-50%)}}
+.ticker .it{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--mid);white-space:nowrap}
+.ticker .it b{font-family:var(--mono);font-weight:500;color:var(--deep);font-variant-numeric:tabular-nums}
+.ticker .it s{text-decoration:none;width:5px;height:5px;border-radius:50%;background:var(--shallow);flex:none}
 
-  /* ---------- skip link: hidden until keyboard-focused ---------- */
-  .skip-link{
-    position:absolute;left:12px;top:-60px;z-index:100;
-    background:var(--deep);color:#fff;font-family:var(--font-body);font-weight:600;font-size:13.5px;
-    padding:10px 18px;border-radius:8px;text-decoration:none;transition:top .15s ease;
-  }
-  .skip-link:focus{top:12px;}
+/* ---------- depth rail ---------- */
+.rail{position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);box-shadow:0 14px 34px -20px rgba(27,75,90,.55);opacity:0;transition:opacity .5s;pointer-events:none}
+.rail.show{opacity:1;pointer-events:auto}
+.rail a{display:flex;align-items:center;gap:11px;padding:7px 0;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);transition:.3s}
+.rail a i{display:block;width:22px;height:1px;background:currentColor;transition:.3s}
+.rail a.on{color:var(--ink)}
+.rail a.on i{width:40px;background:var(--warm)}
+.rail a:hover{color:var(--ink)}
 
-  /* ---------- header ---------- */
-  .header{
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
-    padding:26px clamp(16px,4vw,48px);
-    flex-wrap:wrap;position:relative;z-index:2;
-  }
-  .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;}
-  .brand h1{
-    font-family:var(--font-display);font-weight:700;font-size:34px;margin:0;letter-spacing:.01em;
-    color:var(--deep);
-  }
-  .brand .sub{font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--ink-soft);letter-spacing:.13em;}
-  .header-right{display:flex;align-items:center;gap:14px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);flex-wrap:wrap;}
-  .live-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:6px;}
-  @media (prefers-reduced-motion: no-preference){
-    .live-dot{animation:breathe 4s ease-in-out infinite;}
-  }
-  @keyframes breathe{
-    0%,100%{opacity:1;}
-    50%{opacity:.35;}
-  }
-  .clock{color:var(--deep);}
-  .snapshot-pill{
-    font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);
-    background:var(--panel-solid);border:1px solid var(--border);
-    padding:6px 12px;border-radius:20px;white-space:nowrap;
-  }
+/* ---------- split sections ---------- */
+section.band{padding:88px 0 0;position:relative;isolation:isolate}
+.glowwrap{position:absolute;inset:-4% 0;z-index:-1;overflow:hidden;pointer-events:none;
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 24%,rgba(0,0,0,.5) 44%,transparent 62%),linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);
+  mask-image:linear-gradient(90deg,#000 0,#000 24%,rgba(0,0,0,.5) 44%,transparent 62%),linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+section.band:has(.split.flip) .glowwrap{
+  -webkit-mask-image:linear-gradient(270deg,#000 0,#000 24%,rgba(0,0,0,.5) 44%,transparent 62%),linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);
+  mask-image:linear-gradient(270deg,#000 0,#000 24%,rgba(0,0,0,.5) 44%,transparent 62%),linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+.glow{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(44px) saturate(1.22) contrast(1.16) brightness(1.24);transform:scale(1.22)}
+@media (prefers-reduced-motion:no-preference){.glow{animation:drift 34s ease-in-out infinite alternate}}
+@keyframes drift{from{transform:scale(1.22) translate3d(-2.5%,-1.5%,0)}to{transform:scale(1.34) translate3d(2.5%,2%,0)}}
+.glowwrap:after{content:"";position:absolute;inset:0;background:rgba(244,250,251,.56)}
+.split{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(28px,4.4vw,64px);align-items:center}
+.split.flip{grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr)}
+.split.flip .fig{order:2}
+.fig{--bleed:clamp(16px,5.5vw,130px);margin:0;position:relative;aspect-ratio:4/3;width:calc(100% + var(--bleed));overflow:hidden;border-radius:18px;background:rgba(227,237,239,.7);box-shadow:0 24px 60px -32px rgba(27,75,90,.45)}
+.split:not(.flip) .fig{margin-left:calc(-1*var(--bleed))}
+.split.flip .fig{margin-right:calc(-1*var(--bleed))}
+.fig img{width:100%;height:100%;object-fit:cover;display:block}
+.fig figcaption{position:absolute;top:16px;left:16px;z-index:4;background:rgba(253,254,254,.88);backdrop-filter:blur(8px);padding:6px 12px;border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);pointer-events:none}
+.copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.depth{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tide);display:flex;align-items:center;gap:9px}
+.depth b{font-weight:500;color:var(--deep)}
+.depth s{text-decoration:none;flex:1;height:1px;background:var(--glass);max-width:70px}
+.copy h2{font-size:clamp(34px,3.6vw,50px);line-height:1.06;color:var(--deep)}
+.copy .sub{font-size:15px;line-height:1.6;color:var(--mid);max-width:42ch}
+.meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--tide);display:flex;align-items:center;gap:9px;flex-wrap:wrap;line-height:1.5}
+.meta s{text-decoration:none;width:4px;height:4px;border-radius:50%;background:var(--shallow);flex:none}
+.more{font-size:12.5px;letter-spacing:.05em;color:var(--deep);display:inline-flex;align-items:center;gap:8px;border-bottom:1px solid var(--shallow);padding-bottom:3px;width:max-content;transition:.3s}
+.more:hover{gap:14px;border-color:var(--warm);color:var(--deep)}
 
-  /* ---------- ticker: slow & soft ---------- */
-  .ticker-wrap{
-    background:var(--panel);backdrop-filter:blur(8px);
-    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-    overflow:hidden;white-space:nowrap;position:relative;z-index:2;
-  }
-  .ticker{
-    display:inline-flex;gap:56px;padding:11px 0;
-    font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);
-  }
-  @media (prefers-reduced-motion: no-preference){
-    .ticker{animation:scroll 90s linear infinite;}
-  }
-  /* Pause (without resetting position) on hover, keyboard focus, or manual toggle */
-  .ticker-wrap:hover .ticker,
-  .ticker-wrap:focus-within .ticker,
-  .ticker-wrap.is-paused .ticker{animation-play-state:paused;}
-  .ticker span{color:var(--sea);margin-right:10px;}
-  @keyframes scroll{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-50%);}
-  }
-  .ticker-toggle{
-    position:absolute;right:8px;top:50%;transform:translateY(-50%);
-    width:26px;height:26px;border-radius:50%;border:1px solid var(--border);
-    background:var(--panel-solid);color:var(--ink-soft);cursor:pointer;
-    display:inline-flex;align-items:center;justify-content:center;font-size:10px;line-height:1;
-    z-index:3;transition:background .15s,color .15s;
-  }
-  .ticker-toggle:hover{background:var(--foam);color:var(--deep);}
-  .ticker-toggle:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
-  /* Reduced motion: no auto-scroll — present the strip as a manually scrollable list */
-  @media (prefers-reduced-motion: reduce){
-    .ticker-wrap{overflow-x:auto;}
-    .ticker-toggle{display:none;}
-  }
+/* ---------- tabs ---------- */
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{background:none;border:1px solid var(--glass);color:var(--mid);font-family:var(--sans);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;padding:7px 14px;border-radius:999px;transition:.25s;cursor:pointer}
+.tabs button:hover{border-color:var(--shallow);color:var(--deep)}
+.tabs button[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:var(--paper)}
+.pane[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.pane:not([hidden]){animation:fade .5s ease both}}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
 
-  /* ---------- sticky top nav: 5 primary destinations ---------- */
-  .topnav{
-    position:sticky;top:0;z-index:40;background:var(--panel-solid);
-    border-bottom:1px solid var(--border);display:flex;gap:8px;padding:12px clamp(16px,4vw,48px);
-    overflow-x:auto;align-items:center;
-  }
-  .topnav-item{
-    font-family:var(--font-body);font-weight:600;font-size:13.5px;letter-spacing:.03em;white-space:nowrap;
-    color:var(--deep);background:transparent;
-    padding:9px 18px;border-radius:22px;border:1px solid var(--border-strong);
-    cursor:pointer;transition:background .2s ease, color .2s ease, transform .15s ease;
-    min-height:40px;
-  }
-  .topnav-item:hover{background:var(--foam);transform:translateY(-1px);}
-  .topnav-item:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
-  .topnav-item[aria-current="page"]{background:var(--deep);border-color:var(--deep);color:#fff;}
-  /* "Full page" is a different kind of nav item (a view-mode toggle, not one
-     of the 5 destinations) — a dashed border marks that distinction without
-     relying on color alone. */
-  .topnav-item--full{border-style:dashed;color:var(--ink-soft);}
-  .topnav-item--full[aria-current="page"]{border-style:solid;}
-  /* Mobile: wrap the 5 destinations into rows instead of a horizontal-scroll
-     strip (Phase 8) — with only 5 items this fits in 2 short rows, no
-     hidden/overflow content and no swipe-to-discover required. */
-  @media (max-width:560px){
-    .topnav{flex-wrap:wrap;overflow-x:visible;justify-content:center;gap:6px;padding:10px clamp(12px,4vw,24px);}
-    .topnav-item{padding:8px 13px;font-size:12.5px;}
-  }
+/* ---------- mini rows ---------- */
+.mini{display:flex;flex-direction:column;min-height:132px}
+.mini .r{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:14px;align-items:center;padding:11px 8px;border-bottom:1px solid var(--glass);transition:.25s}
+.mini .r:hover{background:var(--paper);padding-left:14px}
+.mini .r:last-child{border-bottom:0}
+.mini .n{font-family:var(--mono);font-size:11px;color:var(--tide);font-variant-numeric:tabular-nums}
+.mini .nm{font-size:14.5px;color:var(--deep);line-height:1.35;min-width:0}
+.mini .nm em{font-style:normal;display:block;font-size:11.5px;color:var(--tide);margin-top:2px}
+.mini .v{font-family:var(--mono);font-size:12px;color:var(--mid);font-variant-numeric:tabular-nums;text-align:right}
+.mini .empty{padding:14px 8px;font-size:13px;color:var(--tide);line-height:1.5}
 
-  /* ---------- local tabs: within a top-level section ---------- */
-  .local-tabs{
-    display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 20px;
-    border-bottom:1px solid var(--border-strong);padding-bottom:14px;
-  }
-  .local-tab{
-    font-family:var(--font-mono);font-size:12px;letter-spacing:.02em;white-space:nowrap;
-    color:var(--ink-soft);background:var(--panel);border:1px solid var(--border-strong);
-    padding:9px 15px;border-radius:999px;cursor:pointer;min-height:40px;
-    transition:background .18s ease, color .18s ease, border-color .18s ease;
-  }
-  .local-tab:hover{border-color:var(--deep);color:var(--ink);}
-  .local-tab:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
-  /* Local tabs are now a "jump to a section" bar (every subsection is shown
-     stacked, so there's no single "selected" panel). aria-current marks the
-     section you last jumped to, as a light cue. */
-  .local-tab[aria-current="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
-  .tabpanel{scroll-margin-top:126px;}
-  /* Subsections are now shown stacked within a section — separate consecutive
-     ones with space + a light divider so the boundaries stay clear. */
-  .tabpanel + .tabpanel{margin-top:34px;padding-top:30px;border-top:1px solid var(--border);}
-  .topsection{scroll-margin-top:70px;}
+/* ---------- bars ---------- */
+.bars{display:flex;flex-direction:column;gap:13px;min-height:132px}
+.bar{display:grid;grid-template-columns:88px minmax(0,1fr) 48px;gap:14px;align-items:center;font-size:13px;color:var(--deep)}
+.bar .track{height:6px;border-radius:999px;background:var(--glass);overflow:hidden}
+.bar .fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--shallow),var(--tide));width:0;transition:width 1.4s cubic-bezier(.16,.84,.28,1)}
+.bar .v{font-family:var(--mono);text-align:right;font-size:11.5px;color:var(--tide);font-variant-numeric:tabular-nums}
 
-  /* ---------- one-line methodology note + disclosure (Phase 4 declutter) ---------- */
-  .one-line-note{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-  .how-it-works{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);flex-basis:100%;}
-  .how-it-works summary{cursor:pointer;color:var(--teal);font-weight:600;list-style:revert;}
-  .how-it-works summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
-  .how-it-works[open] summary{margin-bottom:6px;}
+/* ---------- seabed ---------- */
+.deepband{margin-top:88px;background:linear-gradient(180deg,#235B6C 0%,var(--deep) 42%,var(--ink) 100%);padding:96px 0;position:relative;overflow:hidden}
+.deepband:before{content:"";position:absolute;top:0;left:0;right:0;height:140px;background:linear-gradient(180deg,var(--foam),transparent);opacity:.16;pointer-events:none;z-index:1}
+.deepband .caust{position:absolute;inset:-30%;background:radial-gradient(closest-side,rgba(62,143,163,.55),transparent 70%);filter:blur(60px);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.deepband .caust{animation:float 26s ease-in-out infinite alternate}}
+@keyframes float{from{transform:translate3d(-8%,-4%,0) scale(1)}to{transform:translate3d(8%,6%,0) scale(1.25)}}
+.deepband .wrap{position:relative;z-index:2}
+.deepband h2{color:var(--paper);font-size:clamp(32px,3.6vw,50px);max-width:22ch;margin-top:14px}
+.deepband .lede{margin-top:20px;font-family:var(--serif);font-size:19px;line-height:1.6;color:rgba(227,237,239,.86);max-width:46ch}
+.deepband .eyebrow{color:var(--shallow)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+.chips span{border:1px solid rgba(62,143,163,.6);color:var(--shallow);font-size:11.5px;letter-spacing:.06em;padding:7px 14px;border-radius:999px;transition:.3s}
+.chips span:hover{background:rgba(62,143,163,.3);color:var(--paper)}
 
-  /* ---------- depth rail: Surface / Currents / Midwater / Seabed ----------
-     A slim horizontal status strip directly under the top nav, at every
-     viewport width — not a floating sidebar. A fixed sidebar competing with
-     the 1240px-wide .wrap has no clean clearance at any of the required
-     desktop breakpoints (it overlapped content even at 1440px). It's
-     intentionally NOT sticky (unlike .topnav): stacking two sticky bars
-     requires the second one's offset to exactly match the first's rendered
-     height, which varies between the single-row desktop topnav and the
-     two-row wrapped mobile topnav — without the ability to pixel-verify
-     that visually this session, a static bar that never risks overlapping
-     the nav is the safer, honestly-verifiable choice. */
-  .depth-rail{
-    display:flex;flex-direction:row;justify-content:center;gap:20px;
-    background:var(--panel-solid);border-bottom:1px solid var(--border);
-    padding:8px 12px;
-  }
-  .depth-item{
-    font-family:var(--font-mono);font-size:9.5px;letter-spacing:.04em;color:var(--ink-dim);
-    display:flex;align-items:center;gap:6px;text-align:center;
-    opacity:.55;transition:opacity .2s ease;
-  }
-  .depth-item i{width:8px;height:8px;border-radius:50%;background:var(--ink-dim);border:2px solid transparent;display:block;flex-shrink:0;}
-  .depth-item small{font-size:8.5px;color:var(--ink-dim);line-height:1.2;}
-  .depth-item[data-active="true"]{opacity:1;}
-  .depth-item[data-active="true"] i{background:var(--teal);border-color:var(--sea);box-shadow:0 0 0 3px rgba(62,143,163,0.18);}
-  .depth-item[data-active="true"]{color:var(--deep);}
-  @media (max-width:640px){
-    .depth-rail{gap:10px;justify-content:space-around;}
-    .depth-item{flex-direction:column;gap:2px;}
-    .depth-item small{display:none;}
-  }
+/* ---------- close + footer ---------- */
+.close{padding:104px 0;margin-top:-1px;text-align:center;position:relative;overflow:hidden}
+.close .media{position:absolute;inset:0;z-index:-2}
+.close .media img{width:100%;height:100%;object-fit:cover;display:block}
+.close:after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(244,250,251,.7)}
+.close h2{font-size:clamp(34px,4.4vw,60px);color:var(--deep);max-width:20ch;margin:0 auto}
+.close p{margin:20px auto 0;font-family:var(--serif);font-size:19px;color:var(--mid);max-width:42ch;line-height:1.6}
+.close .cta{justify-content:center}
+footer{border-top:1px solid var(--glass);background:rgba(253,254,254,.7);padding:38px 0 48px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between}
+footer p{font-size:12px;color:var(--tide);max-width:62ch;line-height:1.6}
+footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
-  /* ---------- layout ---------- */
-  .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px);position:relative;z-index:2;}
-  section{padding:36px 0;scroll-margin-top:70px;}
-  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
-  .section-head h2{
-    font-family:var(--font-display);font-size:26px;font-weight:600;
-    margin:0;color:var(--deep);
-  }
-  .section-head .tag{font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--ink-soft);letter-spacing:.05em;}
-  .section-head .rule{flex:1;height:1px;background:var(--border-strong);align-self:center;}
+/* Reveal-on-scroll. Gated on .js so the content is visible with JS disabled. */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
 
-  .asof{
-    font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;
-    color:var(--ink-soft);background:var(--foam);border:1px solid var(--border);
-    padding:3px 10px;border-radius:20px;white-space:nowrap;display:inline-block;
-  }
-
-  /* ---------- panels: frosted glass ---------- */
-  .panel{
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-radius:16px;padding:26px 28px;
-    box-shadow:0 6px 24px rgba(18,48,62,0.07);
-    transition:box-shadow .25s ease, transform .25s cubic-bezier(.16,.84,.44,1);
-  }
-  .panel:hover{box-shadow:0 14px 38px rgba(18,48,62,0.12);transform:translateY(-2px);}
-  .panel h3{
-    font-family:var(--font-display);font-size:22px;font-weight:600;
-    margin:0 0 2px 0;color:var(--deep);
-  }
-  .panel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
-  .panel .panel-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);line-height:1.55;}
-
-  /* ---------- stats strip ---------- */
-  .stats-strip{
-    display:grid;grid-template-columns:repeat(5,1fr);gap:14px;
-  }
-  @media (max-width:900px){.stats-strip{grid-template-columns:repeat(2,1fr);}}
-  .stat{
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-radius:14px;padding:20px 18px;
-    box-shadow:0 4px 16px rgba(18,48,62,0.06);
-    transition:transform .22s cubic-bezier(.16,.84,.44,1), box-shadow .22s ease, border-color .22s ease;
-  }
-  .stat:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(18,48,62,0.14);border-color:var(--border-strong);}
-  .stat:hover .num{color:var(--sea);}
-  .stat .num{transition:color .22s ease;}
-  .stat .num{font-family:var(--font-display);font-size:clamp(26px,3vw,32px);font-weight:700;color:var(--teal);}
-  .stat .lbl{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);margin-top:5px;letter-spacing:.01em;line-height:1.5;}
-
-  /* ---------- shared flip-card mechanics (release cards + Local AI spec cards) ---------- */
-  .flip-card{perspective:1400px;}
-  .flip-card-inner{
-    position:relative;min-height:360px;
-    transform-style:preserve-3d;
-    transition:transform .5s cubic-bezier(.16,.84,.44,1), box-shadow .24s ease;
-  }
-  .flip-card:hover .flip-card-inner{box-shadow:0 16px 36px rgba(18,48,62,0.15);}
-  .flip-card.is-flipped .flip-card-inner{transform:rotateY(180deg);}
-  .flip-card-face{
-    position:absolute;inset:0;display:flex;flex-direction:column;
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-top:3px solid var(--sea);
-    border-radius:14px;padding:22px 24px;
-    box-shadow:0 4px 16px rgba(18,48,62,0.06);
-    backface-visibility:hidden;overflow-y:auto;
-  }
-  .flip-card-back{transform:rotateY(180deg);}
-  .flip-card-btn{
-    margin-top:14px;align-self:flex-start;flex-shrink:0;
-    font-family:var(--font-mono);font-size:11px;color:var(--teal);
-    background:var(--foam);border:1px solid var(--border-strong);border-radius:999px;
-    padding:7px 14px;min-height:36px;cursor:pointer;
-    display:inline-flex;align-items:center;gap:6px;
-    transition:background .18s ease,color .18s ease,transform .18s ease;
-  }
-  .flip-card-btn:hover{background:var(--deep);color:#fff;}
-  .flip-card-btn:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
-  .flip-card-btn svg{width:11px;height:11px;flex-shrink:0;}
-  /* "stand out" variant — solid color + icon + gentle pulse, for flips the
-     user might otherwise miss (e.g. the Local AI hardware-spec tables) */
-  .flip-card-btn--prominent{
-    background:var(--teal);color:#fff;border-color:var(--teal);
-    font-weight:600;font-size:11.5px;padding:9px 16px;box-shadow:0 3px 10px rgba(46,125,130,0.35);
-  }
-  .flip-card-btn--prominent:hover{background:var(--deep);border-color:var(--deep);transform:translateY(-1px);}
-  @media (prefers-reduced-motion: no-preference){
-    .flip-card-btn--prominent{animation:flipBtnPulse 2.6s ease-in-out infinite;}
-    .flip-card.is-flipped .flip-card-btn--prominent{animation:none;}
-  }
-  @keyframes flipBtnPulse{
-    0%,100%{box-shadow:0 3px 10px rgba(46,125,130,0.35);}
-    50%{box-shadow:0 3px 16px rgba(46,125,130,0.65);}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .flip-card-inner{transition:none;}
-  }
-
-  /* ---------- release cards: flip container (front = releases, back = top YouTube videos this week) ---------- */
-  .release-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  @media (max-width:900px){.release-grid{grid-template-columns:1fr;}}
-  .flip-card:hover .release-logo{transform:scale(1.08) rotate(-4deg);}
-  .release-lab{
-    font-family:var(--font-mono);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--sea);margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-shrink:0;
-  }
-  .release-logo{
-    width:32px;height:32px;border-radius:9px;flex-shrink:0;
-    display:inline-flex;align-items:center;justify-content:center;
-    background:var(--panel-solid);border:1px solid var(--border);
-    box-shadow:0 2px 6px rgba(18,48,62,0.07);
-    transition:transform .24s cubic-bezier(.16,.84,.44,1);
-  }
-  .release-logo svg{width:18px;height:18px;display:block;}
-  .release-labtext{color:var(--deep);font-size:15px;font-weight:700;letter-spacing:0;text-transform:none;display:flex;flex-direction:column;gap:1px;}
-  .release-org{color:var(--ink-soft);font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;}
-  .release-list{margin:0;padding:0;list-style:none;flex:1;}
-  .release-list li{
-    font-size:13.5px;color:var(--ink-soft);padding:9px 0;border-top:1px dashed var(--border);
-    display:flex;justify-content:space-between;gap:10px;align-items:baseline;
-  }
-  .release-list li b{color:var(--ink);font-weight:600;}
-  .release-list .d{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);white-space:nowrap;flex-shrink:0;}
-  .release-item-main{display:inline-flex;align-items:baseline;gap:6px;min-width:0;}
-  .release-item-link{color:inherit;text-decoration:none;}
-  .release-item-link:hover b{color:var(--sea);text-decoration:underline;}
-  .release-yt-link{color:var(--coral);display:inline-flex;align-items:center;flex-shrink:0;}
-  .release-yt-link:hover{color:var(--deep);}
-  .release-yt-inline{color:var(--coral);display:inline-flex;align-items:center;margin-right:5px;transform:translateY(1px);}
-  .release-empty{color:var(--ink-dim);font-size:12.5px;line-height:1.6;border-top:none !important;padding-top:2px !important;}
-  .yt-videos{flex:1;}
-  .yt-loading,.yt-empty{color:var(--ink-dim);font-size:12.5px;line-height:1.6;}
-  .yt-video-list{list-style:none;margin:0;padding:0;}
-  .yt-video{padding:9px 0;border-top:1px dashed var(--border);}
-  .yt-video:first-child{border-top:none;}
-  .yt-video-title{display:block;font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;line-height:1.4;}
-  .yt-video-title:hover{color:var(--sea);text-decoration:underline;}
-  .yt-video-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:4px;font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);}
-  .yt-video-views{color:var(--teal);}
-  .yt-caption{margin:10px 0 0;flex-shrink:0;}
-
-  /* ---------- Local AI hardware-spec cards (Local + Local Mobile) ---------- */
-  .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
-  .spec-grid>*{min-width:0;} /* same CSS Grid min-width:auto fix as .grid-2 — lets contents wrap/shrink instead of overflowing the column */
-  @media (max-width:820px){.spec-grid{grid-template-columns:1fr;}}
-  .spec-table{width:100%;border-collapse:collapse;font-size:12.5px;}
-  .spec-table th{
-    text-align:left;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--ink-dim);padding:0 8px 8px;border-bottom:1px solid var(--border-strong);font-weight:400;
-  }
-  .spec-table td{padding:9px 8px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--ink-soft);}
-  .spec-table tr:last-child td{border-bottom:none;}
-  .spec-table .spec-model{font-family:var(--font-body);font-weight:700;color:var(--ink);}
-  .spec-tier{
-    font-family:var(--font-mono);font-size:9.5px;letter-spacing:.03em;padding:3px 9px;border-radius:20px;
-    white-space:nowrap;color:#fff;display:inline-block;
-  }
-  .spec-tier-1{background:var(--sea);}
-  .spec-tier-2{background:var(--teal);}
-  .spec-tier-3{background:var(--sand);}
-  .spec-tier-4{background:var(--coral-text);}
-  .spec-tier-5{background:var(--deep);}
-  .spec-caption{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);line-height:1.6;margin:12px 0 0;flex-shrink:0;}
-
-  /* ---------- grids ---------- */
-  .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
-  /* grid items default to min-width:auto, which refuses to shrink below the
-     content's intrinsic width (e.g. an unwrapped .lb-tabs button row) — that
-     silently overflows the column instead of letting it wrap. min-width:0
-     is what actually lets a grid item's own children wrap/shrink. */
-  .grid-2>*{min-width:0;}
-  @media (max-width:880px){.grid-2{grid-template-columns:1fr;}}
-
-  /* ---------- leaderboard bars ---------- */
-  .lb-row{margin-bottom:16px;}
-  .lb-row:last-child{margin-bottom:0;}
-  .lb-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:6px;}
-  .lb-name{display:flex;align-items:baseline;gap:8px;}
-  .lb-rank{font-family:var(--font-mono);color:var(--ink-dim);font-size:12px;width:18px;}
-  .lb-model{font-family:var(--font-body);font-weight:700;font-size:14.5px;color:var(--ink);}
-  .lb-org{font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);}
-  .lb-stat{font-family:var(--font-mono);font-size:11px;color:var(--teal);text-align:right;white-space:nowrap;}
-  .lb-score{font-family:var(--font-mono);font-size:15.5px;font-weight:700;color:var(--sea);text-align:right;white-space:nowrap;line-height:1;}
-  .lb-score-unit{font-size:9.5px;color:var(--ink-dim);font-weight:400;margin-left:1px;}
-  .lb-note-lead{color:var(--ink-soft);font-weight:700;}
-  .bar-track{height:8px;background:rgba(18,48,62,0.08);border-radius:4px;overflow:hidden;}
-  .bar-fill{height:100%;width:0%;border-radius:4px;
-    background:linear-gradient(90deg,var(--sea),var(--teal));
-    transition:width 1.4s cubic-bezier(.16,.84,.44,1);}
-  .lb-note{font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);margin-top:5px;}
-  .lb-row--ordinal .lb-rank{color:var(--sand);}
-  .lb-editorial-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.03em;color:var(--ink-dim);
-    background:var(--foam);border:1px dashed var(--border-strong);border-radius:6px;
-    padding:3px 9px;display:inline-block;}
-
-  /* leaderboard: 4 use-case-specific views, not one blended "objective" rank */
-  .lb-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
-  .lb-tab{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);
-    background:var(--panel);border:1px solid var(--border-strong);border-radius:999px;
-    padding:8px 14px;min-height:44px;cursor:pointer;}
-  .lb-tab:hover{border-color:var(--deep);color:var(--ink);}
-  .lb-tab:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
-  .lb-tab[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:#fff;}
-  /* Per-view colour identity (requested): Overall=blue, Reasoning=teal green,
-     Agentic=orange, Cost=brown. Unselected shows a colour-tinted box + border
-     with dark, readable text; selected fills solid with white text. Colour is
-     never the ONLY cue — the label text and aria-selected still carry it. */
-  #lb-tab-overall{border-color:#2E6FB0;background:color-mix(in srgb,#2E6FB0 12%,var(--panel));}
-  #lb-tab-overall[aria-selected="true"]{background:#2E6FB0;border-color:#2E6FB0;color:#fff;}
-  #lb-tab-reasoning{border-color:var(--teal);background:color-mix(in srgb,var(--teal) 12%,var(--panel));}
-  #lb-tab-reasoning[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:#fff;}
-  #lb-tab-agentic{border-color:#C0692A;background:color-mix(in srgb,#C0692A 12%,var(--panel));}
-  #lb-tab-agentic[aria-selected="true"]{background:#C0692A;border-color:#C0692A;color:#fff;}
-  #lb-tab-cost{border-color:#6F4E37;background:color-mix(in srgb,#6F4E37 12%,var(--panel));}
-  #lb-tab-cost[aria-selected="true"]{background:#6F4E37;border-color:#6F4E37;color:#fff;}
-  .lb-disclaimer{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.02em;color:var(--warn,#c98a1a);
-    background:color-mix(in srgb, var(--warn,#c98a1a) 10%, transparent);
-    border:1px solid color-mix(in srgb, var(--warn,#c98a1a) 35%, transparent);
-    border-radius:8px;padding:6px 10px;margin:0 0 14px;line-height:1.5;}
-
-  /* ---------- donut ---------- */
-  .donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;}
-  .donut{
-    width:160px;height:160px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;
-    background:conic-gradient(
-      var(--deep) 0% 53.9%,
-      var(--sea) 53.9% 81.8%,
-      var(--teal) 81.8% 91%,
-      var(--sand) 91% 95%,
-      var(--coral) 95% 98%,
-      var(--ink-dim) 98% 100%
-    );
-  }
-  .donut-tooltip{
-    position:absolute;pointer-events:none;z-index:5;
-    background:var(--panel-solid);border:1px solid var(--border-strong);border-radius:8px;
-    padding:6px 11px;font-family:var(--font-mono);font-size:12px;color:var(--ink);
-    box-shadow:0 4px 14px rgba(14,42,55,0.16);white-space:nowrap;
-  }
-  /* :not([hidden]) so the [hidden] attribute (equal specificity to a plain
-     class rule) actually wins and hides it — a bare "display:flex" here would
-     permanently override the UA [hidden]{display:none} rule, leaving the
-     tooltip visibly stuck showing its last content even when not hovering. */
-  .donut-tooltip:not([hidden]){display:flex;align-items:center;gap:7px;}
-  .donut-tooltip .donut-tt-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-  .donut-tooltip b{color:var(--deep);}
-  .donut-label{
-    position:absolute;inset:21%;border-radius:50%;background:var(--panel-solid);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    font-family:var(--font-mono);text-align:center;
-  }
-  .donut-label .n{font-family:var(--font-display);font-size:20px;color:var(--deep);font-weight:700;}
-  .donut-label .l{font-size:9px;color:var(--ink-dim);letter-spacing:.06em;margin-top:2px;}
-  .legend{display:flex;flex-direction:column;gap:9px;font-family:var(--font-mono);font-size:12px;min-width:170px;}
-  .legend .row{display:flex;align-items:center;gap:8px;}
-  .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
-  .legend .name{color:var(--ink);flex:1;}
-  .legend .pct{color:var(--ink-dim);}
-  .callout{
-    margin-top:18px;padding:13px 15px;background:var(--foam);border:1px solid var(--border);
-    border-radius:10px;font-size:13px;color:var(--ink-soft);line-height:1.6;
-  }
-  .callout b{color:var(--teal);font-weight:700;}
-
-  /* ---------- tables ---------- */
-  .stock-table{width:100%;border-collapse:collapse;}
-  .stock-table thead th{
-    text-align:left;font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--ink-dim);padding:0 10px 10px;border-bottom:1px solid var(--border-strong);font-weight:400;
-  }
-  .stock-table tbody td{padding:11px 10px;border-bottom:1px solid var(--border);vertical-align:top;}
-  .stock-table tbody tr:last-child td{border-bottom:none;}
-  .stock-table tbody tr:hover{background:rgba(62,143,163,0.05);}
-  .ticker-cell{font-family:var(--font-body);font-weight:700;font-size:14px;color:var(--ink);}
-  .metric-cell{font-family:var(--font-mono);font-size:12px;color:var(--ink);}
-  .signal-cell{font-size:13px;color:var(--ink-soft);line-height:1.5;}
-  .trend-up{color:var(--coral-text);font-family:var(--font-mono);font-size:12px;}
-  .trend-down{color:var(--teal);font-family:var(--font-mono);font-size:12px;}
-  .trend-new{color:var(--sea);font-family:var(--font-mono);font-size:12px;}
-  /* stock day-change uses conventional finance colours: gains green, losses red
-     (the compute table keeps trend-up=coral because rising GPU prices are the
-     "bad" direction for buyers) */
-  .stock-up{color:#1f7a4d;font-family:var(--font-mono);font-size:12px;}
-  .stock-down{color:var(--coral-text);font-family:var(--font-mono);font-size:12px;}
-
-  /* ---------- wire cards ---------- */
-  .wire-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  @media (max-width:960px){.wire-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:640px){.wire-grid{grid-template-columns:1fr;}}
-  .card{
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-radius:14px;padding:22px;
-    box-shadow:0 4px 16px rgba(18,48,62,0.06);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(18,48,62,0.11);}
-  .card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;}
-  .card-tag{
-    display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;
-    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
-  }
-  .card-tag .tdot{width:7px;height:7px;border-radius:50%;}
-  .card h4{font-family:var(--font-display);font-size:20px;font-weight:600;margin:0 0 8px 0;line-height:1.25;color:var(--deep);}
-  .card p{font-size:14px;color:var(--ink-soft);margin:0 0 12px 0;line-height:1.62;}
-  .card-src{font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);border-top:1px solid var(--border);padding-top:10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-  .src-link{font-family:var(--font-mono);font-size:11px;color:var(--teal);text-decoration:none;font-weight:600;white-space:nowrap;}
-  .src-link:hover{text-decoration:underline;}
-  .src-link::after{content:" \2197";}
-  .data-note{display:none;font-family:var(--font-mono);font-size:11.5px;color:var(--coral-text);background:rgba(192,106,92,0.1);border:1px solid rgba(192,106,92,0.3);border-radius:8px;padding:8px 14px;margin-bottom:14px;}
-  .data-note.show{display:block;}
-
-  /* ---------- local feed rows ---------- */
-  .feed-row{
-    display:grid;grid-template-columns:1.3fr auto auto 2fr;gap:12px;align-items:center;
-    padding:12px 12px;margin:0 -12px;border-radius:10px;border-bottom:1px solid var(--border);
-    transition:background .18s ease, transform .18s ease;
-  }
-  .feed-row:hover{background:rgba(62,143,163,0.09);transform:translateX(3px);}
-  .feed-row:last-child{border-bottom:none;}
-  .feed-name{font-weight:700;font-size:13.5px;color:var(--ink);}
-  .feed-org{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);display:block;margin-top:2px;}
-  .license{
-    font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;padding:3px 10px;border-radius:20px;
-    white-space:nowrap;justify-self:start;color:#fff;
-  }
-  .lic-mit{background:var(--teal);}
-  .lic-apache{background:var(--sea);}
-  .lic-open{background:var(--sand);}
-  .lic-custom{background:var(--coral-text);}
-  .feed-desc{font-size:13px;color:var(--ink-soft);}
-
-  /* ---------- breakthrough cards ---------- */
-  .brk-card{
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-left:3px solid var(--sand);
-    border-radius:12px;padding:18px 20px;
-    box-shadow:0 4px 16px rgba(18,48,62,0.05);
-    transition:transform .22s cubic-bezier(.16,.84,.44,1), box-shadow .22s ease, border-left-width .22s ease;
-  }
-  .brk-card:hover{transform:translateX(4px);box-shadow:0 10px 26px rgba(18,48,62,0.12);border-left-width:5px;}
-  .brk-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;}
-  .brk-card h4{font-family:var(--font-display);font-size:19px;font-weight:600;margin:0 0 6px;color:var(--deep);}
-  .brk-card p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.62;}
-  .brk-field{font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);}
-
-  /* ---------- footer ---------- */
-  footer{
-    background:var(--panel-solid);
-    border-top:1px solid var(--border);
-    padding:28px clamp(16px,4vw,48px) 130px;
-    font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);line-height:1.8;
-    position:relative;z-index:2;margin-top:20px;
-  }
-  footer b{color:var(--ink-soft);}
-  .footer-build{opacity:.72;font-size:10.5px;letter-spacing:.02em;}
-  .dh-chip{margin-top:10px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.02em;color:var(--ink-soft);
-    background:var(--panel);border:1px solid var(--border-strong);border-radius:999px;
-    padding:6px 12px;min-height:32px;cursor:pointer;}
-  .dh-chip:hover{border-color:var(--deep);color:var(--ink);}
-  .dh-chip:focus-visible{outline:2px solid var(--deep);outline-offset:2px;}
-  .dh-chip .dh-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:middle;}
-  .dh-dot--ok{background:var(--teal, #2f8f7f);}
-  .dh-dot--warn{background:var(--warn,#c98a1a);}
+@media(max-width:900px){
+  .wrap{padding:0 20px}
+  nav.links,.live{display:none}
+  .rail{display:none}
+  /* .split.flip must be named explicitly: it is more specific (0,2,0) than a
+     bare .split (0,1,0), and a media query adds no specificity of its own, so
+     ".split{grid-template-columns:1fr}" alone leaves the flipped sections
+     (Currents, Markets) stuck in two columns and crushes their content. */
+  .split,.split.flip{grid-template-columns:1fr;gap:26px}
+  .glowwrap{display:none}
+  .fig{--bleed:20px;aspect-ratio:5/4}
+  .split.flip .fig{order:0}
+  .hero .wrap{padding-top:100px;padding-bottom:40px}
+  .scrolltip{display:none}
+  section.band{padding-top:64px}
+  .deepband,.close{padding:64px 0}
+  .deepband{margin-top:64px}
+  .bar{grid-template-columns:76px minmax(0,1fr) 44px;gap:10px;font-size:12px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .glowwrap{display:none}
+  .js .rv{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<a class="skip-link" href="#surface">Skip to content</a>
 
-  <div class="ocean-bg"></div>
-  <div class="ocean-veil"></div>
-
-  <div class="waves" aria-hidden="true">
-    <svg class="wave-a" viewBox="0 0 1440 110" preserveAspectRatio="none">
-      <path d="M0,60 C120,80 240,40 360,55 C480,70 600,90 720,70 C840,50 960,45 1080,60 C1200,75 1320,80 1440,60 L1440,110 L0,110 Z" fill="rgba(62,143,163,0.25)"></path>
-      <path d="M1440,60 C1560,80 1680,40 1800,55 C1920,70 2040,90 2160,70 C2280,50 2400,45 2520,60 C2640,75 2760,80 2880,60 L2880,110 L1440,110 Z" fill="rgba(62,143,163,0.25)"></path>
-    </svg>
-    <svg class="wave-b" viewBox="0 0 1440 110" preserveAspectRatio="none">
-      <path d="M0,75 C160,60 320,90 480,78 C640,66 800,55 960,72 C1120,89 1280,85 1440,72 L1440,110 L0,110 Z" fill="rgba(27,75,90,0.22)"></path>
-      <path d="M1440,75 C1600,60 1760,90 1920,78 C2080,66 2240,55 2400,72 C2560,89 2720,85 2880,72 L2880,110 L1440,110 Z" fill="rgba(27,75,90,0.22)"></path>
-    </svg>
-  </div>
-
-  <div class="header">
-    <div class="brand">
-      <h1>AI Market Pulse</h1>
-      <span class="sub">A QUIET VIEW OF A LOUD INDUSTRY</span>
-    </div>
-    <div class="header-right">
-      <span><span class="live-dot"></span>LIVE</span>
-      <span class="clock" id="clock">--:--:--</span>
-      <span class="snapshot-pill" id="snapshot-pill">Loading latest snapshot…</span>
-    </div>
-  </div>
-
-  <nav class="topnav" aria-label="Main navigation" id="topnav">
-    <button type="button" class="topnav-item topnav-item--full" data-panel="full" title="Show every section on one page, top to bottom">Full page</button>
-    <button type="button" class="topnav-item" data-panel="today" aria-current="page">Today</button>
-    <button type="button" class="topnav-item" data-panel="ecosystem">Ecosystem</button>
-    <button type="button" class="topnav-item" data-panel="models">Models</button>
-    <button type="button" class="topnav-item" data-panel="markets">Markets</button>
-    <button type="button" class="topnav-item" data-panel="research">Research</button>
+<header class="nav">
+<div class="wrap">
+  <div class="brand"><b>AI Market Pulse</b><span>Quiet view</span></div>
+  <nav class="links" aria-label="Sections of this page">
+    <a href="#surface">Today</a>
+    <a href="#currents">Ecosystem</a>
+    <a href="#models">Models</a>
+    <a href="#markets">Markets</a>
+    <a href="#seabed">Research</a>
   </nav>
+  <div class="live"><span class="dot" aria-hidden="true"></span><span id="lp-clock">--:--:--</span> UTC</div>
+  <a class="navcta" href="app.html">Open dashboard</a>
+</div>
+</header>
 
-  <div class="depth-rail" id="depth-rail" role="status" aria-label="Evidence depth of the current view">
-    <span class="depth-item" data-depth="surface"><i aria-hidden="true"></i>Surface<small>fast &amp; recent</small></span>
-    <span class="depth-item" data-depth="currents"><i aria-hidden="true"></i>Currents<small>actively moving</small></span>
-    <span class="depth-item" data-depth="midwater"><i aria-hidden="true"></i>Midwater<small>gaining evidence</small></span>
-    <span class="depth-item" data-depth="seabed"><i aria-hidden="true"></i>Seabed<small>slow &amp; structural</small></span>
+<div class="rail" id="lp-rail" aria-label="Page progress">
+  <a href="#surface" data-r="surface"><i aria-hidden="true"></i>Surface</a>
+  <a href="#currents" data-r="currents"><i aria-hidden="true"></i>Currents</a>
+  <a href="#models" data-r="models"><i aria-hidden="true"></i>Midwater</a>
+  <a href="#seabed" data-r="seabed"><i aria-hidden="true"></i>Seabed</a>
+</div>
+
+<div class="hero">
+  <div class="media" id="lp-hero-media" aria-hidden="true">
+    <img src="assets/hero-ocean-poster.jpg" alt="" width="1128" height="720">
+    <video id="lp-hero-video" muted loop playsinline preload="none" poster="assets/hero-ocean-poster.jpg"></video>
   </div>
+  <div class="wrap">
+    <p class="eyebrow rv"><span id="lp-today">Today</span></p>
+    <h1 class="rv">A quiet view of a <em>loud</em> industry.</h1>
+    <p class="lede rv">AI news, benchmarks and prices — sorted by depth, not by noise.</p>
+    <div class="cta rv">
+      <a class="btn p" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a>
+      <a class="btn s" href="#seabed">How it works</a>
+    </div>
+  </div>
+  <div class="scrolltip" aria-hidden="true">Descend</div>
+</div>
 
-  <main class="wrap" id="main-content">
+<div class="ticker"><div class="row" id="lp-ticker"></div></div>
 
-    <div class="data-note" id="data-note"></div>
-
-    <!-- TODAY -->
-    <section id="panel-today" class="topsection" data-panel="today">
-      <div class="ticker-wrap">
-        <div class="ticker" id="ticker"></div>
-        <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the headline ticker" aria-pressed="false">❚❚</button>
+<!-- SURFACE -->
+<section class="band" id="surface" aria-labelledby="lp-h-surface">
+<div class="wrap">
+  <div class="split rv">
+    <figure class="fig">
+      <figcaption>Surface · 0–12 hours</figcaption>
+      <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
+    </figure>
+    <div class="copy">
+      <p class="depth"><b>Surface</b><s></s>fast &amp; recent</p>
+      <h2 id="lp-h-surface">What just moved</h2>
+      <p class="sub">The strongest signals of the last cycle, duplicate coverage merged into one entry and scored 0–100 for significance.</p>
+      <div class="tabs" role="tablist" aria-label="Surface views">
+        <button type="button" role="tab" id="tb-waves" aria-controls="pn-waves" aria-selected="true" data-tab="waves">Waves</button>
+        <button type="button" role="tab" id="tb-river" aria-controls="pn-river" aria-selected="false" data-tab="river">River</button>
+        <button type="button" role="tab" id="tb-tide" aria-controls="pn-tide" aria-selected="false" data-tab="tide">Tide</button>
       </div>
-
-      <div class="local-tabs" role="tablist" aria-label="Today views" data-tabgroup="today">
-        <button type="button" role="tab" class="local-tab" id="tabbtn-briefing" data-tab="briefing" aria-selected="true" aria-controls="tab-briefing" tabindex="0">Launch Radar</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-waves" data-tab="waves" aria-selected="false" aria-controls="tab-waves" tabindex="-1">Waves</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-river" data-tab="river" aria-selected="false" aria-controls="tab-river" tabindex="-1">River</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-tide" data-tab="tide" aria-selected="false" aria-controls="tab-tide" tabindex="-1">Tide</button>
+      <div data-panes="surface">
+        <div class="pane" role="tabpanel" id="pn-waves" aria-labelledby="tb-waves" data-pane="waves"><div class="mini" id="lp-waves"></div></div>
+        <div class="pane" role="tabpanel" id="pn-river" aria-labelledby="tb-river" data-pane="river" hidden><div class="mini" id="lp-river"></div></div>
+        <div class="pane" role="tabpanel" id="pn-tide" aria-labelledby="tb-tide" data-pane="tide" hidden><div class="mini" id="lp-tide"></div></div>
       </div>
+      <p class="meta" id="lp-surface-meta"></p>
+      <a class="more" href="app.html#panel-today">Open today's wire <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
+</section>
 
-      <div class="tabpanel" id="tab-briefing" role="tabpanel" aria-labelledby="tabbtn-briefing" data-depth="surface">
-        <div class="section-ribbon">
-          <h2 class="section-ribbon__title">Launch Radar</h2>
-          <p class="section-ribbon__descriptor">The newest model releases, the moment the machinery moves — ahead of the press</p>
-        </div>
-        <section id="launch-radar" class="launch-radar" aria-label="Launch Radar — newest frontier model releases" hidden></section>
+<!-- CURRENTS -->
+<section class="band" id="currents" aria-labelledby="lp-h-currents">
+<div class="wrap">
+  <div class="split flip rv">
+    <figure class="fig">
+      <figcaption>Currents · days–weeks</figcaption>
+      <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
+    </figure>
+    <div class="copy">
+      <p class="depth"><b>Currents</b><s></s>actively moving</p>
+      <h2 id="lp-h-currents">Where attention goes</h2>
+      <p class="sub">Worldwide web-visit share across the major assistants.</p>
+      <div class="bars" id="lp-share"></div>
+      <p class="meta" id="lp-share-meta"></p>
+      <a class="more" href="app.html#panel-ecosystem">Open ecosystem view <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- MIDWATER -->
+<section class="band" id="models" aria-labelledby="lp-h-models">
+<div class="glowwrap" aria-hidden="true"><canvas class="glow" id="lp-glow" width="128" height="96"></canvas></div>
+<div class="wrap">
+  <div class="split rv">
+    <figure class="fig">
+      <figcaption>Midwater · weeks–months</figcaption>
+      <img src="assets/ocean.jpg" alt="" id="lp-glow-src" loading="lazy" decoding="async">
+    </figure>
+    <div class="copy">
+      <p class="depth"><b>Midwater</b><s></s>gaining evidence</p>
+      <h2 id="lp-h-models">Leaderboards</h2>
+      <p class="sub">Ranked on published evaluations and human preference — not vendor claims. Anything unpublished is labelled an estimate.</p>
+      <div class="tabs" role="tablist" aria-label="Leaderboard categories">
+        <button type="button" role="tab" id="tb-text" aria-controls="pn-text" aria-selected="true" data-tab="text">Text</button>
+        <button type="button" role="tab" id="tb-image" aria-controls="pn-image" aria-selected="false" data-tab="image">Image</button>
+        <button type="button" role="tab" id="tb-video" aria-controls="pn-video" aria-selected="false" data-tab="video">Video</button>
+        <button type="button" role="tab" id="tb-local" aria-controls="pn-local" aria-selected="false" data-tab="local">Local</button>
       </div>
-
-      <div class="tabpanel" id="tab-waves" role="tabpanel" aria-labelledby="tabbtn-waves" data-depth="surface" hidden>
-        <section id="sec-waves">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Today's strongest waves</h2>
-            <p class="section-ribbon__descriptor">The biggest product, market &amp; research moves</p>
-          </div>
-          <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
-          <div class="waves-grid" id="waves"></div>
-        </section>
+      <div data-panes="lb">
+        <div class="pane" role="tabpanel" id="pn-text" aria-labelledby="tb-text" data-pane="text"><div class="mini" id="lp-lb-text"></div></div>
+        <div class="pane" role="tabpanel" id="pn-image" aria-labelledby="tb-image" data-pane="image" hidden><div class="mini" id="lp-lb-image"></div></div>
+        <div class="pane" role="tabpanel" id="pn-video" aria-labelledby="tb-video" data-pane="video" hidden><div class="mini" id="lp-lb-video"></div></div>
+        <div class="pane" role="tabpanel" id="pn-local" aria-labelledby="tb-local" data-pane="local" hidden><div class="mini" id="lp-lb-local"></div></div>
       </div>
+      <p class="meta" id="lp-lb-meta"></p>
+      <a class="more" href="app.html#tab-leaderboard">Open all rankings <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
+</section>
 
-      <div class="tabpanel" id="tab-river" role="tabpanel" aria-labelledby="tabbtn-river" data-depth="currents" hidden>
-        <section id="sec-river">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Signal river</h2>
-            <p class="section-ribbon__descriptor">Every story crossing the wire, newest first</p>
-          </div>
-          <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list. Dot size reflects significance (0–100); filter by category, entity, or time window below.</details></p>
-          <div id="river"></div>
-        </section>
-      </div>
+<!-- MARKETS -->
+<section class="band" id="markets" aria-labelledby="lp-h-markets">
+<div class="wrap">
+  <div class="split flip rv">
+    <figure class="fig">
+      <figcaption>Compute · live rates</figcaption>
+      <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
+    </figure>
+    <div class="copy">
+      <p class="depth"><b>Markets</b><s></s>compute &amp; capital</p>
+      <h2 id="lp-h-markets">What an hour costs</h2>
+      <p class="sub">Merged from real rented offers on public GPU marketplaces — actual listings, not estimates.</p>
+      <div class="mini" id="lp-compute"></div>
+      <p class="meta" id="lp-compute-meta"></p>
+      <a class="more" href="app.html#tab-compute">Open compute prices <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
+</section>
 
-      <div class="tabpanel" id="tab-tide" role="tabpanel" aria-labelledby="tabbtn-tide" data-depth="currents" hidden>
-        <section id="sec-tide">
-          <div class="section-ribbon section-ribbon--research">
-            <h2 class="section-ribbon__title">The Tide</h2>
-            <p class="section-ribbon__descriptor">How operational AI activity changes each day</p>
-          </div>
-          <p class="panel-note intro-note one-line-note">Daily activity by category — <b>operational only</b>, commentary excluded. <span class="fr-chip fr-live" title="Built from live daily signal counts"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>A stacked view of how much moved in each operational category per day — product, research, compute, capital, policy, adoption, open source, market and org/governance. General commentary and opinion/analysis are deliberately excluded, so this tracks activity, not chatter. It only plots days actually collected and shows its real available range — it never implies history that wasn't recorded.</details></p>
-          <div id="tide"></div>
-        </section>
-      </div>
-    </section>
+<!-- SEABED -->
+<div class="deepband" id="seabed">
+<div class="caust" aria-hidden="true"></div>
+<div class="wrap">
+  <p class="eyebrow rv">Seabed · slow &amp; structural</p>
+  <h2 class="rv">Some things only make sense at a slower frame rate.</h2>
+  <p class="lede rv">Research that hasn't landed, capital measured in years, policy still being drafted. Nothing here changes today — which is why it gets its own layer.</p>
+  <div class="chips rv"><span>Impact over recency</span><span>Duplicates merged</span><span>Commentary excluded</span><span>Sources always linked</span><span>Estimates labelled as estimates</span></div>
+</div>
+</div>
 
-    <!-- ECOSYSTEM -->
-    <section id="panel-ecosystem" class="topsection" data-panel="ecosystem" hidden>
-      <section id="sec-map" class="hero" data-depth="currents" style="padding-top:10px;">
-        <div class="hero-head">
-          <div>
-            <div class="section-ribbon">
-              <h2 class="section-ribbon__title">The AI Ocean Map</h2>
-              <p class="section-ribbon__descriptor">Where AI power flows</p>
-            </div>
-            <p class="map-intro-lead">A depth map of the AI ecosystem — chips at the base, applications at the surface.</p>
-            <div class="map-encoding" role="list" aria-label="What the map encodes">
-              <span class="map-enc" role="listitem">
-                <svg class="enc-ico" viewBox="0 0 26 14" aria-hidden="true"><circle cx="5" cy="7" r="3" fill="var(--sea)"/><circle cx="18" cy="7" r="6" fill="var(--sea)"/></svg>
-                <span><b>Size</b> · curated importance</span>
-              </span>
-              <span class="map-enc" role="listitem">
-                <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" fill="var(--teal)" opacity=".28"/><circle cx="8" cy="8" r="3.5" fill="var(--teal)"/></svg>
-                <span><b>Glow</b> · live activity</span>
-              </span>
-              <span class="map-enc" role="listitem">
-                <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="var(--coral)" stroke-width="2"/></svg>
-                <span><b>Ring</b> · change vs prior period</span>
-              </span>
-              <span class="map-enc-util">Select a node for details.</span>
-            </div>
-          </div>
-          <div>
-            <div class="range-toggle" role="tablist" aria-label="Activity time range">
-              <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
-              <button class="range-btn" role="tab" aria-selected="false" data-range="7D">7D</button>
-              <button class="range-btn" role="tab" aria-selected="false" data-range="30D">30D</button>
-            </div>
-            <div class="history-note" id="history-note"></div>
-          </div>
-        </div>
-        <div id="ocean-map"></div>
-        <div class="map-legend" aria-hidden="true">
-          <span><i style="border-color:var(--sea)"></i>depends on</span>
-          <span><i style="border-color:var(--teal);border-top-style:dashed"></i>partners with</span>
-          <span><i style="border-color:var(--coral);border-top-style:dotted"></i>competes with</span>
-          <span>◌ dashed node = no fresh signal</span>
-          <span>▲▼ ring = change vs prior period</span>
-        </div>
-      </section>
-    </section>
+<div class="close">
+  <div class="media" aria-hidden="true"><img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap">
+    <h2 class="rv">Read the whole tide, once a day.</h2>
+    <p class="rv">Everything above, kept current automatically, with every figure linked back to where it came from.</p>
+    <div class="cta rv"><a class="btn p" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a></div>
+  </div>
+</div>
 
-    <!-- MODELS -->
-    <section id="panel-models" class="topsection" data-panel="models" hidden>
-      <div class="local-tabs" role="tablist" aria-label="Model views" data-tabgroup="models">
-        <button type="button" role="tab" class="local-tab" id="tabbtn-releases" data-tab="releases" aria-selected="true" aria-controls="tab-releases" tabindex="0">Releases</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-leaderboard" data-tab="leaderboard" aria-selected="false" aria-controls="tab-leaderboard" tabindex="-1">Frontier leaderboard</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-image" data-tab="image" aria-selected="false" aria-controls="tab-image" tabindex="-1">Image AI</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-video" data-tab="video" aria-selected="false" aria-controls="tab-video" tabindex="-1">Video AI</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-local" data-tab="local" aria-selected="false" aria-controls="tab-local" tabindex="-1">Local AI</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-community" data-tab="community" aria-selected="false" aria-controls="tab-community" tabindex="-1">Community Pulse</button>
-      </div>
+<footer>
+<div class="wrap">
+  <p>Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</p>
+  <div class="fl">
+    <a href="app.html#panel-today">Today</a>
+    <a href="app.html#panel-ecosystem">Ecosystem</a>
+    <a href="app.html#panel-models">Models</a>
+    <a href="app.html#panel-markets">Markets</a>
+    <a href="app.html#panel-research">Research</a>
+    <a href="app.html#full">Full page</a>
+  </div>
+</div>
+</footer>
 
-      <div class="tabpanel" id="tab-releases" role="tabpanel" aria-labelledby="tabbtn-releases" data-depth="surface">
-        <section id="sec-releases">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Frontier releases</h2>
-            <p class="section-ribbon__descriptor">New models &amp; features only — not general news</p>
-          </div>
-          <p class="panel-note intro-note one-line-note">The 3 frontier assistants, 5 most recent qualifying releases each. <span class="fr-chip fr-auto" title="Refreshed automatically from publisher RSS/YouTube feeds"><span class="fr-mark" aria-hidden="true">●</span>Auto</span> <details class="how-it-works"><summary>How it works</summary>Claude, ChatGPT and Gemini, each with their 5 most recent qualifying releases from the last 60 days, newest first. Actual product ships and feature launches only — opinion pieces, lawsuits, and personnel news are filtered out even when a headline uses the word "release." Includes official lab YouTube uploads (▶).</details></p>
-          <div class="release-grid" id="releases"></div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-leaderboard" role="tabpanel" aria-labelledby="tabbtn-leaderboard" data-depth="midwater" hidden>
-        <section id="sec-leaderboard">
-          <div class="grid-2">
-
-            <div class="panel">
-              <div class="panel-top">
-                <h3>Frontier leaderboard</h3>
-                <span class="asof curated-asof">Curated</span>
-              </div>
-              <div class="panel-note" style="margin-bottom:14px;">Updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/" target="_blank" rel="noopener">Artificial Analysis</a> · <a class="src-link" href="https://lmarena.ai/leaderboard" target="_blank" rel="noopener">LMArena</a> · <a class="src-link" href="https://labs.scale.com/leaderboard" target="_blank" rel="noopener">Scale Labs</a></div>
-              <div class="lb-tabs" role="tablist" aria-label="Leaderboard view" id="lb-tabs"></div>
-              <p class="lb-disclaimer" id="lb-disclaimer" hidden></p>
-              <div id="leaderboard"></div>
-            </div>
-
-            <div class="panel" id="sec-market">
-              <div class="panel-top">
-                <h3>Most popular AI</h3>
-                <span class="asof curated-asof">Curated</span>
-              </div>
-              <div class="panel-note" style="margin-bottom:14px;">Worldwide web-visit share · updated by hand, not live — <a class="src-link" href="https://www.similarweb.com/top-websites/computers-electronics-and-technology/programming-and-developer-software/" target="_blank" rel="noopener">Similarweb</a> · <a class="src-link" href="https://radar.cloudflare.com/ai-insights" target="_blank" rel="noopener">Cloudflare Radar</a></div>
-              <div class="donut-wrap">
-                <div class="donut" id="donut">
-                  <div class="donut-label"><div class="n">2.9B+</div><div class="l">MONTHLY VISITS</div></div>
-                </div>
-                <div class="legend" id="legend"></div>
-                <div class="donut-tooltip" id="donut-tooltip" role="status" aria-live="polite" hidden></div>
-              </div>
-              <div class="callout">
-                <b>Fastest mover:</b> Claude's web traffic is up ~855% YoY (+228% in a single quarter) — the steepest growth curve of any major assistant. On Cloudflare's "actively chosen" ranking it now sits at <b>#2</b>, ahead of Gemini.
-              </div>
-            </div>
-
-          </div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-image" role="tabpanel" aria-labelledby="tabbtn-image" data-depth="midwater" hidden>
-        <section id="sec-media-image">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 image AI</h3>
-              <span class="asof curated-asof">Curated</span>
-            </div>
-            <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
-            <div id="image-ai"></div>
-          </div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-video" role="tabpanel" aria-labelledby="tabbtn-video" data-depth="midwater" hidden>
-        <section id="sec-media-video">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 video AI</h3>
-              <span class="asof curated-asof">Curated</span>
-            </div>
-            <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
-            <div id="video-ai"></div>
-          </div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-local" role="tabpanel" aria-labelledby="tabbtn-local" data-depth="midwater" hidden>
-        <section id="sec-media-local">
-          <div class="spec-grid">
-
-            <div class="flip-card" id="local-ai-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-face flip-card-front">
-                  <div class="panel-top">
-                    <h3>Local AI for your PC</h3>
-                    <span class="asof curated-asof">Curated</span>
-                  </div>
-                  <div class="panel-note" style="margin-bottom:14px;">One solid open-weight pick per realistic RAM tier — from an 8GB laptop to a 64GB desktop. Not the biggest models (those need servers), but what actually runs at home · updated by hand, not live.</div>
-                  <div id="local-ai"></div>
-                  <button type="button" class="flip-card-btn flip-card-btn--prominent" data-flip="1" aria-expanded="false" aria-controls="local-ai-specs-back">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10a6 6 0 0 1 10.5-4M16 10a6 6 0 0 1-10.5 4"/><path d="M14 3v3h-3M6 17v-3h3"/></svg>
-                    See PC specs for each model
-                  </button>
-                </div>
-                <div class="flip-card-face flip-card-back" id="local-ai-specs-back" inert>
-                  <div class="panel-top">
-                    <h3>PC specs by RAM tier</h3>
-                    <span class="asof curated-asof">Curated</span>
-                  </div>
-                  <div class="panel-note" style="margin-bottom:10px;" id="local-ai-specs-note"></div>
-                  <div id="local-ai-specs"></div>
-                  <button type="button" class="flip-card-btn" data-flip="0">← Back to rankings</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="flip-card" id="local-mobile-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-face flip-card-front">
-                  <div class="panel-top">
-                    <h3>Top 5 local mobile AI</h3>
-                    <span class="asof curated-asof">Curated</span>
-                  </div>
-                  <div class="panel-note" style="margin-bottom:14px;">Best self-hostable models sized for phones &amp; tablets, not the PC-class models above · updated by hand, not live.</div>
-                  <div id="local-mobile-ai"></div>
-                  <button type="button" class="flip-card-btn flip-card-btn--prominent" data-flip="1" aria-expanded="false" aria-controls="local-mobile-specs-back">
-                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10a6 6 0 0 1 10.5-4M16 10a6 6 0 0 1-10.5 4"/><path d="M14 3v3h-3M6 17v-3h3"/></svg>
-                    See phone specs for each model
-                  </button>
-                </div>
-                <div class="flip-card-face flip-card-back" id="local-mobile-specs-back" inert>
-                  <div class="panel-top">
-                    <h3>Phone specs by model</h3>
-                    <span class="asof curated-asof">Curated</span>
-                  </div>
-                  <div class="panel-note" style="margin-bottom:10px;" id="local-mobile-specs-note"></div>
-                  <div id="local-mobile-specs"></div>
-                  <button type="button" class="flip-card-btn" data-flip="0">← Back to rankings</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-community" role="tabpanel" aria-labelledby="tabbtn-community" data-depth="midwater" hidden>
-        <section id="sec-community">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Community pulse</h2>
-            <p class="section-ribbon__descriptor">What developers discuss about leading models</p>
-          </div>
-          <p class="panel-note intro-note one-line-note">A sample of developer discussion, not a sentiment score. <span class="fr-chip fr-auto" title="Refreshed automatically from Hacker News"><span class="fr-mark" aria-hidden="true">●</span>Auto</span> <details class="how-it-works"><summary>How it works</summary>Select a model to explore its discussion volume, leading themes and representative comments, sourced from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a>.</details></p>
-          <div id="community"></div>
-        </section>
-      </div>
-    </section>
-
-    <!-- MARKETS -->
-    <section id="panel-markets" class="topsection" data-panel="markets" hidden>
-      <div class="local-tabs" role="tablist" aria-label="Markets views" data-tabgroup="markets">
-        <button type="button" role="tab" class="local-tab" id="tabbtn-stocknet" data-tab="stocknet" aria-selected="true" aria-controls="tab-stocknet" tabindex="0">AI stock network</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-compute" data-tab="compute" aria-selected="false" aria-controls="tab-compute" tabindex="-1">Compute &amp; chips</button>
-      </div>
-
-      <div class="tabpanel" id="tab-stocknet" role="tabpanel" aria-labelledby="tabbtn-stocknet" data-depth="seabed">
-        <section id="sec-stocks">
-          <div class="section-ribbon section-ribbon--market">
-            <h2 class="section-ribbon__title">AI stock network</h2>
-            <p class="section-ribbon__descriptor">How the AI market is connected</p>
-          </div>
-          <div class="stocknet-controls">
-            <div class="mode-toggle" role="tablist" aria-label="Network view mode">
-              <button class="mode-btn active" role="tab" aria-selected="true" data-mode="ecosystem">Ecosystem</button>
-              <button class="mode-btn" role="tab" aria-selected="false" data-mode="market">Market motion</button>
-            </div>
-            <span class="stocknet-asof asof" id="stocks-asof">Loading…</span>
-          </div>
-          <p class="stocknet-note" id="stocknet-note"></p>
-          <div id="stock-network"></div>
-          <p class="stocknet-disclaimer">Node <b>size</b> = market cap (curated shares × live price) · inner <b>glow</b> = relative volume · outer <b>ring</b> = day change. <b>Ecosystem</b> shows curated business ties; <b>Market motion</b> shows 30-day price-return correlation (|r| ≥ 0.5) — correlation ≠ causation. Not investment advice.</p>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-compute" role="tabpanel" aria-labelledby="tabbtn-compute" data-depth="seabed" hidden>
-        <section id="sec-compute">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Compute &amp; chips</h3>
-              <span class="asof" id="compute-asof">Loading…</span>
-            </div>
-            <div class="panel-note" style="margin-bottom:14px;">Live on-demand $/hr rates, merged from real rented offers on <a class="src-link" href="https://vast.ai/" target="_blank" rel="noopener">Vast.ai</a> and <a class="src-link" href="https://runpod.io/" target="_blank" rel="noopener">RunPod</a> — actual marketplace listings, not curated estimates. Segment labels are hand-classified; trend needs a few days of history before it shows a real change.</div>
-            <div style="overflow-x:auto;">
-              <table class="stock-table">
-                <thead>
-                  <tr><th>Chip</th><th>Segment</th><th>Cloud rate</th><th>Trend</th><th>Note</th></tr>
-                </thead>
-                <tbody id="compute-rows"></tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="panel-research" class="topsection" data-panel="research" hidden>
-      <section id="sec-local" data-depth="seabed">
-        <div class="panel" id="sec-breakthrough">
-          <div class="panel-top">
-            <h3>Breakthrough signals</h3>
-            <span class="asof">Rolling</span>
-          </div>
-          <div class="panel-note" style="margin-bottom:6px;">Research moving from lab to headline, newest first</div>
-          <div id="breakthroughs" style="display:flex;flex-direction:column;gap:14px;margin-top:10px;"></div>
-        </div>
-      </section>
-    </section>
-
-  </main>
-
-  <footer>
-    <div><b>Waves, river, tide, releases, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
-    <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
-    <div style="margin-top:8px;" id="footer-build" class="footer-build"></div>
-    <button type="button" class="dh-chip" id="dh-chip" aria-haspopup="dialog" aria-controls="dh-drawer" hidden>Data Health</button>
-  </footer>
-
-  <div class="dh-drawer" id="dh-drawer" role="dialog" aria-modal="true" aria-labelledby="dh-drawer-title" hidden></div>
-
-<script type="module" src="js/main.js"></script>
-
-
+<script type="module" src="js/landing.js"></script>
 
 </body></html>
