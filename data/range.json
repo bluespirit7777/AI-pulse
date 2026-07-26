@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T16:31:05.615Z",
+  "generatedAt": "2026-07-26T16:45:43.823Z",
   "historyDepthDays": 16.7,
   "ranges": {
     "24H": {
@@ -7,7 +7,7 @@
         "chatgpt": 0,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 0,
+        "gpt": 1,
         "claude": 0,
         "gemini": 0,
         "grok": 0,
@@ -29,7 +29,7 @@
         "chatgpt": -3,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": -8,
+        "gpt": -7,
         "claude": -18,
         "gemini": -9,
         "grok": 0,
@@ -48,10 +48,16 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "orggov": 1
+        "orggov": 2
       },
-      "topEntities": [],
-      "eventCount": 1,
+      "topEntities": [
+        {
+          "id": "gpt",
+          "count": 1,
+          "delta": -7
+        }
+      ],
+      "eventCount": 2,
       "previousWindowComplete": true
     },
     "7D": {
@@ -59,7 +65,7 @@
         "chatgpt": 29,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 95,
+        "gpt": 96,
         "claude": 87,
         "gemini": 60,
         "grok": 0,
@@ -81,7 +87,7 @@
         "chatgpt": -23,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": -63,
+        "gpt": -62,
         "claude": -73,
         "gemini": -74,
         "grok": -9,
@@ -110,13 +116,13 @@
         "policy": 24,
         "adoption": 28,
         "capital": 65,
-        "orggov": 12
+        "orggov": 13
       },
       "topEntities": [
         {
           "id": "gpt",
-          "count": 95,
-          "delta": -63
+          "count": 96,
+          "delta": -62
         },
         {
           "id": "claude",
@@ -154,7 +160,7 @@
           "delta": -2
         }
       ],
-      "eventCount": 488,
+      "eventCount": 489,
       "previousWindowComplete": true
     },
     "30D": {
@@ -162,7 +168,7 @@
         "chatgpt": 210,
         "copilot": 17,
         "perplexity": 0,
-        "gpt": 538,
+        "gpt": 539,
         "claude": 624,
         "gemini": 325,
         "grok": 17,
@@ -182,7 +188,7 @@
       },
       "entityDelta": {},
       "categoryCounts": {
-        "orggov": 68,
+        "orggov": 69,
         "policy": 143,
         "product": 281,
         "capital": 165,
@@ -202,7 +208,7 @@
         },
         {
           "id": "gpt",
-          "count": 538,
+          "count": 539,
           "delta": null
         },
         {
@@ -236,7 +242,7 @@
           "delta": null
         }
       ],
-      "eventCount": 2503,
+      "eventCount": 2504,
       "previousWindowComplete": false
     }
   },
@@ -509,7 +515,7 @@
         "general": 129,
         "market": 6,
         "research": 7,
-        "orggov": 5,
+        "orggov": 6,
         "analysis": 28
       }
     }
