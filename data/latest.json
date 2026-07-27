@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-27T01:00:34.957Z",
+  "updatedAt": "2026-07-27T01:15:24.377Z",
   "build": {
-    "sha": "c4b687f140f1dc063d2d23baeccc1c3b86e15451",
-    "shortSha": "c4b687f",
+    "sha": "056c26594ef004ce0956019a112a71c6aa559d01",
+    "shortSha": "056c265",
     "ref": "main",
-    "builtAt": "2026-07-27T01:00:54.683Z"
+    "builtAt": "2026-07-27T01:15:42.010Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 17,
+    "historyDepthDays": 17.1,
     "estimatedDatasets": 4,
-    "buildSha": "c4b687f",
-    "lastSuccessfulUpdate": "2026-07-27T01:00:34.957Z"
+    "buildSha": "056c265",
+    "lastSuccessfulUpdate": "2026-07-27T01:15:24.377Z"
   },
   "ticker": [
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
@@ -1086,30 +1086,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-      "clusterId": "1bay8zs",
-      "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
-      "desc": "A running look — in reverse chronological order — at the bigger tech companies that have announced significant layoffs this year with AI as a stated factor.",
-      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-      "dateISO": "2026-07-26T01:30:00.000Z",
-      "date": "JUL 26 2026",
-      "category": "orggov",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/",
       "clusterId": "qdzdhh",
       "title": "AMD takes on Nvidia with its Helios AI rack-scale system",
@@ -1187,6 +1163,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/a-scorecard-for-the-ai-age",
+      "clusterId": "17gsr94",
+      "title": "A scorecard for the AI age",
+      "desc": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
+      "dateISO": "2026-07-17T10:00:00.000Z",
+      "date": "JUL 17 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/a-scorecard-for-the-ai-age"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     }
   ],
@@ -6112,18 +6114,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.93 – $3.19/hr",
-      "trend": "→ 1% vs 13d ago",
+      "rate": "$1.99 – $3.19/hr",
+      "trend": "→ 2% vs 13d ago",
       "trendClass": "trend-flat",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.04 – $4.39/hr",
-      "trend": "↓ 3% vs 13d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.39/hr",
+      "trend": "↑ 4% vs 13d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6155,11 +6157,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "↑ 32% vs 13d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-27T01:00:34.957Z",
+    "updatedAt": "2026-07-27T01:15:24.377Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6169,15 +6171,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 320,
-        "fetchedStoryCount": 216,
+        "fetchedStoryCount": 290,
         "validatedStoryCount": 29,
-        "storyCoverage": 0.675,
-        "estimatedRelevantDiscussions": 45,
+        "storyCoverage": 0.90625,
+        "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2250,
+        "rawCommentHits": 2251,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.13333333333333333,
+        "commentCoverage": 0.1332741003998223,
         "limited": false,
         "points": 371,
         "themes": [
@@ -6246,7 +6248,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 43,
+            "discussions": 32,
             "isEstimated": true
           },
           {
@@ -6261,16 +6263,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1057,
+        "rawStoryHits": 1056,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 33,
-        "storyCoverage": 0.28382213812677387,
+        "storyCoverage": 0.2840909090909091,
         "estimatedRelevantDiscussions": 116,
         "isEstimated": true,
-        "rawCommentHits": 6452,
+        "rawCommentHits": 6451,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 31,
-        "commentCoverage": 0.04649721016738995,
+        "validatedCommentCount": 30,
+        "commentCoverage": 0.04650441791970237,
         "limited": false,
         "points": 839,
         "themes": [
@@ -6339,16 +6341,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 142,
-        "fetchedStoryCount": 142,
+        "rawStoryHits": 141,
+        "fetchedStoryCount": 141,
         "validatedStoryCount": 39,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 45,
         "isEstimated": true,
-        "rawCommentHits": 1173,
+        "rawCommentHits": 1172,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
-        "commentCoverage": 0.2557544757033248,
+        "commentCoverage": 0.25597269624573377,
         "limited": false,
         "points": 862,
         "themes": [
@@ -6442,16 +6444,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 537,
+        "rawStoryHits": 535,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 8,
-        "storyCoverage": 0.5586592178770949,
+        "storyCoverage": 0.5607476635514018,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": true,
-        "rawCommentHits": 10696,
+        "rawCommentHits": 10697,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.02804786836200449,
+        "commentCoverage": 0.02804524633074694,
         "limited": false,
         "points": 233,
         "themes": [
@@ -6525,8 +6527,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 47,
-        "fetchedStoryCount": 47,
+        "rawStoryHits": 73,
+        "fetchedStoryCount": 73,
         "validatedStoryCount": 10,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
@@ -6603,8 +6605,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 73,
-        "fetchedStoryCount": 73,
+        "rawStoryHits": 65,
+        "fetchedStoryCount": 65,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
@@ -6687,10 +6689,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 5,
         "isEstimated": false,
-        "rawCommentHits": 4421,
+        "rawCommentHits": 4422,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.06785795068988916,
+        "commentCoverage": 0.06784260515603799,
         "limited": true,
         "points": 236,
         "themes": [
