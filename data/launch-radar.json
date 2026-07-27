@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T12:42:36.075Z",
+  "updatedAt": "2026-07-27T18:16:22.649Z",
   "firstRun": false,
   "sources": [
     {
@@ -33,8 +33,17 @@
       "count": 0
     }
   ],
-  "newCount": 0,
-  "newlyDetected": [],
+  "newCount": 1,
+  "newlyDetected": [
+    {
+      "id": "hf:moonshotai/Kimi-K3",
+      "label": "Kimi",
+      "title": "Kimi-K3",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "at": "2026-06-13T06:42:57.000Z",
+      "source": "huggingface"
+    }
+  ],
   "entries": [
     {
       "id": "hf:mistralai/Leanstral-1.5-119B-A6B",
@@ -217,6 +226,18 @@
       "firstSeenAt": "2026-07-23T14:29:27.103Z"
     },
     {
+      "id": "hf:moonshotai/Kimi-K3",
+      "source": "huggingface",
+      "org": "moonshotai",
+      "label": "Kimi",
+      "title": "Kimi-K3",
+      "kind": "model",
+      "at": "2026-06-13T06:42:57.000Z",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "isNew": true,
+      "firstSeenAt": "2026-07-27T18:16:22.649Z"
+    },
+    {
       "id": "hf:moonshotai/Kimi-K2.7-Code",
       "source": "huggingface",
       "org": "moonshotai",
@@ -383,18 +404,6 @@
       "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
       "isNew": false,
       "firstSeenAt": "2026-07-24T07:43:13.678Z"
-    },
-    {
-      "id": "hf:mistralai/Voxtral-Mini-4B-Realtime-2602",
-      "source": "huggingface",
-      "org": "mistralai",
-      "label": "Mistral",
-      "title": "Voxtral-Mini-4B-Realtime-2602",
-      "kind": "model",
-      "at": "2026-01-21T17:22:02.000Z",
-      "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
-      "isNew": false,
-      "firstSeenAt": "2026-07-24T07:43:13.678Z"
     }
   ],
   "knownIds": [
@@ -413,6 +422,7 @@
     "hf:Qwen/Qwen3-ASR-0.6B-hf",
     "hf:Qwen/Qwen3-ASR-1.7B-hf",
     "hf:Qwen/Qwen-AgentWorld-35B-A3B",
+    "hf:moonshotai/Kimi-K3",
     "hf:moonshotai/Kimi-K2.7-Code",
     "hf:Qwen/Qwen-Image-Bench",
     "hf:mistralai/Mistral-Medium-3.5-128B-EAGLE",
@@ -437,7 +447,6 @@
     "hf:moonshotai/Kimi-K2-Instruct-0905",
     "hf:moonshotai/Kimi-K2-Instruct",
     "hf:moonshotai/Kimi-K2-Base",
-    "hf:moonshotai/Kimi-VL-A3B-Thinking-2506",
     "hf:meta-llama/Llama-Prompt-Guard-2-86M",
     "hf:meta-llama/Llama-Prompt-Guard-2-22M",
     "hf:meta-llama/Llama-Guard-4-12B",
@@ -448,6 +457,7 @@
     "hf:meta-llama/Llama-4-Scout-17B-16E-Original",
     "hf:meta-llama/Llama-4-Maverick-17B-128E",
     "hf:meta-llama/Llama-4-Scout-17B-16E",
+    "hf:moonshotai/Kimi-VL-A3B-Thinking-2506",
     "gh:openai/openai-python@v2.48.0",
     "gh:anthropics/anthropic-sdk-python@v0.119.0",
     "gh:googleapis/python-genai@v2.14.0",
