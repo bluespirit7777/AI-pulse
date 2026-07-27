@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-27T18:45:27.170Z",
+  "updatedAt": "2026-07-27T19:00:41.313Z",
   "build": {
-    "sha": "b2531f0f1a55f221658422e2409e46931629fc7a",
-    "shortSha": "b2531f0",
+    "sha": "0672123cabab1236c7559a8d74faa904d06206e0",
+    "shortSha": "0672123",
     "ref": "main",
-    "builtAt": "2026-07-27T18:45:44.350Z"
+    "builtAt": "2026-07-27T19:00:57.391Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,11 +13,12 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 17.8,
     "estimatedDatasets": 4,
-    "buildSha": "b2531f0",
-    "lastSuccessfulUpdate": "2026-07-27T18:45:27.170Z"
+    "buildSha": "0672123",
+    "lastSuccessfulUpdate": "2026-07-27T19:00:41.313Z"
   },
   "ticker": [
     "NVIDIA, MICROSOFT LAUNCH OPEN AI SECURITY ALLIANCE — WITHOUT OPENAI, GOOGLE, OR ANTHROPIC",
+    "VERIZON SEEKS AI PROFITS WITH MINI DATA CENTERS, $1B DARK FIBER DEAL WITH GOOGLE",
     "INTRODUCING CLAUDE CORPS",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "CHATGPT STARTS BLOCKING DIRECT REQUESTS TO COPY AN AUTHOR'S STYLE",
@@ -25,8 +26,7 @@
     "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
     "GOOGLE’S AI SEARCH IS RAPIDLY BECOMING THE DEFAULT, NEW DATA SHOWS",
     "THREADS USERS CAN NOW CHAT WITH META AI IN THEIR DMS",
-    "HOW AI IS EXPANDING WHAT PEOPLE DO AT WORK",
-    "MICROSOFT LAUNCHES ITS FIRST CYBERSECURITY MODEL, PLUS A NEW AGENTIC CYBERSECURITY SYSTEM"
+    "HOW AI IS EXPANDING WHAT PEOPLE DO AT WORK"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "opensource",
       "catConfidence": 0.5,
       "family": "product",
-      "significance": 74,
+      "significance": 73,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -56,6 +56,32 @@
         "claude",
         "gemini",
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
+      "clusterId": "ikgmjl",
+      "title": "Verizon seeks AI profits with mini data centers, $1B dark fiber deal with Google",
+      "desc": "Telecom expects AI revenue from dark fiber deals and retrofitted data centers.",
+      "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
+      "dateISO": "2026-07-27T18:48:41.000Z",
+      "date": "JUL 27 2026",
+      "category": "capital",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 61,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -134,7 +160,7 @@
         },
         {
           "name": "MIT Technology Review",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFE?oc=5"
         },
         {
           "name": "TechCrunch",
@@ -1178,32 +1204,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5",
-      "clusterId": "1cri4pn",
-      "title": "Anthropic Invests $150 Million To Launch 1,000 Claude Corps Fellowships",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5",
-      "dateISO": "2026-06-18T07:00:00.000Z",
-      "date": "JUN 18 2026",
-      "category": "capital",
-      "catConfidence": 0.58,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Forbes",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5"
-        }
-      ],
-      "sourceName": "Forbes",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1212,7 +1212,7 @@
       "category": "opensource",
       "title": "Nvidia, Microsoft launch open AI security alliance — without OpenAI, Google, or Anthropic",
       "summary": "Nvidia on Monday said it is joining forces with Microsoft, SpaceX, IBM, and other tech companies to build and share open-source AI security tools. The new Open Secure AI Alliance…",
-      "significance": 74,
+      "significance": 73,
       "impact": "high",
       "verification": "single",
       "date": "JUL 27 2026",
@@ -1235,34 +1235,26 @@
     },
     {
       "family": "market",
-      "category": "compute",
-      "title": "Building the infrastructure for the Intelligence Age in Michigan",
-      "summary": "OpenAI breaks ground on a 1GW data center project in Michigan as part of Stargate, building AI infrastructure to expand access, create jobs, and support communities.",
-      "significance": 55,
+      "category": "capital",
+      "title": "Verizon seeks AI profits with mini data centers, $1B dark fiber deal with Google",
+      "summary": "Telecom expects AI revenue from dark fiber deals and retrofitted data centers.",
+      "significance": 61,
       "impact": "notable",
-      "verification": "official",
-      "date": "JUN 01 2026",
-      "dateISO": "2026-06-01T12:00:00.000Z",
-      "url": "https://openai.com/index/stargate-michigan-data-center",
-      "sourceCount": 3,
+      "verification": "single",
+      "date": "JUL 27 2026",
+      "dateISO": "2026-07-27T18:48:41.000Z",
+      "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/industrial-policy-for-the-intelligence-age"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/biodefense-in-the-intelligence-age"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/stargate-michigan-data-center"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "Compute supply and cost set the ceiling on how large — and how cheap — the next models can be."
+      "whyItMatters": "If it holds up, where the money flows signals which bets investors expect to pay off."
     },
     {
       "family": "research",
@@ -1475,6 +1467,18 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "JUL 27 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Verizon seeks AI profits with mini data centers, $1B dark fiber deal with Google",
+      "p": "Telecom expects AI revenue from dark fiber deals and retrofitted data centers.",
+      "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 27 2026",
@@ -1555,18 +1559,6 @@
       "h": "This $9 key physically locks your most addictive apps",
       "p": "This $9 NFC key requires you to physically scan it to unlock distracting apps on your phone.",
       "url": "https://techcrunch.com/2026/07/27/this-9-key-physically-locks-your-most-addictive-apps/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 27 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Ilya Sutskever’s Safe Superintelligence partners with Nvidia to scale its AI re…",
-      "p": "After two years in stealth, Safe Superintelligence has announced a long-term partnership with Nvidia as it prepares to scale to its next phase.",
-      "url": "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1695,11 +1687,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 196.765,
-      "changePct": -5.74583034720032,
+      "price": 197.315,
+      "changePct": -4.605005833071323,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 105975019,
+      "volume": 108972017,
       "ohlc": [
         {
           "d": "04-27",
@@ -2129,26 +2121,33 @@
           "c": 208.75999450683594
         },
         {
+          "d": "07-24",
+          "o": 207.4499969482422,
+          "h": 211.91000366210938,
+          "l": 204.80999755859375,
+          "c": 206.83999633789062
+        },
+        {
           "d": "07-27",
           "o": 208.11000061035156,
           "h": 208.75,
           "l": 195.44000244140625,
-          "c": 196.76499938964844
+          "c": 197.31500244140625
         }
       ],
-      "relVolume": 0.7918015104334913,
-      "marketCap": 4801066000000
+      "relVolume": 0.8249425628190423,
+      "marketCap": 4814486000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 393.515,
-      "changePct": 3.12779194301679,
+      "price": 393.36,
+      "changePct": 3.0547479097818226,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 18364160,
+      "volume": 18892469,
       "ohlc": [
         {
           "d": "04-27",
@@ -2578,26 +2577,33 @@
           "c": 381.5799865722656
         },
         {
+          "d": "07-24",
+          "o": 387.04998779296875,
+          "h": 389.0299987792969,
+          "l": 380.6499938964844,
+          "c": 381.70001220703125
+        },
+        {
           "d": "07-27",
           "o": 390.07000732421875,
           "h": 394.20001220703125,
           "l": 387.989990234375,
-          "c": 393.5150146484375
+          "c": 393.3599853515625
         }
       ],
-      "relVolume": 0.4282809418273892,
-      "marketCap": 2923816450000
+      "relVolume": 0.461342781362478,
+      "marketCap": 2922664800000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 380.16,
-      "changePct": -3.1365448366259456,
+      "price": 382.12,
+      "changePct": 0.052362191668953964,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 9123781,
+      "volume": 9795329,
       "ohlc": [
         {
           "d": "04-27",
@@ -3027,26 +3033,33 @@
           "c": 392.4700012207031
         },
         {
+          "d": "07-24",
+          "o": 387.67999267578125,
+          "h": 389.2699890136719,
+          "l": 378.75,
+          "c": 381.9200134277344
+        },
+        {
           "d": "07-27",
           "o": 389.81500244140625,
           "h": 389.8424987792969,
           "l": 373.5,
-          "c": 380.1600036621094
+          "c": 382.1199951171875
         }
       ],
-      "relVolume": 0.4020565571957248,
-      "marketCap": 1870387200000.0002
+      "relVolume": 0.4396147587114402,
+      "marketCap": 1880030400000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 326.37,
-      "changePct": 2.7322209100307338,
+      "price": 327.391,
+      "changePct": 0.00015182795715558927,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 19453486,
+      "volume": 20580161,
       "ohlc": [
         {
           "d": "04-27",
@@ -3476,26 +3489,33 @@
           "c": 317.69000244140625
         },
         {
+          "d": "07-24",
+          "o": 318.4200134277344,
+          "h": 324.17999267578125,
+          "l": 317.32000732421875,
+          "c": 319.739990234375
+        },
+        {
           "d": "07-27",
           "o": 325.0400085449219,
           "h": 330.4198913574219,
           "l": 324.4599914550781,
-          "c": 326.3699951171875
+          "c": 327.3905029296875
         }
       ],
-      "relVolume": 0.5657425873010495,
-      "marketCap": 3981714000000
+      "relVolume": 0.6098148005753786,
+      "marketCap": 3994170200000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 232.36,
-      "changePct": -0.5563652449640968,
+      "price": 232.68,
+      "changePct": 0.24556980049582022,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 20422604,
+      "volume": 21303964,
       "ohlc": [
         {
           "d": "04-27",
@@ -3925,26 +3945,33 @@
           "c": 233.66000366210938
         },
         {
+          "d": "07-24",
+          "o": 234.3800048828125,
+          "h": 234.9499969482422,
+          "l": 231.33999633789062,
+          "c": 232.11000061035156
+        },
+        {
           "d": "07-27",
           "o": 235.6999969482422,
           "h": 235.88999938964844,
           "l": 230.99000549316406,
-          "c": 232.36000061035156
+          "c": 232.67999267578125
         }
       ],
-      "relVolume": 0.37383160941811067,
-      "marketCap": 2486252000000
+      "relVolume": 0.405827860994579,
+      "marketCap": 2489676000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 595.615,
-      "changePct": -1.7299102085305822,
+      "price": 596.65,
+      "changePct": 0.24530351092380498,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 7165934,
+      "volume": 7393418,
       "ohlc": [
         {
           "d": "04-27",
@@ -4374,26 +4401,33 @@
           "c": 606.0999755859375
         },
         {
+          "d": "07-24",
+          "o": 605.2999877929688,
+          "h": 609.97998046875,
+          "l": 594.4500122070312,
+          "c": 595.1900024414062
+        },
+        {
           "d": "07-27",
           "o": 607.219970703125,
           "h": 611.260009765625,
           "l": 593.5050048828125,
-          "c": 595.614990234375
+          "c": 596.6500244140625
         }
       ],
-      "relVolume": 0.36487605378279797,
-      "marketCap": 1500949800000
+      "relVolume": 0.38179913120175496,
+      "marketCap": 1503558000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 392.905,
-      "changePct": -5.456227086389246,
+      "price": 395.175,
+      "changePct": -2.0413514276750955,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 12480266,
+      "volume": 12952830,
       "ohlc": [
         {
           "d": "04-27",
@@ -4823,26 +4857,33 @@
           "c": 415.5799865722656
         },
         {
+          "d": "07-24",
+          "o": 411.3500061035156,
+          "h": 412.9200134277344,
+          "l": 400.79998779296875,
+          "c": 403.4100036621094
+        },
+        {
           "d": "07-27",
           "o": 406.07501220703125,
           "h": 407.42999267578125,
           "l": 388.80999755859375,
-          "c": 392.9049987792969
+          "c": 395.17498779296875
         }
       ],
-      "relVolume": 0.8253358145785058,
-      "marketCap": 2039176949999.9998
+      "relVolume": 0.8659425982095283,
+      "marketCap": 2050958250000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 484.38,
-      "changePct": -10.248475478216537,
+      "price": 488.56,
+      "changePct": -6.397167136226326,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 22718738,
+      "volume": 23383470,
       "ohlc": [
         {
           "d": "04-27",
@@ -5272,26 +5313,33 @@
           "c": 539.6900024414062
         },
         {
+          "d": "07-24",
+          "o": 546.9199829101562,
+          "h": 549,
+          "l": 518,
+          "c": 521.9500122070312
+        },
+        {
           "d": "07-27",
           "o": 527.5050048828125,
           "h": 528,
           "l": 476.92999267578125,
-          "c": 484.3800048828125
+          "c": 488.55999755859375
         }
       ],
-      "relVolume": 0.8053402840329229,
-      "marketCap": 784695600000
+      "relVolume": 0.8287490723144612,
+      "marketCap": 791467200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 131.4,
-      "changePct": 6.5088684211161,
+      "price": 131.57,
+      "changePct": 7.037104852039273,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 25266413,
+      "volume": 25908394,
       "ohlc": [
         {
           "d": "04-27",
@@ -5721,26 +5769,33 @@
           "c": 123.37000274658203
         },
         {
+          "d": "07-24",
+          "o": 125.16500091552734,
+          "h": 125.30999755859375,
+          "l": 122.0199966430664,
+          "c": 122.91999816894531
+        },
+        {
           "d": "07-27",
           "o": 126.29000091552734,
           "h": 132.41000366210938,
           "l": 125.31999969482422,
-          "c": 131.39999389648438
+          "c": 131.57000732421875
         }
       ],
-      "relVolume": 0.6153700940283579,
-      "marketCap": 315360000000
+      "relVolume": 0.6639536418359264,
+      "marketCap": 315768000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 119.43,
-      "changePct": -0.5081644499326708,
+      "price": 119.975,
+      "changePct": 4.335160190417058,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 25737849,
+      "volume": 26149803,
       "ohlc": [
         {
           "d": "04-27",
@@ -6170,15 +6225,22 @@
           "c": 120.04000091552734
         },
         {
+          "d": "07-24",
+          "o": 122.47000122070312,
+          "h": 123.08000183105469,
+          "l": 114.75,
+          "c": 114.98999786376953
+        },
+        {
           "d": "07-27",
           "o": 118,
           "h": 121.98999786376953,
           "l": 116.80000305175781,
-          "c": 119.43000030517578
+          "c": 119.9749984741211
         }
       ],
-      "relVolume": 0.6545593333618169,
-      "marketCap": 335598300000
+      "relVolume": 0.6572027831428101,
+      "marketCap": 337129750000
     }
   ],
   "compute": [
@@ -6188,7 +6250,7 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "→ 2% vs 13d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6201,10 +6263,10 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $6.88/hr",
-      "trend": "↓ 13% vs 13d ago",
+      "rate": "$5.63 – $6.53/hr",
+      "trend": "↓ 17% vs 13d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6225,14 +6287,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.60 – $1.49/hr",
-      "trend": "↑ 11% vs 13d ago",
+      "rate": "$1.00 – $1.49/hr",
+      "trend": "↑ 32% vs 13d ago",
       "trendClass": "trend-up",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-27T18:45:27.170Z",
+    "updatedAt": "2026-07-27T19:00:41.313Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6428,10 +6490,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 47,
         "isEstimated": true,
-        "rawCommentHits": 1182,
+        "rawCommentHits": 1181,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
-        "commentCoverage": 0.25380710659898476,
+        "commentCoverage": 0.2540220152413209,
         "limited": false,
         "points": 860,
         "themes": [
@@ -6531,10 +6593,10 @@
         "storyCoverage": 0.5607476635514018,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": true,
-        "rawCommentHits": 10645,
+        "rawCommentHits": 10648,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.028182245185533115,
+        "commentCoverage": 0.028174305033809167,
         "limited": false,
         "points": 234,
         "themes": [
@@ -6686,16 +6748,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 65,
-        "fetchedStoryCount": 65,
+        "rawStoryHits": 78,
+        "fetchedStoryCount": 78,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 966,
+        "rawCommentHits": 965,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 64,
-        "commentCoverage": 0.3105590062111801,
+        "commentCoverage": 0.31088082901554404,
         "limited": false,
         "points": 506,
         "themes": [
@@ -6777,7 +6839,7 @@
         "isEstimated": false,
         "rawCommentHits": 4436,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 55,
+        "validatedCommentCount": 54,
         "commentCoverage": 0.06762849413886383,
         "limited": true,
         "points": 236,
@@ -6790,12 +6852,12 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 14
+            "count": 13
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 6
+            "count": 5
           },
           {
             "id": "price",
