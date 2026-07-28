@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-28T20:37:31.540Z",
+  "updatedAt": "2026-07-28T20:45:28.814Z",
   "build": {
-    "sha": "d2d7b835ac7c27177ebbf64d4bbacfdaa07dc3cd",
-    "shortSha": "d2d7b83",
+    "sha": "f189a1e9cb875ce31fe33e73eb501105fca91712",
+    "shortSha": "f189a1e",
     "ref": "main",
-    "builtAt": "2026-07-28T20:37:46.384Z"
+    "builtAt": "2026-07-28T20:45:43.474Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,10 +13,11 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 18.9,
     "estimatedDatasets": 4,
-    "buildSha": "d2d7b83",
-    "lastSuccessfulUpdate": "2026-07-28T20:37:31.540Z"
+    "buildSha": "f189a1e",
+    "lastSuccessfulUpdate": "2026-07-28T20:45:28.814Z"
   },
   "ticker": [
+    "AI’S FINALLY EXPENSIVE ENOUGH TO MAKE WALL STREET NERVOUS",
     "CAN THE NEW YORK TIMES SAVE JOURNALISM FROM OUR AI OVERLORDS?",
     "SILICON VALLEY’S NEXT IPO BILLIONAIRES ARE COMING. NONPROFITS ARE READY FOR THEM",
     "“GOOGLE AND REDDIT DO NOT OWN THE INTERNET,\" WEB SCRAPER SAYS AFTER COURT WIN",
@@ -25,10 +26,35 @@
     "INTRODUCING CLAUDE CORPS",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "DESPITE AI HYPE, GOOGLE'S DATA SHOWS WORKERS AREN'T AUTOMATING THEMSELVES AWAY",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN",
-    "DISCOVERING CRYPTOGRAPHIC WEAKNESSES WITH CLAUDE"
+    "AI LEADERS SIGN STATEMENT ASKING THE GOVERNMENT TO DO SOMETHING ABOUT AUTOMATED AI"
   ],
   "signals": [
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
+      "clusterId": "jyvh54",
+      "title": "AI’s finally expensive enough to make Wall Street nervous",
+      "desc": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195 billion - is much more than the company had previously […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
+      "dateISO": "2026-07-28T19:33:03.000Z",
+      "date": "JUL 28 2026",
+      "category": "market",
+      "catConfidence": 0.57,
+      "family": "market",
+      "significance": 74,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
     {
       "id": "https://www.wired.com/story/the-big-interview-podcast-a-g-sulzberger-new-york-times/",
       "clusterId": "zxevyy",
@@ -119,7 +145,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 62,
+      "significance": 61,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -275,6 +301,35 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta",
+      "clusterId": "13h1qzg",
+      "title": "AI leaders sign statement asking the government to do something about automated AI",
+      "desc": "Employees of OpenAI and Anthropic, as well as Google, Meta, Thinking Machines, Microsoft, Mistral, and other leading AI labs, have written a statement to the US government supporting a potential slowdown of sorts for frontier AI development - or at least a speed-up of global coordinated governance efforts. \"Al could help create a dramatically better […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta",
+      "dateISO": "2026-07-28T19:46:43.000Z",
+      "date": "JUL 28 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "claude",
+        "gemini",
+        "mistral"
       ]
     },
     {
@@ -1142,58 +1197,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
-      "clusterId": "1wri8ul",
-      "title": "Work with docs, sheets, and slides in ChatGPT",
-      "desc": "See how you can use ChatGPT to bring context together from your apps and files, make focused edits, analyze data, and use templates to create polished documents, spreadsheets, and presentations for you to review and share. Learn more: https://learn.chatgpt.com/ Chapters: 00:00 Documents, spreadsheets, and slides 00:10 Updating a launch plan 00:32 Analyzing video performance 00:44 Creating a presen",
-      "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo",
-      "dateISO": "2026-07-23T14:17:31.000Z",
-      "date": "JUL 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=E3dDr_QtBuo"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "clusterId": "14ot9ur",
-      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
-      "desc": "Google commits $40M in AI tokens and credits for the Genesis Mission",
-      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "dateISO": "2026-07-22T13:38:54.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
     }
   ],
   "waves": [
@@ -1202,7 +1205,7 @@
       "category": "product",
       "title": "Perplexity’s Personal Computer turns Windows PCs into AI agents",
       "summary": "Perplexity has expanded its agentic Personal Computer tool to Windows, allowing computers running the world's most popular OS to be used as a locally run AI system. Like the Mac v…",
-      "significance": 62,
+      "significance": 61,
       "impact": "notable",
       "verification": "single",
       "date": "JUL 28 2026",
@@ -1222,26 +1225,26 @@
     },
     {
       "family": "market",
-      "category": "policy",
-      "title": "Can the New York Times Save Journalism From Our AI Overlords?",
-      "summary": "In 2023, the Times sued OpenAI and Microsoft for copyright infringement. They’ve since spent more than $20 million on the case, and publisher A.G. Sulzberger has no plans to stop…",
+      "category": "market",
+      "title": "AI’s finally expensive enough to make Wall Street nervous",
+      "summary": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection o…",
       "significance": 74,
-      "impact": "notable",
+      "impact": "high",
       "verification": "single",
       "date": "JUL 28 2026",
-      "dateISO": "2026-07-28T10:30:00.000Z",
-      "url": "https://www.wired.com/story/the-big-interview-podcast-a-g-sulzberger-new-york-times/",
+      "dateISO": "2026-07-28T19:33:03.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/the-big-interview-podcast-a-g-sulzberger-new-york-times/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "However it resolves, the case could set a precedent for how models may be built, trained or licensed."
+      "whyItMatters": "If it holds up, the move reflects how investors are repricing the AI trade right now."
     },
     {
       "family": "research",
@@ -1268,17 +1271,17 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 24,
+    "chatgpt": 23,
     "copilot": 1,
     "perplexity": 1,
-    "gpt": 70,
+    "gpt": 71,
     "claude": 69,
-    "gemini": 34,
+    "gemini": 35,
     "grok": 0,
-    "llama": 2,
+    "llama": 1,
     "deepseek": 0,
     "qwen": 2,
-    "mistral": 0,
+    "mistral": 1,
     "azure": 0,
     "aws": 1,
     "gcp": 0,
@@ -1443,6 +1446,18 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 28 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "MCP startup Runlayer accuses Rippling of stealing its product idea",
+      "p": "Runlayer is suing Rippling after Rippling evaluated the startup's MCP gateway product and then opted to build one itself.",
+      "url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "GOOGLE",
       "logoKey": "google",
       "date": "JUL 28 2026",
@@ -1464,6 +1479,30 @@
       "p": "His change of position comes after \"the first security incident that I have felt very viscerally.\"",
       "url": "https://techcrunch.com/2026/07/28/sam-altman-is-ready-to-decelerate/",
       "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "JUL 28 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "AI leaders sign statement asking the government to do something about automated…",
+      "p": "Employees of OpenAI and Anthropic, as well as Google, Meta, Thinking Machines, Microsoft, Mistral, and other leading AI labs, have written a statement to the US government supporting a potential slowdown of sorts for frontier AI development - or at least a sp…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "JUL 28 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "AI’s finally expensive enough to make Wall Street nervous",
+      "p": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1500,42 +1539,6 @@
       "p": "A new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.",
       "url": "https://openai.com/index/scientific-computing-agentic-ai",
       "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "JUL 07 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
-      "p": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
-      "sourceName": "Google",
-      "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Data centers may face temporary power cuts to prevent blackouts on largest US g…",
-      "p": "The decision arrives as the breakneck pace of data center construction has grid operators scrambling to generate power.",
-      "url": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Fish Audio raises $52M seed to build AI voice models for creators and enterpris…",
-      "p": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
-      "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -6144,7 +6147,7 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6157,10 +6160,10 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.81 – $5.98/hr",
-      "trend": "↓ 8% vs 7d ago",
+      "rate": "$5.80 – $6.50/hr",
+      "trend": "↓ 4% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6184,11 +6187,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-28T20:37:31.540Z",
+    "updatedAt": "2026-07-28T20:45:28.814Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6296,12 +6299,12 @@
         "storyCoverage": 0.272975432211101,
         "estimatedRelevantDiscussions": 114,
         "isEstimated": true,
-        "rawCommentHits": 6649,
+        "rawCommentHits": 6650,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.04511956685215822,
+        "commentCoverage": 0.045112781954887216,
         "limited": false,
-        "points": 934,
+        "points": 935,
         "themes": [
           {
             "id": "coding",
@@ -6569,8 +6572,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 47,
-        "fetchedStoryCount": 47,
+        "rawStoryHits": 75,
+        "fetchedStoryCount": 75,
         "validatedStoryCount": 10,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
@@ -6652,16 +6655,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 72,
-        "fetchedStoryCount": 72,
+        "rawStoryHits": 77,
+        "fetchedStoryCount": 77,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 969,
+        "rawCommentHits": 924,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 68,
-        "commentCoverage": 0.30959752321981426,
+        "commentCoverage": 0.3246753246753247,
         "limited": false,
         "points": 509,
         "themes": [
@@ -6741,10 +6744,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4454,
+        "rawCommentHits": 4455,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.0673551863493489,
+        "commentCoverage": 0.06734006734006734,
         "limited": true,
         "points": 237,
         "themes": [
