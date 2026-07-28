@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-28T21:30:30.711Z",
+  "updatedAt": "2026-07-28T21:45:21.794Z",
   "build": {
-    "sha": "409f70db22f93a20dab0af00149046f4219c6540",
-    "shortSha": "409f70d",
+    "sha": "ed8042766a46e03a687471b2ad9abadb9e848365",
+    "shortSha": "ed80427",
     "ref": "main",
-    "builtAt": "2026-07-28T21:30:46.791Z"
+    "builtAt": "2026-07-28T21:45:37.131Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 18.9,
     "estimatedDatasets": 4,
-    "buildSha": "409f70d",
-    "lastSuccessfulUpdate": "2026-07-28T21:30:30.711Z"
+    "buildSha": "ed80427",
+    "lastSuccessfulUpdate": "2026-07-28T21:45:21.794Z"
   },
   "ticker": [
     "AI’S FINALLY EXPENSIVE ENOUGH TO MAKE WALL STREET NERVOUS",
@@ -24,9 +24,9 @@
     "PERPLEXITY’S PERSONAL COMPUTER TURNS WINDOWS PCS INTO AI AGENTS",
     "NVIDIA, MICROSOFT LAUNCH OPEN AI SECURITY ALLIANCE — WITHOUT OPENAI, GOOGLE, OR ANTHROPIC",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
+    "JFROG TRIES TO SPIN OPENAI 0-DAY EXPLOIT OF ITS APP INTO A SUCCESS STORY",
     "DESPITE AI HYPE, GOOGLE'S DATA SHOWS WORKERS AREN'T AUTOMATING THEMSELVES AWAY",
-    "AI LEADERS SIGN STATEMENT ASKING THE GOVERNMENT TO DO SOMETHING ABOUT AUTOMATED AI",
-    "BUILDING THE INFRASTRUCTURE FOR THE INTELLIGENCE AGE IN MICHIGAN"
+    "AI LEADERS SIGN STATEMENT ASKING THE GOVERNMENT TO DO SOMETHING ABOUT AUTOMATED AI"
   ],
   "signals": [
     {
@@ -171,7 +171,7 @@
       "category": "opensource",
       "catConfidence": 0.5,
       "family": "product",
-      "significance": 61,
+      "significance": 60,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -237,6 +237,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/",
+      "clusterId": "gxbkee",
+      "title": "JFrog tries to spin OpenAI 0-day exploit of its app into a success story",
+      "desc": "10 days passed from OpenAI models exploiting JFrog Artifactory 0-day to release of a patch.",
+      "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/",
+      "dateISO": "2026-07-28T21:36:39.000Z",
+      "date": "JUL 28 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -497,30 +523,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-      "clusterId": "sue34r",
-      "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
-      "desc": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
-      "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-      "dateISO": "2026-07-28T14:00:00.000Z",
-      "date": "JUL 28 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5",
       "clusterId": "j2xbj3",
       "title": "Users’ seemingly private conversations with Anthropic’s Claude showed up in Google search results",
@@ -576,6 +578,30 @@
       "entityIds": [
         "gemini"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
+      "clusterId": "sue34r",
+      "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
+      "desc": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
+      "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
+      "dateISO": "2026-07-28T14:00:00.000Z",
+      "date": "JUL 28 2026",
+      "category": "capital",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/",
@@ -1168,32 +1194,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-to-acquire-ona",
-      "clusterId": "1xb5ngz",
-      "title": "OpenAI to acquire Ona",
-      "desc": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
-      "url": "https://openai.com/index/openai-to-acquire-ona",
-      "dateISO": "2026-06-11T00:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-to-acquire-ona"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1271,7 +1271,7 @@
     "chatgpt": 23,
     "copilot": 1,
     "perplexity": 1,
-    "gpt": 70,
+    "gpt": 71,
     "claude": 69,
     "gemini": 35,
     "grok": 0,
@@ -1443,6 +1443,18 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 28 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "JFrog tries to spin OpenAI 0-day exploit of its app into a success story",
+      "p": "10 days passed from OpenAI models exploiting JFrog Artifactory 0-day to release of a patch.",
+      "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "JUL 28 2026",
@@ -1524,18 +1536,6 @@
       "p": "Discovering cryptographic weaknesses with Claude",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE13elp4eC1EQlJMdmtBdDZYaGQ0UXJoVE9sOGNtSDZIRFRYV3pkU1E4TnlNX3BTai1QVjduNVJUampVZGVySmlKRmVtcUFXcDBlNFVTQVdHN2ZiUUdjSlNtLUhXb3JialVEWGprd0tjdUVZQ2dhSFExaUtoTQ?oc=5",
       "sourceName": "Anthropic",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "JUL 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "An Anthropic Claude AI Model Finds Flaws in Tough-to-Crack Encryption Algorithms",
-      "p": "An Anthropic Claude AI Model Finds Flaws in Tough-to-Crack Encryption Algorithms",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMUZ6UGlFUVFUZk51VFBqdW9TcThwY21DVDRvVkhVRWJSNnM2LUtBQm52MC1TcVhyS1hXMWpmRVhNNkM0cVk4WFVsWG1nRVR0bVJnTHk4eWxMZU5SQUtVRVlzaHVPMHZ3bHlSLXRHRlFjSUQ1Ylo2V3JMOUlnNUh4b2dBVzhBOFFzN0RtcHJhdE1fUQ?oc=5",
-      "sourceName": "The New York Times",
       "sourceCount": 1
     }
   ],
@@ -6141,24 +6141,24 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.47 – $3.19/hr",
-      "trend": "↓ 10% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$1.99 – $3.19/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.34 – $4.39/hr",
+      "rate": "$3.33 – $4.39/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.87 – $6.49/hr",
-      "trend": "↓ 3% vs 7d ago",
+      "rate": "$5.87 – $5.98/hr",
+      "trend": "↓ 7% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
@@ -6188,7 +6188,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-28T21:30:30.711Z",
+    "updatedAt": "2026-07-28T21:45:21.794Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6197,15 +6197,15 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 333,
+        "rawStoryHits": 334,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.9009009009009009,
+        "storyCoverage": 0.8982035928143712,
         "estimatedRelevantDiscussions": 38,
         "isEstimated": true,
         "rawCommentHits": 2271,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 45,
+        "validatedCommentCount": 46,
         "commentCoverage": 0.13210039630118892,
         "limited": false,
         "points": 383,
@@ -6213,7 +6213,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 20
+            "count": 21
           },
           {
             "id": "coding",
@@ -6290,23 +6290,23 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1100,
+        "rawStoryHits": 1101,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 31,
-        "storyCoverage": 0.2727272727272727,
+        "storyCoverage": 0.2724795640326976,
         "estimatedRelevantDiscussions": 114,
         "isEstimated": true,
-        "rawCommentHits": 6648,
+        "rawCommentHits": 6647,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 46,
-        "commentCoverage": 0.04512635379061372,
+        "validatedCommentCount": 45,
+        "commentCoverage": 0.045133142771174965,
         "limited": false,
-        "points": 949,
+        "points": 955,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 28
+            "count": 27
           },
           {
             "id": "reasoning",
@@ -6492,10 +6492,10 @@
         "storyCoverage": 0.5405405405405406,
         "estimatedRelevantDiscussions": 15,
         "isEstimated": true,
-        "rawCommentHits": 10859,
+        "rawCommentHits": 10866,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.02762685330140897,
+        "commentCoverage": 0.027609055770292656,
         "limited": false,
         "points": 237,
         "themes": [
@@ -6658,10 +6658,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 968,
+        "rawCommentHits": 967,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 68,
-        "commentCoverage": 0.30991735537190085,
+        "commentCoverage": 0.31023784901758017,
         "limited": false,
         "points": 509,
         "themes": [
@@ -6741,10 +6741,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4457,
+        "rawCommentHits": 4460,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.06730984967466906,
+        "commentCoverage": 0.06726457399103139,
         "limited": true,
         "points": 239,
         "themes": [
@@ -6895,18 +6895,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "reasoning",
-          "writing"
-        ],
-        "excerpt": "…safety mandate:https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-...In light of the ability of recent models to accelerate their own development, we’ve implemented…",
-        "source": "Hacker News",
-        "author": "philipkglass",
-        "publishedAt": "2026-07-28T00:21:01.000Z",
-        "url": "https://news.ycombinator.com/item?id=49077595"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "coding",
           "price"
         ],
@@ -6915,6 +6903,18 @@
         "author": "dim0r",
         "publishedAt": "2026-07-28T12:52:21.000Z",
         "url": "https://news.ycombinator.com/item?id=49083042"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "reasoning",
+          "writing"
+        ],
+        "excerpt": "…safety mandate:https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-...In light of the ability of recent models to accelerate their own development, we’ve implemented…",
+        "source": "Hacker News",
+        "author": "philipkglass",
+        "publishedAt": "2026-07-28T00:21:01.000Z",
+        "url": "https://news.ycombinator.com/item?id=49077595"
       },
       {
         "modelId": "claude",
