@@ -12,7 +12,7 @@ import { prefersReducedMotion } from './util.js';
 // Each top-level panel's local tab ids, in document/DOM order. Panels absent
 // here (ecosystem, research) have no local tabs.
 const PANEL_TABS = {
-  today: ['briefing', 'waves', 'river', 'tide'],
+  today: ['waves', 'river', 'tide'],
   models: ['releases', 'leaderboard', 'image', 'video', 'local', 'community'],
   markets: ['stocknet', 'compute'],
 };
@@ -39,7 +39,7 @@ const FULL_HASH = '#full';
 // request, with the rest keeping their original relative order after them.
 const FULL_PAGE_ORDER = ['ecosystem', 'models', 'today', 'markets', 'research'];
 
-let state = { panel: 'today', tab: 'briefing' };
+let state = { panel: 'today', tab: 'waves' };
 let dataReady = false;
 let pendingScrollTarget = null;
 let correctionObserver = null;

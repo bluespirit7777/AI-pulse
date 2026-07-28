@@ -128,7 +128,7 @@ test('deeplink forwarder catches every dashboard hash shape and no landing ancho
   const dashboard = [
     '#full',
     '#panel-today', '#panel-ecosystem', '#panel-models', '#panel-markets', '#panel-research',
-    '#tab-briefing', '#tab-waves', '#tab-river', '#tab-tide', '#tab-releases',
+    '#tab-waves', '#tab-river', '#tab-tide', '#tab-releases',
     '#tab-leaderboard', '#tab-image', '#tab-video', '#tab-local', '#tab-community',
     '#tab-stocknet', '#tab-compute',
     '#sec-map', '#sec-waves', '#sec-river', '#sec-tide', '#sec-releases',
