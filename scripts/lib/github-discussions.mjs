@@ -95,7 +95,7 @@ export function parseDiscussionsResponse(json, { owner, name, label, org, catego
 // window, there may be more beyond what we fetched → estimated (a floor);
 // if the oldest item already falls outside the window, we hold the complete
 // set for that window → exact. Same "did we capture everything" logic the
-// rest of Community Pulse already uses (HN coverage, Launch Radar `more`).
+// rest of Community Pulse already uses (HN coverage, Discourse `more`).
 export function windowedDiscussions(discussions, sinceISO) {
   const sorted = discussions.slice().sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)));
   const inWindow = sorted.filter((d) => String(d.createdAt) >= String(sinceISO));

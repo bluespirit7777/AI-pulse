@@ -15,7 +15,7 @@ prevents breaking production; §4 (Known issues) prevents chasing ghosts.
   regenerates the JSON on a schedule.
 - **Two pages:** `index.html` is the landing page (site root), `app.html` is the
   dashboard. Old root deep links forward automatically — see `js/deeplink.js`.
-- **213 tests** (`npm run check` = validate + test). They must pass before any push.
+- **201 tests** (`npm run check` = validate + test). They must pass before any push.
 - **Never hand-commit `data/*.json`** — CI owns those (one exception: `entities.json`, see §5).
 - **The whole project's ethos is anti-fabrication.** Every number is either real
   and sourced, or explicitly labelled an estimate. Breaking that is the worst
@@ -39,16 +39,16 @@ npx serve .        # any static server
 | RSS/HN/Yahoo/GPU/HF  |  | scripts/update-data   |  | scripts/update-yt   |
 +----------------------+  +----------------------+  +----------------------+
 +----------------------+  +----------------------+  +----------------------+
-| [4] Launch Radar     |  | [5] Generated data    |  | [6] Curated data    |
-| scripts/update-lr    |  | data/*.json           |  | curated.js+entities |
+| [4] Generated data   |  | [5] Curated data      |  | [6] CI gate         |
+| data/*.json          |  | curated.js+entities   |  | validate.mjs, test/ |
 +----------------------+  +----------------------+  +----------------------+
-+----------------------+  +----------------------+  +----------------------+
-| [7] CI gate          |  | [8] Frontend app      |  | [9] Live site       |
-| validate.mjs, test/  |  | index.html + js/      |  | GitHub Pages        |
-+----------------------+  +----------------------+  +----------------------+
++----------------------+  +----------------------+
+| [7] Frontend app     |  | [8] Live site         |
+| index.html + js/     |  | GitHub Pages          |
++----------------------+  +----------------------+
 ```
 
-**Counts:** `js/` 15 files · `scripts/lib/` 12 · `test/` 14 · `.github/workflows/` 3
+**Counts:** `js/` 15 files · `scripts/lib/` 11 · `test/` 13 · `.github/workflows/` 2
 
 ### Key files
 
@@ -65,7 +65,6 @@ npx serve .        # any static server
 | `scripts/lib/models.mjs` | **`MODEL_REGISTRY` — single source of truth for model names/versions** |
 | `scripts/lib/signals.mjs` | Clustering, scoring, categorization, topics, `isReleaseDiscussion` |
 | `scripts/update-data.mjs` | Main pipeline: feeds → cluster → score → Community Pulse → write |
-| `scripts/update-launchradar.mjs` | "Be first to know" scan (HuggingFace + GitHub releases) |
 | `scripts/validate.mjs` | CI gate — bad data never commits |
 
 ### Data files
@@ -76,7 +75,6 @@ npx serve .        # any static server
 | `data/range.json` | CI | 24H/7D/30D real stats |
 | `data/stock-network.json` | CI | Nodes + correlations |
 | `data/youtube-trending.json` | CI | Optional — absent until `YOUTUBE_API_KEY` set |
-| `data/launch-radar.json` | CI | New-release detection + `knownIds` diff state |
 | `data/compute-history.json` | CI | Rolling GPU prices |
 | `data/history/events/*.json` | CI | 60-day retention |
 | **`data/entities.json`** | **HAND-MAINTAINED** | Ocean Map config. Edit by hand; keep versions in sync with `MODEL_REGISTRY`. |
@@ -91,7 +89,6 @@ npx serve .        # any static server
 |---|---|---|
 | `update-data.yml` | `'7,37 * * * *'` | **Actually driven by cron-job.org every 15 min** via `workflow_dispatch`. The native cron is effectively dead (starved). |
 | `update-youtube.yml` | `'22 3,15 * * *'` | Twice daily |
-| `update-launchradar.yml` | `'12,42 * * * *'` | **Native cron only — badly starved, see §4.1** |
 
 ### cron-job.org (external, critical)
 
@@ -108,7 +105,7 @@ external pinger was set up deliberately:
 | Name | Where | Needed for |
 |---|---|---|
 | `YOUTUBE_API_KEY` | Repo secret | YouTube trending. Absent = graceful skip. |
-| `GITHUB_TOKEN` | Auto-injected by Actions | GitHub Discussions (Community Pulse) + Launch Radar rate limits |
+| `GITHUB_TOKEN` | Auto-injected by Actions | GitHub Discussions (Community Pulse) |
 | Fine-grained PAT | cron-job.org | Dispatching `update-data.yml` |
 
 ### Deploy sequence (follow exactly)
@@ -159,9 +156,6 @@ git push origin main
   in any data container, provenance shown for every panel, no inline script,
   and full deep-link coverage. Legacy root links (`/#panel-*`, `/#tab-*`,
   `/#sec-*`, `/#full`) forward to `app.html` via `js/deeplink.js`.
-- **Launch Radar** — watches HuggingFace uploads + official GitHub releases to
-  detect launches at/before the blog post. Cold-start baseline discipline,
-  stable `firstSeenAt`, opens a GitHub issue (emails owner) on new detections.
 - **Community Pulse → 3 sources.** Was HN-only. Added official Discourse forums
   (OpenAI, Google) and GitHub Discussions (Claude, Grok, Qwen, Gemini).
 - **Community Pulse → release-focused.** `isReleaseDiscussion()` gate: only new
@@ -171,13 +165,20 @@ git push origin main
   top-5 — ChatGPT once returned 0 videos).
 - **Nav:** top-level sections show all subsections stacked.
 - **Security:** CSP meta tag (verified nothing blocked).
-- **Removed:** Briefing section; Python SDK releases from Launch Radar (noise).
+- **Removed:** Briefing section. **Launch Radar retired entirely** — the panel
+  came out first (mostly noise: internal dev-repo names from the HuggingFace
+  scan, not notable releases), then the whole backend (workflow, both scripts,
+  test, `data/launch-radar.json`) on the judgment that it was information bloat
+  for a normal reader. Recoverable from git history if that call ever changes;
+  **do not rebuild it without a fresh decision** — the former "Launch Radar is
+  starving, fix its cron" known-issue and the next-step that referenced it are
+  moot, not pending, and were removed with it.
 
 ### Frontend gotchas solved
 - `requestAnimationFrame` **never fires** in the automated test browser → use
   `setTimeout(fn, 0)`. **`IntersectionObserver` never delivers either**, and
   `loading="lazy"` images are never fetched — the pane doesn't composite
-  frames (same root cause as the screenshot timeouts, §4.8). Any scroll-driven
+  frames (same root cause as the screenshot timeouts, §4.7). Any scroll-driven
   reveal therefore needs a `setTimeout` backstop or it is invisible in tests.
 - CSS Grid `min-width: auto` caused silent horizontal overflow → explicit
   `min-width: 0` on grid children.
@@ -190,50 +191,42 @@ git push origin main
 
 ## 4. Known issues & possible bugs
 
-### 4.1 Launch Radar is starving ⚠️ **highest-value open item**
-Its cron says twice-hourly (~96 runs/2 days); reality was **6 runs in 2 days**
-with gaps up to 9 h. Cause: it relies on GitHub's native scheduler — the exact
-mechanism already proven unreliable here. **Fix: add it to cron-job.org** (it
-already supports `workflow_dispatch`):
-`.../actions/workflows/update-launchradar.yml/dispatches`. Ironic given it's the
-"be first to know" feature.
-
-### 4.2 GitHub runner-acquisition failures (external, transient)
+### 4.1 GitHub runner-acquisition failures (external, transient)
 Errors like *"The job was not acquired by Runner of type hosted"* / *"Internal
 server error. Correlation ID: …"* are **GitHub infrastructure, not this code** —
 verified: the failing job was `cancelled` with an **empty steps array** after
 ~15 min queued, i.e. nothing of ours ever ran. ~7 % historical rate. Remedy:
 re-run; if persistent, contact GitHub Support with the Correlation ID.
 
-### 4.3 GitHub Discussions source — happy path never verified
+### 4.2 GitHub Discussions source — happy path never verified
 GraphQL needs auth for **every** call, even public repos, and no token was
 available locally. **Verified only the failure modes** (no token → clean skip;
 invalid token → per-model 401, caught, build unaffected, no phantom source).
 The success path first runs in Actions. If the live response shape differs,
 it surfaces as a per-model error in the run log — non-fatal by design.
 
-### 4.4 Data lags code after a deploy
+### 4.3 Data lags code after a deploy
 Frontend changes ship instantly; `data/latest.json` keeps the **old shape** until
 the next pipeline run. All renderers must degrade gracefully (they currently do,
 e.g. the Sources row is guarded by `m.sources && m.sources.length`). Don't
 "fix" an apparent data mismatch right after deploying — wait one cycle.
 
-### 4.5 Excerpt windowing can look off-topic
+### 4.4 Excerpt windowing can look off-topic
 `sanitizeExcerpt` windows around the **model mention**, not the matched
 release keyword. So a correctly-filtered comment can *display* a snippet that
 doesn't obviously read as release news. Cosmetic, pre-existing; the counting
 logic is correct.
 
-### 4.6 Small samples after the release filter
+### 4.5 Small samples after the release filter
 Narrowing to release/discovery talk shrank counts (Claude 1074→122, GPT 190+43→31+2).
 Qwen fell to 6 and correctly flips to the existing **"Limited sample"** badge.
 That's honest behaviour, not a bug — don't "fix" it by loosening the filter
 without a real reason.
 
-### 4.7 Yahoo Finance is unofficial
+### 4.6 Yahoo Finance is unofficial
 Undocumented endpoint. Fine at this volume, could rate-limit or change shape.
 
-### 4.8 Testing environment quirks
+### 4.7 Testing environment quirks
 - **ES module caching**: an edited module may not reload in an open tab. Open a
   fresh tab, or verify via `fetch(url+'?bust='+Date.now())` / cache-busted `import()`.
 - **Screenshots time out** in this environment. JS-level DOM assertions are the
@@ -280,13 +273,14 @@ Undocumented endpoint. Fine at this volume, could rate-limit or change shape.
 
 ## 7. Open / next steps
 
-1. **Add Launch Radar to cron-job.org** (§4.1) — biggest real win.
-2. **Optionally strip the dead `schedule:` blocks** from the workflows now that
+1. **Optionally strip the dead `schedule:` blocks** from the workflows now that
    cron-job.org drives dispatch (they're starved and redundant). Was offered,
    not yet decided.
-3. **Confirm GitHub Discussions works in Actions** (§4.3) on the next run.
-4. **Tier-2 "be first" upgrade** (documented, not built): diff each lab's
+2. **Confirm GitHub Discussions works in Actions** (§4.2) on the next run.
+3. **Tier-2 "be first" upgrade** (documented, not built): diff each lab's
    `/v1/models` endpoint + machine-readable API changelogs. Needs free API keys
-   for OpenAI/Anthropic/Google stored as repo secrets.
-5. **Scheduled maintenance task exists**: `ai-pulse-daily-maintenance`, 19:00
+   for OpenAI/Anthropic/Google stored as repo secrets. ⚠️ Note: this is the same
+   "be first to know" idea Launch Radar served, which was retired as information
+   bloat — revisit the premise before building it.
+4. **Scheduled maintenance task exists**: `ai-pulse-daily-maintenance`, 19:00
    local daily — checks pipeline health + reviews leaderboard staleness.

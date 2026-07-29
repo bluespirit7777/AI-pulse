@@ -42,20 +42,6 @@ scripts/update-youtube.mjs ──uses──> scripts/lib/youtube.mjs (search/vid
         ▼
    git commit + push  ──►  GitHub Pages redeploys
 
-Hugging Face model API + GitHub releases API  (both keyless; GitHub uses the
-        │  free GITHUB_TOKEN in Actions to raise the rate limit)
-        │  (.github/workflows/update-launchradar.yml, its OWN fast :12/:42 cron —
-        │   the low-latency "be first to know" launch scan)
-        ▼
-scripts/update-launchradar.mjs ──uses──> scripts/lib/launchradar.mjs (URL building, response parsing, the new-release diff)
-        │
-        ├─► data/launch-radar.json  (newest model-hub uploads + official SDK releases, each flagged new-vs-seen — OPTIONAL: absent until the first run)
-        └─► opens a GitHub issue (emails the repo owner) when a genuinely-new release is detected — the free alert channel
-        │
-        ▼
-   git commit + push  ──►  GitHub Pages redeploys
-        │
-        ▼
 index.html (landing) ──module──> js/landing.js  (previews the dashboard from the same
         │                                        sources: curated.js + data/latest.json)
         ├─ js/deeplink.js      forwards legacy root deep links (#panel-*/#tab-*/#sec-*/#full) to app.html
@@ -64,7 +50,6 @@ index.html (landing) ──module──> js/landing.js  (previews the dashboard 
 app.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
         ├─ js/nav.js           5-item IA router: panel/tab activation, legacy-hash map, depth rail, anchor correction
-        ├─ js/launchradar.js   Launch Radar panel (newest model/SDK releases; hides itself if data absent)
         ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
         ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected")
         ├─ js/river.js         signal river (chronological, declutered filters, expand/archive)
@@ -79,8 +64,8 @@ app.html ──module──> js/main.js
 The page uses a 5-item IA — **Today / Ecosystem / Models / Markets /
 Research** — each a `.topsection` toggled by `js/nav.js`. Only ONE top panel
 is shown at a time (the others carry `hidden`); within the shown panel, ALL
-of its subsections render stacked (Today shows Launch Radar + Waves + River +
-Tide together, Models shows all six, etc.). The `.local-tabs` bar under a
+of its subsections render stacked (Today shows Waves + River + Tide together,
+Models shows all six, etc.). The `.local-tabs` bar under a
 section is therefore a "jump to a section" nav, not a tablist — `js/nav.js`'s
 `normalizeLocalNav()` strips the tablist/tabpanel ARIA the HTML still carries
 and unhides every tabpanel once at init, and each jump button just scrolls to
