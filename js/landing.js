@@ -96,7 +96,7 @@ function renderLeaderboards() {
 
   paintMeta($('#lp-lb-meta'), [
     'Curated · ' + LEADERBOARD_SNAPSHOT,
-    'Artificial Analysis · LMArena · Scale Labs',
+    'Artificial Analysis · SWE-bench Verified',
     LEADERBOARD_OVERALL_DISCLAIMER,
   ]);
 }

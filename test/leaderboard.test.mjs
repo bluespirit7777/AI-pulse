@@ -22,10 +22,12 @@ test('the disclaimer text itself matches the exact required wording', () => {
 });
 
 test('every row in every view has a non-empty note that names a benchmark or pricing source AND a snapshot date/period', () => {
-  // "named benchmark" = cites a recognizable source (Scale Labs / pricing
-  // page / model card); "snapshot date" = a month+year or "as of" phrase, not
-  // an unqualified absolute claim.
-  const sourceRe = /(scale labs|artificial analysis|lmarena|pricing page|model card|public provider pricing)/i;
+  // "named benchmark" = cites a recognizable source (Artificial Analysis /
+  // a named benchmark / pricing page / model card); "snapshot date" = a
+  // month+year or "as of" phrase, not an unqualified absolute claim.
+  // SWE-bench Verified and the public leaderboards that publish it were added
+  // when the agentic view moved onto real published figures.
+  const sourceRe = /(scale labs|artificial analysis|lmarena|swe-bench|public .*leaderboard|arena|pricing page|model card|public provider pricing)/i;
   const dateRe = /(jul 2026|as of|snapshot)/i;
   for (const view of LEADERBOARD_VIEWS) {
     for (const row of view.data) {
@@ -48,16 +50,18 @@ test('every model in every view carries a numeric score (no model left unscored)
 test('reasoning/agentic scores are either published figures or notes DISCLOSED as editorial estimates', () => {
   const reasoning = LEADERBOARD_VIEWS.find((v) => v.id === 'reasoning').data;
   const agentic = LEADERBOARD_VIEWS.find((v) => v.id === 'agentic').data;
-  // Models Scale Labs publishes a real HLE figure for; every OTHER scored model
-  // must say in its note that its number is an editorial estimate.
-  const publishedReasoning = new Set(['Claude Fable 5', 'ChatGPT Sol (GPT-5.6)', 'Claude Opus 4.8', 'Gemini 3.1 Pro']);
+  // Models with a real published HLE figure (Artificial Analysis' own run of
+  // the benchmark); every OTHER scored model must say in its note that its
+  // number is an editorial estimate.
+  const publishedReasoning = new Set(['Claude Opus 5', 'Claude Fable 5', 'ChatGPT Sol (GPT-5.6)', 'Claude Opus 4.8', 'Gemini 3.1 Pro']);
   for (const row of reasoning) {
     if (!publishedReasoning.has(row.model)) {
       assert.match(row.note, /editorial estimate/i, `${row.model} unpublished reasoning score must be disclosed as an editorial estimate`);
     }
   }
-  // Only Claude's two tiers have published SWE Atlas figures.
-  const publishedAgentic = new Set(['Claude Fable 5', 'Claude Opus 4.8']);
+  // Models with a published SWE-bench Verified figure. Sol, Grok and Kimi K3
+  // have none, so their rows must disclose the cross-metric inference.
+  const publishedAgentic = new Set(['Claude Opus 5', 'Claude Fable 5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Qwen 3.7 Max']);
   for (const row of agentic) {
     if (!publishedAgentic.has(row.model)) {
       assert.match(row.note, /editorial estimate/i, `${row.model} unpublished agentic score must be disclosed as an editorial estimate`);
@@ -99,7 +103,7 @@ test('leaderboardOverall (back-compat alias) still points at the Overall balance
   assert.equal(leaderboardOverall, overall.data);
 });
 
-test('every view ranks the same 6-model roster (no model silently dropped from a view)', () => {
+test('every view ranks the same model roster (no model silently dropped from a view)', () => {
   const rosters = LEADERBOARD_VIEWS.map((v) => new Set(v.data.map((r) => r.model)));
   const [first, ...rest] = rosters;
   for (const r of rest) assert.deepEqual([...r].sort(), [...first].sort());

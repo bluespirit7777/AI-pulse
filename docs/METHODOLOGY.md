@@ -467,20 +467,39 @@ task. `js/curated.js`'s `LEADERBOARD_VIEWS` offers 4 views instead:
 Only Overall balance carries a disclaimer — *"Editorial synthesis—not a
 universal benchmark ranking."* — because *which* index and weighting is an
 editorial call; the other three are direct benchmark or pricing-tier readouts.
-**Every model is scored in every view** — the roster is the same six frontier
-models throughout, and none is left blank:
+**Every model is scored in every view** — the roster is the same eight frontier
+models throughout (Jul 30 2026 snapshot), and none is left blank:
 
 - **Overall balance** — Artificial Analysis' Intelligence Index (AAII), a real
-  0–100 composite (agents/coding/general/science, 25% each). Grounded ordering:
-  Claude Fable 5 ~60 leads, GPT-5.6 Sol ~59, then Opus 4.8 and Gemini 3.1 Pro,
-  Qwen 3.7 Max the top open model at #5, Grok 4.5 mid-pack.
-- **Reasoning** — Scale Labs' Humanity's Last Exam (HLE %). The top four are
-  Scale Labs' **published** figures (Fable 5 53.3, Sol 47.2, Opus 4.8 45.7,
-  Gemini 3.1 Pro 44.4 — GPT-5.6 Sol clearly ahead of Gemini). Grok 4.5 and Qwen
-  3.7 Max, which Scale Labs hasn't published, carry an **editorial estimate that
-  says so in its note** — a number, never dressed up as a measurement.
-- **Agentic coding** — Scale Labs' SWE Atlas / SWE-bench Verified (%). Claude's
-  two tiers are published; the other four are disclosed editorial estimates.
+  0–100 composite (agents/coding/general/science, 25% each). Every row is a
+  published measurement, cross-checked across two independent mirrors that
+  agreed on ordering and score: Claude Opus 5 61 leads, Fable 5 60, GPT-5.6 Sol
+  59, Kimi K3 57, Opus 4.8 56, Grok 4.5 54, then Gemini 3.1 Pro and Qwen 3.7
+  Max **genuinely tied** at 46 (rendered with a shared `T-` rank, not a
+  fabricated split).
+- **Reasoning** — Humanity's Last Exam (HLE %), **as run by Artificial
+  Analysis**. This attribution was corrected on Jul 30 2026: HLE is Scale
+  Labs'/CAIS' benchmark, but these numbers are AA's own standardized run of it.
+  Scale Labs' own harness reports materially different values (it puts Gemini
+  3.1 Pro at 46.4, not 44.4) and doesn't list the newest frontier models at
+  all. Separately, aggregator boards pooling **vendor-self-reported**,
+  tool-assisted HLE runs show a far higher spread (Opus 5 64.7, Fable 5 64.5);
+  this view deliberately stays on the independently-run, no-tools scale rather
+  than mixing the two. Published for Opus 5, Fable 5, Sol, Opus 4.8 and Gemini
+  3.1 Pro; Kimi K3, Grok 4.5 and Qwen 3.7 Max carry an **editorial estimate
+  that says so in its note** — a number, never dressed up as a measurement.
+- **Agentic coding** — SWE-bench Verified (%). Rebuilt Jul 30 2026: the old
+  82.5→66.5 range was badly stale, and the benchmark is now **near-saturated**
+  (top three within ~1pt), a caveat the notes carry rather than hide. Opus 5
+  (96.0), Fable 5 (95.0) and Opus 4.8 (88.6) are corroborated across two
+  independent leaderboards; Gemini 3.1 Pro (80.6) and Qwen 3.7 Max (80.4) come
+  from a board that flags its entries as vendor-self-reported, which their
+  notes disclose. Sol, Kimi K3 and Grok 4.5 have **no** published SWE-bench
+  figure — Sol and Grok are anchored instead to Artificial Analysis' Coding
+  Agent Index (a *different* metric, where Sol actually ranks #1 and Grok #3),
+  and their notes state that this is a cross-metric inference. That tension is
+  deliberately surfaced, not resolved: Claude leads SWE-bench while OpenAI
+  leads AA's agentic-coding index.
 - **Cost efficiency** — a 0–100 directional index (higher = cheaper), the note
   making explicit it's a tier/self-hostability judgment, **not** a fabricated
   $/token rate.
