@@ -22,6 +22,11 @@ function discussionCount(m) {
   return m.estimatedRelevantDiscussions || 0;
 }
 
+// Module scope, so the reader's selected model survives the silent data
+// refresh that rebuilds this section. Falls back to the busiest model when the
+// remembered one drops out of the feed (see below).
+let persistedModelId = null;
+
 export function renderCommunity(root, community) {
   if (!root) return;
   const models = community?.models || [];
@@ -33,7 +38,8 @@ export function renderCommunity(root, community) {
 
   const ranked = models.slice().sort((a, b) => discussionCount(b) - discussionCount(a));
   const maxDisc = Math.max(...ranked.map(discussionCount), 1);
-  const state = { modelId: ranked[0].key, showAll: false };
+  const remembered = ranked.some((m) => m.key === persistedModelId) ? persistedModelId : ranked[0].key;
+  const state = { modelId: remembered, showAll: false };
 
   root.innerHTML = `
     <div class="cc">
@@ -63,6 +69,7 @@ export function renderCommunity(root, community) {
 
   function select(key, { focusTab = false } = {}) {
     state.modelId = key;
+    persistedModelId = key;
     state.showAll = false;
     tabs.forEach((t) => {
       const isSel = t.dataset.key === key;

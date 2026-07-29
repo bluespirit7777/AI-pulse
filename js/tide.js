@@ -27,6 +27,8 @@ const CAT_LABEL = {
   adoption: 'Adoption', opensource: 'Open source', market: 'Market', orggov: 'Org/gov',
 };
 
+let persistedShowAll = false;
+
 export function renderTide(root, ranges) {
   if (!root) return;
   const history = ranges?.dailyCategoryHistory || [];
@@ -59,7 +61,10 @@ export function renderTide(root, ranges) {
   const defaultCats = byVolume.slice(0, DEFAULT_CAT_COUNT);
   const extraCats = byVolume.slice(DEFAULT_CAT_COUNT);
 
-  const state = { showAll: extraCats.length === 0 };
+  // Module-scope `persistedShowAll` so a silent refresh doesn't collapse the
+  // chart back to the top 5 for a reader who expanded it. Forced on when there
+  // is nothing extra to reveal.
+  const state = { showAll: extraCats.length === 0 || persistedShowAll };
 
   function draw() {
     const activeSet = new Set(state.showAll ? present : defaultCats);
@@ -125,7 +130,11 @@ export function renderTide(root, ranges) {
       <p class="tide-summary">Across ${esc(String(n))} collected day${n === 1 ? '' : 's'}, the busiest categories were ${esc(topCategoriesText(totals))}. <span class="tide-note">Operational categories only — general commentary and opinion/analysis are excluded.</span></p>
     `;
 
-    root.querySelector('.tide-toggle')?.addEventListener('click', () => { state.showAll = !state.showAll; draw(); });
+    root.querySelector('.tide-toggle')?.addEventListener('click', () => {
+      state.showAll = !state.showAll;
+      persistedShowAll = state.showAll;
+      draw();
+    });
   }
 
   draw();

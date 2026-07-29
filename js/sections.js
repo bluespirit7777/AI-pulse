@@ -269,6 +269,10 @@ export function renderLive(data, now = Date.now()) {
     </div>`;
   }).join(''));
   wireFlipCards('releases');
+  // Re-apply the already-resolved trending videos to the freshly rebuilt card
+  // backs. Before the first resolve, the markup's "Loading…" placeholder is
+  // still the honest state, so leave it alone.
+  if (ytResolved) paintYouTubeTrending(ytCache);
   sizeFlipCards();
 
   // (The former "Big AI wire" section was removed — the Signal River now
@@ -370,7 +374,23 @@ window.addEventListener('resize', () => {
 // from the main data cycle, so this fills in the card backs whenever it
 // resolves — separately from renderLive(), and honestly empty if the fetch
 // hasn't succeeded yet or the model has no results this cycle.
+// The trending-videos fetch resolves ONCE, but renderLive() rebuilds the
+// release cards on every silent refresh — which used to reset all three card
+// backs to their "Loading this week's top videos…" placeholder permanently,
+// since nothing re-applied the already-resolved payload. Caching the resolved
+// result (including a resolved-null, which is a real "unavailable" answer and
+// not the same as "still loading") lets renderLive re-apply it after each
+// rebuild without re-fetching.
+let ytCache = null;
+let ytResolved = false;
+
 export function renderYouTubeTrending(yt) {
+  ytCache = yt;
+  ytResolved = true;
+  paintYouTubeTrending(yt);
+}
+
+function paintYouTubeTrending(yt) {
   const models = yt?.models || {};
   for (const key of ['claude', 'gpt', 'gemini']) {
     const listEl = document.querySelector(`.release-card[data-model-key="${key}"] .yt-videos`);

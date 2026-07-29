@@ -21,6 +21,26 @@ const PRIMARY_CAT_COUNT = 3; // + "All" — the rest live behind "More filters"
 
 function sizeClass(sig) { return sig >= 70 ? 'big' : sig >= 45 ? 'mid' : 'sm'; }
 
+// Filter selection lives at MODULE scope, not inside renderRiver, so a silent
+// data refresh (which rebuilds this section's innerHTML from scratch) doesn't
+// silently reset the reader's filters out from under them mid-read. Only the
+// `visible` count deliberately resets on new data — the list has changed
+// length, so an old "show 40" offset means nothing.
+const persisted = { cat: 'all', entity: 'all', time: 'all' };
+
+// A category or entity that existed last cycle can vanish from the feed
+// entirely. Restoring a filter that now matches nothing would show the reader
+// an empty river with no obvious cause, so a selection is only carried over
+// while it still has signals behind it. Exported for unit testing — this is
+// the one piece of river state logic that needs no DOM.
+export function reconcileFilter(prev, availableCats, availableEntities) {
+  return {
+    cat: prev.cat === 'all' || availableCats.includes(prev.cat) ? prev.cat : 'all',
+    entity: prev.entity === 'all' || availableEntities.includes(prev.entity) ? prev.entity : 'all',
+    time: prev.time in TIME_WINDOWS ? prev.time : 'all',
+  };
+}
+
 export function renderRiver(root, signals = [], now = Date.now(), entityNames = {}) {
   // readable label for an entity id (R8): "gpt" → "GPT". Falls back to the id.
   const entityLabel = (id) => entityNames[id] || id;
@@ -34,7 +54,10 @@ export function renderRiver(root, signals = [], now = Date.now(), entityNames = 
   for (const s of sorted) for (const id of s.entityIds || []) entityCounts.set(id, (entityCounts.get(id) || 0) + 1);
   const topEntityIds = Array.from(entityCounts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([id]) => id);
 
-  const state = { cat: 'all', entity: 'all', time: 'all', visible: DEFAULT_VISIBLE };
+  const state = {
+    ...reconcileFilter(persisted, catsByFreq, Array.from(entityCounts.keys())),
+    visible: DEFAULT_VISIBLE,
+  };
 
   // Declutter (Phase 4): only "All" + the 3 most-used categories, plus a
   // single combined time/entity quick-pick, are visible by default. Every
@@ -179,11 +202,25 @@ export function renderRiver(root, signals = [], now = Date.now(), entityNames = 
 
   function apply() {
     state.visible = DEFAULT_VISIBLE;
+    persisted.cat = state.cat;
+    persisted.entity = state.entity;
+    persisted.time = state.time;
     setActive([catBar, catBar2], 'cat', state.cat);
     setActive([timeBar], 'time', state.time);
     entitySelect.value = state.entity;
     syncFilterStatus();
     draw();
+  }
+
+  // Reveal the disclosure when a restored filter lives inside it, so a
+  // carried-over selection is never invisible to the reader who set it.
+  function revealPanelIfNeeded() {
+    const hiddenFilterActive =
+      secondaryCats.includes(state.cat) || state.time !== 'all' || state.entity !== 'all';
+    if (!hiddenFilterActive || !filterPanel.hidden) return;
+    filterPanel.hidden = false;
+    moreToggle.setAttribute('aria-expanded', 'true');
+    moreToggle.textContent = 'Fewer filters';
   }
 
   catBar.addEventListener('click', (e) => {
@@ -229,6 +266,8 @@ export function renderRiver(root, signals = [], now = Date.now(), entityNames = 
     draw();
   });
 
-  syncFilterStatus();
-  draw();
+  // apply() rather than a bare draw(): it also paints the restored selection
+  // onto the freshly-built controls, which still default to "All" in markup.
+  apply();
+  revealPanelIfNeeded();
 }

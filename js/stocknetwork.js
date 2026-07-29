@@ -32,9 +32,19 @@ const pctClass = (n) => (n == null ? '' : n >= 0 ? 'stock-up' : 'stock-down');
 export function createStockNetwork(root, net) {
   if (!root) return;
   if (!net || !Array.isArray(net.nodes) || !net.nodes.length) {
-    root.innerHTML = `<p class="empty-state">Stock network data is unavailable right now — the table below still works.</p>`;
+    // Honest failure state. This used to promise "the table below still
+    // works" — there is no table below: the fallback that message referred to
+    // was removed when this section stopped rendering latest.json's `stocks`.
+    root.innerHTML = `<p class="empty-state">The AI stock network is unavailable this cycle — <code>data/stock-network.json</code> didn't load. It refreshes with the main data pipeline; check back shortly.</p>`;
+    // The mode toggle is wired at the bottom of this function, which we never
+    // reach here — so disable it rather than leave two buttons that look live
+    // and do nothing.
+    document.querySelectorAll('.mode-btn').forEach((b) => { b.disabled = true; });
+    const asofEl = document.getElementById('stocks-asof');
+    if (asofEl) asofEl.textContent = 'Unavailable';
     return;
   }
+  document.querySelectorAll('.mode-btn').forEach((b) => { b.disabled = false; });
   const nodes = net.nodes;
   const byT = new Map(nodes.map((n) => [n.t, n]));
   const maxMcap = Math.max(...nodes.map((n) => n.marketCap || 0), 1);
@@ -248,10 +258,13 @@ export function createStockNetwork(root, net) {
     document.body.classList.add('drawer-open');
     drawer.querySelector('.drawer-close').focus();
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
-    drawer.addEventListener('keydown', onDrawerKey);
-    drawer.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
     mountChart(n);
   }
+
+  // Bound once to the persistent drawer element (below), not per-open — an
+  // anonymous per-open backdrop listener accumulated one handler per node the
+  // reader inspected. Same fix as js/oceanmap.js and js/datahealth.js.
+  function onDrawerBackdrop(e) { if (e.target === drawer) closeDrawer(); }
 
   // Native SVG candlestick chart drawn from the compact daily OHLC series in
   // stock-network.json (node.chart). Self-built and served from our own
@@ -326,11 +339,13 @@ export function createStockNetwork(root, net) {
   }
   function closeDrawer() {
     drawer.hidden = true;
-    drawer.removeEventListener('keydown', onDrawerKey);
     document.body.classList.remove('drawer-open');
     selected = null; highlight(null);
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
+
+  drawer.addEventListener('keydown', onDrawerKey);
+  drawer.addEventListener('click', onDrawerBackdrop);
 
   function paintLegendAndSummary() {
     if (mode === 'ecosystem') {

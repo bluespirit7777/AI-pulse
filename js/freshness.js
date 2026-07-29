@@ -52,8 +52,18 @@ export function impactChip(tier) {
 
 // "Updated 4 min ago" chip whose halo brightness reflects age (bright < 1h,
 // soft < 24h, grey older). Age is encoded by the class AND stated in text.
+//
+// A malformed/missing date must NEVER throw here: this chip is rendered inside
+// the river's and waves' innerHTML string-building loops, so one bad dateISO
+// from a feed would otherwise take down the whole section rather than degrade
+// a single row. `new Date(x).toISOString()` raises RangeError on an invalid
+// date, so the timestamp is only formatted once Date.parse has confirmed it.
 export function freshnessChip(iso, now = Date.now()) {
-  const ageH = (now - Date.parse(iso)) / 3.6e6;
-  const cls = isNaN(ageH) ? 'fr-snap' : ageH < 1 ? 'fr-fresh' : ageH < 24 ? 'fr-recent' : 'fr-old';
-  return `<span class="fr-chip ${cls}" title="Last updated ${esc(new Date(iso).toISOString())}"><span class="fr-mark" aria-hidden="true">◷</span>${esc(timeAgo(iso, now))}</span>`;
+  const t = Date.parse(iso);
+  const bad = isNaN(t);
+  const ageH = (now - t) / 3.6e6;
+  const cls = bad ? 'fr-snap' : ageH < 1 ? 'fr-fresh' : ageH < 24 ? 'fr-recent' : 'fr-old';
+  const title = bad ? 'Publication date unavailable' : `Last updated ${new Date(t).toISOString()}`;
+  const label = bad ? 'date unknown' : timeAgo(iso, now);
+  return `<span class="fr-chip ${cls}" title="${esc(title)}"><span class="fr-mark" aria-hidden="true">◷</span>${esc(label)}</span>`;
 }

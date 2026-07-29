@@ -44,8 +44,11 @@ function paintUpdated() {
   if (!data) return;
   const pill = $('#snapshot-pill');
   if (pill) pill.textContent = 'Updated ' + timeAgo(data.updatedAt);
-  const stocksAsof = $('#stocks-asof');
-  if (stocksAsof) stocksAsof.textContent = fmtSnapshot(data.updatedAt);
+  // NOTE: #stocks-asof is deliberately NOT painted here. It belongs to
+  // data/stock-network.json, which has its own updatedAt from its own fetch —
+  // painting latest.json's timestamp into it (on this 30s interval) silently
+  // relabelled the stock section with the wrong dataset's time. js/stocknetwork.js
+  // owns that element, in both its success and its unavailable path.
   // build provenance (R10): which commit produced the live data
   const build = $('#footer-build');
   if (build && data.build) {
@@ -134,10 +137,16 @@ async function boot() {
 
   notifyDataReady(); // finishes any deep-link scroll that was waiting on real content
 
-  // AI stock network (independent load — a failure here doesn't block the rest of the page)
+  // AI stock network (independent load — a failure here doesn't block the rest
+  // of the page). Both paths go through createStockNetwork: passing null makes
+  // it render its own honest unavailable state and disable the mode toggle,
+  // rather than leaving the section blank and the toggle looking live.
   loadStockNetwork().then((net) => {
     if ($('#stock-network')) createStockNetwork($('#stock-network'), net);
-  }).catch((err) => console.warn('[stocknet] load skipped', err.message));
+  }).catch((err) => {
+    console.warn('[stocknet] load skipped', err.message);
+    if ($('#stock-network')) createStockNetwork($('#stock-network'), null);
+  });
 
   // YouTube trending videos for the release-card flip side (independent load,
   // refreshed twice daily). renderYouTubeTrending handles a null/missing
@@ -146,12 +155,22 @@ async function boot() {
   loadYouTubeTrending().then(renderYouTubeTrending)
     .catch((err) => { console.warn('[youtube] load skipped', err.message); renderYouTubeTrending(null); });
 
-  // silent refresh — keeps an open tab from going stale without a reload
+  // Silent refresh — keeps an open tab from going stale without a reload.
+  //
+  // Re-rendering replaces each section's innerHTML, which throws away
+  // everything the reader has set up (river filters, the selected Community
+  // model, an expanded wave). This polls every 10 min but the pipeline only
+  // publishes every ~30, so most cycles fetch a byte-identical snapshot —
+  // gating on updatedAt means the common case costs the reader nothing. When
+  // the data genuinely IS new, the components restore their own filter state
+  // themselves (see river.js / community.js / tide.js).
   setInterval(async () => {
     try {
       const [fresh, freshRanges] = await Promise.all([loadLatest(), loadRanges()]);
+      const unchanged = fresh?.updatedAt && fresh.updatedAt === data?.updatedAt;
       data = fresh;
       ranges = freshRanges;
+      if (unchanged) { paintUpdated(); return; }
       renderDynamic();
       paintHistoryNote();
       renderTide($('#tide'), ranges);

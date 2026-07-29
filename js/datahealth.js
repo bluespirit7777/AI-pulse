@@ -9,16 +9,25 @@ import { esc, timeAgo, fmtSnapshot } from './util.js';
 
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString());
 
+// This module is re-entered every 30s by main.js's paintUpdated(), but the
+// chip is wired exactly once. The drawer's contents must therefore come from
+// module-level state that each call refreshes — a closure over the `health`
+// argument would freeze the drawer at whatever the FIRST call saw, while the
+// chip beside it kept updating.
+let latest = { health: null, build: null };
+let lastFocused = null;
+
 export function renderDataHealth(chipEl, drawerEl, health, build) {
   if (!chipEl || !drawerEl || !health) return;
+  latest = { health, build };
 
   const allFeedsOk = health.feedsSucceeded >= health.feedsConfigured;
   chipEl.hidden = false;
   chipEl.innerHTML = `<span class="dh-dot ${allFeedsOk ? 'dh-dot--ok' : 'dh-dot--warn'}"></span>Data Health · ${health.feedsSucceeded}/${health.feedsConfigured} feeds`;
 
-  let lastFocused = null;
-
   function openDrawer() {
+    const { health, build } = latest;
+    if (!health) return;
     lastFocused = document.activeElement;
     const repo = 'https://github.com/bluespirit7777/AI-pulse';
     drawerEl.innerHTML = `
@@ -44,9 +53,12 @@ export function renderDataHealth(chipEl, drawerEl, health, build) {
     document.body.classList.add('drawer-open');
     drawerEl.querySelector('.drawer-close').focus();
     drawerEl.querySelector('.drawer-close').addEventListener('click', closeDrawer);
-    drawerEl.addEventListener('keydown', onDrawerKey);
-    drawerEl.addEventListener('click', (e) => { if (e.target === drawerEl) closeDrawer(); });
   }
+
+  // Backdrop dismiss. Bound once alongside the chip (see below) rather than
+  // per-open: the drawer element outlives every open/close cycle, so adding an
+  // anonymous listener on each open accumulated one more handler every time.
+  function onDrawerBackdrop(e) { if (e.target === drawerEl) closeDrawer(); }
 
   function onDrawerKey(e) {
     if (e.key === 'Escape') closeDrawer();
@@ -61,7 +73,6 @@ export function renderDataHealth(chipEl, drawerEl, health, build) {
 
   function closeDrawer() {
     drawerEl.hidden = true;
-    drawerEl.removeEventListener('keydown', onDrawerKey);
     document.body.classList.remove('drawer-open');
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
@@ -69,5 +80,7 @@ export function renderDataHealth(chipEl, drawerEl, health, build) {
   if (!chipEl.dataset.wired) {
     chipEl.dataset.wired = '1';
     chipEl.addEventListener('click', openDrawer);
+    drawerEl.addEventListener('keydown', onDrawerKey);
+    drawerEl.addEventListener('click', onDrawerBackdrop);
   }
 }

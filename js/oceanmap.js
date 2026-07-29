@@ -237,9 +237,15 @@ export function createOceanMap(root, entities) {
     drawer.querySelectorAll('.rel-link').forEach((b) =>
       b.addEventListener('click', () => { const t = byId.get(b.dataset.id); if (t) openDrawer(t); })
     );
-    drawer.addEventListener('keydown', onDrawerKey);
-    drawer.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
   }
+
+  // Escape + backdrop dismiss, bound ONCE to the persistent drawer element
+  // (see the wiring below the node loop) rather than on every open. This
+  // drawer re-opens itself on every range switch and every silent data
+  // refresh while it's showing, so per-open listeners piled up without bound.
+  // The inner .drawer-close / .rel-link handlers above are safe to bind per
+  // open — that markup is replaced wholesale each time, taking them with it.
+  function onDrawerBackdrop(e) { if (e.target === drawer) closeDrawer(); }
 
   function onDrawerKey(e) {
     if (e.key === 'Escape') closeDrawer();
@@ -253,12 +259,14 @@ export function createOceanMap(root, entities) {
   }
   function closeDrawer() {
     drawer.hidden = true;
-    drawer.removeEventListener('keydown', onDrawerKey);
     document.body.classList.remove('drawer-open');
     drawerOpenFor = null;
     highlightNode(null);
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
+
+  drawer.addEventListener('keydown', onDrawerKey);
+  drawer.addEventListener('click', onDrawerBackdrop);
 
   function paint() {
     let max = 1, maxAbsDelta = 1;
