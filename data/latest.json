@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-29T12:00:38.931Z",
+  "updatedAt": "2026-07-29T12:15:26.832Z",
   "build": {
-    "sha": "977f6ad6a92ad0a94e563259f8e5746d89226fbd",
-    "shortSha": "977f6ad",
+    "sha": "24493e273c039650e99065b437f32430dd2fcc41",
+    "shortSha": "24493e2",
     "ref": "main",
-    "builtAt": "2026-07-29T12:00:59.814Z"
+    "builtAt": "2026-07-29T12:15:43.799Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,16 +13,16 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 19.5,
     "estimatedDatasets": 4,
-    "buildSha": "977f6ad",
-    "lastSuccessfulUpdate": "2026-07-29T12:00:38.931Z"
+    "buildSha": "24493e2",
+    "lastSuccessfulUpdate": "2026-07-29T12:15:26.832Z"
   },
   "ticker": [
     "OPENAI’S ROGUE AI AGENT HACKED MORE THAN JUST HUGGING FACE",
-    "AI’S FINALLY EXPENSIVE ENOUGH TO MAKE WALL STREET NERVOUS",
+    "WE’RE RUNNING OUT OF REASONS TO IGNORE AI SAFETY",
     "CAN THE NEW YORK TIMES SAVE JOURNALISM FROM OUR AI OVERLORDS?",
     "SILICON VALLEY’S NEXT IPO BILLIONAIRES ARE COMING. NONPROFITS ARE READY FOR THEM",
     "“GOOGLE AND REDDIT DO NOT OWN THE INTERNET,\" WEB SCRAPER SAYS AFTER COURT WIN",
-    "INTRODUCING CLAUDE TAG",
+    "INTRODUCING CLAUDE CORPS",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "ANTHROPIC’S DARIO AMODEI RESPONDS: DOESN’T OPPOSE OPEN-WEIGHT MODELS, BUT FEARS CHINESE AI",
     "GOOGLE'S SYNTHID WATERMARK IS HARD TO BREAK, BUT IT DOESN'T SOLVE AI MISINFORMATION",
@@ -40,11 +40,15 @@
       "category": "opensource",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 70,
+      "significance": 76,
       "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face"
+        },
         {
           "name": "Wired",
           "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"
@@ -56,29 +60,29 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
-      "clusterId": "jyvh54",
-      "title": "AI’s finally expensive enough to make Wall Street nervous",
-      "desc": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195 billion - is much more than the company had previously […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
-      "dateISO": "2026-07-28T19:33:03.000Z",
-      "date": "JUL 28 2026",
-      "category": "market",
-      "catConfidence": 0.57,
+      "id": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
+      "clusterId": "1jh6z15",
+      "title": "We’re running out of reasons to ignore AI safety",
+      "desc": "Earlier this month, OpenAI gave several of its AI models a task: complete a test designed to measure their cybersecurity capabilities. It put the systems in a sandboxed environment without an internet connection and set them off to work. What happened next is almost laughably silly - but also, as Adam Gleave, cofounder and CEO […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
+      "dateISO": "2026-07-29T11:00:00.000Z",
+      "date": "JUL 29 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
       "family": "market",
-      "significance": 66,
-      "impact": "notable",
+      "significance": 74,
+      "impact": "high",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex"
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning"
         }
       ],
       "sourceName": "The Verge",
       "entityIds": [
-        "gemini"
+        "gpt"
       ]
     },
     {
@@ -118,7 +122,7 @@
       "category": "capital",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 65,
+      "significance": 64,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -161,25 +165,21 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "clusterId": "14bih8d",
-      "title": "Introducing Claude Tag",
+      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
+      "clusterId": "olsj4w",
+      "title": "Introducing Claude Corps",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
+      "dateISO": "2026-06-11T07:00:00.000Z",
+      "date": "JUN 11 2026",
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
       "significance": 58,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
-        {
-          "name": "Benjamin Riley | Substack",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1YejB6dVJOcElDYmZSUzhiSlA2YjVQeWtKLWtUSjIwaDhlNWgtVVFfY3lFcVgtbUhsVm02MlllVHZZWXNYX2hXc2d3SktHYVo5cjRCeGxnaml2T0tmUk10MGxRRXFvb3Bvb2IyWmVzVTNFbXNNQnRBdnlwM3FPZw?oc=5"
-        },
         {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
@@ -189,8 +189,16 @@
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
         },
         {
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcjdKcVVISHRzQTBpLW8tRVNjUlA3aERYZWh6c2ZIV3pTZlR3dHlSMFRxdFI5MzVCR1NIdzUwVnVsR0VmV054RjBPTEFaaU84ZE9fVzdXRUZZUGxGNXNFUDhMMEpEUlJCSGRJTUtCWXpfbWRxeXdxSzZvVXJKblY5MXdSZ2plbzRHMk9uMTQtR21vc0g5?oc=5"
+        },
+        {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5"
         }
       ],
       "sourceName": "Anthropic",
@@ -710,62 +718,6 @@
       "entityIds": []
     },
     {
-      "id": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
-      "clusterId": "ikgmjl",
-      "title": "Verizon touts $1B dark fiber deal for Google data centers as first of many",
-      "desc": "Telecom expects AI revenue from dark fiber deals and retrofitted data centers.",
-      "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
-      "dateISO": "2026-07-27T18:48:41.000Z",
-      "date": "JUL 27 2026",
-      "category": "capital",
-      "catConfidence": 0.4,
-      "family": "market",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
-      "clusterId": "olsj4w",
-      "title": "Introducing Claude Corps",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
-      "dateISO": "2026-06-11T07:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5",
       "clusterId": "j2xbj3",
       "title": "Users’ seemingly private conversations with Anthropic’s Claude showed up in Google search results",
@@ -797,6 +749,32 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
+      "clusterId": "ikgmjl",
+      "title": "Verizon touts $1B dark fiber deal for Google data centers as first of many",
+      "desc": "Telecom expects AI revenue from dark fiber deals and retrofitted data centers.",
+      "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/",
+      "dateISO": "2026-07-27T18:48:41.000Z",
+      "date": "JUL 27 2026",
+      "category": "capital",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/07/verizon-seeks-ai-profits-with-mini-data-centers-1b-dark-fiber-deal-with-google/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/",
       "clusterId": "18dxxi4",
       "title": "Data centers may face temporary power cuts to prevent blackouts on largest US grid",
@@ -815,30 +793,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-      "clusterId": "sue34r",
-      "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
-      "desc": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
-      "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
-      "dateISO": "2026-07-28T14:00:00.000Z",
-      "date": "JUL 28 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/"
         }
       ],
       "sourceName": "TechCrunch",
@@ -1039,6 +993,30 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
+      "clusterId": "sue34r",
+      "title": "Fish Audio raises $52M seed to build AI voice models for creators and enterprises",
+      "desc": "Since launching last year, the startup today has more than 8 million people using the open source or hosted version of its models, and now generates annual recurring revenue of $21 million.",
+      "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/",
+      "dateISO": "2026-07-28T14:00:00.000Z",
+      "date": "JUL 28 2026",
+      "category": "capital",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://techcrunch.com/2026/07/28/recursive-superintelligence-signs-400-compute-deal-with-amazon/",
       "clusterId": "12jhg7g",
       "title": "Recursive Superintelligence signs $410M compute deal with Amazon",
@@ -1191,6 +1169,33 @@
       "entityIds": [
         "gemini"
       ]
+    },
+    {
+      "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "clusterId": "1u60nl7",
+      "title": "Introducing the ChatGPT for small business program",
+      "desc": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+      "dateISO": "2026-07-21T17:00:00.000Z",
+      "date": "JUL 21 2026",
+      "category": "product",
+      "catConfidence": 0.75,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1199,14 +1204,18 @@
       "category": "opensource",
       "title": "OpenAI’s Rogue AI Agent Hacked More Than Just Hugging Face",
       "summary": "In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four “publicly available services” in its unhinged quest to solve a test.",
-      "significance": 70,
+      "significance": 76,
       "impact": "high",
-      "verification": "single",
+      "verification": "corroborated",
       "date": "JUL 29 2026",
       "dateISO": "2026-07-29T00:15:30.000Z",
       "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face"
+        },
         {
           "name": "Wired",
           "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"
@@ -1215,30 +1224,30 @@
       "entityIds": [
         "gpt"
       ],
-      "whyItMatters": "If it holds up, open weights let anyone run and build on the model, widening who can compete."
+      "whyItMatters": "Open weights let anyone run and build on the model, widening who can compete."
     },
     {
       "family": "market",
-      "category": "market",
-      "title": "AI’s finally expensive enough to make Wall Street nervous",
-      "summary": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection o…",
-      "significance": 66,
-      "impact": "notable",
+      "category": "orggov",
+      "title": "We’re running out of reasons to ignore AI safety",
+      "summary": "Earlier this month, OpenAI gave several of its AI models a task: complete a test designed to measure their cybersecurity capabilities. It put the systems in a sandboxed environmen…",
+      "significance": 74,
+      "impact": "high",
       "verification": "single",
-      "date": "JUL 28 2026",
-      "dateISO": "2026-07-28T19:33:03.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
+      "date": "JUL 29 2026",
+      "dateISO": "2026-07-29T11:00:00.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
       "sourceCount": 1,
       "sources": [
         {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex"
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning"
         }
       ],
       "entityIds": [
-        "gemini"
+        "gpt"
       ],
-      "whyItMatters": "If it holds up, the move reflects how investors are repricing the AI trade right now."
+      "whyItMatters": "If it holds up, governance changes shape how a lab makes its biggest calls."
     },
     {
       "family": "research",
@@ -1269,8 +1278,8 @@
     "copilot": 1,
     "perplexity": 1,
     "gpt": 71,
-    "claude": 71,
-    "gemini": 36,
+    "claude": 70,
+    "gemini": 34,
     "grok": 0,
     "llama": 1,
     "deepseek": 0,
@@ -1303,14 +1312,14 @@
           "impact": "notable"
         },
         {
-          "h": "Anthropic Launches AI For Teachers",
-          "d": "JUL 14 2026",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcjdKcVVISHRzQTBpLW8tRVNjUlA3aERYZWh6c2ZIV3pTZlR3dHlSMFRxdFI5MzVCR1NIdzUwVnVsR0VmV054RjBPTEFaaU84ZE9fVzdXRUZZUGxGNXNFUDhMMEpEUlJCSGRJTUtCWXpfbWRxeXdxSzZvVXJKblY5MXdSZ2plbzRHMk9uMTQtR21vc0g5?oc=5",
+          "h": "Introducing Claude Opus 5",
+          "d": "JUL 24 2026",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Forbes",
+          "sourceName": "Anthropic",
           "sourceCount": 1,
-          "verification": "single",
+          "verification": "official",
           "impact": "emerging"
         },
         {
@@ -1440,6 +1449,18 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 29 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Artists are lawyering up against AI slop, and some are even winning",
+      "p": "When The Atlantic published a searchable dataset of works used to train AI, Kirk Wallace Johnson, like a lot of artists, looked for his name out of curiosity. And, like a lot of artists, he found it. Essentially, his books, like The Feather Thief and The Fish…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/971059/ai-artists-lawsuit-google-meta-anthropic",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "GOOGLE",
       "logoKey": "google",
       "date": "JUL 29 2026",
@@ -1461,6 +1482,18 @@
       "p": "Pangram has raised $9 million to scale its AI detection software. The startup has also released a new AI text detection model, Pangram 4, and an AI image detection model in research preview.",
       "url": "https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/",
       "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "JUL 29 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "We’re running out of reasons to ignore AI safety",
+      "p": "Earlier this month, OpenAI gave several of its AI models a task: complete a test designed to measure their cybersecurity capabilities. It put the systems in a sandboxed environment without an internet connection and set them off to work. What happened next is…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1510,30 +1543,6 @@
       "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Bot-detection startup Spur nabs $200M from Insight",
-      "p": "Spur Intelligence has raised a $200 million round from Insight Partners for its tech that can identify legit human traffic from bots.",
-      "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 28 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "MCP startup Runlayer accuses Rippling of stealing its product idea",
-      "p": "Runlayer is suing Rippling after Rippling evaluated the startup's MCP gateway product and then opted to build one itself.",
-      "url": "https://techcrunch.com/2026/07/28/mcp-startup-runlayer-accuses-rippling-of-stealing-its-product-idea/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1546,7 +1555,7 @@
       "desc": "In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four “publicly available services” in its unhinge…",
       "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
       "sourceName": "Wired",
-      "verification": "single",
+      "verification": "corroborated",
       "impact": "high"
     },
     {
@@ -1673,7 +1682,7 @@
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
       "price": 197.01,
-      "changePct": 0.2544399847217983,
+      "changePct": 0.2544427800829539,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
       "volume": 125138253,
@@ -2104,16 +2113,9 @@
           "h": 208.75,
           "l": 195.44000244140625,
           "c": 196.50999450683594
-        },
-        {
-          "d": "07-28",
-          "o": 195,
-          "h": 198.6999969482422,
-          "l": 192.74000549316406,
-          "c": 197.00999450683594
         }
       ],
-      "relVolume": 1.0179630536965847,
+      "relVolume": 1.1684192219468303,
       "marketCap": 4807044000000
     },
     {
@@ -2122,7 +2124,7 @@
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
       "price": 393.35,
-      "changePct": 1.0922641823010755,
+      "changePct": 1.0922626136771982,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
       "volume": 32162591,
@@ -2553,16 +2555,9 @@
           "h": 394.20001220703125,
           "l": 387.989990234375,
           "c": 389.1000061035156
-        },
-        {
-          "d": "07-28",
-          "o": 393.1600036621094,
-          "h": 400.32000732421875,
-          "l": 391.29998779296875,
-          "c": 393.3500061035156
         }
       ],
-      "relVolume": 0.9763884449223139,
+      "relVolume": 0.6802027407656475,
       "marketCap": 2922590500000
     },
     {
@@ -2571,7 +2566,7 @@
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
       "price": 380.91,
-      "changePct": -0.6027862719157453,
+      "changePct": -0.602787227531146,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
       "volume": 20238808,
@@ -3002,16 +2997,9 @@
           "h": 389.8999938964844,
           "l": 373.5,
           "c": 383.2200012207031
-        },
-        {
-          "d": "07-28",
-          "o": 374.3599853515625,
-          "h": 385.79998779296875,
-          "l": 371.5199890136719,
-          "c": 380.9100036621094
         }
       ],
-      "relVolume": 0.9439615423765491,
+      "relVolume": 0.8303397746175093,
       "marketCap": 1874077200000.0002
     },
     {
@@ -3020,7 +3008,7 @@
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
       "price": 333.71,
-      "changePct": 2.189488593195335,
+      "changePct": 2.1894912098421746,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
       "volume": 27157077,
@@ -3451,16 +3439,9 @@
           "h": 330.4200134277344,
           "l": 324.45001220703125,
           "c": 326.55999755859375
-        },
-        {
-          "d": "07-28",
-          "o": 327.8999938964844,
-          "h": 335.8800048828125,
-          "l": 324.44000244140625,
-          "c": 333.7099914550781
         }
       ],
-      "relVolume": 0.998584228550621,
+      "relVolume": 0.8435650962630863,
       "marketCap": 4071261999999.9995
     },
     {
@@ -3469,7 +3450,7 @@
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
       "price": 230.86,
-      "changePct": -0.2290499938177472,
+      "changePct": -0.2290502575938613,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
       "volume": 42368131,
@@ -3900,16 +3881,9 @@
           "h": 235.88999938964844,
           "l": 230.99000549316406,
           "c": 231.38999938964844
-        },
-        {
-          "d": "07-28",
-          "o": 232.85000610351562,
-          "h": 233.11000061035156,
-          "l": 228.10000610351562,
-          "c": 230.86000061035156
         }
       ],
-      "relVolume": 1.0617005775295982,
+      "relVolume": 0.6666869215396383,
       "marketCap": 2470202000000
     },
     {
@@ -3918,7 +3892,7 @@
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
       "price": 593.41,
-      "changePct": -0.07746173008209896,
+      "changePct": -0.07745720796969405,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
       "volume": 10870647,
@@ -4349,16 +4323,9 @@
           "h": 611.260009765625,
           "l": 593.1300048828125,
           "c": 593.8699951171875
-        },
-        {
-          "d": "07-28",
-          "o": 596.8200073242188,
-          "h": 601,
-          "l": 587,
-          "c": 593.4099731445312
         }
       ],
-      "relVolume": 0.6293168072260278,
+      "relVolume": 0.5780871842615786,
       "marketCap": 1495393200000
     },
     {
@@ -4367,7 +4334,7 @@
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
       "price": 392.31,
-      "changePct": -1.6988646274051358,
+      "changePct": -1.6988640156618509,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
       "volume": 18055646,
@@ -4798,16 +4765,9 @@
           "h": 407.42999267578125,
           "l": 388.79998779296875,
           "c": 399.0899963378906
-        },
-        {
-          "d": "07-28",
-          "o": 385,
-          "h": 395.3599853515625,
-          "l": 381.29998779296875,
-          "c": 392.30999755859375
         }
       ],
-      "relVolume": 1.2165368623526038,
+      "relVolume": 1.1987456565248722,
       "marketCap": 2036088900000
     },
     {
@@ -4816,7 +4776,7 @@
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
       "price": 454.62,
-      "changePct": -8.148301059738984,
+      "changePct": -8.148300073212589,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
       "volume": 35827897,
@@ -5247,16 +5207,9 @@
           "h": 528,
           "l": 476.92999267578125,
           "c": 494.95001220703125
-        },
-        {
-          "d": "07-28",
-          "o": 467,
-          "h": 472.75,
-          "l": 442.2699890136719,
-          "c": 454.6199951171875
         }
       ],
-      "relVolume": 1.3250377023950681,
+      "relVolume": 1.126927719254477,
       "marketCap": 736484400000
     },
     {
@@ -5265,7 +5218,7 @@
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
       "price": 123.53,
-      "changePct": -6.082262658136068,
+      "changePct": -6.082261730056438,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
       "volume": 42804212,
@@ -5696,16 +5649,9 @@
           "h": 132.41000366210938,
           "l": 125.30999755859375,
           "c": 131.52999877929688
-        },
-        {
-          "d": "07-28",
-          "o": 125.83999633789062,
-          "h": 127.19000244140625,
-          "l": 117.88999938964844,
-          "c": 123.52999877929688
         }
       ],
-      "relVolume": 1.1498494964162789,
+      "relVolume": 0.9406152119876794,
       "marketCap": 296472000000
     },
     {
@@ -5714,7 +5660,7 @@
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
       "price": 119.96,
-      "changePct": 0.05003966457898691,
+      "changePct": 0.05004042815473825,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
       "volume": 24924314,
@@ -6145,16 +6091,9 @@
           "h": 121.98999786376953,
           "l": 116.80000305175781,
           "c": 119.9000015258789
-        },
-        {
-          "d": "07-28",
-          "o": 118.18000030517578,
-          "h": 122.33000183105469,
-          "l": 114.5,
-          "c": 119.95999908447266
         }
       ],
-      "relVolume": 0.8167954479073247,
+      "relVolume": 0.9275773516107022,
       "marketCap": 337087600000
     }
   ],
@@ -6165,31 +6104,31 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.33 – $4.61/hr",
-      "trend": "↑ 7% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$2.94 – $4.39/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.63 – $7.13/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$5.63 – $5.98/hr",
+      "trend": "↓ 11% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $7.50/hr",
-      "trend": "↓ 8% vs 7d ago",
+      "rate": "$6.94 – $7.39/hr",
+      "trend": "↓ 9% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6202,14 +6141,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.49/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$0.60 – $1.49/hr",
+      "trend": "↓ 16% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-29T12:00:38.931Z",
+    "updatedAt": "2026-07-29T12:15:26.832Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6218,16 +6157,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 294,
-        "fetchedStoryCount": 294,
+        "rawStoryHits": 334,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 34,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 36,
+        "storyCoverage": 0.8982035928143712,
+        "estimatedRelevantDiscussions": 40,
         "isEstimated": true,
-        "rawCommentHits": 2261,
+        "rawCommentHits": 2260,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.13268465280849182,
+        "commentCoverage": 0.13274336283185842,
         "limited": false,
         "points": 390,
         "themes": [
@@ -6291,8 +6230,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 34,
-            "isEstimated": false
+            "discussions": 38,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6306,16 +6245,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 2106,
+        "rawStoryHits": 1102,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.14245014245014245,
-        "estimatedRelevantDiscussions": 225,
+        "storyCoverage": 0.27223230490018147,
+        "estimatedRelevantDiscussions": 118,
         "isEstimated": true,
-        "rawCommentHits": 6646,
+        "rawCommentHits": 6647,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.04513993379476377,
+        "commentCoverage": 0.045133142771174965,
         "limited": false,
         "points": 1056,
         "themes": [
@@ -6364,7 +6303,7 @@
           {
             "title": "Discovering Cryptographic Weaknesses with Claude",
             "points": 221,
-            "comments": 162,
+            "comments": 163,
             "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
             "date": "JUL 28 2026"
           },
@@ -6379,7 +6318,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 225,
+            "discussions": 118,
             "isEstimated": true
           },
           {
@@ -6503,10 +6442,10 @@
         "storyCoverage": 0.5524861878453039,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": true,
-        "rawCommentHits": 10689,
+        "rawCommentHits": 10691,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.028066236317709794,
+        "commentCoverage": 0.028060985875970442,
         "limited": false,
         "points": 239,
         "themes": [
@@ -6752,10 +6691,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4434,
+        "rawCommentHits": 4431,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
-        "commentCoverage": 0.06765899864682003,
+        "commentCoverage": 0.06770480704129993,
         "limited": true,
         "points": 241,
         "themes": [
