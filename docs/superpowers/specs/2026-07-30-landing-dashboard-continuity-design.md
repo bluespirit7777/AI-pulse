@@ -37,6 +37,25 @@ Two secondary contributors:
    *inward* at its own anchors; only the CTA and the four per-band "more" links
    point outward.
 
+### Confirmed against baseline screenshots (2026-07-30)
+
+Captured before any change, and they revised one assumption:
+
+- The dashboard is **not** flat-filled. It carries a full-bleed ocean
+  photograph behind every view, while the landing uses a soft gradient and
+  reserves photography for the hero. So the dashboard is the more *decorated*
+  surface and the landing the more *refined* one — adopting the landing's
+  language means calming the dashboard down, not adding atmosphere to it.
+- **Legibility consequence.** The dashboard's small mono type — the depth rail
+  ("Surface fast & recent"), the ticker, the "One major development from each
+  area…" line — sits directly on the busy photograph at low contrast. Swapping
+  the photograph for the landing's gradient is therefore an accessibility
+  improvement, not only an aesthetic one. Contrast should be measured after the
+  change rather than assumed.
+- **Containment.** The landing is visibly held to a 1200px column; the
+  dashboard sprawls to the viewport edge. Side by side this reads as two
+  different products more strongly than the colour palette does.
+
 ## Decisions
 
 Settled with the user before design:
@@ -85,8 +104,13 @@ dashboard's variable names.
   header)
 - pill nav: `border-radius: 999px`, glass hover, deep fill when current (the
   dashboard is already at `22px`, so this is a nudge, not a rebuild)
-- the ocean depth gradient as body background, replacing the dashboard's flat
-  fill; the dashboard's existing animated wave footer is retained
+- the ocean depth **gradient** as body background, replacing the dashboard's
+  full-bleed ocean **photograph**; the dashboard's animated wave footer is
+  retained
+- **content containment.** The landing constrains to `--maxw: 1200px`; the
+  dashboard runs edge-to-edge with only `clamp()` padding. This is a larger
+  contributor to the "different product" feeling than it first appears, and
+  containment moves into the shell.
 - sand focus ring and teal→warm link hover (the dashboard is teal-only today)
 - the live/clock cluster
 - the depth rail
