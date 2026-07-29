@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-07-29T03:00:31.457Z",
+  "updatedAt": "2026-07-29T03:15:27.986Z",
   "build": {
-    "sha": "04ef36a20fe463d059f451893fca8fa41db46b50",
-    "shortSha": "04ef36a",
+    "sha": "e39e07f79a60c119be8d699ab741a273e6690fbd",
+    "shortSha": "e39e07f",
     "ref": "main",
-    "builtAt": "2026-07-29T03:00:47.692Z"
+    "builtAt": "2026-07-29T03:15:43.212Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 11,
+    "feedsSucceeded": 10,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 19.1,
     "estimatedDatasets": 4,
-    "buildSha": "04ef36a",
-    "lastSuccessfulUpdate": "2026-07-29T03:00:31.457Z"
+    "buildSha": "e39e07f",
+    "lastSuccessfulUpdate": "2026-07-29T03:15:27.986Z"
   },
   "ticker": [
     "OPENAI’S ROGUE AI AGENT HACKED MORE THAN JUST HUGGING FACE",
     "AI’S FINALLY EXPENSIVE ENOUGH TO MAKE WALL STREET NERVOUS",
     "CAN THE NEW YORK TIMES SAVE JOURNALISM FROM OUR AI OVERLORDS?",
     "SILICON VALLEY’S NEXT IPO BILLIONAIRES ARE COMING. NONPROFITS ARE READY FOR THEM",
+    "AUTHORS HAVE MIXED FEELINGS ABOUT THE $1.5B ANTHROPIC COPYRIGHT INFRINGEMENT RULING",
     "ANTHROPIC’S DARIO AMODEI RESPONDS: DOESN’T OPPOSE OPEN-WEIGHT MODELS, BUT FEARS CHINESE AI",
     "“GOOGLE AND REDDIT DO NOT OWN THE INTERNET,\" WEB SCRAPER SAYS AFTER COURT WIN",
     "PERPLEXITY’S PERSONAL COMPUTER TURNS WINDOWS PCS INTO AI AGENTS",
     "NVIDIA, MICROSOFT LAUNCH OPEN AI SECURITY ALLIANCE — WITHOUT OPENAI, GOOGLE, OR ANTHROPIC",
-    "INTRODUCING CLAUDE CORPS",
-    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE"
+    "INTRODUCING CLAUDE CORPS"
   ],
   "signals": [
     {
@@ -131,6 +131,32 @@
       "sourceName": "Wired",
       "entityIds": [
         "gpt",
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSW5Lay04a2cxNkZMQV9TMVJnZE01T2l6WVNFNFRyOG1YZTRjYnEtb2g2M2xQd2NSZW1hNE9sdGN0TzFvSW1uWmtrRXJKNWxiODhWRF9TeTBLMXpfZUJBakNmTUY0Q2tQaV9OZ2RqOE1Hanp4VUlweXcxd1RDbk16MU85dDFjZGw4eE9sbGVMSlNoX0VwUW8wdVl3?oc=5",
+      "clusterId": "gqzaa3",
+      "title": "Authors have mixed feelings about the $1.5B Anthropic copyright infringement ruling",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSW5Lay04a2cxNkZMQV9TMVJnZE01T2l6WVNFNFRyOG1YZTRjYnEtb2g2M2xQd2NSZW1hNE9sdGN0TzFvSW1uWmtrRXJKNWxiODhWRF9TeTBLMXpfZUJBakNmTUY0Q2tQaV9OZ2RqOE1Hanp4VUlweXcxd1RDbk16MU85dDFjZGw4eE9sbGVMSlNoX0VwUW8wdVl3?oc=5",
+      "dateISO": "2026-07-27T20:49:57.000Z",
+      "date": "JUL 27 2026",
+      "category": "policy",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 63,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "NPR",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSW5Lay04a2cxNkZMQV9TMVJnZE01T2l6WVNFNFRyOG1YZTRjYnEtb2g2M2xQd2NSZW1hNE9sdGN0TzFvSW1uWmtrRXJKNWxiODhWRF9TeTBLMXpfZUJBakNmTUY0Q2tQaV9OZ2RqOE1Hanp4VUlweXcxd1RDbk16MU85dDFjZGw4eE9sbGVMSlNoX0VwUW8wdVl3?oc=5"
+        }
+      ],
+      "sourceName": "NPR",
+      "entityIds": [
         "claude"
       ]
     },
@@ -400,7 +426,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 54,
+      "significance": 53,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -416,41 +442,6 @@
         "claude",
         "gemini",
         "mistral"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5",
-      "clusterId": "j2xbj3",
-      "title": "Users’ seemingly private conversations with Anthropic’s Claude showed up in Google search results",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5",
-      "dateISO": "2026-07-27T17:20:00.000Z",
-      "date": "JUL 27 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/"
-        },
-        {
-          "name": "WIRED",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObXEyem9NVkFORmVQdkdUa0MtenNCcE9VODJXWGZJZElVNEwzbUZKNFk0a182dlBuOEFieGduektzdnBlbFhKcnRQUHNVNjYwTnRHRkotUFNlR2htNmFDLXRmVzRpNVNIQW4tOGVhNTNZUG1GNXJYU2FFSkVzYk5ZdUpGZWNJdjQxQ3J0d00xT3VfaDZiYXc?oc=5"
-        },
-        {
-          "name": "Fortune",
-          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5"
-        }
-      ],
-      "sourceName": "Fortune",
-      "entityIds": [
-        "claude",
-        "gemini"
       ]
     },
     {
@@ -530,28 +521,39 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
-      "clusterId": "1q7p2r5",
-      "title": "Bot-detection startup Spur nabs $200M from Insight",
-      "desc": "Spur Intelligence has raised a $200 million round from Insight Partners for its tech that can identify legit human traffic from bots.",
-      "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
-      "dateISO": "2026-07-28T21:29:34.000Z",
-      "date": "JUL 28 2026",
-      "category": "capital",
-      "catConfidence": 0.78,
-      "family": "market",
-      "significance": 51,
+      "id": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5",
+      "clusterId": "j2xbj3",
+      "title": "Users’ seemingly private conversations with Anthropic’s Claude showed up in Google search results",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5",
+      "dateISO": "2026-07-27T17:20:00.000Z",
+      "date": "JUL 27 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 3,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/"
+        },
+        {
+          "name": "WIRED",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObXEyem9NVkFORmVQdkdUa0MtenNCcE9VODJXWGZJZElVNEwzbUZKNFk0a182dlBuOEFieGduektzdnBlbFhKcnRQUHNVNjYwTnRHRkotUFNlR2htNmFDLXRmVzRpNVNIQW4tOGVhNTNZUG1GNXJYU2FFSkVzYk5ZdUpGZWNJdjQxQ3J0d00xT3VfaDZiYXc?oc=5"
+        },
+        {
+          "name": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdmF0Z2hIVUJKTkp0Q09sT1RkUThycVdCczZHQU1SbVQwQW9ITlJEVURfRlJMRFNIMUhMbjJIejZqVHo1STFkZjgzM1dqemZ0cEttVTBLTm5iNUVfV29JNjhjMGhwaVVZZjVLYmt5c3F0M21qTnd5YWJ5NV9kOTB0LTJDYWlCdkVrdGZ2QVZqLWZYZTd4X0VMMmxjVXVhcHJyak1oVVR2VXdST040NWY0VWlKWmI5NkRfM01JMUFIb2ZfQW9wZWxEc0pCVnIydXRORW5tRm5LRDZVZHNTa3Q0bFlGaw?oc=5"
         }
       ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
+      "sourceName": "Fortune",
+      "entityIds": [
+        "claude",
+        "gemini"
+      ]
     },
     {
       "id": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
@@ -586,6 +588,30 @@
       "entityIds": [
         "gemini"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
+      "clusterId": "1q7p2r5",
+      "title": "Bot-detection startup Spur nabs $200M from Insight",
+      "desc": "Spur Intelligence has raised a $200 million round from Insight Partners for its tech that can identify legit human traffic from bots.",
+      "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
+      "dateISO": "2026-07-28T21:29:34.000Z",
+      "date": "JUL 28 2026",
+      "category": "capital",
+      "catConfidence": 0.78,
+      "family": "market",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
@@ -779,7 +805,7 @@
       "category": "capital",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 47,
+      "significance": 46,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -1124,32 +1150,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
-      "clusterId": "1c2l30i",
-      "title": "Google’s AI search is rapidly becoming the default, new data shows",
-      "desc": "Google’s AI Overviews now appear in 43% of searches, underscoring how quickly AI-generated answers are becoming the default way people discover information online.",
-      "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
-      "dateISO": "2026-07-27T15:57:12.000Z",
-      "date": "JUL 27 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
       "clusterId": "1msd1dg",
       "title": "Building AI infrastructure with the Effingham County community",
@@ -1278,7 +1278,7 @@
     "copilot": 1,
     "perplexity": 1,
     "gpt": 71,
-    "claude": 68,
+    "claude": 69,
     "gemini": 35,
     "grok": 0,
     "llama": 1,
@@ -6171,26 +6171,26 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.93 – $3.19/hr",
-      "trend": "→ 0% vs 7d ago",
+      "rate": "$1.99 – $3.19/hr",
+      "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.87/hr",
-      "trend": "↑ 14% vs 7d ago",
+      "rate": "$3.48 – $4.61/hr",
+      "trend": "↑ 9% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $7.13/hr",
-      "trend": "→ 0% vs 7d ago",
+      "rate": "$5.89 – $6.88/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6214,11 +6214,11 @@
       "rate": "$1.00 – $1.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-07-29T03:00:31.457Z",
+    "updatedAt": "2026-07-29T03:15:27.986Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6321,10 +6321,10 @@
         "storyCoverage": 0.2727272727272727,
         "estimatedRelevantDiscussions": 117,
         "isEstimated": true,
-        "rawCommentHits": 6647,
+        "rawCommentHits": 6649,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 40,
-        "commentCoverage": 0.045133142771174965,
+        "validatedCommentCount": 41,
+        "commentCoverage": 0.04511956685215822,
         "limited": false,
         "points": 1024,
         "themes": [
@@ -6380,7 +6380,7 @@
           {
             "title": "Discovering Cryptographic Weaknesses with Claude",
             "points": 189,
-            "comments": 131,
+            "comments": 132,
             "url": "https://www.anthropic.com/research/discovering-cryptographic-weaknesses",
             "date": "JUL 28 2026"
           }
@@ -6407,7 +6407,7 @@
         "fetchedStoryCount": 142,
         "validatedStoryCount": 39,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 49,
+        "estimatedRelevantDiscussions": 47,
         "isEstimated": true,
         "rawCommentHits": 1178,
         "fetchedCommentCount": 300,
@@ -6452,13 +6452,13 @@
             "count": 3
           },
           {
-            "id": "local",
-            "label": "Local use",
-            "count": 2
-          },
-          {
             "id": "context",
             "label": "Context limits",
+            "count": 1
+          },
+          {
+            "id": "local",
+            "label": "Local use",
             "count": 1
           },
           {
@@ -6491,7 +6491,7 @@
           },
           {
             "name": "Google AI forum",
-            "discussions": 5,
+            "discussions": 3,
             "isEstimated": true
           },
           {
@@ -6512,10 +6512,10 @@
         "storyCoverage": 0.5328596802841918,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10887,
+        "rawCommentHits": 10882,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.02755580049600441,
+        "commentCoverage": 0.027568461679838265,
         "limited": false,
         "points": 239,
         "themes": [
@@ -6589,8 +6589,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 74,
-        "fetchedStoryCount": 74,
+        "rawStoryHits": 76,
+        "fetchedStoryCount": 76,
         "validatedStoryCount": 10,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
@@ -6672,16 +6672,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 77,
-        "fetchedStoryCount": 77,
+        "rawStoryHits": 70,
+        "fetchedStoryCount": 70,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 957,
+        "rawCommentHits": 956,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 69,
-        "commentCoverage": 0.31347962382445144,
+        "commentCoverage": 0.3138075313807531,
         "limited": false,
         "points": 509,
         "themes": [
@@ -6761,10 +6761,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4449,
+        "rawCommentHits": 4448,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
-        "commentCoverage": 0.06743088334457181,
+        "commentCoverage": 0.06744604316546762,
         "limited": true,
         "points": 241,
         "themes": [
