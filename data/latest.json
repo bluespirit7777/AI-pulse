@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-29T12:45:30.520Z",
+  "updatedAt": "2026-07-29T13:00:37.933Z",
   "build": {
-    "sha": "a3fdf627014e2470f60d70202805d5a021c72bf1",
-    "shortSha": "a3fdf62",
+    "sha": "f8b31111a4435bc19308cff0578ee66b2d19aae1",
+    "shortSha": "f8b3111",
     "ref": "main",
-    "builtAt": "2026-07-29T12:45:45.150Z"
+    "builtAt": "2026-07-29T13:00:55.875Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,23 +12,53 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 19.5,
-    "estimatedDatasets": 4,
-    "buildSha": "a3fdf62",
-    "lastSuccessfulUpdate": "2026-07-29T12:45:30.520Z"
+    "estimatedDatasets": 5,
+    "buildSha": "f8b3111",
+    "lastSuccessfulUpdate": "2026-07-29T13:00:37.933Z"
   },
   "ticker": [
-    "WE’RE RUNNING OUT OF REASONS TO IGNORE AI SAFETY",
     "OPENAI’S ROGUE AI AGENT HACKED MORE THAN JUST HUGGING FACE",
+    "WE’RE RUNNING OUT OF REASONS TO IGNORE AI SAFETY",
+    "AI’S FINALLY EXPENSIVE ENOUGH TO MAKE WALL STREET NERVOUS",
     "CAN THE NEW YORK TIMES SAVE JOURNALISM FROM OUR AI OVERLORDS?",
     "SILICON VALLEY’S NEXT IPO BILLIONAIRES ARE COMING. NONPROFITS ARE READY FOR THEM",
-    "“GOOGLE AND REDDIT DO NOT OWN THE INTERNET,\" WEB SCRAPER SAYS AFTER COURT WIN",
     "INTRODUCING CLAUDE CORPS",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "ANTHROPIC’S DARIO AMODEI RESPONDS: DOESN’T OPPOSE OPEN-WEIGHT MODELS, BUT FEARS CHINESE AI",
-    "GOOGLE'S SYNTHID WATERMARK IS HARD TO BREAK, BUT IT DOESN'T SOLVE AI MISINFORMATION",
+    "“GOOGLE AND REDDIT DO NOT OWN THE INTERNET,\" WEB SCRAPER SAYS AFTER COURT WIN",
     "DESPITE AI HYPE, GOOGLE'S DATA SHOWS WORKERS AREN'T AUTOMATING THEMSELVES AWAY"
   ],
   "signals": [
+    {
+      "id": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
+      "clusterId": "ycpo2o",
+      "title": "OpenAI’s Rogue AI Agent Hacked More Than Just Hugging Face",
+      "desc": "In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four “publicly available services” in its unhinged quest to solve a test.",
+      "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
+      "dateISO": "2026-07-29T00:15:30.000Z",
+      "date": "JUL 29 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 76,
+      "impact": "high",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
+    },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/972380/open-ai-hugging-face-hack-ai-safety-warning",
       "clusterId": "1jh6z15",
@@ -56,29 +86,29 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
-      "clusterId": "ycpo2o",
-      "title": "OpenAI’s Rogue AI Agent Hacked More Than Just Hugging Face",
-      "desc": "In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four “publicly available services” in its unhinged quest to solve a test.",
-      "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
-      "dateISO": "2026-07-29T00:15:30.000Z",
-      "date": "JUL 29 2026",
-      "category": "opensource",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 70,
-      "impact": "high",
+      "id": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
+      "clusterId": "jyvh54",
+      "title": "AI’s finally expensive enough to make Wall Street nervous",
+      "desc": "It's earnings season, and investors got an unpleasant surprise from Google: an increase on its spending estimate, to as much as $205 billion - from the last quarter's projection of up to $190 billion. Even the lower end of Google's new projected range - $195 billion - is much more than the company had previously […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex",
+      "dateISO": "2026-07-28T19:33:03.000Z",
+      "date": "JUL 28 2026",
+      "category": "market",
+      "catConfidence": 0.57,
+      "family": "market",
+      "significance": 66,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972119/ai-stock-fall-google-capex"
         }
       ],
-      "sourceName": "Wired",
+      "sourceName": "The Verge",
       "entityIds": [
-        "gpt"
+        "gemini"
       ]
     },
     {
@@ -135,32 +165,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
-      "clusterId": "1u2qfkn",
-      "title": "“Google and Reddit do not own the Internet,\" web scraper says after court win",
-      "desc": "Google's and Reddit's use of DMCA to fight web scraper is bizarre, expert says.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
-      "dateISO": "2026-07-27T20:12:42.000Z",
-      "date": "JUL 27 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
       "clusterId": "olsj4w",
       "title": "Introducing Claude Corps",
@@ -177,16 +181,16 @@
       "sourceCount": 5,
       "sources": [
         {
+          "name": "Benjamin Riley | Substack",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1YejB6dVJOcElDYmZSUzhiSlA2YjVQeWtKLWtUSjIwaDhlNWgtVVFfY3lFcVgtbUhsVm02MlllVHZZWXNYX2hXc2d3SktHYVo5cjRCeGxnaml2T0tmUk10MGxRRXFvb3Bvb2IyWmVzVTNFbXNNQnRBdnlwM3FPZw?oc=5"
+        },
+        {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
         },
         {
           "name": "The Hill",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
-        },
-        {
-          "name": "Forbes",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcjdKcVVISHRzQTBpLW8tRVNjUlA3aERYZWh6c2ZIV3pTZlR3dHlSMFRxdFI5MzVCR1NIdzUwVnVsR0VmV054RjBPTEFaaU84ZE9fVzdXRUZZUGxGNXNFUDhMMEpEUlJCSGRJTUtCWXpfbWRxeXdxSzZvVXJKblY5MXdSZ2plbzRHMk9uMTQtR21vc0g5?oc=5"
         },
         {
           "name": "Anthropic",
@@ -279,24 +283,24 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/",
-      "clusterId": "1mfg94k",
-      "title": "Google's SynthID watermark is hard to break, but it doesn't solve AI misinformation",
-      "desc": "Deciding what's real on the Internet won't be easy in the future.",
-      "url": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/",
-      "dateISO": "2026-07-29T11:00:39.000Z",
-      "date": "JUL 29 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
+      "id": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
+      "clusterId": "1u2qfkn",
+      "title": "“Google and Reddit do not own the Internet,\" web scraper says after court win",
+      "desc": "Google's and Reddit's use of DMCA to fight web scraper is bizarre, expert says.",
+      "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
+      "dateISO": "2026-07-27T20:12:42.000Z",
+      "date": "JUL 27 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 57,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
           "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/"
+          "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/"
         }
       ],
       "sourceName": "Ars Technica",
@@ -362,6 +366,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/",
+      "clusterId": "1mfg94k",
+      "title": "Google's SynthID watermark is hard to break, but it doesn't solve AI misinformation",
+      "desc": "Deciding what's real on the Internet won't be easy in the future.",
+      "url": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/",
+      "dateISO": "2026-07-29T11:00:39.000Z",
+      "date": "JUL 29 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -1165,33 +1195,6 @@
       "entityIds": [
         "gemini"
       ]
-    },
-    {
-      "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
-      "clusterId": "1u60nl7",
-      "title": "Introducing the ChatGPT for small business program",
-      "desc": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
-      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
-      "dateISO": "2026-07-21T17:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "product",
-      "catConfidence": 0.75,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1200,14 +1203,18 @@
       "category": "opensource",
       "title": "OpenAI’s Rogue AI Agent Hacked More Than Just Hugging Face",
       "summary": "In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four “publicly available services” in its unhinged quest to solve a test.",
-      "significance": 70,
+      "significance": 76,
       "impact": "high",
-      "verification": "single",
+      "verification": "corroborated",
       "date": "JUL 29 2026",
       "dateISO": "2026-07-29T00:15:30.000Z",
       "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972441/openai-rogue-ai-agent-hacked-more-than-hugging-face"
+        },
         {
           "name": "Wired",
           "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/"
@@ -1216,7 +1223,7 @@
       "entityIds": [
         "gpt"
       ],
-      "whyItMatters": "If it holds up, open weights let anyone run and build on the model, widening who can compete."
+      "whyItMatters": "Open weights let anyone run and build on the model, widening who can compete."
     },
     {
       "family": "market",
@@ -1315,6 +1322,17 @@
           "impact": "emerging"
         },
         {
+          "h": "Anthropic Launches AI For Teachers",
+          "d": "JUL 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPcjdKcVVISHRzQTBpLW8tRVNjUlA3aERYZWh6c2ZIV3pTZlR3dHlSMFRxdFI5MzVCR1NIdzUwVnVsR0VmV054RjBPTEFaaU84ZE9fVzdXRUZZUGxGNXNFUDhMMEpEUlJCSGRJTUtCWXpfbWRxeXdxSzZvVXJKblY5MXdSZ2plbzRHMk9uMTQtR21vc0g5?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Forbes",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
           "h": "Introducing a way to reflect on how you use Claude",
           "d": "JUL 09 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
@@ -1335,17 +1353,6 @@
           "sourceCount": 7,
           "verification": "official",
           "impact": "notable"
-        },
-        {
-          "h": "Introducing Claude Sonnet 5",
-          "d": "JUN 30 2026",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
         }
       ]
     },
@@ -1441,6 +1448,18 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "JUL 29 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Artists are lawyering up against AI slop, and some are even winning",
+      "p": "When The Atlantic published a searchable dataset of works used to train AI, Kirk Wallace Johnson, like a lot of artists, looked for his name out of curiosity. And, like a lot of artists, he found it. Essentially, his books, like The Feather Thief and The Fish…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/971059/ai-artists-lawsuit-google-meta-anthropic",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "GOOGLE",
       "logoKey": "google",
       "date": "JUL 29 2026",
@@ -1523,18 +1542,6 @@
       "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "JUL 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Bot-detection startup Spur nabs $200M from Insight",
-      "p": "Spur Intelligence has raised a $200 million round from Insight Partners for its tech that can identify legit human traffic from bots.",
-      "url": "https://techcrunch.com/2026/07/28/bot-detection-startup-spur-nabs-200m-from-insight/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1547,7 +1554,7 @@
       "desc": "In a new disclosure, OpenAI says its agent used exposed logins to gain access to at least four “publicly available services” in its unhinge…",
       "url": "https://www.wired.com/story/openais-rogue-ai-agent-hacked-more-than-just-hugging-face/",
       "sourceName": "Wired",
-      "verification": "single",
+      "verification": "corroborated",
       "impact": "high"
     },
     {
@@ -6166,12 +6173,12 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.34 – $4.39/hr",
+      "rate": "$3.33 – $4.39/hr",
       "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
@@ -6210,7 +6217,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-29T12:45:30.520Z",
+    "updatedAt": "2026-07-29T13:00:37.933Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6219,16 +6226,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 332,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 212,
+        "fetchedStoryCount": 212,
         "validatedStoryCount": 34,
-        "storyCoverage": 0.9036144578313253,
-        "estimatedRelevantDiscussions": 40,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 36,
         "isEstimated": true,
-        "rawCommentHits": 2258,
+        "rawCommentHits": 2259,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.1328609388839681,
+        "commentCoverage": 0.13280212483399734,
         "limited": false,
         "points": 390,
         "themes": [
@@ -6292,8 +6299,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 38,
-            "isEstimated": true
+            "discussions": 34,
+            "isEstimated": false
           },
           {
             "name": "OpenAI forum",
@@ -6307,15 +6314,15 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1102,
+        "rawStoryHits": 1103,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.27223230490018147,
+        "storyCoverage": 0.271985494106981,
         "estimatedRelevantDiscussions": 118,
         "isEstimated": true,
         "rawCommentHits": 6646,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 36,
+        "validatedCommentCount": 37,
         "commentCoverage": 0.04513993379476377,
         "limited": false,
         "points": 1056,
@@ -6338,7 +6345,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 3
+            "count": 4
           },
           {
             "id": "multimodal",
@@ -6358,6 +6365,11 @@
           {
             "id": "speed",
             "label": "Speed",
+            "count": 1
+          },
+          {
+            "id": "local",
+            "label": "Local use",
             "count": 1
           }
         ],
@@ -6401,10 +6413,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 45,
         "isEstimated": true,
-        "rawCommentHits": 1169,
+        "rawCommentHits": 1168,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.2566295979469632,
+        "commentCoverage": 0.2568493150684932,
         "limited": false,
         "points": 865,
         "themes": [
@@ -6498,16 +6510,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 541,
+        "rawStoryHits": 540,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 9,
-        "storyCoverage": 0.5545286506469501,
+        "storyCoverage": 0.5555555555555556,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": true,
-        "rawCommentHits": 10693,
+        "rawCommentHits": 10689,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.02805573739829795,
+        "commentCoverage": 0.028066236317709794,
         "limited": false,
         "points": 239,
         "themes": [
@@ -6664,16 +6676,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 64,
-        "fetchedStoryCount": 64,
+        "rawStoryHits": 77,
+        "fetchedStoryCount": 77,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 896,
+        "rawCommentHits": 954,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 66,
-        "commentCoverage": 0.33482142857142855,
+        "commentCoverage": 0.31446540880503143,
         "limited": false,
         "points": 507,
         "themes": [
@@ -6748,16 +6760,16 @@
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
         "rawStoryHits": 211,
-        "fetchedStoryCount": 211,
+        "fetchedStoryCount": 100,
         "validatedStoryCount": 6,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 6,
-        "isEstimated": false,
-        "rawCommentHits": 4431,
+        "storyCoverage": 0.47393364928909953,
+        "estimatedRelevantDiscussions": 13,
+        "isEstimated": true,
+        "rawCommentHits": 4432,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
-        "commentCoverage": 0.06770480704129993,
-        "limited": true,
+        "commentCoverage": 0.06768953068592058,
+        "limited": false,
         "points": 241,
         "themes": [
           {
@@ -6825,8 +6837,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 6,
-            "isEstimated": false
+            "discussions": 13,
+            "isEstimated": true
           },
           {
             "name": "Qwen GitHub",
@@ -6931,13 +6943,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "reasoning"
+          "price",
+          "local"
         ],
-        "excerpt": "…to say that Moonshot did something wrong by distilling Claude. You got in the news because you were trying to effectively make a \"rules for thee but not for me\" when you…",
+        "excerpt": "… of hardware that can run an open weight LLM locally to their Claude subscriptions…Getting very expensive Mac hardware leased is where the juice is. As well as normalising…",
         "source": "Hacker News",
-        "author": "parsimo2010",
-        "publishedAt": "2026-07-28T03:15:37.000Z",
-        "url": "https://news.ycombinator.com/item?id=49078842"
+        "author": "rufjejriWirj",
+        "publishedAt": "2026-07-29T12:56:25.000Z",
+        "url": "https://news.ycombinator.com/item?id=49096890"
       },
       {
         "modelId": "gemini",
