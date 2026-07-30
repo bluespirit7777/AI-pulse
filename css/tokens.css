@@ -41,15 +41,21 @@
      large shapes, borders, chart marks and decorative accents. */
   --coral-text:#9C4739;
 
-  /* ---- type ---- */
+  /* ---- type ----
+     These stacks are taken deliberately from the landing's pre-unification values
+     (app.html had bare stacks with no fallback faces: 'Cormorant Garamond',serif
+     etc.). The landing's visual language is canonical per the project decision, and
+     these fuller stacks are strictly more robust. The difference is invisible while
+     the webfont loads, only visible if the webfont fails to load. */
   --font-display:'Cormorant Garamond',Georgia,serif;
   --font-mono:'IBM Plex Mono',ui-monospace,monospace;
   --font-body:'Karla',system-ui,sans-serif;
 
   /* ---- measure ----
-     Unified at the dashboard's 1240px rather than the landing's 1200px: the
-     40px difference is imperceptible, and the dashboard holds wider content
-     (1000-unit SVG viewBoxes) that would otherwise need re-tuning. */
+     Unified at the dashboard's 1240px rather than the landing's 1200px: this is a
+     deliberate 40px widening of the landing page (not a no-op), justified because
+     the dashboard holds wider content (1000-unit SVG viewBoxes) that would
+     otherwise need re-tuning. The 40px difference is imperceptible visually. */
   --maxw:1240px;
 
   /* thin white outline for text sitting directly on photography with no panel
