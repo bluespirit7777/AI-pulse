@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-30T17:30:33.100Z",
+  "updatedAt": "2026-07-30T17:45:27.063Z",
   "build": {
-    "sha": "5d24fd615d3853e4b94150b568bf778819074088",
-    "shortSha": "5d24fd6",
+    "sha": "bd985dc94b831efe526257584e0d293978279a2e",
+    "shortSha": "bd985dc",
     "ref": "main",
-    "builtAt": "2026-07-30T17:30:50.711Z"
+    "builtAt": "2026-07-30T17:45:43.516Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 20.7,
     "estimatedDatasets": 4,
-    "buildSha": "5d24fd6",
-    "lastSuccessfulUpdate": "2026-07-30T17:30:33.100Z"
+    "buildSha": "bd985dc",
+    "lastSuccessfulUpdate": "2026-07-30T17:45:27.063Z"
   },
   "ticker": [
     "LINKEDIN WON’T BE EXPANDING ITS DATA CENTERS IN THE NEXT YEAR",
@@ -66,7 +66,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 72,
+      "significance": 71,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -92,7 +92,7 @@
       "category": "adoption",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "official",
       "sourceCount": 1,
@@ -534,7 +534,7 @@
       "category": "capital",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 53,
+      "significance": 52,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -1060,29 +1060,33 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
-      "clusterId": "1u2qfkn",
-      "title": "“Google and Reddit do not own the Internet,\" web scraper says after court win",
-      "desc": "Google's and Reddit's use of DMCA to fight web scraper is bizarre, expert says.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
-      "dateISO": "2026-07-27T20:12:42.000Z",
-      "date": "JUL 27 2026",
-      "category": "policy",
+      "id": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "clusterId": "1at0cdm",
+      "title": "How data science teams use ChatGPT Work",
+      "desc": "See how data science teams can use ChatGPT Work to build root-cause briefs, impact readouts, KPI memos, scoped analyses, and dashboard specs from real work inputs.",
+      "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
+      "dateISO": "2026-07-14T00:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "analysis",
       "catConfidence": 0.6,
-      "family": "market",
+      "family": "product",
       "significance": 44,
       "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "analysis",
+      "sourceCount": 2,
       "sources": [
         {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/"
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/codex-for-work/how-sales-teams-use-codex"
         }
       ],
-      "sourceName": "Ars Technica",
+      "sourceName": "OpenAI",
       "entityIds": [
-        "gemini"
+        "chatgpt"
       ]
     },
     {
@@ -1104,6 +1108,32 @@
         {
           "name": "Ars Technica",
           "url": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
+      "clusterId": "1u2qfkn",
+      "title": "“Google and Reddit do not own the Internet,\" web scraper says after court win",
+      "desc": "Google's and Reddit's use of DMCA to fight web scraper is bizarre, expert says.",
+      "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
+      "dateISO": "2026-07-27T20:12:42.000Z",
+      "date": "JUL 27 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/"
         }
       ],
       "sourceName": "Ars Technica",
@@ -1156,52 +1186,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tNXJJQXNGZWM1d1VmMVRfOFZlYU9VUFcwdm03RFhDRE5uajJOY19mbUQ5ZVpXYW9IOWhzd3JOS3F2c0xIdFRYVUgtZF9RVVI1VW1KVExGb0RVRDBWdlpNTXN1cTA?oc=5",
-      "clusterId": "qi0ja",
-      "title": "Claude Fable 5 and Claude Mythos 5",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tNXJJQXNGZWM1d1VmMVRfOFZlYU9VUFcwdm03RFhDRE5uajJOY19mbUQ5ZVpXYW9IOWhzd3JOS3F2c0xIdFRYVUgtZF9RVVI1VW1KVExGb0RVRDBWdlpNTXN1cTA?oc=5",
-      "dateISO": "2026-06-09T07:00:00.000Z",
-      "date": "JUN 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 6,
-      "sources": [
-        {
-          "name": "WIRED",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRWFPUzFGbjVnQXpCQmh0d3BybFlmSnR1R0E0WUpLdXBVVTN6eENPajNoS25udGFHSmpITnptUWRScGlXb1o5NnNWMHNFY2pSRHpIS21hZGdpNi1PbHZ0NzJrVThQcDFNaVRSbGRJLVBSa21XX0RmTDBFOXNWRnhhWmdOVU1SV1Nsd1Z4N1BhRDFSSFVhWEdMM2ZaaVFDZlhGVkl6emp3?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZldDREpCR3h2NTUxODFwLWU5OHVLLWVOQXFzaExVeUk0MUkwR3dhNk9OWk41c29kX2o0OXA5MkNUdTAxTVdOQVh6ZzNqTE5rMVBuaUt4Nm5vZzNVcThFZHIwZ0Y2cjdhTWtuMVEtWkszWDBwNnd2TUVrTnh1elUyYmk1TUhuVmczUm11UVp2Qml2dmt5Nzc2NlBGdVBpVEZrbkkyRDAzQW9Jbkp6QWFMU3VaT0F1V3Q5VzFXM2VR?oc=5"
-        },
-        {
-          "name": "Mashable",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQbjhkRkZ2S3JBQ3gxOHRFU19xM0VxRGRvSThQd3FyUURHQzlPME5Rd3JWR3JXbi1EQ1dsWjhqNE5NZTdLckFCWUdUaTZHQWJDOUlldlRHdFZieEVJRG5KdWtYWWxoNGhhNHg3bXFzTENoMC1jTXA2eUgzQUtSeGsxYi1WejdVNElGbG16SURHZHJXbThITWNR?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE0tNXJJQXNGZWM1d1VmMVRfOFZlYU9VUFcwdm03RFhDRE5uajJOY19mbUQ5ZVpXYW9IOWhzd3JOS3F2c0xIdFRYVUgtZF9RVVI1VW1KVExGb0RVRDBWdlpNTXN1cTA?oc=5"
-        },
-        {
-          "name": "interconnects.ai",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1XOUpqaUlWeFZ2RDF3NGY4UjlBa0JKV0VFSk9yZlNfNXNlSHpBZlJ1VUQ2TTE0V291UE9iSDZVQ292ZjV6SGF2ZGI3Yk5lQS1IaGJvaGtnSVQzd1ZaeGJ1bmF6RVJLeC15Q0t2dWpBd0Y?oc=5"
-        },
-        {
-          "name": "Marcus on AI | Substack",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vVnZ3ZWlxYW10NlZfcnhtOWUxZTZ4QjVCZFNyNEhEQnF3SDBVay1EZk1CUk15RHllMDNtRjRYSGdKdkEtdnZ4LUlmOHRtY1MyWHJia0FQMW10LW9yYVM1WDVNSnhIX2o1SUFNQ3hGSQ?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1210,7 +1194,7 @@
       "category": "adoption",
       "title": "Advancing the price-performance frontier with GPT-5.6",
       "summary": "Explore lower GPT‑5.6 pricing for Luna and Terra—and how OpenAI’s more efficient models help enterprises deploy AI workflows at scale.",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "official",
       "date": "JUL 30 2026",
@@ -1256,7 +1240,7 @@
       "category": "research",
       "title": "AI Scammers Are Better at Building Trust Than Humans",
       "summary": "Researchers pitted a person against a Claude agent and found that, after a week of texting, the AI chatbot was more effective at creating “exploitable trust” with others.",
-      "significance": 72,
+      "significance": 71,
       "impact": "high",
       "verification": "single",
       "date": "JUL 30 2026",
@@ -1630,15 +1614,15 @@
       "sourceCount": 1
     },
     {
-      "field": "Biology",
-      "date": "JUN 30 2026",
+      "field": "Reasoning",
+      "date": "JUN 25 2026",
       "verification": "official",
       "impact": "emerging",
-      "h": "Introducing GeneBench-Pro",
-      "p": "Introducing GeneBench-Pro, a new benchmark testing AI performance in genomics, biology, and scientific research using complex, real-world datasets.",
-      "url": "https://openai.com/index/introducing-genebench-pro",
+      "h": "How agents are transforming work",
+      "p": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+      "url": "https://openai.com/index/how-agents-are-transforming-work",
       "sourceName": "OpenAI",
-      "sourceCount": 2
+      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1647,11 +1631,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 193.675,
-      "changePct": 1.9288504030718343,
+      "price": 193.766,
+      "changePct": 1.9767444194918369,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 74560274,
+      "volume": 76732544,
       "ohlc": [
         {
           "d": "04-30",
@@ -2092,22 +2076,22 @@
           "o": 193.4499969482422,
           "h": 197.25,
           "l": 191.52000427246094,
-          "c": 193.6750030517578
+          "c": 193.76600646972656
         }
       ],
-      "relVolume": 0.5773366017980995,
-      "marketCap": 4725670000000
+      "relVolume": 0.5941569662188092,
+      "marketCap": 4727890400000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 456.41,
-      "changePct": 16.866388507186915,
+      "price": 456.337,
+      "changePct": -0.00010823052915699043,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 78569211,
+      "volume": 80223639,
       "ohlc": [
         {
           "d": "04-30",
@@ -2546,24 +2530,24 @@
         {
           "d": "07-30",
           "o": 438.5,
-          "h": 456.489990234375,
+          "h": 457.9100036621094,
           "l": 432.44000244140625,
-          "c": 456.4100036621094
+          "c": 456.3374938964844
         }
       ],
-      "relVolume": 2.448156059130246,
-      "marketCap": 3391126300000
+      "relVolume": 2.499706760493338,
+      "marketCap": 3390583910000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 386.25,
-      "changePct": 4.30168296627689,
+      "price": 385.94,
+      "changePct": 4.21797224245355,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 10944505,
+      "volume": 11293638,
       "ohlc": [
         {
           "d": "04-30",
@@ -3004,22 +2988,22 @@
           "o": 380.6700134277344,
           "h": 388.2900085449219,
           "l": 377.5400085449219,
-          "c": 386.25
+          "c": 385.94000244140625
         }
       ],
-      "relVolume": 0.5234945860462892,
-      "marketCap": 1900350000000
+      "relVolume": 0.5401942207314667,
+      "marketCap": 1898824800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 332.89,
-      "changePct": -1.134500580197444,
+      "price": 332.775,
+      "changePct": -1.1686607639971784,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 15970127,
+      "volume": 17029868,
       "ohlc": [
         {
           "d": "04-30",
@@ -3460,11 +3444,11 @@
           "o": 334.19500732421875,
           "h": 336.510009765625,
           "l": 330.3399963378906,
-          "c": 332.8900146484375
+          "c": 332.7749938964844
         }
       ],
-      "relVolume": 0.5543741228409694,
-      "marketCap": 4061258000000
+      "relVolume": 0.5911611181675321,
+      "marketCap": 4059854999999.9995
     },
     {
       "t": "AMZN",
@@ -3475,7 +3459,7 @@
       "changePct": 4.9680167963153234,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 41691881,
+      "volume": 42746654,
       "ohlc": [
         {
           "d": "04-30",
@@ -3919,7 +3903,7 @@
           "c": 237.91000366210938
         }
       ],
-      "relVolume": 1.0669946160022776,
+      "relVolume": 1.0939887713416487,
       "marketCap": 2545637000000
     },
     {
@@ -3927,11 +3911,11 @@
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 534.045,
-      "changePct": -8.80534890648252,
+      "price": 532.13,
+      "changePct": -9.132354605709816,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 28193723,
+      "volume": 28916222,
       "ohlc": [
         {
           "d": "04-30",
@@ -4372,22 +4356,22 @@
           "o": 525.739990234375,
           "h": 538.9400024414062,
           "l": 524.5189819335938,
-          "c": 534.0449829101562
+          "c": 532.1300048828125
         }
       ],
-      "relVolume": 1.4830367782952905,
-      "marketCap": 1345793400000
+      "relVolume": 1.521041428808512,
+      "marketCap": 1340967600000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 403.65,
-      "changePct": 7.734801139707328,
+      "price": 403.4,
+      "changePct": 7.6680757570932165,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 10676094,
+      "volume": 10833736,
       "ohlc": [
         {
           "d": "04-30",
@@ -4828,22 +4812,22 @@
           "o": 392.489990234375,
           "h": 406.7699890136719,
           "l": 387.6000061035156,
-          "c": 403.6499938964844
+          "c": 403.3999938964844
         }
       ],
-      "relVolume": 0.690891041630737,
-      "marketCap": 2094943500000
+      "relVolume": 0.701092660835734,
+      "marketCap": 2093646000000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 488.14,
-      "changePct": 13.637214224504971,
+      "price": 488.25,
+      "changePct": 13.662818413020569,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 22750427,
+      "volume": 23282474,
       "ohlc": [
         {
           "d": "04-30",
@@ -5284,22 +5268,22 @@
           "o": 459.1600036621094,
           "h": 498.20001220703125,
           "l": 457.67999267578125,
-          "c": 488.1400146484375
+          "c": 488.25
         }
       ],
-      "relVolume": 0.8260952228445356,
-      "marketCap": 790786800000
+      "relVolume": 0.8454144859523782,
+      "marketCap": 790965000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 122.465,
-      "changePct": -0.4349623269181911,
+      "price": 122.255,
+      "changePct": -0.6056932899040904,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 14476524,
+      "volume": 14878348,
       "ohlc": [
         {
           "d": "04-30",
@@ -5740,22 +5724,22 @@
           "o": 121.13999938964844,
           "h": 123.6698989868164,
           "l": 120.2699966430664,
-          "c": 122.46499633789062
+          "c": 122.25499725341797
         }
       ],
-      "relVolume": 0.3894631382016795,
-      "marketCap": 293916000000
+      "relVolume": 0.40027344294367084,
+      "marketCap": 293412000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 126.865,
-      "changePct": 7.750127539969921,
+      "price": 126.66,
+      "changePct": 7.576020010345755,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 24531716,
+      "volume": 25370050,
       "ohlc": [
         {
           "d": "04-30",
@@ -6196,21 +6180,21 @@
           "o": 122.87000274658203,
           "h": 128.33999633789062,
           "l": 121.58999633789062,
-          "c": 126.86499786376953
+          "c": 126.66000366210938
         }
       ],
-      "relVolume": 0.6237121676892915,
-      "marketCap": 356490650000
+      "relVolume": 0.6450265802802263,
+      "marketCap": 355914600000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.19/hr",
-      "trend": "→ 0% vs 7d ago",
+      "rate": "$1.87 – $3.19/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6223,10 +6207,10 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $6.69/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$5.89 – $6.88/hr",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6254,7 +6238,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-30T17:30:33.100Z",
+    "updatedAt": "2026-07-30T17:45:27.063Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6264,14 +6248,14 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 321,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 251,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.9345794392523364,
-        "estimatedRelevantDiscussions": 36,
+        "storyCoverage": 0.7819314641744548,
+        "estimatedRelevantDiscussions": 43,
         "isEstimated": true,
         "rawCommentHits": 2302,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 46,
+        "validatedCommentCount": 45,
         "commentCoverage": 0.13032145960034752,
         "limited": false,
         "points": 385,
@@ -6336,7 +6320,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 34,
+            "discussions": 41,
             "isEstimated": true
           },
           {
@@ -6351,16 +6335,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1092,
+        "rawStoryHits": 1090,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 31,
-        "storyCoverage": 0.27472527472527475,
+        "storyCoverage": 0.27522935779816515,
         "estimatedRelevantDiscussions": 113,
         "isEstimated": true,
-        "rawCommentHits": 6736,
+        "rawCommentHits": 6728,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.04453681710213777,
+        "commentCoverage": 0.044589774078478,
         "limited": false,
         "points": 1015,
         "themes": [
@@ -6450,10 +6434,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 45,
         "isEstimated": true,
-        "rawCommentHits": 1179,
+        "rawCommentHits": 1180,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 40,
-        "commentCoverage": 0.2544529262086514,
+        "validatedCommentCount": 38,
+        "commentCoverage": 0.2542372881355932,
         "limited": false,
         "points": 860,
         "themes": [
@@ -6470,7 +6454,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 11
+            "count": 9
           },
           {
             "id": "speed",
@@ -6483,14 +6467,14 @@
             "count": 3
           },
           {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 3
-          },
-          {
             "id": "multimodal",
             "label": "Image/video",
             "count": 3
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 1
           },
           {
             "id": "context",
@@ -6553,10 +6537,10 @@
         "storyCoverage": 0.5328596802841918,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10628,
+        "rawCommentHits": 10631,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.02822732404968009,
+        "commentCoverage": 0.028219358479917224,
         "limited": false,
         "points": 240,
         "themes": [
@@ -6630,16 +6614,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 67,
-        "fetchedStoryCount": 67,
+        "rawStoryHits": 76,
+        "fetchedStoryCount": 76,
         "validatedStoryCount": 10,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 540,
+        "rawCommentHits": 539,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.5555555555555556,
+        "commentCoverage": 0.5565862708719852,
         "limited": false,
         "points": 220,
         "themes": [
@@ -6713,16 +6697,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 71,
-        "fetchedStoryCount": 71,
+        "rawStoryHits": 63,
+        "fetchedStoryCount": 63,
         "validatedStoryCount": 10,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 882,
+        "rawCommentHits": 939,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 68,
-        "commentCoverage": 0.3401360544217687,
+        "commentCoverage": 0.3194888178913738,
         "limited": false,
         "points": 499,
         "themes": [
@@ -7018,18 +7002,6 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding",
-          "reasoning"
-        ],
-        "excerpt": "…is to relying on proprietary AI providers in general, and Gemini in particular, via Shashiko. The problem is that kernel contributions could become gated by hyperscalers who…",
-        "source": "Hacker News",
-        "author": "loudmax",
-        "publishedAt": "2026-07-29T17:39:23.000Z",
-        "url": "https://news.ycombinator.com/item?id=49100571"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
           "writing",
           "price"
         ],
@@ -7038,6 +7010,18 @@
         "author": "arjie",
         "publishedAt": "2026-07-21T19:29:45.000Z",
         "url": "https://news.ycombinator.com/item?id=48997019"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding",
+          "reasoning"
+        ],
+        "excerpt": "…is to relying on proprietary AI providers in general, and Gemini in particular, via Shashiko. The problem is that kernel contributions could become gated by hyperscalers who…",
+        "source": "Hacker News",
+        "author": "loudmax",
+        "publishedAt": "2026-07-29T17:39:23.000Z",
+        "url": "https://news.ycombinator.com/item?id=49100571"
       },
       {
         "modelId": "gemini",
