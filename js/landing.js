@@ -31,11 +31,14 @@ const PREVIEW_ROWS = 5; // how many rows each preview list shows before "open th
 
 // One row of a mini list. `value` is rendered as-is into a tabular-nums cell,
 // so callers pass an already-formatted string (score, price range, "—").
+// Uses the SHARED .rank-row component (css/components.css) — the same one the
+// dashboard's leaderboard renders — so the two pages cannot drift apart
+// visually the way .r and .lb-row did.
 function row({ lead, name, sub, value }) {
-  return `<div class="r">
-    <span class="n">${esc(lead)}</span>
-    <span class="nm">${esc(name)}${sub ? `<em>${esc(sub)}</em>` : ''}</span>
-    <span class="v">${esc(value)}</span>
+  return `<div class="rank-row rank-row--preview">
+    <span class="rank-row__rank">${esc(lead)}</span>
+    <span class="rank-row__model">${esc(name)}${sub ? `<em class="rank-row__org">${esc(sub)}</em>` : ''}</span>
+    <span class="rank-row__value">${esc(value)}</span>
   </div>`;
 }
 

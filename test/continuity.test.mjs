@@ -109,3 +109,23 @@ test('the focus ring is one colour across both pages', () => {
   const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
   assert.doesNotMatch(appStyles, /focus-visible\{[^}]*outline:\s*2px solid var\(--teal\)/, 'app.html must not keep its own teal focus ring');
 });
+
+test('both renderers emit the same shared row component', () => {
+  const landingJs = read('js/landing.js');
+  const sectionsJs = read('js/sections.js');
+  assert.match(landingJs, /rank-row/, 'js/landing.js must render .rank-row');
+  assert.match(sectionsJs, /rank-row/, 'js/sections.js must render .rank-row');
+});
+
+test('the superseded per-page row classes are gone', () => {
+  const appCss = read('css/app.css');
+  const landingStyles = [...landingHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
+  assert.doesNotMatch(appCss, /\.lb-row\{/, 'css/app.css must not define .lb-row any more');
+  assert.doesNotMatch(landingStyles, /\.mini\s+\.r\{/, 'index.html must not define its own row');
+});
+
+test('both pages link the shared component stylesheet', () => {
+  for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
+    assert.match(html, /<link[^>]+href="css\/components\.css"/, `${name} must link css/components.css`);
+  }
+});
