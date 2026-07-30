@@ -61,3 +61,29 @@ test('no page still uses var(--foam) where it meant the landing pale tone', () =
   const gradientLines = landingStyles.split('\n').filter((l) => /linear-gradient/.test(l) && /var\(--foam\)/.test(l));
   assert.deepEqual(gradientLines, [], `landing gradients must use var(--mist): ${gradientLines.join(' | ')}`);
 });
+
+test('both pages link the shared shell stylesheet', () => {
+  for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
+    assert.match(html, /<link[^>]+href="css\/shell\.css"/, `${name} must link css/shell.css`);
+  }
+});
+
+test('the dashboard no longer paints a full-bleed photograph behind every view', () => {
+  // The photo put small mono type (depth rail, ticker, section descriptors) on
+  // a busy background at low contrast. The landing's gradient replaces it.
+  // assets/ocean.jpg is still used as the landing's closing image and as the
+  // og:image, so only the dashboard's background usage should be gone.
+  assert.doesNotMatch(appHtml, /class="ocean-bg"/, 'the .ocean-bg photo layer must be removed from app.html');
+  assert.doesNotMatch(appHtml, /url\(assets\/ocean\.jpg\)/, 'app.html must not paint ocean.jpg as a background');
+});
+
+test('the dashboard keeps its animated wave footer (a signature element, not the photo)', () => {
+  assert.match(appHtml, /class="waves"/, 'the wave footer stays');
+});
+
+test('one measure governs both pages', () => {
+  const shellCss = read('css/shell.css');
+  assert.match(shellCss, /\.wrap\{[^}]*max-width:\s*var\(--maxw\)/, '.wrap must use the shared --maxw');
+  const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
+  assert.doesNotMatch(appStyles, /\.wrap\{[^}]*max-width:\s*\d+px/, 'app.html must not hardcode its own measure');
+});

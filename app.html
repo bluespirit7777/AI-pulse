@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/shell.css">
 <link rel="stylesheet" href="css/app.css">
 
 
@@ -36,31 +37,8 @@
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    margin:0;
-    color:var(--ink);
-    font-family:var(--font-body);
     font-size:16px;
     line-height:1.62;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-    min-height:100vh;
-  }
-
-  /* ---------- ocean background: user's photo, slow drift ---------- */
-  .ocean-bg{
-    position:fixed;inset:-4%;z-index:-2;
-    background:url(assets/ocean.jpg) center/cover no-repeat;
-  }
-  @media (prefers-reduced-motion: no-preference){
-    .ocean-bg{animation:drift 60s ease-in-out infinite alternate;}
-  }
-  @keyframes drift{
-    0%{transform:scale(1) translate(0,0);}
-    100%{transform:scale(1.06) translate(-1%,1%);}
-  }
-  .ocean-veil{
-    position:fixed;inset:0;z-index:-1;
-    background:linear-gradient(180deg, rgba(234,244,246,0.6) 0%, rgba(234,244,246,0.7) 40%, rgba(234,244,246,0.8) 100%);
   }
 
   /* ---------- gentle animated waves (signature element) ---------- */
@@ -257,7 +235,6 @@
   }
 
   /* ---------- layout ---------- */
-  .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px);position:relative;z-index:2;}
   section{padding:36px 0;scroll-margin-top:70px;}
   .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
   .section-head h2{
@@ -623,9 +600,6 @@
 <body>
 
   <a class="skip-link" href="#main-content">Skip to content</a>
-
-  <div class="ocean-bg"></div>
-  <div class="ocean-veil"></div>
 
   <div class="waves" aria-hidden="true">
     <svg class="wave-a" viewBox="0 0 1440 110" preserveAspectRatio="none">

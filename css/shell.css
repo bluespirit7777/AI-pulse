@@ -1,0 +1,48 @@
+/* Chrome shared by index.html and app.html.
+ *
+ * Both pages wear the same shell so that moving between them reads as
+ * descending further into one product rather than arriving somewhere else.
+ * The visual language is the LANDING's — the calmer of the two — which means
+ * this file mostly calms the dashboard down.
+ *
+ * Requires css/tokens.css to be linked first.
+ */
+
+/* ---------- body background ----------
+ * The landing's depth gradient, now on both pages. It replaces the dashboard's
+ * full-bleed photograph of the ocean, which sat behind every view and put the
+ * depth rail, the ticker and the section descriptors on a busy backdrop at low
+ * contrast. The dashboard's animated wave footer is untouched — that is a
+ * signature element, and it sits at the bottom edge where nothing reads over it.
+ */
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  position:relative;
+  background:linear-gradient(
+    180deg,
+    var(--mist) 0%,
+    #EFF7F8 16%,
+    #E8F3F4 38%,
+    #E1EFF1 56%,
+    #E8F3F4 74%,
+    var(--mist) 92%
+  );
+  background-attachment:fixed;
+}
+
+/* ---------- measure ----------
+ * The landing held a visible 1240px column while the dashboard ran to the
+ * viewport edge. Side by side that read as "two products" more strongly than
+ * the palette did.
+ */
+.wrap{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:0 clamp(16px,4vw,48px);
+  position:relative;
+  z-index:2;
+}
