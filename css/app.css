@@ -6,12 +6,8 @@
 html, body { overflow-x: clip; }
 .waves { overflow: hidden; }
 
-/* ---------- readability over the photo background ----------
-   Any text sitting directly on .ocean-bg (not inside a .panel/.card) has
-   unreliable contrast because the photo varies from light foam to dark wave.
-   Two fixes: a frosted backing on standalone text blocks, and a soft light
-   halo on loose headings/tags that can't take a full backing without feeling
-   heavy. */
+/* ---------- standalone text blocks ----------
+   A frosted backing keeps these legible against whatever sits behind them. */
 .intro-note {
   background: var(--panel-solid);
   border: 1px solid var(--border); border-radius: 12px;
@@ -394,10 +390,9 @@ body.drawer-open { overflow: hidden; }
 
 /* ---------- ocean map compact intro (encoding legend) ---------- */
 .map-intro-lead {
-  /* 20% larger and ~50% darker than the base --deep, keeping the thin white
-     outline so it stays legible directly on the ocean photo. */
+  /* 20% larger and ~50% darker than the base --deep. */
   font-family: var(--font-display); font-size: clamp(19px, 2.4vw, 24px); color: #0E252D;
-  margin: 0 0 10px; text-shadow: var(--text-outline); max-width: 52ch;
+  margin: 0 0 10px; max-width: 52ch;
 }
 .map-encoding { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
 .map-enc {
@@ -410,12 +405,12 @@ body.drawer-open { overflow: hidden; }
 .enc-ico { width: 24px; height: 14px; flex-shrink: 0; }
 .map-enc-util {
   font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim);
-  font-style: italic; text-shadow: var(--text-outline);
+  font-style: italic;
 }
 @media (max-width: 560px) { .map-encoding { gap: 7px; } .map-enc { font-size: 10.5px; } }
 
 /* ---------- waves section explainer ---------- */
-.waves-explain { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin: -6px 0 18px; text-shadow: var(--text-outline); }
+.waves-explain { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); margin: -6px 0 18px; }
 .waves-explain b { color: var(--deep); }
 .how-selected { margin-left: 4px; }
 

@@ -84,7 +84,7 @@ function rankRows(rows, { showIndex = false } = {}) {
     return `
     <div class="rank-row${showBar ? '' : ' rank-row--ordinal'}">
       <span class="rank-row__rank">${esc(rankLabel)}</span>
-      <span class="rank-row__model">${esc(r.model)}<em class="rank-row__org">${esc(r.org)}</em></span>
+      <span class="rank-row__model">${esc(r.model)}<span class="rank-row__org">${esc(r.org)}</span></span>
       ${rating
         ? `<span class="rank-row__value"${hasIndex ? ' title="Composite index (0–100), editorial weighting — not a single measured benchmark"' : ''}>${rating}</span>`
         : `<span class="rank-row__value">${esc(r.stat)}</span>`}

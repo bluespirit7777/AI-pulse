@@ -85,7 +85,7 @@ nav.links{display:flex;gap:2px}
 .ticker .it s{text-decoration:none;width:5px;height:5px;border-radius:50%;background:var(--shallow);flex:none}
 
 /* ---------- split sections ---------- */
-section.band{padding:88px 0 0;position:relative;isolation:isolate}
+section.band{padding:88px 0 0;position:relative;isolation:isolate;scroll-margin-top:var(--header-h)}
 .glowwrap{position:absolute;inset:-4% 0;z-index:-1;overflow:hidden;pointer-events:none;
   -webkit-mask-composite:source-in;mask-composite:intersect;
   -webkit-mask-image:linear-gradient(90deg,#000 0,#000 24%,rgba(0,0,0,.5) 44%,transparent 62%),linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);
@@ -139,7 +139,7 @@ section.band:has(.split.flip) .glowwrap{
 .bar .v{font-family:var(--mono);text-align:right;font-size:11.5px;color:var(--tide);font-variant-numeric:tabular-nums}
 
 /* ---------- seabed ---------- */
-.deepband{margin-top:88px;background:linear-gradient(180deg,#235B6C 0%,var(--deep) 42%,var(--ink) 100%);padding:96px 0;position:relative;overflow:hidden}
+.deepband{margin-top:88px;background:linear-gradient(180deg,#235B6C 0%,var(--deep) 42%,var(--ink) 100%);padding:96px 0;position:relative;overflow:hidden;scroll-margin-top:var(--header-h)}
 .deepband:before{content:"";position:absolute;top:0;left:0;right:0;height:140px;background:linear-gradient(180deg,var(--mist),transparent);opacity:.16;pointer-events:none;z-index:1}
 .deepband .caust{position:absolute;inset:-30%;background:radial-gradient(closest-side,rgba(62,143,163,.55),transparent 70%);filter:blur(60px);pointer-events:none}
 @media (prefers-reduced-motion:no-preference){.deepband .caust{animation:float 26s ease-in-out infinite alternate}}
@@ -170,7 +170,6 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 .js .rv.in{opacity:1;transform:none}
 
 @media(max-width:900px){
-  .wrap{padding:0 20px}
   /* .live-cluster's own hide-below-900px rule now lives in css/shell.css
      (shared with the dashboard); this stays nav.links-only, which is
      landing-specific navigation shell.css does not own. */

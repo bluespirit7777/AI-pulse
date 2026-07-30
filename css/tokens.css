@@ -59,7 +59,10 @@
   --maxw:1240px;
 
   /* thin white outline for text sitting directly on photography with no panel
-     behind it — keeps the text's own colour, adds legibility */
+     behind it — keeps the text's own colour, adds legibility.
+     Unreferenced as of this branch: the dashboard's photo background was
+     removed and its three call sites (css/app.css) dropped this token.
+     Kept in case a future photo background returns. */
   --text-outline:
     -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff,
     -0.5px 0.5px 0 #fff, 0.5px 0.5px 0 #fff,

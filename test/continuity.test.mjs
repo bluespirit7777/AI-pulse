@@ -113,8 +113,12 @@ test('the focus ring is one colour across both pages', () => {
 test('both renderers emit the same shared row component', () => {
   const landingJs = read('js/landing.js');
   const sectionsJs = read('js/sections.js');
-  assert.match(landingJs, /rank-row/, 'js/landing.js must render .rank-row');
-  assert.match(sectionsJs, /rank-row/, 'js/sections.js must render .rank-row');
+  // Match the emitted markup itself, not a comment referencing it — a
+  // comment can say "Uses the SHARED .rank-row component" while the
+  // renderer still emits the superseded class="r".
+  assert.match(landingJs, /class="rank-row/, 'js/landing.js must emit class="rank-row..."');
+  assert.doesNotMatch(landingJs, /class="r"/, 'js/landing.js must not emit the superseded class="r"');
+  assert.match(sectionsJs, /class="rank-row/, 'js/sections.js must emit class="rank-row..."');
 });
 
 test('the superseded per-page row classes are gone', () => {
@@ -244,8 +248,14 @@ test('both pages use the shared section heading component', () => {
 });
 
 test('the superseded per-page heading and button classes are gone', () => {
-  const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
-  assert.doesNotMatch(appStyles, /\.section-ribbon\{/, 'app.html must not define its own section heading');
-  const componentsCss = read('css/components.css');
-  assert.match(componentsCss, /\.btn--primary/, 'one primary button for both pages');
+  // .section-ribbon only ever lived in css/app.css (not app.html's inline
+  // <style>), and was written there as ".section-ribbon {" with a space
+  // before the brace — checking app.html with a no-space regex could never
+  // have caught a regression here.
+  const appCss = read('css/app.css');
+  assert.doesNotMatch(appCss, /\.section-ribbon\s*\{/, 'css/app.css must not define its own section heading');
+  // Assert the shared buttons are actually used, not merely defined —
+  // a stylesheet asserting its own class always passes.
+  assert.match(landingHtml, /btn--primary/, 'index.html must use .btn--primary');
+  assert.match(landingHtml, /btn--secondary/, 'index.html must use .btn--secondary');
 });

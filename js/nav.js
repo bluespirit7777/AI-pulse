@@ -120,7 +120,13 @@ function setLocalTabCurrent(panel, tab) {
 function panelDepths(panel) {
   const el = panelEl(panel);
   if (!el) return [];
-  return [...new Set([...el.querySelectorAll('[data-depth]')].map((n) => n.dataset.depth))];
+  // Values can be space-separated (e.g. "surface currents"); the landing's
+  // wireRail() (js/landing.js) splits on /\s+/ the same way, and the two
+  // must agree or the rail will disagree between pages.
+  return [...new Set(
+    [...el.querySelectorAll('[data-depth]')]
+      .flatMap((n) => (n.dataset.depth || '').split(/\s+/).filter(Boolean))
+  )];
 }
 
 function updateDepthRailMulti(depths) {

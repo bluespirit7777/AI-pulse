@@ -37,7 +37,7 @@ const PREVIEW_ROWS = 5; // how many rows each preview list shows before "open th
 function row({ lead, name, sub, value }) {
   return `<div class="rank-row rank-row--preview">
     <span class="rank-row__rank">${esc(lead)}</span>
-    <span class="rank-row__model">${esc(name)}${sub ? `<em class="rank-row__org">${esc(sub)}</em>` : ''}</span>
+    <span class="rank-row__model">${esc(name)}${sub ? `<span class="rank-row__org">${esc(sub)}</span>` : ''}</span>
     <span class="rank-row__value">${esc(value)}</span>
   </div>`;
 }
