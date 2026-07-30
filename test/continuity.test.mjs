@@ -118,9 +118,9 @@ test('both renderers emit the same shared row component', () => {
 });
 
 test('the superseded per-page row classes are gone', () => {
-  const appCss = read('css/app.css');
+  const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
   const landingStyles = [...landingHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
-  assert.doesNotMatch(appCss, /\.lb-row\{/, 'css/app.css must not define .lb-row any more');
+  assert.doesNotMatch(appStyles, /\.(lb-row|lb-top|lb-name|lb-rank|lb-model|lb-org|lb-score|lb-stat|lb-note|bar-track|bar-fill)\s*\{/, 'app.html inline styles must not define superseded row classes (.lb-note-lead and .lb-tab* rules are OK)');
   assert.doesNotMatch(landingStyles, /\.mini\s+\.r\{/, 'index.html must not define its own row');
 });
 
