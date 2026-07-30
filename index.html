@@ -171,7 +171,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 @media(max-width:900px){
   .wrap{padding:0 20px}
-  nav.links,.live-cluster{display:none}
+  /* .live-cluster's own hide-below-900px rule now lives in css/shell.css
+     (shared with the dashboard); this stays nav.links-only, which is
+     landing-specific navigation shell.css does not own. */
+  nav.links{display:none}
   /* .split.flip must be named explicitly: it is more specific (0,2,0) than a
      bare .split (0,1,0), and a media query adds no specificity of its own, so
      ".split{grid-template-columns:1fr}" alone leaves the flipped sections

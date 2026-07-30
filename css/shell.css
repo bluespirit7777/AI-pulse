@@ -113,6 +113,29 @@ body{
 }
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
 
+/* ---------- mobile: drop the live cluster ----------
+ * .site-header .wrap is one flex row: brand, live-cluster, cross-page CTA.
+ * The dashboard has no page-local mobile handling for it (its markup only
+ * moved into this shared file), so at 375px the row needed ~469px of content
+ * and the CTA -- the "Landing page" link, the only way back off the
+ * dashboard -- ran 162px past the viewport edge.
+ *
+ * The live-cluster (LIVE dot, clock, and on the dashboard the snapshot pill)
+ * is the lowest-value element in the row -- the landing already treats it as
+ * droppable, hiding it below 900px in its own inline styles. Reusing that
+ * same 900px threshold here (already established in this file for #lp-rail
+ * below) means both pages change chrome at one shared width instead of two
+ * independently-tuned ones.
+ *
+ * With live-cluster gone the row is just brand + CTA: at current sizes that
+ * is ~134px + ~110px + one 24px gap = ~268px of content, plus the ~40px of
+ * .wrap padding a 375px viewport carries -- ~308px, comfortably under 375px
+ * with room to spare for either element growing.
+ */
+@media (max-width:900px){
+  .site-header .live-cluster{display:none;}
+}
+
 /* ---------- focus ----------
  * One ring colour across both pages. The dashboard used teal, the landing sand.
  */
