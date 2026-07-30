@@ -17,20 +17,6 @@ html, body { overflow-x: clip; }
   border: 1px solid var(--border); border-radius: 12px;
   padding: 14px 18px; box-shadow: 0 4px 16px rgba(18,48,62,.05);
 }
-/* Loose text sitting on the ocean photo (no panel behind it) gets a crisp
-   white outline; the text keeps its own colour. Text inside .panel/.card/
-   .intro-note already has an opaque backing and is intentionally excluded.
-   .section-head h2/.tag used to be listed here too, back when this rule's
-   selector predated the dead .section-head CSS in app.html (see Task 7). Now
-   that .section-head is live shared markup on BOTH pages, keeping it would
-   mean: on the dashboard, a white outline with no photo left to fight (Task 2
-   removed it) muddying headings on the plain gradient background; on the
-   landing, the outline was never needed either — .section-head sits on the
-   page background, not on .fig's photo crop. Deliberately dropped. */
-.depths-divider h2, .depths-divider p, .map-legend, .map-legend span,
-.history-note {
-  text-shadow: var(--text-outline);
-}
 .map-summary {
   background: var(--panel-solid);
   border: 1px solid var(--border); border-radius: 12px;
