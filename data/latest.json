@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-30T09:30:29.406Z",
+  "updatedAt": "2026-07-30T09:45:23.185Z",
   "build": {
-    "sha": "67ac3528529556a685a7936c1457221ee676ed40",
-    "shortSha": "67ac352",
+    "sha": "23a58406e72bbfbcf2c07f3250fecb91155c50b3",
+    "shortSha": "23a5840",
     "ref": "main",
-    "builtAt": "2026-07-30T09:30:44.068Z"
+    "builtAt": "2026-07-30T09:45:38.693Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,10 +13,11 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 20.4,
     "estimatedDatasets": 4,
-    "buildSha": "67ac352",
-    "lastSuccessfulUpdate": "2026-07-30T09:30:29.406Z"
+    "buildSha": "23a5840",
+    "lastSuccessfulUpdate": "2026-07-30T09:45:23.185Z"
   },
   "ticker": [
+    "AI SCAMMERS ARE BETTER AT BUILDING TRUST THAN HUMANS",
     "MICROSOFT LOGS $3.2B FROM ANTHROPIC INVESTMENT, BUT OPENAI WAS A MIXED BAG",
     "OPENAI PRESIDENT SAYS IT’S ‘BUILDING A FAMILY OF DEVICES’ FOR ITS AI CHATBOTS",
     "MICROSOFT CONFIRMS COPILOT ‘SUPER APP’ COMING THIS YEAR",
@@ -25,10 +26,35 @@
     "WE’RE LAUNCHING LYRIA 3.5 IN GOOGLE FLOW MUSIC, WITH ADVANCES ACROSS MUSICALITY, LYRICS, VOCALS, AND CREATIVE…",
     "ELON MUSK’S XAI IS TRYING TO SUE ITS WAY OUT OF A GROK RECKONING",
     "WE’RE RUNNING OUT OF REASONS TO IGNORE AI SAFETY",
-    "INTRODUCING CLAUDE CORPS",
-    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE"
+    "INTRODUCING CLAUDE CORPS"
   ],
   "signals": [
+    {
+      "id": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/",
+      "clusterId": "1ap5qka",
+      "title": "AI Scammers Are Better at Building Trust Than Humans",
+      "desc": "Researchers pitted a person against a Claude agent and found that, after a week of texting, the AI chatbot was more effective at creating “exploitable trust” with others.",
+      "url": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/",
+      "dateISO": "2026-07-30T09:30:00.000Z",
+      "date": "JUL 30 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "claude"
+      ]
+    },
     {
       "id": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
       "clusterId": "1ukgysu",
@@ -40,7 +66,7 @@
       "category": "market",
       "catConfidence": 0.62,
       "family": "market",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -67,7 +93,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 68,
+      "significance": 67,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -508,32 +534,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/",
-      "clusterId": "11uh6ci",
-      "title": "Thinking Machines co-founder Lilian Weng left the company citing health reasons, then joined OpenAI",
-      "desc": "Weng previously served as the VP of AI Safety Research at OpenAI.",
-      "url": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/",
-      "dateISO": "2026-07-29T21:07:48.000Z",
-      "date": "JUL 29 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/ai/2026/07/despite-ai-hype-googles-data-shows-workers-arent-automating-themselves-away/",
       "clusterId": "1rxni8w",
       "title": "Despite AI hype, Google's data shows workers aren't automating themselves away",
@@ -557,6 +557,32 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/",
+      "clusterId": "11uh6ci",
+      "title": "Thinking Machines co-founder Lilian Weng left the company citing health reasons, then joined OpenAI",
+      "desc": "Weng previously served as the VP of AI Safety Research at OpenAI.",
+      "url": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/",
+      "dateISO": "2026-07-29T21:07:48.000Z",
+      "date": "JUL 29 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/29/thinking-machines-co-founder-lilian-weng-left-the-company-citing-health-reasons-then-joined-openai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -692,11 +718,11 @@
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWHlvQ0t3R3I5NWtGdW1SZlpMVVdka2xtT1FtLXdPRXdSN3cxYzdleEllMGRWNXR6RnN1YUZuNFZLUkRhbWtqY0hjTFN1b2lzYV96OElSZi1tX2F6WGRsaE1BNVRVQmhzazY1TGcwTmJRV0ZUbkFtQzhzZTlYdHFsVWVJalY?oc=5"
         },
         {
-          "name": "CNBC",
+          "name": "cnbc.com",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5"
         }
       ],
-      "sourceName": "CNBC",
+      "sourceName": "cnbc.com",
       "entityIds": [
         "claude",
         "qwen"
@@ -809,32 +835,6 @@
       "entityIds": []
     },
     {
-      "id": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit",
-      "clusterId": "16fkxlh",
-      "title": "xAI’s last-minute scramble to stop Minnesota’s anti-nudification app law",
-      "desc": "xAI is suing Minnesota Attorney General Keith Ellison over a law passed back in May that broadly targets \"nudification\" apps, claiming that the statute's punitive provisions leave the company with \"no practical choice but to restrict Grok Imagine's image-editing features in various ways.\" The law, the company argues, violates the First Amendment. Back in January, […]",
-      "url": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit",
-      "dateISO": "2026-07-29T21:06:52.000Z",
-      "date": "JUL 29 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "grok"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/ai/2026/07/tested-google-synthid-works-great-but-labeling-ai-content-may-be-a-losing-game/",
       "clusterId": "1mfg94k",
       "title": "Google's SynthID watermark is hard to break, but it doesn't solve AI disinformation",
@@ -858,6 +858,32 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit",
+      "clusterId": "16fkxlh",
+      "title": "xAI’s last-minute scramble to stop Minnesota’s anti-nudification app law",
+      "desc": "xAI is suing Minnesota Attorney General Keith Ellison over a law passed back in May that broadly targets \"nudification\" apps, claiming that the statute's punitive provisions leave the company with \"no practical choice but to restrict Grok Imagine's image-editing features in various ways.\" The law, the company argues, violates the First Amendment. Back in January, […]",
+      "url": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit",
+      "dateISO": "2026-07-29T21:06:52.000Z",
+      "date": "JUL 29 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/972850/xai-grok-minnesota-nudification-lawsuit"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "grok"
       ]
     },
     {
@@ -965,7 +991,7 @@
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
         },
         {
-          "name": "CNBC",
+          "name": "cnbc.com",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
         },
         {
@@ -1011,7 +1037,7 @@
           "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRWFPUzFGbjVnQXpCQmh0d3BybFlmSnR1R0E0WUpLdXBVVTN6eENPajNoS25udGFHSmpITnptUWRScGlXb1o5NnNWMHNFY2pSRHpIS21hZGdpNi1PbHZ0NzJrVThQcDFNaVRSbGRJLVBSa21XX0RmTDBFOXNWRnhhWmdOVU1SV1Nsd1Z4N1BhRDFSSFVhWEdMM2ZaaVFDZlhGVkl6emp3?oc=5"
         },
         {
-          "name": "CNBC",
+          "name": "cnbc.com",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZldDREpCR3h2NTUxODFwLWU5OHVLLWVOQXFzaExVeUk0MUkwR3dhNk9OWk41c29kX2o0OXA5MkNUdTAxTVdOQVh6ZzNqTE5rMVBuaUt4Nm5vZzNVcThFZHIwZ0Y2cjdhTWtuMVEtWkszWDBwNnd2TUVrTnh1elUyYmk1TUhuVmczUm11UVp2Qml2dmt5Nzc2NlBGdVBpVEZrbkkyRDAzQW9Jbkp6QWFMU3VaT0F1V3Q5VzFXM2VR?oc=5"
         },
         {
@@ -1168,32 +1194,6 @@
         "gemini",
         "mistral"
       ]
-    },
-    {
-      "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "clusterId": "1msd1dg",
-      "title": "Building AI infrastructure with the Effingham County community",
-      "desc": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
-      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "dateISO": "2026-07-22T13:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1202,7 +1202,7 @@
       "category": "product",
       "title": "OpenAI president says it’s ‘building a family of devices’ for its AI chatbots",
       "summary": "In an interview with our friend Joanna Stern on her YouTube channel, OpenAI president Greg Brockman said the company is working on a \"family of devices\" for interacting with its A…",
-      "significance": 68,
+      "significance": 67,
       "impact": "notable",
       "verification": "uncertain",
       "date": "JUL 29 2026",
@@ -1225,7 +1225,7 @@
       "category": "market",
       "title": "Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag",
       "summary": "When Microsoft reported killer fourth-quarter earnings for its fiscal 2026 year (which ended June 30), it tucked in an interesting little tidbit about how its investments in the t…",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "date": "JUL 29 2026",
@@ -1247,26 +1247,25 @@
     {
       "family": "research",
       "category": "research",
-      "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
-      "summary": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "official",
-      "date": "JUL 29 2026",
-      "dateISO": "2026-07-29T10:00:00.000Z",
-      "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+      "title": "AI Scammers Are Better at Building Trust Than Humans",
+      "summary": "Researchers pitted a person against a Claude agent and found that, after a week of texting, the AI chatbot was more effective at creating “exploitable trust” with others.",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "date": "JUL 30 2026",
+      "dateISO": "2026-07-30T09:30:00.000Z",
+      "url": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/"
         }
       ],
       "entityIds": [
-        "chatgpt",
-        "gpt"
+        "claude"
       ],
-      "whyItMatters": "The partnership shifts who gets access to whose models, compute or customers."
+      "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
     }
   ],
   "entityActivity": {
@@ -1274,7 +1273,7 @@
     "copilot": 2,
     "perplexity": 1,
     "gpt": 74,
-    "claude": 68,
+    "claude": 69,
     "gemini": 32,
     "grok": 2,
     "llama": 0,
@@ -1335,7 +1334,7 @@
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNck84aEo5SERWUzlnMzBaY3ZYdnhRZ3gtMkgtSmlUS3gtamhsRUR5ZkNwbEtCUk5BOEkwY1NvMmpSVDlfLTc5WWg0c0xqX1lLR3ZRMV9qSmQ3bnFlWlBUQU16N1pTWGVwZXpjekVUV2JKc3lUbGxPdXNGZXJTLVRMV1UtZ0xEQ0pSM2c5XzB0N2s1RWdJcmlHc3NaaGvSAaIBQVVfeXFMT0lDWjZWV1hWcWs4YXNsWERycW1sM2p4dkFaMERBcm1Jd1BmbjhaeXdyMnlBYzF2Z00yVVNLeHJvLWxSTzlBSGFVYWlNRmxndkczM2FqdjM3YVJ4azlUd2xyU2ItR1ExTDc2WVVmT0pRWWd2eUdvcHRHdnJ2SFdXaDFZVDZ5MEdpLXpycVpXYzRvMW1lZUQzdGQ0cWxha0dmcWln?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "CNBC",
+          "sourceName": "cnbc.com",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1606,6 +1605,17 @@
   "breakthroughs": [
     {
       "field": "Reasoning",
+      "date": "JUL 30 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "AI Scammers Are Better at Building Trust Than Humans",
+      "p": "Researchers pitted a person against a Claude agent and found that, after a week of texting, the AI chatbot was more effective at creating “exploitable trust” with others.",
+      "url": "https://www.wired.com/story/ai-scammers-are-better-at-building-trust-than-humans/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "field": "Reasoning",
       "date": "JUL 29 2026",
       "verification": "official",
       "impact": "notable",
@@ -1658,17 +1668,6 @@
       "url": "https://openai.com/index/how-agents-are-transforming-work",
       "sourceName": "OpenAI",
       "sourceCount": 1
-    },
-    {
-      "field": "Biology",
-      "date": "JUN 23 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
-      "p": "GPT-5 Pro helped solve a 3-year-old immunology mystery, offering insights into T cell behavior. The breakthrough could support cancer and autoimmune research.",
-      "url": "https://openai.com/index/gpt-5-immunology-mystery",
-      "sourceName": "OpenAI",
-      "sourceCount": 2
     }
   ],
   "stocks": [
@@ -6170,23 +6169,23 @@
       "rate": "$1.99 – $3.19/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.50/hr",
-      "trend": "→ 3% vs 7d ago",
+      "rate": "$3.59 – $4.39/hr",
+      "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.89 – $7.13/hr",
-      "trend": "→ 2% vs 7d ago",
+      "rate": "$5.89 – $6.88/hr",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6214,7 +6213,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-07-30T09:30:29.406Z",
+    "updatedAt": "2026-07-30T09:45:23.185Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6223,16 +6222,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 327,
+        "rawStoryHits": 326,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 34,
-        "storyCoverage": 0.9174311926605505,
+        "storyCoverage": 0.9202453987730062,
         "estimatedRelevantDiscussions": 39,
         "isEstimated": true,
-        "rawCommentHits": 2292,
+        "rawCommentHits": 2294,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
-        "commentCoverage": 0.13089005235602094,
+        "commentCoverage": 0.13077593722755013,
         "limited": false,
         "points": 392,
         "themes": [
@@ -6317,10 +6316,10 @@
         "storyCoverage": 0.27002700270027,
         "estimatedRelevantDiscussions": 122,
         "isEstimated": true,
-        "rawCommentHits": 6744,
+        "rawCommentHits": 6745,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.04448398576512456,
+        "commentCoverage": 0.04447739065974796,
         "limited": false,
         "points": 1068,
         "themes": [
@@ -6409,8 +6408,8 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 150,
-        "fetchedStoryCount": 150,
+        "rawStoryHits": 149,
+        "fetchedStoryCount": 149,
         "validatedStoryCount": 39,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 46,
@@ -6518,10 +6517,10 @@
         "storyCoverage": 0.5347593582887701,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10657,
+        "rawCommentHits": 10658,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.028150511400957118,
+        "commentCoverage": 0.0281478701444924,
         "limited": false,
         "points": 240,
         "themes": [
@@ -6767,10 +6766,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4293,
+        "rawCommentHits": 4292,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 53,
-        "commentCoverage": 0.06988120195667366,
+        "commentCoverage": 0.06989748369058714,
         "limited": true,
         "points": 240,
         "themes": [
