@@ -54,7 +54,12 @@ body{
  * The landing's treatment: fixed, translucent, compact. The dashboard's was
  * static, 26px-padded, with a 34px wordmark sitting directly on photography.
  */
-:root{ --header-h:64px; }
+:root{
+  --header-h:64px;
+  /* --header-h plus the dashboard's sticky .topnav; anchor targets must clear
+     BOTH, since the header is fixed and the topnav sticks directly below it. */
+  --chrome-h:126px;
+}
 .site-header{
   position:fixed;top:0;left:0;right:0;z-index:60;
   backdrop-filter:blur(14px) saturate(1.3);
