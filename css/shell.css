@@ -35,14 +35,17 @@ body{
 }
 
 /* ---------- measure ----------
- * The landing held a visible 1240px column while the dashboard ran to the
- * viewport edge. Side by side that read as "two products" more strongly than
- * the palette did.
+ * Both pages already constrained their content — landing to 1200px, dashboard
+ * to 1240px — neither ran to the viewport edge. What did was the dashboard's
+ * ocean photograph (removed above), sitting full-bleed behind the wrap. This
+ * just unifies the two content widths on one token.
  */
 .wrap{
   max-width:var(--maxw);
   margin:0 auto;
-  padding:0 clamp(16px,4vw,48px);
+  /* Landing's 32px desktop gutter wins (landing is canonical); clamped so it
+     shrinks on narrow viewports. Dashboard's gutter tightens 48px -> 32px. */
+  padding:0 clamp(20px,4vw,32px);
   position:relative;
   z-index:2;
 }
