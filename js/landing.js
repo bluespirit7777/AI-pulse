@@ -299,27 +299,49 @@ function wireGlow() {
   else img.addEventListener('load', draw, { once: true });
 }
 
-// Depth rail: fades in past the hero and tracks the section in view.
+// Depth rail. This REPORTS which evidence depths the section in view spans —
+// it is not a second navigation.
+//
+// That distinction is the whole point: depth used to be the landing's scroll
+// spine while being a property of content on the dashboard, so the model a
+// visitor had just learned stopped predicting anything the moment they
+// crossed over. Both pages now say the same thing with the same component
+// (compare updateDepthRailMulti() in js/nav.js).
+//
+// Reads are batched into a rAF so the scroll handler does not force layout on
+// every event; the setTimeout backstop follows the same reasoning as
+// wireReveal — rAF is not guaranteed to fire in this project's test browser.
 function wireRail() {
   const rail = $('#lp-rail');
   const hero = $('#lp-hero-media');
   if (!rail) return;
-  const links = $$('a[data-r]', rail);
-  const onScroll = () => {
+  const items = $$('.depth-item', rail);
+  const bands = $$('[data-depth]').filter((el) => el !== rail && !rail.contains(el));
+
+  const paint = () => {
     const y = scrollY;
     rail.classList.toggle('show', y > innerHeight * 0.7);
     if (hero && y < innerHeight && !prefersReducedMotion) {
       hero.style.transform = `translate3d(0,${y * 0.18}px,0)`;
     }
-    let current = links[0];
-    links.forEach((a) => {
-      const target = document.getElementById(a.dataset.r);
-      if (target && target.getBoundingClientRect().top < innerHeight * 0.45) current = a;
-    });
-    links.forEach((a) => a.classList.toggle('on', a === current));
+    // the band whose top has most recently passed the 45% line is "in view"
+    let current = bands[0];
+    for (const b of bands) {
+      if (b.getBoundingClientRect().top < innerHeight * 0.45) current = b;
+    }
+    const active = new Set((current?.dataset.depth || '').split(/\s+/).filter(Boolean));
+    items.forEach((el) => { el.dataset.active = String(active.has(el.dataset.depth)); });
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { paint(); ticking = false; });
   };
   addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  paint();
+  setTimeout(paint, 1400);
 }
 
 // ---------------------------------------------------------------- boot

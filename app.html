@@ -161,37 +161,10 @@
   .how-it-works summary{cursor:pointer;color:var(--teal);font-weight:600;list-style:revert;}
   .how-it-works[open] summary{margin-bottom:6px;}
 
-  /* ---------- depth rail: Surface / Currents / Midwater / Seabed ----------
-     A slim horizontal status strip directly under the top nav, at every
-     viewport width — not a floating sidebar. A fixed sidebar competing with
-     the 1240px-wide .wrap has no clean clearance at any of the required
-     desktop breakpoints (it overlapped content even at 1440px). It's
-     intentionally NOT sticky (unlike .topnav): stacking two sticky bars
-     requires the second one's offset to exactly match the first's rendered
-     height, which varies between the single-row desktop topnav and the
-     two-row wrapped mobile topnav — without the ability to pixel-verify
-     that visually this session, a static bar that never risks overlapping
-     the nav is the safer, honestly-verifiable choice. */
-  .depth-rail{
-    display:flex;flex-direction:row;justify-content:center;gap:20px;
-    background:var(--panel-solid);border-bottom:1px solid var(--border);
-    padding:8px 12px;
-  }
-  .depth-item{
-    font-family:var(--font-mono);font-size:9.5px;letter-spacing:.04em;color:var(--ink-dim);
-    display:flex;align-items:center;gap:6px;text-align:center;
-    opacity:.55;transition:opacity .2s ease;
-  }
-  .depth-item i{width:8px;height:8px;border-radius:50%;background:var(--ink-dim);border:2px solid transparent;display:block;flex-shrink:0;}
-  .depth-item small{font-size:8.5px;color:var(--ink-dim);line-height:1.2;}
-  .depth-item[data-active="true"]{opacity:1;}
-  .depth-item[data-active="true"] i{background:var(--teal);border-color:var(--sea);box-shadow:0 0 0 3px rgba(62,143,163,0.18);}
-  .depth-item[data-active="true"]{color:var(--deep);}
-  @media (max-width:640px){
-    .depth-rail{gap:10px;justify-content:space-around;}
-    .depth-item{flex-direction:column;gap:2px;}
-    .depth-item small{display:none;}
-  }
+  /* ---------- depth rail ----------
+     Markup and styling now live in css/shell.css as the shared .depth-rail /
+     .depth-item component — see the comment there. This page's rail is
+     always visible (no fade-in class), unlike the landing's #lp-rail. */
 
   /* ---------- layout ---------- */
   section{padding:36px 0;scroll-margin-top:var(--chrome-h);}

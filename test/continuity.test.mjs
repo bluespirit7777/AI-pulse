@@ -155,3 +155,29 @@ test('no landing id collides with the deeplink forwarder allowlist', () => {
     assert.ok(!re.test('#' + id), `landing id #${id} would be forwarded to app.html by deeplink.js`);
   }
 });
+
+test('the landing rail is a depth READOUT, not a second navigation', () => {
+  // This is the fix for the core problem: depth was the scroll spine on the
+  // landing and a property of content on the dashboard, so the mental model a
+  // visitor had just learned stopped predicting anything at the transition.
+  const railMatch = landingHtml.match(/<div class="depth-rail"[\s\S]*?<\/div>/);
+  assert.ok(railMatch, 'landing must carry a .depth-rail');
+  assert.doesNotMatch(railMatch[0], /<a\b/, 'the rail must contain no links — it reports, it does not navigate');
+  assert.match(railMatch[0], /data-depth="surface"/, 'rail must report depths');
+});
+
+test('both pages use the same depth-rail markup contract', () => {
+  for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
+    for (const d of ['surface', 'currents', 'midwater', 'seabed']) {
+      assert.match(html, new RegExp(`data-depth="${d}"`), `${name} must report the ${d} depth`);
+    }
+  }
+});
+
+test('the landing bands declare which depths they span', () => {
+  for (const id of ['today', 'ecosystem', 'models', 'markets', 'research']) {
+    const band = landingHtml.match(new RegExp(`<[^>]+id="${id}"[^>]*>`));
+    assert.ok(band, `#${id} not found`);
+    assert.match(band[0], /data-depth="/, `#${id} must declare its depth span`);
+  }
+});

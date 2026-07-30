@@ -90,15 +90,6 @@ nav.links{display:flex;gap:2px}
 .ticker .it b{font-family:var(--mono);font-weight:500;color:var(--deep);font-variant-numeric:tabular-nums}
 .ticker .it s{text-decoration:none;width:5px;height:5px;border-radius:50%;background:var(--shallow);flex:none}
 
-/* ---------- depth rail ---------- */
-.rail{position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:50;display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);box-shadow:0 14px 34px -20px rgba(27,75,90,.55);opacity:0;transition:opacity .5s;pointer-events:none}
-.rail.show{opacity:1;pointer-events:auto}
-.rail a{display:flex;align-items:center;gap:11px;padding:7px 0;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);transition:.3s}
-.rail a i{display:block;width:22px;height:1px;background:currentColor;transition:.3s}
-.rail a.on{color:var(--ink)}
-.rail a.on i{width:40px;background:var(--warm)}
-.rail a:hover{color:var(--ink)}
-
 /* ---------- split sections ---------- */
 section.band{padding:88px 0 0;position:relative;isolation:isolate}
 .glowwrap{position:absolute;inset:-4% 0;z-index:-1;overflow:hidden;pointer-events:none;
@@ -186,7 +177,6 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 @media(max-width:900px){
   .wrap{padding:0 20px}
   nav.links,.live-cluster{display:none}
-  .rail{display:none}
   /* .split.flip must be named explicitly: it is more specific (0,2,0) than a
      bare .split (0,1,0), and a media query adds no specificity of its own, so
      ".split{grid-template-columns:1fr}" alone leaves the flipped sections
@@ -233,11 +223,11 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </div>
 </header>
 
-<div class="rail" id="lp-rail" aria-label="Page progress">
-  <a href="#today" data-r="today"><i aria-hidden="true"></i>Surface</a>
-  <a href="#ecosystem" data-r="ecosystem"><i aria-hidden="true"></i>Currents</a>
-  <a href="#models" data-r="models"><i aria-hidden="true"></i>Midwater</a>
-  <a href="#research" data-r="research"><i aria-hidden="true"></i>Seabed</a>
+<div class="depth-rail" id="lp-rail" role="status" aria-label="Evidence depth of the section in view">
+  <span class="depth-item" data-depth="surface"><i aria-hidden="true"></i>Surface<small>fast &amp; recent</small></span>
+  <span class="depth-item" data-depth="currents"><i aria-hidden="true"></i>Currents<small>actively moving</small></span>
+  <span class="depth-item" data-depth="midwater"><i aria-hidden="true"></i>Midwater<small>gaining evidence</small></span>
+  <span class="depth-item" data-depth="seabed"><i aria-hidden="true"></i>Seabed<small>slow &amp; structural</small></span>
 </div>
 
 <div class="hero">
@@ -261,7 +251,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 <!-- SURFACE -->
 <span id="surface" class="anchor-alias" aria-hidden="true"></span>
-<section class="band" id="today" aria-labelledby="lp-h-today">
+<section class="band" id="today" data-depth="surface currents" aria-labelledby="lp-h-today">
 <div class="wrap">
   <div class="split rv">
     <figure class="fig">
@@ -291,7 +281,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 <!-- CURRENTS -->
 <span id="currents" class="anchor-alias" aria-hidden="true"></span>
-<section class="band" id="ecosystem" aria-labelledby="lp-h-ecosystem">
+<section class="band" id="ecosystem" data-depth="currents" aria-labelledby="lp-h-ecosystem">
 <div class="wrap">
   <div class="split flip rv">
     <figure class="fig">
@@ -311,7 +301,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </section>
 
 <!-- MIDWATER -->
-<section class="band" id="models" aria-labelledby="lp-h-models">
+<section class="band" id="models" data-depth="midwater" aria-labelledby="lp-h-models">
 <div class="glowwrap" aria-hidden="true"><canvas class="glow" id="lp-glow" width="128" height="96"></canvas></div>
 <div class="wrap">
   <div class="split rv">
@@ -343,7 +333,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </section>
 
 <!-- MARKETS -->
-<section class="band" id="markets" aria-labelledby="lp-h-markets">
+<section class="band" id="markets" data-depth="seabed" aria-labelledby="lp-h-markets">
 <div class="wrap">
   <div class="split flip rv">
     <figure class="fig">
@@ -364,7 +354,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 <!-- SEABED -->
 <span id="seabed" class="anchor-alias" aria-hidden="true"></span>
-<div class="deepband" id="research">
+<div class="deepband" id="research" data-depth="seabed">
 <div class="caust" aria-hidden="true"></div>
 <div class="wrap">
   <p class="eyebrow rv">Seabed · slow &amp; structural</p>

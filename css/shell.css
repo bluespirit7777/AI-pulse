@@ -121,3 +121,40 @@ body{
 /* .site-header is fixed and 64px tall, so it contributes no flow height.
    Offset the document once, here, rather than per-page. */
 body{padding-top:var(--header-h);}
+
+/* ---------- depth rail ----------
+ * A READOUT on both pages: it reports which evidence depths the current view
+ * spans. It is never navigation. The landing fades it in past the hero; the
+ * dashboard shows it always.
+ */
+.depth-rail{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 16px;}
+.depth-item{
+  display:flex;align-items:center;gap:6px;opacity:.45;
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-soft);transition:opacity .3s,color .3s;
+}
+.depth-item i{
+  width:8px;height:8px;border-radius:50%;background:var(--ink-dim);
+  border:2px solid transparent;display:block;flex-shrink:0;
+}
+.depth-item small{font-size:8.5px;color:var(--ink-dim);line-height:1.2;text-transform:none;letter-spacing:0;}
+.depth-item[data-active="true"]{opacity:1;color:var(--deep);}
+.depth-item[data-active="true"] i{
+  background:var(--teal);border-color:var(--sea);box-shadow:0 0 0 3px rgba(62,143,163,0.18);
+}
+@media (max-width:640px){
+  .depth-item{flex-direction:column;gap:2px;}
+  .depth-item small{display:none;}
+}
+
+/* The landing floats its rail and reveals it past the hero. */
+#lp-rail{
+  position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:50;
+  flex-direction:column;align-items:flex-start;gap:2px;
+  padding:12px 14px;border-radius:14px;
+  background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);
+  box-shadow:0 14px 34px -20px rgba(27,75,90,.55);
+  opacity:0;transition:opacity .5s;pointer-events:none;
+}
+#lp-rail.show{opacity:1;}
+@media (max-width:900px){ #lp-rail{display:none;} }
