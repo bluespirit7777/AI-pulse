@@ -129,3 +129,29 @@ test('both pages link the shared component stylesheet', () => {
     assert.match(html, /<link[^>]+href="css\/components\.css"/, `${name} must link css/components.css`);
   }
 });
+
+test('the landing bands carry the dashboard\'s panel names', () => {
+  for (const id of ['today', 'ecosystem', 'models', 'markets', 'research']) {
+    assert.match(landingHtml, new RegExp(`id="${id}"`), `landing must have a #${id} band`);
+  }
+});
+
+test('the old landing anchors still resolve, so existing links do not break', () => {
+  for (const id of ['surface', 'currents', 'seabed']) {
+    assert.match(landingHtml, new RegExp(`id="${id}"`), `legacy anchor #${id} must survive as an alias`);
+  }
+});
+
+test('no landing id collides with the deeplink forwarder allowlist', () => {
+  // js/deeplink.js forwards /^#(full$|panel-|tab-|sec-)/ to app.html. A landing
+  // id matching that pattern would bounce visitors off the landing page the
+  // moment they clicked its own nav.
+  const deeplinkJs = read('js/deeplink.js');
+  const src = deeplinkJs.match(/if \(!(\/\^#\([^/]+\)\/)\.test\(hash\)\) return;/)?.[1];
+  assert.ok(src, 'could not locate the hash predicate in js/deeplink.js');
+  const re = new RegExp(src.slice(1, -1));
+  const ids = [...landingHtml.matchAll(/id="([^"]+)"/g)].map((m) => m[1]);
+  for (const id of ids) {
+    assert.ok(!re.test('#' + id), `landing id #${id} would be forwarded to app.html by deeplink.js`);
+  }
+});

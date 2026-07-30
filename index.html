@@ -208,21 +208,25 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
   .glowwrap{display:none}
   .js .rv{opacity:1;transform:none}
 }
+
+/* Legacy anchor targets. The landing's bands were renamed to match the
+   dashboard's panel names; these keep older shared links resolving. */
+.anchor-alias{display:block;height:0;scroll-margin-top:64px;}
 </style>
 </head>
 <body>
 
-<a class="skip-link" href="#surface">Skip to content</a>
+<a class="skip-link" href="#today">Skip to content</a>
 
 <header class="site-header">
 <div class="wrap">
   <div class="site-brand"><b>AI Market Pulse</b><span>Quiet view</span></div>
   <nav class="links" aria-label="Sections of this page">
-    <a class="nav-pill" href="#surface">Today</a>
-    <a class="nav-pill" href="#currents">Ecosystem</a>
+    <a class="nav-pill" href="#today">Today</a>
+    <a class="nav-pill" href="#ecosystem">Ecosystem</a>
     <a class="nav-pill" href="#models">Models</a>
     <a class="nav-pill" href="#markets">Markets</a>
-    <a class="nav-pill" href="#seabed">Research</a>
+    <a class="nav-pill" href="#research">Research</a>
   </nav>
   <div class="live-cluster"><span class="dot" aria-hidden="true"></span><span id="lp-clock">--:--:--</span> UTC</div>
   <a class="nav-pill nav-pill--cta" href="app.html">Open dashboard</a>
@@ -230,10 +234,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </header>
 
 <div class="rail" id="lp-rail" aria-label="Page progress">
-  <a href="#surface" data-r="surface"><i aria-hidden="true"></i>Surface</a>
-  <a href="#currents" data-r="currents"><i aria-hidden="true"></i>Currents</a>
+  <a href="#today" data-r="today"><i aria-hidden="true"></i>Surface</a>
+  <a href="#ecosystem" data-r="ecosystem"><i aria-hidden="true"></i>Currents</a>
   <a href="#models" data-r="models"><i aria-hidden="true"></i>Midwater</a>
-  <a href="#seabed" data-r="seabed"><i aria-hidden="true"></i>Seabed</a>
+  <a href="#research" data-r="research"><i aria-hidden="true"></i>Seabed</a>
 </div>
 
 <div class="hero">
@@ -247,7 +251,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     <p class="lede rv">AI news, benchmarks and prices — sorted by depth, not by noise.</p>
     <div class="cta rv">
       <a class="btn p" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a>
-      <a class="btn s" href="#seabed">How it works</a>
+      <a class="btn s" href="#research">How it works</a>
     </div>
   </div>
   <div class="scrolltip" aria-hidden="true">Descend</div>
@@ -256,7 +260,8 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 <div class="ticker"><div class="row" id="lp-ticker"></div></div>
 
 <!-- SURFACE -->
-<section class="band" id="surface" aria-labelledby="lp-h-surface">
+<span id="surface" class="anchor-alias" aria-hidden="true"></span>
+<section class="band" id="today" aria-labelledby="lp-h-today">
 <div class="wrap">
   <div class="split rv">
     <figure class="fig">
@@ -265,7 +270,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     </figure>
     <div class="copy">
       <p class="depth"><b>Surface</b><s></s>fast &amp; recent</p>
-      <h2 id="lp-h-surface">What just moved</h2>
+      <h2 id="lp-h-today">What just moved</h2>
       <p class="sub">The strongest signals of the last cycle, duplicate coverage merged into one entry and scored 0–100 for significance.</p>
       <div class="tabs" role="tablist" aria-label="Surface views">
         <button type="button" role="tab" id="tb-waves" aria-controls="pn-waves" aria-selected="true" data-tab="waves">Waves</button>
@@ -285,7 +290,8 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </section>
 
 <!-- CURRENTS -->
-<section class="band" id="currents" aria-labelledby="lp-h-currents">
+<span id="currents" class="anchor-alias" aria-hidden="true"></span>
+<section class="band" id="ecosystem" aria-labelledby="lp-h-ecosystem">
 <div class="wrap">
   <div class="split flip rv">
     <figure class="fig">
@@ -294,7 +300,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     </figure>
     <div class="copy">
       <p class="depth"><b>Currents</b><s></s>actively moving</p>
-      <h2 id="lp-h-currents">Where attention goes</h2>
+      <h2 id="lp-h-ecosystem">Where attention goes</h2>
       <p class="sub">Worldwide web-visit share across the major assistants.</p>
       <div class="bars" id="lp-share"></div>
       <p class="meta" id="lp-share-meta"></p>
@@ -357,7 +363,8 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </section>
 
 <!-- SEABED -->
-<div class="deepband" id="seabed">
+<span id="seabed" class="anchor-alias" aria-hidden="true"></span>
+<div class="deepband" id="research">
 <div class="caust" aria-hidden="true"></div>
 <div class="wrap">
   <p class="eyebrow rv">Seabed · slow &amp; structural</p>

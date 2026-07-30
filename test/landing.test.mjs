@@ -137,7 +137,8 @@ test('deeplink forwarder catches every dashboard hash shape and no landing ancho
   for (const h of dashboard) assert.ok(re.test(h), `${h} must be forwarded to app.html`);
 
   // The landing's own anchors must never be captured.
-  for (const h of ['#surface', '#currents', '#models', '#markets', '#seabed']) {
+  for (const h of ['#today', '#ecosystem', '#models', '#markets', '#research',
+                   '#surface', '#currents', '#seabed']) {
     assert.ok(!re.test(h), `${h} is a landing anchor and must not be forwarded`);
   }
   // '#full' is anchored, so a longer hash that merely starts with it is safe.
