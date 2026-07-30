@@ -48,7 +48,7 @@ let correctionTimer = null;
 function panelEl(panel) { return document.getElementById('panel-' + panel); }
 function tabEl(tab) { return document.getElementById('tab-' + tab); }
 function tabBtn(tab) { return document.getElementById('tabbtn-' + tab); }
-function topnavBtn(panel) { return document.querySelector(`.topnav-item[data-panel="${panel}"]`); }
+function topnavBtn(panel) { return document.querySelector(`.nav-pill[data-panel="${panel}"]`); }
 
 // appendChild on a node already in the document MOVES it rather than
 // duplicating it, so calling this in sequence for each panel in `order`
@@ -246,7 +246,7 @@ export function activateFullPage({ push = true } = {}) {
   const main = document.getElementById('main-content');
   if (main) main.dataset.reordered = '1';
 
-  document.querySelectorAll('.topnav-item').forEach((btn) => {
+  document.querySelectorAll('.nav-pill[data-panel]').forEach((btn) => {
     if (btn.dataset.panel === 'full') btn.setAttribute('aria-current', 'page');
     else btn.removeAttribute('aria-current');
   });
@@ -256,7 +256,7 @@ export function activateFullPage({ push = true } = {}) {
 }
 
 function wireTopnav() {
-  document.querySelectorAll('.topnav-item').forEach((btn) => {
+  document.querySelectorAll('.nav-pill[data-panel]').forEach((btn) => {
     btn.addEventListener('click', () => {
       if (btn.dataset.panel === 'full') activateFullPage();
       else goTo(btn.dataset.panel, null);

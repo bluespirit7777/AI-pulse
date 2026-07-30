@@ -44,24 +44,9 @@ p{margin:0;text-wrap:pretty}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tide);font-weight:500}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--paper);color:var(--deep);padding:10px 16px;border-radius:0 0 10px 0}
 .skip-link:focus{left:0}
-:focus-visible{outline:2px solid var(--warm);outline-offset:3px;border-radius:4px}
 
 /* ---------- nav ---------- */
-header.nav{position:fixed;top:0;left:0;right:0;z-index:60;backdrop-filter:blur(14px) saturate(1.3);background:rgba(253,254,254,.88);border-bottom:1px solid rgba(185,212,215,.55)}
-.nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
-.brand{display:flex;align-items:baseline;gap:10px;margin-right:auto}
-.brand b{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--deep)}
-.brand span{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--tide)}
 nav.links{display:flex;gap:2px}
-nav.links a{font-size:13px;padding:7px 13px;border-radius:999px;color:var(--mid);transition:.25s}
-nav.links a:hover{background:var(--glass);color:var(--deep)}
-nav.links a.on{background:var(--deep);color:var(--paper)}
-.navcta{font-size:12.5px;font-weight:500;letter-spacing:.03em;padding:9px 17px;border-radius:999px;background:var(--deep);color:var(--paper);white-space:nowrap;transition:.3s}
-.navcta:hover{background:var(--ink);color:var(--paper)}
-.live{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);font-variant-numeric:tabular-nums}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--warm)}
-@media (prefers-reduced-motion:no-preference){.dot{animation:pulse 2.6s ease-in-out infinite}}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
@@ -203,7 +188,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 @media(max-width:900px){
   .wrap{padding:0 20px}
-  nav.links,.live{display:none}
+  nav.links,.live-cluster{display:none}
   .rail{display:none}
   /* .split.flip must be named explicitly: it is more specific (0,2,0) than a
      bare .split (0,1,0), and a media query adds no specificity of its own, so
@@ -232,18 +217,18 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 <a class="skip-link" href="#surface">Skip to content</a>
 
-<header class="nav">
+<header class="site-header">
 <div class="wrap">
-  <div class="brand"><b>AI Market Pulse</b><span>Quiet view</span></div>
+  <div class="site-brand"><b>AI Market Pulse</b><span>Quiet view</span></div>
   <nav class="links" aria-label="Sections of this page">
-    <a href="#surface">Today</a>
-    <a href="#currents">Ecosystem</a>
-    <a href="#models">Models</a>
-    <a href="#markets">Markets</a>
-    <a href="#seabed">Research</a>
+    <a class="nav-pill" href="#surface">Today</a>
+    <a class="nav-pill" href="#currents">Ecosystem</a>
+    <a class="nav-pill" href="#models">Models</a>
+    <a class="nav-pill" href="#markets">Markets</a>
+    <a class="nav-pill" href="#seabed">Research</a>
   </nav>
-  <div class="live"><span class="dot" aria-hidden="true"></span><span id="lp-clock">--:--:--</span> UTC</div>
-  <a class="navcta" href="app.html">Open dashboard</a>
+  <div class="live-cluster"><span class="dot" aria-hidden="true"></span><span id="lp-clock">--:--:--</span> UTC</div>
+  <a class="nav-pill nav-pill--cta" href="app.html">Open dashboard</a>
 </div>
 </header>
 

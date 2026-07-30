@@ -66,39 +66,9 @@
   }
   .skip-link:focus{top:12px;}
 
-  /* ---------- header ---------- */
-  .header{
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
-    padding:26px clamp(16px,4vw,48px);
-    flex-wrap:wrap;position:relative;z-index:2;
-  }
-  .brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;}
-  .brand h1{
-    font-family:var(--font-display);font-weight:700;font-size:34px;margin:0;letter-spacing:.01em;
-    color:var(--deep);
-  }
-  /* the wordmark doubles as the way back to the landing page (index.html) */
-  .brand h1 a{color:inherit;text-decoration:none;}
-  .brand h1 a:hover,.brand h1 a:focus-visible{color:var(--teal);}
-  .brand .sub{font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--ink-soft);letter-spacing:.13em;}
-  .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);}
-  .header-right-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end;}
-  .landing-link{
-    display:inline-flex;align-items:center;gap:6px;
-    font-family:var(--font-mono);font-size:11px;letter-spacing:.04em;
-    color:var(--ink-soft);background:var(--panel-solid);border:1px solid var(--border);
-    padding:6px 12px;border-radius:20px;white-space:nowrap;text-decoration:none;
-    transition:color .2s,border-color .2s,background .2s;
-  }
-  .landing-link:hover,.landing-link:focus-visible{color:var(--deep);border-color:var(--border-strong);background:var(--foam);}
-  .live-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:6px;}
-  @media (prefers-reduced-motion: no-preference){
-    .live-dot{animation:breathe 4s ease-in-out infinite;}
-  }
-  @keyframes breathe{
-    0%,100%{opacity:1;}
-    50%{opacity:.35;}
-  }
+  /* ---------- header ----------
+     .header, .brand, .header-right, .landing-link and .live-dot are gone —
+     css/shell.css now owns .site-header/.site-brand/.live-cluster. */
   .clock{color:var(--deep);}
   .snapshot-pill{
     font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);
@@ -136,40 +106,26 @@
     z-index:3;transition:background .15s,color .15s;
   }
   .ticker-toggle:hover{background:var(--foam);color:var(--deep);}
-  .ticker-toggle:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
   /* Reduced motion: no auto-scroll — present the strip as a manually scrollable list */
   @media (prefers-reduced-motion: reduce){
     .ticker-wrap{overflow-x:auto;}
     .ticker-toggle{display:none;}
   }
 
-  /* ---------- sticky top nav: 5 primary destinations ---------- */
+  /* ---------- sticky top nav: 5 primary destinations ----------
+     Items are css/shell.css's shared .nav-pill/.nav-pill--mode now; only the
+     bar itself and its mobile wrap behaviour stay page-local. */
   .topnav{
-    position:sticky;top:0;z-index:40;background:var(--panel-solid);
+    position:sticky;top:64px;z-index:40;background:var(--panel-solid);
     border-bottom:1px solid var(--border);display:flex;gap:8px;padding:12px clamp(16px,4vw,48px);
     overflow-x:auto;align-items:center;
   }
-  .topnav-item{
-    font-family:var(--font-body);font-weight:600;font-size:13.5px;letter-spacing:.03em;white-space:nowrap;
-    color:var(--deep);background:transparent;
-    padding:9px 18px;border-radius:22px;border:1px solid var(--border-strong);
-    cursor:pointer;transition:background .2s ease, color .2s ease, transform .15s ease;
-    min-height:40px;
-  }
-  .topnav-item:hover{background:var(--foam);transform:translateY(-1px);}
-  .topnav-item:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
-  .topnav-item[aria-current="page"]{background:var(--deep);border-color:var(--deep);color:#fff;}
-  /* "Full page" is a different kind of nav item (a view-mode toggle, not one
-     of the 5 destinations) — a dashed border marks that distinction without
-     relying on color alone. */
-  .topnav-item--full{border-style:dashed;color:var(--ink-soft);}
-  .topnav-item--full[aria-current="page"]{border-style:solid;}
   /* Mobile: wrap the 5 destinations into rows instead of a horizontal-scroll
      strip (Phase 8) — with only 5 items this fits in 2 short rows, no
      hidden/overflow content and no swipe-to-discover required. */
   @media (max-width:560px){
     .topnav{flex-wrap:wrap;overflow-x:visible;justify-content:center;gap:6px;padding:10px clamp(12px,4vw,24px);}
-    .topnav-item{padding:8px 13px;font-size:12.5px;}
+    .nav-pill{padding:8px 13px;font-size:12.5px;}
   }
 
   /* ---------- local tabs: within a top-level section ---------- */
@@ -199,7 +155,6 @@
   .one-line-note{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
   .how-it-works{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);flex-basis:100%;}
   .how-it-works summary{cursor:pointer;color:var(--teal);font-weight:600;list-style:revert;}
-  .how-it-works summary:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
   .how-it-works[open] summary{margin-bottom:6px;}
 
   /* ---------- depth rail: Surface / Currents / Midwater / Seabed ----------
@@ -612,28 +567,28 @@
     </svg>
   </div>
 
-  <div class="header">
-    <div class="brand">
-      <h1><a href="./" title="Back to the landing page">AI Market Pulse</a></h1>
-      <span class="sub">A QUIET VIEW OF A LOUD INDUSTRY</span>
-    </div>
-    <div class="header-right">
-      <div class="header-right-top">
-        <span><span class="live-dot"></span>LIVE</span>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="site-brand">
+        <h1><a href="./" title="Back to the landing page">AI Market Pulse</a></h1>
+        <span>A quiet view of a loud industry</span>
+      </div>
+      <div class="live-cluster">
+        <span class="dot" aria-hidden="true"></span>
         <span class="clock" id="clock">--:--:--</span>
         <span class="snapshot-pill" id="snapshot-pill">Loading latest snapshot…</span>
       </div>
-      <a class="landing-link" href="./" title="Back to the landing page">Landing page</a>
+      <a class="nav-pill nav-pill--cta" href="./" title="Back to the landing page">Landing page</a>
     </div>
-  </div>
+  </header>
 
   <nav class="topnav" aria-label="Main navigation" id="topnav">
-    <button type="button" class="topnav-item topnav-item--full" data-panel="full" title="Show every section on one page, top to bottom">Full page</button>
-    <button type="button" class="topnav-item" data-panel="today" aria-current="page">Today</button>
-    <button type="button" class="topnav-item" data-panel="ecosystem">Ecosystem</button>
-    <button type="button" class="topnav-item" data-panel="models">Models</button>
-    <button type="button" class="topnav-item" data-panel="markets">Markets</button>
-    <button type="button" class="topnav-item" data-panel="research">Research</button>
+    <button type="button" class="nav-pill nav-pill--mode" data-panel="full" title="Show every section on one page, top to bottom">Full page</button>
+    <button type="button" class="nav-pill" data-panel="today" aria-current="page">Today</button>
+    <button type="button" class="nav-pill" data-panel="ecosystem">Ecosystem</button>
+    <button type="button" class="nav-pill" data-panel="models">Models</button>
+    <button type="button" class="nav-pill" data-panel="markets">Markets</button>
+    <button type="button" class="nav-pill" data-panel="research">Research</button>
   </nav>
 
   <div class="depth-rail" id="depth-rail" role="status" aria-label="Evidence depth of the current view">

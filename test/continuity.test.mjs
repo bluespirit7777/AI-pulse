@@ -87,3 +87,25 @@ test('one measure governs both pages', () => {
   const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
   assert.doesNotMatch(appStyles, /\.wrap\{[^}]*max-width:\s*\d+px/, 'app.html must not hardcode its own measure');
 });
+
+test('both pages use the shared header and brand classes', () => {
+  for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
+    assert.match(html, /class="[^"]*site-header/, `${name} must use .site-header`);
+    assert.match(html, /class="[^"]*site-brand/, `${name} must use .site-brand`);
+  }
+});
+
+test('both pages offer a reciprocal control to the other page, in the header', () => {
+  // The landing has always had "Open dashboard"; the dashboard's way back was
+  // a plain text link in a different position. Both are now pills in the same
+  // header slot, so the control does not move as you cross between pages.
+  assert.match(landingHtml, /class="[^"]*nav-pill[^"]*"[^>]*href="app\.html"/, 'landing needs its dashboard pill');
+  assert.match(appHtml, /class="[^"]*nav-pill[^"]*"[^>]*href="\.\/"/, 'dashboard needs its landing pill');
+});
+
+test('the focus ring is one colour across both pages', () => {
+  const shellCss = read('css/shell.css');
+  assert.match(shellCss, /:focus-visible\{[^}]*outline:[^;]*var\(--sand\)/, 'shared sand focus ring');
+  const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
+  assert.doesNotMatch(appStyles, /focus-visible\{[^}]*outline:\s*2px solid var\(--teal\)/, 'app.html must not keep its own teal focus ring');
+});

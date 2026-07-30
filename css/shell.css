@@ -49,3 +49,69 @@ body{
   position:relative;
   z-index:2;
 }
+
+/* ---------- header ----------
+ * The landing's treatment: fixed, translucent, compact. The dashboard's was
+ * static, 26px-padded, with a 34px wordmark sitting directly on photography.
+ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  backdrop-filter:blur(14px) saturate(1.3);
+  background:rgba(253,254,254,.88);
+  border-bottom:1px solid rgba(185,212,215,.55);
+}
+.site-header .wrap{display:flex;align-items:center;gap:24px;height:64px;}
+
+.site-brand{display:flex;align-items:baseline;gap:10px;margin-right:auto;}
+.site-brand b,.site-brand h1{
+  font-family:var(--font-display);font-weight:700;font-size:22px;
+  color:var(--deep);margin:0;letter-spacing:.01em;
+}
+.site-brand a{color:inherit;text-decoration:none;}
+.site-brand a:hover,.site-brand a:focus-visible{color:var(--teal);}
+.site-brand span{
+  font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sea);
+}
+
+/* ---------- nav pills ----------
+ * One pill for both pages' navigation and for the reciprocal cross-page
+ * control, so the chrome does not change shape as you move between them.
+ */
+.nav-pill{
+  font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.03em;
+  white-space:nowrap;padding:7px 13px;border-radius:999px;
+  color:var(--teal);background:transparent;border:1px solid transparent;
+  cursor:pointer;text-decoration:none;transition:background .25s,color .25s,transform .15s;
+}
+.nav-pill:hover{background:var(--glass);color:var(--deep);transform:translateY(-1px);}
+.nav-pill[aria-current="page"],.nav-pill.is-current{
+  background:var(--deep);border-color:var(--deep);color:var(--paper);
+}
+.nav-pill--cta{background:var(--deep);color:var(--paper);padding:9px 17px;}
+.nav-pill--cta:hover{background:var(--ink);color:var(--paper);}
+/* "Full page" is a view-mode toggle, not a destination — a dashed border marks
+   that distinction without relying on colour alone. */
+.nav-pill--mode{border-style:dashed;border-color:var(--border-strong);color:var(--ink-soft);}
+.nav-pill--mode[aria-current="page"]{border-style:solid;}
+
+/* ---------- live / clock ---------- */
+.live-cluster{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--teal);font-variant-numeric:tabular-nums;
+}
+.live-cluster .dot{width:6px;height:6px;border-radius:50%;background:var(--sand);}
+@media (prefers-reduced-motion:no-preference){
+  .live-cluster .dot{animation:pulse 2.6s ease-in-out infinite;}
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+
+/* ---------- focus ----------
+ * One ring colour across both pages. The dashboard used teal, the landing sand.
+ */
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px;border-radius:4px;}
+
+/* .site-header is fixed and 64px tall, so it contributes no flow height.
+   Offset the document once, here, rather than per-page. */
+body{padding-top:64px;}
