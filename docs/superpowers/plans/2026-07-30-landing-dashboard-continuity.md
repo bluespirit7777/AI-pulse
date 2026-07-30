@@ -596,11 +596,11 @@ In `index.html`, replace the header block:
 <div class="wrap">
   <div class="site-brand"><b>AI Market Pulse</b><span>Quiet view</span></div>
   <nav class="links" aria-label="Sections of this page">
-    <a class="nav-pill" href="#today">Today</a>
-    <a class="nav-pill" href="#ecosystem">Ecosystem</a>
+    <a class="nav-pill" href="#surface">Today</a>
+    <a class="nav-pill" href="#currents">Ecosystem</a>
     <a class="nav-pill" href="#models">Models</a>
     <a class="nav-pill" href="#markets">Markets</a>
-    <a class="nav-pill" href="#research">Research</a>
+    <a class="nav-pill" href="#seabed">Research</a>
   </nav>
   <div class="live-cluster"><span class="dot" aria-hidden="true"></span><span id="lp-clock">--:--:--</span> UTC</div>
   <a class="nav-pill nav-pill--cta" href="app.html">Open dashboard</a>
@@ -608,7 +608,12 @@ In `index.html`, replace the header block:
 </header>
 ```
 
-The `href` values here anticipate Task 5's rename. Task 5 renames the sections to match; until then the anchors will not resolve, which is why the anchor-resolution test is updated in Task 5 and not here.
+**Keep the existing `href` values (`#surface`, `#currents`, `#seabed`) in this
+task.** This task changes CSS classes only. `test/landing.test.mjs` asserts that
+every `href="#…"` in `index.html` resolves to a real `id` on the page, so
+pointing these at `#today`/`#ecosystem`/`#research` before Task 5 creates those
+ids would fail the suite mid-plan. Task 5 flips the ids and these hrefs together
+in one commit.
 
 Then delete the superseded `header.nav`, `.nav .wrap`, `.brand`, `.brand b`, `.brand span`, `nav.links a`, `.navcta`, `.live`, `.dot`, `@keyframes pulse` and `:focus-visible` rules from `index.html`'s `<style>`. Keep `nav.links{display:flex;gap:2px}`.
 
@@ -913,13 +918,18 @@ new selector."
 ## Task 5: Re-key the landing's bands to the dashboard's panel names
 
 **Files:**
-- Modify: `index.html` (five section ids, nav hrefs already done in Task 3, per-band "more" links, alias anchors)
+- Modify: `index.html` (five section ids **and** the five header `href`s together, plus the skip link and alias anchors)
 - Modify: `test/landing.test.mjs` (the landing-anchor list, ~line 141)
 - Modify: `test/continuity.test.mjs`
 
 **Interfaces:**
-- Consumes: the header markup from Task 3, whose `href`s already point at the new ids.
+- Consumes: the header markup from Task 3, which still points at the OLD ids (`#surface`, `#currents`, `#seabed`).
 - Produces: landing section ids `today`, `ecosystem`, `models`, `markets`, `research`, plus alias anchors `surface`, `currents`, `seabed`.
+
+**Ordering requirement:** ids and `href`s must change in the SAME commit.
+`test/landing.test.mjs` asserts every `href="#…"` in `index.html` resolves to a
+real `id`, so changing one side alone breaks the suite. Task 3 deliberately left
+the hrefs untouched for this reason.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -971,6 +981,20 @@ In `index.html`:
 | 401 | `<div class="deepband" id="seabed">` | `<div class="deepband" id="research">` |
 
 Also update the skip link at the top of the file from `href="#surface"` to `href="#today"`.
+
+Then update the five header `href`s that Task 3 deliberately left alone, in the
+same commit:
+
+```html
+    <a class="nav-pill" href="#today">Today</a>
+    <a class="nav-pill" href="#ecosystem">Ecosystem</a>
+    <a class="nav-pill" href="#models">Models</a>
+    <a class="nav-pill" href="#markets">Markets</a>
+    <a class="nav-pill" href="#research">Research</a>
+```
+
+The per-band "more" links already point at `app.html#panel-*` / `app.html#tab-*`
+and must NOT change — those are dashboard deep links, not landing anchors.
 
 - [ ] **Step 4: Add alias anchors for the old ids**
 
