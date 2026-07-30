@@ -59,3 +59,36 @@
 /* The landing shows previews only — no notes, no bars. */
 .rank-row--preview .rank-row__note,
 .rank-row--preview .rank-row__bar{display:none;}
+
+/* ---------- section heading ----------
+ * The most-repeated element in the product: every band on the landing and
+ * every section on the dashboard carries one. The landing's treatment (a mono
+ * eyebrow over a serif title) becomes the shared one.
+ */
+.section-head{margin:0 0 18px;}
+.section-head__eyebrow{
+  display:block;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:8px;
+}
+.section-head__title{
+  font-family:var(--font-display);font-weight:500;letter-spacing:.005em;
+  color:var(--deep);margin:0;font-size:clamp(24px,3.2vw,34px);line-height:1.15;
+}
+.section-head__descriptor{
+  display:block;margin-top:6px;
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;
+  color:var(--ink-dim);text-transform:uppercase;
+}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-body);font-size:14px;font-weight:600;letter-spacing:.02em;
+  padding:12px 22px;border-radius:999px;border:1px solid transparent;
+  cursor:pointer;text-decoration:none;transition:background .25s,color .25s,transform .15s;
+}
+.btn--primary{background:var(--deep);color:var(--paper);}
+.btn--primary:hover{background:var(--ink);color:var(--paper);transform:translateY(-1px);}
+.btn--secondary{background:transparent;color:var(--deep);border-color:var(--border-strong);}
+.btn--secondary:hover{background:var(--glass);transform:translateY(-1px);}

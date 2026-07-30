@@ -42,7 +42,6 @@ a{color:var(--mid);text-decoration:none}
 a:hover{color:var(--warm)}
 h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.005em;margin:0;text-wrap:pretty}
 p{margin:0;text-wrap:pretty}
-.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tide);font-weight:500}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--paper);color:var(--deep);padding:10px 16px;border-radius:0 0 10px 0}
 .skip-link:focus{left:0}
 
@@ -65,14 +64,9 @@ nav.links{display:flex;gap:2px}
 .hero .wrap{padding-top:140px;padding-bottom:60px;position:relative}
 .hero h1{font-size:clamp(56px,8.6vw,124px);line-height:.94;color:var(--deep);max-width:15ch}
 .hero h1 em{font-style:italic;color:var(--mid)}
-.hero .eyebrow{color:var(--deep);background:rgba(253,254,254,.82);backdrop-filter:blur(8px);padding:6px 13px;border-radius:999px;width:max-content}
+.hero .section-head__eyebrow{color:var(--deep);background:rgba(253,254,254,.82);backdrop-filter:blur(8px);padding:6px 13px;border-radius:999px;width:max-content;margin-bottom:0}
 .hero .lede{margin-top:24px;font-family:var(--serif);font-size:clamp(19px,1.5vw,25px);line-height:1.5;color:var(--mid);max-width:38ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;font-size:13.5px;letter-spacing:.04em;font-weight:500;transition:.3s;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
-.btn.p{background:var(--deep);color:var(--paper)}
-.btn.p:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
-.btn.s{border-color:rgba(62,143,163,.45);color:var(--deep);background:rgba(253,254,254,.55)}
-.btn.s:hover{background:var(--paper);color:var(--deep)}
 .scrolltip{position:absolute;right:32px;bottom:60px;writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:12px;padding:14px 10px;border-radius:14px;background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);box-shadow:0 14px 34px -20px rgba(27,75,90,.55)}
 .scrolltip:after{content:"";width:1px;height:52px;background:linear-gradient(var(--mid),transparent)}
 @media (prefers-reduced-motion:no-preference){.scrolltip:after{animation:drop 2.8s ease-in-out infinite}}
@@ -112,9 +106,10 @@ section.band:has(.split.flip) .glowwrap{
 .fig img{width:100%;height:100%;object-fit:cover;display:block}
 .fig figcaption{position:absolute;top:16px;left:16px;z-index:4;background:rgba(253,254,254,.88);backdrop-filter:blur(8px);padding:6px 12px;border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);pointer-events:none}
 .copy{display:flex;flex-direction:column;gap:18px;min-width:0}
-.depth{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tide);display:flex;align-items:center;gap:9px}
-.depth b{font-weight:500;color:var(--deep)}
-.depth s{text-decoration:none;flex:1;height:1px;background:var(--glass);max-width:70px}
+/* .copy is a flex column that already spaces every child with `gap`; flex
+   gap does not collapse with a child's own margin the way block layout
+   would, so .section-head's shared margin-bottom would double up here. */
+.copy .section-head{margin-bottom:0}
 .copy h2{font-size:clamp(34px,3.6vw,50px);line-height:1.06;color:var(--deep)}
 .copy .sub{font-size:15px;line-height:1.6;color:var(--mid);max-width:42ch}
 .meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--tide);display:flex;align-items:center;gap:9px;flex-wrap:wrap;line-height:1.5}
@@ -152,7 +147,7 @@ section.band:has(.split.flip) .glowwrap{
 .deepband .wrap{position:relative;z-index:2}
 .deepband h2{color:var(--paper);font-size:clamp(32px,3.6vw,50px);max-width:22ch;margin-top:14px}
 .deepband .lede{margin-top:20px;font-family:var(--serif);font-size:19px;line-height:1.6;color:rgba(227,237,239,.86);max-width:46ch}
-.deepband .eyebrow{color:var(--shallow)}
+.deepband .section-head__eyebrow{color:var(--shallow)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
 .chips span{border:1px solid rgba(62,143,163,.6);color:var(--shallow);font-size:11.5px;letter-spacing:.06em;padding:7px 14px;border-radius:999px;transition:.3s}
 .chips span:hover{background:rgba(62,143,163,.3);color:var(--paper)}
@@ -236,12 +231,12 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     <video id="lp-hero-video" muted loop playsinline preload="none" poster="assets/hero-ocean-poster.jpg"></video>
   </div>
   <div class="wrap">
-    <p class="eyebrow rv"><span id="lp-today">Today</span></p>
+    <p class="section-head__eyebrow rv"><span id="lp-today">Today</span></p>
     <h1 class="rv">A quiet view of a <em>loud</em> industry.</h1>
     <p class="lede rv">AI news, benchmarks and prices — sorted by depth, not by noise.</p>
     <div class="cta rv">
-      <a class="btn p" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a>
-      <a class="btn s" href="#research">How it works</a>
+      <a class="btn btn--primary" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a>
+      <a class="btn btn--secondary" href="#research">How it works</a>
     </div>
   </div>
   <div class="scrolltip" aria-hidden="true">Descend</div>
@@ -259,8 +254,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
       <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
-      <p class="depth"><b>Surface</b><s></s>fast &amp; recent</p>
-      <h2 id="lp-h-today">What just moved</h2>
+      <div class="section-head rv">
+        <span class="section-head__eyebrow">Surface · fast &amp; recent</span>
+        <h2 class="section-head__title" id="lp-h-today">What just moved</h2>
+      </div>
       <p class="sub">The strongest signals of the last cycle, duplicate coverage merged into one entry and scored 0–100 for significance.</p>
       <div class="tabs" role="tablist" aria-label="Surface views">
         <button type="button" role="tab" id="tb-waves" aria-controls="pn-waves" aria-selected="true" data-tab="waves">Waves</button>
@@ -289,8 +286,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
       <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
-      <p class="depth"><b>Currents</b><s></s>actively moving</p>
-      <h2 id="lp-h-ecosystem">Where attention goes</h2>
+      <div class="section-head rv">
+        <span class="section-head__eyebrow">Currents · actively moving</span>
+        <h2 class="section-head__title" id="lp-h-ecosystem">Where attention goes</h2>
+      </div>
       <p class="sub">Worldwide web-visit share across the major assistants.</p>
       <div class="bars" id="lp-share"></div>
       <p class="meta" id="lp-share-meta"></p>
@@ -310,8 +309,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
       <img src="assets/ocean.jpg" alt="" id="lp-glow-src" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
-      <p class="depth"><b>Midwater</b><s></s>gaining evidence</p>
-      <h2 id="lp-h-models">Leaderboards</h2>
+      <div class="section-head rv">
+        <span class="section-head__eyebrow">Midwater · gaining evidence</span>
+        <h2 class="section-head__title" id="lp-h-models">Leaderboards</h2>
+      </div>
       <p class="sub">Ranked on published evaluations and human preference — not vendor claims. Anything unpublished is labelled an estimate.</p>
       <div class="tabs" role="tablist" aria-label="Leaderboard categories">
         <button type="button" role="tab" id="tb-text" aria-controls="pn-text" aria-selected="true" data-tab="text">Text</button>
@@ -341,8 +342,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
       <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
-      <p class="depth"><b>Markets</b><s></s>compute &amp; capital</p>
-      <h2 id="lp-h-markets">What an hour costs</h2>
+      <div class="section-head rv">
+        <span class="section-head__eyebrow">Markets · compute &amp; capital</span>
+        <h2 class="section-head__title" id="lp-h-markets">What an hour costs</h2>
+      </div>
       <p class="sub">Merged from real rented offers on public GPU marketplaces — actual listings, not estimates.</p>
       <div class="mini" id="lp-compute"></div>
       <p class="meta" id="lp-compute-meta"></p>
@@ -357,8 +360,10 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 <div class="deepband" id="research" data-depth="seabed">
 <div class="caust" aria-hidden="true"></div>
 <div class="wrap">
-  <p class="eyebrow rv">Seabed · slow &amp; structural</p>
-  <h2 class="rv">Some things only make sense at a slower frame rate.</h2>
+  <div class="section-head rv">
+    <span class="section-head__eyebrow">Seabed · slow &amp; structural</span>
+    <h2 class="section-head__title">Some things only make sense at a slower frame rate.</h2>
+  </div>
   <p class="lede rv">Research that hasn't landed, capital measured in years, policy still being drafted. Nothing here changes today — which is why it gets its own layer.</p>
   <div class="chips rv"><span>Impact over recency</span><span>Duplicates merged</span><span>Commentary excluded</span><span>Sources always linked</span><span>Estimates labelled as estimates</span></div>
 </div>
@@ -369,7 +374,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
   <div class="wrap">
     <h2 class="rv">Read the whole tide, once a day.</h2>
     <p class="rv">Everything above, kept current automatically, with every figure linked back to where it came from.</p>
-    <div class="cta rv"><a class="btn p" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a></div>
+    <div class="cta rv"><a class="btn btn--primary" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a></div>
   </div>
 </div>
 

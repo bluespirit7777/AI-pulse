@@ -168,13 +168,6 @@
 
   /* ---------- layout ---------- */
   section{padding:36px 0;scroll-margin-top:var(--chrome-h);}
-  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
-  .section-head h2{
-    font-family:var(--font-display);font-size:26px;font-weight:600;
-    margin:0;color:var(--deep);
-  }
-  .section-head .tag{font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--ink-soft);letter-spacing:.05em;}
-  .section-head .rule{flex:1;height:1px;background:var(--border-strong);align-self:center;}
 
   .asof{
     font-family:var(--font-mono);font-size:10.5px;letter-spacing:.05em;
@@ -578,9 +571,9 @@
 
       <div class="tabpanel" id="tab-waves" role="tabpanel" aria-labelledby="tabbtn-waves" data-depth="surface">
         <section id="sec-waves">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Today's strongest waves</h2>
-            <p class="section-ribbon__descriptor">The biggest product, market &amp; research moves</p>
+          <div class="section-head">
+            <h2 class="section-head__title">Today's strongest waves</h2>
+            <span class="section-head__descriptor">The biggest product, market &amp; research moves</span>
           </div>
           <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
           <div class="waves-grid" id="waves"></div>
@@ -589,9 +582,9 @@
 
       <div class="tabpanel" id="tab-river" role="tabpanel" aria-labelledby="tabbtn-river" data-depth="currents" hidden>
         <section id="sec-river">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Signal river</h2>
-            <p class="section-ribbon__descriptor">Every story crossing the wire, newest first</p>
+          <div class="section-head">
+            <h2 class="section-head__title">Signal river</h2>
+            <span class="section-head__descriptor">Every story crossing the wire, newest first</span>
           </div>
           <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list. Dot size reflects significance (0–100); filter by category, entity, or time window below.</details></p>
           <div id="river"></div>
@@ -600,9 +593,9 @@
 
       <div class="tabpanel" id="tab-tide" role="tabpanel" aria-labelledby="tabbtn-tide" data-depth="currents" hidden>
         <section id="sec-tide">
-          <div class="section-ribbon section-ribbon--research">
-            <h2 class="section-ribbon__title">The Tide</h2>
-            <p class="section-ribbon__descriptor">How operational AI activity changes each day</p>
+          <div class="section-head">
+            <h2 class="section-head__title">The Tide</h2>
+            <span class="section-head__descriptor">How operational AI activity changes each day</span>
           </div>
           <p class="panel-note intro-note one-line-note">Daily activity by category — <b>operational only</b>, commentary excluded. <span class="fr-chip fr-live" title="Built from live daily signal counts"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>A stacked view of how much moved in each operational category per day — product, research, compute, capital, policy, adoption, open source, market and org/governance. General commentary and opinion/analysis are deliberately excluded, so this tracks activity, not chatter. It only plots days actually collected and shows its real available range — it never implies history that wasn't recorded.</details></p>
           <div id="tide"></div>
@@ -615,9 +608,9 @@
       <section id="sec-map" class="hero" data-depth="currents" style="padding-top:10px;">
         <div class="hero-head">
           <div>
-            <div class="section-ribbon">
-              <h2 class="section-ribbon__title">The AI Ocean Map</h2>
-              <p class="section-ribbon__descriptor">Where AI power flows</p>
+            <div class="section-head">
+              <h2 class="section-head__title">The AI Ocean Map</h2>
+              <span class="section-head__descriptor">Where AI power flows</span>
             </div>
             <p class="map-intro-lead">A depth map of the AI ecosystem — chips at the base, applications at the surface.</p>
             <div class="map-encoding" role="list" aria-label="What the map encodes">
@@ -669,9 +662,9 @@
 
       <div class="tabpanel" id="tab-releases" role="tabpanel" aria-labelledby="tabbtn-releases" data-depth="surface">
         <section id="sec-releases">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Frontier releases</h2>
-            <p class="section-ribbon__descriptor">New models &amp; features only — not general news</p>
+          <div class="section-head">
+            <h2 class="section-head__title">Frontier releases</h2>
+            <span class="section-head__descriptor">New models &amp; features only — not general news</span>
           </div>
           <p class="panel-note intro-note one-line-note">The 3 frontier assistants, 5 most recent qualifying releases each. <span class="fr-chip fr-auto" title="Refreshed automatically from publisher RSS/YouTube feeds"><span class="fr-mark" aria-hidden="true">●</span>Auto</span> <details class="how-it-works"><summary>How it works</summary>Claude, ChatGPT and Gemini, each with their 5 most recent qualifying releases from the last 60 days, newest first. Actual product ships and feature launches only — opinion pieces, lawsuits, and personnel news are filtered out even when a headline uses the word "release." Includes official lab YouTube uploads (▶).</details></p>
           <div class="release-grid" id="releases"></div>
@@ -803,9 +796,9 @@
 
       <div class="tabpanel" id="tab-community" role="tabpanel" aria-labelledby="tabbtn-community" data-depth="midwater" hidden>
         <section id="sec-community">
-          <div class="section-ribbon">
-            <h2 class="section-ribbon__title">Community pulse</h2>
-            <p class="section-ribbon__descriptor">What developers discuss about leading models</p>
+          <div class="section-head">
+            <h2 class="section-head__title">Community pulse</h2>
+            <span class="section-head__descriptor">What developers discuss about leading models</span>
           </div>
           <p class="panel-note intro-note one-line-note">A sample of developer discussion, not a sentiment score. <span class="fr-chip fr-auto" title="Refreshed automatically from Hacker News"><span class="fr-mark" aria-hidden="true">●</span>Auto</span> <details class="how-it-works"><summary>How it works</summary>Select a model to explore its discussion volume, leading themes and representative comments, sourced from <a class="src-link" href="https://news.ycombinator.com/" target="_blank" rel="noopener">Hacker News</a>.</details></p>
           <div id="community"></div>
@@ -822,9 +815,9 @@
 
       <div class="tabpanel" id="tab-stocknet" role="tabpanel" aria-labelledby="tabbtn-stocknet" data-depth="seabed">
         <section id="sec-stocks">
-          <div class="section-ribbon section-ribbon--market">
-            <h2 class="section-ribbon__title">AI stock network</h2>
-            <p class="section-ribbon__descriptor">How the AI market is connected</p>
+          <div class="section-head">
+            <h2 class="section-head__title">AI stock network</h2>
+            <span class="section-head__descriptor">How the AI market is connected</span>
           </div>
           <div class="stocknet-controls">
             <div class="mode-toggle" role="tablist" aria-label="Network view mode">

@@ -236,3 +236,16 @@ test('the landing bands report the exact same depth set as their dashboard panel
     );
   }
 });
+
+test('both pages use the shared section heading component', () => {
+  for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
+    assert.match(html, /class="[^"]*section-head/, `${name} must use .section-head`);
+  }
+});
+
+test('the superseded per-page heading and button classes are gone', () => {
+  const appStyles = [...appHtml.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
+  assert.doesNotMatch(appStyles, /\.section-ribbon\{/, 'app.html must not define its own section heading');
+  const componentsCss = read('css/components.css');
+  assert.match(componentsCss, /\.btn--primary/, 'one primary button for both pages');
+});
