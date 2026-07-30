@@ -158,3 +158,9 @@ body{padding-top:var(--header-h);}
 }
 #lp-rail.show{opacity:1;}
 @media (max-width:900px){ #lp-rail{display:none;} }
+
+/* The dashboard shows its rail as a persistent strip above the ticker,
+   rather than the landing's floating/fading treatment. */
+#depth-rail{
+  background:var(--panel-solid);border-bottom:1px solid var(--border);
+}

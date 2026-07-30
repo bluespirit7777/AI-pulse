@@ -181,3 +181,58 @@ test('the landing bands declare which depths they span', () => {
     assert.match(band[0], /data-depth="/, `#${id} must declare its depth span`);
   }
 });
+
+test('the landing bands report the exact same depth set as their dashboard panel', () => {
+  // The dashboard never hand-declares a panel's depth: js/nav.js's
+  // panelDepths() derives it live by scanning every data-depth attribute
+  // under #panel-X (normalizeLocalNav() unhides all tabpanels at init, so
+  // every subsection counts, not just the visible tab). The landing instead
+  // hand-writes a single data-depth on its #X band, because it has no
+  // panel/tab structure to scan. Those two mechanisms can silently diverge
+  // whenever a dashboard subsection's data-depth changes without someone
+  // remembering to update the landing band to match -- which is exactly the
+  // Models bug this suite exists to catch (dashboard spans surface+midwater,
+  // landing declared midwater only). So here we derive the dashboard's real
+  // depth set from the source text, the same way panelDepths() would at
+  // runtime, and assert the landing band declares that exact set.
+  const panelMap = {
+    today: 'panel-today',
+    ecosystem: 'panel-ecosystem',
+    models: 'panel-models',
+    markets: 'panel-markets',
+    research: 'panel-research',
+  };
+
+  for (const [bandId, panelId] of Object.entries(panelMap)) {
+    // Slice this panel's markup: from just after its own opening tag (so a
+    // data-depth on the panel tag itself, if any, would NOT count -- mirroring
+    // querySelectorAll('[data-depth]'), which only matches descendants) up to
+    // the next id="panel-" or </main>, whichever comes first.
+    const startTag = appHtml.match(new RegExp(`<[^>]+id="${panelId}"[^>]*>`));
+    assert.ok(startTag, `app.html must have #${panelId}`);
+    const sliceStart = startTag.index + startTag[0].length;
+    const rest = appHtml.slice(sliceStart);
+    const nextPanelOffset = rest.search(/id="panel-/);
+    const endOfMainOffset = rest.search(/<\/main>/);
+    const candidateEnds = [rest.length, nextPanelOffset, endOfMainOffset].filter((n) => n !== -1);
+    const panelSlice = rest.slice(0, Math.min(...candidateEnds));
+
+    const dashboardDepths = new Set(
+      [...panelSlice.matchAll(/data-depth="([^"]+)"/g)].map((m) => m[1])
+    );
+
+    const band = landingHtml.match(new RegExp(`<[^>]+id="${bandId}"[^>]*>`));
+    assert.ok(band, `index.html must have #${bandId}`);
+    const bandDepthAttr = band[0].match(/data-depth="([^"]*)"/);
+    assert.ok(bandDepthAttr, `#${bandId} must declare data-depth`);
+    const landingDepths = new Set(bandDepthAttr[1].split(/\s+/).filter(Boolean));
+
+    const fmt = (set) => `{${[...set].sort().join(', ')}}`;
+    assert.deepEqual(
+      [...landingDepths].sort(),
+      [...dashboardDepths].sort(),
+      `depth mismatch for "${bandId}": landing #${bandId} declares ${fmt(landingDepths)} ` +
+        `but dashboard #${panelId} spans ${fmt(dashboardDepths)}`
+    );
+  }
+});
