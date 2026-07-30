@@ -65,6 +65,7 @@ nav.links{display:flex;gap:2px}
 .hero h1{font-size:clamp(56px,8.6vw,124px);line-height:.94;color:var(--deep);max-width:15ch}
 .hero h1 em{font-style:italic;color:var(--mid)}
 .hero .section-head__eyebrow{color:var(--deep);background:rgba(253,254,254,.82);backdrop-filter:blur(8px);padding:6px 13px;border-radius:999px;width:max-content;margin-bottom:0}
+.hero .section-head__eyebrow s{display:none}
 .hero .lede{margin-top:24px;font-family:var(--serif);font-size:clamp(19px,1.5vw,25px);line-height:1.5;color:var(--mid);max-width:38ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .scrolltip{position:absolute;right:32px;bottom:60px;writing-mode:vertical-rl;font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);display:flex;align-items:center;gap:12px;padding:14px 10px;border-radius:14px;background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);box-shadow:0 14px 34px -20px rgba(27,75,90,.55)}
@@ -148,6 +149,7 @@ section.band:has(.split.flip) .glowwrap{
 .deepband h2{color:var(--paper);font-size:clamp(32px,3.6vw,50px);max-width:22ch;margin-top:14px}
 .deepband .lede{margin-top:20px;font-family:var(--serif);font-size:19px;line-height:1.6;color:rgba(227,237,239,.86);max-width:46ch}
 .deepband .section-head__eyebrow{color:var(--shallow)}
+.deepband .section-head__eyebrow s{background:var(--shallow)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
 .chips span{border:1px solid rgba(62,143,163,.6);color:var(--shallow);font-size:11.5px;letter-spacing:.06em;padding:7px 14px;border-radius:999px;transition:.3s}
 .chips span:hover{background:rgba(62,143,163,.3);color:var(--paper)}
@@ -246,18 +248,18 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 
 <div class="ticker"><div class="row" id="lp-ticker"></div></div>
 
-<!-- SURFACE -->
+<!-- TODAY -->
 <span id="surface" class="anchor-alias" aria-hidden="true"></span>
 <section class="band" id="today" data-depth="surface currents" aria-labelledby="lp-h-today">
 <div class="wrap">
   <div class="split rv">
     <figure class="fig">
-      <figcaption>Surface · 0–12 hours</figcaption>
+      <figcaption>0–12 hours</figcaption>
       <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
       <div class="section-head rv">
-        <span class="section-head__eyebrow">Surface · fast &amp; recent</span>
+        <span class="section-head__eyebrow">Fast &amp; recent<s></s></span>
         <h2 class="section-head__title" id="lp-h-today">What just moved</h2>
       </div>
       <p class="sub">The strongest signals of the last cycle, duplicate coverage merged into one entry and scored 0–100 for significance.</p>
@@ -278,18 +280,18 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </div>
 </section>
 
-<!-- CURRENTS -->
+<!-- ECOSYSTEM -->
 <span id="currents" class="anchor-alias" aria-hidden="true"></span>
 <section class="band" id="ecosystem" data-depth="currents" aria-labelledby="lp-h-ecosystem">
 <div class="wrap">
   <div class="split flip rv">
     <figure class="fig">
-      <figcaption>Currents · days–weeks</figcaption>
+      <figcaption>Days–weeks</figcaption>
       <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
       <div class="section-head rv">
-        <span class="section-head__eyebrow">Currents · actively moving</span>
+        <span class="section-head__eyebrow">Actively moving<s></s></span>
         <h2 class="section-head__title" id="lp-h-ecosystem">Where attention goes</h2>
       </div>
       <p class="sub">Worldwide web-visit share across the major assistants.</p>
@@ -301,18 +303,18 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </div>
 </section>
 
-<!-- MIDWATER -->
+<!-- MODELS -->
 <section class="band" id="models" data-depth="surface midwater" aria-labelledby="lp-h-models">
 <div class="glowwrap" aria-hidden="true"><canvas class="glow" id="lp-glow" width="128" height="96"></canvas></div>
 <div class="wrap">
   <div class="split rv">
     <figure class="fig">
-      <figcaption>Midwater · weeks–months</figcaption>
+      <figcaption>Weeks–months</figcaption>
       <img src="assets/ocean.jpg" alt="" id="lp-glow-src" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
       <div class="section-head rv">
-        <span class="section-head__eyebrow">Midwater · gaining evidence</span>
+        <span class="section-head__eyebrow">Gaining evidence<s></s></span>
         <h2 class="section-head__title" id="lp-h-models">Leaderboards</h2>
       </div>
       <p class="sub">Ranked on published evaluations and human preference — not vendor claims. Anything unpublished is labelled an estimate.</p>
@@ -340,12 +342,12 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 <div class="wrap">
   <div class="split flip rv">
     <figure class="fig">
-      <figcaption>Compute · live rates</figcaption>
+      <figcaption>Live rates</figcaption>
       <img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async">
     </figure>
     <div class="copy">
       <div class="section-head rv">
-        <span class="section-head__eyebrow">Markets · compute &amp; capital</span>
+        <span class="section-head__eyebrow">Compute &amp; capital<s></s></span>
         <h2 class="section-head__title" id="lp-h-markets">What an hour costs</h2>
       </div>
       <p class="sub">Merged from real rented offers on public GPU marketplaces — actual listings, not estimates.</p>
@@ -357,13 +359,13 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </div>
 </section>
 
-<!-- SEABED -->
+<!-- RESEARCH -->
 <span id="seabed" class="anchor-alias" aria-hidden="true"></span>
 <div class="deepband" id="research" data-depth="seabed">
 <div class="caust" aria-hidden="true"></div>
 <div class="wrap">
   <div class="section-head rv">
-    <span class="section-head__eyebrow">Seabed · slow &amp; structural</span>
+    <span class="section-head__eyebrow">Slow &amp; structural<s></s></span>
     <h2 class="section-head__title">Some things only make sense at a slower frame rate.</h2>
   </div>
   <p class="lede rv">Research that hasn't landed, capital measured in years, policy still being drafted. Nothing here changes today — which is why it gets its own layer.</p>
