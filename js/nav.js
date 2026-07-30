@@ -48,7 +48,7 @@ let correctionTimer = null;
 function panelEl(panel) { return document.getElementById('panel-' + panel); }
 function tabEl(tab) { return document.getElementById('tab-' + tab); }
 function tabBtn(tab) { return document.getElementById('tabbtn-' + tab); }
-function topnavBtn(panel) { return document.querySelector(`.topnav-item[data-panel="${panel}"]`); }
+function topnavBtn(panel) { return document.querySelector(`.nav-pill[data-panel="${panel}"]`); }
 
 // appendChild on a node already in the document MOVES it rather than
 // duplicating it, so calling this in sequence for each panel in `order`
@@ -120,7 +120,13 @@ function setLocalTabCurrent(panel, tab) {
 function panelDepths(panel) {
   const el = panelEl(panel);
   if (!el) return [];
-  return [...new Set([...el.querySelectorAll('[data-depth]')].map((n) => n.dataset.depth))];
+  // Values can be space-separated (e.g. "surface currents"); the landing's
+  // wireRail() (js/landing.js) splits on /\s+/ the same way, and the two
+  // must agree or the rail will disagree between pages.
+  return [...new Set(
+    [...el.querySelectorAll('[data-depth]')]
+      .flatMap((n) => (n.dataset.depth || '').split(/\s+/).filter(Boolean))
+  )];
 }
 
 function updateDepthRailMulti(depths) {
@@ -246,7 +252,7 @@ export function activateFullPage({ push = true } = {}) {
   const main = document.getElementById('main-content');
   if (main) main.dataset.reordered = '1';
 
-  document.querySelectorAll('.topnav-item').forEach((btn) => {
+  document.querySelectorAll('.nav-pill[data-panel]').forEach((btn) => {
     if (btn.dataset.panel === 'full') btn.setAttribute('aria-current', 'page');
     else btn.removeAttribute('aria-current');
   });
@@ -256,7 +262,7 @@ export function activateFullPage({ push = true } = {}) {
 }
 
 function wireTopnav() {
-  document.querySelectorAll('.topnav-item').forEach((btn) => {
+  document.querySelectorAll('.nav-pill[data-panel]').forEach((btn) => {
     btn.addEventListener('click', () => {
       if (btn.dataset.panel === 'full') activateFullPage();
       else goTo(btn.dataset.panel, null);

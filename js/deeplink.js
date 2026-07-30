@@ -10,8 +10,9 @@
 //
 // The match is an explicit allowlist of the dashboard's four hash shapes (see
 // resolveHash + LEGACY_HASH in js/nav.js) rather than "anything the landing
-// doesn't recognise", so the landing's own anchors — #surface, #currents,
-// #models, #markets, #seabed — can never be captured by accident.
+// doesn't recognise", so the landing's own anchors — #today, #ecosystem,
+// #models, #markets, #research — can never be captured by accident. Older
+// #surface, #currents, #seabed aliases are equally protected.
 //
 // location.replace (not assign) keeps the landing out of session history, so
 // Back returns to wherever the visitor actually came from.

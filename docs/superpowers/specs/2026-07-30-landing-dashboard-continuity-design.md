@@ -52,9 +52,15 @@ Captured before any change, and they revised one assumption:
   the photograph for the landing's gradient is therefore an accessibility
   improvement, not only an aesthetic one. Contrast should be measured after the
   change rather than assumed.
-- **Containment.** The landing is visibly held to a 1200px column; the
-  dashboard sprawls to the viewport edge. Side by side this reads as two
-  different products more strongly than the colour palette does.
+- **Containment.** *(Corrected during Task 2 — the original claim here was
+  wrong.)* Both pages already constrained their content: the landing to 1200px,
+  the dashboard to 1240px. Neither ran to the viewport edge. What ran full-bleed
+  was the dashboard's ocean **photograph**, sitting behind a contained column —
+  which is what made the dashboard *look* uncontained in the baseline
+  screenshot. So containment is a 40px difference, not a structural one, and the
+  legibility point above is the real finding. Unified on one token regardless,
+  along with the horizontal gutter, which genuinely did differ (landing 32px,
+  dashboard up to 48px).
 
 ## Decisions
 

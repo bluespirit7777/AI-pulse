@@ -1293,6 +1293,27 @@ uses `.section-ribbon`.
 - Consumes: Task 1 tokens.
 - Produces: `.section-head`, `.section-head__eyebrow`, `.section-head__title`, `.section-head__descriptor`; `.btn`, `.btn--primary`, `.btn--secondary`.
 
+**TRAP — a name collision with pre-existing dead CSS.** `app.html`'s inline
+`<style>` ALREADY defines `.section-head`, `.section-head h2`,
+`.section-head .tag` and `.section-head .rule` (around lines 197–203). Nothing
+in either page's markup uses them — they are leftovers from a component that
+`.section-ribbon` replaced. Because the inline `<style>` loads AFTER
+`css/components.css`, those stale rules would **silently override the new shared
+component**, and `.section-head{display:flex}` in particular would fight the new
+block layout.
+
+Delete `app.html`'s four pre-existing `.section-head*` rules as part of this
+task, before verifying anything visually. Confirm with
+`grep -n "section-head" app.html` that only your intended markup remains.
+
+Related, and worth checking while you are there: `css/app.css` line ~23 lists
+`.section-head h2, .section-head .tag` in a `text-shadow: var(--text-outline)`
+rule. That outline existed for readability over the dashboard's ocean
+photograph, which Task 2 removed. Once `.section-head` becomes live markup this
+rule starts applying a white text outline that no longer has any photo to fight.
+Assess whether it should still apply to section headings and report your
+reasoning; do not silently leave a now-purposeless outline on every heading.
+
 - [ ] **Step 1: Write the failing test**
 
 Append to `test/continuity.test.mjs`:

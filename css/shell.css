@@ -1,0 +1,189 @@
+/* Chrome shared by index.html and app.html.
+ *
+ * Both pages wear the same shell so that moving between them reads as
+ * descending further into one product rather than arriving somewhere else.
+ * The visual language is the LANDING's — the calmer of the two — which means
+ * this file mostly calms the dashboard down.
+ *
+ * Requires css/tokens.css to be linked first.
+ */
+
+/* ---------- body background ----------
+ * The landing's depth gradient, now on both pages. It replaces the dashboard's
+ * full-bleed photograph of the ocean, which sat behind every view and put the
+ * depth rail, the ticker and the section descriptors on a busy backdrop at low
+ * contrast. The dashboard's animated wave footer is untouched — that is a
+ * signature element, and it sits at the bottom edge where nothing reads over it.
+ */
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  position:relative;
+  background:linear-gradient(
+    180deg,
+    var(--mist) 0%,
+    #EFF7F8 16%,
+    #E8F3F4 38%,
+    #E1EFF1 56%,
+    #E8F3F4 74%,
+    var(--mist) 92%
+  );
+  background-attachment:fixed;
+}
+
+/* ---------- measure ----------
+ * Both pages already constrained their content — landing to 1200px, dashboard
+ * to 1240px — neither ran to the viewport edge. What did was the dashboard's
+ * ocean photograph (removed above), sitting full-bleed behind the wrap. This
+ * just unifies the two content widths on one token.
+ */
+.wrap{
+  max-width:var(--maxw);
+  margin:0 auto;
+  /* Landing's 32px desktop gutter wins (landing is canonical); clamped so it
+     shrinks on narrow viewports. Dashboard's gutter tightens 48px -> 32px. */
+  padding:0 clamp(20px,4vw,32px);
+  position:relative;
+  z-index:2;
+}
+
+/* ---------- header ----------
+ * The landing's treatment: fixed, translucent, compact. The dashboard's was
+ * static, 26px-padded, with a 34px wordmark sitting directly on photography.
+ */
+:root{
+  --header-h:64px;
+  /* --header-h plus the dashboard's sticky .topnav; anchor targets must clear
+     BOTH, since the header is fixed and the topnav sticks directly below it. */
+  --chrome-h:126px;
+}
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  backdrop-filter:blur(14px) saturate(1.3);
+  background:rgba(253,254,254,.88);
+  border-bottom:1px solid rgba(185,212,215,.55);
+}
+.site-header .wrap{display:flex;align-items:center;gap:24px;height:var(--header-h);}
+
+.site-brand{display:flex;align-items:baseline;gap:10px;margin-right:auto;}
+.site-brand b,.site-brand h1{
+  font-family:var(--font-display);font-weight:700;font-size:22px;
+  color:var(--deep);margin:0;letter-spacing:.01em;
+}
+.site-brand a{color:inherit;text-decoration:none;}
+.site-brand a:hover,.site-brand a:focus-visible{color:var(--teal);}
+.site-brand span{
+  font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sea);
+}
+
+/* ---------- nav pills ----------
+ * One pill for both pages' navigation and for the reciprocal cross-page
+ * control, so the chrome does not change shape as you move between them.
+ */
+.nav-pill{
+  font-family:var(--font-body);font-size:13px;font-weight:500;letter-spacing:.03em;
+  white-space:nowrap;padding:7px 13px;border-radius:999px;min-height:40px;
+  color:var(--teal);background:transparent;border:1px solid transparent;
+  cursor:pointer;text-decoration:none;transition:background .25s,color .25s,transform .15s;
+}
+.nav-pill:hover{background:var(--glass);color:var(--deep);transform:translateY(-1px);}
+.nav-pill[aria-current="page"],.nav-pill.is-current{
+  background:var(--deep);border-color:var(--deep);color:var(--paper);
+}
+.nav-pill--cta{background:var(--deep);color:var(--paper);padding:9px 17px;}
+.nav-pill--cta:hover{background:var(--ink);color:var(--paper);}
+/* "Full page" is a view-mode toggle, not a destination — a dashed border marks
+   that distinction without relying on colour alone. */
+.nav-pill--mode{border-style:dashed;border-color:var(--border-strong);color:var(--ink-soft);}
+.nav-pill--mode[aria-current="page"]{border-style:solid;}
+
+/* ---------- live / clock ---------- */
+.live-cluster{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--teal);font-variant-numeric:tabular-nums;
+}
+.live-cluster .dot{width:6px;height:6px;border-radius:50%;background:var(--sand);}
+@media (prefers-reduced-motion:no-preference){
+  .live-cluster .dot{animation:pulse 2.6s ease-in-out infinite;}
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+
+/* ---------- mobile: drop the live cluster ----------
+ * .site-header .wrap is one flex row: brand, live-cluster, cross-page CTA.
+ * The dashboard has no page-local mobile handling for it (its markup only
+ * moved into this shared file), so at 375px the row needed ~469px of content
+ * and the CTA -- the "Landing page" link, the only way back off the
+ * dashboard -- ran 162px past the viewport edge.
+ *
+ * The live-cluster (LIVE dot, clock, and on the dashboard the snapshot pill)
+ * is the lowest-value element in the row -- the landing already treats it as
+ * droppable, hiding it below 900px in its own inline styles. Reusing that
+ * same 900px threshold here (already established in this file for #lp-rail
+ * below) means both pages change chrome at one shared width instead of two
+ * independently-tuned ones.
+ *
+ * With live-cluster gone the row is just brand + CTA: at current sizes that
+ * is ~134px + ~110px + one 24px gap = ~268px of content, plus the ~40px of
+ * .wrap padding a 375px viewport carries -- ~308px, comfortably under 375px
+ * with room to spare for either element growing.
+ */
+@media (max-width:900px){
+  .site-header .live-cluster{display:none;}
+}
+
+/* ---------- focus ----------
+ * One ring colour across both pages. The dashboard used teal, the landing sand.
+ */
+:focus-visible{outline:2px solid var(--sand);outline-offset:3px;border-radius:4px;}
+
+/* .site-header is fixed and 64px tall, so it contributes no flow height.
+   Offset the document once, here, rather than per-page. */
+body{padding-top:var(--header-h);}
+
+/* ---------- depth rail ----------
+ * A READOUT on both pages: it reports which evidence depths the current view
+ * spans. It is never navigation. The landing fades it in past the hero; the
+ * dashboard shows it always.
+ */
+.depth-rail{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 16px;}
+.depth-item{
+  display:flex;align-items:center;gap:6px;opacity:.45;
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-soft);transition:opacity .3s,color .3s;
+}
+.depth-item i{
+  width:8px;height:8px;border-radius:50%;background:var(--ink-dim);
+  border:2px solid transparent;display:block;flex-shrink:0;
+}
+.depth-item small{font-size:8.5px;color:var(--ink-dim);line-height:1.2;text-transform:none;letter-spacing:0;}
+.depth-item[data-active="true"]{opacity:1;color:var(--deep);}
+.depth-item[data-active="true"] i{
+  background:var(--teal);border-color:var(--sea);box-shadow:0 0 0 3px rgba(62,143,163,0.18);
+}
+@media (max-width:640px){
+  .depth-item{flex-direction:column;gap:2px;}
+  .depth-item small{display:none;}
+}
+
+/* The landing floats its rail and reveals it past the hero. */
+#lp-rail{
+  position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:50;
+  flex-direction:column;align-items:flex-start;gap:2px;
+  padding:12px 14px;border-radius:14px;
+  background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);
+  box-shadow:0 14px 34px -20px rgba(27,75,90,.55);
+  opacity:0;transition:opacity .5s;pointer-events:none;
+}
+#lp-rail.show{opacity:1;}
+@media (max-width:900px){ #lp-rail{display:none;} }
+
+/* The dashboard shows its rail as a persistent strip above the ticker,
+   rather than the landing's floating/fading treatment. */
+#depth-rail{
+  background:var(--panel-solid);border-bottom:1px solid var(--border);
+}

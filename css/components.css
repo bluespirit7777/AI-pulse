@@ -1,0 +1,96 @@
+/* Primitives shared by both pages.
+ *
+ * The landing's preview row and the dashboard's leaderboard row rendered the
+ * same data in visibly different components — the single clearest signal that
+ * these were two designs rather than one. They are now one component.
+ *
+ * Requires css/tokens.css.
+ */
+
+/* ---------- rank row ----------
+ * Used by js/landing.js (preview, 5 rows) and js/sections.js (full leaderboard
+ * and every ranked list). The landing variant hides the note; that is the only
+ * difference between the two contexts.
+ */
+.rank-row{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:baseline;
+  gap:10px 12px;
+  padding:10px 0;
+  border-bottom:1px solid var(--border);
+}
+.rank-row:last-child{border-bottom:0;}
+
+.rank-row__rank{
+  font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);
+  font-variant-numeric:tabular-nums;
+}
+.rank-row__model{font-weight:600;color:var(--ink);}
+.rank-row__org{
+  display:block;font-style:normal;
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-dim);
+}
+.rank-row__value{
+  font-family:var(--font-mono);font-variant-numeric:tabular-nums;
+  color:var(--deep);font-weight:500;white-space:nowrap;
+}
+.rank-row__unit{font-size:.8em;color:var(--ink-dim);}
+
+.rank-row__bar{
+  grid-column:1 / -1;
+  height:3px;border-radius:2px;background:var(--glass);overflow:hidden;
+}
+.rank-row__bar > i{
+  display:block;height:100%;width:0;border-radius:2px;background:var(--sea);
+  transition:width .8s cubic-bezier(.22,.61,.36,1);
+}
+.rank-row__note{
+  grid-column:1 / -1;
+  font-size:12.5px;line-height:1.5;color:var(--ink-soft);
+}
+/* An ordinal row carries no measured score, so it gets no bar and says so. */
+.rank-row--ordinal .rank-row__tag{
+  grid-column:1 / -1;
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-dim);
+}
+/* The landing shows previews only — no notes, no bars. */
+.rank-row--preview .rank-row__note,
+.rank-row--preview .rank-row__bar{display:none;}
+
+/* ---------- section heading ----------
+ * The most-repeated element in the product: every band on the landing and
+ * every section on the dashboard carries one. The landing's treatment (a mono
+ * eyebrow over a serif title) becomes the shared one.
+ */
+.section-head{margin:0 0 18px;}
+.section-head__eyebrow{
+  display:flex;align-items:center;gap:9px;
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--sea);font-weight:500;margin-bottom:8px;
+}
+.section-head__eyebrow s{text-decoration:none;flex:1;height:1px;background:var(--glass);max-width:70px}
+.section-head__title{
+  font-family:var(--font-display);font-weight:500;letter-spacing:.005em;
+  color:var(--deep);margin:0;font-size:clamp(24px,3.2vw,34px);line-height:1.15;
+}
+.section-head__descriptor{
+  display:flex;align-items:center;gap:9px;margin-top:6px;
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;
+  color:var(--ink-dim);text-transform:uppercase;
+}
+.section-head__descriptor s{text-decoration:none;flex:1;height:1px;background:var(--glass);max-width:70px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-body);font-size:14px;font-weight:600;letter-spacing:.02em;
+  padding:12px 22px;border-radius:999px;border:1px solid transparent;
+  cursor:pointer;text-decoration:none;transition:background .25s,color .25s,transform .15s;
+}
+.btn--primary{background:var(--deep);color:var(--paper);}
+.btn--primary:hover{background:var(--ink);color:var(--paper);transform:translateY(-1px);}
+.btn--secondary{background:transparent;color:var(--deep);border-color:var(--border-strong);}
+.btn--secondary:hover{background:var(--glass);transform:translateY(-1px);}

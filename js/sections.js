@@ -79,24 +79,19 @@ function rankRows(rows, { showIndex = false } = {}) {
       ? (maxScore ? Math.round((r.score / maxScore) * 100) : 0)
       : (hasIndex ? Math.max(0, Math.min(100, r.w)) : 0);
     const rating = hasScore
-      ? `${esc(String(r.score))}<span class="lb-score-unit">${esc(r.scoreUnit || '')}</span>`
-      : (hasIndex ? `${esc(String(r.w))}<span class="lb-score-unit">/100</span>` : '');
+      ? `${esc(String(r.score))}<span class="rank-row__unit">${esc(r.scoreUnit || '')}</span>`
+      : (hasIndex ? `${esc(String(r.w))}<span class="rank-row__unit">/100</span>` : '');
     return `
-    <div class="lb-row${showBar ? '' : ' lb-row--ordinal'}">
-      <div class="lb-top">
-        <div class="lb-name">
-          <span class="lb-rank">${esc(rankLabel)}</span>
-          <span class="lb-model">${esc(r.model)}</span>
-          <span class="lb-org">${esc(r.org)}</span>
-        </div>
-        ${rating
-          ? `<span class="lb-score"${hasIndex ? ' title="Composite index (0–100), editorial weighting — not a single measured benchmark"' : ''}>${rating}</span>`
-          : `<span class="lb-stat">${esc(r.stat)}</span>`}
-      </div>
+    <div class="rank-row${showBar ? '' : ' rank-row--ordinal'}">
+      <span class="rank-row__rank">${esc(rankLabel)}</span>
+      <span class="rank-row__model">${esc(r.model)}<span class="rank-row__org">${esc(r.org)}</span></span>
+      ${rating
+        ? `<span class="rank-row__value"${hasIndex ? ' title="Composite index (0–100), editorial weighting — not a single measured benchmark"' : ''}>${rating}</span>`
+        : `<span class="rank-row__value">${esc(r.stat)}</span>`}
       ${showBar
-        ? `<div class="bar-track"><div class="bar-fill" style="--w:${barPct}%"></div></div>`
-        : `<div class="lb-editorial-tag">Editorial ranking · no measured score for this view</div>`}
-      <div class="lb-note">${hasIndex && r.stat ? `<span class="lb-note-lead">${esc(r.stat)}</span> — ` : ''}${esc(r.note)}</div>
+        ? `<span class="rank-row__bar"><i style="--w:${barPct}%"></i></span>`
+        : `<span class="rank-row__tag">Editorial ranking · no measured score for this view</span>`}
+      <div class="rank-row__note">${hasIndex && r.stat ? `<span class="lb-note-lead">${esc(r.stat)}</span> — ` : ''}${esc(r.note)}</div>
     </div>`;
   }).join('');
 }
@@ -420,7 +415,7 @@ function paintYouTubeTrending(yt) {
 
 // animate ordinal bars once rows exist
 export function animateBars() {
-  document.querySelectorAll('.bar-fill').forEach((el, i) => {
+  document.querySelectorAll('.rank-row__bar > i').forEach((el, i) => {
     el.style.width = '0';
     setTimeout(() => { el.style.width = el.style.getPropertyValue('--w'); }, 150 + i * 35);
   });
