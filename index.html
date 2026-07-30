@@ -31,31 +31,14 @@
      click away and shares the browser's font cache, so arriving there costs
      no extra font download. -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
 
 <style>
-:root{
-  /* Palette is app.html's, not the mockup's — the landing and the dashboard
-     have to read as one product, and these are the tokens the dashboard's
-     charts, links and accents are already built on. */
-  --foam:#F4FAFB;
-  --paper:#FDFEFE;
-  --glass:#E3EDEF;
-  --shallow:#B9D4D7;
-  --tide:#3E8FA3;   /* app.html --sea  */
-  --mid:#2E7D82;    /* app.html --teal */
-  --deep:#1B4B5A;   /* app.html --deep */
-  --ink:#0E2A37;    /* app.html --ink  */
-  --warm:#B08D52;   /* app.html --sand accent */
-  --serif:'Cormorant Garamond',Georgia,serif;
-  --sans:'Karla',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
-  --maxw:1200px;
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{
   margin:0;
-  background:linear-gradient(180deg,var(--foam) 0%,#EFF7F8 16%,#E8F3F4 38%,#E1EFF1 56%,#E8F3F4 74%,var(--foam) 92%);
+  background:linear-gradient(180deg,var(--mist) 0%,#EFF7F8 16%,#E8F3F4 38%,#E1EFF1 56%,#E8F3F4 74%,var(--mist) 92%);
   background-attachment:fixed;
   color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;
 }
@@ -96,7 +79,7 @@ nav.links a.on{background:var(--deep);color:var(--paper)}
 .hero .media video{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
 .hero .media video.ok{opacity:1}
 .hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
-  background:linear-gradient(180deg,rgba(244,250,251,.82) 0%,rgba(244,250,251,.34) 34%,rgba(244,250,251,.56) 64%,var(--foam) 100%)}
+  background:linear-gradient(180deg,rgba(244,250,251,.82) 0%,rgba(244,250,251,.34) 34%,rgba(244,250,251,.56) 64%,var(--mist) 100%)}
 .hero .wrap{padding-top:140px;padding-bottom:60px;position:relative}
 .hero h1{font-size:clamp(56px,8.6vw,124px);line-height:.94;color:var(--deep);max-width:15ch}
 .hero h1 em{font-style:italic;color:var(--mid)}
@@ -195,7 +178,7 @@ section.band:has(.split.flip) .glowwrap{
 
 /* ---------- seabed ---------- */
 .deepband{margin-top:88px;background:linear-gradient(180deg,#235B6C 0%,var(--deep) 42%,var(--ink) 100%);padding:96px 0;position:relative;overflow:hidden}
-.deepband:before{content:"";position:absolute;top:0;left:0;right:0;height:140px;background:linear-gradient(180deg,var(--foam),transparent);opacity:.16;pointer-events:none;z-index:1}
+.deepband:before{content:"";position:absolute;top:0;left:0;right:0;height:140px;background:linear-gradient(180deg,var(--mist),transparent);opacity:.16;pointer-events:none;z-index:1}
 .deepband .caust{position:absolute;inset:-30%;background:radial-gradient(closest-side,rgba(62,143,163,.55),transparent 70%);filter:blur(60px);pointer-events:none}
 @media (prefers-reduced-motion:no-preference){.deepband .caust{animation:float 26s ease-in-out infinite alternate}}
 @keyframes float{from{transform:translate3d(-8%,-4%,0) scale(1)}to{transform:translate3d(8%,6%,0) scale(1.25)}}

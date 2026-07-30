@@ -1,0 +1,70 @@
+/* The single source of truth for colour, type and measure across BOTH pages.
+ *
+ * index.html used to hand-copy these hexes into its own :root with comments
+ * like "app.html --ink" beside them — a duplication that had already
+ * started to drift. Both pages now link this file instead.
+ *
+ * Canonical names are the DASHBOARD's, purely because they have far more call
+ * sites (~1,190 lines of dashboard CSS vs ~218 on the landing), so this
+ * minimises churn. The landing's names are kept as aliases below, which means
+ * the landing's existing rules keep working untouched. This is a naming
+ * decision only: the landing's visual language is still the one both pages
+ * speak, it just expresses it through these variable names.
+ */
+:root{
+  /* ---- ink ---- */
+  --ink:#0E2A37;
+  --ink-soft:#2E4B57;
+  --ink-dim:#456170;
+
+  /* ---- surfaces ---- */
+  --panel:rgba(250,253,254,0.95);
+  --panel-solid:#FAFDFE;
+  --paper:#FDFEFE;
+  --glass:#E3EDEF;
+  --shallow:#B9D4D7;
+  --border:rgba(18,48,62,0.12);
+  --border-strong:rgba(18,48,62,0.22);
+
+  /* ---- water ---- */
+  --teal:#2E7D82;
+  --sea:#3E8FA3;
+  --deep:#1B4B5A;
+  --foam:#EAF4F6;   /* dashboard hover/tint — 18 usages */
+  --mist:#F4FAFB;   /* the landing's paler tone; NOT the same as --foam */
+
+  /* ---- accents ---- */
+  --sand:#B08D52;
+  --coral:#C06A5C;
+  /* --coral on --panel-solid measures ~3.76:1 — fails WCAG AA for normal-sized
+     text (needs 4.5:1). This darker variant is for TEXT only; --coral stays for
+     large shapes, borders, chart marks and decorative accents. */
+  --coral-text:#9C4739;
+
+  /* ---- type ---- */
+  --font-display:'Cormorant Garamond',Georgia,serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --font-body:'Karla',system-ui,sans-serif;
+
+  /* ---- measure ----
+     Unified at the dashboard's 1240px rather than the landing's 1200px: the
+     40px difference is imperceptible, and the dashboard holds wider content
+     (1000-unit SVG viewBoxes) that would otherwise need re-tuning. */
+  --maxw:1240px;
+
+  /* thin white outline for text sitting directly on photography with no panel
+     behind it — keeps the text's own colour, adds legibility */
+  --text-outline:
+    -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff,
+    -0.5px 0.5px 0 #fff, 0.5px 0.5px 0 #fff,
+    0 0 1px rgba(255,255,255,.8);
+
+  /* ---- landing aliases ----
+     So index.html's existing rules resolve without being rewritten. */
+  --tide:var(--sea);
+  --mid:var(--teal);
+  --warm:var(--sand);
+  --serif:var(--font-display);
+  --sans:var(--font-body);
+  --mono:var(--font-mono);
+}

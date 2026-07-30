@@ -28,39 +28,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/app.css">
 
 
 <style>
-  :root{
-    --ink:#0E2A37;
-    --ink-soft:#2E4B57;
-    --ink-dim:#456170;
-    --panel:rgba(250,253,254,0.95);
-    --panel-solid:#FAFDFE;
-    --border:rgba(18,48,62,0.12);
-    --border-strong:rgba(18,48,62,0.22);
-    --teal:#2E7D82;
-    --sea:#3E8FA3;
-    --sand:#B08D52;
-    --coral:#C06A5C;
-    /* --coral on --panel-solid measures ~3.76:1 — fails WCAG AA for normal-
-       sized text (needs 4.5:1). This darker variant is for TEXT only; the
-       original --coral stays for large shapes, borders, chart marks and
-       decorative accents where the AA text threshold doesn't apply. */
-    --coral-text:#9C4739;
-    --deep:#1B4B5A;
-    --foam:#EAF4F6;
-    --font-display:'Cormorant Garamond',serif;
-    --font-mono:'IBM Plex Mono',monospace;
-    --font-body:'Karla',sans-serif;
-    /* thin white outline for text that sits directly on the ocean photo with
-       no panel behind it — keeps each text's own colour, adds legibility */
-    --text-outline:
-      -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff,
-      -0.5px 0.5px 0 #fff, 0.5px 0.5px 0 #fff,
-      0 0 1px rgba(255,255,255,.8);
-  }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
