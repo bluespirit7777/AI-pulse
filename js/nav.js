@@ -10,9 +10,10 @@
 import { prefersReducedMotion } from './util.js';
 
 // Each top-level panel's local tab ids, in document/DOM order. Panels absent
-// here (ecosystem, research) have no local tabs.
+// here (ecosystem, today, research) have no local tabs -- today merged its
+// three subsections (waves/river/tide) into one "News Wave" section with
+// nothing left to jump between.
 const PANEL_TABS = {
-  today: ['waves', 'river', 'tide'],
   models: ['releases', 'leaderboard', 'image', 'video', 'local', 'community'],
   markets: ['stocknet', 'compute'],
 };
@@ -22,9 +23,8 @@ const PANELS = ['today', 'ecosystem', 'models', 'markets', 'research'];
 // these must keep working as a direct link.
 const LEGACY_HASH = {
   '#sec-map': { panel: 'ecosystem' },
-  '#sec-waves': { panel: 'today', tab: 'waves' },
-  '#sec-river': { panel: 'today', tab: 'river' },
-  '#sec-tide': { panel: 'today', tab: 'tide' },
+  '#sec-waves': { panel: 'today' },
+  '#sec-river': { panel: 'today' },
   '#sec-releases': { panel: 'models', tab: 'releases' },
   '#sec-leaderboard': { panel: 'models', tab: 'leaderboard' },
   '#sec-media': { panel: 'models', tab: 'image' },
@@ -305,7 +305,7 @@ export function initNav() {
   }
 }
 
-// Called once from main.js after the initial async render (waves/river/tide/
+// Called once from main.js after the initial async render (waves/river/
 // ocean map/stock network) has settled — finishes any scroll that was
 // waiting on real content instead of a skeleton.
 export function notifyDataReady() {

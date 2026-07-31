@@ -266,3 +266,21 @@ test('the superseded per-page heading and button classes are gone', () => {
   assert.match(landingHtml, /btn--primary/, 'index.html must use .btn--primary');
   assert.match(landingHtml, /btn--secondary/, 'index.html must use .btn--secondary');
 });
+
+test('the dashboard merges Waves and River into one "News Wave" section', () => {
+  assert.match(appHtml, />News Wave</, 'app.html must show the merged "News Wave" heading');
+  // Both original render mount points must survive underneath it unchanged --
+  // js/waveform.js and js/river.js were not touched by this merge.
+  assert.match(appHtml, /id="waves"/, 'the waves mount point must still exist');
+  assert.match(appHtml, /id="river"/, 'the river mount point must still exist');
+  // The old two-heading split is gone.
+  assert.doesNotMatch(appHtml, /Today's strongest waves/, 'the old separate Waves heading must be gone');
+  assert.doesNotMatch(appHtml, /Signal river/, 'the old separate River heading must be gone');
+  // The depth union this section feeds the rail with must survive the merge:
+  // panelDepths() in js/nav.js scans every descendant [data-depth], so both
+  // values must still appear somewhere under #panel-today.
+  const panelToday = appHtml.match(/id="panel-today"[\s\S]*?<\/section>\s*<!-- ECOSYSTEM/)?.[0];
+  assert.ok(panelToday, 'could not isolate #panel-today for the depth check');
+  assert.match(panelToday, /data-depth="surface"/, 'the waves portion must keep data-depth="surface"');
+  assert.match(panelToday, /data-depth="currents"/, 'the river portion must keep data-depth="currents"');
+});

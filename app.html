@@ -590,32 +590,20 @@
         <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the headline ticker" aria-pressed="false">❚❚</button>
       </div>
 
-      <div class="local-tabs" role="tablist" aria-label="Today views" data-tabgroup="today">
-        <button type="button" role="tab" class="local-tab" id="tabbtn-waves" data-tab="waves" aria-selected="true" aria-controls="tab-waves" tabindex="0">Waves</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-river" data-tab="river" aria-selected="false" aria-controls="tab-river" tabindex="-1">River</button>
-      </div>
-
-      <div class="tabpanel" id="tab-waves" role="tabpanel" aria-labelledby="tabbtn-waves" data-depth="surface">
-        <section id="sec-waves">
-          <div class="section-head">
-            <h2 class="section-head__title">Today's strongest waves</h2>
-            <span class="section-head__descriptor">The biggest product, market &amp; research moves<s></s></span>
-          </div>
+      <section id="sec-waves">
+        <div class="section-head">
+          <h2 class="section-head__title">News Wave</h2>
+          <span class="section-head__descriptor">The strongest signals and the full chronological stream, together<s></s></span>
+        </div>
+        <div class="tabpanel" data-depth="surface">
           <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
           <div class="waves-grid" id="waves"></div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-river" role="tabpanel" aria-labelledby="tabbtn-river" data-depth="currents" hidden>
-        <section id="sec-river">
-          <div class="section-head">
-            <h2 class="section-head__title">Signal river</h2>
-            <span class="section-head__descriptor">Every story crossing the wire, newest first<s></s></span>
-          </div>
+        </div>
+        <div class="tabpanel" data-depth="currents">
           <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list. Dot size reflects significance (0–100); filter by category, entity, or time window below.</details></p>
           <div id="river"></div>
-        </section>
-      </div>
+        </div>
+      </section>
     </section>
 
     <!-- ECOSYSTEM -->
