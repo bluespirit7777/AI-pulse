@@ -9,11 +9,13 @@
  */
 
 /* ---------- body background ----------
- * The landing's depth gradient, now on both pages. It replaces the dashboard's
- * full-bleed photograph of the ocean, which sat behind every view and put the
- * depth rail, the ticker and the section descriptors on a busy backdrop at low
- * contrast. The dashboard's animated wave footer is untouched — that is a
- * signature element, and it sits at the bottom edge where nothing reads over it.
+ * The landing's depth gradient. The landing uses it as-is for its own
+ * background. The dashboard paints its own full-bleed ocean photograph plus a
+ * legibility veil above this gradient (negative z-index layers declared in
+ * app.html's own inline <style>), so this gradient needs no change here — it
+ * simply sits underneath, unseen, on that page. The dashboard's animated wave
+ * footer is untouched either way — that is a signature element, and it sits
+ * at the bottom edge where nothing reads over it.
  */
 body{
   margin:0;
@@ -36,9 +38,10 @@ body{
 
 /* ---------- measure ----------
  * Both pages already constrained their content — landing to 1200px, dashboard
- * to 1240px — neither ran to the viewport edge. What did was the dashboard's
- * ocean photograph (removed above), sitting full-bleed behind the wrap. This
- * just unifies the two content widths on one token.
+ * to 1240px — neither ran to the viewport edge. What does run full-bleed
+ * behind the wrap is the dashboard's own ocean photograph (see app.html's
+ * inline <style>), sitting below this shared gradient. This rule just unifies
+ * the two content widths on one token.
  */
 .wrap{
   max-width:var(--maxw);

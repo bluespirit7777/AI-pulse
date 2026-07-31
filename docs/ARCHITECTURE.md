@@ -72,8 +72,11 @@ its subsection (setting `aria-current` as a light cue). Because only the
 active top panel contributes layout, the old deep-link bug — async content
 above `#sec-releases` shoving it thousands of pixels down after load — stays
 fixed: there's no tall stack of *other sections'* async siblings above any
-target. `js/nav.js` maps every legacy hash (`#sec-waves`, `#sec-stocks`, …)
-to its `{panel, scroll-target}` in the new IA, so old links keep working. The
+target. `js/nav.js` maps legacy hashes for sections that still exist
+(`#sec-waves`, `#sec-stocks`, …) to their `{panel, scroll-target}` in the new
+IA, so those old links keep working; a legacy hash for a removed section
+(`#tab-tide`, `#panel-research`, …) simply falls back to the default Today
+panel, with no error and the depth rail correctly lit. The
 section headings use one reusable component (`.section-ribbon` in
 `css/app.css`); the top ticker (visible only under Today) pauses on
 hover/focus and offers a play/pause control (reduced-motion → manual scroll).

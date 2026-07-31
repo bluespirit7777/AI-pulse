@@ -195,8 +195,9 @@ after 60 days. Compact — no article bodies.
 ]
 ```
 
-`collectedOn` (the day the event was recorded) drives the Tide's daily buckets —
-never `publishedAt`, so one day of scraping can't look like 60 days of history.
+`collectedOn` (the day the event was recorded) is what daily-bucketed history
+keys off — never `publishedAt`, so one day of scraping can't look like 60 days
+of history. Currently unconsumed by the frontend.
 
 ## `data/entities.json`
 

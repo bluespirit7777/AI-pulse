@@ -123,8 +123,9 @@ test('deeplink forwarder catches every dashboard hash shape and no landing ancho
   assert.ok(src, 'could not locate the hash predicate in js/deeplink.js');
   const re = new RegExp(src.slice(1, -1));
 
-  // Every hash the dashboard's nav.js can resolve (PANELS, PANEL_TABS,
-  // LEGACY_HASH and FULL_HASH) must be forwarded.
+  // Every hash shape the landing must forward to app.html — panels, local
+  // tabs, and legacy section anchors, whether or not nav.js still resolves
+  // each one to a live section — must be forwarded.
   const dashboard = [
     '#full',
     '#panel-today', '#panel-ecosystem', '#panel-models', '#panel-markets',
