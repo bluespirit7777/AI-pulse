@@ -593,7 +593,6 @@
       <div class="local-tabs" role="tablist" aria-label="Today views" data-tabgroup="today">
         <button type="button" role="tab" class="local-tab" id="tabbtn-waves" data-tab="waves" aria-selected="true" aria-controls="tab-waves" tabindex="0">Waves</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-river" data-tab="river" aria-selected="false" aria-controls="tab-river" tabindex="-1">River</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-tide" data-tab="tide" aria-selected="false" aria-controls="tab-tide" tabindex="-1">Tide</button>
       </div>
 
       <div class="tabpanel" id="tab-waves" role="tabpanel" aria-labelledby="tabbtn-waves" data-depth="surface">
@@ -615,17 +614,6 @@
           </div>
           <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list. Dot size reflects significance (0–100); filter by category, entity, or time window below.</details></p>
           <div id="river"></div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-tide" role="tabpanel" aria-labelledby="tabbtn-tide" data-depth="currents" hidden>
-        <section id="sec-tide">
-          <div class="section-head">
-            <h2 class="section-head__title">The Tide</h2>
-            <span class="section-head__descriptor">How operational AI activity changes each day<s></s></span>
-          </div>
-          <p class="panel-note intro-note one-line-note">Daily activity by category — <b>operational only</b>, commentary excluded. <span class="fr-chip fr-live" title="Built from live daily signal counts"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>A stacked view of how much moved in each operational category per day — product, research, compute, capital, policy, adoption, open source, market and org/governance. General commentary and opinion/analysis are deliberately excluded, so this tracks activity, not chatter. It only plots days actually collected and shows its real available range — it never implies history that wasn't recorded.</details></p>
-          <div id="tide"></div>
         </section>
       </div>
     </section>

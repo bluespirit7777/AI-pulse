@@ -145,20 +145,8 @@ function renderSurface(data) {
     value: timeAgo(s.dateISO) || '—',
   })), 'Today’s wire is still being collected.');
 
-  // Tide = how today's volume splits across categories.
-  const counts = new Map();
-  signals.forEach((s) => counts.set(s.category, (counts.get(s.category) || 0) + 1));
-  const byCount = [...counts.entries()].sort((a, b) => b[1] - a[1]);
-  paintMini($('#lp-tide'), byCount.slice(0, 3).map(([cat, n]) => ({
-    lead: '·',
-    name: CAT_LABEL[cat] || cat,
-    sub: `${((n / signals.length) * 100).toFixed(0)}% of today’s signals`,
-    value: String(n),
-  })), 'Today’s wire is still being collected.');
-
   paintMeta($('#lp-surface-meta'), [
     signals.length ? `Live · ${signals.length} signals` : 'Live',
-    byCount.length ? `${byCount.length} categories today` : null,
     data?.updatedAt ? 'Updated ' + timeAgo(data.updatedAt) : null,
   ]);
 }
@@ -179,7 +167,7 @@ function renderCompute(data) {
 // leaving three empty boxes that read as "nothing happened today".
 function renderLiveUnavailable() {
   const msg = 'Live data is temporarily unavailable — the dashboard has the full picture.';
-  ['#lp-waves', '#lp-river', '#lp-tide', '#lp-compute'].forEach((sel) => paintMini($(sel), [], msg));
+  ['#lp-waves', '#lp-river', '#lp-compute'].forEach((sel) => paintMini($(sel), [], msg));
   paintMeta($('#lp-surface-meta'), ['Live data unavailable']);
   paintMeta($('#lp-compute-meta'), ['Live data unavailable']);
 }

@@ -5,7 +5,6 @@ import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTren
 import { createOceanMap } from './oceanmap.js';
 import { renderWaveforms } from './waveform.js';
 import { renderRiver } from './river.js';
-import { renderTide } from './tide.js';
 import { renderCommunity } from './community.js';
 import { createStockNetwork } from './stocknetwork.js';
 import { renderCurated, renderLive, animateBars, renderYouTubeTrending } from './sections.js';
@@ -125,7 +124,6 @@ async function boot() {
 
   renderDynamic();
   paintHistoryNote();
-  renderTide($('#tide'), ranges);
 
   if (entities && $('#ocean-map')) {
     map = createOceanMap($('#ocean-map'), entities);
@@ -163,7 +161,7 @@ async function boot() {
   // publishes every ~30, so most cycles fetch a byte-identical snapshot —
   // gating on updatedAt means the common case costs the reader nothing. When
   // the data genuinely IS new, the components restore their own filter state
-  // themselves (see river.js / community.js / tide.js).
+  // themselves (see river.js / community.js).
   setInterval(async () => {
     try {
       const [fresh, freshRanges] = await Promise.all([loadLatest(), loadRanges()]);
@@ -173,7 +171,6 @@ async function boot() {
       if (unchanged) { paintUpdated(); return; }
       renderDynamic();
       paintHistoryNote();
-      renderTide($('#tide'), ranges);
       applyRange(range);
     } catch (err) {
       console.warn('[data] refresh skipped', err.message);

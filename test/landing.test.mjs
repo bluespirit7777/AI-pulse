@@ -50,7 +50,7 @@ test('landing markup contains no hardcoded score-like numbers in the data slots'
   // Every list on the page is rendered into an empty container by landing.js.
   // If a container ships with children, someone has pasted static rows in.
   const containers = [
-    'lp-ticker', 'lp-waves', 'lp-river', 'lp-tide',
+    'lp-ticker', 'lp-waves', 'lp-river',
     'lp-share', 'lp-lb-text', 'lp-lb-image', 'lp-lb-video', 'lp-lb-local',
     'lp-compute',
   ];
