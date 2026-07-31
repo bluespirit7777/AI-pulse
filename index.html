@@ -263,14 +263,9 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
         <h2 class="section-head__title" id="lp-h-today">What just moved</h2>
       </div>
       <p class="sub">The strongest signals of the last cycle, duplicate coverage merged into one entry and scored 0–100 for significance.</p>
-      <div class="tabs" role="tablist" aria-label="Surface views">
-        <button type="button" role="tab" id="tb-waves" aria-controls="pn-waves" aria-selected="true" data-tab="waves">Waves</button>
-        <button type="button" role="tab" id="tb-river" aria-controls="pn-river" aria-selected="false" data-tab="river">River</button>
-      </div>
-      <div data-panes="surface">
-        <div class="pane" role="tabpanel" id="pn-waves" aria-labelledby="tb-waves" data-pane="waves"><div class="mini" id="lp-waves"></div></div>
-        <div class="pane" role="tabpanel" id="pn-river" aria-labelledby="tb-river" data-pane="river" hidden><div class="mini" id="lp-river"></div></div>
-      </div>
+      <span class="section-head__eyebrow" style="margin-top:18px;">News Wave<s></s></span>
+      <div class="mini" id="lp-waves"></div>
+      <div class="mini" id="lp-river"></div>
       <p class="meta" id="lp-surface-meta"></p>
       <a class="more" href="app.html#panel-today">Open today's wire <span aria-hidden="true">→</span></a>
     </div>

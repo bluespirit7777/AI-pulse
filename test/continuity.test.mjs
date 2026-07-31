@@ -284,3 +284,13 @@ test('the dashboard merges Waves and River into one "News Wave" section', () => 
   assert.match(panelToday, /data-depth="surface"/, 'the waves portion must keep data-depth="surface"');
   assert.match(panelToday, /data-depth="currents"/, 'the river portion must keep data-depth="currents"');
 });
+
+test('the landing merges its Waves and River previews under "News Wave"', () => {
+  const todayBand = landingHtml.match(/<section class="band" id="today"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(todayBand, 'landing must have a #today band');
+  assert.match(todayBand, />News Wave</, 'the landing must label the merged preview "News Wave"');
+  assert.match(todayBand, /id="lp-waves"/, 'the waves preview mount point must still exist');
+  assert.match(todayBand, /id="lp-river"/, 'the river preview mount point must still exist');
+  // The tab-switching UI is gone -- both previews are stacked, not chosen between.
+  assert.doesNotMatch(todayBand, /role="tablist"/, 'the Surface-views tablist must be removed');
+});
