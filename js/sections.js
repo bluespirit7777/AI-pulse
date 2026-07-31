@@ -1,5 +1,5 @@
 // Renderers for the detailed evidence sections below the hero. Live sections
-// (releases, wire, feed, breakthroughs, stocks) come from latest.json; ranking
+// (releases, wire, feed, stocks) come from latest.json; ranking
 // panels come from curated.js. Ported from the original inline script, with
 // freshness/provenance chips added.
 import { esc, fmtSnapshot } from './util.js';

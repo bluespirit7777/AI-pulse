@@ -235,7 +235,7 @@ export function goTo(panel, tab, { push = true, scroll = true } = {}) {
 
 // "Full page" — shows every section top-to-bottom at once, like the original
 // single-scroll page, for anyone who'd rather scroll than switch tabs. An
-// explicit opt-in (Today stays the default landing view): all 5 top panels
+// explicit opt-in (Today stays the default landing view): all 4 top panels
 // and all their local tabs are unhidden simultaneously, the now-redundant
 // local-tab bars and the depth rail (which has no single "current" section
 // to point at anymore) are hidden, and every widget inside — flip cards,

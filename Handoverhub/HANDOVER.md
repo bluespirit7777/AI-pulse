@@ -60,7 +60,7 @@ npx serve .        # any static server
 | `js/deeplink.js` | Forwards legacy root deep links to `app.html`; blocking script, runs pre-paint |
 | `css/app.css` | Component styles (dashboard only — the landing's CSS is inline) |
 | `js/main.js` | Orchestrator — loads data, calls every renderer |
-| `js/nav.js` | 5-item IA router (Today/Ecosystem/Models/Markets/Research) + Full Page |
+| `js/nav.js` | 4-item IA router (Today/Ecosystem/Models/Markets) + Full Page |
 | `js/curated.js` | **Hand-maintained** datasets (leaderboard, image/video/local AI) |
 | `scripts/lib/models.mjs` | **`MODEL_REGISTRY` — single source of truth for model names/versions** |
 | `scripts/lib/signals.mjs` | Clustering, scoring, categorization, topics, `isReleaseDiscussion` |
@@ -173,6 +173,18 @@ git push origin main
   **do not rebuild it without a fresh decision** — the former "Launch Radar is
   starving, fix its cron" known-issue and the next-step that referenced it are
   moot, not pending, and were removed with it.
+- **Simplified the IA to 4 items.** Tide removed (both pages — "didn't offer
+  anything concrete"); Waves and River merged into one "News Wave" section
+  (both pages — they were "basically both news about AI"); Research removed
+  (both pages — its one card, Breakthrough signals, was a literal subset of
+  items already in River/Waves via the research category, not merely
+  thematically similar). Backend `data.breakthroughs` computation and
+  `dailyCategoryHistory`/`range.json` generation are both untouched —
+  unconsumed but harmless, easy to resume either if that changes. The
+  dashboard's ocean photo (removed for contrast in the prior continuity
+  branch) came back by explicit request, paired with its original legibility
+  veil, scoped to `app.html` only — the shared gradient in `css/shell.css`
+  and the landing are unaffected.
 
 ### Frontend gotchas solved
 - `requestAnimationFrame` **never fires** in the automated test browser → use
