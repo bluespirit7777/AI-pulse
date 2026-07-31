@@ -496,20 +496,6 @@
   .lic-custom{background:var(--coral-text);}
   .feed-desc{font-size:13px;color:var(--ink-soft);}
 
-  /* ---------- breakthrough cards ---------- */
-  .brk-card{
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-left:3px solid var(--sand);
-    border-radius:12px;padding:18px 20px;
-    box-shadow:0 4px 16px rgba(18,48,62,0.05);
-    transition:transform .22s cubic-bezier(.16,.84,.44,1), box-shadow .22s ease, border-left-width .22s ease;
-  }
-  .brk-card:hover{transform:translateX(4px);box-shadow:0 10px 26px rgba(18,48,62,0.12);border-left-width:5px;}
-  .brk-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;}
-  .brk-card h4{font-family:var(--font-display);font-size:19px;font-weight:600;margin:0 0 6px;color:var(--deep);}
-  .brk-card p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.62;}
-  .brk-field{font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);}
-
   /* ---------- footer ---------- */
   footer{
     background:var(--panel-solid);
@@ -569,7 +555,6 @@
     <button type="button" class="nav-pill" data-panel="ecosystem">Ecosystem</button>
     <button type="button" class="nav-pill" data-panel="models">Models</button>
     <button type="button" class="nav-pill" data-panel="markets">Markets</button>
-    <button type="button" class="nav-pill" data-panel="research">Research</button>
   </nav>
 
   <div class="depth-rail" id="depth-rail" role="status" aria-label="Evidence depth of the current view">
@@ -855,24 +840,10 @@
       </div>
     </section>
 
-    <!-- RESEARCH -->
-    <section id="panel-research" class="topsection" data-panel="research" hidden>
-      <section id="sec-local" data-depth="seabed">
-        <div class="panel" id="sec-breakthrough">
-          <div class="panel-top">
-            <h3>Breakthrough signals</h3>
-            <span class="asof">Rolling</span>
-          </div>
-          <div class="panel-note" style="margin-bottom:6px;">Research moving from lab to headline, newest first</div>
-          <div id="breakthroughs" style="display:flex;flex-direction:column;gap:14px;margin-top:10px;"></div>
-        </div>
-      </section>
-    </section>
-
   </main>
 
   <footer>
-    <div><b>Waves, river, tide, releases, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
+    <div><b>News Wave, releases &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
     <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
     <div style="margin-top:8px;" id="footer-build" class="footer-build"></div>
     <button type="button" class="dh-chip" id="dh-chip" aria-haspopup="dialog" aria-controls="dh-drawer" hidden>Data Health</button>

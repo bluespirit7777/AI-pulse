@@ -275,16 +275,6 @@ export function renderLive(data, now = Date.now()) {
   //  grid was pure duplication. data.wire is still built for compatibility
   //  but no longer rendered.)
 
-  // breakthroughs
-  const brk = data.breakthroughs || [];
-  setHTML('breakthroughs', brk.length ? brk.map((b) => `
-    <div class="brk-card">
-      <div class="brk-top"><span class="brk-field">${esc(b.field)}</span><span class="asof">${esc(b.date)}</span></div>
-      <h4>${esc(b.h)}</h4>
-      <p>${esc(b.p)}</p>
-      ${b.url ? `<div class="card-src"><span>${sourceChip('auto')} ${esc(b.sourceName || '')}</span><a class="src-link" href="${esc(b.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
-    </div>`).join('') : `<p class="empty-state">No research signals in the current window.</p>`);
-
   // compute pricing — live from Vast.ai + RunPod public marketplace APIs
   // (see scripts/lib/compute.mjs); empty, not a stale fallback, if both fetches failed
   const compute = data.compute || [];

@@ -142,13 +142,13 @@ test('both pages link the shared component stylesheet', () => {
 });
 
 test('the landing bands carry the dashboard\'s panel names', () => {
-  for (const id of ['today', 'ecosystem', 'models', 'markets', 'research']) {
+  for (const id of ['today', 'ecosystem', 'models', 'markets']) {
     assert.match(landingHtml, new RegExp(`id="${id}"`), `landing must have a #${id} band`);
   }
 });
 
 test('the old landing anchors still resolve, so existing links do not break', () => {
-  for (const id of ['surface', 'currents', 'seabed']) {
+  for (const id of ['surface', 'currents']) {
     assert.match(landingHtml, new RegExp(`id="${id}"`), `legacy anchor #${id} must survive as an alias`);
   }
 });
@@ -186,7 +186,7 @@ test('both pages use the same depth-rail markup contract', () => {
 });
 
 test('the landing bands declare which depths they span', () => {
-  for (const id of ['today', 'ecosystem', 'models', 'markets', 'research']) {
+  for (const id of ['today', 'ecosystem', 'models', 'markets']) {
     const band = landingHtml.match(new RegExp(`<[^>]+id="${id}"[^>]*>`));
     assert.ok(band, `#${id} not found`);
     assert.match(band[0], /data-depth="/, `#${id} must declare its depth span`);
@@ -211,7 +211,6 @@ test('the landing bands report the exact same depth set as their dashboard panel
     ecosystem: 'panel-ecosystem',
     models: 'panel-models',
     markets: 'panel-markets',
-    research: 'panel-research',
   };
 
   for (const [bandId, panelId] of Object.entries(panelMap)) {
@@ -293,4 +292,11 @@ test('the landing merges its Waves and River previews under "News Wave"', () => 
   assert.match(todayBand, /id="lp-river"/, 'the river preview mount point must still exist');
   // The tab-switching UI is gone -- both previews are stacked, not chosen between.
   assert.doesNotMatch(todayBand, /role="tablist"/, 'the Surface-views tablist must be removed');
+});
+
+test('Research is removed from both pages', () => {
+  assert.doesNotMatch(appHtml, /id="panel-research"/, 'app.html must not have a Research panel');
+  assert.doesNotMatch(appHtml, /data-panel="research"/, 'app.html must not have a Research nav pill');
+  assert.doesNotMatch(landingHtml, /id="research"/, 'index.html must not have a Research band');
+  assert.doesNotMatch(landingHtml, /href="#research"/, 'index.html must not link to a Research anchor');
 });
