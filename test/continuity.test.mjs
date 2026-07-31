@@ -68,13 +68,20 @@ test('both pages link the shared shell stylesheet', () => {
   }
 });
 
-test('the dashboard no longer paints a full-bleed photograph behind every view', () => {
-  // The photo put small mono type (depth rail, ticker, section descriptors) on
-  // a busy background at low contrast. The landing's gradient replaces it.
-  // assets/ocean.jpg is still used as the landing's closing image and as the
-  // og:image, so only the dashboard's background usage should be gone.
-  assert.doesNotMatch(appHtml, /class="ocean-bg"/, 'the .ocean-bg photo layer must be removed from app.html');
-  assert.doesNotMatch(appHtml, /url\(assets\/ocean\.jpg\)/, 'app.html must not paint ocean.jpg as a background');
+test('the dashboard restores its ocean wallpaper, with a legibility veil', () => {
+  // Reversed by explicit owner request after the continuity branch shipped.
+  // The photo was originally removed because small mono type (depth rail,
+  // ticker, section descriptors) read poorly directly on it -- see
+  // docs/superpowers/specs/2026-07-30-landing-dashboard-continuity-design.md.
+  // Restoring it WITH a legibility veil (rather than bare) keeps that fix
+  // intact -- the same two-layer pattern the site used before the photo was
+  // ever removed.
+  assert.match(appHtml, /class="ocean-bg"/, 'app.html must paint the ocean photo again');
+  assert.match(appHtml, /url\(assets\/ocean\.jpg\)/, 'the .ocean-bg layer must reference assets/ocean.jpg');
+  assert.match(appHtml, /class="ocean-veil"/, 'the photo must be paired with a legibility veil, not left bare');
+  // This is a dashboard-only reversal -- the shared gradient in css/shell.css,
+  // and the landing that reads from it, must not change.
+  assert.doesNotMatch(landingHtml, /class="ocean-bg"/, 'the landing must NOT gain a photo background');
 });
 
 test('the dashboard keeps its animated wave footer (a signature element, not the photo)', () => {

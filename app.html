@@ -42,6 +42,30 @@
     line-height:1.62;
   }
 
+  /* ---------- ocean wallpaper (dashboard only; restored by owner request) ----------
+   * Sits above the shared gradient from css/shell.css via z-index, so that
+   * file needs no changes and the landing is unaffected. The veil is a
+   * deliberate keep, not a leftover: the photo was originally removed
+   * because small mono type read poorly directly on it (see
+   * docs/superpowers/specs/2026-07-30-landing-dashboard-continuity-design.md).
+   * Bringing the photo back without the veil would reintroduce that.
+   */
+  .ocean-bg{
+    position:fixed;inset:-4%;z-index:-2;
+    background:url(assets/ocean.jpg) center/cover no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .ocean-bg{animation:drift 60s ease-in-out infinite alternate;}
+  }
+  @keyframes drift{
+    0%{transform:scale(1) translate(0,0);}
+    100%{transform:scale(1.06) translate(-1%,1%);}
+  }
+  .ocean-veil{
+    position:fixed;inset:0;z-index:-1;
+    background:linear-gradient(180deg, rgba(234,244,246,0.6) 0%, rgba(234,244,246,0.7) 40%, rgba(234,244,246,0.8) 100%);
+  }
+
   /* ---------- gentle animated waves (signature element) ---------- */
   .waves{
     position:fixed;left:0;right:0;bottom:0;height:110px;z-index:0;pointer-events:none;opacity:.8;
@@ -509,6 +533,9 @@
 <body>
 
   <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="ocean-bg"></div>
+  <div class="ocean-veil"></div>
 
   <div class="waves" aria-hidden="true">
     <svg class="wave-a" viewBox="0 0 1440 110" preserveAspectRatio="none">
