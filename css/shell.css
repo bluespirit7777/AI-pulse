@@ -99,10 +99,10 @@ body{
 }
 .nav-pill--cta{background:var(--deep);color:var(--paper);padding:9px 17px;}
 .nav-pill--cta:hover{background:var(--ink);color:var(--paper);}
-/* "Full page" is a view-mode toggle, not a destination — a dashed border marks
-   that distinction without relying on colour alone. */
+/* "Top" scrolls to the top of the page rather than to one of the four
+   sections — a dashed border marks that distinction without relying on
+   colour alone. */
 .nav-pill--mode{border-style:dashed;border-color:var(--border-strong);color:var(--ink-soft);}
-.nav-pill--mode[aria-current="page"]{border-style:solid;}
 
 /* ---------- live / clock ---------- */
 .live-cluster{

@@ -217,7 +217,13 @@ function tabTargetId(tab) {
 function wireLocalTabs() {
   document.querySelectorAll('.local-tabs').forEach((group) => {
     group.querySelectorAll('.local-tab').forEach((btn) => {
-      btn.addEventListener('click', () => navigateToId(tabTargetId(btn.dataset.tab)));
+      btn.addEventListener('click', () => {
+        navigateToId(tabTargetId(btn.dataset.tab));
+        group.querySelectorAll('.local-tab').forEach((b) => {
+          if (b === btn) b.setAttribute('aria-current', 'true');
+          else b.removeAttribute('aria-current');
+        });
+      });
     });
   });
 }
