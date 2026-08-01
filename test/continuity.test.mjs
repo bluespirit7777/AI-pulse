@@ -324,3 +324,15 @@ test('js/nav.js drives one page by scrolling, not by switching panels', () => {
   assert.match(navSrc, /scrollIntoView|scrollTo/, 'nav.js must scroll to navigate');
   assert.match(navSrc, /addEventListener\('scroll'/, 'the depth rail must be driven by scroll position (scroll-spy)');
 });
+
+test('the dashboard top nav is labelled Top / Models / Ecosystem / News Wave / Markets', () => {
+  const nav = appHtml.match(/<nav class="topnav"[\s\S]*?<\/nav>/)?.[0];
+  assert.ok(nav, 'app.html must have a .topnav');
+  const labels = [...nav.matchAll(/<button[^>]*data-panel="[^"]*"[^>]*>([^<]+)<\/button>/g)].map((m) => m[1].trim());
+  assert.deepEqual(labels, ['Top', 'Models', 'Ecosystem', 'News Wave', 'Markets']);
+  // The internal ids must NOT have been renamed along with the labels --
+  // js/deeplink.js's allowlist, LEGACY_HASH and every landing link depend on
+  // them. "News Wave" is the label for data-panel="today".
+  assert.match(nav, /data-panel="today"[^>]*>News Wave</, 'News Wave must still be data-panel="today"');
+  assert.match(nav, /data-panel="full"[^>]*>Top</, 'Top must still be data-panel="full"');
+});
