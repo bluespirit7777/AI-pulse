@@ -18,6 +18,8 @@ const landingHtml = read('index.html');
 const appHtml = read('app.html');
 const navSrc = read('js/nav.js');
 const tokensCss = read('css/tokens.css');
+const appCss = read('css/app.css');
+const shellCss = read('css/shell.css');
 
 test('both pages link the shared token stylesheet', () => {
   for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
@@ -388,4 +390,53 @@ test('Image AI and Video AI share one row', () => {
   // Both jump-bar buttons survive the merge.
   assert.match(appHtml, /data-tab="image"/, 'the Image AI jump button must remain');
   assert.match(appHtml, /data-tab="video"/, 'the Video AI jump button must remain');
+});
+
+test('the modal drawers outrank the fixed site header', () => {
+  // Regression guard for a real bug: all three full-height drawers shipped at
+  // z-index:60, the same value as the fixed .site-header. The header therefore
+  // painted over the drawers' top ~130px -- burying the title and putting the
+  // close button past the top of the viewport, where it also lost the hit test.
+  // From outside it looked like a cropped panel with no way to close it.
+  const headerZ = Number(shellCss.match(/\.site-header\{[^}]*z-index:\s*(\d+)/)?.[1]);
+  assert.ok(Number.isFinite(headerZ), 'could not read .site-header z-index from css/shell.css');
+
+  const modalZ = Number(tokensCss.match(/--z-modal:\s*(\d+)/)?.[1]);
+  assert.ok(Number.isFinite(modalZ), 'css/tokens.css must define --z-modal');
+  assert.ok(modalZ > headerZ, `--z-modal (${modalZ}) must outrank .site-header (${headerZ})`);
+
+  // Every drawer must actually use the token -- a hard-coded number here is how
+  // the original bug happened, and would silently drift from the header again.
+  for (const cls of ['.map-drawer', '.snet-drawer', '.dh-drawer']) {
+    const escaped = cls.replace('.', '\\.');
+    const rule = appCss.match(new RegExp(escaped + '\\s*\\{[^}]*?z-index:\\s*([^;]+);'))?.[1];
+    assert.ok(rule, `${cls} rule with a z-index not found in css/app.css`);
+    assert.equal(rule.trim(), 'var(--z-modal)', `${cls} must use var(--z-modal), not a literal`);
+  }
+});
+
+test('the drawers are portaled to <body>, escaping #main-content\'s stacking context', () => {
+  // The z-index above is necessary but NOT sufficient, and this is the half
+  // that actually fixed the bug. #main-content carries position:relative and
+  // z-index:2 (app.html), which creates a stacking context: any descendant's
+  // z-index is resolved INSIDE it, so a drawer nested under #main-content can
+  // never outrank the fixed .site-header no matter how high it declares.
+  // Both drawers must therefore be moved to <body> on creation, which is
+  // where the already-working .dh-drawer lives (it is authored there in
+  // app.html rather than being portaled).
+  for (const [file, src] of [['js/oceanmap.js', read('js/oceanmap.js')], ['js/stocknetwork.js', read('js/stocknetwork.js')]]) {
+    assert.match(
+      src,
+      /document\.body\.appendChild\(drawer\)/,
+      `${file} must portal its drawer to <body> or it renders under the site header`
+    );
+  }
+  // .dh-drawer's own escape route: authored as a direct child of <body>, not
+  // inside <main>. If it ever moves into the main content it inherits the bug.
+  const mainStart = appHtml.indexOf('<main');
+  const mainEnd = appHtml.indexOf('</main>');
+  assert.ok(mainStart !== -1 && mainEnd > mainStart, 'could not locate <main> in app.html');
+  const insideMain = appHtml.slice(mainStart, mainEnd);
+  assert.doesNotMatch(insideMain, /class="dh-drawer"/, '.dh-drawer must be authored outside <main>');
+  assert.match(appHtml, /class="dh-drawer"/, '.dh-drawer must still exist somewhere in app.html');
 });

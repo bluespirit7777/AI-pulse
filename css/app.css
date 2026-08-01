@@ -119,7 +119,7 @@ html, body { overflow-x: clip; }
 
 /* ---------- map detail drawer ---------- */
 .map-drawer {
-  position: fixed; inset: 0 0 0 auto; width: min(420px, 92vw); z-index: 60;
+  position: fixed; inset: 0 0 0 auto; width: min(420px, 92vw); z-index: var(--z-modal);
   background: var(--panel-solid); border-left: 1px solid var(--border-strong);
   box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto;
   animation: drawerIn .28s cubic-bezier(.16,.84,.44,1);
@@ -422,7 +422,7 @@ body.drawer-open { overflow: hidden; }
 /* stock network drawer (reuses .map-drawer visuals via shared classes) */
 /* wider than the other detail drawers (420px) — a candlestick chart needs
    real room to be legible, not just a couple of stat lines */
-.snet-drawer { position: fixed; inset: 0 0 0 auto; width: min(560px, 94vw); z-index: 60; background: var(--panel-solid); border-left: 1px solid var(--border-strong); box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto; animation: drawerIn .28s cubic-bezier(.16,.84,.44,1); }
+.snet-drawer { position: fixed; inset: 0 0 0 auto; width: min(560px, 94vw); z-index: var(--z-modal); background: var(--panel-solid); border-left: 1px solid var(--border-strong); box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto; animation: drawerIn .28s cubic-bezier(.16,.84,.44,1); }
 @media (prefers-reduced-motion: reduce) { .snet-drawer { animation: none; } }
 .snet-drawer h3 { font-family: var(--font-display); font-size: 25px; font-weight: 600; color: var(--deep); margin: 4px 0 14px; }
 /* native SVG candlestick chart — served from our own domain so it renders
@@ -465,7 +465,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ---------- data health drawer (reuses .drawer-inner/.drawer-close visuals) ---------- */
-.dh-drawer { position: fixed; inset: 0 0 0 auto; width: min(400px, 92vw); z-index: 60; background: var(--panel-solid); border-left: 1px solid var(--border-strong); box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto; animation: drawerIn .28s cubic-bezier(.16,.84,.44,1); }
+.dh-drawer { position: fixed; inset: 0 0 0 auto; width: min(400px, 92vw); z-index: var(--z-modal); background: var(--panel-solid); border-left: 1px solid var(--border-strong); box-shadow: -12px 0 40px rgba(18,48,62,.18); overflow-y: auto; animation: drawerIn .28s cubic-bezier(.16,.84,.44,1); }
 @media (prefers-reduced-motion: reduce) { .dh-drawer { animation: none; } }
 .dh-drawer h3 { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--deep); margin: 4px 0 14px; }
 .dh-facts { display: grid; gap: 9px; margin: 12px 0 16px; }

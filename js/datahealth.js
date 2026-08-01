@@ -51,7 +51,8 @@ export function renderDataHealth(chipEl, drawerEl, health, build) {
       </div>`;
     drawerEl.hidden = false;
     document.body.classList.add('drawer-open');
-    drawerEl.querySelector('.drawer-close').focus();
+    // preventScroll — see the same call in js/oceanmap.js.
+    drawerEl.querySelector('.drawer-close').focus({ preventScroll: true });
     drawerEl.querySelector('.drawer-close').addEventListener('click', closeDrawer);
   }
 

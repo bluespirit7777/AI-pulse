@@ -67,6 +67,15 @@ export function createOceanMap(root, entities) {
   const gNodes = svg.querySelector('.map-nodes');
   const tooltip = root.querySelector('#map-tooltip');
   const drawer = root.querySelector('#map-drawer');
+  // Portal the drawer to <body>. It is role="dialog" aria-modal="true" and must
+  // paint above the fixed .site-header, but it cannot do that from in here:
+  // #main-content sets position:relative; z-index:2, which creates a stacking
+  // context that traps every descendant's z-index inside it. No value on the
+  // drawer itself can escape that -- which is why this looked like a cropped
+  // header with an unclickable close button. .dh-drawer already lives on
+  // <body> for the same reason; this brings the map drawer in line.
+  // Safe as a plain move: createOceanMap() runs once, from boot().
+  document.body.appendChild(drawer);
   const summary = root.querySelector('#map-summary');
   let lastFocused = null;
   let drawerOpenFor = null;
@@ -231,7 +240,11 @@ export function createOceanMap(root, entities) {
       </div>`;
     drawer.hidden = false;
     document.body.classList.add('drawer-open');
-    if (!reopening) drawer.querySelector('.drawer-close').focus();
+    // preventScroll: the drawer is overflow-y:auto, and focusing a child asks the
+    // browser to scroll it into view -- which could nudge the panel's own top out
+    // of sight before the reader has seen it. We already place the button; don't
+    // let focus re-position it.
+    if (!reopening) drawer.querySelector('.drawer-close').focus({ preventScroll: true });
 
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
     drawer.querySelectorAll('.rel-link').forEach((b) =>
