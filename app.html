@@ -788,11 +788,16 @@
       <section id="sec-waves">
         <div class="section-head">
           <h2 class="section-head__title">News Wave</h2>
-          <span class="section-head__descriptor">The strongest signals and the full chronological stream, together<s></s></span>
+          <span class="section-head__descriptor">A daily AI-written synthesis, and the full chronological stream<s></s></span>
         </div>
+        <!-- data-depth stays on this wrapper, not on the rendered content:
+             js/nav.js's scroll-spy unions every descendant [data-depth] under
+             #panel-today, and the landing's #today band declares
+             "surface currents" to match. #ai-summary hides itself on any day
+             the summary is missing or stale, so the depth must not depend on
+             whether anything rendered inside it. -->
         <div class="tabpanel" data-depth="surface">
-          <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
-          <div class="waves-grid" id="waves"></div>
+          <div id="ai-summary"></div>
         </div>
         <div class="tabpanel" data-depth="currents">
           <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list, so one row is one event. Newest first, always — nothing is re-ordered by score.</details></p>

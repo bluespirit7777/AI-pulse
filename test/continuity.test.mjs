@@ -269,13 +269,14 @@ test('the superseded per-page heading and button classes are gone', () => {
   assert.match(landingHtml, /btn--secondary/, 'index.html must use .btn--secondary');
 });
 
-test('the dashboard merges Waves and River into one "News Wave" section', () => {
-  assert.match(appHtml, />News Wave</, 'app.html must show the merged "News Wave" heading');
-  // Both original render mount points must survive underneath it unchanged --
-  // js/waveform.js and js/river.js were not touched by this merge.
-  assert.match(appHtml, /id="waves"/, 'the waves mount point must still exist');
+test('News Wave pairs the AI summary with the chronological stream', () => {
+  assert.match(appHtml, />News Wave</, 'app.html must show the "News Wave" heading');
+  // The three per-family wave cards are gone; an AI-written daily synthesis
+  // takes their place above the same stream.
+  assert.match(appHtml, /id="ai-summary"/, 'the AI summary mount point must exist');
   assert.match(appHtml, /id="river"/, 'the river mount point must still exist');
-  // The old two-heading split is gone.
+  assert.doesNotMatch(appHtml, /id="waves"/, 'the old three-wave mount point must be gone');
+  // The old headings are gone.
   assert.doesNotMatch(appHtml, /Today's strongest waves/, 'the old separate Waves heading must be gone');
   assert.doesNotMatch(appHtml, /Signal river/, 'the old separate River heading must be gone');
   // The depth union this section feeds the rail with must survive the merge:
@@ -291,8 +292,50 @@ test('the dashboard merges Waves and River into one "News Wave" section', () => 
   const todayCandidateEnds = [todayRest.length, todayNextPanelOffset, todayEndOfMainOffset].filter((n) => n !== -1);
   const panelToday = todayRest.slice(0, Math.min(...todayCandidateEnds));
   assert.ok(panelToday, 'could not isolate #panel-today for the depth check');
-  assert.match(panelToday, /data-depth="surface"/, 'the waves portion must keep data-depth="surface"');
-  assert.match(panelToday, /data-depth="currents"/, 'the river portion must keep data-depth="currents"');
+  assert.match(panelToday, /data-depth="surface"/, 'the AI-summary wrapper must keep data-depth="surface"');
+  assert.match(panelToday, /data-depth="currents"/, 'the river wrapper must keep data-depth="currents"');
+});
+
+test('the three per-family wave cards are fully removed, not just unmounted', () => {
+  // js/waveform.js rendered PRODUCT/MARKET/RESEARCH WAVE cards from
+  // data.waves. It is replaced by the AI Summary Wave, so the module, its
+  // import and its ~37 lines of .wf-* CSS all go -- leaving any of them would
+  // be dead weight that reads as still-live.
+  assert.throws(
+    () => read('js/waveform.js'),
+    /ENOENT/,
+    'js/waveform.js must be deleted',
+  );
+  const mainSrc = read('js/main.js');
+  assert.doesNotMatch(mainSrc, /waveform\.js/, 'js/main.js must not import the deleted module');
+  assert.match(mainSrc, /renderAiSummary/, 'js/main.js must render the AI summary instead');
+  assert.doesNotMatch(appCss, /\.wf-[a-z-]+\s*\{/, 'the .wf-* card CSS must be gone');
+});
+
+test('data.waves stays on the backend — the LANDING still renders it', () => {
+  // Deleting js/waveform.js makes data.waves look dead from the dashboard's
+  // side. It is not: js/landing.js paints the landing's #lp-waves preview from
+  // it. Removing buildWaves()/the waves field as "now unused" would silently
+  // empty that preview, so this pins the real consumer.
+  const landingJs = read('js/landing.js');
+  assert.match(landingJs, /data\?\.waves|data\.waves/, 'js/landing.js must still read data.waves');
+  assert.match(landingHtml, /id="lp-waves"/, 'the landing preview mount must still exist');
+  const signalsLib = read('scripts/lib/signals.mjs');
+  assert.match(signalsLib, /export function buildWaves/, 'buildWaves() must stay — the landing depends on it');
+});
+
+test('the AI summary is gated on freshness and discloses itself', () => {
+  const src = read('js/aisummary.js');
+  // A stale summary above a stream that refreshes every 30 minutes would be
+  // worse than none, so the section must hide itself rather than go stale.
+  assert.match(src, /STALE_HOURS\s*=\s*36/, 'the 36h staleness gate the procedure doc quotes');
+  assert.match(src, /root\.hidden = true/, 'it must hide the section when unusable');
+  // The "AI-written" label must be hardcoded and gated on the method field, so
+  // a hand-edited data file cannot relabel itself as something it is not.
+  assert.match(src, /method !== 'ai-written'/, 'usability must be gated on method');
+  assert.match(src, /AI-written/, 'the disclosure label must live in the code, not the data');
+  // Sources are resolved against the live feed rather than trusted from the file.
+  assert.doesNotMatch(src, /fam\.sourceUrls|fam\.urls/, 'source URLs must not be read from the summary file');
 });
 
 test('the landing merges its Waves and River previews under "News Wave"', () => {

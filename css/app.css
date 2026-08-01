@@ -161,43 +161,46 @@ html, body { overflow-x: clip; }
 .drawer-links { font-family: var(--font-mono); font-size: 12px; }
 body.drawer-open { overflow: hidden; }
 
-/* ---------- three waves: real SVG waveforms ---------- */
-.wf-row {
+/* ---------- AI Summary Wave ----------
+   Three short syntheses of the day, written by an agent and committed as data
+   (docs/AI_SUMMARY_PROCEDURE.md). Deliberately plainer than the three wave
+   cards this replaced: no sparkline, no badges, no scores — the value is the
+   prose, so nothing should compete with it. */
+.aisum-disclosure {
+  font-family: var(--font-mono); font-size: 11px; line-height: 1.65;
+  color: var(--ink-dim); margin: 0 0 14px;
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px;
+}
+.aisum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.aisum-grid > * { min-width: 0; }
+@media (max-width: 900px) { .aisum-grid { grid-template-columns: 1fr; } }
+.aisum-card {
   background: var(--panel-solid); border: 1px solid var(--border);
-  border-radius: 14px; padding: 16px 20px; margin-bottom: 14px;
+  border-top: 3px solid var(--sea); border-radius: 14px; padding: 18px 20px;
   box-shadow: 0 4px 16px rgba(18,48,62,.06);
 }
-.wf-row:last-child { margin-bottom: 0; }
-.wf-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
-.wf-fam { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--deep); font-weight: 500; }
-.wf-mark { color: var(--sea); }
-.wf-trend { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .03em; padding: 2px 9px; border-radius: 12px; background: var(--foam); color: var(--ink-soft); }
-.wf-trend-standout { color: #1f6f57; }
-.wf-trend-lower { color: var(--coral-text); }
-.wf-svg { width: 100%; height: 76px; display: block; }
-.wf-point { cursor: pointer; transition: r .15s ease; }
-.wf-point:hover, .wf-point:focus { r: 8; outline: none; }
-.wf-point-main { stroke: var(--panel-solid); stroke-width: 2; }
-.wf-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--deep); line-height: 1.3; margin: 8px 0 4px; border-top: 1px solid var(--border); padding-top: 10px; }
-.wf-summary-text { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; margin: 0 0 8px; }
-.wf-why { font-size: 13px; color: var(--ink); line-height: 1.5; margin: 0 0 10px; padding: 8px 10px; background: var(--foam); border-radius: 8px; border-left: 3px solid var(--sea); }
-.wf-product .wf-why { border-left-color: var(--sea); }
-.wf-market .wf-why { border-left-color: var(--coral); }
-.wf-research .wf-why { border-left-color: var(--sand); }
-.wf-why-label { display: block; font-family: var(--font-mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 2px; }
-.wf-selected { font-size: 11.5px; color: var(--ink-soft); line-height: 1.45; margin: 0 0 10px; padding: 0 2px; }
-.wf-selected-label { font-family: var(--font-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-dim); margin-right: 6px; }
-.wf-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-.wf-impact { font-family: var(--font-mono); font-size: 10.5px; color: var(--teal); }
-.wf-src { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
-.wf-more { font-family: var(--font-mono); font-size: 10.5px; color: var(--teal); background: none; border: none; border-top: 1px solid var(--border); padding: 8px 0 0; width: 100%; text-align: left; cursor: pointer; }
-.wf-more:hover { text-decoration: underline; }
-.wf-detail-inner { padding: 12px 2px 2px; }
-.wf-facts { display: flex; flex-wrap: wrap; gap: 14px; font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft); margin-bottom: 10px; }
-.wf-facts b { color: var(--deep); font-family: var(--font-body); }
-.wf-sources { font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-dim); margin-bottom: 10px; }
-.wf-read { display: inline-block; }
-@media (max-width: 640px) { .wf-svg { height: 60px; } }
+/* Same family colours the removed wave cards used, so the three areas stay
+   recognisable across the redesign. */
+.aisum-market { border-top-color: var(--coral); }
+.aisum-research { border-top-color: var(--sand); }
+.aisum-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.aisum-fam {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--deep);
+}
+.aisum-count { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
+.aisum-text { font-size: 14px; line-height: 1.62; color: var(--ink); margin: 0; }
+.aisum-sources {
+  list-style: none; margin: 12px 0 0; padding: 12px 0 0;
+  border-top: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 6px;
+  font-family: var(--font-mono); font-size: 11px;
+}
+.aisum-sources li { min-width: 0; }
+/* .src-link sets white-space:nowrap, which is right for the short "Read
+   original" links it was built for but overflows the card here — these are
+   full headlines. Override locally rather than weakening the shared class. */
+.aisum-sources a { white-space: normal; overflow-wrap: anywhere; line-height: 1.5; }
 
 /* ---------- signal river ---------- */
 .river-more { text-align: center; margin-top: 16px; }
