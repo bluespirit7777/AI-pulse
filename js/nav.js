@@ -1,5 +1,6 @@
-// Navigation controller for the 5-item IA (Today/Ecosystem/Models/Markets/
-// Research), each with local tabs. Replaces the old single-scroll page with
+// Navigation controller for the 4-item IA (Today/Ecosystem/Models/Markets),
+// each with local tabs where it has more than one subsection. Replaces the
+// old single-scroll page with
 // deterministic, programmatic section/tab activation — so unlike a scroll-
 // spied single page, "what's active" is never inferred from scroll position,
 // it's always exactly what was last activated. This also sidesteps the old
@@ -10,34 +11,33 @@
 import { prefersReducedMotion } from './util.js';
 
 // Each top-level panel's local tab ids, in document/DOM order. Panels absent
-// here (ecosystem, research) have no local tabs.
+// here (ecosystem, today) have no local tabs -- today merged its three
+// subsections (waves/river/tide) into one "News Wave" section with nothing
+// left to jump between.
 const PANEL_TABS = {
-  today: ['waves', 'river', 'tide'],
   models: ['releases', 'leaderboard', 'image', 'video', 'local', 'community'],
   markets: ['stocknet', 'compute'],
 };
-const PANELS = ['today', 'ecosystem', 'models', 'markets', 'research'];
+const PANELS = ['today', 'ecosystem', 'models', 'markets'];
 
 // Legacy hashes from the old single-scroll page → {panel, tab}. Every one of
 // these must keep working as a direct link.
 const LEGACY_HASH = {
   '#sec-map': { panel: 'ecosystem' },
-  '#sec-waves': { panel: 'today', tab: 'waves' },
-  '#sec-river': { panel: 'today', tab: 'river' },
-  '#sec-tide': { panel: 'today', tab: 'tide' },
+  '#sec-waves': { panel: 'today' },
+  '#sec-river': { panel: 'today' },
   '#sec-releases': { panel: 'models', tab: 'releases' },
   '#sec-leaderboard': { panel: 'models', tab: 'leaderboard' },
   '#sec-media': { panel: 'models', tab: 'image' },
   '#sec-community': { panel: 'models', tab: 'community' },
   '#sec-stocks': { panel: 'markets', tab: 'stocknet' },
   '#sec-compute': { panel: 'markets', tab: 'compute' },
-  '#sec-local': { panel: 'research' },
 };
 
 const FULL_HASH = '#full';
 // Full Page's own visual order — Ecosystem and Models lead, per explicit
 // request, with the rest keeping their original relative order after them.
-const FULL_PAGE_ORDER = ['ecosystem', 'models', 'today', 'markets', 'research'];
+const FULL_PAGE_ORDER = ['ecosystem', 'models', 'today', 'markets'];
 
 let state = { panel: 'today', tab: 'waves' };
 let dataReady = false;
@@ -235,7 +235,7 @@ export function goTo(panel, tab, { push = true, scroll = true } = {}) {
 
 // "Full page" — shows every section top-to-bottom at once, like the original
 // single-scroll page, for anyone who'd rather scroll than switch tabs. An
-// explicit opt-in (Today stays the default landing view): all 5 top panels
+// explicit opt-in (Today stays the default landing view): all 4 top panels
 // and all their local tabs are unhidden simultaneously, the now-redundant
 // local-tab bars and the depth rail (which has no single "current" section
 // to point at anymore) are hidden, and every widget inside — flip cards,
@@ -305,7 +305,7 @@ export function initNav() {
   }
 }
 
-// Called once from main.js after the initial async render (waves/river/tide/
+// Called once from main.js after the initial async render (waves/river/
 // ocean map/stock network) has settled — finishes any scroll that was
 // waiting on real content instead of a skeleton.
 export function notifyDataReady() {

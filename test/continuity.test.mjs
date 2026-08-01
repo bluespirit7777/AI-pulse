@@ -68,13 +68,20 @@ test('both pages link the shared shell stylesheet', () => {
   }
 });
 
-test('the dashboard no longer paints a full-bleed photograph behind every view', () => {
-  // The photo put small mono type (depth rail, ticker, section descriptors) on
-  // a busy background at low contrast. The landing's gradient replaces it.
-  // assets/ocean.jpg is still used as the landing's closing image and as the
-  // og:image, so only the dashboard's background usage should be gone.
-  assert.doesNotMatch(appHtml, /class="ocean-bg"/, 'the .ocean-bg photo layer must be removed from app.html');
-  assert.doesNotMatch(appHtml, /url\(assets\/ocean\.jpg\)/, 'app.html must not paint ocean.jpg as a background');
+test('the dashboard restores its ocean wallpaper, with a legibility veil', () => {
+  // Reversed by explicit owner request after the continuity branch shipped.
+  // The photo was originally removed because small mono type (depth rail,
+  // ticker, section descriptors) read poorly directly on it -- see
+  // docs/superpowers/specs/2026-07-30-landing-dashboard-continuity-design.md.
+  // Restoring it WITH a legibility veil (rather than bare) keeps that fix
+  // intact -- the same two-layer pattern the site used before the photo was
+  // ever removed.
+  assert.match(appHtml, /class="ocean-bg"/, 'app.html must paint the ocean photo again');
+  assert.match(appHtml, /url\(assets\/ocean\.jpg\)/, 'the .ocean-bg layer must reference assets/ocean.jpg');
+  assert.match(appHtml, /class="ocean-veil"/, 'the photo must be paired with a legibility veil, not left bare');
+  // This is a dashboard-only reversal -- the shared gradient in css/shell.css,
+  // and the landing that reads from it, must not change.
+  assert.doesNotMatch(landingHtml, /class="ocean-bg"/, 'the landing must NOT gain a photo background');
 });
 
 test('the dashboard keeps its animated wave footer (a signature element, not the photo)', () => {
@@ -135,13 +142,13 @@ test('both pages link the shared component stylesheet', () => {
 });
 
 test('the landing bands carry the dashboard\'s panel names', () => {
-  for (const id of ['today', 'ecosystem', 'models', 'markets', 'research']) {
+  for (const id of ['today', 'ecosystem', 'models', 'markets']) {
     assert.match(landingHtml, new RegExp(`id="${id}"`), `landing must have a #${id} band`);
   }
 });
 
 test('the old landing anchors still resolve, so existing links do not break', () => {
-  for (const id of ['surface', 'currents', 'seabed']) {
+  for (const id of ['surface', 'currents']) {
     assert.match(landingHtml, new RegExp(`id="${id}"`), `legacy anchor #${id} must survive as an alias`);
   }
 });
@@ -179,7 +186,7 @@ test('both pages use the same depth-rail markup contract', () => {
 });
 
 test('the landing bands declare which depths they span', () => {
-  for (const id of ['today', 'ecosystem', 'models', 'markets', 'research']) {
+  for (const id of ['today', 'ecosystem', 'models', 'markets']) {
     const band = landingHtml.match(new RegExp(`<[^>]+id="${id}"[^>]*>`));
     assert.ok(band, `#${id} not found`);
     assert.match(band[0], /data-depth="/, `#${id} must declare its depth span`);
@@ -204,7 +211,6 @@ test('the landing bands report the exact same depth set as their dashboard panel
     ecosystem: 'panel-ecosystem',
     models: 'panel-models',
     markets: 'panel-markets',
-    research: 'panel-research',
   };
 
   for (const [bandId, panelId] of Object.entries(panelMap)) {
@@ -258,4 +264,39 @@ test('the superseded per-page heading and button classes are gone', () => {
   // a stylesheet asserting its own class always passes.
   assert.match(landingHtml, /btn--primary/, 'index.html must use .btn--primary');
   assert.match(landingHtml, /btn--secondary/, 'index.html must use .btn--secondary');
+});
+
+test('the dashboard merges Waves and River into one "News Wave" section', () => {
+  assert.match(appHtml, />News Wave</, 'app.html must show the merged "News Wave" heading');
+  // Both original render mount points must survive underneath it unchanged --
+  // js/waveform.js and js/river.js were not touched by this merge.
+  assert.match(appHtml, /id="waves"/, 'the waves mount point must still exist');
+  assert.match(appHtml, /id="river"/, 'the river mount point must still exist');
+  // The old two-heading split is gone.
+  assert.doesNotMatch(appHtml, /Today's strongest waves/, 'the old separate Waves heading must be gone');
+  assert.doesNotMatch(appHtml, /Signal river/, 'the old separate River heading must be gone');
+  // The depth union this section feeds the rail with must survive the merge:
+  // panelDepths() in js/nav.js scans every descendant [data-depth], so both
+  // values must still appear somewhere under #panel-today.
+  const panelToday = appHtml.match(/id="panel-today"[\s\S]*?<\/section>\s*<!-- ECOSYSTEM/)?.[0];
+  assert.ok(panelToday, 'could not isolate #panel-today for the depth check');
+  assert.match(panelToday, /data-depth="surface"/, 'the waves portion must keep data-depth="surface"');
+  assert.match(panelToday, /data-depth="currents"/, 'the river portion must keep data-depth="currents"');
+});
+
+test('the landing merges its Waves and River previews under "News Wave"', () => {
+  const todayBand = landingHtml.match(/<section class="band" id="today"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(todayBand, 'landing must have a #today band');
+  assert.match(todayBand, />News Wave</, 'the landing must label the merged preview "News Wave"');
+  assert.match(todayBand, /id="lp-waves"/, 'the waves preview mount point must still exist');
+  assert.match(todayBand, /id="lp-river"/, 'the river preview mount point must still exist');
+  // The tab-switching UI is gone -- both previews are stacked, not chosen between.
+  assert.doesNotMatch(todayBand, /role="tablist"/, 'the Surface-views tablist must be removed');
+});
+
+test('Research is removed from both pages', () => {
+  assert.doesNotMatch(appHtml, /id="panel-research"/, 'app.html must not have a Research panel');
+  assert.doesNotMatch(appHtml, /data-panel="research"/, 'app.html must not have a Research nav pill');
+  assert.doesNotMatch(landingHtml, /id="research"/, 'index.html must not have a Research band');
+  assert.doesNotMatch(landingHtml, /href="#research"/, 'index.html must not link to a Research anchor');
 });

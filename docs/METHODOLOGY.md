@@ -160,12 +160,6 @@ are never conflated.
 reorders; verification chip per item; category/entity/time filters; expand/
 archive for older signals.
 
-**The Tide** — *how operational AI activity changes each day*: stacked daily
-volume across the nine operational categories only. **General commentary and
-opinion/analysis are excluded** (stated in the UI), so it tracks activity, not
-chatter. Plotted only over days actually collected; below 3 days it shows a
-"still filling" state and never implies history that wasn't recorded.
-
 ## What we deliberately don't do
 
 - No proportional bars for ordinal rankings presented as scores.

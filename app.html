@@ -42,6 +42,30 @@
     line-height:1.62;
   }
 
+  /* ---------- ocean wallpaper (dashboard only; restored by owner request) ----------
+   * Sits above the shared gradient from css/shell.css via z-index, so that
+   * file needs no changes and the landing is unaffected. The veil is a
+   * deliberate keep, not a leftover: the photo was originally removed
+   * because small mono type read poorly directly on it (see
+   * docs/superpowers/specs/2026-07-30-landing-dashboard-continuity-design.md).
+   * Bringing the photo back without the veil would reintroduce that.
+   */
+  .ocean-bg{
+    position:fixed;inset:-4%;z-index:-2;
+    background:url(assets/ocean.jpg) center/cover no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .ocean-bg{animation:drift 60s ease-in-out infinite alternate;}
+  }
+  @keyframes drift{
+    0%{transform:scale(1) translate(0,0);}
+    100%{transform:scale(1.06) translate(-1%,1%);}
+  }
+  .ocean-veil{
+    position:fixed;inset:0;z-index:-1;
+    background:linear-gradient(180deg, rgba(234,244,246,0.6) 0%, rgba(234,244,246,0.7) 40%, rgba(234,244,246,0.8) 100%);
+  }
+
   /* ---------- gentle animated waves (signature element) ---------- */
   .waves{
     position:fixed;left:0;right:0;bottom:0;height:110px;z-index:0;pointer-events:none;opacity:.8;
@@ -472,20 +496,6 @@
   .lic-custom{background:var(--coral-text);}
   .feed-desc{font-size:13px;color:var(--ink-soft);}
 
-  /* ---------- breakthrough cards ---------- */
-  .brk-card{
-    background:var(--panel-solid);
-    border:1px solid var(--border);border-left:3px solid var(--sand);
-    border-radius:12px;padding:18px 20px;
-    box-shadow:0 4px 16px rgba(18,48,62,0.05);
-    transition:transform .22s cubic-bezier(.16,.84,.44,1), box-shadow .22s ease, border-left-width .22s ease;
-  }
-  .brk-card:hover{transform:translateX(4px);box-shadow:0 10px 26px rgba(18,48,62,0.12);border-left-width:5px;}
-  .brk-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;}
-  .brk-card h4{font-family:var(--font-display);font-size:19px;font-weight:600;margin:0 0 6px;color:var(--deep);}
-  .brk-card p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.62;}
-  .brk-field{font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--sand);}
-
   /* ---------- footer ---------- */
   footer{
     background:var(--panel-solid);
@@ -509,6 +519,9 @@
 <body>
 
   <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="ocean-bg"></div>
+  <div class="ocean-veil"></div>
 
   <div class="waves" aria-hidden="true">
     <svg class="wave-a" viewBox="0 0 1440 110" preserveAspectRatio="none">
@@ -542,7 +555,6 @@
     <button type="button" class="nav-pill" data-panel="ecosystem">Ecosystem</button>
     <button type="button" class="nav-pill" data-panel="models">Models</button>
     <button type="button" class="nav-pill" data-panel="markets">Markets</button>
-    <button type="button" class="nav-pill" data-panel="research">Research</button>
   </nav>
 
   <div class="depth-rail" id="depth-rail" role="status" aria-label="Evidence depth of the current view">
@@ -563,44 +575,20 @@
         <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the headline ticker" aria-pressed="false">❚❚</button>
       </div>
 
-      <div class="local-tabs" role="tablist" aria-label="Today views" data-tabgroup="today">
-        <button type="button" role="tab" class="local-tab" id="tabbtn-waves" data-tab="waves" aria-selected="true" aria-controls="tab-waves" tabindex="0">Waves</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-river" data-tab="river" aria-selected="false" aria-controls="tab-river" tabindex="-1">River</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-tide" data-tab="tide" aria-selected="false" aria-controls="tab-tide" tabindex="-1">Tide</button>
-      </div>
-
-      <div class="tabpanel" id="tab-waves" role="tabpanel" aria-labelledby="tabbtn-waves" data-depth="surface">
-        <section id="sec-waves">
-          <div class="section-head">
-            <h2 class="section-head__title">Today's strongest waves</h2>
-            <span class="section-head__descriptor">The biggest product, market &amp; research moves<s></s></span>
-          </div>
+      <section id="sec-waves">
+        <div class="section-head">
+          <h2 class="section-head__title">News Wave</h2>
+          <span class="section-head__descriptor">The strongest signals and the full chronological stream, together<s></s></span>
+        </div>
+        <div class="tabpanel" data-depth="surface">
           <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
           <div class="waves-grid" id="waves"></div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-river" role="tabpanel" aria-labelledby="tabbtn-river" data-depth="currents" hidden>
-        <section id="sec-river">
-          <div class="section-head">
-            <h2 class="section-head__title">Signal river</h2>
-            <span class="section-head__descriptor">Every story crossing the wire, newest first<s></s></span>
-          </div>
+        </div>
+        <div class="tabpanel" data-depth="currents">
           <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list. Dot size reflects significance (0–100); filter by category, entity, or time window below.</details></p>
           <div id="river"></div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-tide" role="tabpanel" aria-labelledby="tabbtn-tide" data-depth="currents" hidden>
-        <section id="sec-tide">
-          <div class="section-head">
-            <h2 class="section-head__title">The Tide</h2>
-            <span class="section-head__descriptor">How operational AI activity changes each day<s></s></span>
-          </div>
-          <p class="panel-note intro-note one-line-note">Daily activity by category — <b>operational only</b>, commentary excluded. <span class="fr-chip fr-live" title="Built from live daily signal counts"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>A stacked view of how much moved in each operational category per day — product, research, compute, capital, policy, adoption, open source, market and org/governance. General commentary and opinion/analysis are deliberately excluded, so this tracks activity, not chatter. It only plots days actually collected and shows its real available range — it never implies history that wasn't recorded.</details></p>
-          <div id="tide"></div>
-        </section>
-      </div>
+        </div>
+      </section>
     </section>
 
     <!-- ECOSYSTEM -->
@@ -852,24 +840,10 @@
       </div>
     </section>
 
-    <!-- RESEARCH -->
-    <section id="panel-research" class="topsection" data-panel="research" hidden>
-      <section id="sec-local" data-depth="seabed">
-        <div class="panel" id="sec-breakthrough">
-          <div class="panel-top">
-            <h3>Breakthrough signals</h3>
-            <span class="asof">Rolling</span>
-          </div>
-          <div class="panel-note" style="margin-bottom:6px;">Research moving from lab to headline, newest first</div>
-          <div id="breakthroughs" style="display:flex;flex-direction:column;gap:14px;margin-top:10px;"></div>
-        </div>
-      </section>
-    </section>
-
   </main>
 
   <footer>
-    <div><b>Waves, river, tide, releases, breakthroughs &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
+    <div><b>News Wave, releases &amp; stock prices</b> refresh automatically throughout the day from publisher RSS feeds, official lab YouTube channels and Yahoo Finance — every item links to its original source. <b>Leaderboard, image/video/local AI rankings, market share &amp; compute pricing</b> are curated snapshots updated by hand (see source links on each panel), not live feeds.</div>
     <div style="margin-top:8px;" id="footer-updated">Public trackers disagree with each other by a few points on any given day — treat every figure here as directionally right, not exact. Nothing here is investment advice.</div>
     <div style="margin-top:8px;" id="footer-build" class="footer-build"></div>
     <button type="button" class="dh-chip" id="dh-chip" aria-haspopup="dialog" aria-controls="dh-drawer" hidden>Data Health</button>

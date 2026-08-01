@@ -139,21 +139,6 @@ section.band:has(.split.flip) .glowwrap{
 .bar .fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--shallow),var(--tide));width:0;transition:width 1.4s cubic-bezier(.16,.84,.28,1)}
 .bar .v{font-family:var(--mono);text-align:right;font-size:11.5px;color:var(--tide);font-variant-numeric:tabular-nums}
 
-/* ---------- seabed ---------- */
-.deepband{margin-top:88px;background:linear-gradient(180deg,#235B6C 0%,var(--deep) 42%,var(--ink) 100%);padding:96px 0;position:relative;overflow:hidden;scroll-margin-top:var(--header-h)}
-.deepband:before{content:"";position:absolute;top:0;left:0;right:0;height:140px;background:linear-gradient(180deg,var(--mist),transparent);opacity:.16;pointer-events:none;z-index:1}
-.deepband .caust{position:absolute;inset:-30%;background:radial-gradient(closest-side,rgba(62,143,163,.55),transparent 70%);filter:blur(60px);pointer-events:none}
-@media (prefers-reduced-motion:no-preference){.deepband .caust{animation:float 26s ease-in-out infinite alternate}}
-@keyframes float{from{transform:translate3d(-8%,-4%,0) scale(1)}to{transform:translate3d(8%,6%,0) scale(1.25)}}
-.deepband .wrap{position:relative;z-index:2}
-.deepband h2{color:var(--paper);font-size:clamp(32px,3.6vw,50px);max-width:22ch;margin-top:14px}
-.deepband .lede{margin-top:20px;font-family:var(--serif);font-size:19px;line-height:1.6;color:rgba(227,237,239,.86);max-width:46ch}
-.deepband .section-head__eyebrow{color:var(--shallow)}
-.deepband .section-head__eyebrow s{background:var(--shallow)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
-.chips span{border:1px solid rgba(62,143,163,.6);color:var(--shallow);font-size:11.5px;letter-spacing:.06em;padding:7px 14px;border-radius:999px;transition:.3s}
-.chips span:hover{background:rgba(62,143,163,.3);color:var(--paper)}
-
 /* ---------- close + footer ---------- */
 .close{padding:104px 0;margin-top:-1px;text-align:center;position:relative;overflow:hidden}
 .close .media{position:absolute;inset:0;z-index:-2}
@@ -187,8 +172,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
   .hero .wrap{padding-top:100px;padding-bottom:40px}
   .scrolltip{display:none}
   section.band{padding-top:64px}
-  .deepband,.close{padding:64px 0}
-  .deepband{margin-top:64px}
+  .close{padding:64px 0}
   .bar{grid-template-columns:76px minmax(0,1fr) 44px;gap:10px;font-size:12px}
   footer .wrap{flex-direction:column;align-items:flex-start}
 }
@@ -215,7 +199,6 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     <a class="nav-pill" href="#ecosystem">Ecosystem</a>
     <a class="nav-pill" href="#models">Models</a>
     <a class="nav-pill" href="#markets">Markets</a>
-    <a class="nav-pill" href="#research">Research</a>
   </nav>
   <div class="live-cluster"><span class="dot" aria-hidden="true"></span><span id="lp-clock">--:--:--</span> UTC</div>
   <a class="nav-pill nav-pill--cta" href="app.html">Open dashboard</a>
@@ -240,7 +223,7 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     <p class="lede rv">AI news, benchmarks and prices — sorted by depth, not by noise.</p>
     <div class="cta rv">
       <a class="btn btn--primary" href="app.html">Enter the dashboard <span aria-hidden="true">→</span></a>
-      <a class="btn btn--secondary" href="#research">How it works</a>
+      <a class="btn btn--secondary" href="docs/METHODOLOGY.md" target="_blank" rel="noopener">How it works</a>
     </div>
   </div>
   <div class="scrolltip" aria-hidden="true">Descend</div>
@@ -263,16 +246,9 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
         <h2 class="section-head__title" id="lp-h-today">What just moved</h2>
       </div>
       <p class="sub">The strongest signals of the last cycle, duplicate coverage merged into one entry and scored 0–100 for significance.</p>
-      <div class="tabs" role="tablist" aria-label="Surface views">
-        <button type="button" role="tab" id="tb-waves" aria-controls="pn-waves" aria-selected="true" data-tab="waves">Waves</button>
-        <button type="button" role="tab" id="tb-river" aria-controls="pn-river" aria-selected="false" data-tab="river">River</button>
-        <button type="button" role="tab" id="tb-tide" aria-controls="pn-tide" aria-selected="false" data-tab="tide">Tide</button>
-      </div>
-      <div data-panes="surface">
-        <div class="pane" role="tabpanel" id="pn-waves" aria-labelledby="tb-waves" data-pane="waves"><div class="mini" id="lp-waves"></div></div>
-        <div class="pane" role="tabpanel" id="pn-river" aria-labelledby="tb-river" data-pane="river" hidden><div class="mini" id="lp-river"></div></div>
-        <div class="pane" role="tabpanel" id="pn-tide" aria-labelledby="tb-tide" data-pane="tide" hidden><div class="mini" id="lp-tide"></div></div>
-      </div>
+      <span class="section-head__eyebrow" style="margin-top:18px;">News Wave<s></s></span>
+      <div class="mini" id="lp-waves"></div>
+      <div class="mini" id="lp-river"></div>
       <p class="meta" id="lp-surface-meta"></p>
       <a class="more" href="app.html#panel-today">Open today's wire <span aria-hidden="true">→</span></a>
     </div>
@@ -359,20 +335,6 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
 </div>
 </section>
 
-<!-- RESEARCH -->
-<span id="seabed" class="anchor-alias" aria-hidden="true"></span>
-<div class="deepband" id="research" data-depth="seabed">
-<div class="caust" aria-hidden="true"></div>
-<div class="wrap">
-  <div class="section-head rv">
-    <span class="section-head__eyebrow">Slow &amp; structural<s></s></span>
-    <h2 class="section-head__title">Some things only make sense at a slower frame rate.</h2>
-  </div>
-  <p class="lede rv">Research that hasn't landed, capital measured in years, policy still being drafted. Nothing here changes today — which is why it gets its own layer.</p>
-  <div class="chips rv"><span>Impact over recency</span><span>Duplicates merged</span><span>Commentary excluded</span><span>Sources always linked</span><span>Estimates labelled as estimates</span></div>
-</div>
-</div>
-
 <div class="close">
   <div class="media" aria-hidden="true"><img src="assets/ocean.jpg" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
@@ -390,7 +352,6 @@ footer .fl{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:12.5px}
     <a href="app.html#panel-ecosystem">Ecosystem</a>
     <a href="app.html#panel-models">Models</a>
     <a href="app.html#panel-markets">Markets</a>
-    <a href="app.html#panel-research">Research</a>
     <a href="app.html#full">Full page</a>
   </div>
 </div>

@@ -1,5 +1,5 @@
 // Renderers for the detailed evidence sections below the hero. Live sections
-// (releases, wire, feed, breakthroughs, stocks) come from latest.json; ranking
+// (releases, wire, feed, stocks) come from latest.json; ranking
 // panels come from curated.js. Ported from the original inline script, with
 // freshness/provenance chips added.
 import { esc, fmtSnapshot } from './util.js';
@@ -274,16 +274,6 @@ export function renderLive(data, now = Date.now()) {
   //  carries the full chronological stream with filters, so a separate wire
   //  grid was pure duplication. data.wire is still built for compatibility
   //  but no longer rendered.)
-
-  // breakthroughs
-  const brk = data.breakthroughs || [];
-  setHTML('breakthroughs', brk.length ? brk.map((b) => `
-    <div class="brk-card">
-      <div class="brk-top"><span class="brk-field">${esc(b.field)}</span><span class="asof">${esc(b.date)}</span></div>
-      <h4>${esc(b.h)}</h4>
-      <p>${esc(b.p)}</p>
-      ${b.url ? `<div class="card-src"><span>${sourceChip('auto')} ${esc(b.sourceName || '')}</span><a class="src-link" href="${esc(b.url)}" target="_blank" rel="noopener">Read original</a></div>` : ''}
-    </div>`).join('') : `<p class="empty-state">No research signals in the current window.</p>`);
 
   // compute pricing — live from Vast.ai + RunPod public marketplace APIs
   // (see scripts/lib/compute.mjs); empty, not a stale fallback, if both fetches failed

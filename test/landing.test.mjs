@@ -50,7 +50,7 @@ test('landing markup contains no hardcoded score-like numbers in the data slots'
   // Every list on the page is rendered into an empty container by landing.js.
   // If a container ships with children, someone has pasted static rows in.
   const containers = [
-    'lp-ticker', 'lp-waves', 'lp-river', 'lp-tide',
+    'lp-ticker', 'lp-waves', 'lp-river',
     'lp-share', 'lp-lb-text', 'lp-lb-image', 'lp-lb-video', 'lp-lb-local',
     'lp-compute',
   ];
@@ -123,22 +123,23 @@ test('deeplink forwarder catches every dashboard hash shape and no landing ancho
   assert.ok(src, 'could not locate the hash predicate in js/deeplink.js');
   const re = new RegExp(src.slice(1, -1));
 
-  // Every hash the dashboard's nav.js can resolve (PANELS, PANEL_TABS,
-  // LEGACY_HASH and FULL_HASH) must be forwarded.
+  // Every hash shape the landing must forward to app.html — panels, local
+  // tabs, and legacy section anchors, whether or not nav.js still resolves
+  // each one to a live section — must be forwarded.
   const dashboard = [
     '#full',
-    '#panel-today', '#panel-ecosystem', '#panel-models', '#panel-markets', '#panel-research',
-    '#tab-waves', '#tab-river', '#tab-tide', '#tab-releases',
+    '#panel-today', '#panel-ecosystem', '#panel-models', '#panel-markets',
+    '#tab-waves', '#tab-river', '#tab-releases',
     '#tab-leaderboard', '#tab-image', '#tab-video', '#tab-local', '#tab-community',
     '#tab-stocknet', '#tab-compute',
-    '#sec-map', '#sec-waves', '#sec-river', '#sec-tide', '#sec-releases',
-    '#sec-leaderboard', '#sec-media', '#sec-community', '#sec-stocks', '#sec-compute', '#sec-local',
+    '#sec-map', '#sec-waves', '#sec-river', '#sec-releases',
+    '#sec-leaderboard', '#sec-media', '#sec-community', '#sec-stocks', '#sec-compute',
   ];
   for (const h of dashboard) assert.ok(re.test(h), `${h} must be forwarded to app.html`);
 
   // The landing's own anchors must never be captured.
-  for (const h of ['#today', '#ecosystem', '#models', '#markets', '#research',
-                   '#surface', '#currents', '#seabed']) {
+  for (const h of ['#today', '#ecosystem', '#models', '#markets',
+                   '#surface', '#currents']) {
     assert.ok(!re.test(h), `${h} is a landing anchor and must not be forwarded`);
   }
   // '#full' is anchored, so a longer hash that merely starts with it is safe.
