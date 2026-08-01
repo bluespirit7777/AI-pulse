@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-08-01T09:15:23.390Z",
+  "updatedAt": "2026-08-01T09:30:30.040Z",
   "build": {
-    "sha": "30719c26f1f8efea79805f6f1348c44376def6c4",
-    "shortSha": "30719c2",
+    "sha": "46ba610329f9ad6e5ca927d276b325d698ace890",
+    "shortSha": "46ba610",
     "ref": "main",
-    "builtAt": "2026-08-01T09:15:42.151Z"
+    "builtAt": "2026-08-01T09:30:46.407Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 14,
+    "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 22.4,
     "estimatedDatasets": 4,
-    "buildSha": "30719c2",
-    "lastSuccessfulUpdate": "2026-08-01T09:15:23.390Z"
+    "buildSha": "46ba610",
+    "lastSuccessfulUpdate": "2026-08-01T09:30:30.040Z"
   },
   "ticker": [
     "ANTHROPIC SAYS ITS OWN AI MODELS BREACHED THREE COMPANIES DURING SECURITY TESTS",
@@ -23,10 +23,10 @@
     "ADVANCING RESPONSIBLE AI ACROSS EUROPE",
     "GOOGLE NIXES ITS EARTH AI FEATURE ONE DAY AFTER LAUNCH, AMID CRITICISM IT WOULD SPREAD MISINFORMATION",
     "IT’S TIME TO PANIC ABOUT AI SAFETY",
+    "ANTHROPIC SAYS CLAUDE ACCIDENTALLY HACKED REAL COMPANIES TOO",
     "UNIVÉ BUILDS AN AI-READY WORKFORCE",
     "DISRUPTING A CRIMINAL SCAM OPERATION",
-    "JUDGE SAYS TRUMP ADMIN STILL LACKS EVIDENCE FOR ANTHROPIC ‘SUPPLY-CHAIN RISK’ LABEL",
-    "HERE’S THE PROBLEM WITH PUTTING AN AI IMAGE GENERATOR IN GOOGLE EARTH"
+    "JUDGE SAYS TRUMP ADMIN STILL LACKS EVIDENCE FOR ANTHROPIC ‘SUPPLY-CHAIN RISK’ LABEL"
   ],
   "signals": [
     {
@@ -40,18 +40,38 @@
       "category": "opensource",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 73,
+      "significance": 79,
       "impact": "high",
       "verification": "corroborated",
-      "sourceCount": 3,
+      "sourceCount": 8,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests"
+          "name": "Cybersecurity Dive",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
+        },
+        {
+          "name": "BBC",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
+        },
+        {
+          "name": "DW.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
           "name": "Wired",
           "url": "https://www.wired.com/story/anthropic-says-claude-hacked-real-systems-during-cybersecurity-tests/"
+        },
+        {
+          "name": "WIRED",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTmo4d2k1aTNWUzllLV9LUmdFMGNKS0dyZ2RGSVRMRmNQZks4eTFVLTFVU183alhYMmc2X0NYZHlXOGhfZEZQSU90YTNhVjRUWUlpeWNxTm9idFdzajB1VnV2RU1zcnVwazdSLV9jTm1WbDk0a05OdlNZcTdWODZYUEhBNl9BS0ZVaERkUU9fUTQzcjkxOTYwMUgxN0JkZw?oc=5"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5"
+        },
+        {
+          "name": "CyberScoop",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
         },
         {
           "name": "TechCrunch",
@@ -195,6 +215,33 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests",
+      "clusterId": "cm2a4t",
+      "title": "Anthropic says Claude accidentally hacked real companies too",
+      "desc": "Anthropic just realized several of its Claude AI models hacked into the systems of three different organizations during testing, acting on their own and without the company noticing. The revelation comes days after rival OpenAI said one of its own models had breached developer platform Hugging Face, adding to growing unease over whether frontier AI […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests",
+      "dateISO": "2026-07-31T13:41:17.000Z",
+      "date": "JUL 31 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 66,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/unive",
       "clusterId": "lm9u7g",
       "title": "Univé builds an AI-ready workforce",
@@ -308,36 +355,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/",
-      "clusterId": "1rrl6kq",
-      "title": "AI labs want to pump the brakes, but Amazon and SpaceX are still blasting off",
-      "desc": "After years of pushing full speed ahead on AI, OpenAI CEO Sam Altman says maybe it’s time for the AI industry to “pace” itself. The comments came just days after one of OpenAI’s own models broke out of its test environment and got tangled up in a breach at Hugging Face — though as Equity’s hosts point out, sloppy security seems to have […]",
-      "url": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/",
-      "dateISO": "2026-07-31T14:00:00.000Z",
-      "date": "JUL 31 2026",
-      "category": "orggov",
-      "catConfidence": 0.4,
-      "family": "market",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/video/sam-altman-isnt-the-only-one-who-wants-to-pump-the-brakes-on-ai/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/07/30/reddit-reports-a-solid-quarter-but-shows-signs-of-ais-impact/",
       "clusterId": "2eg4dr",
       "title": "Reddit reports a solid quarter but shows signs of AI’s impact",
@@ -391,6 +408,82 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
+      "clusterId": "1syefyo",
+      "title": "Claude Science, an AI workbench for scientists, is now available",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
+      "dateISO": "2026-06-30T07:00:00.000Z",
+      "date": "JUN 30 2026",
+      "category": "product",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 6,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
+        },
+        {
+          "name": "STAT",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
+        },
+        {
+          "name": "Northeastern Global News",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWFMLUFicUpQcmdVbGVZS1VmekY5c3Bmc0pFQmxtX01mRnd0aFNmNTVkUm45R1FWMy1HWFlfOEU3TWpsZEZDeUZiOUs1QXNFRE1jQ2ktRTgzT2p1dU1hbkM5WWhZVXlRckVhaUU4Y0huZ19nLWctVVEzVW0weDdWRU45dlAtTjVFSFdIcW55YXVWa0dGS3dLY3diUDJsV19QdVZQLUluWWFwNkZWX0pVc2VBWWlwbU0?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/",
+      "clusterId": "1rrl6kq",
+      "title": "AI labs want to pump the brakes, but Amazon and SpaceX are still blasting off",
+      "desc": "After years of pushing full speed ahead on AI, OpenAI CEO Sam Altman says maybe it’s time for the AI industry to “pace” itself. The comments came just days after one of OpenAI’s own models broke out of its test environment and got tangled up in a breach at Hugging Face — though as Equity’s hosts point out, sloppy security seems to have […]",
+      "url": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/",
+      "dateISO": "2026-07-31T14:00:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "orggov",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 57,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/sam-altman-isnt-the-only-one-who-wants-to-pump-the-brakes-on-ai/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/ai-labs-want-to-pump-the-brakes-but-amazon-and-spacex-are-still-blasting-off/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/nvidias-open-source-alliance-snubs-openai-and-anthropic/",
       "clusterId": "o47bxm",
       "title": "Nvidia’s Open Source Alliance Is Missing Some Key Names: OpenAI and Anthropic",
@@ -401,7 +494,7 @@
       "category": "opensource",
       "catConfidence": 0.71,
       "family": "product",
-      "significance": 58,
+      "significance": 57,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -560,6 +653,119 @@
       "entityIds": []
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
+      "clusterId": "yj5148",
+      "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
+      "dateISO": "2026-07-06T07:00:00.000Z",
+      "date": "JUL 06 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWHlvQ0t3R3I5NWtGdW1SZlpMVVdka2xtT1FtLXdPRXdSN3cxYzdleEllMGRWNXR6RnN1YUZuNFZLUkRhbWtqY0hjTFN1b2lzYV96OElSZi1tX2F6WGRsaE1BNVRVQmhzazY1TGcwTmJRV0ZUbkFtQzhzZTlYdHFsVWVJalY?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5"
+        }
+      ],
+      "sourceName": "CNBC",
+      "entityIds": [
+        "claude",
+        "qwen"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORFpZeFB6OXNWbUp2OG1NcnJPaDA0cmpkUTNzMUJGNFlPak9kalI0NVRRMXpJcTN5RERhc1RONDJMWVpsZ2lkSHNXUWx1N1hqeGNjVlp3NVNNWkJIdjNHc0FHdENWaXlIRmxYTGtFVlBaRWU2NVRRLXVYMDJ2dWNCcTRJeTc4U3gwVXNmekNUTXFGYklzNlBZclBKdDQtNHdJMTcxMGVKcWZzdVZYcDJVc2IwS21CcWl2YmFz?oc=5",
+      "clusterId": "1jrzujj",
+      "title": "Anthropic confirms its AI breached 3 organizations during testing",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORFpZeFB6OXNWbUp2OG1NcnJPaDA0cmpkUTNzMUJGNFlPak9kalI0NVRRMXpJcTN5RERhc1RONDJMWVpsZ2lkSHNXUWx1N1hqeGNjVlp3NVNNWkJIdjNHc0FHdENWaXlIRmxYTGtFVlBaRWU2NVRRLXVYMDJ2dWNCcTRJeTc4U3gwVXNmekNUTXFGYklzNlBZclBKdDQtNHdJMTcxMGVKcWZzdVZYcDJVc2IwS21CcWl2YmFz?oc=5",
+      "dateISO": "2026-07-31T13:40:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Nextgov/FCW",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORFpZeFB6OXNWbUp2OG1NcnJPaDA0cmpkUTNzMUJGNFlPak9kalI0NVRRMXpJcTN5RERhc1RONDJMWVpsZ2lkSHNXUWx1N1hqeGNjVlp3NVNNWkJIdjNHc0FHdENWaXlIRmxYTGtFVlBaRWU2NVRRLXVYMDJ2dWNCcTRJeTc4U3gwVXNmekNUTXFGYklzNlBZclBKdDQtNHdJMTcxMGVKcWZzdVZYcDJVc2IwS21CcWl2YmFz?oc=5"
+        }
+      ],
+      "sourceName": "Nextgov/FCW",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5",
+      "clusterId": "obl7ow",
+      "title": "Anthropic says its Claude models escaped a testing environment and hacked three real companies",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5",
+      "dateISO": "2026-07-31T13:08:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
+        }
+      ],
+      "sourceName": "Fortune",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNmpPbElvVm1iS3RySHgyeGxYYjRuaFB4elhBWjdaX2lQdUZIbURlVXhCTENnSnBmTmNMR2t1RkYteVhtUGlsOGVURU1YdzZmS0M4a1AydFpXOHM0ckstVVJVWUp6TWFrSVhudGVmdHI2Z0xzdmFMV1Izd0pQVUlVUw?oc=5",
+      "clusterId": "1xgcu6g",
+      "title": "Anthropic’s AI Claude hacked into three organizations during cybersecurity test",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNmpPbElvVm1iS3RySHgyeGxYYjRuaFB4elhBWjdaX2lQdUZIbURlVXhCTENnSnBmTmNMR2t1RkYteVhtUGlsOGVURU1YdzZmS0M4a1AydFpXOHM0ckstVVJVWUp6TWFrSVhudGVmdHI2Z0xzdmFMV1Izd0pQVUlVUw?oc=5",
+      "dateISO": "2026-07-31T00:10:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Register",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOUzFUc1hnWVFPLUQ3TE1iY3BSQnB1V0VEMHQydm9PMmRFNmxLRkNsZ3B2VVBqaGg2eFpLVUQxVXlVZThncGtmMkZNUElrTEpvWElIbkt3ajB1bzhnRlB5NTJBZXl6dll6T1BYNWR5U1czNUY0R2V1NGkzRWhmclo5NmcxVmFWeVc1bUhaTl9fUTdoMkwzaHFab3oyMlMyWS1XR0tDcXEta3RsSjlWSXptWEl0RC1NVTF0SElZdjE1MU9WZzg?oc=5"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNmpPbElvVm1iS3RySHgyeGxYYjRuaFB4elhBWjdaX2lQdUZIbURlVXhCTENnSnBmTmNMR2t1RkYteVhtUGlsOGVURU1YdzZmS0M4a1AydFpXOHM0ckstVVJVWUp6TWFrSVhudGVmdHI2Z0xzdmFMV1Izd0pQVUlVUw?oc=5"
+        }
+      ],
+      "sourceName": "The Guardian",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/07/31/india-is-starting-to-pay-for-apps-not-just-download-them/",
       "clusterId": "nzfevc",
       "title": "India is starting to pay for apps, not just download them",
@@ -582,6 +788,62 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYUl2cklIYkg0cjlxX3BOUlV3LVg4bzM2Y2pJM2hCak9OaTNoRi1DeFh2OWFsdzRZUlBiT0d6MHVnWGlxS3lFblZBdjk1Ty1vTE5MdEU2YW54YlgtS3l5aUJaVGVNVlI4Z0VGVDRSeHF3V0ZueTRDVnhxOUNQSHFVNVNDVEhYTW9BQ1d0TFQzbWhTSk5IU0otNFRONkxvZC1UUVJzSGdET21vNEhD?oc=5",
+      "clusterId": "ixti53",
+      "title": "Anthropic’s Claude AI Broke Into Three Companies During Security Tests",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYUl2cklIYkg0cjlxX3BOUlV3LVg4bzM2Y2pJM2hCak9OaTNoRi1DeFh2OWFsdzRZUlBiT0d6MHVnWGlxS3lFblZBdjk1Ty1vTE5MdEU2YW54YlgtS3l5aUJaVGVNVlI4Z0VGVDRSeHF3V0ZueTRDVnhxOUNQSHFVNVNDVEhYTW9BQ1d0TFQzbWhTSk5IU0otNFRONkxvZC1UUVJzSGdET21vNEhD?oc=5",
+      "dateISO": "2026-07-31T11:00:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYUl2cklIYkg0cjlxX3BOUlV3LVg4bzM2Y2pJM2hCak9OaTNoRi1DeFh2OWFsdzRZUlBiT0d6MHVnWGlxS3lFblZBdjk1Ty1vTE5MdEU2YW54YlgtS3l5aUJaVGVNVlI4Z0VGVDRSeHF3V0ZueTRDVnhxOUNQSHFVNVNDVEhYTW9BQ1d0TFQzbWhTSk5IU0otNFRONkxvZC1UUVJzSGdET21vNEhD?oc=5"
+        }
+      ],
+      "sourceName": "Forbes",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRklUbXZiQktyUFd2clQ0N1pQWi1VcnJ2bGhyYnJPcE5nRXFWRG0ydVlpVV9OWFotcGxEbXRqSnRaLVN4YW9JVFhlcWxpMmEyRVhNSDU1eUVnbFZRRC1uWFpsblNBeC14X0VhVE1FT3BoNURLZDhSTF96XzFVS3htcGZxbTFIRHlQenA5enRDRGZKQldJRkZaMVBESHExSDh6RGRNV0Jn0gGrAUFVX3lxTE9QNHNqYXU0UTl3RnRGT18wMlJqbHRMNTB5TFBMWFZVdHItWXBXZ21KczE2VTBLM29HLTRtdGxPUnhOOFpIQ25fSWlGWFdYZWE5N3BHeG9kc2ZHOFhUbWlTX015c2t6RDYzZklnUExtWVktWTJjQm43NlpJYTI1eEtRX1pJV2ZERjVDckFtcTZfV2JRbklvcGlud3prUVUwVHNjd3RVTHJCZWkwNA?oc=5",
+      "clusterId": "1mxq8bo",
+      "title": "Anthropic says its Claude models 'gained unauthorized access' to other organizations' systems",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRklUbXZiQktyUFd2clQ0N1pQWi1VcnJ2bGhyYnJPcE5nRXFWRG0ydVlpVV9OWFotcGxEbXRqSnRaLVN4YW9JVFhlcWxpMmEyRVhNSDU1eUVnbFZRRC1uWFpsblNBeC14X0VhVE1FT3BoNURLZDhSTF96XzFVS3htcGZxbTFIRHlQenA5enRDRGZKQldJRkZaMVBESHExSDh6RGRNV0Jn0gGrAUFVX3lxTE9QNHNqYXU0UTl3RnRGT18wMlJqbHRMNTB5TFBMWFZVdHItWXBXZ21KczE2VTBLM29HLTRtdGxPUnhOOFpIQ25fSWlGWFdYZWE5N3BHeG9kc2ZHOFhUbWlTX015c2t6RDYzZklnUExtWVktWTJjQm43NlpJYTI1eEtRX1pJV2ZERjVDckFtcTZfV2JRbklvcGlud3prUVUwVHNjd3RVTHJCZWkwNA?oc=5",
+      "dateISO": "2026-07-30T23:27:36.000Z",
+      "date": "JUL 30 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWlBQd0ZtRVozMGllWHIyUmh0dkstVDN0OXg0WFhJZnFzd3hMZEd5WGZfMU9xS09pV0lQWUlWZmN0LS0wVFNHZk9UMUZkTUd0YVBKaXFOalVLVXhxMGV6NTJINjY3MFIzT0lpMnZvbFpJVzF3ekw2RUhqM3VaNnJJSzRZeHFRUEhaZzBYMy1KZ9IBlAFBVV95cUxQOVNRTEwzTXMzNDAycVZSN3hxYXAtSF9Sd1R3ZXNIQ1ZuVnJDOEE3LVlOUm1pWjdZOElPRkEzczZkWFZMajNwOVFjWEl3a0J1VHpWZlQzVFdkdlpIS0xSZ0FSUzR6MERuX3I5a2V5RExvT3pJaVRzYWlTeUdUM2h4cWhCNHp1WjREVU8yVnlnbmRRdjRi?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRklUbXZiQktyUFd2clQ0N1pQWi1VcnJ2bGhyYnJPcE5nRXFWRG0ydVlpVV9OWFotcGxEbXRqSnRaLVN4YW9JVFhlcWxpMmEyRVhNSDU1eUVnbFZRRC1uWFpsblNBeC14X0VhVE1FT3BoNURLZDhSTF96XzFVS3htcGZxbTFIRHlQenA5enRDRGZKQldJRkZaMVBESHExSDh6RGRNV0Jn0gGrAUFVX3lxTE9QNHNqYXU0UTl3RnRGT18wMlJqbHRMNTB5TFBMWFZVdHItWXBXZ21KczE2VTBLM29HLTRtdGxPUnhOOFpIQ25fSWlGWFdYZWE5N3BHeG9kc2ZHOFhUbWlTX015c2t6RDYzZklnUExtWVktWTJjQm43NlpJYTI1eEtRX1pJV2ZERjVDckFtcTZfV2JRbklvcGlud3prUVUwVHNjd3RVTHJCZWkwNA?oc=5"
+        }
+      ],
+      "sourceName": "CNBC",
+      "entityIds": [
+        "claude"
+      ]
     },
     {
       "id": "https://openai.com/index/introducing-gpt-live",
@@ -611,6 +873,89 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMifkFVX3lxTE85NGFHYWhZdUVHV1ZOd1RGeHI4RzNhWGJnZUwybFRBVEQzSVhSbzZudkNMSXBDX2FQSTBoelBrVWxNVUZpLUw2alhBRnlET1RfQTRRN2dsWU9ZNVpfYVktTEtIR0FYRlJKRkhvWmpKbkRCNTJOcnRBOFNma05VZw?oc=5",
+      "clusterId": "d0cpex",
+      "title": "Anthropic Says Claude Mistook the Open Internet for a CTF and Breached Three Organizations",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE85NGFHYWhZdUVHV1ZOd1RGeHI4RzNhWGJnZUwybFRBVEQzSVhSbzZudkNMSXBDX2FQSTBoelBrVWxNVUZpLUw2alhBRnlET1RfQTRRN2dsWU9ZNVpfYVktTEtIR0FYRlJKRkhvWmpKbkRCNTJOcnRBOFNma05VZw?oc=5",
+      "dateISO": "2026-07-31T06:41:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "thehackernews.com",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE85NGFHYWhZdUVHV1ZOd1RGeHI4RzNhWGJnZUwybFRBVEQzSVhSbzZudkNMSXBDX2FQSTBoelBrVWxNVUZpLUw2alhBRnlET1RfQTRRN2dsWU9ZNVpfYVktTEtIR0FYRlJKRkhvWmpKbkRCNTJOcnRBOFNma05VZw?oc=5"
+        }
+      ],
+      "sourceName": "thehackernews.com",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWDhubWRSWHEwWS11eDdqbkJUQzJsbEdDNndpMzNVYXdteGl6Z20tUTdFTW1YV1RuRk0xMUFpdWcycmtVeXBGRDNPNnVGRzNtX1U3UlVoc1BqV3FxYXhNdUdYUUNGLXA5WGZ0UzVUMkY5U1BsS1M0a3FBdjZOaGFzR0FEd1dhMTlFWlhVeGktbGpCWU9pYVF4RmhxRHdIdkRIMmVQazZPb9IBrAFBVV95cUxPSUlKcDVSWEMyWmIwU010XzBsQVJxX2lhZkFrRC1TRjdlQUhQT1JkSFVKZ3pwNTdOZHZ4NlRkTnpRMThTTHc5cGRXWV9Ua19xV2ZyYWt6U1lUV3E1NVo3V0tvNHZvallqZzN1ZHpjWGZWV1psOFlsSUNzRVBfZURSMklxLUFoeUFrWHdCeHJZQlBzdXFBNzBfSlYwVjZKMlFTRWljWHU1NkVFOXBT?oc=5",
+      "clusterId": "wkvewu",
+      "title": "After OpenAI disclosure, Anthropic says Claude also hacked outside systems",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWDhubWRSWHEwWS11eDdqbkJUQzJsbEdDNndpMzNVYXdteGl6Z20tUTdFTW1YV1RuRk0xMUFpdWcycmtVeXBGRDNPNnVGRzNtX1U3UlVoc1BqV3FxYXhNdUdYUUNGLXA5WGZ0UzVUMkY5U1BsS1M0a3FBdjZOaGFzR0FEd1dhMTlFWlhVeGktbGpCWU9pYVF4RmhxRHdIdkRIMmVQazZPb9IBrAFBVV95cUxPSUlKcDVSWEMyWmIwU010XzBsQVJxX2lhZkFrRC1TRjdlQUhQT1JkSFVKZ3pwNTdOZHZ4NlRkTnpRMThTTHc5cGRXWV9Ua19xV2ZyYWt6U1lUV3E1NVo3V0tvNHZvallqZzN1ZHpjWGZWV1psOFlsSUNzRVBfZURSMklxLUFoeUFrWHdCeHJZQlBzdXFBNzBfSlYwVjZKMlFTRWljWHU1NkVFOXBT?oc=5",
+      "dateISO": "2026-07-31T04:09:17.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWDhubWRSWHEwWS11eDdqbkJUQzJsbEdDNndpMzNVYXdteGl6Z20tUTdFTW1YV1RuRk0xMUFpdWcycmtVeXBGRDNPNnVGRzNtX1U3UlVoc1BqV3FxYXhNdUdYUUNGLXA5WGZ0UzVUMkY5U1BsS1M0a3FBdjZOaGFzR0FEd1dhMTlFWlhVeGktbGpCWU9pYVF4RmhxRHdIdkRIMmVQazZPb9IBrAFBVV95cUxPSUlKcDVSWEMyWmIwU010XzBsQVJxX2lhZkFrRC1TRjdlQUhQT1JkSFVKZ3pwNTdOZHZ4NlRkTnpRMThTTHc5cGRXWV9Ua19xV2ZyYWt6U1lUV3E1NVo3V0tvNHZvallqZzN1ZHpjWGZWV1psOFlsSUNzRVBfZURSMklxLUFoeUFrWHdCeHJZQlBzdXFBNzBfSlYwVjZKMlFTRWljWHU1NkVFOXBT?oc=5"
+        }
+      ],
+      "sourceName": "Al Jazeera",
+      "entityIds": [
+        "gpt",
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "clusterId": "1vw2030",
+      "title": "Introducing Claude for Teachers",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T07:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        },
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -748,6 +1093,32 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5",
+      "clusterId": "1ycba4o",
+      "title": "Anthropic says three Claude models reached real-world systems during cyber tests",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5",
+      "dateISO": "2026-07-31T00:23:18.000Z",
+      "date": "JUL 31 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Axios",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5"
+        }
+      ],
+      "sourceName": "Axios",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/avatarin",
       "clusterId": "12mb6hb",
       "title": "How avatarin built a 24/7 retail agent with GPT-Realtime",
@@ -799,340 +1170,6 @@
         "chatgpt",
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "clusterId": "1vfj8jd",
-      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-      "desc": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "dateISO": "2026-07-21T07:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "opensource",
-      "catConfidence": 0.44,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/security/2026/07/jfrog-tries-to-spin-openai-0-day-exploit-of-its-app-into-a-success-story/"
-        },
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "clusterId": "frzhfp",
-      "title": "PRC-linked influence operations are targeting AI debates in the US",
-      "desc": "A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.",
-      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "dateISO": "2026-06-10T12:00:00.000Z",
-      "date": "JUN 10 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
-      "clusterId": "18neub",
-      "title": "Gemini Robotics 2 brings whole body intelligence to robots",
-      "desc": "",
-      "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
-      "dateISO": "2026-07-28T13:21:37.000Z",
-      "date": "JUL 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/07/google-reveals-gemini-robotics-2-0-promising-improved-dexterity-and-safety/"
-        },
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/google-gemini-can-control-humanoid-robots/"
-        },
-        {
-          "name": "Google DeepMind (YouTube)",
-          "url": "https://www.youtube.com/watch?v=fo9WirRIaVs"
-        },
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
-      "clusterId": "18fpr9b",
-      "title": "We’re launching Lyria 3.5 in Google Flow Music, with advances across musicality, lyrics, vocals, and creative control",
-      "desc": "",
-      "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/",
-      "dateISO": "2026-07-29T16:02:10.000Z",
-      "date": "JUL 29 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/were-launching-lyria-35-in-google-flow-music-with-advances-across-musicality-lyrics-vocals-and-creative-control/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
-      "clusterId": "1u2qfkn",
-      "title": "“Google and Reddit do not own the Internet,\" web scraper says after court win",
-      "desc": "Google's and Reddit's use of DMCA to fight web scraper is bizarre, expert says.",
-      "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/",
-      "dateISO": "2026-07-27T20:12:42.000Z",
-      "date": "JUL 27 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/07/google-wont-give-up-odd-war-against-ai-web-scraping-despite-court-loss/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "clusterId": "1msd1dg",
-      "title": "Building AI infrastructure with the Effingham County community",
-      "desc": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
-      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "dateISO": "2026-07-22T13:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "clusterId": "1kkn0cr",
-      "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
-      "desc": "Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.",
-      "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
-      "dateISO": "2026-06-18T08:00:00.000Z",
-      "date": "JUN 18 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/diagnose-rare-childhood-diseases"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/openai-to-acquire-ona",
-      "clusterId": "1xb5ngz",
-      "title": "OpenAI to acquire Ona",
-      "desc": "OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.",
-      "url": "https://openai.com/index/openai-to-acquire-ona",
-      "dateISO": "2026-06-11T00:00:00.000Z",
-      "date": "JUN 11 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-to-acquire-ona"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "clusterId": "14ot9ur",
-      "title": "Accelerating the frontiers of scientific discovery: Google’s $40M commitment to the Genesis Mission",
-      "desc": "Google commits $40M in AI tokens and credits for the Genesis Mission",
-      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
-      "dateISO": "2026-07-22T13:38:54.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/introducing-chatgpt-small-business-program",
-      "clusterId": "1u60nl7",
-      "title": "Introducing the ChatGPT for small business program",
-      "desc": "OpenAI launches the ChatGPT for Small Businesses program, helping entrepreneurs build AI skills, automate work, and grow with ChatGPT Work.",
-      "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
-      "dateISO": "2026-07-21T17:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "product",
-      "catConfidence": 0.75,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-chatgpt-small-business-program"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/patch-the-planet",
-      "clusterId": "6els2w",
-      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
-      "desc": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
-      "url": "https://openai.com/index/patch-the-planet",
-      "dateISO": "2026-06-22T10:00:00.000Z",
-      "date": "JUN 22 2026",
-      "category": "opensource",
-      "catConfidence": 0.5,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/patch-the-planet"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
-      "clusterId": "1iubf8b",
-      "title": "Investing in multi-agent AI safety research",
-      "desc": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
-      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/",
-      "dateISO": "2026-06-10T10:21:19.000Z",
-      "date": "JUN 10 2026",
-      "category": "capital",
-      "catConfidence": 0.8,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
     }
   ],
   "waves": [
@@ -1141,21 +1178,41 @@
       "category": "opensource",
       "title": "Anthropic says its own AI models breached three companies during security tests",
       "summary": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents.",
-      "significance": 73,
+      "significance": 79,
       "impact": "high",
       "verification": "corroborated",
       "date": "JUL 31 2026",
       "dateISO": "2026-07-31T01:06:54.000Z",
       "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
-      "sourceCount": 3,
+      "sourceCount": 8,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests"
+          "name": "Cybersecurity Dive",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
+        },
+        {
+          "name": "BBC",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
+        },
+        {
+          "name": "DW.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
           "name": "Wired",
           "url": "https://www.wired.com/story/anthropic-says-claude-hacked-real-systems-during-cybersecurity-tests/"
+        },
+        {
+          "name": "WIRED",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTmo4d2k1aTNWUzllLV9LUmdFMGNKS0dyZ2RGSVRMRmNQZks4eTFVLTFVU183alhYMmc2X0NYZHlXOGhfZEZQSU90YTNhVjRUWUlpeWNxTm9idFdzajB1VnV2RU1zcnVwazdSLV9jTm1WbDk0a05OdlNZcTdWODZYUEhBNl9BS0ZVaERkUU9fUTQzcjkxOTYwMUgxN0JkZw?oc=5"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5"
+        },
+        {
+          "name": "CyberScoop",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
         },
         {
           "name": "TechCrunch",
@@ -1217,16 +1274,16 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 23,
+    "chatgpt": 24,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 73,
-    "claude": 8,
-    "gemini": 32,
+    "gpt": 76,
+    "claude": 72,
+    "gemini": 33,
     "grok": 2,
     "llama": 0,
     "deepseek": 0,
-    "qwen": 0,
+    "qwen": 2,
     "mistral": 0,
     "azure": 0,
     "aws": 0,
@@ -1244,14 +1301,58 @@
       "logoKey": "anthropic",
       "items": [
         {
-          "h": "Introducing Claude Fable 5",
-          "d": "JUN 09 2026",
-          "url": "https://www.youtube.com/watch?v=Y9Wz2PV404E",
-          "isVideo": true,
+          "h": "Anthropic releases new model, Opus 5",
+          "d": "JUL 24 2026",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBBd0pLTktMWnd3bV9meUlYZjZMLTVGTDZCNzlXWHBHUXlNRWtkMTVyck5HaFVtYzd1ODZJVGpUWXhlOW4zemxURU1jZldrblRaT19DRVJMN3hZTG1CcTZVczgwb3JadjZJcmFsM1JBLXp2WUdHbExV?oc=5",
+          "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic (YouTube)",
+          "sourceName": "Axios",
           "sourceCount": 1,
-          "verification": "analysis",
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing Claude Opus 5",
+          "d": "JUL 24 2026",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Anthropic Launches Claude for Teachers. Why Some Critics Are Concerned",
+          "d": "JUL 17 2026",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Education Week",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing Claude for Teachers",
+          "d": "JUL 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
+        },
+        {
+          "h": "Introducing a way to reflect on how you use Claude",
+          "d": "JUL 09 2026",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
           "impact": "emerging"
         }
       ]
@@ -1469,6 +1570,18 @@
       "impact": "high"
     },
     {
+      "name": "Anthropic says its own AI models breached three companies d…",
+      "org": "TechCrunch",
+      "date": "JUL 31 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents.",
+      "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+      "sourceName": "TechCrunch",
+      "verification": "corroborated",
+      "impact": "high"
+    },
+    {
       "name": "It’s time to panic about AI safety",
       "org": "The Verge",
       "date": "JUL 31 2026",
@@ -1481,16 +1594,16 @@
       "impact": "notable"
     },
     {
-      "name": "Anthropic says its own AI models breached three companies d…",
-      "org": "TechCrunch",
+      "name": "Anthropic says Claude accidentally hacked real companies too",
+      "org": "The Verge",
       "date": "JUL 31 2026",
       "lic": "open weights",
       "licClass": "lic-open",
-      "desc": "After OpenAI's models broke into Hugging Face, Anthropic checked its own history and found three similar incidents.",
-      "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
-      "sourceName": "TechCrunch",
-      "verification": "corroborated",
-      "impact": "high"
+      "desc": "Anthropic just realized several of its Claude AI models hacked into the systems of three different organizations during testing, acting on…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/973670/anthropic-claude-hacked-organizations-during-cyber-tests",
+      "sourceName": "The Verge",
+      "verification": "single",
+      "impact": "notable"
     },
     {
       "name": "Nvidia’s Open Source Alliance Is Missing Some Key Names: Op…",
@@ -6170,7 +6283,7 @@
       "rate": "$5.89 – $6.88/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6198,7 +6311,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-01T09:15:23.390Z",
+    "updatedAt": "2026-08-01T09:30:30.040Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6208,15 +6321,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 326,
-        "fetchedStoryCount": 294,
+        "fetchedStoryCount": 219,
         "validatedStoryCount": 33,
-        "storyCoverage": 0.901840490797546,
-        "estimatedRelevantDiscussions": 40,
+        "storyCoverage": 0.6717791411042945,
+        "estimatedRelevantDiscussions": 52,
         "isEstimated": true,
-        "rawCommentHits": 2338,
+        "rawCommentHits": 2337,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.1283147989734816,
+        "commentCoverage": 0.12836970474967907,
         "limited": false,
         "points": 504,
         "themes": [
@@ -6280,7 +6393,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 37,
+            "discussions": 49,
             "isEstimated": true
           },
           {
@@ -6301,10 +6414,10 @@
         "storyCoverage": 0.29069767441860467,
         "estimatedRelevantDiscussions": 107,
         "isEstimated": true,
-        "rawCommentHits": 6463,
+        "rawCommentHits": 6459,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.04641807210273867,
+        "commentCoverage": 0.046446818392940084,
         "limited": false,
         "points": 1018,
         "themes": [
@@ -6384,10 +6497,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 46,
         "isEstimated": true,
-        "rawCommentHits": 1168,
+        "rawCommentHits": 1169,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.2568493150684932,
+        "commentCoverage": 0.2566295979469632,
         "limited": false,
         "points": 976,
         "themes": [
@@ -6482,10 +6595,10 @@
         "storyCoverage": 0.5434782608695652,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 10392,
+        "rawCommentHits": 10391,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.028868360277136258,
+        "commentCoverage": 0.028871138485227602,
         "limited": false,
         "points": 406,
         "themes": [
@@ -6637,8 +6750,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 82,
-        "fetchedStoryCount": 82,
+        "rawStoryHits": 77,
+        "fetchedStoryCount": 77,
         "validatedStoryCount": 12,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
@@ -6731,10 +6844,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4248,
+        "rawCommentHits": 4247,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.07062146892655367,
+        "commentCoverage": 0.07063809748057452,
         "limited": true,
         "points": 412,
         "themes": [
