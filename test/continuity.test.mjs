@@ -16,6 +16,7 @@ const read = (p) => readFileSync(path.join(__dirname, '..', p), 'utf-8');
 
 const landingHtml = read('index.html');
 const appHtml = read('app.html');
+const navSrc = read('js/nav.js');
 const tokensCss = read('css/tokens.css');
 
 test('both pages link the shared token stylesheet', () => {
@@ -299,4 +300,27 @@ test('Research is removed from both pages', () => {
   assert.doesNotMatch(appHtml, /data-panel="research"/, 'app.html must not have a Research nav pill');
   assert.doesNotMatch(landingHtml, /id="research"/, 'index.html must not have a Research band');
   assert.doesNotMatch(landingHtml, /href="#research"/, 'index.html must not link to a Research anchor');
+});
+
+test('the dashboard is one continuous page, with no hidden top sections', () => {
+  // Every .topsection used to be hidden except the active one; navigation
+  // switched which was visible. The dashboard is now a single scroll, so a
+  // `hidden` attribute on a topsection would silently remove a whole section
+  // from the page with no way to get it back -- the nav no longer unhides.
+  const topsections = [...appHtml.matchAll(/<section[^>]*class="topsection"[^>]*>/g)].map((m) => m[0]);
+  assert.equal(topsections.length, 4, 'app.html must have exactly 4 top sections');
+  for (const tag of topsections) {
+    assert.doesNotMatch(tag, /\shidden(\s|>|=)/, `a topsection must not be hidden: ${tag}`);
+  }
+});
+
+test('js/nav.js drives one page by scrolling, not by switching panels', () => {
+  // The panel-switching API is gone. If any of these come back, the module
+  // has regressed to the two-mode (tabbed + "Full page") IA this replaced.
+  assert.doesNotMatch(navSrc, /export function goTo\b/, 'goTo() must be gone -- pills scroll now');
+  assert.doesNotMatch(navSrc, /export function activateFullPage\b/, 'activateFullPage() must be gone -- the page IS full page now');
+  assert.doesNotMatch(navSrc, /\.hidden\s*=/, 'nav.js must never set .hidden -- every section is always visible');
+  // And the replacement must actually exist.
+  assert.match(navSrc, /scrollIntoView|scrollTo/, 'nav.js must scroll to navigate');
+  assert.match(navSrc, /addEventListener\('scroll'/, 'the depth rail must be driven by scroll position (scroll-spy)');
 });
