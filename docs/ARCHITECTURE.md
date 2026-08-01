@@ -70,6 +70,29 @@ panel is always active, the depth rail and the nav's current-pill highlight
 are driven by a scroll-spy that picks the last section whose top has passed
 under the fixed chrome.
 
+`js/nav.js` keeps old deep links working even though the page they pointed at
+is gone. A hash naming a section that still exists resolves to that element
+and scrolls to it; a hash for a section that no longer exists (`#tab-tide`,
+`#panel-research`, `#sec-river`, ...) falls back harmlessly, leaving the page
+where it was rather than erroring. That's also why the landing page can keep
+linking `app.html#panel-*`, `#tab-*`, and `#full` without needing to be
+rewritten.
+
+The anchor-correction fallback (`armAnchorCorrection()`, a `ResizeObserver`
+that re-snaps to the target for a few seconds after navigating) matters more
+now than it did under the old tabbed layout, not less. The old layout could
+argue the deep-link-lands-in-the-wrong-place bug -- async content above a
+target pushing it further down the page after the initial scroll -- was
+contained because only the active panel contributed to layout. That reasoning
+no longer holds: with every section always in the DOM, there is a tall stack
+of other sections' async content above any given anchor, so the correction
+pass has more to compensate for than before.
+
+The headline ticker pauses on hover or focus and exposes an explicit
+play/pause control for keyboard and touch users; under reduced motion it
+drops the auto-scroll in favor of manual scrolling. It is always on screen
+now that the page is one continuous scroll, not gated to a single section.
+
 Each of the 3 Frontier Releases cards is a CSS 3D flip container
 (`.release-card` → `.release-card-inner` → front/back `.release-card-face`):
 the front is the existing release list, unchanged; a "Top videos this week"
