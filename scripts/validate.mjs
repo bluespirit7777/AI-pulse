@@ -306,12 +306,53 @@ async function main() {
     }
   }
 
+  // data/ai-summary.json — OPTIONAL, and hand-written rather than built (see
+  // docs/AI_SUMMARY_PROCEDURE.md). Absent is genuinely normal: the file only
+  // exists once the daily routine has run, and the frontend hides the whole
+  // section when it is missing or stale rather than depending on it. Present
+  // but malformed IS a failure — it means someone hand-edited it wrong, which
+  // is exactly the mistake this file's provenance makes easy.
+  let aiSummary;
+  try {
+    aiSummary = JSON.parse(await readFile(path.join(DATA_DIR, 'ai-summary.json'), 'utf-8'));
+  } catch (e) {
+    if (e.code !== 'ENOENT') fail(`ai-summary.json present but invalid: ${e.message}`);
+  }
+  if (aiSummary) {
+    const dates = {};
+    for (const k of ['generatedAt', 'windowStart', 'windowEnd']) {
+      if (!isStr(aiSummary[k]) || isNaN(Date.parse(aiSummary[k]))) fail(`ai-summary.json: ${k} missing/invalid`);
+      else dates[k] = Date.parse(aiSummary[k]);
+    }
+    if (dates.windowStart && dates.windowEnd && dates.windowEnd <= dates.windowStart) {
+      fail('ai-summary.json: windowEnd must be after windowStart');
+    }
+    // The disclosure chip the UI renders is keyed on this exact value, so a
+    // typo here would silently drop the "written by an AI" label.
+    if (aiSummary.method !== 'ai-written') fail('ai-summary.json: method must be exactly "ai-written"');
+    if (!aiSummary.families || typeof aiSummary.families !== 'object') {
+      fail('ai-summary.json: families missing');
+    } else {
+      for (const fam of ['product', 'market', 'research']) {
+        const f = aiSummary.families[fam];
+        if (!f || typeof f !== 'object') { fail(`ai-summary.json: families.${fam} missing`); continue; }
+        if (!isStr(f.label)) fail(`ai-summary.json: families.${fam}.label missing`);
+        if (!isStr(f.summary)) fail(`ai-summary.json: families.${fam}.summary missing`);
+        if (!isNum(f.signalCount) || f.signalCount < 0) fail(`ai-summary.json: families.${fam}.signalCount must be a non-negative number`);
+        if (!isArr(f.sourceIds)) fail(`ai-summary.json: families.${fam}.sourceIds must be an array`);
+        else f.sourceIds.forEach((id, i) => {
+          if (!isStr(id)) fail(`ai-summary.json: families.${fam}.sourceIds[${i}] must be a string signal id`);
+        });
+      }
+    }
+  }
+
   if (errors.length) {
     console.error(`✗ validate.mjs: ${errors.length} problem(s):`);
     errors.forEach((e) => console.error('  -', e));
     process.exit(1);
   }
-  console.log(`✓ validate.mjs: latest.json OK (${data.signals.length} signals, ${data.waves.length} waves, ${data.stocks.length} stocks); range.json OK (${ranges.historyDepthDays}d history); stock-network.json OK (${net.nodes.length} nodes, ${net.correlations.length} correlations)${yt ? `; youtube-trending.json OK (${ytVideoCount} videos)` : ''}`);
+  console.log(`✓ validate.mjs: latest.json OK (${data.signals.length} signals, ${data.waves.length} waves, ${data.stocks.length} stocks); range.json OK (${ranges.historyDepthDays}d history); stock-network.json OK (${net.nodes.length} nodes, ${net.correlations.length} correlations)${yt ? `; youtube-trending.json OK (${ytVideoCount} videos)` : ''}${aiSummary ? '; ai-summary.json OK' : ''}`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
