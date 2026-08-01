@@ -47,7 +47,6 @@ let correctionObserver = null;
 let correctionTimer = null;
 
 function panelEl(panel) { return document.getElementById('panel-' + panel); }
-function topnavBtn(panel) { return document.querySelector(`.nav-pill[data-panel="${panel}"]`); }
 
 // Height of the fixed header + topnav + depth rail. Read from the same CSS
 // token the sections' scroll-margin-top uses, so the two can never drift.
