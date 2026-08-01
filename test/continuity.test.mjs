@@ -278,8 +278,16 @@ test('the dashboard merges Waves and River into one "News Wave" section', () => 
   assert.doesNotMatch(appHtml, /Signal river/, 'the old separate River heading must be gone');
   // The depth union this section feeds the rail with must survive the merge:
   // panelDepths() in js/nav.js scans every descendant [data-depth], so both
-  // values must still appear somewhere under #panel-today.
-  const panelToday = appHtml.match(/id="panel-today"[\s\S]*?<\/section>\s*<!-- ECOSYSTEM/)?.[0];
+  // values must still appear somewhere under #panel-today. Isolate the panel
+  // by the next id="panel-" (or </main>) rather than a hardcoded neighbour
+  // comment -- the panels' DOM order is not fixed (see Task 3's reorder).
+  const todayStartTag = appHtml.match(/<[^>]+id="panel-today"[^>]*>/);
+  assert.ok(todayStartTag, 'app.html must have #panel-today');
+  const todayRest = appHtml.slice(todayStartTag.index + todayStartTag[0].length);
+  const todayNextPanelOffset = todayRest.search(/id="panel-/);
+  const todayEndOfMainOffset = todayRest.search(/<\/main>/);
+  const todayCandidateEnds = [todayRest.length, todayNextPanelOffset, todayEndOfMainOffset].filter((n) => n !== -1);
+  const panelToday = todayRest.slice(0, Math.min(...todayCandidateEnds));
   assert.ok(panelToday, 'could not isolate #panel-today for the depth check');
   assert.match(panelToday, /data-depth="surface"/, 'the waves portion must keep data-depth="surface"');
   assert.match(panelToday, /data-depth="currents"/, 'the river portion must keep data-depth="currents"');
@@ -335,4 +343,24 @@ test('the dashboard top nav is labelled Top / Models / Ecosystem / News Wave / M
   // them. "News Wave" is the label for data-panel="today".
   assert.match(nav, /data-panel="today"[^>]*>News Wave</, 'News Wave must still be data-panel="today"');
   assert.match(nav, /data-panel="full"[^>]*>Top</, 'Top must still be data-panel="full"');
+});
+
+test('the dashboard sections appear in the same order as the nav pills', () => {
+  // js/nav.js's scroll-spy walks its PANELS array in order and takes the last
+  // section whose top has passed the chrome line. That is only correct if the
+  // array, the nav pills and the DOM all agree, so pin the DOM order here.
+  const domOrder = [...appHtml.matchAll(/<section[^>]*class="topsection"[^>]*data-panel="([^"]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(domOrder, ['models', 'ecosystem', 'today', 'markets']);
+
+  const nav = appHtml.match(/<nav class="topnav"[\s\S]*?<\/nav>/)?.[0];
+  const navOrder = [...nav.matchAll(/<button[^>]*data-panel="([^"]+)"/g)].map((m) => m[1]).filter((p) => p !== 'full');
+  assert.deepEqual(navOrder, domOrder, 'nav pill order must match DOM section order');
+
+  const navSrcOrder = navSrc.match(/const PANELS = \[([^\]]+)\]/)?.[1];
+  assert.ok(navSrcOrder, 'js/nav.js must declare a PANELS array');
+  assert.deepEqual(
+    navSrcOrder.split(',').map((s) => s.trim().replace(/['"]/g, '')).filter(Boolean),
+    domOrder,
+    "js/nav.js's PANELS must be in DOM order -- the scroll-spy depends on it"
+  );
 });
