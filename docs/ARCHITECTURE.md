@@ -49,7 +49,7 @@ index.html (landing) ──module──> js/landing.js  (previews the dashboard 
         ▼  "Enter the dashboard"
 app.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
-        ├─ js/nav.js           4-item IA router: panel/tab activation, legacy-hash map, depth rail, anchor correction
+        ├─ js/nav.js           one-page scroll navigation: hash/jump-bar scroll targets, scroll-spy depth rail + current pill, anchor correction
         ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
         ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected") -- presented with river.js under one "News Wave" heading
         ├─ js/river.js         signal river (chronological, declutered filters, expand/archive) -- see waveform.js
@@ -60,41 +60,15 @@ app.html ──module──> js/main.js
         ├─ js/datahealth.js    Data Health footer chip + drawer
         └─ js/freshness.js     provenance / verification / impact / freshness chips
 ```
-The page uses a 4-item IA — **Today / Ecosystem / Models / Markets** — each
-a `.topsection` toggled by `js/nav.js`. Only ONE top panel is shown at a time
-(the others carry `hidden`); within the shown panel, ALL of its subsections
-render stacked (Today shows one merged "News Wave" section — waves and river
-together — Models shows all six, etc.). The `.local-tabs` bar under a
-section is therefore a "jump to a section" nav, not a tablist — `js/nav.js`'s
-`normalizeLocalNav()` strips the tablist/tabpanel ARIA the HTML still carries
-and unhides every tabpanel once at init, and each jump button just scrolls to
-its subsection (setting `aria-current` as a light cue). Because only the
-active top panel contributes layout, the old deep-link bug — async content
-above `#sec-releases` shoving it thousands of pixels down after load — stays
-fixed: there's no tall stack of *other sections'* async siblings above any
-target. `js/nav.js` maps legacy hashes for sections that still exist
-(`#sec-waves`, `#sec-stocks`, …) to their `{panel, scroll-target}` in the new
-IA, so those old links keep working; a legacy hash for a removed section
-(`#tab-tide`, `#panel-research`, …) simply falls back to the default Today
-panel, with no error and the depth rail correctly lit. The
-section headings use one reusable component (`.section-ribbon` in
-`css/app.css`); the top ticker (visible only under Today) pauses on
-hover/focus and offers a play/pause control (reduced-motion → manual scroll).
-
-A 5th, visually-distinct topnav item — **Full page** (dashed border, placed
-first) — is an explicit opt-in that unhides every panel and every local tab
-at once (`activateFullPage()` in `js/nav.js`), for anyone who'd rather scroll
-one long page than switch tabs, matching the pre-redesign layout. It hides
-the now-redundant local-tab bars and the depth rail (no single "current"
-section applies once everything is visible), reuses the exact same DOM/data
-as the tabbed views (no duplicate rendering, no duplicate ids), and every
-widget inside keeps working normally. `#full` deep-links directly into it;
-`goTo()` un-does it automatically when any other nav item is clicked next.
-It also re-orders the panels for this view specifically — Ecosystem and
-Models lead, per explicit request — via `reorderPanels()`, which physically
-moves the existing `.topsection` nodes with `appendChild` (which relocates
-rather than clones) instead of re-rendering anything; `goTo()` restores the
-original Today-first order when leaving Full Page.
+The dashboard is a single continuous page. All four top sections — **Models /
+Ecosystem / News Wave / Markets** — are `.topsection`s that are always in the
+DOM and always visible, in that order; the top nav's pills (**Top, Models,
+Ecosystem, News Wave, Markets**) are scroll anchors, not view switches, and
+`js/nav.js` never sets `hidden`. Each long section keeps a `.local-tabs` bar,
+which is a jump-to-subsection shortcut rather than a tablist. Because every
+panel is always active, the depth rail and the nav's current-pill highlight
+are driven by a scroll-spy that picks the last section whose top has passed
+under the fixed chrome.
 
 Each of the 3 Frontier Releases cards is a CSS 3D flip container
 (`.release-card` → `.release-card-inner` → front/back `.release-card-face`):

@@ -60,7 +60,7 @@ npx serve .        # any static server
 | `js/deeplink.js` | Forwards legacy root deep links to `app.html`; blocking script, runs pre-paint |
 | `css/app.css` | Component styles (dashboard only — the landing's CSS is inline) |
 | `js/main.js` | Orchestrator — loads data, calls every renderer |
-| `js/nav.js` | 4-item IA router (Today/Ecosystem/Models/Markets) + Full Page |
+| `js/nav.js` | one-page scroll nav (Top/Models/Ecosystem/News Wave/Markets) + scroll-spy depth rail |
 | `js/curated.js` | **Hand-maintained** datasets (leaderboard, image/video/local AI) |
 | `scripts/lib/models.mjs` | **`MODEL_REGISTRY` — single source of truth for model names/versions** |
 | `scripts/lib/signals.mjs` | Clustering, scoring, categorization, topics, `isReleaseDiscussion` |
@@ -185,6 +185,16 @@ git push origin main
   branch) came back by explicit request, paired with its original legibility
   veil, scoped to `app.html` only — the shared gradient in `css/shell.css`
   and the landing are unaffected.
+- **Dashboard is now one continuous page.** The panel-switching IA (one
+  `.topsection` visible at a time, plus an opt-in "Full page" mode) is gone —
+  Full page *is* the page, the pills are scroll anchors, and `js/nav.js` never
+  sets `hidden`. Order and labels are **Top / Models / Ecosystem / News Wave /
+  Markets** (`data-panel` ids are unchanged — `today` is still `today`, only
+  its label reads "News Wave"). The depth rail became a scroll-spy, since
+  there is no longer a single "activated" panel to read a depth from. Image AI
+  and Video AI now share one row. Also fixed a long-standing bug where flip
+  cards measured while hidden kept a 360px fallback height, clipping the Local
+  AI top-5 lists by ~500px.
 
 ### Frontend gotchas solved
 - `requestAnimationFrame` **never fires** in the automated test browser → use
