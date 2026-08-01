@@ -326,6 +326,14 @@
   .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
   .spec-grid>*{min-width:0;} /* same CSS Grid min-width:auto fix as .grid-2 — lets contents wrap/shrink instead of overflowing the column */
   @media (max-width:820px){.spec-grid{grid-template-columns:1fr;}}
+  /* Image AI / Video AI: one row, two equal columns — the two lists are a
+     comparison, not a sequence, so they read better beside each other than
+     stacked. Same breakpoint and min-width:0 fix as .spec-grid above; the
+     sections' own `section{padding:36px 0}` is zeroed here so the two panels
+     align on their top edges instead of each carrying a stray band of space. */
+  .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start;}
+  .media-grid>*{min-width:0;padding:0;}
+  @media (max-width:820px){.media-grid{grid-template-columns:1fr;}}
   .spec-table{width:100%;border-collapse:collapse;font-size:12.5px;}
   .spec-table th{
     text-align:left;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
@@ -550,10 +558,10 @@
   </header>
 
   <nav class="topnav" aria-label="Main navigation" id="topnav">
-    <button type="button" class="nav-pill nav-pill--mode" data-panel="full" title="Show every section on one page, top to bottom">Full page</button>
-    <button type="button" class="nav-pill" data-panel="today" aria-current="page">Today</button>
-    <button type="button" class="nav-pill" data-panel="ecosystem">Ecosystem</button>
+    <button type="button" class="nav-pill nav-pill--mode" data-panel="full" title="Back to the top of the page">Top</button>
     <button type="button" class="nav-pill" data-panel="models">Models</button>
+    <button type="button" class="nav-pill" data-panel="ecosystem">Ecosystem</button>
+    <button type="button" class="nav-pill" data-panel="today">News Wave</button>
     <button type="button" class="nav-pill" data-panel="markets">Markets</button>
   </nav>
 
@@ -568,82 +576,13 @@
 
     <div class="data-note" id="data-note"></div>
 
-    <!-- TODAY -->
-    <section id="panel-today" class="topsection" data-panel="today">
-      <div class="ticker-wrap">
-        <div class="ticker" id="ticker"></div>
-        <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the headline ticker" aria-pressed="false">❚❚</button>
-      </div>
-
-      <section id="sec-waves">
-        <div class="section-head">
-          <h2 class="section-head__title">News Wave</h2>
-          <span class="section-head__descriptor">The strongest signals and the full chronological stream, together<s></s></span>
-        </div>
-        <div class="tabpanel" data-depth="surface">
-          <p class="waves-explain">One major development from each area, chosen by <b>impact — not just recency</b>. <a class="src-link how-selected" href="docs/METHODOLOGY.md#three-strongest-waves" target="_blank" rel="noopener">How selected</a></p>
-          <div class="waves-grid" id="waves"></div>
-        </div>
-        <div class="tabpanel" data-depth="currents">
-          <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list. Dot size reflects significance (0–100); filter by category, entity, or time window below.</details></p>
-          <div id="river"></div>
-        </div>
-      </section>
-    </section>
-
-    <!-- ECOSYSTEM -->
-    <section id="panel-ecosystem" class="topsection" data-panel="ecosystem" hidden>
-      <section id="sec-map" class="hero" data-depth="currents" style="padding-top:10px;">
-        <div class="hero-head">
-          <div>
-            <div class="section-head">
-              <h2 class="section-head__title">The AI Ocean Map</h2>
-              <span class="section-head__descriptor">Where AI power flows<s></s></span>
-            </div>
-            <p class="map-intro-lead">A depth map of the AI ecosystem — chips at the base, applications at the surface.</p>
-            <div class="map-encoding" role="list" aria-label="What the map encodes">
-              <span class="map-enc" role="listitem">
-                <svg class="enc-ico" viewBox="0 0 26 14" aria-hidden="true"><circle cx="5" cy="7" r="3" fill="var(--sea)"/><circle cx="18" cy="7" r="6" fill="var(--sea)"/></svg>
-                <span><b>Size</b> · curated importance</span>
-              </span>
-              <span class="map-enc" role="listitem">
-                <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" fill="var(--teal)" opacity=".28"/><circle cx="8" cy="8" r="3.5" fill="var(--teal)"/></svg>
-                <span><b>Glow</b> · live activity</span>
-              </span>
-              <span class="map-enc" role="listitem">
-                <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="var(--coral)" stroke-width="2"/></svg>
-                <span><b>Ring</b> · change vs prior period</span>
-              </span>
-              <span class="map-enc-util">Select a node for details.</span>
-            </div>
-          </div>
-          <div>
-            <div class="range-toggle" role="tablist" aria-label="Activity time range">
-              <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
-              <button class="range-btn" role="tab" aria-selected="false" data-range="7D">7D</button>
-              <button class="range-btn" role="tab" aria-selected="false" data-range="30D">30D</button>
-            </div>
-            <div class="history-note" id="history-note"></div>
-          </div>
-        </div>
-        <div id="ocean-map"></div>
-        <div class="map-legend" aria-hidden="true">
-          <span><i style="border-color:var(--sea)"></i>depends on</span>
-          <span><i style="border-color:var(--teal);border-top-style:dashed"></i>partners with</span>
-          <span><i style="border-color:var(--coral);border-top-style:dotted"></i>competes with</span>
-          <span>◌ dashed node = no fresh signal</span>
-          <span>▲▼ ring = change vs prior period</span>
-        </div>
-      </section>
-    </section>
-
     <!-- MODELS -->
-    <section id="panel-models" class="topsection" data-panel="models" hidden>
+    <section id="panel-models" class="topsection" data-panel="models">
       <div class="local-tabs" role="tablist" aria-label="Model views" data-tabgroup="models">
         <button type="button" role="tab" class="local-tab" id="tabbtn-releases" data-tab="releases" aria-selected="true" aria-controls="tab-releases" tabindex="0">Releases</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-leaderboard" data-tab="leaderboard" aria-selected="false" aria-controls="tab-leaderboard" tabindex="-1">Frontier leaderboard</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-image" data-tab="image" aria-selected="false" aria-controls="tab-image" tabindex="-1">Image AI</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-video" data-tab="video" aria-selected="false" aria-controls="tab-video" tabindex="-1">Video AI</button>
+        <button type="button" class="local-tab" id="tabbtn-image" data-tab="image">Image AI</button>
+        <button type="button" class="local-tab" id="tabbtn-video" data-tab="video">Video AI</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-local" data-tab="local" aria-selected="false" aria-controls="tab-local" tabindex="-1">Local AI</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-community" data-tab="community" aria-selected="false" aria-controls="tab-community" tabindex="-1">Community Pulse</button>
       </div>
@@ -696,30 +635,29 @@
         </section>
       </div>
 
-      <div class="tabpanel" id="tab-image" role="tabpanel" aria-labelledby="tabbtn-image" data-depth="midwater" hidden>
-        <section id="sec-media-image">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 image AI</h3>
-              <span class="asof curated-asof">Curated</span>
+      <div class="tabpanel" id="tab-media" data-depth="midwater">
+        <div class="media-grid">
+          <section id="sec-media-image">
+            <div class="panel">
+              <div class="panel-top">
+                <h3>Top 5 image AI</h3>
+                <span class="asof curated-asof">Curated</span>
+              </div>
+              <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
+              <div id="image-ai"></div>
             </div>
-            <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
-            <div id="image-ai"></div>
-          </div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-video" role="tabpanel" aria-labelledby="tabbtn-video" data-depth="midwater" hidden>
-        <section id="sec-media-video">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 video AI</h3>
-              <span class="asof curated-asof">Curated</span>
+          </section>
+          <section id="sec-media-video">
+            <div class="panel">
+              <div class="panel-top">
+                <h3>Top 5 video AI</h3>
+                <span class="asof curated-asof">Curated</span>
+              </div>
+              <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
+              <div id="video-ai"></div>
             </div>
-            <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
-            <div id="video-ai"></div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
       <div class="tabpanel" id="tab-local" role="tabpanel" aria-labelledby="tabbtn-local" data-depth="midwater" hidden>
@@ -794,8 +732,82 @@
       </div>
     </section>
 
+    <!-- ECOSYSTEM -->
+    <section id="panel-ecosystem" class="topsection" data-panel="ecosystem">
+      <section id="sec-map" class="hero" data-depth="currents" style="padding-top:10px;">
+        <div class="hero-head">
+          <div>
+            <div class="section-head">
+              <h2 class="section-head__title">The AI Ocean Map</h2>
+              <span class="section-head__descriptor">Where AI power flows<s></s></span>
+            </div>
+            <p class="map-intro-lead">A depth map of the AI ecosystem — chips at the base, applications at the surface.</p>
+            <div class="map-encoding" role="list" aria-label="What the map encodes">
+              <span class="map-enc" role="listitem">
+                <svg class="enc-ico" viewBox="0 0 26 14" aria-hidden="true"><circle cx="5" cy="7" r="3" fill="var(--sea)"/><circle cx="18" cy="7" r="6" fill="var(--sea)"/></svg>
+                <span><b>Size</b> · curated importance</span>
+              </span>
+              <span class="map-enc" role="listitem">
+                <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7.5" fill="var(--teal)" opacity=".28"/><circle cx="8" cy="8" r="3.5" fill="var(--teal)"/></svg>
+                <span><b>Glow</b> · live activity</span>
+              </span>
+              <span class="map-enc" role="listitem">
+                <svg class="enc-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5" fill="none" stroke="var(--coral)" stroke-width="2"/></svg>
+                <span><b>Ring</b> · change vs prior period</span>
+              </span>
+              <span class="map-enc-util">Select a node for details.</span>
+            </div>
+          </div>
+          <div>
+            <div class="range-toggle" role="tablist" aria-label="Activity time range">
+              <button class="range-btn active" role="tab" aria-selected="true" data-range="24H">24H</button>
+              <button class="range-btn" role="tab" aria-selected="false" data-range="7D">7D</button>
+              <button class="range-btn" role="tab" aria-selected="false" data-range="30D">30D</button>
+            </div>
+            <div class="history-note" id="history-note"></div>
+          </div>
+        </div>
+        <div id="ocean-map"></div>
+        <div class="map-legend" aria-hidden="true">
+          <span><i style="border-color:var(--sea)"></i>depends on</span>
+          <span><i style="border-color:var(--teal);border-top-style:dashed"></i>partners with</span>
+          <span><i style="border-color:var(--coral);border-top-style:dotted"></i>competes with</span>
+          <span>◌ dashed node = no fresh signal</span>
+          <span>▲▼ ring = change vs prior period</span>
+        </div>
+      </section>
+    </section>
+
+    <!-- TODAY -->
+    <section id="panel-today" class="topsection" data-panel="today">
+      <div class="ticker-wrap">
+        <div class="ticker" id="ticker"></div>
+        <button class="ticker-toggle" id="ticker-toggle" type="button" aria-label="Pause the headline ticker" aria-pressed="false">❚❚</button>
+      </div>
+
+      <section id="sec-waves">
+        <div class="section-head">
+          <h2 class="section-head__title">News Wave</h2>
+          <span class="section-head__descriptor">A daily AI-written synthesis, and the full chronological stream<s></s></span>
+        </div>
+        <!-- data-depth stays on this wrapper, not on the rendered content:
+             js/nav.js's scroll-spy unions every descendant [data-depth] under
+             #panel-today, and the landing's #today band declares
+             "surface currents" to match. #ai-summary hides itself on any day
+             the summary is missing or stale, so the depth must not depend on
+             whether anything rendered inside it. -->
+        <div class="tabpanel" data-depth="surface">
+          <div id="ai-summary"></div>
+        </div>
+        <div class="tabpanel" data-depth="currents">
+          <p class="panel-note intro-note one-line-note">The full chronological stream, newest first. <span class="fr-chip fr-live" title="Duplicate reports of one event are merged into a single signal"><span class="fr-mark" aria-hidden="true">●</span>Live</span> <details class="how-it-works"><summary>How it works</summary>Duplicate reports of one event are merged into a single signal before it reaches this list, so one row is one event. Newest first, always — nothing is re-ordered by score.</details></p>
+          <div id="river"></div>
+        </div>
+      </section>
+    </section>
+
     <!-- MARKETS -->
-    <section id="panel-markets" class="topsection" data-panel="markets" hidden>
+    <section id="panel-markets" class="topsection" data-panel="markets">
       <div class="local-tabs" role="tablist" aria-label="Markets views" data-tabgroup="markets">
         <button type="button" role="tab" class="local-tab" id="tabbtn-stocknet" data-tab="stocknet" aria-selected="true" aria-controls="tab-stocknet" tabindex="0">AI stock network</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-compute" data-tab="compute" aria-selected="false" aria-controls="tab-compute" tabindex="-1">Compute &amp; chips</button>

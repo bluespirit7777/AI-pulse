@@ -58,4 +58,20 @@ export async function loadYouTubeTrending() {
   }
 }
 
+// data/ai-summary.json — the daily AI-written synthesis of each family's last
+// 24h. Hand-produced by an agent following docs/AI_SUMMARY_PROCEDURE.md and
+// committed as data; the build never writes it. Absent is the NORMAL state on
+// any day the routine hasn't run yet, so a null here is not an error —
+// renderAiSummary() hides the whole section rather than let the stream be
+// topped by a stale take.
+export async function loadAiSummary() {
+  try {
+    const res = await fetch('data/ai-summary.json' + BUST(), { cache: 'no-store' });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
 export const RANGE_KEYS = ['24H', '7D', '30D'];

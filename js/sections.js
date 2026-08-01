@@ -338,14 +338,53 @@ function sizeFlipCards() {
   setTimeout(sizeFlipCardsNow, 0);
 }
 
+// Cards that report zero height (display:none, or an ancestor not yet in
+// the layout) get retried once they become measurable; see
+// watchForMeasurableCards() below. This is a defensive guard, not a fix for
+// a currently-hidden dashboard: every section is always visible on the
+// one-page layout, so in practice sizing succeeds on the very first pass.
+let pendingCards = null;
+
 function sizeFlipCardsNow() {
+  let deferred = 0;
   document.querySelectorAll('.flip-card').forEach((card) => {
     const inner = card.querySelector('.flip-card-inner');
     if (!inner) return;
     let tallest = 0;
-    card.querySelectorAll('.flip-card-face').forEach((f) => { tallest = Math.max(tallest, f.scrollHeight); });
+    card.querySelectorAll('.flip-card-face').forEach((f) => {
+      // Each face is position:absolute; inset:0 with its own border (plus
+      // border-top on some faces), so its scrollHeight — the content box —
+      // undercounts the space the face actually needs by exactly that
+      // border width. Add back offsetHeight - clientHeight (the face's own
+      // border/scrollbar chrome, which can differ per face) so the shared
+      // min-height we set below is large enough to contain the face's full
+      // border-box, not just its content-box.
+      const chrome = f.offsetHeight - f.clientHeight;
+      tallest = Math.max(tallest, f.scrollHeight + chrome);
+    });
     if (tallest) inner.style.minHeight = tallest + 'px';
+    else deferred += 1;
   });
+  if (deferred) watchForMeasurableCards();
+}
+
+// A card reports scrollHeight 0 while it is display:none or inside a hidden
+// ancestor. ResizeObserver fires as soon as that changes and the element
+// gets a real box, which is a more reliable signal than guessing a timeout.
+// The observer disconnects itself the first time it sees a usable height,
+// so it fires at most once and cannot recurse: sizeFlipCardsNow() then only
+// ever sets min-height on cards it can already measure (tallest > 0), so it
+// no longer calls watchForMeasurableCards(), and re-observing is gated by
+// the `pendingCards` singleton anyway.
+function watchForMeasurableCards() {
+  if (pendingCards || typeof ResizeObserver === 'undefined') return;
+  pendingCards = new ResizeObserver((entries) => {
+    if (!entries.some((e) => e.contentRect.height > 0)) return;
+    pendingCards.disconnect();
+    pendingCards = null;
+    sizeFlipCardsNow();
+  });
+  document.querySelectorAll('.flip-card').forEach((card) => pendingCards.observe(card));
 }
 
 let resizeTimer = null;

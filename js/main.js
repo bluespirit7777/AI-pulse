@@ -1,9 +1,9 @@
 // Orchestrator: loads data, renders every section, wires the time-range toggle
 // and a silent periodic refresh. The site is fully functional with only
 // latest.json; entities.json and range.json enrich it when present.
-import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTrending } from './data.js';
+import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTrending, loadAiSummary } from './data.js';
 import { createOceanMap } from './oceanmap.js';
-import { renderWaveforms } from './waveform.js';
+import { renderAiSummary } from './aisummary.js';
 import { renderRiver } from './river.js';
 import { renderCommunity } from './community.js';
 import { createStockNetwork } from './stocknetwork.js';
@@ -15,9 +15,9 @@ import { timeAgo, fmtSnapshot, $ } from './util.js';
 const REFRESH_MS = 10 * 60 * 1000; // silent re-fetch cadence
 let data = null;
 let ranges = null;
+let aiSummary = null; // daily AI-written synthesis; null is normal (see js/aisummary.js)
 let map = null;
 let range = '24H';
-let entityNameById = {}; // id → readable name for the river entity filter (R8)
 
 function tickClock() {
   const el = $('#clock');
@@ -90,8 +90,8 @@ function applyRange(next) {
 
 function renderDynamic() {
   renderLive(data);
-  renderWaveforms($('#waves'), data.signals || [], data.waves || []);
-  renderRiver($('#river'), data.signals || [], Date.now(), entityNameById);
+  renderAiSummary($('#ai-summary'), aiSummary, data.signals || []);
+  renderRiver($('#river'), data.signals || [], Date.now());
   renderCommunity($('#community'), data.community || {});
   animateBars();
   paintUpdated();
@@ -108,7 +108,7 @@ async function boot() {
 
   let entities = null;
   try {
-    [data, entities, ranges] = await Promise.all([loadLatest(), loadEntities(), loadRanges()]);
+    [data, entities, ranges, aiSummary] = await Promise.all([loadLatest(), loadEntities(), loadRanges(), loadAiSummary()]);
   } catch (err) {
     console.error('[data] load failed', err);
     const banner = $('#data-note');
@@ -119,8 +119,6 @@ async function boot() {
     notifyDataReady(); // don't leave a pending deep-link scroll waiting forever
     return;
   }
-
-  if (entities?.nodes) entityNameById = Object.fromEntries(entities.nodes.map((n) => [n.id, n.name]));
 
   renderDynamic();
   paintHistoryNote();
@@ -156,19 +154,26 @@ async function boot() {
   // Silent refresh — keeps an open tab from going stale without a reload.
   //
   // Re-rendering replaces each section's innerHTML, which throws away
-  // everything the reader has set up (river filters, the selected Community
-  // model, an expanded wave). This polls every 10 min but the pipeline only
+  // everything the reader has set up (the selected Community model, how far
+  // they expanded the stream). This polls every 10 min but the pipeline only
   // publishes every ~30, so most cycles fetch a byte-identical snapshot —
   // gating on updatedAt means the common case costs the reader nothing. When
   // the data genuinely IS new, the components restore their own filter state
   // themselves (see river.js / community.js).
   setInterval(async () => {
     try {
-      const [fresh, freshRanges] = await Promise.all([loadLatest(), loadRanges()]);
-      const unchanged = fresh?.updatedAt && fresh.updatedAt === data?.updatedAt;
+      const [fresh, freshRanges, freshSummary] = await Promise.all([loadLatest(), loadRanges(), loadAiSummary()]);
+      // The summary is committed on its own daily cadence, so it can change on
+      // a cycle where latest.json hasn't -- and it can also go stale in place,
+      // with no fetch involved at all, once generatedAt passes STALE_HOURS.
+      // Either has to force a re-render, or the section would sit there
+      // unchanged past its own deadline.
+      const summaryChanged = (freshSummary?.generatedAt || null) !== (aiSummary?.generatedAt || null);
+      const unchanged = fresh?.updatedAt && fresh.updatedAt === data?.updatedAt && !summaryChanged;
       data = fresh;
       ranges = freshRanges;
-      if (unchanged) { paintUpdated(); return; }
+      aiSummary = freshSummary;
+      if (unchanged) { paintUpdated(); renderAiSummary($('#ai-summary'), aiSummary, data.signals || []); return; }
       renderDynamic();
       paintHistoryNote();
       applyRange(range);

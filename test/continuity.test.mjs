@@ -16,7 +16,10 @@ const read = (p) => readFileSync(path.join(__dirname, '..', p), 'utf-8');
 
 const landingHtml = read('index.html');
 const appHtml = read('app.html');
+const navSrc = read('js/nav.js');
 const tokensCss = read('css/tokens.css');
+const appCss = read('css/app.css');
+const shellCss = read('css/shell.css');
 
 test('both pages link the shared token stylesheet', () => {
   for (const [name, html] of [['index.html', landingHtml], ['app.html', appHtml]]) {
@@ -266,22 +269,73 @@ test('the superseded per-page heading and button classes are gone', () => {
   assert.match(landingHtml, /btn--secondary/, 'index.html must use .btn--secondary');
 });
 
-test('the dashboard merges Waves and River into one "News Wave" section', () => {
-  assert.match(appHtml, />News Wave</, 'app.html must show the merged "News Wave" heading');
-  // Both original render mount points must survive underneath it unchanged --
-  // js/waveform.js and js/river.js were not touched by this merge.
-  assert.match(appHtml, /id="waves"/, 'the waves mount point must still exist');
+test('News Wave pairs the AI summary with the chronological stream', () => {
+  assert.match(appHtml, />News Wave</, 'app.html must show the "News Wave" heading');
+  // The three per-family wave cards are gone; an AI-written daily synthesis
+  // takes their place above the same stream.
+  assert.match(appHtml, /id="ai-summary"/, 'the AI summary mount point must exist');
   assert.match(appHtml, /id="river"/, 'the river mount point must still exist');
-  // The old two-heading split is gone.
+  assert.doesNotMatch(appHtml, /id="waves"/, 'the old three-wave mount point must be gone');
+  // The old headings are gone.
   assert.doesNotMatch(appHtml, /Today's strongest waves/, 'the old separate Waves heading must be gone');
   assert.doesNotMatch(appHtml, /Signal river/, 'the old separate River heading must be gone');
   // The depth union this section feeds the rail with must survive the merge:
   // panelDepths() in js/nav.js scans every descendant [data-depth], so both
-  // values must still appear somewhere under #panel-today.
-  const panelToday = appHtml.match(/id="panel-today"[\s\S]*?<\/section>\s*<!-- ECOSYSTEM/)?.[0];
+  // values must still appear somewhere under #panel-today. Isolate the panel
+  // by the next id="panel-" (or </main>) rather than a hardcoded neighbour
+  // comment -- the panels' DOM order is not fixed (see Task 3's reorder).
+  const todayStartTag = appHtml.match(/<[^>]+id="panel-today"[^>]*>/);
+  assert.ok(todayStartTag, 'app.html must have #panel-today');
+  const todayRest = appHtml.slice(todayStartTag.index + todayStartTag[0].length);
+  const todayNextPanelOffset = todayRest.search(/id="panel-/);
+  const todayEndOfMainOffset = todayRest.search(/<\/main>/);
+  const todayCandidateEnds = [todayRest.length, todayNextPanelOffset, todayEndOfMainOffset].filter((n) => n !== -1);
+  const panelToday = todayRest.slice(0, Math.min(...todayCandidateEnds));
   assert.ok(panelToday, 'could not isolate #panel-today for the depth check');
-  assert.match(panelToday, /data-depth="surface"/, 'the waves portion must keep data-depth="surface"');
-  assert.match(panelToday, /data-depth="currents"/, 'the river portion must keep data-depth="currents"');
+  assert.match(panelToday, /data-depth="surface"/, 'the AI-summary wrapper must keep data-depth="surface"');
+  assert.match(panelToday, /data-depth="currents"/, 'the river wrapper must keep data-depth="currents"');
+});
+
+test('the three per-family wave cards are fully removed, not just unmounted', () => {
+  // js/waveform.js rendered PRODUCT/MARKET/RESEARCH WAVE cards from
+  // data.waves. It is replaced by the AI Summary Wave, so the module, its
+  // import and its ~37 lines of .wf-* CSS all go -- leaving any of them would
+  // be dead weight that reads as still-live.
+  assert.throws(
+    () => read('js/waveform.js'),
+    /ENOENT/,
+    'js/waveform.js must be deleted',
+  );
+  const mainSrc = read('js/main.js');
+  assert.doesNotMatch(mainSrc, /waveform\.js/, 'js/main.js must not import the deleted module');
+  assert.match(mainSrc, /renderAiSummary/, 'js/main.js must render the AI summary instead');
+  assert.doesNotMatch(appCss, /\.wf-[a-z-]+\s*\{/, 'the .wf-* card CSS must be gone');
+});
+
+test('data.waves stays on the backend — the LANDING still renders it', () => {
+  // Deleting js/waveform.js makes data.waves look dead from the dashboard's
+  // side. It is not: js/landing.js paints the landing's #lp-waves preview from
+  // it. Removing buildWaves()/the waves field as "now unused" would silently
+  // empty that preview, so this pins the real consumer.
+  const landingJs = read('js/landing.js');
+  assert.match(landingJs, /data\?\.waves|data\.waves/, 'js/landing.js must still read data.waves');
+  assert.match(landingHtml, /id="lp-waves"/, 'the landing preview mount must still exist');
+  const signalsLib = read('scripts/lib/signals.mjs');
+  assert.match(signalsLib, /export function buildWaves/, 'buildWaves() must stay — the landing depends on it');
+});
+
+test('the AI summary is gated on freshness and discloses itself', () => {
+  const src = read('js/aisummary.js');
+  // A stale summary above a stream that refreshes every 30 minutes would be
+  // worse than none, so the section must hide itself rather than go stale.
+  assert.match(src, /STALE_HOURS\s*=\s*36/, 'the 36h staleness gate the procedure doc quotes');
+  assert.match(src, /root\.hidden = true/, 'it must hide the section when unusable');
+  // The "AI-written" label must be hardcoded and gated on the method field, so
+  // a hand-edited data file cannot relabel itself as something it is not.
+  assert.match(src, /method !== 'ai-written'/, 'usability must be gated on method');
+  assert.match(src, /AI-written/, 'the disclosure label must live in the code, not the data');
+  // Sources are resolved against the live feed rather than trusted from the file.
+  assert.doesNotMatch(src, /fam\.sourceUrls|fam\.urls/, 'source URLs must not be read from the summary file');
 });
 
 test('the landing merges its Waves and River previews under "News Wave"', () => {
@@ -299,4 +353,133 @@ test('Research is removed from both pages', () => {
   assert.doesNotMatch(appHtml, /data-panel="research"/, 'app.html must not have a Research nav pill');
   assert.doesNotMatch(landingHtml, /id="research"/, 'index.html must not have a Research band');
   assert.doesNotMatch(landingHtml, /href="#research"/, 'index.html must not link to a Research anchor');
+});
+
+test('the dashboard is one continuous page, with no hidden top sections', () => {
+  // Every .topsection used to be hidden except the active one; navigation
+  // switched which was visible. The dashboard is now a single scroll, so a
+  // `hidden` attribute on a topsection would silently remove a whole section
+  // from the page with no way to get it back -- the nav no longer unhides.
+  const topsections = [...appHtml.matchAll(/<section[^>]*class="topsection"[^>]*>/g)].map((m) => m[0]);
+  assert.equal(topsections.length, 4, 'app.html must have exactly 4 top sections');
+  for (const tag of topsections) {
+    assert.doesNotMatch(tag, /\shidden(\s|>|=)/, `a topsection must not be hidden: ${tag}`);
+  }
+});
+
+test('js/nav.js drives one page by scrolling, not by switching panels', () => {
+  // The panel-switching API is gone. If any of these come back, the module
+  // has regressed to the two-mode (tabbed + "Full page") IA this replaced.
+  assert.doesNotMatch(navSrc, /export function goTo\b/, 'goTo() must be gone -- pills scroll now');
+  assert.doesNotMatch(navSrc, /export function activateFullPage\b/, 'activateFullPage() must be gone -- the page IS full page now');
+  assert.doesNotMatch(navSrc, /\.hidden\s*=/, 'nav.js must never set .hidden -- every section is always visible');
+  // And the replacement must actually exist.
+  assert.match(navSrc, /scrollIntoView|scrollTo/, 'nav.js must scroll to navigate');
+  assert.match(navSrc, /addEventListener\('scroll'/, 'the depth rail must be driven by scroll position (scroll-spy)');
+});
+
+test('the dashboard top nav is labelled Top / Models / Ecosystem / News Wave / Markets', () => {
+  const nav = appHtml.match(/<nav class="topnav"[\s\S]*?<\/nav>/)?.[0];
+  assert.ok(nav, 'app.html must have a .topnav');
+  const labels = [...nav.matchAll(/<button[^>]*data-panel="[^"]*"[^>]*>([^<]+)<\/button>/g)].map((m) => m[1].trim());
+  assert.deepEqual(labels, ['Top', 'Models', 'Ecosystem', 'News Wave', 'Markets']);
+  // The internal ids must NOT have been renamed along with the labels --
+  // js/deeplink.js's allowlist, LEGACY_HASH and every landing link depend on
+  // them. "News Wave" is the label for data-panel="today".
+  assert.match(nav, /data-panel="today"[^>]*>News Wave</, 'News Wave must still be data-panel="today"');
+  assert.match(nav, /data-panel="full"[^>]*>Top</, 'Top must still be data-panel="full"');
+});
+
+test('the dashboard sections appear in the same order as the nav pills', () => {
+  // js/nav.js's scroll-spy walks its PANELS array in order and takes the last
+  // section whose top has passed the chrome line. That is only correct if the
+  // array, the nav pills and the DOM all agree, so pin the DOM order here.
+  const domOrder = [...appHtml.matchAll(/<section[^>]*class="topsection"[^>]*data-panel="([^"]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(domOrder, ['models', 'ecosystem', 'today', 'markets']);
+
+  const nav = appHtml.match(/<nav class="topnav"[\s\S]*?<\/nav>/)?.[0];
+  const navOrder = [...nav.matchAll(/<button[^>]*data-panel="([^"]+)"/g)].map((m) => m[1]).filter((p) => p !== 'full');
+  assert.deepEqual(navOrder, domOrder, 'nav pill order must match DOM section order');
+
+  const navSrcOrder = navSrc.match(/const PANELS = \[([^\]]+)\]/)?.[1];
+  assert.ok(navSrcOrder, 'js/nav.js must declare a PANELS array');
+  assert.deepEqual(
+    navSrcOrder.split(',').map((s) => s.trim().replace(/['"]/g, '')).filter(Boolean),
+    domOrder,
+    "js/nav.js's PANELS must be in DOM order -- the scroll-spy depends on it"
+  );
+});
+
+test('Image AI and Video AI share one row', () => {
+  // They were two full-width stacked tabpanels; they are now two columns of
+  // one grid, so the pair reads as a comparison rather than a sequence.
+  // Non-greedy up to </section>\s*</div> (the media-grid's own close), not
+  // </div>\s*</div> -- the inner `<div id="image-ai"></div>` sits directly
+  // against the .panel's closing </div>, so a bare double-</div> stop would
+  // match there and truncate the capture before the video column.
+  const grid = appHtml.match(/<div class="media-grid">[\s\S]*?<\/section>\s*<\/div>/)?.[0];
+  assert.ok(grid, 'app.html must have a .media-grid');
+  assert.match(grid, /id="sec-media-image"/, 'the image panel must be in the media grid');
+  assert.match(grid, /id="sec-media-video"/, 'the video panel must be in the media grid');
+  assert.ok(
+    grid.indexOf('sec-media-image') < grid.indexOf('sec-media-video'),
+    'image must be the left column, video the right'
+  );
+  // The grid must actually be a two-column grid that collapses on narrow
+  // screens -- side-by-side at 580px each is fine, side-by-side at 180px each
+  // is not.
+  assert.match(appHtml, /\.media-grid\{[^}]*grid-template-columns:repeat\(2,1fr\)/, '.media-grid must be 2 columns');
+  assert.match(appHtml, /@media \(max-width:820px\)\{\.media-grid\{grid-template-columns:1fr;\}\}/, '.media-grid must stack below 820px');
+  // Both jump-bar buttons survive the merge.
+  assert.match(appHtml, /data-tab="image"/, 'the Image AI jump button must remain');
+  assert.match(appHtml, /data-tab="video"/, 'the Video AI jump button must remain');
+});
+
+test('the modal drawers outrank the fixed site header', () => {
+  // Regression guard for a real bug: all three full-height drawers shipped at
+  // z-index:60, the same value as the fixed .site-header. The header therefore
+  // painted over the drawers' top ~130px -- burying the title and putting the
+  // close button past the top of the viewport, where it also lost the hit test.
+  // From outside it looked like a cropped panel with no way to close it.
+  const headerZ = Number(shellCss.match(/\.site-header\{[^}]*z-index:\s*(\d+)/)?.[1]);
+  assert.ok(Number.isFinite(headerZ), 'could not read .site-header z-index from css/shell.css');
+
+  const modalZ = Number(tokensCss.match(/--z-modal:\s*(\d+)/)?.[1]);
+  assert.ok(Number.isFinite(modalZ), 'css/tokens.css must define --z-modal');
+  assert.ok(modalZ > headerZ, `--z-modal (${modalZ}) must outrank .site-header (${headerZ})`);
+
+  // Every drawer must actually use the token -- a hard-coded number here is how
+  // the original bug happened, and would silently drift from the header again.
+  for (const cls of ['.map-drawer', '.snet-drawer', '.dh-drawer']) {
+    const escaped = cls.replace('.', '\\.');
+    const rule = appCss.match(new RegExp(escaped + '\\s*\\{[^}]*?z-index:\\s*([^;]+);'))?.[1];
+    assert.ok(rule, `${cls} rule with a z-index not found in css/app.css`);
+    assert.equal(rule.trim(), 'var(--z-modal)', `${cls} must use var(--z-modal), not a literal`);
+  }
+});
+
+test('the drawers are portaled to <body>, escaping #main-content\'s stacking context', () => {
+  // The z-index above is necessary but NOT sufficient, and this is the half
+  // that actually fixed the bug. #main-content carries position:relative and
+  // z-index:2 (app.html), which creates a stacking context: any descendant's
+  // z-index is resolved INSIDE it, so a drawer nested under #main-content can
+  // never outrank the fixed .site-header no matter how high it declares.
+  // Both drawers must therefore be moved to <body> on creation, which is
+  // where the already-working .dh-drawer lives (it is authored there in
+  // app.html rather than being portaled).
+  for (const [file, src] of [['js/oceanmap.js', read('js/oceanmap.js')], ['js/stocknetwork.js', read('js/stocknetwork.js')]]) {
+    assert.match(
+      src,
+      /document\.body\.appendChild\(drawer\)/,
+      `${file} must portal its drawer to <body> or it renders under the site header`
+    );
+  }
+  // .dh-drawer's own escape route: authored as a direct child of <body>, not
+  // inside <main>. If it ever moves into the main content it inherits the bug.
+  const mainStart = appHtml.indexOf('<main');
+  const mainEnd = appHtml.indexOf('</main>');
+  assert.ok(mainStart !== -1 && mainEnd > mainStart, 'could not locate <main> in app.html');
+  const insideMain = appHtml.slice(mainStart, mainEnd);
+  assert.doesNotMatch(insideMain, /class="dh-drawer"/, '.dh-drawer must be authored outside <main>');
+  assert.match(appHtml, /class="dh-drawer"/, '.dh-drawer must still exist somewhere in app.html');
 });

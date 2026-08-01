@@ -1,172 +1,75 @@
-// Navigation controller for the 4-item IA (Today/Ecosystem/Models/Markets),
-// each with local tabs where it has more than one subsection. Replaces the
-// old single-scroll page with
-// deterministic, programmatic section/tab activation — so unlike a scroll-
-// spied single page, "what's active" is never inferred from scroll position,
-// it's always exactly what was last activated. This also sidesteps the old
-// bug where #sec-releases could land ~4600px off after async content above
-// it expanded: since only the ACTIVE tabpanel ever has non-zero height
-// (inactive ones are [hidden], contributing zero layout), there's no tall
-// stack of async siblings left to push the target down.
+// Navigation controller for the one-page dashboard. Every top section is in
+// the DOM and visible at all times, stacked top to bottom; the top-nav pills
+// are scroll anchors, not view switches. This module never sets `hidden`.
+//
+// This replaces a two-mode IA: one .topsection visible at a time, plus an
+// opt-in "Full page" mode that unhid everything. That duality is gone --
+// Full page IS the page now, and the "Top" pill just scrolls to the top.
+//
+// Two things previously derived from "which panel did you activate" now come
+// from scroll position instead, because every panel is always active:
+//   - the depth rail (which depths the section in view spans)
+//   - the top-nav's current-pill highlight
+// Both are handled by the scroll-spy at the bottom of this file.
 import { prefersReducedMotion } from './util.js';
 
-// Each top-level panel's local tab ids, in document/DOM order. Panels absent
-// here (ecosystem, today) have no local tabs -- today merged its three
-// subsections (waves/river/tide) into one "News Wave" section with nothing
-// left to jump between.
-const PANEL_TABS = {
-  models: ['releases', 'leaderboard', 'image', 'video', 'local', 'community'],
-  markets: ['stocknet', 'compute'],
-};
-const PANELS = ['today', 'ecosystem', 'models', 'markets'];
+// Panel ids in DOM order. The scroll-spy relies on this being the real
+// document order: it walks the list and takes the LAST section whose top has
+// passed under the fixed chrome, which is only correct if the array matches
+// the page.
+const PANELS = ['models', 'ecosystem', 'today', 'markets'];
 
-// Legacy hashes from the old single-scroll page → {panel, tab}. Every one of
-// these must keep working as a direct link.
+// Hash -> element id, for hashes whose element does NOT exist in the page.
+// Everything else falls through to a direct getElementById on the hash, so
+// #panel-x, #tab-x and the many #sec-x ids that are real elements keep working
+// with no entry here. Only genuine orphans are listed -- an entry that merely
+// restates what the fallback already does is a second source of truth waiting
+// to go stale.
+//
+//   #sec-river  - dissolved when Waves and River merged into "News Wave"
+//   #sec-media  - never an element; the old umbrella name for the media pair
+//   #tab-image  - wrapper id removed when the two became grid columns
+//   #tab-video  -   "
 const LEGACY_HASH = {
-  '#sec-map': { panel: 'ecosystem' },
-  '#sec-waves': { panel: 'today' },
-  '#sec-river': { panel: 'today' },
-  '#sec-releases': { panel: 'models', tab: 'releases' },
-  '#sec-leaderboard': { panel: 'models', tab: 'leaderboard' },
-  '#sec-media': { panel: 'models', tab: 'image' },
-  '#sec-community': { panel: 'models', tab: 'community' },
-  '#sec-stocks': { panel: 'markets', tab: 'stocknet' },
-  '#sec-compute': { panel: 'markets', tab: 'compute' },
+  '#sec-river': 'panel-today',
+  '#sec-media': 'sec-media-image',
+  '#tab-image': 'sec-media-image',
+  '#tab-video': 'sec-media-video',
 };
 
-const FULL_HASH = '#full';
-// Full Page's own visual order — Ecosystem and Models lead, per explicit
-// request, with the rest keeping their original relative order after them.
-const FULL_PAGE_ORDER = ['ecosystem', 'models', 'today', 'markets'];
+// '#full' was the old "show everything on one page" mode. That is now simply
+// the page, so the hash still resolves -- to the top.
+const TOP_HASHES = new Set(['#full', '#top']);
 
-let state = { panel: 'today', tab: 'waves' };
 let dataReady = false;
 let pendingScrollTarget = null;
 let correctionObserver = null;
 let correctionTimer = null;
 
 function panelEl(panel) { return document.getElementById('panel-' + panel); }
-function tabEl(tab) { return document.getElementById('tab-' + tab); }
-function tabBtn(tab) { return document.getElementById('tabbtn-' + tab); }
-function topnavBtn(panel) { return document.querySelector(`.nav-pill[data-panel="${panel}"]`); }
 
-// appendChild on a node already in the document MOVES it rather than
-// duplicating it, so calling this in sequence for each panel in `order`
-// leaves the panels in exactly that order — no cloning, no duplicate ids,
-// no re-rendering. Non-panel siblings (e.g. the top data-note banner) are
-// never touched, so they stay wherever they started.
-function reorderPanels(order) {
-  const main = document.getElementById('main-content');
-  if (!main) return;
-  order.forEach((p) => { const el = panelEl(p); if (el) main.appendChild(el); });
+// Height of the fixed header + topnav + depth rail. Read from the same CSS
+// token the sections' scroll-margin-top uses, so the two can never drift.
+function chromeH() {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue('--chrome-h');
+  return parseInt(raw, 10) || 126;
 }
 
-// Resolve a location.hash into {panel, tab}. Accepts legacy hashes, the
-// current-scheme ids (#panel-x, #tab-y), or falls back to the last state.
-function resolveHash(hash) {
-  if (!hash) return null;
-  if (LEGACY_HASH[hash]) return { ...LEGACY_HASH[hash] };
-  const tabMatch = hash.match(/^#tab-(.+)$/);
-  if (tabMatch) {
-    const tab = tabMatch[1];
-    for (const [panel, tabs] of Object.entries(PANEL_TABS)) {
-      if (tabs.includes(tab)) return { panel, tab };
-    }
-  }
-  const panelMatch = hash.match(/^#panel-(.+)$/);
-  if (panelMatch && PANELS.includes(panelMatch[1])) return { panel: panelMatch[1] };
-  return null;
-}
-
-function hashFor(panel, tab) {
-  return tab ? '#tab-' + tab : '#panel-' + panel;
-}
-
-// Every subsection of a top panel is shown STACKED (not one tab at a time),
-// so the local-tab bar is a "jump to a section" nav, not a tablist. This
-// strips the tablist/tabpanel ARIA the HTML still carries and unhides every
-// tabpanel once (they're gated only by their parent panel's `hidden` from
-// here on). Run once at init.
-function normalizeLocalNav() {
-  document.querySelectorAll('.local-tabs').forEach((group) => {
-    group.setAttribute('role', 'group');
-    group.querySelectorAll('.local-tab').forEach((btn) => {
-      btn.removeAttribute('role');
-      btn.removeAttribute('aria-selected');
-      btn.removeAttribute('aria-controls');
-      btn.removeAttribute('tabindex');
-    });
-  });
-  document.querySelectorAll('.tabpanel').forEach((p) => {
-    p.removeAttribute('role');
-    p.removeAttribute('aria-labelledby');
-    p.hidden = false;
-  });
-}
-
-// Light "you jumped here" cue on the jump bar — not a tablist selection.
-function setLocalTabCurrent(panel, tab) {
-  const tabs = PANEL_TABS[panel];
-  if (!tabs) return;
-  tabs.forEach((t) => {
-    const btn = tabBtn(t);
-    if (btn) btn.setAttribute('aria-current', String(t === tab));
-  });
-}
-
-// Every distinct data-depth present among a panel's shown subsections — the
-// section now spans multiple depths, so the rail highlights all of them
-// rather than pretending there's a single "current" one.
-function panelDepths(panel) {
-  const el = panelEl(panel);
-  if (!el) return [];
-  // Values can be space-separated (e.g. "surface currents"); the landing's
-  // wireRail() (js/landing.js) splits on /\s+/ the same way, and the two
-  // must agree or the rail will disagree between pages.
-  return [...new Set(
-    [...el.querySelectorAll('[data-depth]')]
-      .flatMap((n) => (n.dataset.depth || '').split(/\s+/).filter(Boolean))
-  )];
-}
-
-function updateDepthRailMulti(depths) {
-  document.querySelectorAll('.depth-item').forEach((el) => {
-    el.dataset.active = String(depths.includes(el.dataset.depth));
-  });
-}
-
-function activatePanels(panel) {
-  PANELS.forEach((p) => {
-    const el = panelEl(p);
-    if (el) el.hidden = p !== panel;
-    const btn = topnavBtn(p);
-    if (btn) {
-      if (p === panel) btn.setAttribute('aria-current', 'page');
-      else btn.removeAttribute('aria-current');
-    }
-  });
-  const fullBtn = topnavBtn('full');
-  if (fullBtn) fullBtn.removeAttribute('aria-current');
-}
-
-function setLocalTabsVisible(visible) {
-  document.querySelectorAll('.local-tabs').forEach((el) => { el.hidden = !visible; });
-}
-
-function setDepthRailVisible(visible) {
-  const rail = document.getElementById('depth-rail');
-  if (rail) rail.hidden = !visible;
-}
+// ---------- scrolling ----------
 
 function scrollToTarget(target, { smooth = true } = {}) {
   if (!target) return;
   target.scrollIntoView({ behavior: smooth && !prefersReducedMotion ? 'smooth' : 'auto', block: 'start' });
 }
 
-// Watches for layout shifts for a few seconds after navigating and re-snaps
-// to the target if something async still moved it — the ResizeObserver-based
-// safety net called for in the redesign brief, in addition to the tab-gating
-// above which already removes most of the original cause.
+function scrollToTop({ smooth = true } = {}) {
+  window.scrollTo({ top: 0, behavior: smooth && !prefersReducedMotion ? 'smooth' : 'auto' });
+}
+
+// Watches for layout shifts for a few seconds after navigating and re-snaps to
+// the target if async content above it still moved it. Kept from the previous
+// controller: with every section on one page there is MORE async content above
+// any given target than before, not less, so this matters more, not less.
 function armAnchorCorrection(target) {
   if (correctionObserver) { correctionObserver.disconnect(); clearTimeout(correctionTimer); }
   if (!target || typeof ResizeObserver === 'undefined') return;
@@ -183,140 +86,186 @@ function armAnchorCorrection(target) {
   }, 3000);
 }
 
-function legacyAnchor(panel, tab) {
-  // The nested legacy-id elements (#sec-waves etc.) are the precise visual
-  // target within a tabpanel; fall back to the tabpanel/panel itself.
-  const entry = Object.entries(LEGACY_HASH).find(([, v]) => v.panel === panel && v.tab === tab);
-  if (entry) {
-    const el = document.querySelector(entry[0]);
-    if (el) return el;
+// Scroll to an element id, deferring until data is ready if the page is still
+// rendering skeletons (otherwise we'd scroll to a target that then grows).
+function navigateToId(id, { push = true, smooth = true } = {}) {
+  const target = document.getElementById(id);
+  if (!target) return false;
+  if (push && location.hash !== '#' + id) history.pushState({ id }, '', '#' + id);
+  pendingScrollTarget = target;
+  if (dataReady) {
+    scrollToTarget(target, { smooth });
+    armAnchorCorrection(target);
+    pendingScrollTarget = null;
   }
-  return tab ? tabEl(tab) : panelEl(panel);
+  return true;
 }
 
-// Show a top section. `tab` is now just an optional SCROLL TARGET within the
-// section (every subsection is shown stacked), not a one-of-many selection.
-// Clicking the top-nav header passes no tab → shows the whole section from
-// its top; a legacy deep link like #sec-waves or a jump-bar click passes a
-// tab → shows the section and scrolls to that subsection.
-export function goTo(panel, tab, { push = true, scroll = true } = {}) {
-  if (!PANELS.includes(panel)) return;
-  state = { panel, tab: tab || null };
-
-  // undo whatever Full Page mode changed, if we're coming from it
-  setLocalTabsVisible(true);
-  setDepthRailVisible(true);
-  const main = document.getElementById('main-content');
-  if (main?.dataset.reordered) {
-    reorderPanels(PANELS);
-    delete main.dataset.reordered;
-  }
-
-  activatePanels(panel);            // show this panel, hide the others
-  setLocalTabCurrent(panel, tab);   // light cue on the jump bar
-  updateDepthRailMulti(panelDepths(panel));
-
-  if (push) {
-    const hash = hashFor(panel, tab);
-    if (location.hash !== hash) history.pushState({ panel, tab: tab || null }, '', hash);
-  }
-
-  if (scroll) {
-    // no tab → land at the top of the section; tab → scroll to that subsection
-    const target = tab ? legacyAnchor(panel, tab) : panelEl(panel);
-    pendingScrollTarget = target;
-    if (dataReady) {
-      scrollToTarget(target, { smooth: true });
-      armAnchorCorrection(target);
-    }
-    // if data isn't ready yet, the 'app:data-ready' handler below finishes the scroll
-  }
+function navigateToTop({ push = true } = {}) {
+  if (push && location.hash) history.pushState(null, '', location.pathname + location.search);
+  pendingScrollTarget = null;
+  scrollToTop();
 }
 
-// "Full page" — shows every section top-to-bottom at once, like the original
-// single-scroll page, for anyone who'd rather scroll than switch tabs. An
-// explicit opt-in (Today stays the default landing view): all 4 top panels
-// and all their local tabs are unhidden simultaneously, the now-redundant
-// local-tab bars and the depth rail (which has no single "current" section
-// to point at anymore) are hidden, and every widget inside — flip cards,
-// river filters, leaderboard tabs, etc. — keeps working exactly as it does
-// in the tabbed view, since none of their own logic depends on this.
-export function activateFullPage({ push = true } = {}) {
-  state = { panel: 'full', tab: null };
+// ---------- depth rail + current pill (scroll-spy) ----------
 
-  PANELS.forEach((p) => { const el = panelEl(p); if (el) el.hidden = false; });
-  Object.values(PANEL_TABS).flat().forEach((tab) => { const el = tabEl(tab); if (el) el.hidden = false; });
-  setLocalTabsVisible(false);
-  setDepthRailVisible(false);
-  reorderPanels(FULL_PAGE_ORDER);
-  const main = document.getElementById('main-content');
-  if (main) main.dataset.reordered = '1';
+// Every distinct data-depth present among a panel's subsections. Values can be
+// space-separated (e.g. "surface currents"); the landing's wireRail()
+// (js/landing.js) splits on /\s+/ the same way, and the two must agree or the
+// rail will disagree between pages.
+function panelDepths(panel) {
+  const el = panelEl(panel);
+  if (!el) return [];
+  return [...new Set(
+    [...el.querySelectorAll('[data-depth]')]
+      .flatMap((n) => (n.dataset.depth || '').split(/\s+/).filter(Boolean))
+  )];
+}
 
+function updateDepthRailMulti(depths) {
+  document.querySelectorAll('.depth-item').forEach((el) => {
+    el.dataset.active = String(depths.includes(el.dataset.depth));
+  });
+}
+
+function setTopnavCurrent(panel) {
   document.querySelectorAll('.nav-pill[data-panel]').forEach((btn) => {
-    if (btn.dataset.panel === 'full') btn.setAttribute('aria-current', 'page');
+    if (btn.dataset.panel === panel) btn.setAttribute('aria-current', 'page');
     else btn.removeAttribute('aria-current');
   });
+}
 
-  if (push && location.hash !== FULL_HASH) history.pushState({ full: true }, '', FULL_HASH);
-  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+// Which section owns the viewport right now: the LAST one whose top has
+// scrolled up past the fixed chrome. Deliberately not IntersectionObserver
+// ratios -- sections here are routinely taller than the viewport, so their
+// intersectionRatio stays near zero and comparing ratios picks the wrong one.
+// A single position test is both simpler and correct for tall sections.
+function currentPanel() {
+  const line = chromeH() + 8;
+  let current = PANELS[0];
+  for (const p of PANELS) {
+    const el = panelEl(p);
+    if (!el) continue;
+    if (el.getBoundingClientRect().top <= line) current = p;
+  }
+  return current;
+}
+
+let spyScheduled = false;
+function syncSpy() {
+  spyScheduled = false;
+  const panel = currentPanel();
+  updateDepthRailMulti(panelDepths(panel));
+  setTopnavCurrent(panel);
+}
+
+function scheduleSpy() {
+  if (spyScheduled) return;
+  spyScheduled = true;
+  requestAnimationFrame(syncSpy);
+}
+
+function initSpy() {
+  window.addEventListener('scroll', scheduleSpy, { passive: true });
+  window.addEventListener('resize', scheduleSpy);
+  syncSpy();
+}
+
+// ---------- wiring ----------
+
+// Strips the tablist/tabpanel ARIA the HTML still carries and unhides every
+// tabpanel once. The jump bars were never a real tablist -- every subsection
+// is shown stacked -- so they are groups of scroll shortcuts, not tabs.
+function normalizeLocalNav() {
+  document.querySelectorAll('.local-tabs').forEach((group) => {
+    group.setAttribute('role', 'group');
+    group.querySelectorAll('.local-tab').forEach((btn) => {
+      btn.removeAttribute('role');
+      btn.removeAttribute('aria-selected');
+      btn.removeAttribute('aria-controls');
+      btn.removeAttribute('tabindex');
+    });
+  });
+  document.querySelectorAll('.tabpanel').forEach((p) => {
+    p.removeAttribute('role');
+    p.removeAttribute('aria-labelledby');
+    p.removeAttribute('hidden');
+  });
 }
 
 function wireTopnav() {
   document.querySelectorAll('.nav-pill[data-panel]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      if (btn.dataset.panel === 'full') activateFullPage();
-      else goTo(btn.dataset.panel, null);
+      const panel = btn.dataset.panel;
+      if (panel === 'full') navigateToTop();
+      else navigateToId('panel-' + panel);
     });
   });
 }
 
-// Jump bar: each button scrolls to its subsection within the (already fully
-// shown) section. Plain buttons — Tab moves between them naturally, so no
-// tablist arrow-key roving is needed anymore.
+// Resolve a jump button's data-tab to the element it should scroll to.
+// Normally that is #tab-<name>, but where no such wrapper exists (Image and
+// Video AI lost theirs when they became grid columns) it reuses the same
+// LEGACY_HASH orphan map the hash router uses, rather than keeping a second
+// lookup table that could disagree with it.
+function tabTargetId(tab) {
+  if (document.getElementById('tab-' + tab)) return 'tab-' + tab;
+  return LEGACY_HASH['#tab-' + tab] || ('tab-' + tab);
+}
+
+// Jump bar: scroll to a subsection within an already-visible section.
 function wireLocalTabs() {
   document.querySelectorAll('.local-tabs').forEach((group) => {
-    const panel = group.dataset.tabgroup;
     group.querySelectorAll('.local-tab').forEach((btn) => {
-      btn.addEventListener('click', () => goTo(panel, btn.dataset.tab));
+      btn.addEventListener('click', () => {
+        navigateToId(tabTargetId(btn.dataset.tab));
+        group.querySelectorAll('.local-tab').forEach((b) => {
+          if (b === btn) b.setAttribute('aria-current', 'true');
+          else b.removeAttribute('aria-current');
+        });
+      });
     });
   });
 }
 
-function handleHash({ push } = { push: false }) {
-  if (location.hash === FULL_HASH) { activateFullPage({ push: false }); return; }
-  const resolved = resolveHash(location.hash);
-  if (!resolved) return;
-  goTo(resolved.panel, resolved.tab, { push, scroll: true });
+function handleHash({ push = false } = {}) {
+  const hash = location.hash;
+  if (!hash) return;
+  if (TOP_HASHES.has(hash)) { navigateToTop({ push: false }); return; }
+  const mapped = LEGACY_HASH[hash];
+  if (mapped) { navigateToId(mapped, { push }); return; }
+  // #panel-x / #tab-x / #sec-x and anything else: resolve the id directly.
+  navigateToId(hash.slice(1), { push });
 }
 
 export function initNav() {
   normalizeLocalNav();
   wireTopnav();
   wireLocalTabs();
+  initSpy();
 
   window.addEventListener('popstate', () => handleHash({ push: false }));
 
-  // Initial load: resolve the hash if present, else show Today (all of its
-  // subsections stacked — the default landing view).
-  if (location.hash) {
-    handleHash({ push: false });
-  } else {
-    goTo('today', null, { push: false, scroll: false });
-  }
+  // Initial load: honour the hash if there is one. With no hash the page just
+  // starts at the top -- there is no default section to activate anymore.
+  if (location.hash) handleHash({ push: false });
 }
 
-// Called once from main.js after the initial async render (waves/river/
-// ocean map/stock network) has settled — finishes any scroll that was
-// waiting on real content instead of a skeleton.
+// Called once from main.js after the initial async render (waves/river/ocean
+// map/stock network) has settled -- finishes any scroll that was waiting on
+// real content instead of a skeleton, and re-runs the spy now that the page
+// has its true height.
 export function notifyDataReady() {
   dataReady = true;
   if (pendingScrollTarget) {
     // double rAF: let the browser finish layout for the just-rendered content
+    const target = pendingScrollTarget;
+    pendingScrollTarget = null;
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      scrollToTarget(pendingScrollTarget, { smooth: true });
-      armAnchorCorrection(pendingScrollTarget);
-      pendingScrollTarget = null;
+      scrollToTarget(target, { smooth: true });
+      armAnchorCorrection(target);
     }));
   }
+  scheduleSpy();
   window.dispatchEvent(new CustomEvent('app:data-ready'));
 }

@@ -85,6 +85,11 @@ export function createStockNetwork(root, net) {
   const gNodes = svg.querySelector('.snet-nodes');
   const tooltip = root.querySelector('#snet-tooltip');
   const drawer = root.querySelector('#snet-drawer');
+  // Portal to <body> — see the identical move in js/oceanmap.js: #main-content's
+  // z-index:2 stacking context would otherwise pin this modal below the fixed
+  // site header no matter what z-index it declares.
+  // Safe as a plain move: createStockNetwork() runs once, from boot().
+  document.body.appendChild(drawer);
   const summary = root.querySelector('#snet-summary');
   const legend = root.querySelector('#snet-legend');
   let lastFocused = null;
@@ -256,7 +261,9 @@ export function createStockNetwork(root, net) {
       </div>`;
     drawer.hidden = false;
     document.body.classList.add('drawer-open');
-    drawer.querySelector('.drawer-close').focus();
+    // preventScroll — see the same call in js/oceanmap.js: the drawer scrolls its
+    // own content, and focus() would otherwise be free to move it.
+    drawer.querySelector('.drawer-close').focus({ preventScroll: true });
     drawer.querySelector('.drawer-close').addEventListener('click', closeDrawer);
     mountChart(n);
   }

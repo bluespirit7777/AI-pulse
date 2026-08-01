@@ -58,6 +58,16 @@
      otherwise need re-tuning. The 40px difference is imperceptible visually. */
   --maxw:1240px;
 
+  /* Stacking order for full-height modal drawers (map / stock network / data
+     health). MUST outrank the fixed .site-header (css/shell.css, z-index:60):
+     the drawers are role="dialog" aria-modal="true" and span inset:0 0 0 auto,
+     so at an equal z-index the header painted over their top ~130px -- burying
+     the drawer title and putting the close button beyond the viewport's top
+     edge, where it also lost the hit test. That looked, from outside, like a
+     cropped header with no way to close. Any new full-height overlay belongs
+     here too, not at 60. */
+  --z-modal:70;
+
   /* thin white outline for text sitting directly on photography with no panel
      behind it — keeps the text's own colour, adds legibility.
      Unreferenced as of this branch: the dashboard's photo background was

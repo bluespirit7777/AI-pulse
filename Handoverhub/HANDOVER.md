@@ -15,8 +15,11 @@ prevents breaking production; §4 (Known issues) prevents chasing ghosts.
   regenerates the JSON on a schedule.
 - **Two pages:** `index.html` is the landing page (site root), `app.html` is the
   dashboard. Old root deep links forward automatically — see `js/deeplink.js`.
-- **201 tests** (`npm run check` = validate + test). They must pass before any push.
-- **Never hand-commit `data/*.json`** — CI owns those (one exception: `entities.json`, see §5).
+- **249 tests** (`npm run check` = validate + test). They must pass before any push.
+- **Never hand-commit `data/*.json`** — CI owns those, with **two** deliberate
+  exceptions: `entities.json` (Ocean Map config, see §5) and `ai-summary.json`
+  (the daily AI Summary Wave, see `docs/AI_SUMMARY_PROCEDURE.md`). The build
+  writes neither, so neither is ever clobbered.
 - **The whole project's ethos is anti-fabrication.** Every number is either real
   and sourced, or explicitly labelled an estimate. Breaking that is the worst
   kind of regression here — worse than a visual bug.
@@ -60,7 +63,9 @@ npx serve .        # any static server
 | `js/deeplink.js` | Forwards legacy root deep links to `app.html`; blocking script, runs pre-paint |
 | `css/app.css` | Component styles (dashboard only — the landing's CSS is inline) |
 | `js/main.js` | Orchestrator — loads data, calls every renderer |
-| `js/nav.js` | 4-item IA router (Today/Ecosystem/Models/Markets) + Full Page |
+| `js/nav.js` | one-page scroll nav (Top/Models/Ecosystem/News Wave/Markets) + scroll-spy depth rail |
+| `js/aisummary.js` | AI Summary Wave — renders `data/ai-summary.json`, hides the section if missing/malformed/>36h old |
+| `scripts/prep-ai-summary.mjs` | read-only helper for the daily summary routine (see `docs/AI_SUMMARY_PROCEDURE.md`) |
 | `js/curated.js` | **Hand-maintained** datasets (leaderboard, image/video/local AI) |
 | `scripts/lib/models.mjs` | **`MODEL_REGISTRY` — single source of truth for model names/versions** |
 | `scripts/lib/signals.mjs` | Clustering, scoring, categorization, topics, `isReleaseDiscussion` |
@@ -173,6 +178,28 @@ git push origin main
   **do not rebuild it without a fresh decision** — the former "Launch Radar is
   starving, fix its cron" known-issue and the next-step that referenced it are
   moot, not pending, and were removed with it.
+- **News Wave now leads with an AI Summary Wave.** The three per-family wave
+  cards (js/waveform.js, deleted) are replaced by three short syntheses of the
+  last 24h in Product / Market / Research. They are **written by an AI agent on
+  a daily routine and committed as data** (`data/ai-summary.json`) — no model
+  call in the build, no API key in CI, zero new dependencies. Run
+  `node scripts/prep-ai-summary.mjs` and follow `docs/AI_SUMMARY_PROCEDURE.md`.
+  The section **hides itself entirely** when the file is missing, malformed or
+  more than 36h old — a stale take above a stream that refreshes every 30
+  minutes is worse than none. **Do not delete `buildWaves()` or `data.waves`**
+  as now-unused: `js/landing.js` still paints the landing preview from them.
+- **The signal river is minimal.** All filter UI is gone (categories, time
+  windows, entity dropdown, quick-pick, clear button, result count), as are the
+  per-row significance score, source count and verification chip. Rows are
+  category + time + headline + description; pagination stays. `reconcileFilter`
+  and its 5 tests went with the filters.
+- **Fixed: detail drawers rendered under the fixed header.** Not a z-index
+  value problem — `#main-content` sets `position:relative; z-index:2`, creating
+  a stacking context that trapped any descendant drawer below the header no
+  matter what it declared. Map and stock-network drawers are now portaled to
+  `<body>` (where `.dh-drawer` already lived, which is why only that one
+  worked) and share a `--z-modal` token. Any new full-height overlay belongs
+  on `<body>` too.
 - **Simplified the IA to 4 items.** Tide removed (both pages — "didn't offer
   anything concrete"); Waves and River merged into one "News Wave" section
   (both pages — they were "basically both news about AI"); Research removed
@@ -185,6 +212,16 @@ git push origin main
   branch) came back by explicit request, paired with its original legibility
   veil, scoped to `app.html` only — the shared gradient in `css/shell.css`
   and the landing are unaffected.
+- **Dashboard is now one continuous page.** The panel-switching IA (one
+  `.topsection` visible at a time, plus an opt-in "Full page" mode) is gone —
+  Full page *is* the page, the pills are scroll anchors, and `js/nav.js` never
+  sets `hidden`. Order and labels are **Top / Models / Ecosystem / News Wave /
+  Markets** (`data-panel` ids are unchanged — `today` is still `today`, only
+  its label reads "News Wave"). The depth rail became a scroll-spy, since
+  there is no longer a single "activated" panel to read a depth from. Image AI
+  and Video AI now share one row. Also fixed a long-standing bug where flip
+  cards measured while hidden kept a 360px fallback height, clipping the Local
+  AI top-5 lists by ~500px.
 
 ### Frontend gotchas solved
 - `requestAnimationFrame` **never fires** in the automated test browser → use

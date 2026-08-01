@@ -9,7 +9,7 @@
 // their deep link.
 //
 // The match is an explicit allowlist of the dashboard's four hash shapes (see
-// resolveHash + LEGACY_HASH in js/nav.js) rather than "anything the landing
+// handleHash + LEGACY_HASH in js/nav.js) rather than "anything the landing
 // doesn't recognise", so the landing's own anchors — #today, #ecosystem,
 // #models, #markets — can never be captured by accident. Older #surface,
 // #currents aliases are equally protected.

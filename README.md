@@ -15,13 +15,14 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
    the signal feed; lines show dependency/partnership/competition. Click any node
    for detail. A 24H/7D/30D toggle shows change over time (and says so honestly
    while history is still accumulating).
-2. **News Wave** — the strongest product/market/research stories by a
-   documented significance score, each with a "why it matters" that explains
-   the **consequence** of the event and a separate "why selected" line for the
-   scoring, together with the full chronological (newest-first) stream of
-   everything crossing the wire, merged duplicates and category/entity/time
-   filters included (the entity filter shows readable names — GPT, Nvidia —
-   not ids).
+2. **News Wave** — an **AI Summary Wave** of three short syntheses covering the
+   last 24 hours in Product, Market and Research, each linking the signals it
+   drew on, above the full chronological (newest-first) stream of everything
+   crossing the wire with duplicate reports merged into one row. The summaries
+   are written by an AI agent on a daily routine and committed as data — there
+   is no model call in the build and no API key in CI — and the section hides
+   itself entirely rather than show a summary more than 36 hours old. See
+   [docs/AI_SUMMARY_PROCEDURE.md](docs/AI_SUMMARY_PROCEDURE.md).
 3. **AI Stock Network** — 10 AI stocks as an ecosystem depth map: node size =
    market cap, glow = relative volume, ring = day change (computed from the last
    two valid trading bars); toggle between curated **business ties** and 30-day
