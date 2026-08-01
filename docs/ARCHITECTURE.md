@@ -51,8 +51,8 @@ app.html ──module──> js/main.js
         ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
         ├─ js/nav.js           one-page scroll navigation: hash/jump-bar scroll targets, scroll-spy depth rail + current pill, anchor correction
         ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
-        ├─ js/waveform.js      strongest waves as SVG waveforms (consequence "why it matters" + "why selected") -- presented with river.js under one "News Wave" heading
-        ├─ js/river.js         signal river (chronological, declutered filters, expand/archive) -- see waveform.js
+        ├─ js/aisummary.js     AI Summary Wave: the daily agent-written synthesis per family, with a 36h staleness gate that hides the section entirely
+        ├─ js/river.js         signal river (chronological, minimal rows, expand/archive) -- sits under aisummary.js in the "News Wave" section
         ├─ js/stocknetwork.js  AI stock network: ecosystem + market-motion modes, drawer
         ├─ js/community.js     "Community Current": model tablist + themes + representative comments
         ├─ js/sections.js      live + curated detail sections (+ leaderboard view tabs, release-card YouTube flip)

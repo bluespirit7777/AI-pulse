@@ -133,6 +133,31 @@ The highest-significance eligible cluster per family (Product / Market /
 Research), never simply the three newest. Market absorbs market/capital/compute/
 policy/org-governance; Research is papers/benchmarks; everything else is Product.
 
+This still runs at build time and still feeds the **landing page's** News Wave
+preview. The dashboard no longer renders it: its News Wave section leads with
+the AI Summary Wave instead (below), which summarises each family's whole day
+rather than picking one winner from it.
+
+## AI Summary Wave
+
+Three short syntheses — one each for Product, Market and Research — covering
+the last 24 hours. They are **written by an AI agent on a daily routine and
+committed as data**, not generated during the build: there is no model call in
+the pipeline and no API key in CI. The families are the same ones the waves use,
+and the same exclusions apply (Analysis and General are commentary about events,
+so they are left out).
+
+Three things are deliberate. The **"AI-written" label is enforced in code**, not
+read from the data file, so the summary cannot present itself as human editorial.
+**Sources are resolved against the live feed** — the summary cites signal ids,
+and the page links only the ones still present, so it can never link somewhere
+that no longer exists. And the section **disappears entirely once the summary is
+more than 36 hours old**: the stream below it refreshes every 30 minutes, and a
+day-old reading sitting above fresh headlines would be worse than none. A missed
+routine day shows nothing rather than something stale.
+
+See `docs/AI_SUMMARY_PROCEDURE.md` for how it is produced.
+
 ## Visual encodings
 
 **Ocean Map** — node **size** = curated importance (an estimate, labelled as
@@ -142,23 +167,25 @@ there's no complete prior window); **trend arrow** ▲/▼ = rising/falling; **d
 node** = no fresh signal this range. Connections are Bézier current paths,
 de-emphasized until a node is selected.
 
-**Waveforms** — x = publish time in a 72h window; amplitude = significance;
-brightness = freshness; marker size = source count; secondary peaks = other
-same-family stories this window. The badge reads **Stands out / Typical / Lower
-intensity** — an honest *within-window* comparison of the winner against its
-family's other stories, **not** a time-series trend (we don't yet have the
-multi-day per-family history a real rising/falling trend would need).
+**AI Summary Wave** — no encoding beyond the family colour: one paragraph per
+family, a signal count, and links to the signals it drew on. The three cards
+carry the same Product / Market / Research colours the retired wave cards used,
+so the areas stay recognisable.
 
-**"Why it matters"** is a deterministic editorial line about the **consequence**
-of the event — keyed by the extracted action, then category, and hedged when the
-signal is emerging or thinly sourced (`whyItMatters` in `signals.mjs`, computed at
-build time). The scoring rationale ("day's strongest product move …") is kept as
-a separate, clearly-labelled **"Why selected"** line so consequence and selection
-are never conflated.
+> **Not currently rendered:** `whyItMatters` is still computed at build time and
+> still ships in `latest.json` — a deterministic sentence about the
+> **consequence** of an event, keyed by the extracted action, then category, and
+> hedged when the signal is emerging or thinly sourced (`signals.mjs`). Nothing
+> displays it since the wave cards were replaced by the AI Summary Wave. It is
+> left in place because the waves themselves still feed the landing preview; if
+> it stays unused it can go.
 
-**Signal River** — chronological (time first); dot size = significance but never
-reorders; verification chip per item; category/entity/time filters; expand/
-archive for older signals.
+**Signal River** — chronological, newest first, and deliberately minimal: a
+category tag, a freshness chip, the headline and its description. The dot marks
+a point on the timeline and is uniform — it used to be sized by significance,
+which only meant anything alongside the filter rig and the note explaining it,
+both now removed. Nothing is ever re-ordered by score. Older signals sit behind
+an expand/archive control.
 
 ## What we deliberately don't do
 
