@@ -15,8 +15,11 @@ prevents breaking production; §4 (Known issues) prevents chasing ghosts.
   regenerates the JSON on a schedule.
 - **Two pages:** `index.html` is the landing page (site root), `app.html` is the
   dashboard. Old root deep links forward automatically — see `js/deeplink.js`.
-- **201 tests** (`npm run check` = validate + test). They must pass before any push.
-- **Never hand-commit `data/*.json`** — CI owns those (one exception: `entities.json`, see §5).
+- **249 tests** (`npm run check` = validate + test). They must pass before any push.
+- **Never hand-commit `data/*.json`** — CI owns those, with **two** deliberate
+  exceptions: `entities.json` (Ocean Map config, see §5) and `ai-summary.json`
+  (the daily AI Summary Wave, see `docs/AI_SUMMARY_PROCEDURE.md`). The build
+  writes neither, so neither is ever clobbered.
 - **The whole project's ethos is anti-fabrication.** Every number is either real
   and sourced, or explicitly labelled an estimate. Breaking that is the worst
   kind of regression here — worse than a visual bug.
