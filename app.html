@@ -326,6 +326,14 @@
   .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
   .spec-grid>*{min-width:0;} /* same CSS Grid min-width:auto fix as .grid-2 — lets contents wrap/shrink instead of overflowing the column */
   @media (max-width:820px){.spec-grid{grid-template-columns:1fr;}}
+  /* Image AI / Video AI: one row, two equal columns — the two lists are a
+     comparison, not a sequence, so they read better beside each other than
+     stacked. Same breakpoint and min-width:0 fix as .spec-grid above; the
+     sections' own `section{padding:36px 0}` is zeroed here so the two panels
+     align on their top edges instead of each carrying a stray band of space. */
+  .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start;}
+  .media-grid>*{min-width:0;padding:0;}
+  @media (max-width:820px){.media-grid{grid-template-columns:1fr;}}
   .spec-table{width:100%;border-collapse:collapse;font-size:12.5px;}
   .spec-table th{
     text-align:left;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
@@ -573,8 +581,8 @@
       <div class="local-tabs" role="tablist" aria-label="Model views" data-tabgroup="models">
         <button type="button" role="tab" class="local-tab" id="tabbtn-releases" data-tab="releases" aria-selected="true" aria-controls="tab-releases" tabindex="0">Releases</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-leaderboard" data-tab="leaderboard" aria-selected="false" aria-controls="tab-leaderboard" tabindex="-1">Frontier leaderboard</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-image" data-tab="image" aria-selected="false" aria-controls="tab-image" tabindex="-1">Image AI</button>
-        <button type="button" role="tab" class="local-tab" id="tabbtn-video" data-tab="video" aria-selected="false" aria-controls="tab-video" tabindex="-1">Video AI</button>
+        <button type="button" class="local-tab" id="tabbtn-image" data-tab="image">Image AI</button>
+        <button type="button" class="local-tab" id="tabbtn-video" data-tab="video">Video AI</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-local" data-tab="local" aria-selected="false" aria-controls="tab-local" tabindex="-1">Local AI</button>
         <button type="button" role="tab" class="local-tab" id="tabbtn-community" data-tab="community" aria-selected="false" aria-controls="tab-community" tabindex="-1">Community Pulse</button>
       </div>
@@ -627,30 +635,29 @@
         </section>
       </div>
 
-      <div class="tabpanel" id="tab-image" role="tabpanel" aria-labelledby="tabbtn-image" data-depth="midwater" hidden>
-        <section id="sec-media-image">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 image AI</h3>
-              <span class="asof curated-asof">Curated</span>
+      <div class="tabpanel" id="tab-media" data-depth="midwater">
+        <div class="media-grid">
+          <section id="sec-media-image">
+            <div class="panel">
+              <div class="panel-top">
+                <h3>Top 5 image AI</h3>
+                <span class="asof curated-asof">Curated</span>
+              </div>
+              <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
+              <div id="image-ai"></div>
             </div>
-            <div class="panel-note" style="margin-bottom:14px;">Text-to-image leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-image/arena" target="_blank" rel="noopener">Artificial Analysis Image Arena</a></div>
-            <div id="image-ai"></div>
-          </div>
-        </section>
-      </div>
-
-      <div class="tabpanel" id="tab-video" role="tabpanel" aria-labelledby="tabbtn-video" data-depth="midwater" hidden>
-        <section id="sec-media-video">
-          <div class="panel">
-            <div class="panel-top">
-              <h3>Top 5 video AI</h3>
-              <span class="asof curated-asof">Curated</span>
+          </section>
+          <section id="sec-media-video">
+            <div class="panel">
+              <div class="panel-top">
+                <h3>Top 5 video AI</h3>
+                <span class="asof curated-asof">Curated</span>
+              </div>
+              <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
+              <div id="video-ai"></div>
             </div>
-            <div class="panel-note" style="margin-bottom:14px;">Text/image-to-video leaders by human preference &amp; adoption · updated by hand, not live — <a class="src-link" href="https://artificialanalysis.ai/text-to-video/arena" target="_blank" rel="noopener">Artificial Analysis Video Arena</a></div>
-            <div id="video-ai"></div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
       <div class="tabpanel" id="tab-local" role="tabpanel" aria-labelledby="tabbtn-local" data-depth="midwater" hidden>

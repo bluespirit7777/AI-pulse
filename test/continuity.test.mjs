@@ -364,3 +364,28 @@ test('the dashboard sections appear in the same order as the nav pills', () => {
     "js/nav.js's PANELS must be in DOM order -- the scroll-spy depends on it"
   );
 });
+
+test('Image AI and Video AI share one row', () => {
+  // They were two full-width stacked tabpanels; they are now two columns of
+  // one grid, so the pair reads as a comparison rather than a sequence.
+  // Non-greedy up to </section>\s*</div> (the media-grid's own close), not
+  // </div>\s*</div> -- the inner `<div id="image-ai"></div>` sits directly
+  // against the .panel's closing </div>, so a bare double-</div> stop would
+  // match there and truncate the capture before the video column.
+  const grid = appHtml.match(/<div class="media-grid">[\s\S]*?<\/section>\s*<\/div>/)?.[0];
+  assert.ok(grid, 'app.html must have a .media-grid');
+  assert.match(grid, /id="sec-media-image"/, 'the image panel must be in the media grid');
+  assert.match(grid, /id="sec-media-video"/, 'the video panel must be in the media grid');
+  assert.ok(
+    grid.indexOf('sec-media-image') < grid.indexOf('sec-media-video'),
+    'image must be the left column, video the right'
+  );
+  // The grid must actually be a two-column grid that collapses on narrow
+  // screens -- side-by-side at 580px each is fine, side-by-side at 180px each
+  // is not.
+  assert.match(appHtml, /\.media-grid\{[^}]*grid-template-columns:repeat\(2,1fr\)/, '.media-grid must be 2 columns');
+  assert.match(appHtml, /@media \(max-width:820px\)\{\.media-grid\{grid-template-columns:1fr;\}\}/, '.media-grid must stack below 820px');
+  // Both jump-bar buttons survive the merge.
+  assert.match(appHtml, /data-tab="image"/, 'the Image AI jump button must remain');
+  assert.match(appHtml, /data-tab="video"/, 'the Video AI jump button must remain');
+});
