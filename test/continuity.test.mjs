@@ -430,9 +430,11 @@ test('Image AI and Video AI share one row', () => {
   // is not.
   assert.match(appHtml, /\.media-grid\{[^}]*grid-template-columns:repeat\(2,1fr\)/, '.media-grid must be 2 columns');
   assert.match(appHtml, /@media \(max-width:820px\)\{\.media-grid\{grid-template-columns:1fr;\}\}/, '.media-grid must stack below 820px');
-  // Both jump-bar buttons survive the merge.
-  assert.match(appHtml, /data-tab="image"/, 'the Image AI jump button must remain');
-  assert.match(appHtml, /data-tab="video"/, 'the Video AI jump button must remain');
+  // Models' local-tabs jump bar (which used to carry data-tab="image"/"video"
+  // among its 6 buttons) was removed once the corner nav made it redundant —
+  // Image AI and Video AI are scroll-reachable now, same as Compute & chips
+  // already was. The grid/column assertions above are the guarantee that
+  // still matters here.
 });
 
 test('the modal drawers outrank the fixed site header', () => {
