@@ -16,11 +16,20 @@
   display:grid;
   grid-template-columns:auto 1fr auto;
   align-items:baseline;
-  gap:10px 12px;
-  padding:10px 0;
+  gap:6px 12px;
+  padding:9px 10px;
+  margin:0 -10px;
+  border-radius:9px;
   border-bottom:1px solid var(--border);
 }
 .rank-row:last-child{border-bottom:0;}
+/* The row itself is the tooltip trigger (js/sections.js wireRankRowTooltips)
+   — hover/focus for a preview, click to pin. Ordinal rows (no bar) still
+   carry a note, so the whole row is the target rather than just the bar. */
+.rank-row:not(.rank-row--preview){cursor:pointer;transition:background .15s ease;}
+.rank-row:not(.rank-row--preview):hover,
+.rank-row:not(.rank-row--preview):focus-visible{background:var(--foam);}
+.rank-row:not(.rank-row--preview):focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--sea);}
 
 .rank-row__rank{
   font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);
@@ -37,19 +46,29 @@
   color:var(--deep);font-weight:500;white-space:nowrap;
 }
 .rank-row__unit{font-size:.8em;color:var(--ink-dim);}
+/* Local AI / Local Mobile AI: the "Runs on…" hardware requirement, colored
+   low-to-high spec demand (curated.js's hand-assigned specTier). A fixed
+   scale independent of the site's teal/sea brand palette, since this is a
+   semantic status read (green=light, red=demanding), not a brand accent. */
+.rank-row__value--tier-1{color:#1f7a4d;}
+.rank-row__value--tier-2{color:#96790a;}
+.rank-row__value--tier-3{color:#b0631f;}
+.rank-row__value--tier-4{color:#b23b3b;}
 
 .rank-row__bar{
   grid-column:1 / -1;
-  height:3px;border-radius:2px;background:var(--glass);overflow:hidden;
+  height:12px;border-radius:6px;background:var(--glass);overflow:hidden;
+  margin-top:2px;
 }
 .rank-row__bar > i{
-  display:block;height:100%;width:0;border-radius:2px;background:var(--sea);
+  display:block;height:100%;width:0;border-radius:6px;
+  background:linear-gradient(90deg, var(--sea), var(--teal));
   transition:width .8s cubic-bezier(.22,.61,.36,1);
 }
-.rank-row__note{
-  grid-column:1 / -1;
-  font-size:12.5px;line-height:1.5;color:var(--ink-soft);
-}
+/* The note is no longer shown inline — it's the content of the hover/click
+   tooltip wired in js/sections.js (wireRankRowTooltips). Kept in the DOM
+   (not removed) purely so its text is there to read on interaction. */
+.rank-row__note{display:none;}
 /* An ordinal row carries no measured score, so it gets no bar and says so. */
 .rank-row--ordinal .rank-row__tag{
   grid-column:1 / -1;
@@ -59,6 +78,21 @@
 /* The landing shows previews only — no notes, no bars. */
 .rank-row--preview .rank-row__note,
 .rank-row--preview .rank-row__bar{display:none;}
+
+/* ---------- rank-row tooltip ----------
+ * One shared element (js/sections.js wireRankRowTooltips), positioned per
+ * row on hover/focus and pinned open by a click (click again to unpin).
+ * position:fixed + measured from getBoundingClientRect keeps it correctly
+ * placed even though rows can sit inside a scrollable .flip-card-face.
+ */
+.rank-tooltip{
+  position:fixed;z-index:45;max-width:300px;
+  background:var(--panel-solid);border:1px solid var(--border-strong);border-radius:10px;
+  padding:10px 13px;font-size:12.5px;line-height:1.5;color:var(--ink-soft);
+  box-shadow:0 10px 30px rgba(14,42,55,.18);
+  pointer-events:none;
+}
+.rank-tooltip[hidden]{display:none;}
 
 /* ---------- section heading ----------
  * The most-repeated element in the product: every band on the landing and
@@ -79,7 +113,7 @@
 .section-head__descriptor{
   display:flex;align-items:center;gap:9px;margin-top:6px;
   font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;
-  color:var(--ink-dim);text-transform:uppercase;
+  color:var(--ink-soft);text-transform:uppercase;
 }
 .section-head__descriptor s{text-decoration:none;flex:1;height:1px;background:var(--glass);max-width:70px}
 

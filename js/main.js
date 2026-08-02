@@ -7,7 +7,7 @@ import { renderAiSummary } from './aisummary.js';
 import { renderRiver } from './river.js';
 import { renderCommunity } from './community.js';
 import { createStockNetwork } from './stocknetwork.js';
-import { renderCurated, renderLive, animateBars, renderYouTubeTrending } from './sections.js';
+import { renderCurated, renderLive, animateBars, renderYouTubeTrending, wireRankRowTooltips } from './sections.js';
 import { renderDataHealth } from './datahealth.js';
 import { initNav, notifyDataReady } from './nav.js';
 import { timeAgo, fmtSnapshot, $ } from './util.js';
@@ -101,6 +101,7 @@ async function boot() {
   tickClock();
   setInterval(tickClock, 1000);
   wireTickerToggle();
+  wireRankRowTooltips();
   initNav();
   setInterval(paintUpdated, 30000);
 

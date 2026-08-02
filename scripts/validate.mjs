@@ -337,7 +337,10 @@ async function main() {
         const f = aiSummary.families[fam];
         if (!f || typeof f !== 'object') { fail(`ai-summary.json: families.${fam} missing`); continue; }
         if (!isStr(f.label)) fail(`ai-summary.json: families.${fam}.label missing`);
-        if (!isStr(f.summary)) fail(`ai-summary.json: families.${fam}.summary missing`);
+        if (!isArr(f.bullets) || f.bullets.length === 0) fail(`ai-summary.json: families.${fam}.bullets must be a non-empty array`);
+        else f.bullets.forEach((b, i) => {
+          if (!isStr(b) || !b.trim()) fail(`ai-summary.json: families.${fam}.bullets[${i}] must be a non-empty string`);
+        });
         if (!isNum(f.signalCount) || f.signalCount < 0) fail(`ai-summary.json: families.${fam}.signalCount must be a non-negative number`);
         if (!isArr(f.sourceIds)) fail(`ai-summary.json: families.${fam}.sourceIds must be an array`);
         else f.sourceIds.forEach((id, i) => {

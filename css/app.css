@@ -71,7 +71,7 @@ html, body { overflow-x: clip; }
 }
 .range-btn:hover { color: var(--deep); }
 .range-btn.active { background: var(--deep); color: #fff; }
-.history-note { font-family: var(--font-mono); font-size: 10px; color: var(--ink-dim); text-align: right; margin-top: 6px; max-width: 220px; }
+.history-note { font-family: var(--font-mono); font-size: 10px; color: var(--ink-soft); text-align: right; margin-top: 6px; max-width: 220px; }
 
 .map-frame {
   position: relative; background: var(--panel-solid); backdrop-filter: blur(10px);
@@ -189,7 +189,9 @@ body.drawer-open { overflow: hidden; }
   letter-spacing: .08em; text-transform: uppercase; color: var(--deep);
 }
 .aisum-count { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); }
-.aisum-text { font-size: 14px; line-height: 1.62; color: var(--ink); margin: 0; }
+.aisum-text { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.aisum-text li { font-size: 13px; line-height: 1.45; color: var(--ink); padding-left: 14px; position: relative; }
+.aisum-text li::before { content: "\2022"; position: absolute; left: 0; color: var(--sea); font-weight: 700; }
 .aisum-sources {
   list-style: none; margin: 12px 0 0; padding: 12px 0 0;
   border-top: 1px solid var(--border);
@@ -342,7 +344,7 @@ body.drawer-open { overflow: hidden; }
 .map-enc b { color: var(--deep); font-weight: 700; }
 .enc-ico { width: 24px; height: 14px; flex-shrink: 0; }
 .map-enc-util {
-  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim);
+  font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft);
   font-style: italic;
 }
 @media (max-width: 560px) { .map-encoding { gap: 7px; } .map-enc { font-size: 10.5px; } }
@@ -359,7 +361,7 @@ body.drawer-open { overflow: hidden; }
 .mode-btn:hover { color: var(--deep); }
 .mode-btn.active { background: #b0554a; color: #fff; }
 .stocknet-asof { margin-left: auto; }
-.stocknet-disclaimer { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-dim); line-height: 1.6; margin: 12px 2px 0; }
+.stocknet-disclaimer { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-soft); line-height: 1.6; margin: 12px 2px 0; }
 .stocknet-disclaimer b { color: var(--ink-soft); }
 
 .snet-frame { position: relative; background: var(--panel-solid); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 6px 24px rgba(18,48,62,.07); }

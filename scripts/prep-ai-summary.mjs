@@ -77,8 +77,8 @@ async function main() {
   }
 
   console.log('\n---');
-  console.log('Write 2–4 sentences per family. Synthesize — do not recap headline by');
-  console.log('headline. Cite in sourceIds only the ids you actually drew on.');
+  console.log('Write 2–4 short bullet points per family. Synthesize — do not recap');
+  console.log('headline by headline. Cite in sourceIds only the ids you actually drew on.');
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

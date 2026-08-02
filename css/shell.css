@@ -80,7 +80,7 @@ body{
 .site-brand a:hover,.site-brand a:focus-visible{color:var(--teal);}
 .site-brand span{
   font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--sea);
+  text-transform:uppercase;color:var(--ink-soft);
 }
 
 /* ---------- nav pills ----------
@@ -155,7 +155,7 @@ body{padding-top:var(--header-h);}
  */
 .depth-rail{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;padding:8px 16px;}
 .depth-item{
-  display:flex;align-items:center;gap:6px;opacity:.45;
+  display:flex;align-items:center;gap:6px;opacity:.68;
   font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--ink-soft);transition:opacity .3s,color .3s;
 }
@@ -163,7 +163,7 @@ body{padding-top:var(--header-h);}
   width:8px;height:8px;border-radius:50%;background:var(--ink-dim);
   border:2px solid transparent;display:block;flex-shrink:0;
 }
-.depth-item small{font-size:8.5px;color:var(--ink-dim);line-height:1.2;text-transform:none;letter-spacing:0;}
+.depth-item small{font-size:8.5px;color:var(--ink-soft);line-height:1.2;text-transform:none;letter-spacing:0;}
 .depth-item[data-active="true"]{opacity:1;color:var(--deep);}
 .depth-item[data-active="true"] i{
   background:var(--teal);border-color:var(--sea);box-shadow:0 0 0 3px rgba(62,143,163,0.18);

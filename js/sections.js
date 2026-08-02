@@ -82,12 +82,12 @@ function rankRows(rows, { showIndex = false } = {}) {
       ? `${esc(String(r.score))}<span class="rank-row__unit">${esc(r.scoreUnit || '')}</span>`
       : (hasIndex ? `${esc(String(r.w))}<span class="rank-row__unit">/100</span>` : '');
     return `
-    <div class="rank-row${showBar ? '' : ' rank-row--ordinal'}">
+    <div class="rank-row${showBar ? '' : ' rank-row--ordinal'}" tabindex="0">
       <span class="rank-row__rank">${esc(rankLabel)}</span>
       <span class="rank-row__model">${esc(r.model)}<span class="rank-row__org">${esc(r.org)}</span></span>
       ${rating
         ? `<span class="rank-row__value"${hasIndex ? ' title="Composite index (0–100), editorial weighting — not a single measured benchmark"' : ''}>${rating}</span>`
-        : `<span class="rank-row__value">${esc(r.stat)}</span>`}
+        : `<span class="rank-row__value${r.specTier ? ` rank-row__value--tier-${r.specTier}` : ''}">${esc(r.stat)}</span>`}
       ${showBar
         ? `<span class="rank-row__bar"><i style="--w:${barPct}%"></i></span>`
         : `<span class="rank-row__tag">Editorial ranking · no measured score for this view</span>`}
@@ -168,6 +168,7 @@ function wireLeaderboardTabs() {
       t.tabIndex = isSel ? 0 : -1;
       if (isSel && focusTab) t.focus();
     });
+    hideRankRowTooltip(); // the pinned row, if any, is about to be replaced
     setHTML('leaderboard', rankRows(view.data, { showIndex: true }));
     if (disclaimerEl) {
       disclaimerEl.textContent = view.disclaimer || '';
@@ -191,12 +192,108 @@ function wireLeaderboardTabs() {
   select(C.LEADERBOARD_VIEWS[0].id);
 }
 
+// Every ranked list (leaderboard's 4 views, Image AI, Video AI, Local AI,
+// Local Mobile AI) renders as a horizontal bar chart now — the descriptive
+// note that used to sit inline under each row (.rank-row__note, hidden in
+// CSS) instead shows in this one shared tooltip: on hover/focus as a
+// preview, pinned open by a click (click the same row again, or click
+// anywhere else, to unpin). Wired once via event delegation on `document`
+// rather than per-row, since rows get replaced wholesale on every
+// leaderboard tab switch and a per-element listener would go stale.
+let pinnedRankRow = null;
+let rankTooltipEl = null;
+
+function ensureRankTooltip() {
+  if (rankTooltipEl) return rankTooltipEl;
+  rankTooltipEl = document.createElement('div');
+  rankTooltipEl.className = 'rank-tooltip';
+  rankTooltipEl.setAttribute('role', 'tooltip');
+  rankTooltipEl.hidden = true;
+  document.body.appendChild(rankTooltipEl);
+  return rankTooltipEl;
+}
+
+function positionRankTooltip(tip, row) {
+  const r = row.getBoundingClientRect();
+  const vw = document.documentElement.clientWidth;
+  const vh = document.documentElement.clientHeight;
+  tip.style.maxWidth = Math.min(300, vw - 24) + 'px';
+  const tipRect = tip.getBoundingClientRect();
+  let top = r.bottom + 8;
+  if (top + tipRect.height > vh - 8) top = r.top - tipRect.height - 8;
+  top = Math.max(8, top);
+  let left = r.left;
+  if (left + tipRect.width > vw - 8) left = vw - tipRect.width - 8;
+  left = Math.max(8, left);
+  tip.style.top = top + 'px';
+  tip.style.left = left + 'px';
+}
+
+function showRankTooltip(row) {
+  const noteEl = row.querySelector('.rank-row__note');
+  const text = noteEl ? noteEl.textContent.trim() : '';
+  if (!text) return;
+  const tip = ensureRankTooltip();
+  tip.textContent = text;
+  tip.hidden = false;
+  positionRankTooltip(tip, row);
+}
+
+// Exported so wireLeaderboardTabs can clear a pin before its pinned row is
+// torn out of the DOM by the next tab's setHTML — otherwise the tooltip
+// would keep showing stale content anchored to a detached element.
+export function hideRankRowTooltip() {
+  pinnedRankRow = null;
+  if (rankTooltipEl) rankTooltipEl.hidden = true;
+}
+
+function restoreOrHideRankTooltip() {
+  if (pinnedRankRow) showRankTooltip(pinnedRankRow);
+  else if (rankTooltipEl) rankTooltipEl.hidden = true;
+}
+
+export function wireRankRowTooltips() {
+  document.addEventListener('mouseover', (e) => {
+    const row = e.target.closest('.rank-row');
+    if (row) showRankTooltip(row);
+  });
+  document.addEventListener('mouseout', (e) => {
+    const row = e.target.closest('.rank-row');
+    if (!row || row.contains(e.relatedTarget)) return;
+    restoreOrHideRankTooltip();
+  });
+  document.addEventListener('focusin', (e) => {
+    const row = e.target.closest('.rank-row');
+    if (row) showRankTooltip(row);
+  });
+  document.addEventListener('focusout', (e) => {
+    const row = e.target.closest('.rank-row');
+    if (row && !row.contains(e.relatedTarget)) restoreOrHideRankTooltip();
+  });
+  document.addEventListener('click', (e) => {
+    const row = e.target.closest('.rank-row');
+    if (!row) { if (pinnedRankRow) hideRankRowTooltip(); return; }
+    if (pinnedRankRow === row) { hideRankRowTooltip(); return; }
+    pinnedRankRow = row;
+    showRankTooltip(row);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const row = e.target.closest('.rank-row');
+    if (!row) return;
+    e.preventDefault();
+    if (pinnedRankRow === row) { hideRankRowTooltip(); return; }
+    pinnedRankRow = row;
+    showRankTooltip(row);
+  });
+}
+
 export function renderCurated() {
   setHTML('stats', C.stats.map((s) => `<div class="stat"><div class="num">${esc(s.num)}</div><div class="lbl">${esc(s.lbl)}</div></div>`).join(''));
   wireLeaderboardTabs();
   setHTML('image-ai', rankRows(C.imageAI));
   setHTML('local-ai', rankRows(C.localAI));
-  setHTML('video-ai', rankRows(C.videoAI));
+  setHTML('video-ai', rankRows(C.videoAI, { showIndex: true }));
   setHTML('local-mobile-ai', rankRows(C.localAiMobile));
   setHTML('local-ai-specs', specTable(C.localAiPcSpecs));
   setHTML('local-mobile-specs', specTable(C.localAiMobileSpecs));
@@ -345,26 +442,60 @@ function sizeFlipCards() {
 // one-page layout, so in practice sizing succeeds on the very first pass.
 let pendingCards = null;
 
+// Each face is position:absolute; inset:0 with its own border (plus
+// border-top on some faces), so its scrollHeight — the content box —
+// undercounts the space the face actually needs by exactly that border
+// width. Add back offsetHeight - clientHeight (the face's own border/
+// scrollbar chrome, which can differ per face) so a min-height built from
+// this is large enough to contain the face's full border-box, not just its
+// content-box. Returns 0 (not measurable yet) rather than a partial number.
+function tallestFace(card) {
+  let tallest = 0;
+  card.querySelectorAll('.flip-card-face').forEach((f) => {
+    const chrome = f.offsetHeight - f.clientHeight;
+    tallest = Math.max(tallest, f.scrollHeight + chrome);
+  });
+  return tallest;
+}
+
 function sizeFlipCardsNow() {
   let deferred = 0;
-  document.querySelectorAll('.flip-card').forEach((card) => {
+
+  // The 3 Release cards (Claude/ChatGPT/Gemini) share ONE height across the
+  // group instead of each hugging its own content: Gemini often has fewer
+  // qualifying releases than Claude/ChatGPT on a given day, and a visibly
+  // shorter card next to two taller ones read as a layout bug, not as "less
+  // news today". Sized to the tallest face across all three cards (front or
+  // back), so every face of every release card gets the same box.
+  const releaseCards = Array.from(document.querySelectorAll('.release-card.flip-card'));
+  if (releaseCards.length) {
+    let releaseMax = 0;
+    let allMeasured = true;
+    releaseCards.forEach((card) => {
+      const h = tallestFace(card);
+      if (h) releaseMax = Math.max(releaseMax, h);
+      else allMeasured = false;
+    });
+    if (releaseMax) {
+      releaseCards.forEach((card) => {
+        const inner = card.querySelector('.flip-card-inner');
+        if (inner) inner.style.minHeight = releaseMax + 'px';
+      });
+    }
+    if (!allMeasured) deferred += 1;
+  }
+
+  // Every other flip-card (Local AI, Local Mobile) keeps its own
+  // independent height — each card's shared min-height covers both of its
+  // OWN faces, unrelated to its neighbour's content.
+  document.querySelectorAll('.flip-card:not(.release-card)').forEach((card) => {
     const inner = card.querySelector('.flip-card-inner');
     if (!inner) return;
-    let tallest = 0;
-    card.querySelectorAll('.flip-card-face').forEach((f) => {
-      // Each face is position:absolute; inset:0 with its own border (plus
-      // border-top on some faces), so its scrollHeight — the content box —
-      // undercounts the space the face actually needs by exactly that
-      // border width. Add back offsetHeight - clientHeight (the face's own
-      // border/scrollbar chrome, which can differ per face) so the shared
-      // min-height we set below is large enough to contain the face's full
-      // border-box, not just its content-box.
-      const chrome = f.offsetHeight - f.clientHeight;
-      tallest = Math.max(tallest, f.scrollHeight + chrome);
-    });
+    const tallest = tallestFace(card);
     if (tallest) inner.style.minHeight = tallest + 'px';
     else deferred += 1;
   });
+
   if (deferred) watchForMeasurableCards();
 }
 

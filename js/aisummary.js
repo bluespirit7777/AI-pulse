@@ -1,4 +1,4 @@
-// AI Summary Wave — three short paragraphs synthesising the day in Product,
+// AI Summary Wave — three short bullet lists synthesising the day in Product,
 // Market and Research, written by an AI agent and committed as data (see
 // docs/AI_SUMMARY_PROCEDURE.md). Replaces the three "strongest wave" cards,
 // which showed one story per family rather than summarising the day.
@@ -30,11 +30,12 @@ function isUsable(s, now) {
   if (!Number.isFinite(at)) return false;
   if (now - at > STALE_HOURS * 3.6e6) return false;
   if (!s.families || typeof s.families !== 'object') return false;
-  // Every family must carry real prose. A partially-written file is a mistake,
-  // not a state worth rendering half of.
+  // Every family must carry real bullets. A partially-written file is a
+  // mistake, not a state worth rendering half of.
   return FAMILIES.every((f) => {
     const fam = s.families[f];
-    return fam && typeof fam.summary === 'string' && fam.summary.trim().length > 0;
+    return fam && Array.isArray(fam.bullets) && fam.bullets.length > 0
+      && fam.bullets.every((b) => typeof b === 'string' && b.trim().length > 0);
   });
 }
 
@@ -72,7 +73,7 @@ export function renderAiSummary(root, aiSummary, signals = [], now = Date.now())
           <span class="aisum-fam">${esc(label)}</span>
           ${count !== null ? `<span class="aisum-count">${esc(String(count))} signal${count === 1 ? '' : 's'}</span>` : ''}
         </div>
-        <p class="aisum-text">${esc(fam.summary)}</p>
+        <ul class="aisum-text">${fam.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
         ${sourceList}
       </article>`;
   }).join('');

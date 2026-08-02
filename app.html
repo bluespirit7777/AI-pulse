@@ -121,7 +121,7 @@
   .ticker-wrap:hover .ticker,
   .ticker-wrap:focus-within .ticker,
   .ticker-wrap.is-paused .ticker{animation-play-state:paused;}
-  .ticker span{color:var(--sea);margin-right:10px;}
+  .ticker span{color:var(--ink-soft);margin-right:10px;}
   @keyframes scroll{
     0%{transform:translateX(0);}
     100%{transform:translateX(-50%);}
@@ -204,15 +204,33 @@
     background:var(--panel-solid);
     border:1px solid var(--border);border-radius:16px;padding:26px 28px;
     box-shadow:0 6px 24px rgba(18,48,62,0.07);
-    transition:box-shadow .25s ease, transform .25s cubic-bezier(.16,.84,.44,1);
+    transition:box-shadow .25s ease;
   }
-  .panel:hover{box-shadow:0 14px 38px rgba(18,48,62,0.12);transform:translateY(-2px);}
+  .panel:hover{box-shadow:0 14px 38px rgba(18,48,62,0.12);}
   .panel h3{
     font-family:var(--font-display);font-size:22px;font-weight:600;
     margin:0 0 2px 0;color:var(--deep);
   }
   .panel-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
   .panel .panel-note{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);line-height:1.55;}
+
+  /* ---------- compact cards (~30% smaller): Frontier leaderboard, Most
+     popular AI, Top 5 image/video AI. Scoped to these panels only — the bare
+     .panel rule above also styles "Compute & chips" (#sec-compute), which
+     stays full-size. Padding/fixed sizes drop ~30%; font-sizes drop less
+     (10-15%) so in-card text stays comfortably readable. */
+  #sec-leaderboard .panel, #sec-media-image .panel, #sec-media-video .panel, #sec-market.panel{
+    padding:18px 20px;
+  }
+  #sec-leaderboard .panel h3, #sec-media-image .panel h3, #sec-media-video .panel h3, #sec-market.panel h3{
+    font-size:16px;
+  }
+  #sec-leaderboard .panel .panel-top, #sec-media-image .panel .panel-top, #sec-media-video .panel .panel-top, #sec-market.panel .panel-top{
+    margin-bottom:8px;
+  }
+  #sec-leaderboard .panel .panel-note, #sec-media-image .panel .panel-note, #sec-media-video .panel .panel-note, #sec-market.panel .panel-note{
+    font-size:10.5px;
+  }
 
   /* ---------- stats strip ---------- */
   .stats-strip{
@@ -223,9 +241,9 @@
     background:var(--panel-solid);
     border:1px solid var(--border);border-radius:14px;padding:20px 18px;
     box-shadow:0 4px 16px rgba(18,48,62,0.06);
-    transition:transform .22s cubic-bezier(.16,.84,.44,1), box-shadow .22s ease, border-color .22s ease;
+    transition:box-shadow .22s ease, border-color .22s ease;
   }
-  .stat:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(18,48,62,0.14);border-color:var(--border-strong);}
+  .stat:hover{box-shadow:0 14px 30px rgba(18,48,62,0.14);border-color:var(--border-strong);}
   .stat:hover .num{color:var(--sea);}
   .stat .num{transition:color .22s ease;}
   .stat .num{font-family:var(--font-display);font-size:clamp(26px,3vw,32px);font-weight:700;color:var(--teal);}
@@ -334,12 +352,12 @@
   .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start;}
   .media-grid>*{min-width:0;padding:0;}
   @media (max-width:820px){.media-grid{grid-template-columns:1fr;}}
-  .spec-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .spec-table{width:100%;border-collapse:collapse;font-size:11px;}
   .spec-table th{
-    text-align:left;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--ink-dim);padding:0 8px 8px;border-bottom:1px solid var(--border-strong);font-weight:400;
+    text-align:left;font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-dim);padding:0 6px 6px;border-bottom:1px solid var(--border-strong);font-weight:400;
   }
-  .spec-table td{padding:9px 8px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--ink-soft);}
+  .spec-table td{padding:7px 6px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--ink-soft);}
   .spec-table tr:last-child td{border-bottom:none;}
   .spec-table .spec-model{font-family:var(--font-body);font-weight:700;color:var(--ink);}
   .spec-tier{
@@ -352,6 +370,19 @@
   .spec-tier-4{background:var(--coral-text);}
   .spec-tier-5{background:var(--deep);}
   .spec-caption{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);line-height:1.6;margin:12px 0 0;flex-shrink:0;}
+
+  /* ---------- compact cards, cont'd: Local AI for your PC / Top 5 local
+     mobile AI. .flip-card-face padding is shared with the Release cards
+     (js/sections.js renderLive()), so it's scoped to these two cards' ids
+     rather than edited globally. These faces also had no explicit heading
+     size (unlike .panel h3) — giving them one here matches the shrunk 16px
+     heading used by the other compact cards above. */
+  #local-ai-card .flip-card-face, #local-mobile-card .flip-card-face{
+    padding:16px 17px;
+  }
+  #local-ai-card .panel-top h3, #local-mobile-card .panel-top h3{
+    font-family:var(--font-display);font-size:16px;font-weight:600;margin:0 0 2px 0;color:var(--deep);
+  }
 
   /* ---------- grids ---------- */
   .grid-2{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;}
@@ -396,7 +427,7 @@
   /* ---------- donut ---------- */
   .donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;position:relative;}
   .donut{
-    width:160px;height:160px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;
+    width:112px;height:112px;border-radius:50%;flex-shrink:0;position:relative;cursor:pointer;
     background:conic-gradient(
       var(--deep) 0% 53.9%,
       var(--sea) 53.9% 81.8%,
@@ -424,18 +455,27 @@
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     font-family:var(--font-mono);text-align:center;
   }
-  .donut-label .n{font-family:var(--font-display);font-size:20px;color:var(--deep);font-weight:700;}
-  .donut-label .l{font-size:9px;color:var(--ink-dim);letter-spacing:.06em;margin-top:2px;}
-  .legend{display:flex;flex-direction:column;gap:9px;font-family:var(--font-mono);font-size:12px;min-width:170px;}
+  .donut-label .n{font-family:var(--font-display);font-size:15px;color:var(--deep);font-weight:700;}
+  .donut-label .l{font-size:8px;color:var(--ink-dim);letter-spacing:.06em;margin-top:2px;}
+  .legend{display:flex;flex-direction:column;gap:9px;font-family:var(--font-mono);font-size:11px;min-width:140px;}
   .legend .row{display:flex;align-items:center;gap:8px;}
   .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
   .legend .name{color:var(--ink);flex:1;}
   .legend .pct{color:var(--ink-dim);}
   .callout{
-    margin-top:18px;padding:13px 15px;background:var(--foam);border:1px solid var(--border);
-    border-radius:10px;font-size:13px;color:var(--ink-soft);line-height:1.6;
+    margin-top:18px;padding:10px 12px;background:var(--foam);border:1px solid var(--border);
+    border-radius:10px;font-size:12px;color:var(--ink-soft);line-height:1.6;
   }
   .callout b{color:var(--teal);font-weight:700;}
+  .ai-mini-summary{
+    margin-top:12px;padding:10px 12px;background:var(--panel-solid);border:1px solid var(--border-strong);
+    border-radius:10px;
+  }
+  .ai-mini-summary__label{
+    display:inline-block;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--sea);margin-bottom:5px;
+  }
+  .ai-mini-summary p{margin:0;font-size:12.5px;line-height:1.55;color:var(--ink-soft);}
 
   /* ---------- tables ---------- */
   .stock-table{width:100%;border-collapse:collapse;}
@@ -466,9 +506,9 @@
     background:var(--panel-solid);
     border:1px solid var(--border);border-radius:14px;padding:22px;
     box-shadow:0 4px 16px rgba(18,48,62,0.06);
-    transition:transform .2s ease, box-shadow .2s ease;
+    transition:box-shadow .2s ease;
   }
-  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(18,48,62,0.11);}
+  .card:hover{box-shadow:0 10px 28px rgba(18,48,62,0.11);}
   .card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;}
   .card-tag{
     display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:10.5px;
@@ -509,11 +549,11 @@
     background:var(--panel-solid);
     border-top:1px solid var(--border);
     padding:28px clamp(16px,4vw,48px) 130px;
-    font-family:var(--font-mono);font-size:11px;color:var(--ink-dim);line-height:1.8;
+    font-family:var(--font-mono);font-size:11px;color:var(--ink-soft);line-height:1.8;
     position:relative;z-index:2;margin-top:20px;
   }
   footer b{color:var(--ink-soft);}
-  .footer-build{opacity:.72;font-size:10.5px;letter-spacing:.02em;}
+  .footer-build{opacity:.85;font-size:10.5px;letter-spacing:.02em;}
   .dh-chip{margin-top:10px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.02em;color:var(--ink-soft);
     background:var(--panel);border:1px solid var(--border-strong);border-radius:999px;
     padding:6px 12px;min-height:32px;cursor:pointer;}
@@ -628,6 +668,10 @@
               </div>
               <div class="callout">
                 <b>Fastest mover:</b> Claude's web traffic is up ~855% YoY (+228% in a single quarter) — the steepest growth curve of any major assistant. On Cloudflare's "actively chosen" ranking it now sits at <b>#2</b>, ahead of Gemini.
+              </div>
+              <div class="ai-mini-summary">
+                <span class="ai-mini-summary__label">AI Summary</span>
+                <p>ChatGPT remains the dominant AI assistant by a wide margin, holding 53.9% of worldwide web-visit share — roughly double Gemini's 27.9% and six times Claude's 9.2%. Gemini has locked in a firm second place, helped by default placement across Android and Search, while Claude is the fastest-growing of the group despite its smaller base. Perplexity (4.0%) and DeepSeek (3.0%) trail as smaller, more specialized players built around AI search and low-cost open-weight models, respectively. Overall the market stays a two-horse race at the top, with the real competition increasingly playing out in growth rate and use case rather than raw share.</p>
               </div>
             </div>
 

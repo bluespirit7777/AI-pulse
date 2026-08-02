@@ -1,9 +1,9 @@
 # AI Summary Wave — daily procedure
 
-The News Wave section leads with three short paragraphs summarising the day in
-**Product**, **Market** and **Research**. They are written by an AI agent and
-committed as data. There is no API call in the build: the site has zero npm
-dependencies and no LLM key in CI, and this keeps it that way.
+The News Wave section leads with three short bullet lists summarising the day
+in **Product**, **Market** and **Research**. They are written by an AI agent
+and committed as data. There is no API call in the build: the site has zero
+npm dependencies and no LLM key in CI, and this keeps it that way.
 
 Run this once a day.
 
@@ -23,17 +23,19 @@ Commentary categories (`analysis`, `general`) are excluded, the same way they
 are excluded everywhere else on the site — those are opinion *about* events, and
 summarising them would describe the discourse rather than the news.
 
-## 2. Write the summaries
+## 2. Write the bullets
 
-Two to four sentences per family.
+Two to four short bullet points per family.
 
 - **Synthesize, don't recap.** If the output is "X happened, then Y happened,
   then Z happened," it adds nothing the stream below doesn't already show. Say
   what the day *amounted to*.
+- **One idea per bullet.** Keep each bullet a single short sentence — that's
+  what makes the list scannable instead of a paragraph broken into pieces.
 - **Only claim what's in the input.** No outside knowledge, no predictions, no
   filling a thin day with hedging prose.
-- **A thin day is a fine thing to say.** If Research has one signal, the summary
-  is one sentence about that signal. If a family has none, say so plainly.
+- **A thin day is a fine thing to say.** If Research has one signal, write one
+  bullet about that signal. If a family has none, say so plainly.
 - **Cite only what you used.** `sourceIds` lists the ids you actually drew on,
   not everything you were shown.
 
@@ -46,9 +48,9 @@ Two to four sentences per family.
   "windowEnd": "2026-08-01T17:12:51.089Z",
   "method": "ai-written",
   "families": {
-    "product":  { "label": "Product",  "summary": "…", "signalCount": 2, "sourceIds": ["https://…", "https://…"] },
-    "market":   { "label": "Market",   "summary": "…", "signalCount": 1, "sourceIds": ["https://…"] },
-    "research": { "label": "Research", "summary": "…", "signalCount": 1, "sourceIds": ["https://…"] }
+    "product":  { "label": "Product",  "bullets": ["…", "…"], "signalCount": 2, "sourceIds": ["https://…", "https://…"] },
+    "market":   { "label": "Market",   "bullets": ["…", "…"], "signalCount": 1, "sourceIds": ["https://…"] },
+    "research": { "label": "Research", "bullets": ["…", "…"], "signalCount": 1, "sourceIds": ["https://…"] }
   }
 }
 ```

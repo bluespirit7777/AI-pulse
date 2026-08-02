@@ -184,12 +184,17 @@ export const imageAI = [
 // genuinely-better-than-27B open models (GLM-5.2, Kimi K2.6) are 700B–1T MoE
 // requiring 8× H100, which is not a personal PC — so the ladder honestly tops
 // out at a single 24GB consumer GPU rather than implying otherwise.
+// `specTier` (1-4, green→yellow→orange→red in rankRows' rendering) is a
+// separate axis from `rank`: it colors the "Runs on…" stat by how demanding
+// the hardware requirement actually is, low to high, so a reader can scan
+// for "what fits my machine" at a glance rather than reading every row's
+// RAM figure. Hand-assigned from each row's own requirement, not computed.
 export const localAI = [
-  { rank: 1, model: 'Gemma 3 4B', org: 'Google', w: 100, stat: 'Runs on 8GB RAM', note: 'Entry laptops · quick chat, summarizing, simple coding help — CPU-only is fine' },
-  { rank: 2, model: 'ZAYA1-8B', org: 'Zyphra', w: 88, stat: 'Runs on 16GB RAM', note: 'Mainstream laptops · a capable general assistant with light coding' },
-  { rank: 3, model: 'Gemma 4 12B', org: 'Google', w: 76, stat: 'Runs on 16–24GB RAM', note: 'Enthusiast laptops/desktops · noticeably stronger reasoning + coding' },
-  { rank: 4, model: 'Qwen3.6-27B', org: 'Alibaba', w: 66, stat: 'Runs on 32GB RAM or a 24GB GPU', note: 'Enthusiast desktops · fits a single RTX 4090 at 4-bit with a very long context window' },
-  { rank: 5, model: 'Gemma 4 31B', org: 'Google', w: 58, stat: 'Runs on 32–48GB RAM or a 24GB GPU', note: 'High-end desktops · the largest model that still fits one consumer GPU at 4-bit' },
+  { rank: 1, model: 'Gemma 3 4B', org: 'Google', w: 100, stat: 'Runs on 8GB RAM', specTier: 1, note: 'Entry laptops · quick chat, summarizing, simple coding help — CPU-only is fine' },
+  { rank: 2, model: 'ZAYA1-8B', org: 'Zyphra', w: 88, stat: 'Runs on 16GB RAM', specTier: 2, note: 'Mainstream laptops · a capable general assistant with light coding' },
+  { rank: 3, model: 'Gemma 4 12B', org: 'Google', w: 76, stat: 'Runs on 16–24GB RAM', specTier: 3, note: 'Enthusiast laptops/desktops · noticeably stronger reasoning + coding' },
+  { rank: 4, model: 'Qwen3.6-27B', org: 'Alibaba', w: 66, stat: 'Runs on 32GB RAM or a 24GB GPU', specTier: 3, note: 'Enthusiast desktops · fits a single RTX 4090 at 4-bit with a very long context window' },
+  { rank: 5, model: 'Gemma 4 31B', org: 'Google', w: 58, stat: 'Runs on 32–48GB RAM or a 24GB GPU', specTier: 4, note: 'High-end desktops · the largest model that still fits one consumer GPU at 4-bit' },
 ];
 
 // Hardware tiers for the 5 personal-PC models above, entry → high-end.
@@ -216,12 +221,19 @@ export const localAiPcSpecs = [
 // entirely). Ordinal, same as localAI — no fabricated score.
 // Refreshed Jul 30 2026 — same staleness problem as the PC list: every entry
 // was a 2024-era model. Sizes below are published Q4_K_M footprints.
+// Stat text shows the RAM requirement (matching localAiPcSpecs' figures for
+// the same model) rather than a "best pick" blurb, so it can be colored by
+// specTier the same way as the PC list above — the "why this rank" framing
+// still lives in each row's note. specTier is hand-assigned from the actual
+// RAM figure, low to high; nothing here reaches specTier 4 (red) because
+// none of these five phone-class picks are the heaviest tier this site
+// tracks (localAiMobileSpecs tops out one rung lower than the PC list).
 export const localAiMobile = [
-  { rank: 1, model: 'Gemma 4 E2B', org: 'Google', w: 100, stat: 'Best all-round on-device model', note: 'Multimodal at the 2B scale — unusual for a phone-class model, and the current default pick for on-device' },
-  { rank: 2, model: 'Gemma 3 4B', org: 'Google', w: 90, stat: 'Best balance of quality and speed', note: 'Fastest measured throughput on an iPhone 16 Pro (~27 tok/s via the Google AI Edge SDK) with best-in-class instruction following' },
-  { rank: 3, model: 'Phi-4 Mini', org: 'Microsoft', w: 80, stat: 'Strongest reasoning for its size', note: 'Punches above its weight on reasoning benchmarks; the pick when answer quality matters more than latency' },
-  { rank: 4, model: 'Qwen 3 1.7B', org: 'Alibaba', w: 72, stat: 'Best multilingual small model', note: 'Around 1.1GB at 4-bit · the strongest non-English handling in the sub-2B class' },
-  { rank: 5, model: 'SmolLM 2 1.7B', org: 'Hugging Face', w: 64, stat: 'Fastest, entry phones', note: 'Around 1.1GB at 4-bit · built for speed on constrained devices where the others may struggle' },
+  { rank: 1, model: 'Gemma 4 E2B', org: 'Google', w: 100, stat: 'Runs on 6GB+ RAM', specTier: 2, note: 'Multimodal at the 2B scale — unusual for a phone-class model, and the current default pick for on-device' },
+  { rank: 2, model: 'Gemma 3 4B', org: 'Google', w: 90, stat: 'Runs on 8GB+ RAM', specTier: 3, note: 'Fastest measured throughput on an iPhone 16 Pro (~27 tok/s via the Google AI Edge SDK) with best-in-class instruction following' },
+  { rank: 3, model: 'Phi-4 Mini', org: 'Microsoft', w: 80, stat: 'Runs on 8GB+ RAM', specTier: 3, note: 'Punches above its weight on reasoning benchmarks; the pick when answer quality matters more than latency' },
+  { rank: 4, model: 'Qwen 3 1.7B', org: 'Alibaba', w: 72, stat: 'Runs on 4GB+ RAM', specTier: 1, note: 'Around 1.1GB at 4-bit · the strongest non-English handling in the sub-2B class' },
+  { rank: 5, model: 'SmolLM 2 1.7B', org: 'Hugging Face', w: 64, stat: 'Runs on 4GB+ RAM', specTier: 1, note: 'Around 1.1GB at 4-bit · built for speed on constrained devices where the others may struggle' },
 ];
 
 export const localAiMobileSpecs = [
@@ -243,15 +255,24 @@ export const localAiMobileSpecs = [
 //     Alibaba, ByteDance). Veo 3.1 is the top Western option and still leads
 //     the with-audio board, which is why it keeps a place here.
 // The top three carry real TrueSkill arena scores from blind human votes;
-// Veo 3.1's position on the with-audio board has no single comparable number
-// on this scale, so it carries no invented score — rankRows renders it as an
-// ordinal row and labels it as such. Caveat worth knowing: the arena had only
-// ~1,380 blind votes at this snapshot, so treat the gaps as provisional.
+// Veo 3.1 and Pika 2.5's positions have no single comparable number on that
+// scale, so neither carries an invented arena score — both instead get the
+// same 0–100 editorial composite index used elsewhere on the site (`w`), and
+// this list now renders with showIndex on (js/sections.js renderCurated())
+// so that index still draws a bar instead of falling back to a bare
+// "Editorial ranking" tag. Caveat worth knowing: the arena had only ~1,380
+// blind votes at this snapshot, so treat the top-three gaps as provisional.
+//
+// Rank 5 restores the list to a genuine top FIVE (it briefly ran 4-deep after
+// Sora 2's removal, below). Pika Labs hasn't submitted Pika 2.5 to the blind
+// arena, so its placement is editorial, ranked below Veo on independent
+// quality review — same honesty treatment as Veo, not a fabricated score.
 export const videoAI = [
   { rank: 1, model: 'Kling v3', org: 'Kuaishou', score: 1934, scoreUnit: ' arena', stat: 'Arena 1934', note: 'Tops the blind-vote text-to-video arena (Jul 2026 snapshot) on a TrueSkill rating from human comparisons' },
   { rank: 2, model: 'Happy Horse 1.0', org: 'Alibaba', score: 1816, scoreUnit: ' arena', stat: 'Arena 1816', note: 'Second on the blind-vote text-to-video arena (Jul 2026 snapshot); limited availability at this snapshot' },
   { rank: 3, model: 'Seedance 2.0 Fast', org: 'ByteDance', score: 1747, scoreUnit: ' arena', stat: 'Arena 1747', note: 'Third on the blind-vote text-to-video arena (Jul 2026 snapshot); the fast tier of ByteDance\'s Seedance 2 line' },
   { rank: 4, model: 'Veo 3.1', org: 'Google DeepMind', w: 70, stat: 'Top Western model; leads with-audio', note: 'Highest-placed non-Chinese model and still first on the text-to-video-WITH-AUDIO board (Jul 2026 snapshot); no directly comparable score on the text-only arena scale, so no number is invented here' },
+  { rank: 5, model: 'Pika 2.5', org: 'Pika Labs', w: 55, stat: 'Independent studio, fast iteration', note: 'Not yet submitted to the blind-vote text-to-video arena as of the Jul 2026 snapshot; placed here on editorial quality review relative to the four ranked above, not a measured score' },
 ];
 
 // Percentages must sum to ~100. The donut gradient is DERIVED from this array
