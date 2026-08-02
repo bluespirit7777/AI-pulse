@@ -59,9 +59,11 @@ body{
  */
 :root{
   --header-h:64px;
-  /* --header-h plus the dashboard's sticky .topnav; anchor targets must clear
-     BOTH, since the header is fixed and the topnav sticks directly below it. */
-  --chrome-h:126px;
+  /* Just the fixed header now — .topnav moved to a floating corner rail
+     (position:fixed, out of flow) so it no longer stacks on top of this.
+     Kept as its own token since js/nav.js reads it by name; equal to
+     --header-h until something else needs to sit fixed below the header. */
+  --chrome-h:var(--header-h);
 }
 .site-header{
   position:fixed;top:0;left:0;right:0;z-index:60;

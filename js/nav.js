@@ -171,6 +171,43 @@ function initSpy() {
   syncSpy();
 }
 
+// ---------- corner-nav auto-hide ----------
+// The corner nav (.topnav) is invisible until the page is actually moving —
+// matches the landing's #lp-rail, which stays hidden until scrolled too.
+// Shown on scroll, and kept shown while the pointer or keyboard focus is
+// genuinely inside it (so it doesn't vanish mid-hover on the Models
+// flyout); hidden again ~1s after both go idle. A dedicated scroll
+// listener, not the spy's rAF-batched one — this only reacts to real
+// 'scroll' events, not the spy's other triggers (initial sync, resize,
+// data-ready), so it can't flash visible on page load without a scroll.
+const NAV_HIDE_DELAY_MS = 1000;
+let navHideTimer = null;
+
+function showTopnav() {
+  const nav = document.getElementById('topnav');
+  if (!nav) return;
+  nav.classList.add('is-visible');
+  clearTimeout(navHideTimer);
+}
+
+function scheduleTopnavHide() {
+  clearTimeout(navHideTimer);
+  navHideTimer = setTimeout(() => {
+    const nav = document.getElementById('topnav');
+    if (nav && !nav.matches(':focus-within')) nav.classList.remove('is-visible');
+  }, NAV_HIDE_DELAY_MS);
+}
+
+function wireTopnavAutoHide() {
+  const nav = document.getElementById('topnav');
+  if (!nav) return;
+  window.addEventListener('scroll', () => { showTopnav(); scheduleTopnavHide(); }, { passive: true });
+  nav.addEventListener('mouseenter', showTopnav);
+  nav.addEventListener('mouseleave', scheduleTopnavHide);
+  nav.addEventListener('focusin', showTopnav);
+  nav.addEventListener('focusout', scheduleTopnavHide);
+}
+
 // ---------- wiring ----------
 
 // Strips the tablist/tabpanel ARIA the HTML still carries and unhides every
@@ -198,7 +235,10 @@ function wireTopnav() {
     btn.addEventListener('click', () => {
       const panel = btn.dataset.panel;
       if (panel === 'full') navigateToTop();
-      else navigateToId('panel-' + panel);
+      // data-target lets a pill jump somewhere more specific than its
+      // panel's top (e.g. Models -> straight to Frontier releases) without
+      // affecting which pill the scroll-spy highlights as current.
+      else navigateToId(btn.dataset.target || ('panel-' + panel));
     });
   });
 }
@@ -243,6 +283,7 @@ export function initNav() {
   wireTopnav();
   wireLocalTabs();
   initSpy();
+  wireTopnavAutoHide();
 
   window.addEventListener('popstate', () => handleHash({ push: false }));
 

@@ -140,20 +140,61 @@
     .ticker-toggle{display:none;}
   }
 
-  /* ---------- sticky top nav: 5 primary destinations ----------
-     Items are css/shell.css's shared .nav-pill/.nav-pill--mode now; only the
-     bar itself and its mobile wrap behaviour stay page-local. */
+  /* ---------- corner nav: 5 primary destinations ----------
+     Still the class name .topnav (kept for the continuity test that locates
+     it by class/label/order — those guarantees didn't change, only the
+     visual treatment did) but no longer a horizontal bar under the header:
+     a small fixed, frosted rail vertically centered on the left edge,
+     matching the landing's #lp-rail position — and like that rail, it's
+     invisible until the page is in motion. js/nav.js's wireTopnavAutoHide()
+     adds .is-visible on scroll or while the pointer/keyboard focus is
+     actually inside it, and removes it ~1s after both go idle. Items are
+     css/shell.css's shared .nav-pill/.nav-pill--mode, restyled to stack
+     vertically at a smaller, "minimalistic" size. */
   .topnav{
-    position:sticky;top:var(--header-h);z-index:40;background:var(--panel-solid);
-    border-bottom:1px solid var(--border);display:flex;gap:8px;padding:12px clamp(16px,4vw,48px);
-    overflow-x:auto;align-items:center;
+    position:fixed;left:14px;top:50%;transform:translateY(-50%);z-index:45;
+    display:flex;flex-direction:column;gap:2px;
+    padding:6px;border-radius:12px;
+    background:rgba(253,254,254,.94);border:1px solid rgba(185,212,215,.6);
+    box-shadow:0 14px 34px -20px rgba(27,75,90,.55);
+    opacity:0;pointer-events:none;transition:opacity .3s ease;
   }
-  /* Mobile: wrap the 5 destinations into rows instead of a horizontal-scroll
-     strip (Phase 8) — with only 5 items this fits in 2 short rows, no
-     hidden/overflow content and no swipe-to-discover required. */
-  @media (max-width:560px){
-    .topnav{flex-wrap:wrap;overflow-x:visible;justify-content:center;gap:6px;padding:10px clamp(12px,4vw,24px);}
-    .nav-pill{padding:8px 13px;font-size:12.5px;}
+  .topnav.is-visible{opacity:1;pointer-events:auto;}
+  .topnav .nav-pill{width:100%;justify-content:flex-start;text-align:left;padding:5px 9px;font-size:11px;min-height:24px;}
+  /* Models: hover/focus reveals a flyout of quick links to sections that
+     live outside Models too (AI map, News, Markets) as well as its own
+     Releases/Leaderboard — clicking Models itself still jumps straight to
+     Frontier releases (see data-target in the markup, read by nav.js). */
+  .nav-flyout-group{position:relative;}
+  .nav-flyout-group>.nav-pill::after{content:'›';margin-left:auto;padding-left:8px;opacity:.6;}
+  .nav-flyout{
+    position:absolute;left:100%;top:0;margin-left:6px;min-width:110px;
+    display:flex;flex-direction:column;gap:2px;
+    padding:6px;border-radius:12px;
+    background:rgba(253,254,254,.97);border:1px solid rgba(185,212,215,.6);
+    box-shadow:0 14px 34px -20px rgba(27,75,90,.55);
+    opacity:0;visibility:hidden;transform:translateX(-4px);
+    transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;
+  }
+  .nav-flyout-group:hover .nav-flyout,
+  .nav-flyout-group:focus-within .nav-flyout{
+    opacity:1;visibility:visible;transform:translateX(0);
+    transition:opacity .18s ease,transform .18s ease;
+  }
+  .nav-flyout-item{
+    font-family:var(--font-body);font-size:11px;font-weight:500;
+    color:var(--teal);text-decoration:none;padding:5px 9px;border-radius:9px;
+    white-space:nowrap;transition:background .15s ease,color .15s ease;
+  }
+  .nav-flyout-item:hover,.nav-flyout-item:focus-visible{background:var(--glass);color:var(--deep);}
+  /* Fixed positioning means this floats over whatever has scrolled beneath
+     it, for the entire page, not just the top — on a narrow viewport there's
+     no corner big enough for a 5-item stack that doesn't sit on top of real
+     content. The landing page's own nav (the "front page" this was modelled
+     on) makes the same call: it hides below 900px rather than degrade into
+     an overlap. Depth rail + manual scrolling still work with it hidden. */
+  @media (max-width:900px){
+    .topnav{display:none;}
   }
 
   /* ---------- local tabs: within a top-level section ---------- */
@@ -599,7 +640,16 @@
 
   <nav class="topnav" aria-label="Main navigation" id="topnav">
     <button type="button" class="nav-pill nav-pill--mode" data-panel="full" title="Back to the top of the page">Top</button>
-    <button type="button" class="nav-pill" data-panel="models">Models</button>
+    <div class="nav-flyout-group">
+      <button type="button" class="nav-pill" data-panel="models" data-target="sec-releases">Models</button>
+      <div class="nav-flyout" role="menu" aria-label="Models sections">
+        <a class="nav-flyout-item" href="#sec-releases">Releases</a>
+        <a class="nav-flyout-item" href="#sec-leaderboard">Leaderboard</a>
+        <a class="nav-flyout-item" href="#sec-map">AI map</a>
+        <a class="nav-flyout-item" href="#sec-waves">News</a>
+        <a class="nav-flyout-item" href="#sec-stocks">Markets</a>
+      </div>
+    </div>
     <button type="button" class="nav-pill" data-panel="ecosystem">Ecosystem</button>
     <button type="button" class="nav-pill" data-panel="today">News Wave</button>
     <button type="button" class="nav-pill" data-panel="markets">Markets</button>
