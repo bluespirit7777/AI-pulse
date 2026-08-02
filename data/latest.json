@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-02T19:15:24.760Z",
+  "updatedAt": "2026-08-02T19:30:32.523Z",
   "build": {
-    "sha": "83dc465db0cc5470eb77ae242ffb07fe1ddbfef8",
-    "shortSha": "83dc465",
+    "sha": "0b24158b9d81f421575148474979608e0eec6163",
+    "shortSha": "0b24158",
     "ref": "main",
-    "builtAt": "2026-08-02T19:15:40.237Z"
+    "builtAt": "2026-08-02T19:30:48.122Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 23.8,
     "estimatedDatasets": 4,
-    "buildSha": "83dc465",
-    "lastSuccessfulUpdate": "2026-08-02T19:15:24.760Z"
+    "buildSha": "0b24158",
+    "lastSuccessfulUpdate": "2026-08-02T19:30:32.523Z"
   },
   "ticker": [
     "ANTHROPIC SAYS ITS OWN AI MODELS BREACHED THREE COMPANIES DURING SECURITY TESTS",
@@ -23,10 +23,10 @@
     "TEN ADVANCES IN MATHEMATICS AND THEORETICAL COMPUTER SCIENCE",
     "OPENAI REPORTEDLY FINDS EVIDENCE THAT MORE OF ITS AGENTS RAN AMOK",
     "ADVANCING RESPONSIBLE AI ACROSS EUROPE",
-    "INTRODUCING CLAUDE TAG",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "GOOGLE NIXES ITS EARTH AI FEATURE ONE DAY AFTER LAUNCH, AMID CRITICISM IT WOULD SPREAD MISINFORMATION",
-    "IT’S TIME TO PANIC ABOUT AI SAFETY"
+    "IT’S TIME TO PANIC ABOUT AI SAFETY",
+    "ANTHROPIC SAYS CLAUDE ACCIDENTALLY HACKED REAL COMPANIES TOO"
   ],
   "signals": [
     {
@@ -228,40 +228,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "clusterId": "14bih8d",
-      "title": "Introducing Claude Tag",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
-        },
-        {
-          "name": "The Hill",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -569,7 +535,7 @@
       "category": "capital",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -583,6 +549,36 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "clusterId": "1vw2030",
+      "title": "Introducing Claude for Teachers",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T07:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        },
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -839,33 +835,6 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "clusterId": "q11r6f",
-      "title": "Alibaba to ban employees from using Anthropic's coding tool, source says",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "dateISO": "2026-07-04T07:00:00.000Z",
-      "date": "JUL 04 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude",
-        "qwen"
       ]
     },
     {
@@ -1215,6 +1184,32 @@
         "chatgpt",
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/patch-the-planet",
+      "clusterId": "6els2w",
+      "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+      "desc": "OpenAI introduces Patch the Planet, a Daybreak initiative helping open-source maintainers find, validate, and fix vulnerabilities with AI and expert review.",
+      "url": "https://openai.com/index/patch-the-planet",
+      "dateISO": "2026-06-22T10:00:00.000Z",
+      "date": "JUN 22 2026",
+      "category": "opensource",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/patch-the-planet"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1315,12 +1310,12 @@
     "copilot": 1,
     "perplexity": 0,
     "gpt": 72,
-    "claude": 71,
+    "claude": 72,
     "gemini": 33,
     "grok": 3,
     "llama": 0,
     "deepseek": 0,
-    "qwen": 2,
+    "qwen": 1,
     "mistral": 0,
     "azure": 0,
     "aws": 0,
@@ -1371,6 +1366,17 @@
           "impact": "emerging"
         },
         {
+          "h": "Introducing Claude for Teachers",
+          "d": "JUL 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
+        },
+        {
           "h": "Introducing a way to reflect on how you use Claude",
           "d": "JUL 09 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
@@ -1380,17 +1386,6 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
-        },
-        {
-          "h": "Claude Science, an AI workbench for scientists, is now available",
-          "d": "JUN 30 2026",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 7,
-          "verification": "official",
-          "impact": "notable"
         }
       ]
     },
@@ -6301,10 +6296,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.80 – $3.19/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$1.76 – $3.19/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6312,13 +6307,13 @@
       "rate": "$3.59 – $4.39/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $6.70/hr",
-      "trend": "↓ 3% vs 7d ago",
+      "rate": "$5.00 – $6.70/hr",
+      "trend": "↓ 6% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
@@ -6348,7 +6343,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-02T19:15:24.760Z",
+    "updatedAt": "2026-08-02T19:30:32.523Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6357,18 +6352,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 326,
-        "fetchedStoryCount": 216,
-        "validatedStoryCount": 32,
-        "storyCoverage": 0.6625766871165644,
-        "estimatedRelevantDiscussions": 52,
+        "rawStoryHits": 324,
+        "fetchedStoryCount": 300,
+        "validatedStoryCount": 31,
+        "storyCoverage": 0.9259259259259259,
+        "estimatedRelevantDiscussions": 37,
         "isEstimated": true,
-        "rawCommentHits": 2345,
+        "rawCommentHits": 2341,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.1279317697228145,
+        "commentCoverage": 0.12815036309269542,
         "limited": false,
-        "points": 412,
+        "points": 407,
         "themes": [
           {
             "id": "reasoning",
@@ -6435,7 +6430,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 48,
+            "discussions": 33,
             "isEstimated": true
           },
           {
@@ -6450,28 +6445,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1003,
+        "rawStoryHits": 1001,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 33,
-        "storyCoverage": 0.29910269192422734,
+        "storyCoverage": 0.2997002997002997,
         "estimatedRelevantDiscussions": 110,
         "isEstimated": true,
-        "rawCommentHits": 6297,
+        "rawCommentHits": 6300,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 42,
-        "commentCoverage": 0.04764173415912339,
+        "validatedCommentCount": 43,
+        "commentCoverage": 0.047619047619047616,
         "limited": false,
         "points": 999,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 23
+            "count": 24
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 13
           },
           {
             "id": "writing",
@@ -6549,10 +6544,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 44,
         "isEstimated": true,
-        "rawCommentHits": 1143,
+        "rawCommentHits": 1141,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.26246719160104987,
+        "commentCoverage": 0.26292725679228746,
         "limited": false,
         "points": 972,
         "themes": [
@@ -6642,10 +6637,10 @@
         "storyCoverage": 0.5607476635514018,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 10278,
+        "rawCommentHits": 10270,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.02918855808523059,
+        "commentCoverage": 0.029211295034079845,
         "limited": false,
         "points": 407,
         "themes": [
@@ -6714,15 +6709,15 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 72,
-        "fetchedStoryCount": 72,
+        "rawStoryHits": 71,
+        "fetchedStoryCount": 71,
         "validatedStoryCount": 9,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
         "rawCommentHits": 498,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 46,
+        "validatedCommentCount": 45,
         "commentCoverage": 0.6024096385542169,
         "limited": false,
         "points": 237,
@@ -6730,7 +6725,7 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 17
+            "count": 16
           },
           {
             "id": "coding",
@@ -6758,13 +6753,13 @@
             "count": 3
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 2
-          },
-          {
             "id": "writing",
             "label": "Writing",
+            "count": 1
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
             "count": 1
           }
         ],
@@ -6797,15 +6792,15 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 79,
-        "fetchedStoryCount": 79,
+        "rawStoryHits": 82,
+        "fetchedStoryCount": 82,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
         "rawCommentHits": 1024,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 61,
+        "validatedCommentCount": 62,
         "commentCoverage": 0.29296875,
         "limited": false,
         "points": 689,
@@ -6831,13 +6826,13 @@
             "count": 4
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 3
-          },
-          {
             "id": "context",
             "label": "Context limits",
+            "count": 4
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
             "count": 3
           },
           {
@@ -6885,16 +6880,16 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 214,
-        "fetchedStoryCount": 214,
+        "rawStoryHits": 213,
+        "fetchedStoryCount": 213,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 4165,
+        "rawCommentHits": 4163,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.07202881152460984,
+        "commentCoverage": 0.0720634158059092,
         "limited": true,
         "points": 410,
         "themes": [
@@ -7269,6 +7264,17 @@
       {
         "modelId": "deepseek",
         "themes": [
+          "context"
+        ],
+        "excerpt": "An example of this in action is the utter inability to get deepseek v4 flash (even the new version) to stay concise. I have jumped through all sorts of hoops with deterministic…",
+        "source": "Hacker News",
+        "author": "shostack",
+        "publishedAt": "2026-08-02T19:21:03.000Z",
+        "url": "https://news.ycombinator.com/item?id=49147454"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
           "multimodal"
         ],
         "excerpt": "…and I am running it as my assistant through Matrix with DeepSeek v4 Flash (and Qwen). It probably costs me about 2 dollars a month and is even more useful than ChatGPT would…",
@@ -7288,17 +7294,6 @@
         "author": "mark_l_watson",
         "publishedAt": "2026-07-31T11:28:39.000Z",
         "url": "https://news.ycombinator.com/item?id=49121814"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "price"
-        ],
-        "excerpt": "…give you an example of model in this class, the DeepSeek V4 Flash preview is a 284B A13B model, with a native quantization mixing 4 bit and 8-bit values. You can…",
-        "source": "Hacker News",
-        "author": "ekidd",
-        "publishedAt": "2026-07-29T14:09:18.000Z",
-        "url": "https://news.ycombinator.com/item?id=49097785"
       },
       {
         "modelId": "qwen",
