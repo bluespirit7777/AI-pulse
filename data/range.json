@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T11:00:45.516Z",
+  "generatedAt": "2026-08-03T11:15:24.768Z",
   "historyDepthDays": 24.5,
   "ranges": {
     "24H": {
@@ -7,13 +7,13 @@
         "chatgpt": 0,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 1,
-        "claude": 0,
+        "gpt": 2,
+        "claude": 1,
         "gemini": 0,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
-        "qwen": 0,
+        "qwen": 1,
         "mistral": 0,
         "azure": 0,
         "aws": 0,
@@ -29,13 +29,13 @@
         "chatgpt": 0,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 1,
-        "claude": 0,
+        "gpt": 2,
+        "claude": 1,
         "gemini": -3,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
-        "qwen": 0,
+        "qwen": 1,
         "mistral": 0,
         "azure": 0,
         "aws": 0,
@@ -51,17 +51,27 @@
         "analysis": 2,
         "orggov": 2,
         "opensource": 1,
-        "general": 2,
+        "general": 3,
         "capital": 1
       },
       "topEntities": [
         {
           "id": "gpt",
+          "count": 2,
+          "delta": 2
+        },
+        {
+          "id": "claude",
+          "count": 1,
+          "delta": 1
+        },
+        {
+          "id": "qwen",
           "count": 1,
           "delta": 1
         }
       ],
-      "eventCount": 8,
+      "eventCount": 9,
       "previousWindowComplete": true
     },
     "7D": {
@@ -69,13 +79,13 @@
         "chatgpt": 19,
         "copilot": 3,
         "perplexity": 4,
-        "gpt": 112,
-        "claude": 143,
+        "gpt": 114,
+        "claude": 145,
         "gemini": 102,
         "grok": 16,
         "llama": 3,
         "deepseek": 0,
-        "qwen": 0,
+        "qwen": 1,
         "mistral": 4,
         "azure": 0,
         "aws": 0,
@@ -91,13 +101,13 @@
         "chatgpt": -52,
         "copilot": 3,
         "perplexity": 4,
-        "gpt": -64,
-        "claude": -2,
+        "gpt": -62,
+        "claude": 0,
         "gemini": 7,
         "grok": 16,
         "llama": -3,
         "deepseek": 0,
-        "qwen": 0,
+        "qwen": 1,
         "mistral": 0,
         "azure": 0,
         "aws": 0,
@@ -112,26 +122,26 @@
       "categoryCounts": {
         "adoption": 22,
         "opensource": 36,
-        "general": 305,
+        "general": 306,
         "capital": 53,
         "analysis": 23,
         "product": 34,
         "policy": 39,
         "compute": 17,
-        "market": 30,
+        "market": 31,
         "orggov": 23,
         "research": 31
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 143,
-          "delta": -2
+          "count": 145,
+          "delta": 0
         },
         {
           "id": "gpt",
-          "count": 112,
-          "delta": -64
+          "count": 114,
+          "delta": -62
         },
         {
           "id": "gemini",
@@ -164,7 +174,7 @@
           "delta": 0
         }
       ],
-      "eventCount": 613,
+      "eventCount": 615,
       "previousWindowComplete": true
     },
     "30D": {
@@ -172,13 +182,13 @@
         "chatgpt": 302,
         "copilot": 28,
         "perplexity": 4,
-        "gpt": 791,
-        "claude": 831,
+        "gpt": 793,
+        "claude": 833,
         "gemini": 404,
         "grok": 34,
         "llama": 12,
         "deepseek": 7,
-        "qwen": 31,
+        "qwen": 32,
         "mistral": 8,
         "azure": 0,
         "aws": 0,
@@ -197,22 +207,22 @@
         "product": 358,
         "capital": 257,
         "research": 67,
-        "general": 1784,
+        "general": 1785,
         "analysis": 306,
         "adoption": 181,
         "compute": 57,
         "opensource": 98,
-        "market": 76
+        "market": 77
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 831,
+          "count": 833,
           "delta": null
         },
         {
           "id": "gpt",
-          "count": 791,
+          "count": 793,
           "delta": null
         },
         {
@@ -237,7 +247,7 @@
         },
         {
           "id": "qwen",
-          "count": 31,
+          "count": 32,
           "delta": null
         },
         {
@@ -246,7 +256,7 @@
           "delta": null
         }
       ],
-      "eventCount": 3461,
+      "eventCount": 3463,
       "previousWindowComplete": false
     }
   },
@@ -642,8 +652,8 @@
         "product": 27,
         "policy": 11,
         "orggov": 7,
-        "market": 5,
-        "general": 129,
+        "market": 6,
+        "general": 130,
         "adoption": 17,
         "analysis": 27,
         "capital": 12,
