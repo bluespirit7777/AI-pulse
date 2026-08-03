@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-03T16:30:30.335Z",
+  "generatedAt": "2026-08-03T16:45:26.138Z",
   "historyDepthDays": 24.7,
   "ranges": {
     "24H": {
       "entityActivity": {
-        "chatgpt": 0,
+        "chatgpt": 1,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 2,
+        "gpt": 3,
         "claude": 1,
         "gemini": 0,
         "grok": 0,
@@ -26,10 +26,10 @@
         "broadcom": 0
       },
       "entityDelta": {
-        "chatgpt": 0,
+        "chatgpt": 1,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 2,
+        "gpt": 3,
         "claude": 1,
         "gemini": 0,
         "grok": 0,
@@ -51,13 +51,19 @@
         "orggov": 2,
         "opensource": 1,
         "general": 3,
-        "capital": 1
+        "capital": 1,
+        "policy": 1
       },
       "topEntities": [
         {
           "id": "gpt",
-          "count": 2,
-          "delta": 2
+          "count": 3,
+          "delta": 3
+        },
+        {
+          "id": "chatgpt",
+          "count": 1,
+          "delta": 1
         },
         {
           "id": "claude",
@@ -70,19 +76,19 @@
           "delta": 1
         }
       ],
-      "eventCount": 7,
+      "eventCount": 8,
       "previousWindowComplete": true
     },
     "7D": {
       "entityActivity": {
-        "chatgpt": 19,
+        "chatgpt": 20,
         "copilot": 3,
         "perplexity": 4,
-        "gpt": 110,
+        "gpt": 111,
         "claude": 136,
         "gemini": 95,
         "grok": 16,
-        "llama": 3,
+        "llama": 0,
         "deepseek": 0,
         "qwen": 1,
         "mistral": 4,
@@ -97,14 +103,14 @@
         "broadcom": 0
       },
       "entityDelta": {
-        "chatgpt": -52,
+        "chatgpt": -51,
         "copilot": 3,
         "perplexity": 4,
-        "gpt": -70,
+        "gpt": -69,
         "claude": -19,
         "gemini": -7,
         "grok": 16,
-        "llama": -3,
+        "llama": -9,
         "deepseek": 0,
         "qwen": 1,
         "mistral": 0,
@@ -119,11 +125,11 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "general": 273,
         "analysis": 23,
+        "general": 270,
         "product": 34,
         "capital": 50,
-        "policy": 39,
+        "policy": 40,
         "opensource": 32,
         "compute": 17,
         "market": 31,
@@ -139,8 +145,8 @@
         },
         {
           "id": "gpt",
-          "count": 110,
-          "delta": -70
+          "count": 111,
+          "delta": -69
         },
         {
           "id": "gemini",
@@ -149,8 +155,8 @@
         },
         {
           "id": "chatgpt",
-          "count": 19,
-          "delta": -52
+          "count": 20,
+          "delta": -51
         },
         {
           "id": "grok",
@@ -173,15 +179,15 @@
           "delta": 0
         }
       ],
-      "eventCount": 567,
+      "eventCount": 565,
       "previousWindowComplete": true
     },
     "30D": {
       "entityActivity": {
-        "chatgpt": 302,
+        "chatgpt": 303,
         "copilot": 28,
         "perplexity": 4,
-        "gpt": 793,
+        "gpt": 794,
         "claude": 834,
         "gemini": 404,
         "grok": 34,
@@ -202,7 +208,7 @@
       "entityDelta": {},
       "categoryCounts": {
         "orggov": 89,
-        "policy": 187,
+        "policy": 188,
         "product": 358,
         "capital": 257,
         "research": 67,
@@ -221,7 +227,7 @@
         },
         {
           "id": "gpt",
-          "count": 793,
+          "count": 794,
           "delta": null
         },
         {
@@ -231,7 +237,7 @@
         },
         {
           "id": "chatgpt",
-          "count": 302,
+          "count": 303,
           "delta": null
         },
         {
@@ -255,7 +261,7 @@
           "delta": null
         }
       ],
-      "eventCount": 3464,
+      "eventCount": 3465,
       "previousWindowComplete": false
     }
   },
@@ -649,7 +655,7 @@
       "counts": {
         "opensource": 8,
         "product": 27,
-        "policy": 11,
+        "policy": 12,
         "orggov": 7,
         "market": 6,
         "general": 133,
