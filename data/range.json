@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T20:00:34.523Z",
+  "generatedAt": "2026-08-03T20:15:32.380Z",
   "historyDepthDays": 24.8,
   "ranges": {
     "24H": {
@@ -16,7 +16,7 @@
         "qwen": 1,
         "mistral": 0,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
@@ -38,7 +38,7 @@
         "qwen": 1,
         "mistral": 0,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
@@ -49,11 +49,11 @@
       },
       "categoryCounts": {
         "opensource": 1,
-        "general": 6,
+        "general": 7,
         "capital": 1,
         "policy": 1,
         "product": 1,
-        "adoption": 1
+        "adoption": 2
       },
       "topEntities": [
         {
@@ -75,9 +75,14 @@
           "id": "qwen",
           "count": 1,
           "delta": 1
+        },
+        {
+          "id": "aws",
+          "count": 1,
+          "delta": 1
         }
       ],
-      "eventCount": 11,
+      "eventCount": 13,
       "previousWindowComplete": true
     },
     "7D": {
@@ -86,15 +91,15 @@
         "copilot": 3,
         "perplexity": 4,
         "gpt": 112,
-        "claude": 128,
-        "gemini": 82,
+        "claude": 127,
+        "gemini": 74,
         "grok": 16,
         "llama": 0,
         "deepseek": 0,
         "qwen": 1,
         "mistral": 4,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 3,
@@ -109,14 +114,14 @@
         "perplexity": 4,
         "gpt": -65,
         "claude": -27,
-        "gemini": -33,
+        "gemini": -49,
         "grok": 16,
         "llama": -9,
         "deepseek": 0,
         "qwen": 1,
         "mistral": 0,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 3,
@@ -126,22 +131,22 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "policy": 40,
         "general": 260,
         "product": 32,
         "capital": 45,
         "opensource": 32,
         "compute": 17,
+        "policy": 34,
         "market": 31,
         "analysis": 19,
         "orggov": 23,
         "research": 31,
-        "adoption": 15
+        "adoption": 16
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 128,
+          "count": 127,
           "delta": -27
         },
         {
@@ -151,8 +156,8 @@
         },
         {
           "id": "gemini",
-          "count": 82,
-          "delta": -33
+          "count": 74,
+          "delta": -49
         },
         {
           "id": "grok",
@@ -180,7 +185,7 @@
           "delta": 0
         }
       ],
-      "eventCount": 545,
+      "eventCount": 540,
       "previousWindowComplete": true
     },
     "30D": {
@@ -189,7 +194,7 @@
         "copilot": 28,
         "perplexity": 4,
         "gpt": 795,
-        "claude": 834,
+        "claude": 835,
         "gemini": 404,
         "grok": 34,
         "llama": 12,
@@ -197,7 +202,7 @@
         "qwen": 31,
         "mistral": 8,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 4,
         "oracle": 0,
         "coreweave": 3,
@@ -213,9 +218,9 @@
         "product": 359,
         "capital": 257,
         "research": 67,
-        "general": 1790,
+        "general": 1792,
         "analysis": 306,
-        "adoption": 182,
+        "adoption": 183,
         "compute": 57,
         "opensource": 98,
         "market": 77
@@ -223,7 +228,7 @@
       "topEntities": [
         {
           "id": "claude",
-          "count": 834,
+          "count": 835,
           "delta": null
         },
         {
@@ -262,7 +267,7 @@
           "delta": null
         }
       ],
-      "eventCount": 3470,
+      "eventCount": 3473,
       "previousWindowComplete": false
     }
   },
@@ -659,8 +664,8 @@
         "policy": 12,
         "orggov": 7,
         "market": 6,
-        "general": 136,
-        "adoption": 18,
+        "general": 138,
+        "adoption": 19,
         "analysis": 27,
         "capital": 12,
         "research": 10,
