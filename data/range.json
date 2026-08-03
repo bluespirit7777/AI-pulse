@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T08:45:39.650Z",
+  "generatedAt": "2026-08-03T09:00:49.963Z",
   "historyDepthDays": 24.4,
   "ranges": {
     "24H": {
@@ -7,7 +7,7 @@
         "chatgpt": 0,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": 0,
+        "gpt": 1,
         "claude": 0,
         "gemini": 0,
         "grok": 0,
@@ -29,7 +29,7 @@
         "chatgpt": 0,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": -3,
+        "gpt": -2,
         "claude": -3,
         "gemini": -3,
         "grok": -3,
@@ -50,10 +50,17 @@
       "categoryCounts": {
         "general": 2,
         "analysis": 2,
-        "orggov": 2
+        "orggov": 2,
+        "opensource": 1
       },
-      "topEntities": [],
-      "eventCount": 6,
+      "topEntities": [
+        {
+          "id": "gpt",
+          "count": 1,
+          "delta": -2
+        }
+      ],
+      "eventCount": 7,
       "previousWindowComplete": true
     },
     "7D": {
@@ -61,7 +68,7 @@
         "chatgpt": 19,
         "copilot": 3,
         "perplexity": 4,
-        "gpt": 111,
+        "gpt": 112,
         "claude": 142,
         "gemini": 102,
         "grok": 16,
@@ -83,7 +90,7 @@
         "chatgpt": -52,
         "copilot": 3,
         "perplexity": 4,
-        "gpt": -83,
+        "gpt": -82,
         "claude": -6,
         "gemini": 7,
         "grok": 16,
@@ -104,7 +111,7 @@
       "categoryCounts": {
         "general": 311,
         "adoption": 22,
-        "opensource": 35,
+        "opensource": 36,
         "capital": 52,
         "analysis": 23,
         "product": 34,
@@ -122,8 +129,8 @@
         },
         {
           "id": "gpt",
-          "count": 111,
-          "delta": -83
+          "count": 112,
+          "delta": -82
         },
         {
           "id": "gemini",
@@ -156,7 +163,7 @@
           "delta": 0
         }
       ],
-      "eventCount": 617,
+      "eventCount": 618,
       "previousWindowComplete": true
     },
     "30D": {
@@ -164,7 +171,7 @@
         "chatgpt": 302,
         "copilot": 28,
         "perplexity": 4,
-        "gpt": 790,
+        "gpt": 791,
         "claude": 829,
         "gemini": 404,
         "grok": 34,
@@ -193,7 +200,7 @@
         "analysis": 306,
         "adoption": 181,
         "compute": 57,
-        "opensource": 97,
+        "opensource": 98,
         "market": 76
       },
       "topEntities": [
@@ -204,7 +211,7 @@
         },
         {
           "id": "gpt",
-          "count": 790,
+          "count": 791,
           "delta": null
         },
         {
@@ -238,7 +245,7 @@
           "delta": null
         }
       ],
-      "eventCount": 3455,
+      "eventCount": 3456,
       "previousWindowComplete": false
     }
   },
@@ -630,7 +637,7 @@
     {
       "date": "2026-08-03",
       "counts": {
-        "opensource": 7,
+        "opensource": 8,
         "product": 27,
         "policy": 10,
         "orggov": 7,
