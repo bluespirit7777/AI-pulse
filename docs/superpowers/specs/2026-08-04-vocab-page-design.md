@@ -1,4 +1,4 @@
-# Glossary page
+# Vocab page
 
 **Date:** 2026-08-04
 **Status:** Approved, ready for implementation planning
@@ -21,7 +21,7 @@ defining only the terms AI-Pulse itself actually uses today.
 
 Settled with the user during brainstorming:
 
-1. **Placement:** a new dedicated page (`glossary.html`), not inline
+1. **Placement:** a new dedicated page (`vocab.html`), not inline
    tooltips and not a broader general-AI dictionary. Tooltips and a bigger
    glossary were both considered and explicitly deferred — see Out of scope.
 2. **Scope:** ~20-30 terms, limited to jargon that already appears somewhere
@@ -39,7 +39,7 @@ Settled with the user during brainstorming:
 - **`js/curated.js` is the right pattern to copy.** It's the site's existing
   convention for hand-maintained, config-driven content with no live source:
   a plain exported array/object, edited and committed by hand, no build step.
-  The glossary data file follows the same shape.
+  The vocab data file follows the same shape.
 - **Every dashboard section is always in the DOM and visible.** `js/nav.js`'s
   `normalizeLocalNav()` strips the `hidden` attribute off every `.tabpanel`
   at init — the tab bars are "jump to subsection" shortcuts, not real tabs
@@ -50,7 +50,7 @@ Settled with the user during brainstorming:
   corner nav's "Landing page" pill is `<a class="nav-pill nav-pill--cta"
   href="./">`, a real link, not a `data-panel` scroll button that
   `js/nav.js`'s `wireTopnav()` intercepts (it only wires elements matching
-  `.nav-pill[data-panel]`). Adding a "Glossary" pill in the same style needs
+  `.nav-pill[data-panel]`). Adding a "Vocab" pill in the same style needs
   zero changes to `nav.js`.
 - **`index.html` and `app.html` share a strict CSP** (`script-src 'self'`,
   no `unsafe-inline`) — confirmed in `index.html`'s head comment. The new
@@ -59,7 +59,7 @@ Settled with the user during brainstorming:
 - **The project has an established `node --test` convention** for pure-logic
   files (`test/*.test.mjs`, run via `npm test` / `npm run check`), including
   files with no runtime data dependency (e.g. `test/models.test.mjs`). A
-  glossary-data shape check fits this convention directly.
+  vocab-data shape check fits this convention directly.
 
 ## Architecture
 
@@ -67,18 +67,18 @@ Settled with the user during brainstorming:
 
 | Path | Role |
 |------|------|
-| `glossary.html` | New standalone page. Same head/CSP/font pattern as `index.html`; links `css/tokens.css` + `css/shell.css` + `css/components.css` for a native look. |
-| `js/glossary-data.js` | New. Hand-maintained array of term entries, `curated.js`-style. |
-| `js/glossary.js` | New. ES module: groups entries by section, renders grouped lists into the page. |
-| `test/glossary.test.mjs` | New. Validates `glossary-data.js`'s shape. |
-| `app.html`, `index.html` | Edited. Add one "Glossary" nav-pill link (corner nav) and one footer link on each page. No JS behavior changes. |
+| `vocab.html` | New standalone page. Same head/CSP/font pattern as `index.html`; links `css/tokens.css` + `css/shell.css` + `css/components.css` for a native look. |
+| `js/vocab-data.js` | New. Hand-maintained array of term entries, `curated.js`-style. |
+| `js/vocab.js` | New. ES module: groups entries by section, renders grouped lists into the page. |
+| `test/vocab.test.mjs` | New. Validates `vocab-data.js`'s shape. |
+| `app.html`, `index.html` | Edited. Add one "Vocab" nav-pill link (corner nav) and one footer link on each page. No JS behavior changes. |
 
-### Data shape (`js/glossary-data.js`)
+### Data shape (`js/vocab-data.js`)
 
 ```js
-export const GLOSSARY_ASOF = 'Aug 2026';
+export const VOCAB_ASOF = 'Aug 2026';
 
-export const glossaryTerms = [
+export const vocabTerms = [
   {
     term: 'AAII',
     definition: "Artificial Analysis Intelligence Index — a 0–100 composite …",
@@ -88,7 +88,7 @@ export const glossaryTerms = [
   // ...
 ];
 
-export const GLOSSARY_SECTIONS = [
+export const VOCAB_SECTIONS = [
   { id: 'models', label: 'Models & Leaderboards' },
   { id: 'ecosystem', label: 'Ecosystem' },
   { id: 'today', label: 'News Wave' },
@@ -100,10 +100,10 @@ export const GLOSSARY_SECTIONS = [
 `js/nav.js` (`models`, `ecosystem`, `today`, `markets`) so the two never
 drift into different vocabularies for the same four areas.
 
-### Rendering (`js/glossary.js`)
+### Rendering (`js/vocab.js`)
 
-- Reads `glossaryTerms` + `GLOSSARY_SECTIONS`.
-- For each section in `GLOSSARY_SECTIONS` order, renders a heading + a list
+- Reads `vocabTerms` + `VOCAB_SECTIONS`.
+- For each section in `VOCAB_SECTIONS` order, renders a heading + a list
   of its terms (alphabetical within the section).
 - Each entry: **term** (bold), definition, and a "See it on the dashboard →"
   link to `` `app.html#${entry.anchor}` ``.
@@ -130,7 +130,7 @@ even, unhyped voice (see `curated.js`'s comments and note fields for tone).
 
 - **Corner nav** (`app.html`, `index.html`): one additional plain link pill
   after the existing "Landing page" pill —
-  `<a class="nav-pill" href="glossary.html">Glossary</a>` (on `glossary.html`
+  `<a class="nav-pill" href="vocab.html">Vocab</a>` (on `vocab.html`
   itself, this becomes a link back, e.g. `href="app.html"` / `href="./"`).
 - **Footer** (`app.html`, `index.html`): one additional link next to the
   existing footer text.
@@ -139,12 +139,12 @@ even, unhyped voice (see `curated.js`'s comments and note fields for tone).
 
 ### Testing
 
-`test/glossary.test.mjs` (`node --test`, wired into `npm test` /
+`test/vocab.test.mjs` (`node --test`, wired into `npm test` /
 `npm run check` alongside the existing suite) checks:
 
 - No duplicate `term` values.
 - Every entry has a non-empty `definition`.
-- Every `section` value is one of `GLOSSARY_SECTIONS`' ids.
+- Every `section` value is one of `VOCAB_SECTIONS`' ids.
 - Every `anchor` value is a non-empty string (existence-in-`app.html` is
   checked by grepping `app.html`'s source for `id="${anchor}"`, so a future
   rename of a section id fails this test instead of silently breaking the
@@ -157,7 +157,7 @@ even, unhyped voice (see `curated.js`'s comments and note fields for tone).
 - A broader general-AI glossary (LLM, token, context window, etc.) beyond
   what AI-Pulse itself already uses — considered and explicitly rejected in
   favor of the smaller, site-specific scope.
-- Search/filter UI on the glossary page — a flat grouped list is enough at
+- Search/filter UI on the vocab page — a flat grouped list is enough at
   ~24 entries.
 - Any change to the live data pipeline, `scripts/update-data.mjs`, or CI —
   this is entirely static, hand-maintained content, same as `curated.js`.
