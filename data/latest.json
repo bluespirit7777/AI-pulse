@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-04T20:58:13.798Z",
+  "updatedAt": "2026-08-04T21:02:46.596Z",
   "build": {
-    "sha": "c984156840620f324f993aea1735ac1e19716723",
-    "shortSha": "c984156",
+    "sha": "4238f2d4f08ce034e25c23ada8b43c3f5eaf4238",
+    "shortSha": "4238f2d",
     "ref": "main",
-    "builtAt": "2026-08-04T20:58:28.882Z"
+    "builtAt": "2026-08-04T21:03:03.272Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 25.9,
     "estimatedDatasets": 4,
-    "buildSha": "c984156",
-    "lastSuccessfulUpdate": "2026-08-04T20:58:13.798Z"
+    "buildSha": "4238f2d",
+    "lastSuccessfulUpdate": "2026-08-04T21:02:46.596Z"
   },
   "ticker": [
     "ANTHROPIC SIGNS $10B DEAL WITH AI CLOUD STARTUP VOLTA",
@@ -23,10 +23,10 @@
     "AWS IS HELPING VIBE-CODING STARTUP SUPERBLOCKS, AND THE IMPLICATIONS ARE BIG",
     "INSIDE OUR 353,000-PERSON VIBE CODING COURSE",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
+    "THIRD-PARTY CYBER EVALUATIONS INVOLVING OPENAI MODELS",
     "NVIDIA DOESN’T MESS AROUND: A WEEK AFTER OPEN AI INDUSTRY GROUP FORMED, IT’S ALREADY SHOWING PROGRESS",
     "HOW AN OPENAI INFLUENCER TRIP BACKFIRED",
-    "TEXAS HALTS DATA CENTER CONNECTIONS TO POWER GRID AMID OVERWHELMING DEMAND",
-    "TEXAS HALTS NEW DATA CENTERS AS GOVERNOR CALLS FOR AUDITS"
+    "TEXAS HALTS DATA CENTER CONNECTIONS TO POWER GRID AMID OVERWHELMING DEMAND"
   ],
   "signals": [
     {
@@ -208,6 +208,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "clusterId": "hf8008",
+      "title": "Third-party cyber evaluations involving OpenAI models",
+      "desc": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
+      "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "dateISO": "2026-08-04T19:00:00.000Z",
+      "date": "AUG 04 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 56,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -1146,32 +1172,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://openai.com/index/ten-advances-in-mathematics",
-      "clusterId": "1w0g6eb",
-      "title": "Ten advances in mathematics and theoretical computer science",
-      "desc": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
-      "url": "https://openai.com/index/ten-advances-in-mathematics",
-      "dateISO": "2026-08-01T00:00:00.000Z",
-      "date": "AUG 01 2026",
-      "category": "market",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/ten-advances-in-mathematics"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1250,7 +1250,7 @@
     "chatgpt": 22,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 69,
+    "gpt": 70,
     "claude": 68,
     "gemini": 29,
     "grok": 2,
@@ -1307,6 +1307,17 @@
           "impact": "emerging"
         },
         {
+          "h": "Deloitte launches platform for secure software powered by Anthropic’s Claude models - Pre…",
+          "d": "JUL 16 2026",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNUlhQcjNfRlpNdDh2YTNZVlNIOFpXM1dvanJIUnl6SV9oY1JxdXVWckluVTQzMzhPVm9Eb0V2TkNzNmRLSnpiTENTRFo2VVMtWGp1amNpazV0NnB6bjk3bVE1VGE0SnUweDVNY1pVRVhFdGIwbHg5SXRKVkZ3N25veTl2SldFUjZwamtZdG43cGhCcWU3TkxWQlZ5dmZJSWdJSklnakhRc1RhUk1lbl92Zzk3NW1tUjFWRVhUTEFONFhaMlc5Mkotc2Q5dlRPdw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Deloitte",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
           "h": "Introducing a way to reflect on how you use Claude",
           "d": "JUL 09 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
@@ -1316,17 +1327,6 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
-        },
-        {
-          "h": "Claude Science, an AI workbench for scientists, is now available",
-          "d": "JUN 30 2026",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 7,
-          "verification": "official",
-          "impact": "notable"
         }
       ]
     },
@@ -1473,6 +1473,18 @@
       "org": "OPENAI",
       "logoKey": "openai",
       "date": "AUG 04 2026",
+      "verification": "official",
+      "impact": "notable",
+      "h": "Third-party cyber evaluations involving OpenAI models",
+      "p": "OpenAI explains recent third-party cybersecurity evaluation incidents and outlines new safeguards to strengthen AI model testing and evaluation.",
+      "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models",
+      "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 04 2026",
       "verification": "analysis",
       "impact": "notable",
       "h": "How an OpenAI influencer trip backfired",
@@ -1502,18 +1514,6 @@
       "h": "Spotify expands AI remix and covers project with Merlin partnership",
       "p": "Spotify says Merlin, which represents more than 30,000 independent labels and distributors, has joined Universal Music Group in backing its upcoming AI-powered remix and covers product. The paid tool will let fans create AI-generated covers and remixes of par…",
       "url": "https://techcrunch.com/2026/08/04/spotify-adds-merlin-to-its-ai-music-remix-and-covers-effort/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 04 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Texas halts new data centers as governor calls for audits",
-      "p": "Tech companies and developers have been scouring the U.S. for places to build data centers, and they’ve been drawn to Texas’ loose regulations and seemingly abundant power supply. But even Texas can be pushed to the brink.",
-      "url": "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1646,7 +1646,7 @@
       "changePct": 2.564848561465547,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 123233837,
+      "volume": 130429698,
       "ohlc": [
         {
           "d": "05-05",
@@ -2084,13 +2084,13 @@
         },
         {
           "d": "08-04",
-          "o": 211.49000549316406,
+          "o": 211.3000030517578,
           "h": 213.05999755859375,
           "l": 209.0500030517578,
           "c": 211.94000244140625
         }
       ],
-      "relVolume": 0.9539008981777523,
+      "relVolume": 1.0096010081326363,
       "marketCap": 5171336000000
     },
     {
@@ -3014,7 +3014,7 @@
       "changePct": 1.1083997811617383,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 35253283,
+      "volume": 35493839,
       "ohlc": [
         {
           "d": "05-05",
@@ -3452,13 +3452,13 @@
         },
         {
           "d": "08-04",
-          "o": 367.6488037109375,
+          "o": 368.2200012207031,
           "h": 380.5199890136719,
           "l": 367.5400085449219,
           "c": 377.6499938964844
         }
       ],
-      "relVolume": 1.1519425252182482,
+      "relVolume": 1.159802975721437,
       "marketCap": 4607330000000
     },
     {
@@ -3470,7 +3470,7 @@
       "changePct": -2.3237715094833686,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 65439349,
+      "volume": 69522809,
       "ohlc": [
         {
           "d": "05-05",
@@ -3914,7 +3914,7 @@
           "c": 277.4200134277344
         }
       ],
-      "relVolume": 1.3607448447032418,
+      "relVolume": 1.4456562508902424,
       "marketCap": 2968394000000
     },
     {
@@ -5276,7 +5276,7 @@
         },
         {
           "d": "08-04",
-          "o": 504,
+          "o": 504.239990234375,
           "h": 530.1300048828125,
           "l": 502.20001220703125,
           "c": 518.5800170898438
@@ -6202,10 +6202,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.87 – $3.29/hr",
-      "trend": "→ 0% vs 7d ago",
+      "rate": "$1.99 – $3.29/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6249,7 +6249,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-04T20:58:13.798Z",
+    "updatedAt": "2026-08-04T21:02:46.596Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6259,15 +6259,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 335,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 259,
         "validatedStoryCount": 36,
-        "storyCoverage": 0.8955223880597015,
-        "estimatedRelevantDiscussions": 43,
+        "storyCoverage": 0.7731343283582089,
+        "estimatedRelevantDiscussions": 50,
         "isEstimated": true,
-        "rawCommentHits": 2427,
+        "rawCommentHits": 2426,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.12360939431396786,
+        "commentCoverage": 0.1236603462489695,
         "limited": false,
         "points": 458,
         "themes": [
@@ -6336,7 +6336,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 40,
+            "discussions": 47,
             "isEstimated": true
           },
           {
@@ -6357,10 +6357,10 @@
         "storyCoverage": 0.2938295788442703,
         "estimatedRelevantDiscussions": 106,
         "isEstimated": true,
-        "rawCommentHits": 6576,
+        "rawCommentHits": 6577,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 61,
-        "commentCoverage": 0.04562043795620438,
+        "commentCoverage": 0.04561350159647255,
         "limited": false,
         "points": 836,
         "themes": [
@@ -6543,10 +6543,10 @@
         "storyCoverage": 0.5309734513274337,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 10431,
+        "rawCommentHits": 10429,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.028760425654299683,
+        "commentCoverage": 0.028765941125707163,
         "limited": false,
         "points": 412,
         "themes": [
@@ -6698,8 +6698,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 86,
-        "fetchedStoryCount": 86,
+        "rawStoryHits": 94,
+        "fetchedStoryCount": 94,
         "validatedStoryCount": 12,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
@@ -6792,10 +6792,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 4363,
+        "rawCommentHits": 4364,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.068760027504011,
+        "commentCoverage": 0.06874427131072411,
         "limited": true,
         "points": 418,
         "themes": [
