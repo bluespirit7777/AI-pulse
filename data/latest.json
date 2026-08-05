@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-05T16:45:32.236Z",
+  "updatedAt": "2026-08-05T17:00:41.147Z",
   "build": {
-    "sha": "d097ea72ff642adbdb9e870d5b0342410ccb3be1",
-    "shortSha": "d097ea7",
+    "sha": "b5029831408b35900138cf9a496eefe3088e224a",
+    "shortSha": "b502983",
     "ref": "main",
-    "builtAt": "2026-08-05T16:45:46.832Z"
+    "builtAt": "2026-08-05T17:00:57.715Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,60 +13,22 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 26.7,
     "estimatedDatasets": 4,
-    "buildSha": "d097ea7",
-    "lastSuccessfulUpdate": "2026-08-05T16:45:32.236Z"
+    "buildSha": "b502983",
+    "lastSuccessfulUpdate": "2026-08-05T17:00:41.147Z"
   },
   "ticker": [
-    "APPLE IS GETTING THIS WRONG",
     "ANTHROPIC IS HIRING AN AI CHIP DESIGN TEAM",
     "SHOPIFY SAYS AI SEARCH IS DRIVING MORE TRAFFIC AND SALES, NOT REPLACING GOOGLE",
+    "GOOGLE JUST ANNOUNCED A MAJOR SHAKEUP OF ITS TOP AI LEADERSHIP",
+    "APPLE SAYS MORE EX-EMPLOYEES MAY HAVE TAKEN CONFIDENTIAL DATA TO OPENAI",
+    "SPACEX IS BARELY SPACE AND MOSTLY X",
     "ANTHROPIC SIGNS $10B DEAL WITH AI CLOUD STARTUP VOLTA",
     "GOOGLE’S TOP AI BRAINS ARE LEAVING TO LAUNCH DISCOVERY LOOP",
     "AMD’S DATA CENTER BUSINESS IS BOOMING WHILE GAMING TAKES A BACKSEAT",
     "GOOGLE ASSISTANT WILL DISAPPEAR FROM YOUR PHONE NEXT MONTH",
-    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
-    "ROGUE AI AGENTS CREATED FAKE ONLINE IDENTITIES IN ANOTHER HACKING ATTEMPT",
-    "HOW AN OPENAI INFLUENCER TRIP BACKFIRED"
+    "APPLE IS GETTING THIS WRONG"
   ],
   "signals": [
-    {
-      "id": "https://openai.com/index/apple-is-getting-this-wrong",
-      "clusterId": "pj09wm",
-      "title": "Apple is getting this wrong",
-      "desc": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
-      "url": "https://openai.com/index/apple-is-getting-this-wrong",
-      "dateISO": "2026-08-03T22:00:00.000Z",
-      "date": "AUG 03 2026",
-      "category": "policy",
-      "catConfidence": 0.45,
-      "family": "market",
-      "significance": 77,
-      "impact": "high",
-      "verification": "official",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/the-white-house-is-keeping-its-ai-cybersecurity-framework-secret/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/974914/openai-blog-response-apple-lawsuit-messages"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/apple-is-getting-this-wrong"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
     {
       "id": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
       "clusterId": "1sp7j1e",
@@ -117,6 +79,88 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/975677/google-deepmind-ai-demis-hassabis-shakeup",
+      "clusterId": "kjxlkj",
+      "title": "Google just announced a major shakeup of its top AI leadership",
+      "desc": "Google is making some significant AI leadership changes, including a major shift for Google DeepMind leader Demis Hassabis. Hassabis will become the chair of Google DeepMind and the chief scientist at Alphabet, CEO Sundar Pichai announced on Wednesday. Hassabis will continue to lead Alphabet's Isomorphic Labs, which aims to use AI to develop drugs. Koray […]",
+      "url": "https://www.theverge.com/tech/975677/google-deepmind-ai-demis-hassabis-shakeup",
+      "dateISO": "2026-08-05T16:47:23.000Z",
+      "date": "AUG 05 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 73,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/975677/google-deepmind-ai-demis-hassabis-shakeup"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+      "clusterId": "nruy4o",
+      "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
+      "desc": "Apple says its trade secrets investigation into OpenAI has widened. In a new court filing, Apple claims additional former staff may have retained or accessed confidential information.",
+      "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+      "dateISO": "2026-08-04T14:03:01.000Z",
+      "date": "AUG 04 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 72,
+      "impact": "high",
+      "verification": "uncertain",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/the-white-house-is-keeping-its-ai-cybersecurity-framework-secret/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/science/975545/spacex-x-earnings-ai-data-centers-compute-space",
+      "clusterId": "sjr2cb",
+      "title": "SpaceX is barely Space and mostly X",
+      "desc": "Once, I had some questions about why SpaceX, Elon Musk's healthiest company, acquired xAI, his sickliest one. Now I have some questions about why we're calling the whole thing SpaceX. Look, what we have here, by revenue, is primarily a telecom company and a company that rents compute, according to SpaceX's first quarterly earnings statement […]",
+      "url": "https://www.theverge.com/science/975545/spacex-x-earnings-ai-data-centers-compute-space",
+      "dateISO": "2026-08-05T16:35:56.000Z",
+      "date": "AUG 05 2026",
+      "category": "market",
+      "catConfidence": 0.63,
+      "family": "market",
+      "significance": 68,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/science/975545/spacex-x-earnings-ai-data-centers-compute-space"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "grok"
       ]
     },
     {
@@ -228,6 +272,32 @@
       ]
     },
     {
+      "id": "https://openai.com/index/apple-is-getting-this-wrong",
+      "clusterId": "pj09wm",
+      "title": "Apple is getting this wrong",
+      "desc": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
+      "url": "https://openai.com/index/apple-is-getting-this-wrong",
+      "dateISO": "2026-08-03T22:00:00.000Z",
+      "date": "AUG 03 2026",
+      "category": "policy",
+      "catConfidence": 0.45,
+      "family": "market",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/apple-is-getting-this-wrong"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
       "clusterId": "1syefyo",
       "title": "Claude Science, an AI workbench for scientists, is now available",
@@ -244,7 +314,7 @@
       "sourceCount": 7,
       "sources": [
         {
-          "name": "massbio.org",
+          "name": "Massachusetts Biotechnology Council",
           "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNM3loSnFaZjI2VEo0MS1ZQWY3NWdTaFJfd2NoZWNXRkl1TEwtelV3c0U2SFdac1RqbFl1dlFBOEE4b3EwTU1fc1JUenNiVG5zUEpUdVkxZjNpZnRJWmpqU0RGbmQ3ZTVlMnJncFJJUGMwbE4zbkdfU2wzU2Zsb0FSUDBtTnowQUNDYmxhLUs1T3hHY2lqWnB5VW9Tb1VuTDdfOEFTSFpTWXY5dmhXbFRJbV9TOW9wUFFydVZoUlJmSmtwZw?oc=5"
         },
         {
@@ -268,7 +338,7 @@
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWFMLUFicUpQcmdVbGVZS1VmekY5c3Bmc0pFQmxtX01mRnd0aFNmNTVkUm45R1FWMy1HWFlfOEU3TWpsZEZDeUZiOUs1QXNFRE1jQ2ktRTgzT2p1dU1hbkM5WWhZVXlRckVhaUU4Y0huZ19nLWctVVEzVW0weDdWRU45dlAtTjVFSFdIcW55YXVWa0dGS3dLY3diUDJsV19QdVZQLUluWWFwNkZWX0pVc2VBWWlwbU0?oc=5"
         },
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
         }
       ],
@@ -331,6 +401,30 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/975528/fenix-flexin-ai-music-generator-treblo",
+      "clusterId": "ub3z03",
+      "title": "Sure seems like Fenix Flexin used AI music generator Treblo",
+      "desc": "We were pretty sure that Fenix Flexin's \"Rubberz\" was made using AI, but musician Medasin was confident that it was made using Treblo specifically. Now the company and a new detection tool seem to confirm it. On Monday, the company announced the open-source Treblo AI Music Classifier, which detects when a song was generated using […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/975528/fenix-flexin-ai-music-generator-treblo",
+      "dateISO": "2026-08-05T16:57:25.000Z",
+      "date": "AUG 05 2026",
+      "category": "opensource",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/975528/fenix-flexin-ai-music-generator-treblo"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://www.wired.com/story/algorithm-turning-on-ai-influencers-are-humans-worried/",
       "clusterId": "2h35pr",
       "title": "AI Influencers Are Heading Into Uncharted Territory",
@@ -355,38 +449,28 @@
       "entityIds": []
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "clusterId": "14bih8d",
-      "title": "Introducing Claude Tag",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
+      "id": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+      "clusterId": "1c3vn0d",
+      "title": "Reddit is introducing a new moderator: AI",
+      "desc": "Reddit is enlisting AI to help moderate new subreddits - and eventually the rest of site. The company is introducing automated moderation tools that rely on LLMs to help mods manage their communities, and it's expanding who can use those tools today ahead of a full launch later this year. The company calls the suite […]",
+      "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+      "dateISO": "2026-08-05T16:00:00.000Z",
+      "date": "AUG 05 2026",
       "category": "product",
-      "catConfidence": 0.6,
+      "catConfidence": 0.75,
       "family": "product",
-      "significance": 52,
+      "significance": 51,
       "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
+      "verification": "single",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
-        },
-        {
-          "name": "The Hill",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform"
         }
       ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
@@ -471,33 +555,6 @@
       "entityIds": []
     },
     {
-      "id": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
-      "clusterId": "143y47m",
-      "title": "OK, Well, Rogue AI Agents Are Hacking Again",
-      "desc": "Rogue AI agents from OpenAI and Anthropic have again been caught trying to disrupt servers and software—and leaving instructions for future bad behavior.",
-      "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
-      "dateISO": "2026-08-04T23:11:31.000Z",
-      "date": "AUG 04 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex",
       "clusterId": "1at0cdm",
       "title": "How data science teams use ChatGPT Work",
@@ -529,6 +586,33 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
+      "clusterId": "143y47m",
+      "title": "OK, Well, Rogue AI Agents Are Hacking Again",
+      "desc": "Rogue AI agents from OpenAI and Anthropic have again been caught trying to disrupt servers and software—and leaving instructions for future bad behavior.",
+      "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
+      "dateISO": "2026-08-04T23:11:31.000Z",
+      "date": "AUG 04 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt",
+        "claude"
       ]
     },
     {
@@ -584,32 +668,6 @@
       ]
     },
     {
-      "id": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "clusterId": "5cte2v",
-      "title": "Inside our 353,000-person vibe coding course",
-      "desc": "Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "dateISO": "2026-08-03T15:00:00.000Z",
-      "date": "AUG 03 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/"
-        }
-      ],
-      "sourceName": "Google",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
       "clusterId": "yj5148",
       "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
@@ -626,7 +684,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "cbsnews.com",
+          "name": "CBS News",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWHlvQ0t3R3I5NWtGdW1SZlpMVVdka2xtT1FtLXdPRXdSN3cxYzdleEllMGRWNXR6RnN1YUZuNFZLUkRhbWtqY0hjTFN1b2lzYV96OElSZi1tX2F6WGRsaE1BNVRVQmhzazY1TGcwTmJRV0ZUbkFtQzhzZTlYdHFsVWVJalY?oc=5"
         },
         {
@@ -667,6 +725,32 @@
       ]
     },
     {
+      "id": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "clusterId": "5cte2v",
+      "title": "Inside our 353,000-person vibe coding course",
+      "desc": "Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "dateISO": "2026-08-03T15:00:00.000Z",
+      "date": "AUG 03 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://openai.com/index/introducing-gpt-live",
       "clusterId": "1r2qq0e",
       "title": "Introducing GPT-Live",
@@ -694,6 +778,36 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "clusterId": "1vw2030",
+      "title": "Introducing Claude for Teachers",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T07:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        },
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -771,30 +885,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/",
-      "clusterId": "isjcbp",
-      "title": "Texas halts new data centers as governor calls for audits",
-      "desc": "Tech companies and developers have been scouring the U.S. for places to build data centers, and they’ve been drawn to Texas’ loose regulations and seemingly abundant power supply. But even Texas can be pushed to the brink.",
-      "url": "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/",
-      "dateISO": "2026-08-04T15:42:35.000Z",
-      "date": "AUG 04 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNmpPbElvVm1iS3RySHgyeGxYYjRuaFB4elhBWjdaX2lQdUZIbURlVXhCTENnSnBmTmNMR2t1RkYteVhtUGlsOGVURU1YdzZmS0M4a1AydFpXOHM0ckstVVJVWUp6TWFrSVhudGVmdHI2Z0xzdmFMV1Izd0pQVUlVUw?oc=5",
       "clusterId": "1xgcu6g",
       "title": "Anthropic’s AI Claude hacked into three organizations during cybersecurity test",
@@ -819,7 +909,7 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
         },
         {
-          "name": "DW.com",
+          "name": "dw.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
@@ -827,11 +917,11 @@
           "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTmo4d2k1aTNWUzllLV9LUmdFMGNKS0dyZ2RGSVRMRmNQZks4eTFVLTFVU183alhYMmc2X0NYZHlXOGhfZEZQSU90YTNhVjRUWUlpeWNxTm9idFdzajB1VnV2RU1zcnVwazdSLV9jTm1WbDk0a05OdlNZcTdWODZYUEhBNl9BS0ZVaERkUU9fUTQzcjkxOTYwMUgxN0JkZw?oc=5"
         },
         {
-          "name": "theguardian.com",
+          "name": "The Guardian",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPNmpPbElvVm1iS3RySHgyeGxYYjRuaFB4elhBWjdaX2lQdUZIbURlVXhCTENnSnBmTmNMR2t1RkYteVhtUGlsOGVURU1YdzZmS0M4a1AydFpXOHM0ckstVVJVWUp6TWFrSVhudGVmdHI2Z0xzdmFMV1Izd0pQVUlVUw?oc=5"
         }
       ],
-      "sourceName": "theguardian.com",
+      "sourceName": "The Guardian",
       "entityIds": [
         "claude"
       ]
@@ -869,11 +959,11 @@
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
         },
         {
-          "name": "axios.com",
+          "name": "Axios",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5"
         }
       ],
-      "sourceName": "axios.com",
+      "sourceName": "Axios",
       "entityIds": [
         "claude"
       ]
@@ -957,11 +1047,11 @@
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
         },
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
         },
         {
-          "name": "wsj.com",
+          "name": "WSJ",
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
         },
         {
@@ -1029,11 +1119,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5"
         }
       ],
-      "sourceName": "reuters.com",
+      "sourceName": "Reuters",
       "entityIds": [
         "claude",
         "qwen"
@@ -1090,107 +1180,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "clusterId": "frzhfp",
-      "title": "PRC-linked influence operations are targeting AI debates in the US",
-      "desc": "A new report from OpenAI details PRC-linked influence operations using AI to target U.S. tech debates, data center narratives, tariffs, and false claims about ChatGPT.",
-      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
-      "dateISO": "2026-06-10T12:00:00.000Z",
-      "date": "JUN 10 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud",
-      "clusterId": "4bktf1",
-      "title": "SpaceX made more revenue as an AI company than a space company",
-      "desc": "SpaceX's AI revenue grew more than three times to $2.6 billion from the year before, mostly because of deals that the company made to provide compute to other AI companies, according to SpaceX's quarterly earnings. The AI division, which the company said in its documents to go public was the source of most of its […]",
-      "url": "https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud",
-      "dateISO": "2026-08-04T20:47:55.000Z",
-      "date": "AUG 04 2026",
-      "category": "market",
-      "catConfidence": 0.86,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/08/04/open-weight-ai-models-are-catching-up-to-the-frontier-the-safety-gap-remains/",
-      "clusterId": "hlsi81",
-      "title": "Open-weight AI models are catching up to the frontier. The safety gap remains.",
-      "desc": "A new SaferAI report finds Z.ai's open-weight GLM-5.2 approaches frontier AI capabilities while lacking key safety mitigations, renewing concerns that powerful open models could outpace governance and safeguards.",
-      "url": "https://techcrunch.com/2026/08/04/open-weight-ai-models-are-catching-up-to-the-frontier-the-safety-gap-remains/",
-      "dateISO": "2026-08-04T20:05:26.000Z",
-      "date": "AUG 04 2026",
-      "category": "opensource",
-      "catConfidence": 0.71,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/04/open-weight-ai-models-are-catching-up-to-the-frontier-the-safety-gap-remains/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
-      "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "clusterId": "1msd1dg",
-      "title": "Building AI infrastructure with the Effingham County community",
-      "desc": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
-      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "dateISO": "2026-07-22T13:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1208,7 +1197,7 @@
       "sourceCount": 7,
       "sources": [
         {
-          "name": "massbio.org",
+          "name": "Massachusetts Biotechnology Council",
           "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNM3loSnFaZjI2VEo0MS1ZQWY3NWdTaFJfd2NoZWNXRkl1TEwtelV3c0U2SFdac1RqbFl1dlFBOEE4b3EwTU1fc1JUenNiVG5zUEpUdVkxZjNpZnRJWmpqU0RGbmQ3ZTVlMnJncFJJUGMwbE4zbkdfU2wzU2Zsb0FSUDBtTnowQUNDYmxhLUs1T3hHY2lqWnB5VW9Tb1VuTDdfOEFTSFpTWXY5dmhXbFRJbV9TOW9wUFFydVZoUlJmSmtwZw?oc=5"
         },
         {
@@ -1232,7 +1221,7 @@
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWFMLUFicUpQcmdVbGVZS1VmekY5c3Bmc0pFQmxtX01mRnd0aFNmNTVkUm45R1FWMy1HWFlfOEU3TWpsZEZDeUZiOUs1QXNFRE1jQ2ktRTgzT2p1dU1hbkM5WWhZVXlRckVhaUU4Y0huZ19nLWctVVEzVW0weDdWRU45dlAtTjVFSFdIcW55YXVWa0dGS3dLY3diUDJsV19QdVZQLUluWWFwNkZWX0pVc2VBWWlwbU0?oc=5"
         },
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
         }
       ],
@@ -1243,38 +1232,26 @@
     },
     {
       "family": "market",
-      "category": "policy",
-      "title": "Apple is getting this wrong",
-      "summary": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
-      "significance": 77,
-      "impact": "high",
-      "verification": "official",
-      "date": "AUG 03 2026",
-      "dateISO": "2026-08-03T22:00:00.000Z",
-      "url": "https://openai.com/index/apple-is-getting-this-wrong",
-      "sourceCount": 4,
+      "category": "compute",
+      "title": "Anthropic is hiring an AI chip design team",
+      "summary": "Anthropic is building a team for designing its own custom AI chips. The Claude maker said it would co-design hardware and models to help its technology run faster and more efficie…",
+      "significance": 75,
+      "impact": "notable",
+      "verification": "single",
+      "date": "AUG 05 2026",
+      "dateISO": "2026-08-05T14:13:18.000Z",
+      "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/the-white-house-is-keeping-its-ai-cybersecurity-framework-secret/"
-        },
-        {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/974914/openai-blog-response-apple-lawsuit-messages"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/apple-is-getting-this-wrong"
+          "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/"
         }
       ],
       "entityIds": [
-        "gpt"
+        "claude"
       ],
-      "whyItMatters": "However it resolves, the case could set a precedent for how models may be built, trained or licensed."
+      "whyItMatters": "If it holds up, compute supply and cost set the ceiling on how large — and how cheap — the next models can be."
     },
     {
       "family": "research",
@@ -1305,10 +1282,10 @@
     "chatgpt": 21,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 70,
-    "claude": 69,
-    "gemini": 31,
-    "grok": 1,
+    "gpt": 71,
+    "claude": 70,
+    "gemini": 32,
+    "grok": 2,
     "llama": 0,
     "deepseek": 0,
     "qwen": 2,
@@ -1345,7 +1322,7 @@
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBBd0pLTktMWnd3bV9meUlYZjZMLTVGTDZCNzlXWHBHUXlNRWtkMTVyck5HaFVtYzd1ODZJVGpUWXhlOW4zemxURU1jZldrblRaT19DRVJMN3hZTG1CcTZVczgwb3JadjZJcmFsM1JBLXp2WUdHbExV?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "axios.com",
+          "sourceName": "Axios",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1373,15 +1350,15 @@
           "impact": "emerging"
         },
         {
-          "h": "Introducing a way to reflect on how you use Claude",
-          "d": "JUL 09 2026",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
+          "h": "Introducing Claude for Teachers",
+          "d": "JUL 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Anthropic",
-          "sourceCount": 1,
+          "sourceCount": 2,
           "verification": "official",
-          "impact": "emerging"
+          "impact": "notable"
         }
       ]
     },
@@ -1488,6 +1465,30 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "AUG 05 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Google just announced a major shakeup of its top AI leadership",
+      "p": "Google is making some significant AI leadership changes, including a major shift for Google DeepMind leader Demis Hassabis. Hassabis will become the chair of Google DeepMind and the chief scientist at Alphabet, CEO Sundar Pichai announced on Wednesday. Hassab…",
+      "url": "https://www.theverge.com/tech/975677/google-deepmind-ai-demis-hassabis-shakeup",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "XAI",
+      "logoKey": "xai",
+      "date": "AUG 05 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "SpaceX is barely Space and mostly X",
+      "p": "Once, I had some questions about why SpaceX, Elon Musk's healthiest company, acquired xAI, his sickliest one. Now I have some questions about why we're calling the whole thing SpaceX. Look, what we have here, by revenue, is primarily a telecom company and a c…",
+      "url": "https://www.theverge.com/science/975545/spacex-x-earnings-ai-data-centers-compute-space",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "META",
       "logoKey": "meta",
       "date": "AUG 05 2026",
@@ -1497,6 +1498,18 @@
       "p": "More than 50 offending image and video ads were published across Facebook, Instagram, Messenger, or Threads, according to Meta’s ad library data. Some ran as recently as this week.",
       "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
       "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 05 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Reddit is introducing a new moderator: AI",
+      "p": "Reddit is enlisting AI to help moderate new subreddits - and eventually the rest of site. The company is introducing automated moderation tools that rely on LLMs to help mods manage their communities, and it's expanding who can use those tools today ahead of…",
+      "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1546,45 +1559,21 @@
       "url": "https://www.theverge.com/ai-artificial-intelligence/975577/aisi-openai-anthropic-agent-hacking",
       "sourceName": "The Verge",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 05 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "TechCrunch Disrupt 2026’s Real World AI Stage features robots, automated factor…",
-      "p": "On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.",
-      "url": "https://techcrunch.com/2026/08/05/techcrunch-disrupt-2026s-real-world-ai-stage-features-robots-automated-factories-and-extinct-animals/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "AUG 05 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Anthropic is hiring an AI chip design team",
-      "p": "Anthropic is building a team for designing its own custom AI chips. The Claude maker said it would co-design hardware and models to help its technology run faster and more efficiently.",
-      "url": "https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 05 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "SpaceX spooks investors with debut earnings report",
-      "p": "Shares slide in pre-market trading even as group says its quarterly revenues nearly doubled.",
-      "url": "https://arstechnica.com/ai/2026/08/spacex-spooks-investors-with-debut-earnings-report/",
-      "sourceName": "Ars Technica",
-      "sourceCount": 1
     }
   ],
   "feed": [
+    {
+      "name": "Sure seems like Fenix Flexin used AI music generator Treblo",
+      "org": "The Verge",
+      "date": "AUG 05 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "We were pretty sure that Fenix Flexin's \"Rubberz\" was made using AI, but musician Medasin was confident that it was made using Treblo speci…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/975528/fenix-flexin-ai-music-generator-treblo",
+      "sourceName": "The Verge",
+      "verification": "single",
+      "impact": "notable"
+    },
     {
       "name": "Open-weight AI models are catching up to the frontier. The…",
       "org": "TechCrunch",
@@ -1696,11 +1685,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 221.28,
-      "changePct": 4.406905836699137,
+      "price": 221.32,
+      "changePct": 4.425783134264958,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 89902339,
+      "volume": 93005009,
       "ohlc": [
         {
           "d": "05-05",
@@ -2148,22 +2137,22 @@
           "o": 216.86000061035156,
           "h": 222.22000122070312,
           "l": 216.39999389648438,
-          "c": 221.27999877929688
+          "c": 221.32000732421875
         }
       ],
-      "relVolume": 0.6933584925683389,
-      "marketCap": 5399232000000
+      "relVolume": 0.717287376044185,
+      "marketCap": 5400208000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 488.89,
-      "changePct": -0.7954349403575512,
+      "price": 488.005,
+      "changePct": -0.9750193177056945,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 16054458,
+      "volume": 16537905,
       "ohlc": [
         {
           "d": "05-05",
@@ -2611,22 +2600,22 @@
           "o": 496.3550109863281,
           "h": 498.2099914550781,
           "l": 487.2117919921875,
-          "c": 488.8900146484375
+          "c": 488.0050048828125
         }
       ],
-      "relVolume": 0.4124874216636047,
-      "marketCap": 3632452700000
+      "relVolume": 0.4249086324289264,
+      "marketCap": 3625877150000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 421.145,
-      "changePct": 0.7138380824136619,
+      "price": 421.03,
+      "changePct": 0.6863389831770174,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7502975,
+      "volume": 7731308,
       "ohlc": [
         {
           "d": "05-05",
@@ -3074,22 +3063,22 @@
           "o": 422.3399963378906,
           "h": 427,
           "l": 418,
-          "c": 421.1449890136719
+          "c": 421.0299987792969
         }
       ],
-      "relVolume": 0.3660443128291568,
-      "marketCap": 2072033400000
+      "relVolume": 0.37718389360627785,
+      "marketCap": 2071467599999.9998
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 362.595,
-      "changePct": -3.986493557287835,
+      "price": 364.525,
+      "changePct": -3.4754402785976537,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 27459432,
+      "volume": 28983214,
       "ohlc": [
         {
           "d": "05-05",
@@ -3537,22 +3526,22 @@
           "o": 382.94000244140625,
           "h": 384.4700012207031,
           "l": 356.82000732421875,
-          "c": 362.5950012207031
+          "c": 364.5249938964844
         }
       ],
-      "relVolume": 0.8805754066812876,
-      "marketCap": 4423659000000
+      "relVolume": 0.9294403997497396,
+      "marketCap": 4447205000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 272.61,
-      "changePct": -1.7338432136673683,
+      "price": 272.23,
+      "changePct": -1.8708103922567947,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 21442308,
+      "volume": 22257795,
       "ohlc": [
         {
           "d": "05-05",
@@ -4000,22 +3989,22 @@
           "o": 281.5899963378906,
           "h": 282.7900085449219,
           "l": 272.010009765625,
-          "c": 272.6099853515625
+          "c": 272.2300109863281
         }
       ],
-      "relVolume": 0.432791530874606,
-      "marketCap": 2916927000000
+      "relVolume": 0.44925131995786793,
+      "marketCap": 2912861000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 582.85,
-      "changePct": -0.8657391628963057,
+      "price": 584.75,
+      "changePct": -0.5424897348218988,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 6867579,
+      "volume": 7245373,
       "ohlc": [
         {
           "d": "05-05",
@@ -4463,22 +4452,22 @@
           "o": 600.5250244140625,
           "h": 601,
           "l": 580.1199951171875,
-          "c": 582.8499755859375
+          "c": 584.75048828125
         }
       ],
-      "relVolume": 0.35416732956779706,
-      "marketCap": 1468782000000
+      "relVolume": 0.37365051164793567,
+      "marketCap": 1473570000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 416.9,
-      "changePct": -0.06472649580715249,
+      "price": 416.28,
+      "changePct": -0.21344088699878938,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 8659199,
+      "volume": 8838529,
       "ohlc": [
         {
           "d": "05-05",
@@ -4926,22 +4915,22 @@
           "o": 419.32000732421875,
           "h": 426.2200012207031,
           "l": 413.0700988769531,
-          "c": 416.8999938964844
+          "c": 416.27960205078125
         }
       ],
-      "relVolume": 0.5761780887682455,
-      "marketCap": 2163711000000
+      "relVolume": 0.5881106031565636,
+      "marketCap": 2160493199999.9998
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 487.54,
-      "changePct": -5.985577446487725,
+      "price": 488.9,
+      "changePct": -5.723325661470161,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 33010841,
+      "volume": 33665633,
       "ohlc": [
         {
           "d": "05-05",
@@ -5389,22 +5378,22 @@
           "o": 484.4949951171875,
           "h": 502,
           "l": 478.20001220703125,
-          "c": 487.5400085449219
+          "c": 488.8999938964844
         }
       ],
-      "relVolume": 1.1583403556586256,
-      "marketCap": 789814800000
+      "relVolume": 1.1813168074903868,
+      "marketCap": 792018000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 160.325,
-      "changePct": -1.4355137472624517,
+      "price": 160.07,
+      "changePct": -1.592276084827083,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 37395264,
+      "volume": 38300469,
       "ohlc": [
         {
           "d": "05-05",
@@ -5852,22 +5841,22 @@
           "o": 162.0500030517578,
           "h": 166.05999755859375,
           "l": 158.52999877929688,
-          "c": 160.3249969482422
+          "c": 160.07000732421875
         }
       ],
-      "relVolume": 0.8872543414831481,
-      "marketCap": 384780000000
+      "relVolume": 0.9087315816540492,
+      "marketCap": 384168000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 144.447,
-      "changePct": 0.00034428971548751045,
+      "price": 144.13,
+      "changePct": -1.1047073896446915,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 11304569,
+      "volume": 11677127,
       "ohlc": [
         {
           "d": "05-05",
@@ -6315,29 +6304,29 @@
           "o": 145,
           "h": 146.389892578125,
           "l": 142.5,
-          "c": 144.44650268554688
+          "c": 144.1300048828125
         }
       ],
-      "relVolume": 0.28913952581867586,
-      "marketCap": 405896070000
+      "relVolume": 0.2986685263015739,
+      "marketCap": 405005300000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.87 – $3.29/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
+      "rate": "$1.99 – $3.29/hr",
+      "trend": "↑ 3% vs 7d ago",
+      "trendClass": "trend-up",
       "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.67/hr",
-      "trend": "↑ 4% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6373,7 +6362,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-05T16:45:32.236Z",
+    "updatedAt": "2026-08-05T17:00:41.147Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6382,16 +6371,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 339,
+        "rawStoryHits": 340,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 35,
-        "storyCoverage": 0.8849557522123894,
+        "storyCoverage": 0.8823529411764706,
         "estimatedRelevantDiscussions": 43,
         "isEstimated": true,
-        "rawCommentHits": 2206,
+        "rawCommentHits": 2471,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 34,
-        "commentCoverage": 0.1359927470534905,
+        "validatedCommentCount": 33,
+        "commentCoverage": 0.12140833670578713,
         "limited": false,
         "points": 442,
         "themes": [
@@ -6403,7 +6392,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
+            "count": 10
           },
           {
             "id": "writing",
@@ -6426,11 +6415,6 @@
             "count": 3
           },
           {
-            "id": "safety",
-            "label": "Safety",
-            "count": 2
-          },
-          {
             "id": "reliability",
             "label": "Reliability",
             "count": 1
@@ -6438,6 +6422,11 @@
           {
             "id": "multimodal",
             "label": "Image/video",
+            "count": 1
+          },
+          {
+            "id": "safety",
+            "label": "Safety",
             "count": 1
           }
         ],
@@ -6475,18 +6464,18 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1024,
+        "rawStoryHits": 1026,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 30,
-        "storyCoverage": 0.29296875,
-        "estimatedRelevantDiscussions": 102,
+        "storyCoverage": 0.29239766081871343,
+        "estimatedRelevantDiscussions": 103,
         "isEstimated": true,
-        "rawCommentHits": 6523,
+        "rawCommentHits": 6525,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 54,
-        "commentCoverage": 0.0459911083857121,
+        "validatedCommentCount": 53,
+        "commentCoverage": 0.04597701149425287,
         "limited": false,
-        "points": 829,
+        "points": 830,
         "themes": [
           {
             "id": "coding",
@@ -6519,11 +6508,6 @@
             "count": 2
           },
           {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 1
-          },
-          {
             "id": "local",
             "label": "Local use",
             "count": 1
@@ -6548,7 +6532,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 102,
+            "discussions": 103,
             "isEstimated": true
           },
           {
@@ -6563,18 +6547,18 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
-        "validatedStoryCount": 36,
+        "rawStoryHits": 146,
+        "fetchedStoryCount": 146,
+        "validatedStoryCount": 37,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 47,
+        "estimatedRelevantDiscussions": 48,
         "isEstimated": true,
-        "rawCommentHits": 1167,
+        "rawCommentHits": 1176,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 37,
-        "commentCoverage": 0.2570694087403599,
+        "validatedCommentCount": 41,
+        "commentCoverage": 0.25510204081632654,
         "limited": false,
-        "points": 874,
+        "points": 876,
         "themes": [
           {
             "id": "coding",
@@ -6584,12 +6568,12 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 14
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 6
+            "count": 7
           },
           {
             "id": "writing",
@@ -6641,7 +6625,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 36,
+            "discussions": 37,
             "isEstimated": false
           },
           {
@@ -6661,18 +6645,18 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 577,
+        "rawStoryHits": 579,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 11,
-        "storyCoverage": 0.5199306759098787,
-        "estimatedRelevantDiscussions": 21,
+        "validatedStoryCount": 12,
+        "storyCoverage": 0.5181347150259067,
+        "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 10574,
+        "rawCommentHits": 10576,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 33,
-        "commentCoverage": 0.02837147720824664,
+        "validatedCommentCount": 34,
+        "commentCoverage": 0.028366111951588502,
         "limited": false,
-        "points": 412,
+        "points": 414,
         "themes": [
           {
             "id": "reasoning",
@@ -6724,7 +6708,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
+            "discussions": 23,
             "isEstimated": true
           },
           {
@@ -6745,10 +6729,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 524,
+        "rawCommentHits": 526,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 43,
-        "commentCoverage": 0.5725190839694656,
+        "validatedCommentCount": 45,
+        "commentCoverage": 0.5703422053231939,
         "limited": false,
         "points": 239,
         "themes": [
@@ -6828,10 +6812,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 11,
         "isEstimated": false,
-        "rawCommentHits": 1072,
+        "rawCommentHits": 1073,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 58,
-        "commentCoverage": 0.2798507462686567,
+        "validatedCommentCount": 59,
+        "commentCoverage": 0.27958993476234856,
         "limited": false,
         "points": 683,
         "themes": [
@@ -6843,7 +6827,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 15
           },
           {
             "id": "price",
@@ -6910,23 +6894,23 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 233,
-        "fetchedStoryCount": 233,
+        "rawStoryHits": 232,
+        "fetchedStoryCount": 232,
         "validatedStoryCount": 7,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 4369,
+        "rawCommentHits": 4372,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 57,
-        "commentCoverage": 0.0686655985351339,
+        "validatedCommentCount": 58,
+        "commentCoverage": 0.0686184812442818,
         "limited": true,
         "points": 418,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 15
+            "count": 16
           },
           {
             "id": "coding",
@@ -7049,17 +7033,6 @@
       {
         "modelId": "gpt",
         "themes": [
-          "local"
-        ],
-        "excerpt": "…weight model.What motivates the people who build their own ChatGPT/Claude harness for example? And how do you keep it tuned with the rapid development of frontier…",
-        "source": "Hacker News",
-        "author": "kriro",
-        "publishedAt": "2026-08-04T13:26:00.000Z",
-        "url": "https://news.ycombinator.com/item?id=49168664"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
           "safety"
         ],
         "excerpt": "…models. Whatever safety concerns the public has against ChatGPT and Claude are drastically higher in open weight models. What is the right thing to do then? Accept that…",
@@ -7067,6 +7040,17 @@
         "author": "simianwords",
         "publishedAt": "2026-07-31T20:44:58.000Z",
         "url": "https://news.ycombinator.com/item?id=49128327"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "local"
+        ],
+        "excerpt": "…weight model.What motivates the people who build their own ChatGPT/Claude harness for example? And how do you keep it tuned with the rapid development of frontier…",
+        "source": "Hacker News",
+        "author": "kriro",
+        "publishedAt": "2026-08-04T13:26:00.000Z",
+        "url": "https://news.ycombinator.com/item?id=49168664"
       },
       {
         "modelId": "claude",
@@ -7078,17 +7062,6 @@
         "author": "simongray",
         "publishedAt": "2026-08-04T05:55:46.000Z",
         "url": "https://news.ycombinator.com/item?id=49164758"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "reliability"
-        ],
-        "excerpt": "… otherwise headless. https://github.com/1-bit-wonder/kestrel• Claude-powered customer-service chatbot — grounded in site + brand content, running in production. Learned that scope…",
-        "source": "Hacker News",
-        "author": "planet_y",
-        "publishedAt": "2026-08-04T01:09:13.000Z",
-        "url": "https://news.ycombinator.com/item?id=49163300"
       },
       {
         "modelId": "claude",
@@ -7111,6 +7084,18 @@
         "author": "aafaqzahid",
         "publishedAt": "2026-08-05T07:18:49.000Z",
         "url": "https://news.ycombinator.com/item?id=49179596"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "reasoning"
+        ],
+        "excerpt": "…APIs), Metabase, Docker, CI/CD. AI-native workflow: Claude Code/Cursor daily, multi-agent pipelines via Anthropic API, MCP.Résumé/CV: https://alami.no/cv/dev/Email:…",
+        "source": "Hacker News",
+        "author": "ricalamino",
+        "publishedAt": "2026-08-04T12:16:44.000Z",
+        "url": "https://news.ycombinator.com/item?id=49167634"
       },
       {
         "modelId": "gemini",
@@ -7138,13 +7123,14 @@
       {
         "modelId": "gemini",
         "themes": [
-          "multimodal"
+          "reasoning",
+          "price"
         ],
-        "excerpt": "… Arena’s scoring system. They have MAI Image 2.5 ranked above Gemini Nano Banana Pro, and maybe that’s true on paper but good luck using it. Microsoft’s censorship makes Google…",
+        "excerpt": "…same price, that might drive people away\" (as happened with Gemini 2.5 Pro, the one model where Google really was SOTA). Google's likely been providing insufficient training…",
         "source": "Hacker News",
-        "author": "vunderba",
-        "publishedAt": "2026-08-05T16:33:33.000Z",
-        "url": "https://news.ycombinator.com/item?id=49185187"
+        "author": "logicchains",
+        "publishedAt": "2026-08-05T16:54:07.000Z",
+        "url": "https://news.ycombinator.com/item?id=49185490"
       },
       {
         "modelId": "gemini",
@@ -7173,6 +7159,17 @@
       {
         "modelId": "gemini",
         "themes": [
+          "multimodal"
+        ],
+        "excerpt": "… Arena’s scoring system. They have MAI Image 2.5 ranked above Gemini Nano Banana Pro, and maybe that’s true on paper but good luck using it. Microsoft’s censorship makes Google…",
+        "source": "Hacker News",
+        "author": "vunderba",
+        "publishedAt": "2026-08-05T16:33:33.000Z",
+        "url": "https://news.ycombinator.com/item?id=49185187"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
           "reasoning",
           "speed"
         ],
@@ -7193,18 +7190,6 @@
         "author": "dotfrag",
         "publishedAt": "2026-08-03T21:42:02.000Z",
         "url": "https://news.ycombinator.com/item?id=49161835"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
-          "coding",
-          "reliability"
-        ],
-        "excerpt": "…@ DeeveloX (preprocessed 5GB+ vector search datasets with Gemini APIs).Recent High-Agency Projects:• AutoPatch-AI (https://github.com/sriramvarun0636/AutoPatch-AI):…",
-        "source": "Hacker News",
-        "author": "varun636",
-        "publishedAt": "2026-08-03T15:20:07.000Z",
-        "url": "https://news.ycombinator.com/item?id=49156967"
       },
       {
         "modelId": "grok",
