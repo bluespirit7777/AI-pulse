@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-05T11:45:27.217Z",
+  "updatedAt": "2026-08-05T12:00:36.076Z",
   "build": {
-    "sha": "a7c956c106d53cb6a1f867a84f7f15677195e100",
-    "shortSha": "a7c956c",
+    "sha": "3a79cf52efffb486045433148af9183fdd48e8a0",
+    "shortSha": "3a79cf5",
     "ref": "main",
-    "builtAt": "2026-08-05T11:45:43.374Z"
+    "builtAt": "2026-08-05T12:01:10.885Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 26.5,
     "estimatedDatasets": 4,
-    "buildSha": "a7c956c",
-    "lastSuccessfulUpdate": "2026-08-05T11:45:27.217Z"
+    "buildSha": "3a79cf5",
+    "lastSuccessfulUpdate": "2026-08-05T12:00:36.076Z"
   },
   "ticker": [
     "APPLE IS GETTING THIS WRONG",
@@ -25,8 +25,8 @@
     "GOOGLE ASSISTANT WILL DISAPPEAR FROM YOUR PHONE NEXT MONTH",
     "HOW AN OPENAI INFLUENCER TRIP BACKFIRED",
     "AI MAKES WEATHER PREDICTION BETTER. CAN WINDBORNE MAKE IT LUCRATIVE?",
-    "OK, WELL, ROGUE AI AGENTS ARE HACKING AGAIN",
-    "MISTRAL IS IN THE RIGHT PLACE AT THE RIGHT TIME"
+    "MISTRAL IS IN THE RIGHT PLACE AT THE RIGHT TIME",
+    "AWS IS HELPING VIBE-CODING STARTUP SUPERBLOCKS, AND THE IMPLICATIONS ARE BIG"
   ],
   "signals": [
     {
@@ -104,7 +104,7 @@
       "category": "market",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 62,
+      "significance": 61,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -273,33 +273,6 @@
       "entityIds": []
     },
     {
-      "id": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
-      "clusterId": "143y47m",
-      "title": "OK, Well, Rogue AI Agents Are Hacking Again",
-      "desc": "Rogue AI agents from OpenAI and Anthropic have again been caught trying to disrupt servers and software—and leaving instructions for future bad behavior.",
-      "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
-      "dateISO": "2026-08-04T23:11:31.000Z",
-      "date": "AUG 04 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
       "id": "https://www.wired.com/story/mistral-is-in-the-right-place-at-the-right-time/",
       "clusterId": "1isuues",
       "title": "Mistral Is in the Right Place at the Right Time",
@@ -382,6 +355,33 @@
       ],
       "sourceName": "Anthropic",
       "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
+      "clusterId": "143y47m",
+      "title": "OK, Well, Rogue AI Agents Are Hacking Again",
+      "desc": "Rogue AI agents from OpenAI and Anthropic have again been caught trying to disrupt servers and software—and leaving instructions for future bad behavior.",
+      "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/",
+      "dateISO": "2026-08-04T23:11:31.000Z",
+      "date": "AUG 04 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ok-well-there-are-even-more-ai-agent-hacking-incidents/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt",
         "claude"
       ]
     },
@@ -532,6 +532,30 @@
       ]
     },
     {
+      "id": "https://www.wired.com/story/algorithm-turning-on-ai-influencers-are-humans-worried/",
+      "clusterId": "2h35pr",
+      "title": "AI Influencers Are Heading Into Uncharted Territory",
+      "desc": "Some creators fear the EU AI Act’s regulatory chaos will upend their lucrative businesses. Others are owning it by incorporating AI transparency into their creative process.",
+      "url": "https://www.wired.com/story/algorithm-turning-on-ai-influencers-are-humans-worried/",
+      "dateISO": "2026-08-05T00:00:00.000Z",
+      "date": "AUG 05 2026",
+      "category": "policy",
+      "catConfidence": 0.83,
+      "family": "market",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/algorithm-turning-on-ai-influencers-are-humans-worried/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": []
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
       "clusterId": "yj5148",
       "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
@@ -548,7 +572,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "cbsnews.com",
+          "name": "CBS News",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWHlvQ0t3R3I5NWtGdW1SZlpMVVdka2xtT1FtLXdPRXdSN3cxYzdleEllMGRWNXR6RnN1YUZuNFZLUkRhbWtqY0hjTFN1b2lzYV96OElSZi1tX2F6WGRsaE1BNVRVQmhzazY1TGcwTmJRV0ZUbkFtQzhzZTlYdHFsVWVJalY?oc=5"
         },
         {
@@ -825,7 +849,7 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
         },
         {
-          "name": "DW.com",
+          "name": "dw.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
@@ -959,7 +983,7 @@
       "sourceCount": 5,
       "sources": [
         {
-          "name": "South China Morning Post",
+          "name": "scmp.com",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
         },
         {
@@ -1164,32 +1188,6 @@
         }
       ],
       "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/08/03/influencers-draw-backlash-for-attending-openais-first-luxury-trip/",
-      "clusterId": "v3xgz1",
-      "title": "Influencers draw backlash for attending OpenAI’s first luxury trip",
-      "desc": "OpenAI’s first-ever influencer brand trip is sparking online backlash as tensions over the use of AI continue.",
-      "url": "https://techcrunch.com/2026/08/03/influencers-draw-backlash-for-attending-openais-first-luxury-trip/",
-      "dateISO": "2026-08-03T19:09:56.000Z",
-      "date": "AUG 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/03/influencers-draw-backlash-for-attending-openais-first-luxury-trip/"
-        }
-      ],
-      "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
       ]
@@ -1539,6 +1537,18 @@
       "sourceCount": 1
     },
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 05 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "AI Influencers Are Heading Into Uncharted Territory",
+      "p": "Some creators fear the EU AI Act’s regulatory chaos will upend their lucrative businesses. Others are owning it by incorporating AI transparency into their creative process.",
+      "url": "https://www.wired.com/story/algorithm-turning-on-ai-influencers-are-humans-worried/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "AUG 04 2026",
@@ -1561,18 +1571,6 @@
       "url": "https://openai.com/index/apple-is-getting-this-wrong",
       "sourceName": "OpenAI",
       "sourceCount": 4
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 04 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "SpaceX has bought $329M worth of Tesla Megapacks so far this year",
-      "p": "The purchase illustrates just how interconnected Elon Musk's universe of companies are.",
-      "url": "https://techcrunch.com/2026/08/04/spacex-has-bought-329m-worth-of-tesla-megapacks-so-far-this-year/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -6259,9 +6257,9 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.29/hr",
-      "trend": "↑ 3% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$1.87 – $3.29/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6299,14 +6297,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "↑ 4% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$0.41 – $1.59/hr",
+      "trend": "↓ 20% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-05T11:45:27.217Z",
+    "updatedAt": "2026-08-05T12:00:36.076Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6321,10 +6319,10 @@
         "storyCoverage": 0.8902077151335311,
         "estimatedRelevantDiscussions": 42,
         "isEstimated": true,
-        "rawCommentHits": 2443,
+        "rawCommentHits": 2444,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.12279983626688498,
+        "commentCoverage": 0.12274959083469722,
         "limited": false,
         "points": 440,
         "themes": [
@@ -6378,7 +6376,7 @@
           {
             "title": "Show HN: What should the GUI for AI agents look like?",
             "points": 136,
-            "comments": 80,
+            "comments": 81,
             "url": "https://marbleos.com/demo",
             "date": "JUL 31 2026"
           },
@@ -6410,16 +6408,16 @@
         "org": "Anthropic",
         "rawStoryHits": 1027,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 30,
+        "validatedStoryCount": 29,
         "storyCoverage": 0.2921129503407984,
-        "estimatedRelevantDiscussions": 103,
+        "estimatedRelevantDiscussions": 99,
         "isEstimated": true,
-        "rawCommentHits": 6587,
+        "rawCommentHits": 6585,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
-        "commentCoverage": 0.045544253833308034,
+        "commentCoverage": 0.04555808656036447,
         "limited": false,
-        "points": 831,
+        "points": 825,
         "themes": [
           {
             "id": "coding",
@@ -6481,7 +6479,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 103,
+            "discussions": 99,
             "isEstimated": true
           },
           {
@@ -6497,10 +6495,10 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 146,
-        "fetchedStoryCount": 146,
+        "fetchedStoryCount": 144,
         "validatedStoryCount": 37,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 48,
+        "storyCoverage": 0.9863013698630136,
+        "estimatedRelevantDiscussions": 49,
         "isEstimated": true,
         "rawCommentHits": 1150,
         "fetchedCommentCount": 300,
@@ -6574,8 +6572,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 37,
-            "isEstimated": false
+            "discussions": 38,
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6600,10 +6598,10 @@
         "storyCoverage": 0.5226480836236934,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 10520,
+        "rawCommentHits": 10524,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.028517110266159697,
+        "commentCoverage": 0.028506271379703536,
         "limited": false,
         "points": 412,
         "themes": [
@@ -6849,10 +6847,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 4373,
+        "rawCommentHits": 4375,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.0686027898467871,
+        "commentCoverage": 0.06857142857142857,
         "limited": true,
         "points": 418,
         "themes": [
