@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06T04:30:29.487Z",
+  "updatedAt": "2026-08-06T04:45:25.630Z",
   "layers": [
     {
       "id": 1,
@@ -2802,16 +2802,16 @@
       "url": "https://finance.yahoo.com/quote/TSM",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
       "price": 414,
-      "changePct": 1.9428270500680374,
+      "changePct": -0.759885256777573,
       "changeReview": false,
-      "direction": "up",
-      "weekChangePct": 3.7360003505289017,
-      "monthChangePct": -4.643450223894682,
+      "direction": "down",
+      "weekChangePct": 10.497233608969221,
+      "monthChangePct": -4.292948426796546,
       "marketCap": 2148660000000,
       "volume": 11779163,
       "dollarVolume": 4876573482,
-      "avg20Volume": 15084195,
-      "relVolume": 0.8372737159656183,
+      "avg20Volume": 15030150,
+      "relVolume": 0.849219734999318,
       "chart": [
         {
           "d": "05-06",
@@ -3239,6 +3239,20 @@
           "h": 407.44,
           "l": 398.2,
           "c": 406.11
+        },
+        {
+          "d": "08-04",
+          "o": 418,
+          "h": 420.25,
+          "l": 412.11,
+          "c": 417.17
+        },
+        {
+          "d": "08-05",
+          "o": 419.32,
+          "h": 426.3,
+          "l": 413.07,
+          "c": 414
         }
       ]
     },
@@ -3250,16 +3264,16 @@
       "url": "https://finance.yahoo.com/quote/AMD",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
       "price": 482.05,
-      "changePct": -0.5344203058256157,
+      "changePct": -7.044241600722187,
       "changeReview": false,
       "direction": "down",
-      "weekChangePct": -2.6063262731338876,
-      "monthChangePct": -6.907807117970692,
+      "weekChangePct": 12.21947819459496,
+      "monthChangePct": -6.599368065973932,
       "marketCap": 780921000000,
-      "volume": 47426772,
-      "dollarVolume": 22862075442.600002,
-      "avg20Volume": 27900535,
-      "relVolume": 0.868639257275891,
+      "volume": 47435209,
+      "dollarVolume": 22866142498.45,
+      "avg20Volume": 28552280,
+      "relVolume": 1.7322014213926173,
       "chart": [
         {
           "d": "05-06",
@@ -3687,6 +3701,20 @@
           "h": 490.95,
           "l": 455.3,
           "c": 484.64
+        },
+        {
+          "d": "08-04",
+          "o": 504,
+          "h": 530.13,
+          "l": 502.2,
+          "c": 518.58
+        },
+        {
+          "d": "08-05",
+          "o": 484.5,
+          "h": 502,
+          "l": 478.2,
+          "c": 482.05
         }
       ]
     },
@@ -4160,16 +4188,16 @@
       "url": "https://finance.yahoo.com/quote/ORCL",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
       "price": 144.39,
-      "changePct": 1.7906195186419591,
+      "changePct": -0.9263112753065917,
       "changeReview": false,
-      "direction": "up",
-      "weekChangePct": 20.425352929487012,
-      "monthChangePct": 2.9371894218641037,
+      "direction": "down",
+      "weekChangePct": 22.634620357912826,
+      "monthChangePct": 1.970334156690084,
       "marketCap": 405735899999.99994,
       "volume": 18318870,
       "dollarVolume": 2645061639.2999997,
-      "avg20Volume": 38625990,
-      "relVolume": 1.282566479202216,
+      "avg20Volume": 39102860,
+      "relVolume": 0.5983833407581952,
       "chart": [
         {
           "d": "05-06",
@@ -4597,6 +4625,20 @@
           "h": 143.07,
           "l": 130.21,
           "c": 141.85
+        },
+        {
+          "d": "08-04",
+          "o": 141.01,
+          "h": 148.7,
+          "l": 141.01,
+          "c": 145.74
+        },
+        {
+          "d": "08-05",
+          "o": 145,
+          "h": 146.39,
+          "l": 142.5,
+          "c": 144.39
         }
       ]
     }
@@ -4605,7 +4647,19 @@
     {
       "a": "TSM",
       "b": "AMD",
-      "r": 0.861,
+      "r": 0.844,
+      "n": 30
+    },
+    {
+      "a": "AVGO",
+      "b": "AMD",
+      "r": 0.718,
+      "n": 30
+    },
+    {
+      "a": "AVGO",
+      "b": "TSM",
+      "r": 0.708,
       "n": 30
     },
     {
@@ -4615,45 +4669,27 @@
       "n": 30
     },
     {
-      "a": "AVGO",
-      "b": "TSM",
-      "r": 0.662,
-      "n": 30
-    },
-    {
-      "a": "AVGO",
-      "b": "AMD",
-      "r": 0.655,
-      "n": 30
-    },
-    {
-      "a": "AVGO",
-      "b": "ORCL",
-      "r": 0.626,
-      "n": 30
-    },
-    {
       "a": "NVDA",
       "b": "AVGO",
       "r": 0.613,
       "n": 30
     },
     {
-      "a": "NVDA",
-      "b": "TSM",
-      "r": 0.561,
+      "a": "AVGO",
+      "b": "ORCL",
+      "r": 0.586,
       "n": 30
     },
     {
       "a": "NVDA",
-      "b": "AMD",
-      "r": 0.556,
+      "b": "TSM",
+      "r": 0.509,
       "n": 30
     },
     {
       "a": "TSM",
       "b": "ORCL",
-      "r": 0.501,
+      "r": 0.505,
       "n": 30
     }
   ],
