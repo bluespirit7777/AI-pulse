@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-07T13:15:29.213Z",
+  "updatedAt": "2026-08-07T13:30:38.736Z",
   "build": {
-    "sha": "345350956c0eea639b014559b7380c29af1d561e",
-    "shortSha": "3453509",
+    "sha": "7fc164a19b27c664e4a6b16c5aeb362d975a88a3",
+    "shortSha": "7fc164a",
     "ref": "main",
-    "builtAt": "2026-08-07T13:15:45.161Z"
+    "builtAt": "2026-08-07T13:30:54.084Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 28.6,
     "estimatedDatasets": 4,
-    "buildSha": "3453509",
-    "lastSuccessfulUpdate": "2026-08-07T13:15:29.213Z"
+    "buildSha": "7fc164a",
+    "lastSuccessfulUpdate": "2026-08-07T13:30:38.736Z"
   },
   "ticker": [
     "JONY IVE’S FIRST OPENAI GADGET IS REPORTEDLY A HOCKEY PUCK-SIZED SMART SPEAKER",
@@ -180,7 +180,7 @@
       "category": "market",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 61,
+      "significance": 60,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -206,7 +206,7 @@
       "category": "adoption",
       "catConfidence": 0.38,
       "family": "product",
-      "significance": 59,
+      "significance": 58,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -351,6 +351,32 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/",
+      "clusterId": "2zglrq",
+      "title": "ByteDance trains massive AI model in bid to rival Anthropic",
+      "desc": "TikTok owner training a model with 10 trillion parameters.",
+      "url": "https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/",
+      "dateISO": "2026-08-07T13:29:22.000Z",
+      "date": "AUG 07 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/this-chatbot-is-just-a-random-guy-lol/",
       "clusterId": "1r8enib",
       "title": "The Hottest New AI Chatbot Is Just a Guy Answering Your Questions",
@@ -460,34 +486,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/",
-      "clusterId": "1ygj210",
-      "title": "Anthropic will design its own hardware to power Claude",
-      "desc": "Anthropic and OpenAI are racing to scale up while reducing dependence on Nvidia.",
-      "url": "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/",
-      "dateISO": "2026-08-06T20:03:44.000Z",
-      "date": "AUG 06 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gpt",
-        "claude",
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
       "clusterId": "jirvj5",
       "title": "Introducing computer use in Gemini 3.5 Flash",
@@ -522,6 +520,34 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/",
+      "clusterId": "1ygj210",
+      "title": "Anthropic will design its own hardware to power Claude",
+      "desc": "Anthropic and OpenAI are racing to scale up while reducing dependence on Nvidia.",
+      "url": "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/",
+      "dateISO": "2026-08-06T20:03:44.000Z",
+      "date": "AUG 06 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gpt",
+        "claude",
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
       "clusterId": "19i6hvs",
       "title": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
@@ -546,32 +572,6 @@
       "entityIds": [
         "chatgpt",
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead",
-      "clusterId": "12fkxy0",
-      "title": "Elon Musk’s attempt at an AI Wikipedia hasn’t been updated in months",
-      "desc": "xAI's Grokipedia, an online encyclopedia with AI-generated articles that Elon Musk once promised would be a \"massive improvement\" over Wikipedia, apparently hasn't been updated since April 24th, according to a report from Lawfare. \"As far as we can tell, no entry has changed in more than three months,\" Lawfare said. Grokipedia launched in v0.1 in […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead",
-      "dateISO": "2026-08-06T00:25:10.000Z",
-      "date": "AUG 06 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "grok"
       ]
     },
     {
@@ -635,6 +635,32 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead",
+      "clusterId": "12fkxy0",
+      "title": "Elon Musk’s attempt at an AI Wikipedia hasn’t been updated in months",
+      "desc": "xAI's Grokipedia, an online encyclopedia with AI-generated articles that Elon Musk once promised would be a \"massive improvement\" over Wikipedia, apparently hasn't been updated since April 24th, according to a report from Lawfare. \"As far as we can tell, no entry has changed in more than three months,\" Lawfare said. Grokipedia launched in v0.1 in […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead",
+      "dateISO": "2026-08-06T00:25:10.000Z",
+      "date": "AUG 06 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976004/elon-musk-grokipedia-ai-wikipedia-not-updating-dead"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "grok"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
       "clusterId": "yj5148",
       "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
@@ -651,7 +677,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "CBS News",
+          "name": "cbsnews.com",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWHlvQ0t3R3I5NWtGdW1SZlpMVVdka2xtT1FtLXdPRXdSN3cxYzdleEllMGRWNXR6RnN1YUZuNFZLUkRhbWtqY0hjTFN1b2lzYV96OElSZi1tX2F6WGRsaE1BNVRVQmhzazY1TGcwTmJRV0ZUbkFtQzhzZTlYdHFsVWVJalY?oc=5"
         },
         {
@@ -898,7 +924,7 @@
       "sourceCount": 5,
       "sources": [
         {
-          "name": "PBS",
+          "name": "pbs.org",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzBYZ080YTJJRmVjeWFubUoyZkJTYjc5SzQ4bXJXaFA2TDh6YW8wU3AwR0twTmFaVGRWMmdUNlFhNXB0RS1GRWxuNVNxMmhzSkpqWE5BRUdndmFFU0NKb2xoZ3VlV25rVVduaDF1SUxEUTFuQTdsR05DMTdZeGRoaXRCX3pNTl81b29FVExUWU5QTUpzRmp6VFduU3ZYTF9Kd1laYw?oc=5"
         },
         {
@@ -1120,37 +1146,11 @@
           "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc3BPWjQxZlR3bHJkQUd3cDRyNThrWmYxMzR1OGU2TVpvYm9iTHc0aFNYVGNBOXplVGlSUUNNM3ZubENENGw2SzBWSk9kbTdKNGQ3UGlVZ0t2UV9sak9PSmhHcjZzR0RLVHY1b3YzbE1yTkhZS0JsMHRJRGY4RmNaeHBSSzFGWVhYSVh3OUxrQQ?oc=5"
         },
         {
-          "name": "Marcus on AI | Substack",
+          "name": "garymarcus.substack.com",
           "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9vVnZ3ZWlxYW10NlZfcnhtOWUxZTZ4QjVCZFNyNEhEQnF3SDBVay1EZk1CUk15RHllMDNtRjRYSGdKdkEtdnZ4LUlmOHRtY1MyWHJia0FQMW10LW9yYVM1WDVNSnhIX2o1SUFNQ3hGSQ?oc=5"
         }
       ],
       "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wN0JtbHEyLVVlcTdoaTlsTWRkM3Bhb0RGX3FlUGh2M2ttYzhRNENjN01lME1pSnY4Tzkwa2xLb0lrbllnRlpPeVI5NGR1YXVQdEhFTVdnVmRiZw?oc=5",
-      "clusterId": "1yrdnnk",
-      "title": "Fable and Mythos: Anthropic says US lifts export ban on its advanced AI tools",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wN0JtbHEyLVVlcTdoaTlsTWRkM3Bhb0RGX3FlUGh2M2ttYzhRNENjN01lME1pSnY4Tzkwa2xLb0lrbllnRlpPeVI5NGR1YXVQdEhFTVdnVmRiZw?oc=5",
-      "dateISO": "2026-06-30T07:00:00.000Z",
-      "date": "JUN 30 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9wN0JtbHEyLVVlcTdoaTlsTWRkM3Bhb0RGX3FlUGh2M2ttYzhRNENjN01lME1pSnY4Tzkwa2xLb0lrbllnRlpPeVI5NGR1YXVQdEhFTVdnVmRiZw?oc=5"
-        }
-      ],
-      "sourceName": "BBC",
       "entityIds": [
         "claude"
       ]
@@ -1485,6 +1485,18 @@
   ],
   "wire": [
     {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "AUG 07 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "ByteDance trains massive AI model in bid to rival Anthropic",
+      "p": "TikTok owner training a model with 10 trillion parameters.",
+      "url": "https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 07 2026",
@@ -1565,18 +1577,6 @@
       "h": "Why Normal People Aren’t Using AI Agents",
       "p": "The tech industry is realizing it needs to build agents based on what regular consumers want, not just what its AI models can do.",
       "url": "https://www.wired.com/story/why-normal-people-arent-using-ai-agents/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 06 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "ICE’s DNA Collection Increases, SpaceX’s Rocket Crashes Into the Moon, and the…",
-      "p": "In today’s episode of Uncanny Valley, we discuss how ICE has been collecting DNA samples of people who have no criminal convictions, including children, which end up in an FBI database indefinitely.",
-      "url": "https://www.wired.com/story/ice-dna-collection-increases-spacex-rocket-crashes-into-the-moon-and-the-ai-backlash-grows/",
       "sourceName": "Wired",
       "sourceCount": 1
     }
@@ -1717,11 +1717,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 218.99,
-      "changePct": -0.10491548501886502,
+      "price": 221.6,
+      "changePct": 1.191835492434396,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 113051990,
+      "volume": 4205074,
       "ohlc": [
         {
           "d": "05-07",
@@ -2163,21 +2163,28 @@
           "h": 223.6300048828125,
           "l": 217,
           "c": 218.99000549316406
+        },
+        {
+          "d": "08-07",
+          "o": 221.5850067138672,
+          "h": 222.1699981689453,
+          "l": 221.1999969482422,
+          "c": 221.60000610351562
         }
       ],
-      "relVolume": 0.8727210644577733,
-      "marketCap": 5343356000000
+      "relVolume": 0.0325096300836426,
+      "marketCap": 5407040000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 499.86,
-      "changePct": 2.5437972580006285,
+      "price": 501.845,
+      "changePct": 0.39711437748803197,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 32788866,
+      "volume": 1314714,
       "ohlc": [
         {
           "d": "05-07",
@@ -2619,21 +2626,28 @@
           "h": 501.55999755859375,
           "l": 488.5199890136719,
           "c": 499.8599853515625
+        },
+        {
+          "d": "08-07",
+          "o": 499.2099914550781,
+          "h": 502.79998779296875,
+          "l": 499.1199951171875,
+          "c": 501.8450012207031
         }
       ],
-      "relVolume": 0.9260379888296584,
-      "marketCap": 3713959800000
+      "relVolume": 0.0332244228117211,
+      "marketCap": 3728708350000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 420.565,
-      "changePct": -0.0011906042113203074,
+      "price": 429.6,
+      "changePct": 2.147064001071602,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 12674099,
+      "volume": 568210,
       "ohlc": [
         {
           "d": "05-07",
@@ -3075,21 +3089,28 @@
           "h": 428.0299987792969,
           "l": 410.760009765625,
           "c": 420.57000732421875
+        },
+        {
+          "d": "08-07",
+          "o": 428.7850036621094,
+          "h": 429.70001220703125,
+          "l": 426.510009765625,
+          "c": 429.59991455078125
         }
       ],
-      "relVolume": 0.7029840516786635,
-      "marketCap": 2069179800000
+      "relVolume": 0.02982127754266921,
+      "marketCap": 2113632000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 357.75,
-      "changePct": -1.2912818393503729,
+      "price": 358.77,
+      "changePct": 0.28511223303197064,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 24988687,
+      "volume": 877850,
       "ohlc": [
         {
           "d": "05-07",
@@ -3531,21 +3552,28 @@
           "h": 364.1300048828125,
           "l": 356.8800048828125,
           "c": 357.75
+        },
+        {
+          "d": "08-07",
+          "o": 356.7650146484375,
+          "h": 358.8999938964844,
+          "l": 355.7200012207031,
+          "c": 358.7699890136719
         }
       ],
-      "relVolume": 0.7766919334776843,
-      "marketCap": 4364550000000
+      "relVolume": 0.027051733879473176,
+      "marketCap": 4376994000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 272.26,
-      "changePct": -0.14303471101761267,
+      "price": 274.015,
+      "changePct": 0.6446061925595669,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 27906615,
+      "volume": 1336573,
       "ohlc": [
         {
           "d": "05-07",
@@ -3987,21 +4015,28 @@
           "h": 275.4800109863281,
           "l": 271.05999755859375,
           "c": 272.260009765625
+        },
+        {
+          "d": "08-07",
+          "o": 272.8900146484375,
+          "h": 274.5400085449219,
+          "l": 272.75,
+          "c": 274.0150146484375
         }
       ],
-      "relVolume": 0.6086132879276198,
-      "marketCap": 2913182000000
+      "relVolume": 0.026758561070652356,
+      "marketCap": 2931960500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 589.9,
-      "changePct": 0.19192636264192847,
+      "price": 589.526,
+      "changePct": -0.06332177331591501,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 11663468,
+      "volume": 565900,
       "ohlc": [
         {
           "d": "05-07",
@@ -4443,21 +4478,28 @@
           "h": 595.3099975585938,
           "l": 586,
           "c": 589.9000244140625
+        },
+        {
+          "d": "08-07",
+          "o": 585.6400146484375,
+          "h": 589.739990234375,
+          "l": 585.6199951171875,
+          "c": 589.5264892578125
         }
       ],
-      "relVolume": 0.6058101778330091,
-      "marketCap": 1486548000000
+      "relVolume": 0.030232971248225302,
+      "marketCap": 1485605520000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 418.2,
-      "changePct": 1.0144957021814613,
+      "price": 424.435,
+      "changePct": 1.4909098922923634,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 10537518,
+      "volume": 675314,
       "ohlc": [
         {
           "d": "05-07",
@@ -4899,21 +4941,28 @@
           "h": 423.9100036621094,
           "l": 407.989990234375,
           "c": 418.20001220703125
+        },
+        {
+          "d": "08-07",
+          "o": 409.5400085449219,
+          "h": 424.70001220703125,
+          "l": 421.635009765625,
+          "c": 424.43499755859375
         }
       ],
-      "relVolume": 0.7028758648688566,
-      "marketCap": 2170458000000
+      "relVolume": 0.044850590789514755,
+      "marketCap": 2202817650000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 489.28,
-      "changePct": 1.4998467315454587,
+      "price": 493.705,
+      "changePct": 0.9043876316237406,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 23887374,
+      "volume": 1542365,
       "ohlc": [
         {
           "d": "05-07",
@@ -5355,21 +5404,28 @@
           "h": 496.7200012207031,
           "l": 469.5,
           "c": 489.2799987792969
+        },
+        {
+          "d": "08-07",
+          "o": 497.94000244140625,
+          "h": 498.82000732421875,
+          "l": 493.20001220703125,
+          "c": 493.7049865722656
         }
       ],
-      "relVolume": 0.8240908879968248,
-      "marketCap": 792633600000
+      "relVolume": 0.0518802301026528,
+      "marketCap": 799802100000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 155.92,
-      "changePct": -1.5842925095455322,
+      "price": 161.49,
+      "changePct": 3.572349531574156,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 38397107,
+      "volume": 1977464,
       "ohlc": [
         {
           "d": "05-07",
@@ -5811,21 +5867,28 @@
           "h": 158,
           "l": 152.6999969482422,
           "c": 155.9199981689453
+        },
+        {
+          "d": "08-07",
+          "o": 160.0399932861328,
+          "h": 161.6300048828125,
+          "l": 159.9700927734375,
+          "c": 161.49000549316406
         }
       ],
-      "relVolume": 0.9548823011283089,
-      "marketCap": 374208000000
+      "relVolume": 0.0453199561207749,
+      "marketCap": 387576000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 143.47,
-      "changePct": -0.6371619730135332,
+      "price": 146.5,
+      "changePct": 2.111938909539535,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 21903163,
+      "volume": 2265662,
       "ohlc": [
         {
           "d": "05-07",
@@ -6267,10 +6330,17 @@
           "h": 146.5800018310547,
           "l": 138.72000122070312,
           "c": 143.47000122070312
+        },
+        {
+          "d": "08-07",
+          "o": 139.25,
+          "h": 147.16000366210938,
+          "l": 145.39999389648438,
+          "c": 146.5
         }
       ],
-      "relVolume": 0.5970862830653174,
-      "marketCap": 403150700000
+      "relVolume": 0.05971941394548275,
+      "marketCap": 411665000000
     }
   ],
   "compute": [
@@ -6285,10 +6355,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.88 – $4.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "↑ 10% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6296,7 +6366,7 @@
       "rate": "$5.00 – $6.79/hr",
       "trend": "↓ 6% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6317,14 +6387,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.59 – $1.59/hr",
-      "trend": "↓ 12% vs 7d ago",
+      "rate": "$0.73 – $1.59/hr",
+      "trend": "↓ 7% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-07T13:15:29.213Z",
+    "updatedAt": "2026-08-07T13:30:38.736Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6423,16 +6493,16 @@
         "org": "Anthropic",
         "rawStoryHits": 1007,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 30,
+        "validatedStoryCount": 31,
         "storyCoverage": 0.29791459781529295,
-        "estimatedRelevantDiscussions": 101,
+        "estimatedRelevantDiscussions": 104,
         "isEstimated": true,
         "rawCommentHits": 6528,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 39,
+        "validatedCommentCount": 38,
         "commentCoverage": 0.04595588235294118,
         "limited": false,
-        "points": 607,
+        "points": 610,
         "themes": [
           {
             "id": "coding",
@@ -6489,7 +6559,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 101,
+            "discussions": 104,
             "isEstimated": true
           },
           {
@@ -6505,17 +6575,17 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 149,
-        "fetchedStoryCount": 146,
+        "fetchedStoryCount": 149,
         "validatedStoryCount": 37,
-        "storyCoverage": 0.9798657718120806,
-        "estimatedRelevantDiscussions": 47,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 46,
         "isEstimated": true,
         "rawCommentHits": 1260,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 60,
         "commentCoverage": 0.23809523809523808,
         "limited": false,
-        "points": 874,
+        "points": 875,
         "themes": [
           {
             "id": "coding",
@@ -6577,8 +6647,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 38,
-            "isEstimated": true
+            "discussions": 37,
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6603,10 +6673,10 @@
         "storyCoverage": 0.5244755244755245,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 10606,
+        "rawCommentHits": 10607,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 28,
-        "commentCoverage": 0.028285875919290968,
+        "commentCoverage": 0.028283209201470726,
         "limited": false,
         "points": 411,
         "themes": [
@@ -6675,16 +6745,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 73,
-        "fetchedStoryCount": 73,
+        "rawStoryHits": 72,
+        "fetchedStoryCount": 72,
         "validatedStoryCount": 9,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 539,
+        "rawCommentHits": 538,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.5565862708719852,
+        "commentCoverage": 0.5576208178438662,
         "limited": false,
         "points": 238,
         "themes": [
@@ -6758,16 +6828,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 90,
-        "fetchedStoryCount": 90,
+        "rawStoryHits": 103,
+        "fetchedStoryCount": 103,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 1047,
+        "rawCommentHits": 1104,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
-        "commentCoverage": 0.28653295128939826,
+        "commentCoverage": 0.2717391304347826,
         "limited": false,
         "points": 718,
         "themes": [
@@ -6852,22 +6922,22 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 4404,
+        "rawCommentHits": 4407,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 52,
-        "commentCoverage": 0.0681198910081744,
+        "validatedCommentCount": 51,
+        "commentCoverage": 0.06807351940095303,
         "limited": true,
         "points": 419,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 11
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 9
+            "count": 8
           },
           {
             "id": "local",
