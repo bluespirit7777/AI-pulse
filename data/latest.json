@@ -1,24 +1,23 @@
 {
-  "updatedAt": "2026-08-07T02:30:28.231Z",
+  "updatedAt": "2026-08-07T02:45:23.073Z",
   "build": {
-    "sha": "4072fc1832b968ed7a02ec8eb8dd1b12d35e6890",
-    "shortSha": "4072fc1",
+    "sha": "18fb160432eff0a7b546d97c41349c7199413c28",
+    "shortSha": "18fb160",
     "ref": "main",
-    "builtAt": "2026-08-07T02:30:42.927Z"
+    "builtAt": "2026-08-07T02:45:38.185Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 11,
+    "feedsSucceeded": 10,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 28.1,
-    "estimatedDatasets": 4,
-    "buildSha": "4072fc1",
-    "lastSuccessfulUpdate": "2026-08-07T02:30:28.231Z"
+    "estimatedDatasets": 5,
+    "buildSha": "18fb160",
+    "lastSuccessfulUpdate": "2026-08-07T02:45:23.073Z"
   },
   "ticker": [
     "JONY IVE’S FIRST OPENAI GADGET IS REPORTEDLY A HOCKEY PUCK-SIZED SMART SPEAKER",
-    "INTRODUCING AGENT PLUGINS",
     "DEEPMIND SAYS ITS AI CAN PREDICT HURRICANES EARLIER THAN EVERYONE ELSE",
     "IT'S OFFICIAL: ANTHROPIC IS BUILDING AN IN-HOUSE CHIP TEAM FOR CLAUDE",
     "EXCLUSIVE: MIRENDIL INKS $100M+ GOOGLE CLOUD DEAL TO SCALE SELF-IMPROVING AI",
@@ -26,6 +25,7 @@
     "OPENAI’S BROWSER COULD BE HIJACKED TO SPAM YOUR WHATSAPP CONTACTS",
     "FROM ASKING TO DOING: HOW THE WORLD IS PUTTING CHATGPT TO WORK",
     "OPENAI IS GIVING CHATGPT FREE USERS UNLIMITED TEXT CHATS",
+    "INTRODUCING CLAUDE CORPS",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE"
   ],
   "signals": [
@@ -53,33 +53,6 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.youtube.com/watch?v=UaeWJK_vv-Y",
-      "clusterId": "36qe1x",
-      "title": "Introducing Agent Plugins",
-      "desc": "Introducing Agent Plugins, an open standard developed in collaboration with partners across the AI ecosystem. Bundle Agent Skills and supported MCP server configurations into plugins you can use across ChatGPT, Codex, Cursor, GitHub Copilot, Kiro, and VS Code. Get started: https://agent-plugins.org Chapters: 00:00 Why agent packaging needs a standard 00:20 Introducing Agent Plugins 00:39 Package s",
-      "url": "https://www.youtube.com/watch?v=UaeWJK_vv-Y",
-      "dateISO": "2026-08-06T16:13:08.000Z",
-      "date": "AUG 06 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 71,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=UaeWJK_vv-Y"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt",
-        "copilot"
       ]
     },
     {
@@ -259,7 +232,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 59,
+      "significance": 58,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -277,6 +250,44 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
+      "clusterId": "olsj4w",
+      "title": "Introducing Claude Corps",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5",
+      "dateISO": "2026-06-11T07:00:00.000Z",
+      "date": "JUN 11 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        },
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40YzY4elpuaVY0ZWtDbmhNal8wc2pEWWJ1QW5MbHNOLXR3azdxNU0wLWhLOURycWd5NWNlVGZiZzR5aEd2amozaXlBQk9pQ3Y2TjZvWDJn?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -308,7 +319,7 @@
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
         },
         {
-          "name": "MIT Technology Review",
+          "name": "technologyreview.com",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
         },
         {
@@ -512,40 +523,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "clusterId": "14bih8d",
-      "title": "Introducing Claude Tag",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
-        },
-        {
-          "name": "The Hill",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -904,36 +881,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/introducing-gpt-live",
-      "clusterId": "1r2qq0e",
-      "title": "Introducing GPT-Live",
-      "desc": "A new generation of voice models for natural human-AI interaction, now powering ChatGPT Voice.",
-      "url": "https://openai.com/index/introducing-gpt-live",
-      "dateISO": "2026-07-08T00:00:00.000Z",
-      "date": "JUL 08 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=WeP9VUf1OoE"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-gpt-live"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/06/omilia-raises-67m-to-scale-its-customer-support-platform/",
       "clusterId": "lficrm",
       "title": "Omilia raises $67M to scale its customer support platform",
@@ -1162,6 +1109,59 @@
         "chatgpt",
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/chatgpt-for-academic-researchers",
+      "clusterId": "ke9mbo",
+      "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+      "desc": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
+      "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+      "dateISO": "2026-07-29T10:00:00.000Z",
+      "date": "JUL 29 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5",
+      "clusterId": "hiaxw1",
+      "title": "EXCLUSIVE Canada regulator cited Anthropic's Claude Mythos in warning to banks on cyber risks, email shows",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5",
+      "dateISO": "2026-07-13T07:00:00.000Z",
+      "date": "JUL 13 2026",
+      "category": "policy",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
     }
   ],
   "waves": [
@@ -1244,11 +1244,11 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 25,
-    "copilot": 2,
+    "chatgpt": 24,
+    "copilot": 1,
     "perplexity": 1,
     "gpt": 75,
-    "claude": 67,
+    "claude": 66,
     "gemini": 37,
     "grok": 1,
     "llama": 0,
@@ -1343,17 +1343,6 @@
           "impact": "high"
         },
         {
-          "h": "Introducing Agent Plugins",
-          "d": "AUG 06 2026",
-          "url": "https://www.youtube.com/watch?v=UaeWJK_vv-Y",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "high"
-        },
-        {
           "h": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
           "d": "AUG 06 2026",
           "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
@@ -1379,6 +1368,17 @@
           "h": "Introducing the ChatGPT for small business program",
           "d": "JUL 21 2026",
           "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "A scorecard for the AI age",
+          "d": "JUL 17 2026",
+          "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -6291,7 +6291,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-07T02:30:28.231Z",
+    "updatedAt": "2026-08-07T02:45:23.073Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6301,15 +6301,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 345,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 230,
         "validatedStoryCount": 36,
-        "storyCoverage": 0.8695652173913043,
-        "estimatedRelevantDiscussions": 44,
+        "storyCoverage": 0.6666666666666666,
+        "estimatedRelevantDiscussions": 57,
         "isEstimated": true,
-        "rawCommentHits": 2539,
+        "rawCommentHits": 2181,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.11815675462780623,
+        "commentCoverage": 0.1375515818431912,
         "limited": false,
         "points": 452,
         "themes": [
@@ -6373,7 +6373,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 41,
+            "discussions": 54,
             "isEstimated": true
           },
           {
@@ -6388,16 +6388,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 1012,
+        "rawStoryHits": 1011,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 30,
-        "storyCoverage": 0.2964426877470356,
+        "storyCoverage": 0.29673590504451036,
         "estimatedRelevantDiscussions": 101,
         "isEstimated": true,
-        "rawCommentHits": 6564,
+        "rawCommentHits": 6563,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.04570383912248629,
+        "commentCoverage": 0.04571080298643913,
         "limited": false,
         "points": 607,
         "themes": [
@@ -6565,10 +6565,10 @@
         "storyCoverage": 0.5253940455341506,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 10573,
+        "rawCommentHits": 10574,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.028374160597748985,
+        "commentCoverage": 0.02837147720824664,
         "limited": false,
         "points": 411,
         "themes": [
@@ -6643,10 +6643,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 529,
+        "rawCommentHits": 530,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.5671077504725898,
+        "commentCoverage": 0.5660377358490566,
         "limited": false,
         "points": 238,
         "themes": [
@@ -6720,16 +6720,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 90,
-        "fetchedStoryCount": 90,
+        "rawStoryHits": 103,
+        "fetchedStoryCount": 100,
         "validatedStoryCount": 14,
-        "storyCoverage": 1,
+        "storyCoverage": 0.970873786407767,
         "estimatedRelevantDiscussions": 14,
-        "isEstimated": false,
-        "rawCommentHits": 1101,
+        "isEstimated": true,
+        "rawCommentHits": 1102,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 59,
-        "commentCoverage": 0.2724795640326976,
+        "validatedCommentCount": 58,
+        "commentCoverage": 0.27223230490018147,
         "limited": false,
         "points": 716,
         "themes": [
@@ -6799,7 +6799,7 @@
           {
             "name": "Hacker News",
             "discussions": 14,
-            "isEstimated": false
+            "isEstimated": true
           }
         ]
       },
@@ -6814,10 +6814,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 4404,
+        "rawCommentHits": 4405,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 55,
-        "commentCoverage": 0.0681198910081744,
+        "commentCoverage": 0.0681044267877412,
         "limited": true,
         "points": 419,
         "themes": [
