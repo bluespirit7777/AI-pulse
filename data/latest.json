@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-09T22:30:27.668Z",
+  "updatedAt": "2026-08-09T22:39:40.232Z",
   "build": {
-    "sha": "f8d115a598b9c40b1e70c48bda274df56c018eb7",
-    "shortSha": "f8d115a",
+    "sha": "ebf2ec4b913d0e1a82f169b8b5efb29a72bbdc5d",
+    "shortSha": "ebf2ec4",
     "ref": "main",
-    "builtAt": "2026-08-09T22:30:42.446Z"
+    "builtAt": "2026-08-09T22:39:54.842Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 30.9,
-    "estimatedDatasets": 4,
-    "buildSha": "f8d115a",
-    "lastSuccessfulUpdate": "2026-08-09T22:30:27.668Z"
+    "estimatedDatasets": 5,
+    "buildSha": "ebf2ec4",
+    "lastSuccessfulUpdate": "2026-08-09T22:39:40.232Z"
   },
   "ticker": [
     "OPENAI ACQUIRES PRESENTATION STARTUP NEXTSLIDE",
@@ -25,8 +25,8 @@
     "INTRODUCING CLAUDE TAG",
     "ANTHROPIC LAUNCHES CLAUDE TAG IN SLACK WITH PLANS FOR WIDER ROLLOUT",
     "THE AI SAFETY TEST IS BECOMING A SAFETY RISK",
-    "OPENAI PUTS THE BRAKES ON A NEW MODEL BECAUSE IT’S SUPPOSEDLY TOO POWERFUL",
-    "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH"
+    "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
+    "OPENAI PUTS THE BRAKES ON A NEW MODEL BECAUSE IT’S SUPPOSEDLY TOO POWERFUL"
   ],
   "signals": [
     {
@@ -273,33 +273,6 @@
       "entityIds": []
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
-      "clusterId": "com27n",
-      "title": "OpenAI puts the brakes on a new model because it’s supposedly too powerful",
-      "desc": "OpenAI says it is pausing \"internal activities\" around an in-development AI model, Astra, because it doesn't yet meet new security standards the company is putting in place. The announcement follows its recent disclosure that OpenAI models accidentally hacked Hugging Face. Anthropic and Meta have also since admitted that they had AI models that went rogue […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
-      "dateISO": "2026-08-07T18:40:34.000Z",
-      "date": "AUG 07 2026",
-      "category": "opensource",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
       "id": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
       "clusterId": "jirvj5",
       "title": "Introducing computer use in Gemini 3.5 Flash",
@@ -331,6 +304,33 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
+      "clusterId": "com27n",
+      "title": "OpenAI puts the brakes on a new model because it’s supposedly too powerful",
+      "desc": "OpenAI says it is pausing \"internal activities\" around an in-development AI model, Astra, because it doesn't yet meet new security standards the company is putting in place. The announcement follows its recent disclosure that OpenAI models accidentally hacked Hugging Face. Anthropic and Meta have also since admitted that they had AI models that went rogue […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
+      "dateISO": "2026-08-07T18:40:34.000Z",
+      "date": "AUG 07 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "claude"
       ]
     },
     {
@@ -6283,17 +6283,17 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.79 – $3.29/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$1.48 – $3.29/hr",
+      "trend": "↓ 8% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.19 – $4.59/hr",
-      "trend": "↓ 12% vs 7d ago",
-      "trendClass": "trend-down",
+      "rate": "$3.34 – $4.59/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6323,14 +6323,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.59 – $1.59/hr",
-      "trend": "↓ 12% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "↑ 4% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-09T22:30:27.668Z",
+    "updatedAt": "2026-08-09T22:39:40.232Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6340,15 +6340,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 322,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 218,
         "validatedStoryCount": 36,
-        "storyCoverage": 0.9316770186335404,
-        "estimatedRelevantDiscussions": 42,
+        "storyCoverage": 0.6770186335403726,
+        "estimatedRelevantDiscussions": 56,
         "isEstimated": true,
-        "rawCommentHits": 2319,
+        "rawCommentHits": 2320,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
-        "commentCoverage": 0.129366106080207,
+        "commentCoverage": 0.12931034482758622,
         "limited": false,
         "points": 450,
         "themes": [
@@ -6412,7 +6412,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 39,
+            "discussions": 53,
             "isEstimated": true
           },
           {
@@ -6435,7 +6435,7 @@
         "isEstimated": true,
         "rawCommentHits": 6279,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 48,
+        "validatedCommentCount": 49,
         "commentCoverage": 0.047778308647873864,
         "limited": false,
         "points": 605,
@@ -6443,7 +6443,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 30
+            "count": 31
           },
           {
             "id": "reasoning",
@@ -6456,13 +6456,13 @@
             "count": 7
           },
           {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 3
-          },
-          {
             "id": "local",
             "label": "Local use",
+            "count": 4
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
             "count": 3
           },
           {
@@ -6608,16 +6608,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 543,
+        "rawStoryHits": 544,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.5524861878453039,
+        "storyCoverage": 0.5514705882352942,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 10167,
+        "rawCommentHits": 10171,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.029507229271171435,
+        "commentCoverage": 0.029495624815652346,
         "limited": false,
         "points": 410,
         "themes": [
@@ -6769,16 +6769,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 97,
-        "fetchedStoryCount": 97,
+        "rawStoryHits": 105,
+        "fetchedStoryCount": 100,
         "validatedStoryCount": 16,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 16,
-        "isEstimated": false,
-        "rawCommentHits": 1175,
+        "storyCoverage": 0.9523809523809523,
+        "estimatedRelevantDiscussions": 17,
+        "isEstimated": true,
+        "rawCommentHits": 1174,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
-        "commentCoverage": 0.2553191489361702,
+        "commentCoverage": 0.2555366269165247,
         "limited": false,
         "points": 733,
         "themes": [
@@ -6837,8 +6837,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 16,
-            "isEstimated": false
+            "discussions": 17,
+            "isEstimated": true
           }
         ]
       },
@@ -6853,10 +6853,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 4381,
+        "rawCommentHits": 4380,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.06847751654873317,
+        "commentCoverage": 0.0684931506849315,
         "limited": false,
         "points": 431,
         "themes": [
@@ -7029,6 +7029,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "context"
+        ],
+        "excerpt": "It's Claude. I picked up on it too (I am also a heavy Claude user)The title alone gives it away. Sentences like this also trigger my daily annoyance:\"Researchers found an elegant…",
+        "source": "Hacker News",
+        "author": "homeonthemtn",
+        "publishedAt": "2026-08-08T13:10:14.000Z",
+        "url": "https://news.ycombinator.com/item?id=49221542"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "multimodal",
           "local"
         ],
@@ -7037,17 +7048,6 @@
         "author": "properbrew",
         "publishedAt": "2026-08-09T17:50:12.000Z",
         "url": "https://news.ycombinator.com/item?id=49233666"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "context"
-        ],
-        "excerpt": "It's Claude. I picked up on it too (I am also a heavy Claude user)The title alone gives it away. Sentences like this also trigger my daily annoyance:\"Researchers found an elegant…",
-        "source": "Hacker News",
-        "author": "homeonthemtn",
-        "publishedAt": "2026-08-08T13:10:14.000Z",
-        "url": "https://news.ycombinator.com/item?id=49221542"
       },
       {
         "modelId": "gemini",
