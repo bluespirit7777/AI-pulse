@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-13T19:15:24.628Z",
+  "updatedAt": "2026-08-13T19:30:32.512Z",
   "build": {
-    "sha": "c9690655b667519d06bc9a32a5d82fa8fc2934c3",
-    "shortSha": "c969065",
+    "sha": "efd364979b53a360fce5d02c182d39411601a61e",
+    "shortSha": "efd3649",
     "ref": "main",
-    "builtAt": "2026-08-13T19:15:41.224Z"
+    "builtAt": "2026-08-13T19:30:49.608Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 34.8,
     "estimatedDatasets": 4,
-    "buildSha": "c969065",
-    "lastSuccessfulUpdate": "2026-08-13T19:15:24.628Z"
+    "buildSha": "efd3649",
+    "lastSuccessfulUpdate": "2026-08-13T19:30:32.512Z"
   },
   "ticker": [
     "NVIDIA’S NEW $500B PLAN IS RISKY BUT BRILLIANT, ESPECIALLY FOR AGING GPUS",
     "ANTHROPIC SET AI AGENTS LOOSE ON THE SAME TASK. THEY STARTED A TURF WAR.",
     "ANTHROPIC INVESTORS BET ON $2TN VALUATION IN RECORD IPO",
+    "IBM PARTNERS WITH OPENAI TO BOLSTER ENTERPRISE AI PUSH",
     "OF COURSE THE CHATGPT DOG CANCER VACCINE SPAWNED A STARTUP",
+    "OPENAI IS LOSING ITS SECOND EXECUTIVE THIS WEEK",
+    "PREVIEWING ULTRAFAST MODE: GPT-5.6 SOL AT UP TO 14X THE SPEED",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
-    "DOES GOOGLE EVEN WANT TO WIN AT AI?",
-    "OPENAI APPOINTS DALI RAJIC AS CHIEF REVENUE OFFICER",
-    "FROM ASSISTANCE TO EXECUTION: HOW ENTERPRISES PUT AI TO WORK",
-    "HOW DATA SCIENCE TEAMS USE CHATGPT WORK"
+    "DOES GOOGLE EVEN WANT TO WIN AT AI?"
   ],
   "signals": [
     {
@@ -59,7 +59,7 @@
       "id": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/",
       "clusterId": "102orp2",
       "title": "Anthropic set AI agents loose on the same task. They started a turf war.",
-      "desc": "Anthropic researchers found AI agents can clash, collude and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-agent systems.",
+      "desc": "Anthropic researchers found AI agents can clash, collude, and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-agent systems.",
       "url": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/",
       "dateISO": "2026-08-13T18:28:14.000Z",
       "date": "AUG 13 2026",
@@ -112,6 +112,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
+      "clusterId": "1aff2m3",
+      "title": "IBM partners with OpenAI to bolster enterprise AI push",
+      "desc": "IBM plans to train and certify tens and thousands of consultants on OpenAI's technologies as part of this deal.",
+      "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
+      "dateISO": "2026-08-13T19:19:49.000Z",
+      "date": "AUG 13 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 74,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/978671/ai-cured-dog-cancer-mrna-vaccine-startup-gamgee",
       "clusterId": "8hzyd2",
       "title": "Of course the ChatGPT dog cancer vaccine spawned a startup",
@@ -136,6 +162,62 @@
       "entityIds": [
         "chatgpt",
         "grok"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure",
+      "clusterId": "1iel9ts",
+      "title": "OpenAI is losing its second executive this week",
+      "desc": "Another OpenAI executive is departing. Denise Dresser, who joined OpenAI as its chief revenue officer in December after serving as CEO of Slack, will be leaving in the \"coming weeks\" to \"pursue other opportunities,\" she said in a team note posted to LinkedIn. Dali Rajic, president and COO of Wiz, will be taking over the […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure",
+      "dateISO": "2026-08-13T19:28:39.000Z",
+      "date": "AUG 13 2026",
+      "category": "orggov",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 60,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/previewing-ultrafast",
+      "clusterId": "7sphgw",
+      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+      "desc": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
+      "url": "https://openai.com/index/previewing-ultrafast",
+      "dateISO": "2026-08-13T10:00:00.000Z",
+      "date": "AUG 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/previewing-ultrafast"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -374,32 +456,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/games/978558/rideshare-stimulator-writer-ai-saber-interactive",
-      "clusterId": "y992u6",
-      "title": "Saber denies replacing Rideshare Stimulator’s writers with ChatGPT",
-      "desc": "After a former lead writer claimed Saber \"replaced me with ChatGPT,\" CEO Matthew Karch now claims, \"Neither Saber nor Unigine have replaced any writers with AI,\" for the Rideshare \"Stimulator\" game announced last month, developed by Unigine. The writer, Stella Sacco, says differently, however, posting on Bluesky that \"I was lead writer on this one! […]",
-      "url": "https://www.theverge.com/games/978558/rideshare-stimulator-writer-ai-saber-interactive",
-      "dateISO": "2026-08-12T00:39:26.000Z",
-      "date": "AUG 12 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/games/978558/rideshare-stimulator-writer-ai-saber-interactive"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-7-flash-just-three-weeks-after-previous-release/",
       "clusterId": "17ezf57",
       "title": "Google announces Gemini 3.7 Flash just three weeks after previous release",
@@ -452,89 +508,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/previewing-ultrafast",
-      "clusterId": "7sphgw",
-      "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
-      "desc": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
-      "url": "https://openai.com/index/previewing-ultrafast",
-      "dateISO": "2026-08-13T10:00:00.000Z",
-      "date": "AUG 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/previewing-ultrafast"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/",
-      "clusterId": "9d8qle",
-      "title": "Some Claude users are mad that Anthropic’s new watermarks will catch them using it at their jobs, classes",
-      "desc": "Is Anthropic's new watermarking system a travesty? Some have taken to social media to complain that it is.",
-      "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/",
-      "dateISO": "2026-08-12T22:26:37.000Z",
-      "date": "AUG 12 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVFXcWJ5bzRvaXV1N2txOFAtTkt1andTTWdiZVY4UU92UTBqRHVQbXBYQzlaMVFCZ2dMamhoc05jckdPdnpycmE0SHQ4Snp2LTFMOTRqT3Q2cE5XNDUwREhzMEZBalpEaUhabzJzRFd3X20tQmlGLVlmYVJhb1k5cHpmbEd3dWNZQjhPTC03OVpMM0FhSDAxY1lLZkJMX0w4a3JMR0pBVDJySHVNMg?oc=5"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
-      "clusterId": "1nxoqi3",
-      "title": "OpenAI launches ChatGPT desktop app for Linux",
-      "desc": "OpenAI is finally bringing a dedicated ChatGPT desktop app to Linux operating systems.",
-      "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
-      "dateISO": "2026-08-11T19:15:35.000Z",
-      "date": "AUG 11 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/08/claudes-new-scarlet-letter-watermark-is-invisible-for-now/",
       "clusterId": "1fnd3ct",
       "title": "Claude's new Scarlet Letter watermark is invisible—for now",
@@ -556,6 +529,36 @@
         }
       ],
       "sourceName": "Ars Technica",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/",
+      "clusterId": "9d8qle",
+      "title": "Some Claude users are mad that Anthropic’s new watermarks will catch them using it at their jobs, classes",
+      "desc": "Is Anthropic's new watermarking system a travesty? Some have taken to social media to complain that it is.",
+      "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/",
+      "dateISO": "2026-08-12T22:26:37.000Z",
+      "date": "AUG 12 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMEVNMnZGYXhTZUZwOUdOOEsxUGpaVnJNa1RGdkZ3SE9ldzRoaUF1cVFXcWJ5bzRvaXV1N2txOFAtTkt1andTTWdiZVY4UU92UTBqRHVQbXBYQzlaMVFCZ2dMamhoc05jckdPdnpycmE0SHQ4Snp2LTFMOTRqT3Q2cE5XNDUwREhzMEZBalpEaUhabzJzRFd3X20tQmlGLVlmYVJhb1k5cHpmbEd3dWNZQjhPTC03OVpMM0FhSDAxY1lLZkJMX0w4a3JMR0pBVDJySHVNMg?oc=5"
+        }
+      ],
+      "sourceName": "TechCrunch",
       "entityIds": [
         "claude"
       ]
@@ -705,32 +708,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience",
-      "clusterId": "xibl0q",
-      "title": "Microsoft is combining its Copilot apps ahead of a ‘super app’",
-      "desc": "Microsoft is finally beginning to combine its consumer and commercial Copilot AI assistants into a single \"super app\" interface, starting with the Copilot and Microsoft 365 Copilot apps. Both personal and work accounts will be moved to the new unified app, which recycles the \"Microsoft Copilot\" name but features an updated app icon. The single […]",
-      "url": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience",
-      "dateISO": "2026-08-13T13:30:00.000Z",
-      "date": "AUG 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "copilot"
-      ]
-    },
-    {
       "id": "https://openai.com/index/ringcentral",
       "clusterId": "bxujuk",
       "title": "How RingCentral builds AI-native work from engineering to ops",
@@ -754,6 +731,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience",
+      "clusterId": "xibl0q",
+      "title": "Microsoft is combining its Copilot apps ahead of a ‘super app’",
+      "desc": "Microsoft is finally beginning to combine its consumer and commercial Copilot AI assistants into a single \"super app\" interface, starting with the Copilot and Microsoft 365 Copilot apps. Both personal and work accounts will be moved to the new unified app, which recycles the \"Microsoft Copilot\" name but features an updated app icon. The single […]",
+      "url": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience",
+      "dateISO": "2026-08-13T13:30:00.000Z",
+      "date": "AUG 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "copilot"
       ]
     },
     {
@@ -813,30 +816,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
-      "clusterId": "1ci2ndz",
-      "title": "There’s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
-      "desc": "Over a billion people worldwide have livers with excess fat, which can lead to a host of medical problems. Researchers think AI tools can spot the condition—and help stop it—early enough to save lives.",
-      "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
-      "dateISO": "2026-08-13T09:00:00.000Z",
-      "date": "AUG 13 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": []
-    },
-    {
       "id": "https://www.wired.com/story/a-new-trick-reveals-ai-models-inner-thoughts/",
       "clusterId": "1bv4fxm",
       "title": "A New Trick Reveals AI Models’ Inner Thoughts",
@@ -862,6 +841,30 @@
         "claude",
         "gemini"
       ]
+    },
+    {
+      "id": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
+      "clusterId": "1ci2ndz",
+      "title": "There’s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
+      "desc": "Over a billion people worldwide have livers with excess fat, which can lead to a host of medical problems. Researchers think AI tools can spot the condition—and help stop it—early enough to save lives.",
+      "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
+      "dateISO": "2026-08-13T09:00:00.000Z",
+      "date": "AUG 13 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": []
     },
     {
       "id": "https://arstechnica.com/ai/2026/08/the-new-instagram-logo-is-the-perfect-embodiment-of-ai-slop/",
@@ -928,11 +931,11 @@
           "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5"
         },
         {
-          "name": "theconversation.com",
+          "name": "The Conversation",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWUpveEJWVS1OcWh3cDBXVFl3SXAxUUpxemJtNXEtUm9fZWkzNVpRS2wtaU1kZDNIb0pWRkFLdllyNkpSMzNTTXV4a2trWFlNNkN5aGI3RTY5b0VSMm54bjY3a25xUXZ0bmhLUVhPSGhjUXljMWtBNk56ekJ6bEpBRHhibDg4MU1ocWRlbFQtaXltc1h6LXRReTI0d0VWLWdNZ1E?oc=5"
         }
       ],
-      "sourceName": "theconversation.com",
+      "sourceName": "The Conversation",
       "entityIds": [
         "claude"
       ]
@@ -1164,7 +1167,7 @@
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzBYZ080YTJJRmVjeWFubUoyZkJTYjc5SzQ4bXJXaFA2TDh6YW8wU3AwR0twTmFaVGRWMmdUNlFhNXB0RS1GRWxuNVNxMmhzSkpqWE5BRUdndmFFU0NKb2xoZ3VlV25rVVduaDF1SUxEUTFuQTdsR05DMTdZeGRoaXRCX3pNTl81b29FVExUWU5QTUpzRmp6VFduU3ZYTF9Kd1laYw?oc=5"
         },
         {
-          "name": "CyberScoop",
+          "name": "cyberscoop.com",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
         },
         {
@@ -1172,7 +1175,7 @@
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5"
         }
       ],
-      "sourceName": "CyberScoop",
+      "sourceName": "cyberscoop.com",
       "entityIds": [
         "claude"
       ]
@@ -1208,27 +1211,26 @@
   "waves": [
     {
       "family": "product",
-      "category": "product",
-      "title": "Of course the ChatGPT dog cancer vaccine spawned a startup",
-      "summary": "Remember that much-hyped story about an Australian tech entrepreneur using ChatGPT, Grok, and other AI tools to craft a personalized cancer vaccine for his dog? Well, surprise: He…",
-      "significance": 61,
+      "category": "adoption",
+      "title": "IBM partners with OpenAI to bolster enterprise AI push",
+      "summary": "IBM plans to train and certify tens and thousands of consultants on OpenAI's technologies as part of this deal.",
+      "significance": 74,
       "impact": "notable",
       "verification": "single",
-      "date": "AUG 12 2026",
-      "dateISO": "2026-08-12T12:09:34.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/978671/ai-cured-dog-cancer-mrna-vaccine-startup-gamgee",
+      "date": "AUG 13 2026",
+      "dateISO": "2026-08-13T19:19:49.000Z",
+      "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/978671/ai-cured-dog-cancer-mrna-vaccine-startup-gamgee"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/"
         }
       ],
       "entityIds": [
-        "chatgpt",
-        "grok"
+        "gpt"
       ],
-      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, the partnership shifts who gets access to whose models, compute or customers."
     },
     {
       "family": "market",
@@ -1257,7 +1259,7 @@
       "family": "research",
       "category": "research",
       "title": "Anthropic set AI agents loose on the same task. They started a turf war.",
-      "summary": "Anthropic researchers found AI agents can clash, collude and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-age…",
+      "summary": "Anthropic researchers found AI agents can clash, collude, and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-ag…",
       "significance": 75,
       "impact": "high",
       "verification": "single",
@@ -1278,12 +1280,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 30,
+    "chatgpt": 28,
     "copilot": 4,
     "perplexity": 0,
-    "gpt": 73,
+    "gpt": 74,
     "claude": 70,
-    "gemini": 32,
+    "gemini": 31,
     "grok": 2,
     "llama": 0,
     "deepseek": 0,
@@ -1377,17 +1379,6 @@
           "impact": "notable"
         },
         {
-          "h": "OpenAI launches ChatGPT desktop app for Linux",
-          "d": "AUG 11 2026",
-          "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "TechCrunch",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Daybreak models are now available on AWS",
           "d": "AUG 11 2026",
           "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
@@ -1413,6 +1404,17 @@
           "h": "Improving GPT‑5.6 Sol in ChatGPT—and expanding access to GPT-5.6 Luna for free users",
           "d": "AUG 06 2026",
           "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing OpenAI Presence",
+          "d": "JUL 22 2026",
+          "url": "https://openai.com/index/introducing-openai-presence",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1463,6 +1465,42 @@
     }
   ],
   "wire": [
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 13 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "OpenAI is losing its second executive this week",
+      "p": "Another OpenAI executive is departing. Denise Dresser, who joined OpenAI as its chief revenue officer in December after serving as CEO of Slack, will be leaving in the \"coming weeks\" to \"pursue other opportunities,\" she said in a team note posted to LinkedIn.…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 13 2026",
+      "verification": "official",
+      "impact": "notable",
+      "h": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+      "p": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
+      "url": "https://openai.com/index/previewing-ultrafast",
+      "sourceName": "OpenAI",
+      "sourceCount": 2
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 13 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "IBM partners with OpenAI to bolster enterprise AI push",
+      "p": "IBM plans to train and certify tens and thousands of consultants on OpenAI's technologies as part of this deal.",
+      "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
     {
       "org": "AI WIRE",
       "logoKey": "other",
@@ -1520,42 +1558,6 @@
       "h": "Microsoft kills off unsuccessful AI features while merging its separate Copilot…",
       "p": "Microsoft is simplifying Copilot by combining its consumer and business apps, and dropping AI-generated podcasts, Group Chats, Deep Research, and its Mico character.",
       "url": "https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 13 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "I looked inside an AI generated movie, and the best parts were all human",
-      "p": "Imagine a trio of bumbling, English lads who fantasize about becoming megastars while knocking back a few pints in a grimy pub somewhere in London. Picture the guys chortling and trying to one-up each other's idealized visions of the future with a series of i…",
-      "url": "https://www.theverge.com/entertainment/977994/higgsfield-ai-cully-hill-boys-black-list",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 13 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Nvidia’s new $500B plan is risky but brilliant, especially for aging GPUs",
-      "p": "Nvidia has a plan to make sure its GPUs won't lose value. It wants to convince a new crop of financiers to keep lending for AI buildouts.",
-      "url": "https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 13 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Apple in talks to pay publishers to provide Siri with current news: report",
-      "p": "The tech giant has considered a nine-figure budget for the payments, according to the WSJ.",
-      "url": "https://techcrunch.com/2026/08/13/apple-in-talks-to-pay-publishers-to-provide-siri-with-current-news-report/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1629,7 +1631,7 @@
       "verification": "single",
       "impact": "high",
       "h": "Anthropic set AI agents loose on the same task. They started a turf war.",
-      "p": "Anthropic researchers found AI agents can clash, collude and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-agent systems.",
+      "p": "Anthropic researchers found AI agents can clash, collude, and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-agent systems.",
       "url": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
@@ -1696,11 +1698,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 225.6,
-      "changePct": 0.6738407739309145,
+      "price": 225.82,
+      "changePct": 0.7720161607390785,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 69507358,
+      "volume": 71638337,
       "ohlc": [
         {
           "d": "05-13",
@@ -2148,22 +2150,22 @@
           "o": 225.05499267578125,
           "h": 227.22999572753906,
           "l": 223.7100067138672,
-          "c": 225.60000610351562
+          "c": 225.82000732421875
         }
       ],
-      "relVolume": 0.5561590171158022,
-      "marketCap": 5504640000000
+      "relVolume": 0.5732099196423291,
+      "marketCap": 5510008000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 497.36,
-      "changePct": 1.0011560524558027,
+      "price": 497.475,
+      "changePct": 1.0245138400934164,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 13630926,
+      "volume": 14187326,
       "ohlc": [
         {
           "d": "05-13",
@@ -2611,22 +2613,22 @@
           "o": 493.2650146484375,
           "h": 501.3399963378906,
           "l": 493.010009765625,
-          "c": 497.3599853515625
+          "c": 497.4750061035156
         }
       ],
-      "relVolume": 0.3470901914850275,
-      "marketCap": 3695384800000
+      "relVolume": 0.36125804644530457,
+      "marketCap": 3696239250000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 420.25,
-      "changePct": 1.0094970148445779,
+      "price": 419.391,
+      "changePct": 0.00011852207168431994,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7987162,
+      "volume": 8318944,
       "ohlc": [
         {
           "d": "05-13",
@@ -3074,22 +3076,22 @@
           "o": 415.80499267578125,
           "h": 424.9200134277344,
           "l": 411.4100036621094,
-          "c": 420.25
+          "c": 419.3905029296875
         }
       ],
-      "relVolume": 0.4364191407465528,
-      "marketCap": 2067630000000
+      "relVolume": 0.4545477345268183,
+      "marketCap": 2063403720000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 346.03,
-      "changePct": 0.724803566525325,
+      "price": 346.28,
+      "changePct": 0.7975752943537329,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 12079371,
+      "volume": 12531930,
       "ohlc": [
         {
           "d": "05-13",
@@ -3537,22 +3539,22 @@
           "o": 345.6199951171875,
           "h": 347.92999267578125,
           "l": 343.760009765625,
-          "c": 346.0299987792969
+          "c": 346.2799987792969
         }
       ],
-      "relVolume": 0.36527988155606445,
-      "marketCap": 4221565999999.9995
+      "relVolume": 0.3789652545706967,
+      "marketCap": 4224615999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 265.865,
-      "changePct": -0.5294105624754588,
+      "price": 265.63,
+      "changePct": -0.617327859929705,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 21475100,
+      "volume": 22183789,
       "ohlc": [
         {
           "d": "05-13",
@@ -4000,22 +4002,22 @@
           "o": 267.2349853515625,
           "h": 269.5799865722656,
           "l": 264.82000732421875,
-          "c": 265.864990234375
+          "c": 265.6300048828125
         }
       ],
-      "relVolume": 0.4343819335175226,
-      "marketCap": 2844755500000
+      "relVolume": 0.44871675375503484,
+      "marketCap": 2842241000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 594.08,
-      "changePct": 2.6310861442966686,
+      "price": 595.495,
+      "changePct": 2.8755325616799374,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 7744115,
+      "volume": 8093063,
       "ohlc": [
         {
           "d": "05-13",
@@ -4461,24 +4463,24 @@
         {
           "d": "08-13",
           "o": 580.375,
-          "h": 595.4099731445312,
+          "h": 595.6500244140625,
           "l": 579.4299926757812,
-          "c": 594.0800170898438
+          "c": 595.4949951171875
         }
       ],
-      "relVolume": 0.4641701508380742,
-      "marketCap": 1497081600000
+      "relVolume": 0.485085548632999,
+      "marketCap": 1500647400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 432.44,
-      "changePct": 0.7666337158833703,
+      "price": 431.66,
+      "changePct": 0.5848793664973094,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6033076,
+      "volume": 6329953,
       "ohlc": [
         {
           "d": "05-13",
@@ -4924,24 +4926,24 @@
         {
           "d": "08-13",
           "o": 429.1499938964844,
-          "h": 436.0299987792969,
+          "h": 436.0400085449219,
           "l": 428.3922119140625,
-          "c": 432.44000244140625
+          "c": 431.6600036621094
         }
       ],
-      "relVolume": 0.4217456681260621,
-      "marketCap": 2244363600000
+      "relVolume": 0.4424990265648189,
+      "marketCap": 2240315400000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 487.55,
-      "changePct": 0.9566846660115705,
+      "price": 487,
+      "changePct": 0.8427737738275413,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 14220139,
+      "volume": 14711955,
       "ohlc": [
         {
           "d": "05-13",
@@ -5389,22 +5391,22 @@
           "o": 483.05499267578125,
           "h": 497.9800109863281,
           "l": 481,
-          "c": 487.55010986328125
+          "c": 487
         }
       ],
-      "relVolume": 0.4862497805143973,
-      "marketCap": 789831000000
+      "relVolume": 0.5030671563539351,
+      "marketCap": 788940000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 178.62,
-      "changePct": 4.4317131247626405,
+      "price": 178.88,
+      "changePct": 4.583730065730377,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 25954911,
+      "volume": 27117085,
       "ohlc": [
         {
           "d": "05-13",
@@ -5852,22 +5854,22 @@
           "o": 173.67999267578125,
           "h": 179.1699981689453,
           "l": 172.33009338378906,
-          "c": 178.6199951171875
+          "c": 178.8800048828125
         }
       ],
-      "relVolume": 0.5526345138950104,
-      "marketCap": 428688000000
+      "relVolume": 0.5773796368334562,
+      "marketCap": 429312000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 155.48,
-      "changePct": 1.4352798576217989,
+      "price": 156.36,
+      "changePct": 2.009395782609241,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 19649279,
+      "volume": 20346369,
       "ohlc": [
         {
           "d": "05-13",
@@ -6315,11 +6317,11 @@
           "o": 151.97999572753906,
           "h": 159.25,
           "l": 151.91000366210938,
-          "c": 155.47999572753906
+          "c": 156.36000061035156
         }
       ],
-      "relVolume": 0.5691363553024166,
-      "marketCap": 436898800000
+      "relVolume": 0.5893273893814666,
+      "marketCap": 439371600000.00006
     }
   ],
   "compute": [
@@ -6329,7 +6331,7 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6345,7 +6347,7 @@
       "rate": "$5.00 – $6.88/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6373,7 +6375,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-13T19:15:24.628Z",
+    "updatedAt": "2026-08-13T19:30:32.512Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6382,18 +6384,18 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 337,
+        "rawStoryHits": 301,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 42,
-        "storyCoverage": 0.8902077151335311,
-        "estimatedRelevantDiscussions": 48,
+        "storyCoverage": 0.9966777408637874,
+        "estimatedRelevantDiscussions": 43,
         "isEstimated": true,
         "rawCommentHits": 2422,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
         "commentCoverage": 0.12386457473162675,
         "limited": false,
-        "points": 956,
+        "points": 961,
         "themes": [
           {
             "id": "reasoning",
@@ -6449,8 +6451,8 @@
         "topThreads": [
           {
             "title": "Codex in ChatGPT desktop app for Linux is now in preview",
-            "points": 408,
-            "comments": 284,
+            "points": 413,
+            "comments": 287,
             "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
             "date": "AUG 13 2026"
           },
@@ -6465,7 +6467,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 47,
+            "discussions": 42,
             "isEstimated": true
           },
           {
@@ -6486,10 +6488,10 @@
         "storyCoverage": 0.30090270812437314,
         "estimatedRelevantDiscussions": 80,
         "isEstimated": true,
-        "rawCommentHits": 6420,
+        "rawCommentHits": 6423,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 39,
-        "commentCoverage": 0.04672897196261682,
+        "validatedCommentCount": 36,
+        "commentCoverage": 0.046707146193367584,
         "limited": false,
         "points": 501,
         "themes": [
@@ -6501,7 +6503,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 13
           },
           {
             "id": "writing",
@@ -6574,27 +6576,27 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 36,
         "isEstimated": true,
-        "rawCommentHits": 1269,
+        "rawCommentHits": 1274,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
-        "commentCoverage": 0.2364066193853428,
+        "commentCoverage": 0.23547880690737832,
         "limited": false,
         "points": 495,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 21
+            "count": 20
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 13
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 8
+            "count": 7
           },
           {
             "id": "writing",
@@ -6677,10 +6679,10 @@
         "storyCoverage": 0.5244755244755245,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 10427,
+        "rawCommentHits": 10433,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.028771458712956745,
+        "commentCoverage": 0.028754912297517494,
         "limited": false,
         "points": 402,
         "themes": [
@@ -6842,18 +6844,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 124,
-        "fetchedStoryCount": 124,
+        "rawStoryHits": 135,
+        "fetchedStoryCount": 135,
         "validatedStoryCount": 23,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": false,
-        "rawCommentHits": 1366,
+        "rawCommentHits": 1367,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 52,
-        "commentCoverage": 0.21961932650073207,
+        "commentCoverage": 0.2194586686174104,
         "limited": false,
-        "points": 1548,
+        "points": 1551,
         "themes": [
           {
             "id": "coding",
@@ -6911,8 +6913,8 @@
           },
           {
             "title": "DeepSeek Harness developer preview",
-            "points": 460,
-            "comments": 209,
+            "points": 463,
+            "comments": 211,
             "url": "https://deepseek.com/harness/en/",
             "date": "AUG 13 2026"
           }
@@ -6936,10 +6938,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 4588,
+        "rawCommentHits": 4589,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.06538796861377506,
+        "commentCoverage": 0.06537371976465461,
         "limited": false,
         "points": 434,
         "themes": [
@@ -7102,6 +7104,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "local"
+        ],
+        "excerpt": "With claude, the difference I noticed is that you can run their cloud enviroment from GUI app, as well as connect to remote machine. Sure, remote connection is nothing…",
+        "source": "Hacker News",
+        "author": "skandinaff",
+        "publishedAt": "2026-08-13T10:35:10.000Z",
+        "url": "https://news.ycombinator.com/item?id=49283983"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "coding",
           "reasoning"
         ],
@@ -7110,18 +7123,6 @@
         "author": "pixelready",
         "publishedAt": "2026-08-12T17:48:25.000Z",
         "url": "https://news.ycombinator.com/item?id=49276150"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding",
-          "price"
-        ],
-        "excerpt": "…Native, Azure, AWS, SQL Server, Postgres, Docker, Anthropic Claude API Résumé/CV: https://www.linkedin.com/in/stephen-oleary1222 Email: stephen@trijazel.com20 years shipping…",
-        "source": "Hacker News",
-        "author": "chalito1222",
-        "publishedAt": "2026-08-13T12:33:25.000Z",
-        "url": "https://news.ycombinator.com/item?id=49284979"
       },
       {
         "modelId": "gemini",
