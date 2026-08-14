@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T16:45:21.311Z",
+  "generatedAt": "2026-08-14T17:00:31.764Z",
   "historyDepthDays": 35.7,
   "ranges": {
     "24H": {
@@ -9,7 +9,7 @@
         "perplexity": 0,
         "gpt": 9,
         "claude": 3,
-        "gemini": 4,
+        "gemini": 2,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -31,7 +31,7 @@
         "perplexity": 0,
         "gpt": 2,
         "claude": -9,
-        "gemini": 2,
+        "gemini": -2,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -48,7 +48,6 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "general": 10,
         "market": 2,
         "analysis": 2,
         "research": 3,
@@ -57,17 +56,13 @@
         "capital": 2,
         "opensource": 4,
         "product": 2,
+        "general": 8,
         "policy": 1
       },
       "topEntities": [
         {
           "id": "gpt",
           "count": 9,
-          "delta": 2
-        },
-        {
-          "id": "gemini",
-          "count": 4,
           "delta": 2
         },
         {
@@ -81,12 +76,17 @@
           "delta": -2
         },
         {
+          "id": "gemini",
+          "count": 2,
+          "delta": -2
+        },
+        {
           "id": "qwen",
           "count": 1,
           "delta": 1
         }
       ],
-      "eventCount": 32,
+      "eventCount": 30,
       "previousWindowComplete": true
     },
     "7D": {
@@ -217,9 +217,9 @@
       },
       "entityDelta": {},
       "categoryCounts": {
-        "capital": 351,
         "general": 1822,
         "opensource": 168,
+        "capital": 348,
         "product": 358,
         "adoption": 201,
         "policy": 168,
@@ -271,7 +271,7 @@
           "delta": null
         }
       ],
-      "eventCount": 3821,
+      "eventCount": 3818,
       "previousWindowComplete": false
     }
   },
