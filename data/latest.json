@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-15T17:00:30.745Z",
+  "updatedAt": "2026-08-15T17:15:23.118Z",
   "build": {
-    "sha": "0ecb497e2215840f8b5d067446b6a3e193cf6df0",
-    "shortSha": "0ecb497",
+    "sha": "cc8ec61d7e43917eff3912e000590b547ff66905",
+    "shortSha": "cc8ec61",
     "ref": "main",
-    "builtAt": "2026-08-15T17:00:47.691Z"
+    "builtAt": "2026-08-15T17:15:39.010Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 36.7,
-    "estimatedDatasets": 5,
-    "buildSha": "0ecb497",
-    "lastSuccessfulUpdate": "2026-08-15T17:00:30.745Z"
+    "estimatedDatasets": 4,
+    "buildSha": "cc8ec61",
+    "lastSuccessfulUpdate": "2026-08-15T17:15:23.118Z"
   },
   "ticker": [
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
     "NVIDIA’S NEW $500B PLAN IS RISKY BUT BRILLIANT, ESPECIALLY FOR AGING GPUS",
+    "SPACEX OFFICIALLY CLOSES ITS CURSOR ACQUISITION",
     "ANTHROPIC SET AI AGENTS LOOSE ON THE SAME TASK. THEY STARTED A TURF WAR.",
     "IBM PARTNERS WITH OPENAI TO BOLSTER ENTERPRISE AI PUSH",
     "OPENAI HIRES NEW CRO AS EXECUTIVE SHAKE-UP CONTINUES",
     "ANTHROPIC COULD BE WORTH $2 TRILLION WHEN IT GOES PUBLIC",
-    "MICROSOFT’S CLIPPY-LIKE MICO CHARACTER IS NO LONGER THE FACE OF COPILOT",
-    "CLAUDE USERS ARE CANCELING THEIR SUBSCRIPTIONS, CITING ANTHROPIC’S NEW AI WATERMARK"
+    "MICROSOFT’S CLIPPY-LIKE MICO CHARACTER IS NO LONGER THE FACE OF COPILOT"
   ],
   "signals": [
     {
@@ -188,6 +188,30 @@
       "entityIds": [
         "nvidia"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+      "clusterId": "1nsthlw",
+      "title": "SpaceX officially closes its Cursor acquisition",
+      "desc": "AI coding startup Cursor is now officially a part of SpaceX.",
+      "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+      "dateISO": "2026-08-15T16:30:00.000Z",
+      "date": "AUG 15 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/",
@@ -372,32 +396,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
-      "clusterId": "16tj83g",
-      "title": "Google will now allow users to remove visible watermark from its AI generations",
-      "desc": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.",
-      "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
-      "dateISO": "2026-08-14T16:13:40.000Z",
-      "date": "AUG 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/",
       "clusterId": "4ezq8n",
       "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
@@ -422,6 +420,32 @@
       "entityIds": [
         "gpt",
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+      "clusterId": "16tj83g",
+      "title": "Google will now allow users to remove visible watermark from its AI generations",
+      "desc": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.",
+      "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+      "dateISO": "2026-08-14T16:13:40.000Z",
+      "date": "AUG 14 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -614,32 +638,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
-      "clusterId": "1xytyiq",
-      "title": "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise",
-      "desc": "Thrive Holdings has raised $2 billion in new funding at a $12 billion valuation from investors like SoftBank, D1 Capital Partners, and Altimeter Capital.",
-      "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
-      "dateISO": "2026-08-12T17:41:29.000Z",
-      "date": "AUG 12 2026",
-      "category": "capital",
-      "catConfidence": 0.76,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
       "clusterId": "1i84g2z",
       "title": "Claude Code’s hidden tracker was an “experiment,” says Anthropic",
@@ -676,7 +674,7 @@
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
         },
         {
-          "name": "wsj.com",
+          "name": "WSJ",
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
         },
         {
@@ -887,6 +885,32 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+      "clusterId": "1xytyiq",
+      "title": "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise",
+      "desc": "Thrive Holdings has raised $2 billion in new funding at a $12 billion valuation from investors like SoftBank, D1 Capital Partners, and Altimeter Capital.",
+      "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+      "dateISO": "2026-08-12T17:41:29.000Z",
+      "date": "AUG 12 2026",
+      "category": "capital",
+      "catConfidence": 0.76,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/"
+        }
+      ],
+      "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
       ]
@@ -1176,32 +1200,6 @@
       ],
       "sourceName": "Wired",
       "entityIds": []
-    },
-    {
-      "id": "https://www.wired.com/story/openai-safety-security-ai-agents-culture/",
-      "clusterId": "1q3n710",
-      "title": "The Safety Reckoning Inside OpenAI",
-      "desc": "OpenAI’s rogue agent hack was a watershed moment for AI safety and cybersecurity. It also sparked internal questions about the culture that led to it.",
-      "url": "https://www.wired.com/story/openai-safety-security-ai-agents-culture/",
-      "dateISO": "2026-08-13T22:37:19.000Z",
-      "date": "AUG 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openai-safety-security-ai-agents-culture/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1484,6 +1482,18 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
+      "date": "AUG 15 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "SpaceX officially closes its Cursor acquisition",
+      "p": "AI coding startup Cursor is now officially a part of SpaceX.",
+      "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "AUG 12 2026",
       "verification": "corroborated",
       "impact": "emerging",
@@ -1564,18 +1574,6 @@
       "url": "https://www.wired.com/story/mark-zuckerbergs-ai-manifesto-is-6500-words-and-barely-says-anything/",
       "sourceName": "Wired",
       "sourceCount": 2
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "AUG 14 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "You can now turn off Google Gemini’s visible watermarks",
-      "p": "Google will now allow you to remove visible watermarks from the images, videos, and music made with AI tools. With the update, you can toggle off a new \"Media watermark\" setting in Gemini and Google's AI video generator, Flow. When toggled off, Google will re…",
-      "url": "https://www.theverge.com/tech/980416/google-gemini-ai-watermarks-removal",
-      "sourceName": "The Verge",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -6309,13 +6307,13 @@
       "rate": "$3.59 – $4.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $6.88/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$5.31 – $6.79/hr",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
@@ -6325,7 +6323,7 @@
       "rate": "$6.94 – $7.89/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6345,7 +6343,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-15T17:00:30.745Z",
+    "updatedAt": "2026-08-15T17:15:23.118Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6354,16 +6352,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 326,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 257,
+        "fetchedStoryCount": 257,
         "validatedStoryCount": 40,
-        "storyCoverage": 0.9202453987730062,
-        "estimatedRelevantDiscussions": 45,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 42,
         "isEstimated": true,
-        "rawCommentHits": 2396,
+        "rawCommentHits": 2393,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.12520868113522537,
+        "commentCoverage": 0.12536564981195153,
         "limited": false,
         "points": 971,
         "themes": [
@@ -6432,8 +6430,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 43,
-            "isEstimated": true
+            "discussions": 40,
+            "isEstimated": false
           },
           {
             "name": "OpenAI forum",
@@ -6453,10 +6451,10 @@
         "storyCoverage": 0.30425963488843816,
         "estimatedRelevantDiscussions": 80,
         "isEstimated": true,
-        "rawCommentHits": 6578,
+        "rawCommentHits": 6574,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.045606567345697784,
+        "commentCoverage": 0.04563431700638881,
         "limited": false,
         "points": 470,
         "themes": [
@@ -6541,10 +6539,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 1369,
+        "rawCommentHits": 1368,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.2191380569758948,
+        "commentCoverage": 0.21929824561403508,
         "limited": false,
         "points": 490,
         "themes": [
@@ -6633,16 +6631,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 545,
+        "rawStoryHits": 543,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 14,
-        "storyCoverage": 0.5504587155963303,
+        "storyCoverage": 0.5524861878453039,
         "estimatedRelevantDiscussions": 25,
         "isEstimated": true,
-        "rawCommentHits": 10109,
+        "rawCommentHits": 10111,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 23,
-        "commentCoverage": 0.029676525868038383,
+        "commentCoverage": 0.029670655721491444,
         "limited": false,
         "points": 403,
         "themes": [
@@ -6799,16 +6797,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 144,
-        "fetchedStoryCount": 133,
+        "rawStoryHits": 135,
+        "fetchedStoryCount": 135,
         "validatedStoryCount": 26,
-        "storyCoverage": 0.9236111111111112,
-        "estimatedRelevantDiscussions": 28,
-        "isEstimated": true,
-        "rawCommentHits": 1450,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 26,
+        "isEstimated": false,
+        "rawCommentHits": 1449,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.20689655172413793,
+        "commentCoverage": 0.2070393374741201,
         "limited": false,
         "points": 1830,
         "themes": [
@@ -6877,8 +6875,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 28,
-            "isEstimated": true
+            "discussions": 26,
+            "isEstimated": false
           }
         ]
       },
