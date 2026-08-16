@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-16T14:00:28.258Z",
+  "updatedAt": "2026-08-16T14:15:23.159Z",
   "build": {
-    "sha": "5acba235f40470ff08581f897f45930e3a6ed3d5",
-    "shortSha": "5acba23",
+    "sha": "9c06dc51cfc6b8bfc17c1bd62e294bd9d6a32592",
+    "shortSha": "9c06dc5",
     "ref": "main",
-    "builtAt": "2026-08-16T14:00:48.048Z"
+    "builtAt": "2026-08-16T14:15:39.197Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 37.6,
-    "estimatedDatasets": 4,
-    "buildSha": "5acba23",
-    "lastSuccessfulUpdate": "2026-08-16T14:00:28.258Z"
+    "estimatedDatasets": 5,
+    "buildSha": "9c06dc5",
+    "lastSuccessfulUpdate": "2026-08-16T14:15:23.159Z"
   },
   "ticker": [
     "ANTHROPIC SHARES MORE DETAILS ABOUT HOW CLAUDE’S NEW WATERMARKS WILL WORK",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
+    "ROGUE AI AREN’T SCIENCE FICTION ANYMORE",
     "ANTHROPIC LAUNCHES CLAUDE TAG IN SLACK WITH PLANS FOR WIDER ROLLOUT",
     "INTRODUCING CLAUDE TAG",
     "WOMAN CLAIMS HER STEPFATHER USED GROK TO TRANSFORM CHILDHOOD PHOTO INTO EXPLICIT IMAGERY",
     "NVIDIA’S NEW $500B PLAN IS RISKY BUT BRILLIANT, ESPECIALLY FOR AGING GPUS",
-    "APPLE IS GETTING THIS WRONG",
-    "ADVANCING RESPONSIBLE AI ACROSS EUROPE"
+    "APPLE IS GETTING THIS WRONG"
   ],
   "signals": [
     {
@@ -187,6 +187,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
+      "clusterId": "wvz1dx",
+      "title": "Rogue AI aren’t science fiction anymore",
+      "desc": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on AI safety, follow Robert Hart. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started It all started in July, when one of OpenAI's autonomous AI agents […]",
+      "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
+      "dateISO": "2026-08-16T12:00:00.000Z",
+      "date": "AUG 16 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -977,11 +1003,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Forbes",
+          "name": "forbes.com",
           "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMmplakZsUTBhenBnb1ViN2xXQmZjdjdhN09PSFBrLW1oYXdra3JINjVVa2FjODc3ekRraEw4VndFNmI0TENKVzloaFhROUVCYVNWam1MWmJ5dm8zeEs5WkF2WFl4VmVwUkx5RkZrYzdEcUp2VU42ZTQ1Yi1RVXd6OTJwbGEwalFkNnV0NWpHdzZaUFlINjNnb3pfQ2NkTEdyOUhuZ0dQb3hLZWd0aGZVU09sR2dPSXR1aGRKS0ZYZWJhVEY3?oc=5"
         }
       ],
-      "sourceName": "Forbes",
+      "sourceName": "forbes.com",
       "entityIds": [
         "claude"
       ]
@@ -1169,33 +1195,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/mufg",
-      "clusterId": "oy4d1k",
-      "title": "MUFG aims to become AI-native with OpenAI",
-      "desc": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
-      "url": "https://openai.com/index/mufg",
-      "dateISO": "2026-07-07T00:00:00.000Z",
-      "date": "JUL 07 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/mufg"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1291,10 +1290,10 @@
   ],
   "entityActivity": {
     "chatgpt": 27,
-    "copilot": 5,
+    "copilot": 4,
     "perplexity": 0,
-    "gpt": 72,
-    "claude": 73,
+    "gpt": 73,
+    "claude": 72,
     "gemini": 29,
     "grok": 1,
     "llama": 0,
@@ -1476,6 +1475,18 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 16 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Rogue AI aren’t science fiction anymore",
+      "p": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on AI safety, follow Robert Hart. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started It all started…",
+      "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "JUN 25 2026",
@@ -1558,18 +1569,6 @@
       "url": "https://www.wired.com/story/unitree-influencer-4-foot-robot-from-china/",
       "sourceName": "Wired",
       "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "JUL 13 2026",
-      "verification": "analysis",
-      "impact": "emerging",
-      "h": "How Claude's values vary by model and language",
-      "p": "How Claude's values vary by model and language",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5",
-      "sourceName": "Anthropic",
-      "sourceCount": 2
     }
   ],
   "feed": [
@@ -4004,7 +4003,7 @@
       "changePct": -0.8605468123268104,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8401479,
+      "volume": 8412405,
       "ohlc": [
         {
           "d": "05-15",
@@ -4916,7 +4915,7 @@
       "changePct": 6.4967607810114085,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 24905175,
+      "volume": 24928819,
       "ohlc": [
         {
           "d": "05-15",
@@ -6280,26 +6279,26 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.29/hr",
-      "trend": "↑ 4% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$1.87 – $3.29/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.59/hr",
-      "trend": "↑ 23% vs 7d ago",
+      "rate": "$3.59 – $4.74/hr",
+      "trend": "↑ 25% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $6.88/hr",
-      "trend": "↑ 3% vs 7d ago",
+      "rate": "$5.98 – $7.50/hr",
+      "trend": "↑ 14% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6327,7 +6326,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-16T14:00:28.258Z",
+    "updatedAt": "2026-08-16T14:15:23.159Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6337,15 +6336,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 320,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 257,
         "validatedStoryCount": 40,
-        "storyCoverage": 0.9375,
-        "estimatedRelevantDiscussions": 46,
+        "storyCoverage": 0.803125,
+        "estimatedRelevantDiscussions": 53,
         "isEstimated": true,
-        "rawCommentHits": 2136,
+        "rawCommentHits": 2388,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.1404494382022472,
+        "commentCoverage": 0.12562814070351758,
         "limited": false,
         "points": 973,
         "themes": [
@@ -6409,7 +6408,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 43,
+            "discussions": 50,
             "isEstimated": true
           },
           {
@@ -6430,10 +6429,10 @@
         "storyCoverage": 0.30959752321981426,
         "estimatedRelevantDiscussions": 79,
         "isEstimated": true,
-        "rawCommentHits": 6492,
+        "rawCommentHits": 6497,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.04621072088724584,
+        "commentCoverage": 0.04617515776512236,
         "limited": false,
         "points": 470,
         "themes": [
@@ -6513,10 +6512,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1320,
+        "rawCommentHits": 1319,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.22727272727272727,
+        "commentCoverage": 0.22744503411675512,
         "limited": false,
         "points": 453,
         "themes": [
@@ -6606,10 +6605,10 @@
         "storyCoverage": 0.5565862708719852,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 9969,
+        "rawCommentHits": 9972,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 22,
-        "commentCoverage": 0.03009328919650918,
+        "commentCoverage": 0.030084235860409144,
         "limited": false,
         "points": 404,
         "themes": [
@@ -6766,16 +6765,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
+        "rawStoryHits": 137,
+        "fetchedStoryCount": 133,
         "validatedStoryCount": 26,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 26,
-        "isEstimated": false,
-        "rawCommentHits": 1423,
+        "storyCoverage": 0.9708029197080292,
+        "estimatedRelevantDiscussions": 27,
+        "isEstimated": true,
+        "rawCommentHits": 1422,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.21082220660576248,
+        "commentCoverage": 0.2109704641350211,
         "limited": false,
         "points": 1837,
         "themes": [
@@ -6839,8 +6838,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 26,
-            "isEstimated": false
+            "discussions": 27,
+            "isEstimated": true
           }
         ]
       },
@@ -6849,16 +6848,16 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 271,
-        "fetchedStoryCount": 271,
+        "rawStoryHits": 272,
+        "fetchedStoryCount": 272,
         "validatedStoryCount": 9,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 4633,
+        "rawCommentHits": 4631,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.06475285991797972,
+        "commentCoverage": 0.06478082487583675,
         "limited": false,
         "points": 434,
         "themes": [
