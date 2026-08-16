@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-16T21:30:26.025Z",
+  "updatedAt": "2026-08-16T21:45:19.576Z",
   "build": {
-    "sha": "6fae75066e127273ef5d3edc94f4e193ea17381e",
-    "shortSha": "6fae750",
+    "sha": "d9e379f16a902a69252f0b275aa15bae02f59118",
+    "shortSha": "d9e379f",
     "ref": "main",
-    "builtAt": "2026-08-16T21:30:41.657Z"
+    "builtAt": "2026-08-16T21:45:34.213Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 37.9,
     "estimatedDatasets": 4,
-    "buildSha": "6fae750",
-    "lastSuccessfulUpdate": "2026-08-16T21:30:26.025Z"
+    "buildSha": "d9e379f",
+    "lastSuccessfulUpdate": "2026-08-16T21:45:19.576Z"
   },
   "ticker": [
     "ANTHROPIC SHARES MORE DETAILS ABOUT HOW CLAUDE’S NEW WATERMARKS WILL WORK",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
+    "OPENAI REPORTEDLY DISBANDED ITS PREPAREDNESS TEAM",
     "CHATGPT’S COMPUTER HISTORY TRACKS YOUR CLICKS AND KEYSTROKES",
     "STRIPE WILL REPORTEDLY ACQUIRE AI GATEWAY STARTUP OPENROUTER FOR $7B+",
     "ROGUE AI AREN’T SCIENCE FICTION ANYMORE",
     "ANTHROPIC LAUNCHES CLAUDE TAG IN SLACK WITH PLANS FOR WIDER ROLLOUT",
-    "‘THIS IS AI OUT OF CONTROL’: CLAUDE DISOBEYED ANTHROPIC CEO IN SIMULATIONS",
-    "INTRODUCING CLAUDE TAG"
+    "‘THIS IS AI OUT OF CONTROL’: CLAUDE DISOBEYED ANTHROPIC CEO IN SIMULATIONS"
   ],
   "signals": [
     {
@@ -187,6 +187,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team",
+      "clusterId": "vfl6pj",
+      "title": "OpenAI reportedly disbanded its preparedness team",
+      "desc": "According to the Financial Times, OpenAI disbanded its preparedness team at the end of last month. The job of the preparedness team was to assess if models posed serious risks and develop ways to mitigate those risks. (You know, like the possibility that it could go rogue and hack another company.) According to FT, responsibility […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team",
+      "dateISO": "2026-08-16T21:32:56.000Z",
+      "date": "AUG 16 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -412,57 +438,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
-      "clusterId": "18co4yc",
-      "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
-      "dateISO": "2026-06-25T07:00:00.000Z",
-      "date": "JUN 25 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 7,
-      "sources": [
-        {
-          "name": "DW.com",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
-        },
-        {
-          "name": "Cybersecurity Dive",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
-        },
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
-        },
-        {
-          "name": "Financial Times",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZXNhY20yblU5Q1d4YllxXzJQZHJQYTYwZnJZRWp1YUFYNHRBTS1VZnlQQmRkRHd1NHlFMVRhT2QyRjZmZWVSTDZQeVBjZ0JyLTI5UUNndXFyUFBXT0pjelU0VFZSbDJaaUlTQV9RQVVoeDl4UTFpUFpGOTRqTHpQaElBZW0?oc=5"
-        },
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WbnpDZDliX05XS1E5bnBmZ201cHc0alFOb0Q4MXFsTXYwem9ySkg4R0luZDhIQmpaYXRzbnV2dno3cEN4NEZXZHBrWnlQMGpxLWdEbnB6Q2Z1dw?oc=5"
-        },
-        {
-          "name": "CBS News",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRm1XQlFkWlBWcERiZ1JTX3pVblVKb1lfN1FrMXFkb3pLM19HdGt0cXUzc2lWTmhKem1zdWNVMm45eXQzQXZ4aDdDYURYUFRNZ3BfZVdaWnBfejhta1VZdG42aW5OQzNvTVlBaHlNbk81X0VpRHBEaXV5R2g5eDJ0ejJzMExsTUJNNWpDbjAxRWw?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude",
-        "qwen"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/",
       "clusterId": "q0s1ol",
       "title": "Nvidia’s new $500B plan is risky but brilliant, especially for aging GPUs",
@@ -505,7 +480,7 @@
       "sourceCount": 7,
       "sources": [
         {
-          "name": "Bloomberg.com",
+          "name": "bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTdXUGp2LWNJNk5RVTdrS04zTUw5aEZQUnRXSkRLUXpPUUc2OTdGMHZ2cmVKejNLek56SlhDVG1IbnBoZzRpMFNOa1FvbDVXMDVmemFXVnZDTUxkc2NfQ0thRm9pcVpDZ1FMTWNMWnlud0plN1p5NmhVY0JHdnYzRzU1OVJyNms1T1FlZFlYZw?oc=5"
         },
         {
@@ -513,7 +488,7 @@
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
         },
         {
-          "name": "South China Morning Post",
+          "name": "scmp.com",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
         },
         {
@@ -534,6 +509,91 @@
         }
       ],
       "sourceName": "Malwarebytes",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
+      "clusterId": "18co4yc",
+      "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
+      "dateISO": "2026-06-25T07:00:00.000Z",
+      "date": "JUN 25 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 6,
+      "sources": [
+        {
+          "name": "Cybersecurity Dive",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
+        },
+        {
+          "name": "BBC",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
+        },
+        {
+          "name": "Financial Times",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZXNhY20yblU5Q1d4YllxXzJQZHJQYTYwZnJZRWp1YUFYNHRBTS1VZnlQQmRkRHd1NHlFMVRhT2QyRjZmZWVSTDZQeVBjZ0JyLTI5UUNndXFyUFBXT0pjelU0VFZSbDJaaUlTQV9RQVVoeDl4UTFpUFpGOTRqTHpQaElBZW0?oc=5"
+        },
+        {
+          "name": "Clinical Trials Arena",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNVp5UDRFUmdVR3ViU1k3dk9RNm1UMmtKNTBqQVlkNUVJcVR2cVpQNUJzQ3N5azdXdFNjREF5aDB4eXd5aUNKNFJPZjNBbUhoVzJDTF9LeUFPOVlsSGtHbHNhVHBCSzVUTVZmMGxXUVBrWlY5dGZZN2hyUXVJaFprS0RwMGttQnA4Q0E?oc=5"
+        },
+        {
+          "name": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRm1XQlFkWlBWcERiZ1JTX3pVblVKb1lfN1FrMXFkb3pLM19HdGt0cXUzc2lWTmhKem1zdWNVMm45eXQzQXZ4aDdDYURYUFRNZ3BfZVdaWnBfejhta1VZdG42aW5OQzNvTVlBaHlNbk81X0VpRHBEaXV5R2g5eDJ0ejJzMExsTUJNNWpDbjAxRWw?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude",
+        "qwen"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5",
+      "clusterId": "18crehq",
+      "title": "Anthropic says its AI accidentally hacked three companies during safety tests",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5",
+      "dateISO": "2026-07-30T07:00:00.000Z",
+      "date": "JUL 30 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
+        },
+        {
+          "name": "PBS",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzBYZ080YTJJRmVjeWFubUoyZkJTYjc5SzQ4bXJXaFA2TDh6YW8wU3AwR0twTmFaVGRWMmdUNlFhNXB0RS1GRWxuNVNxMmhzSkpqWE5BRUdndmFFU0NKb2xoZ3VlV25rVVduaDF1SUxEUTFuQTdsR05DMTdZeGRoaXRCX3pNTl81b29FVExUWU5QTUpzRmp6VFduU3ZYTF9Kd1laYw?oc=5"
+        },
+        {
+          "name": "DW.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
+        },
+        {
+          "name": "CyberScoop",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
+        }
+      ],
+      "sourceName": "CyberScoop",
       "entityIds": [
         "claude"
       ]
@@ -1147,58 +1207,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/ntt-data",
-      "clusterId": "1sgidqg",
-      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
-      "desc": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
-      "url": "https://openai.com/index/ntt-data",
-      "dateISO": "2026-07-22T00:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "adoption",
-      "catConfidence": 0.53,
-      "family": "product",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/ntt-data"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/a-scorecard-for-the-ai-age",
-      "clusterId": "17gsr94",
-      "title": "A scorecard for the AI age",
-      "desc": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
-      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
-      "dateISO": "2026-07-17T10:00:00.000Z",
-      "date": "JUL 17 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/a-scorecard-for-the-ai-age"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1297,7 +1305,7 @@
     "chatgpt": 28,
     "copilot": 4,
     "perplexity": 0,
-    "gpt": 73,
+    "gpt": 74,
     "claude": 72,
     "gemini": 28,
     "grok": 1,
@@ -1480,6 +1488,18 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 16 2026",
+      "verification": "uncertain",
+      "impact": "notable",
+      "h": "OpenAI reportedly disbanded its preparedness team",
+      "p": "According to the Financial Times, OpenAI disbanded its preparedness team at the end of last month. The job of the preparedness team was to assess if models posed serious risks and develop ways to mitigate those risks. (You know, like the possibility that it c…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 16 2026",
@@ -1538,18 +1558,6 @@
       "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
       "sourceName": "The Verge",
       "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "JUN 25 2026",
-      "verification": "corroborated",
-      "impact": "emerging",
-      "h": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
-      "p": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
-      "sourceName": "Reuters",
-      "sourceCount": 7
     },
     {
       "org": "XAI",
@@ -6284,10 +6292,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.87 – $3.29/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$1.99 – $3.29/hr",
+      "trend": "↑ 4% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6295,7 +6303,7 @@
       "rate": "$3.59 – $4.59/hr",
       "trend": "↑ 23% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6331,7 +6339,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-16T21:30:26.025Z",
+    "updatedAt": "2026-08-16T21:45:19.576Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6341,10 +6349,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 319,
-        "fetchedStoryCount": 262,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 40,
-        "storyCoverage": 0.8213166144200627,
-        "estimatedRelevantDiscussions": 52,
+        "storyCoverage": 0.9404388714733543,
+        "estimatedRelevantDiscussions": 46,
         "isEstimated": true,
         "rawCommentHits": 2395,
         "fetchedCommentCount": 300,
@@ -6413,7 +6421,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 49,
+            "discussions": 43,
             "isEstimated": true
           },
           {
@@ -6434,10 +6442,10 @@
         "storyCoverage": 0.31282586027111575,
         "estimatedRelevantDiscussions": 78,
         "isEstimated": true,
-        "rawCommentHits": 6452,
+        "rawCommentHits": 6455,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 24,
-        "commentCoverage": 0.04649721016738995,
+        "validatedCommentCount": 23,
+        "commentCoverage": 0.046475600309837335,
         "limited": false,
         "points": 381,
         "themes": [
@@ -6512,10 +6520,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1311,
+        "rawCommentHits": 1313,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.2288329519450801,
+        "commentCoverage": 0.2284843869002285,
         "limited": false,
         "points": 449,
         "themes": [
@@ -6605,10 +6613,10 @@
         "storyCoverage": 0.5535055350553506,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 9968,
+        "rawCommentHits": 9969,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 22,
-        "commentCoverage": 0.03009630818619583,
+        "commentCoverage": 0.03009328919650918,
         "limited": false,
         "points": 404,
         "themes": [
@@ -6766,10 +6774,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 26,
         "isEstimated": false,
-        "rawCommentHits": 1424,
+        "rawCommentHits": 1426,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.21067415730337077,
+        "commentCoverage": 0.21037868162692847,
         "limited": false,
         "points": 1840,
         "themes": [
@@ -6849,10 +6857,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 4622,
+        "rawCommentHits": 4620,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.06490696668109043,
+        "commentCoverage": 0.06493506493506493,
         "limited": false,
         "points": 434,
         "themes": [
