@@ -1,29 +1,29 @@
 {
-  "updatedAt": "2026-08-17T16:00:30.315Z",
+  "updatedAt": "2026-08-17T16:15:21.462Z",
   "build": {
-    "sha": "3f10460a58d4ef6a15e996a173e3a4650ddf5fda",
-    "shortSha": "3f10460",
+    "sha": "99a241d94a86bd6b5813f40532c7f895b75f60d6",
+    "shortSha": "99a241d",
     "ref": "main",
-    "builtAt": "2026-08-17T16:00:47.532Z"
+    "builtAt": "2026-08-17T16:15:43.444Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 15,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 38.7,
     "estimatedDatasets": 4,
-    "buildSha": "3f10460",
-    "lastSuccessfulUpdate": "2026-08-17T16:00:30.315Z"
+    "buildSha": "99a241d",
+    "lastSuccessfulUpdate": "2026-08-17T16:15:21.462Z"
   },
   "ticker": [
     "ANTHROPIC EXPLAINS HOW CLAUDE’S INVISIBLE TEXT WATERMARKS WILL WORK",
     "OPENAI JOINS PORTS-PIKE PROJECT",
     "NVIDIA INVESTING $1.5B IN SOFTBANK DATA CENTER DEVELOPER BEHIND OPENAI PROJECT",
-    "ANTHROPIC SHARES MORE DETAILS ABOUT HOW CLAUDE’S NEW WATERMARKS WILL WORK",
-    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
+    "ANTHROPIC CEO SAYS AI BACKLASH IS ‘FUNDAMENTALLY A CRISIS OF TRUST’",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
+    "ANTHROPIC SHARES MORE DETAILS ABOUT HOW CLAUDE’S NEW WATERMARKS WILL WORK",
     "WISPR RAISES $280M AT $2B VALUATION AS IT LOOKS BEYOND DICTATION",
     "GET CLOSER TO THE GAME WITH GEMINI AND PIXEL",
     "THE DEFENDER’S WINDOW"
@@ -93,11 +93,15 @@
       "category": "compute",
       "catConfidence": 0.44,
       "family": "market",
-      "significance": 62,
+      "significance": 67,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/"
@@ -110,77 +114,27 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
-      "clusterId": "j7q1ee",
-      "title": "Anthropic shares more details about how Claude’s new watermarks will work",
-      "desc": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
-      "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
-      "dateISO": "2026-08-15T18:58:39.000Z",
-      "date": "AUG 15 2026",
-      "category": "market",
+      "id": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+      "clusterId": "hvafpn",
+      "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
+      "desc": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
+      "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+      "dateISO": "2026-08-16T16:53:51.000Z",
+      "date": "AUG 16 2026",
+      "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 59,
+      "significance": 63,
       "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
+      "verification": "single",
+      "sourceCount": 1,
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdWJ1ZmhOTldsYm5ndl83cmtEeC03dGxRT28tcEZQOXV3MVZUVmFDS3JhZzVzUDBnMFg5N0hPUE9VYTdRd2ljSGU1TUk0VTE1a0hOcFZ0RTNEWFg1OWJkRVdkcVVQSzM3MmR3WDBqQ1lQbXZFaEhOQ0tDaW9za3REd1RaX3ZZdGMwdzRHb3pOMTd5X004V0RLanFRdEhPT05RbXlWVFhDZklWWlk?oc=5"
+          "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
-      "clusterId": "1syefyo",
-      "title": "Claude Science, an AI workbench for scientists, is now available",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
-      "dateISO": "2026-06-30T07:00:00.000Z",
-      "date": "JUN 30 2026",
-      "category": "product",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 6,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
-        },
-        {
-          "name": "STAT",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5"
-        },
-        {
-          "name": "Northeastern Global News",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9renIwOUNIaDlGME5pU3h6cE1ITnc0NUlYSkVZVExZakdILXBOTlY2TWlxaUFra1RhR2lZclZPM29BbW1PZ21hOW1FMUNOcHBjR3ZOTEktLVJOQ0w3Y1lRMmF4d29nd0dXN1NIN2UySEhFUjhFQ09kaVJyUXRIdw?oc=5"
-        },
-        {
-          "name": "MIT Technology Review",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNTWFMLUFicUpQcmdVbGVZS1VmekY5c3Bmc0pFQmxtX01mRnd0aFNmNTVkUm45R1FWMy1HWFlfOEU3TWpsZEZDeUZiOUs1QXNFRE1jQ2ktRTgzT2p1dU1hbkM5WWhZVXlRckVhaUU4Y0huZ19nLWctVVEzVW0weDdWRU45dlAtTjVFSFdIcW55YXVWa0dGS3dLY3diUDJsV19QdVZQLUluWWFwNkZWX0pVc2VBWWlwbU0?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
@@ -274,6 +228,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+      "clusterId": "j7q1ee",
+      "title": "Anthropic shares more details about how Claude’s new watermarks will work",
+      "desc": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
+      "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+      "dateISO": "2026-08-15T18:58:39.000Z",
+      "date": "AUG 15 2026",
+      "category": "market",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
       "clusterId": "11gfjgp",
       "title": "Wispr raises $280M at $2B valuation as it looks beyond dictation",
@@ -347,40 +327,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXZ2NGkzVnpxZ1NkOHloUkVWRmVMcGNYSG82TTBYWXRuZHh6UW8xV1I2TDlpWkJpMGRoaHplMFJfa3dHdDlyOUUzWVM1VkpsRDRCTlZ1blFoZXgwVU1WWDE5OHB1Y2NDVDRtRm40bUpOTVhMOUNFV3QyN1FqajVUenFxaXBOR1prQ3BoQkh6dURSaUtLWDlxTTBYUzUxdnZuSjVVc1YtUHo?oc=5",
-      "clusterId": "eiso9x",
-      "title": "Anthropic launches Claude Tag in Slack with plans for wider rollout",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXZ2NGkzVnpxZ1NkOHloUkVWRmVMcGNYSG82TTBYWXRuZHh6UW8xV1I2TDlpWkJpMGRoaHplMFJfa3dHdDlyOUUzWVM1VkpsRDRCTlZ1blFoZXgwVU1WWDE5OHB1Y2NDVDRtRm40bUpOTVhMOUNFV3QyN1FqajVUenFxaXBOR1prQ3BoQkh6dURSaUtLWDlxTTBYUzUxdnZuSjVVc1YtUHo?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMXZ2NGkzVnpxZ1NkOHloUkVWRmVMcGNYSG82TTBYWXRuZHh6UW8xV1I2TDlpWkJpMGRoaHplMFJfa3dHdDlyOUUzWVM1VkpsRDRCTlZ1blFoZXgwVU1WWDE5OHB1Y2NDVDRtRm40bUpOTVhMOUNFV3QyN1FqajVUenFxaXBOR1prQ3BoQkh6dURSaUtLWDlxTTBYUzUxdnZuSjVVc1YtUHo?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYVQ5VktmelZuekFOV3k5TDBQN3E0VHpCNnVqOExoTDNLUzlqTGJfemlja1ZVMU4tdFh0WDc2VFRaY1BYODNyb1VBcVJhMTZvMnl0LVFaN0R1ODZ5SHRHSDdwaW4wRFJwS0t6N3RkN3hEZ053RDA0VEhndzJCNjZCWVZtSnN2VkFIY2NZdDA0RVNDeXlVV0EwaDBLeTF2SlhWYldvaldZWTFnUXByYlE?oc=5"
-        },
-        {
-          "name": "fortune.com",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -472,7 +418,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -485,66 +431,6 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMnJSbGZBUHBEa1E3Q0JsQThsQWFpUHZuSmpDMkg2RHpEYVNqMnVPWmhHa0N4VUVXVWlRQVpPVkdEbks5d19UTFVJZW5jazBVS0d5OXktaVFzMnd2SGFWUzM3Z3FGUWpnalpTTDZrcUlMTW41UUV4aXBlSDFNVVdMWmMwSkZsZ2xUV3ZKUDlWdVlmS19FbVZHWGV5dF9GRGNPRGpuVVJENDRKZw?oc=5",
-      "clusterId": "17qktz6",
-      "title": "‘This is AI out of control’: Claude disobeyed Anthropic CEO in simulations",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMnJSbGZBUHBEa1E3Q0JsQThsQWFpUHZuSmpDMkg2RHpEYVNqMnVPWmhHa0N4VUVXVWlRQVpPVkdEbks5d19UTFVJZW5jazBVS0d5OXktaVFzMnd2SGFWUzM3Z3FGUWpnalpTTDZrcUlMTW41UUV4aXBlSDFNVVdMWmMwSkZsZ2xUV3ZKUDlWdVlmS19FbVZHWGV5dF9GRGNPRGpuVVJENDRKZw?oc=5",
-      "dateISO": "2026-07-20T07:00:00.000Z",
-      "date": "JUL 20 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/"
-        },
-        {
-          "name": "TBIJ",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMnJSbGZBUHBEa1E3Q0JsQThsQWFpUHZuSmpDMkg2RHpEYVNqMnVPWmhHa0N4VUVXVWlRQVpPVkdEbks5d19UTFVJZW5jazBVS0d5OXktaVFzMnd2SGFWUzM3Z3FGUWpnalpTTDZrcUlMTW41UUV4aXBlSDFNVVdMWmMwSkZsZ2xUV3ZKUDlWdVlmS19FbVZHWGV5dF9GRGNPRGpuVVJENDRKZw?oc=5"
-        }
-      ],
-      "sourceName": "TBIJ",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "clusterId": "14bih8d",
-      "title": "Introducing Claude Tag",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
-      "dateISO": "2026-06-23T07:00:00.000Z",
-      "date": "JUN 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -648,107 +534,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5",
-      "clusterId": "d0t8x9",
-      "title": "Anthropic's engineering leader says Claude Code is making programmers lonelier",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5",
-      "dateISO": "2026-06-22T07:00:00.000Z",
-      "date": "JUN 22 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 8,
-      "sources": [
-        {
-          "name": "Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPbVR5Qm1Mb1dzd1BRNzUxYjlnQlhPbmZVV1l3STR0UDV5d19VaDloOTdXUGp2LWNJNk5RVTdrS04zTUw5aEZQUnRXSkRLUXpPUUc2OTdGMHZ2cmVKejNLek56SlhDVG1IbnBoZzRpMFNOa1FvbDVXMDVmemFXVnZDTUxkc2NfQ0thRm9pcVpDZ1FMTWNMWnlud0plN1p5NmhVY0JHdnYzRzU1OVJyNms1T1FlZFlYZw?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
-        },
-        {
-          "name": "scmp.com",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
-        },
-        {
-          "name": "wsj.com",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
-        },
-        {
-          "name": "Malwarebytes",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
-        },
-        {
-          "name": "Business Insider",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQ0N3dUNEeENnZkYzYWJwRTg2djlKVlNnQklUcHZGOFlTWGVtOXN4am1IYm82dTdCaFo0X3VWd0FaT2ZtbjZyOXBOdzF2TjA4VjFzb18yMl85UkxMOVBucHV1WW5OaGJPX1djZFN0OUcyUmoxQS1UZnJBZGJkTXpXQ0ZyWlJGYzJ6ZkNsbUVqcTNvRGRY?oc=5"
-        }
-      ],
-      "sourceName": "Business Insider",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
-      "clusterId": "18co4yc",
-      "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
-      "dateISO": "2026-06-25T07:00:00.000Z",
-      "date": "JUN 25 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 6,
-      "sources": [
-        {
-          "name": "Cybersecurity Dive",
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
-        },
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
-        },
-        {
-          "name": "Financial Times",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZXNhY20yblU5Q1d4YllxXzJQZHJQYTYwZnJZRWp1YUFYNHRBTS1VZnlQQmRkRHd1NHlFMVRhT2QyRjZmZWVSTDZQeVBjZ0JyLTI5UUNndXFyUFBXT0pjelU0VFZSbDJaaUlTQV9RQVVoeDl4UTFpUFpGOTRqTHpQaElBZW0?oc=5"
-        },
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WbnpDZDliX05XS1E5bnBmZ201cHc0alFOb0Q4MXFsTXYwem9ySkg4R0luZDhIQmpaYXRzbnV2dno3cEN4NEZXZHBrWnlQMGpxLWdEbnB6Q2Z1dw?oc=5"
-        },
-        {
-          "name": "CBS News",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRm1XQlFkWlBWcERiZ1JTX3pVblVKb1lfN1FrMXFkb3pLM19HdGt0cXUzc2lWTmhKem1zdWNVMm45eXQzQXZ4aDdDYURYUFRNZ3BfZVdaWnBfejhta1VZdG42aW5OQzNvTVlBaHlNbk81X0VpRHBEaXV5R2g5eDJ0ejJzMExsTUJNNWpDbjAxRWw?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude",
-        "qwen"
-      ]
-    },
-    {
       "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
       "clusterId": "q59awe",
       "title": "Disrupting a Criminal Scam Operation",
@@ -800,116 +585,6 @@
       "entityIds": [
         "chatgpt",
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
-      "clusterId": "yj5148",
-      "title": "China's Alibaba bans Anthropic AI for employees after 'distillation attack' accusation",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5",
-      "dateISO": "2026-07-06T07:00:00.000Z",
-      "date": "JUL 06 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE53Ykl5M1J5SW5wclpRaERtUUllclU0clBCaTlPYVJ5WWVGQkpIUTRYaXJJcS1XcmVYa2lVUkZhQnpWQ0NvY3h1alBReENVT1RZa2tJMWQ3SHdMU1F2cVJuWjM0bktmZElSbGE4WVk5VWd2VnRaa2FpRm5PM2cySU3SAYQBQVVfeXFMUC13eFAwV0ZDbm02SURnMjhrd3JvUEUzeHcxdEFkNFQzbFZwUnkyMDU0MnhqYzRzaHpLZjR3MHRSQ2VycnRuaXRVd3YyNzE5UUxMN2NKQU1DamFKYV9qLVNsN0NpS1VabzVnQjluZ05odnViTUZFM2txRUpkZHhRS3hGYUhs?oc=5"
-        }
-      ],
-      "sourceName": "CNBC",
-      "entityIds": [
-        "claude",
-        "qwen"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "clusterId": "q11r6f",
-      "title": "Alibaba to ban employees from using Anthropic's coding tool, source says",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "dateISO": "2026-07-04T07:00:00.000Z",
-      "date": "JUL 04 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude",
-        "qwen"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaWJTZlhtVTRzSklWWklDbGUyQW9JTC1TSkJkNEhRQlZhMDd2YmJUUlYxUDJ3WGNlblhzOTRRd0NGV3ZlRTNSTk5KZG91cFNuN3pNOFk0RXZDYmV5MWtCUG1fZjA1dTZpZjdGazBldDBYU2w3dDBlN18zLXBENUxXMW9SZGJlelVIaENWb3JvSUtsMnhfSFNRWC16OFF0VmFtWWx1SHhrWS1BWVJ4S3R5YVlHV3RZaTM1dVJF?oc=5",
-      "clusterId": "1k0xpf8",
-      "title": "Anthropic Revenue Surges to Over $11.5 Billion in Second Quarter",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaWJTZlhtVTRzSklWWklDbGUyQW9JTC1TSkJkNEhRQlZhMDd2YmJUUlYxUDJ3WGNlblhzOTRRd0NGV3ZlRTNSTk5KZG91cFNuN3pNOFk0RXZDYmV5MWtCUG1fZjA1dTZpZjdGazBldDBYU2w3dDBlN18zLXBENUxXMW9SZGJlelVIaENWb3JvSUtsMnhfSFNRWC16OFF0VmFtWWx1SHhrWS1BWVJ4S3R5YVlHV3RZaTM1dVJF?oc=5",
-      "dateISO": "2026-08-14T21:08:57.000Z",
-      "date": "AUG 14 2026",
-      "category": "market",
-      "catConfidence": 0.78,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaWJTZlhtVTRzSklWWklDbGUyQW9JTC1TSkJkNEhRQlZhMDd2YmJUUlYxUDJ3WGNlblhzOTRRd0NGV3ZlRTNSTk5KZG91cFNuN3pNOFk0RXZDYmV5MWtCUG1fZjA1dTZpZjdGazBldDBYU2w3dDBlN18zLXBENUxXMW9SZGJlelVIaENWb3JvSUtsMnhfSFNRWC16OFF0VmFtWWx1SHhrWS1BWVJ4S3R5YVlHV3RZaTM1dVJF?oc=5"
-        }
-      ],
-      "sourceName": "Bloomberg.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5",
-      "clusterId": "sgv7zy",
-      "title": "How Claude's values vary by model and language",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5",
-      "dateISO": "2026-07-13T07:00:00.000Z",
-      "date": "JUL 13 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -1199,6 +874,244 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/how-enterprises-put-ai-to-work",
+      "clusterId": "p0rqih",
+      "title": "From assistance to execution: How enterprises put AI to work",
+      "desc": "OpenAI research reveals how enterprises are adopting agentic AI, using ChatGPT and Codex, and how frontier firms are pulling ahead in AI adoption.",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+      "dateISO": "2026-08-12T06:00:00.000Z",
+      "date": "AUG 12 2026",
+      "category": "adoption",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/",
+      "clusterId": "tgbttj",
+      "title": "These startups are chasing the next big thing in LLMs",
+      "desc": "MIT Technology Review’s What’s Next series looks across industries, trends, and technologies to give you a first look at the future. You can read the rest of them here. Way back in the summer of 2017, AI researchers at Google put out a paper called “Attention Is All You Need,” in which they described a new…",
+      "url": "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/",
+      "dateISO": "2026-08-10T09:00:00.000Z",
+      "date": "AUG 10 2026",
+      "category": "research",
+      "catConfidence": 0.75,
+      "family": "research",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/"
+        }
+      ],
+      "sourceName": "MIT Technology Review",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+      "clusterId": "1mebkd7",
+      "title": "From asking to doing: How the world is putting ChatGPT to work",
+      "desc": "New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.",
+      "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work",
+      "dateISO": "2026-08-06T00:00:00.000Z",
+      "date": "AUG 06 2026",
+      "category": "adoption",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/how-the-world-is-putting-chatgpt-to-work"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/unive",
+      "clusterId": "lm9u7g",
+      "title": "Univé builds an AI-ready workforce",
+      "desc": "See how Univé built an AI-ready workforce with ChatGPT Enterprise by combining leadership, responsible governance, and employee-led innovation to transform work at scale.",
+      "url": "https://openai.com/index/unive",
+      "dateISO": "2026-07-31T07:00:00.000Z",
+      "date": "JUL 31 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/unive"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/ntt-data",
+      "clusterId": "1sgidqg",
+      "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+      "desc": "NTT DATA Group uses ChatGPT Enterprise and Codex to help 9,000 employees automate work, cut incident analysis to 30 minutes, and scale secure AI adoption.",
+      "url": "https://openai.com/index/ntt-data",
+      "dateISO": "2026-07-22T00:00:00.000Z",
+      "date": "JUL 22 2026",
+      "category": "adoption",
+      "catConfidence": 0.53,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/ntt-data"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/a-scorecard-for-the-ai-age",
+      "clusterId": "17gsr94",
+      "title": "A scorecard for the AI age",
+      "desc": "Sarah Friar, CFO of OpenAI, introduces a practical AI scorecard to measure ROI through useful work, cost per successful task, dependability, and return on compute.",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age",
+      "dateISO": "2026-07-17T10:00:00.000Z",
+      "date": "JUL 17 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/a-scorecard-for-the-ai-age"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/australian-payments-plus",
+      "clusterId": "18s6gt2",
+      "title": "Australian Payments Plus moves faster with ChatGPT and Codex",
+      "desc": "See how Australian Payments Plus uses ChatGPT Enterprise and Codex to move faster through payments complexity. AP+ saves time, improves quality, and keeps human judgment central.",
+      "url": "https://openai.com/index/australian-payments-plus",
+      "dateISO": "2026-07-07T00:00:00.000Z",
+      "date": "JUL 07 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/australian-payments-plus"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/mufg",
+      "clusterId": "oy4d1k",
+      "title": "MUFG aims to become AI-native with OpenAI",
+      "desc": "MUFG uses ChatGPT Enterprise to build an AI-native organization, improve workflows, and deliver new AI-powered financial services at scale.",
+      "url": "https://openai.com/index/mufg",
+      "dateISO": "2026-07-07T00:00:00.000Z",
+      "date": "JUL 07 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/mufg"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+      "clusterId": "12cu4c7",
+      "title": "How ChatGPT adoption has expanded",
+      "desc": "New OpenAI Signals data shows how ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages.",
+      "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded",
+      "dateISO": "2026-06-30T09:00:00.000Z",
+      "date": "JUN 30 2026",
+      "category": "adoption",
+      "catConfidence": 0.58,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/how-chatgpt-adoption-has-expanded"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1275,23 +1188,23 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 27,
-    "copilot": 4,
+    "chatgpt": 26,
+    "copilot": 3,
     "perplexity": 0,
     "gpt": 76,
-    "claude": 73,
-    "gemini": 30,
+    "claude": 9,
+    "gemini": 29,
     "grok": 1,
     "llama": 0,
     "deepseek": 0,
-    "qwen": 4,
+    "qwen": 1,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 1,
+    "nvidia": 2,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 1
@@ -1300,63 +1213,7 @@
     {
       "lab": "Anthropic · Claude",
       "logoKey": "anthropic",
-      "items": [
-        {
-          "h": "Introducing Claude Opus 5",
-          "d": "JUL 24 2026",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Anthropic Launches Claude for Teachers. Why Some Critics Are Concerned",
-          "d": "JUL 17 2026",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Education Week",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
-          "h": "Introducing a way to reflect on how you use Claude",
-          "d": "JUL 09 2026",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Claude Science, an AI workbench for scientists, is now available",
-          "d": "JUN 30 2026",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 6,
-          "verification": "official",
-          "impact": "notable"
-        },
-        {
-          "h": "Introducing Claude Sonnet 5",
-          "d": "JUN 30 2026",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        }
-      ]
+      "items": []
     },
     {
       "lab": "OpenAI · ChatGPT",
@@ -1464,13 +1321,13 @@
       "org": "OPENAI",
       "logoKey": "openai",
       "date": "AUG 17 2026",
-      "verification": "single",
+      "verification": "corroborated",
       "impact": "notable",
       "h": "Nvidia investing $1.5B in SoftBank data center developer behind OpenAI project",
       "p": "Nvidia's investment in SoftBank's data center developer will guarantee its chips power an OpenAI data center.",
       "url": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
+      "sourceCount": 2
     },
     {
       "org": "AI WIRE",
@@ -1717,11 +1574,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 227.703,
-      "changePct": 0.0001327371597852625,
+      "price": 227.19,
+      "changePct": 0.901580541073019,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 39700606,
+      "volume": 42065916,
       "ohlc": [
         {
           "d": "05-18",
@@ -2162,22 +2019,22 @@
           "o": 226.02000427246094,
           "h": 227.9199981689453,
           "l": 225.02999877929688,
-          "c": 227.70269775390625
+          "c": 227.19000244140625
         }
       ],
-      "relVolume": 0.32989090915134156,
-      "marketCap": 5555953200000
+      "relVolume": 0.3495453765497677,
+      "marketCap": 5543436000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 484.925,
-      "changePct": -2.1144542253879024,
+      "price": 483.82,
+      "changePct": -2.3375023647427224,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 10127653,
+      "volume": 10596231,
       "ohlc": [
         {
           "d": "05-18",
@@ -2618,22 +2475,22 @@
           "o": 490.2174987792969,
           "h": 492.6600036621094,
           "l": 481.6700134277344,
-          "c": 484.92498779296875
+          "c": 483.82000732421875
         }
       ],
-      "relVolume": 0.26827107697389496,
-      "marketCap": 3602992750000
+      "relVolume": 0.28068322465571954,
+      "marketCap": 3594782600000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 398.375,
-      "changePct": 1.370266393404432,
+      "price": 396.21,
+      "changePct": 0.8193596022083796,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 8686594,
+      "volume": 9177380,
       "ohlc": [
         {
           "d": "05-18",
@@ -3074,22 +2931,22 @@
           "o": 397.0799865722656,
           "h": 399.3599853515625,
           "l": 392.05010986328125,
-          "c": 398.375
+          "c": 396.2099914550781
         }
       ],
-      "relVolume": 0.47994021876506443,
-      "marketCap": 1960005000000
+      "relVolume": 0.5070564786255841,
+      "marketCap": 1949353200000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 343.73,
-      "changePct": -0.6273440151622695,
+      "price": 343.99,
+      "changePct": -0.5521837802289674,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 7134414,
+      "volume": 7532260,
       "ohlc": [
         {
           "d": "05-18",
@@ -3530,22 +3387,22 @@
           "o": 346.260009765625,
           "h": 347.25,
           "l": 341.92999267578125,
-          "c": 343.7300109863281
+          "c": 343.989990234375
         }
       ],
-      "relVolume": 0.22796568251533741,
-      "marketCap": 4193506000000
+      "relVolume": 0.2406780419222904,
+      "marketCap": 4196678000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 260.91,
-      "changePct": -0.6624748809477472,
+      "price": 260.795,
+      "changePct": -0.7062556679445745,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 19622248,
+      "volume": 20323676,
       "ohlc": [
         {
           "d": "05-18",
@@ -3986,22 +3843,22 @@
           "o": 265.44000244140625,
           "h": 265.75,
           "l": 260.0799865722656,
-          "c": 260.9100036621094
+          "c": 260.7950134277344
         }
       ],
-      "relVolume": 0.409110740595336,
-      "marketCap": 2791737000000.0005
+      "relVolume": 0.4237350450355971,
+      "marketCap": 2790506500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 573.56,
-      "changePct": -2.761715470304432,
+      "price": 571.7,
+      "changePct": -3.0770474069913583,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 6382179,
+      "volume": 6881756,
       "ohlc": [
         {
           "d": "05-18",
@@ -4441,23 +4298,23 @@
           "d": "08-17",
           "o": 589.75,
           "h": 590.239990234375,
-          "l": 572.7999877929688,
-          "c": 573.5599975585938
+          "l": 571,
+          "c": 571.7000122070312
         }
       ],
-      "relVolume": 0.40451719324154517,
-      "marketCap": 1445371199999.9998
+      "relVolume": 0.43618153324956305,
+      "marketCap": 1440684000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 434.748,
-      "changePct": 1.9696954405157046,
+      "price": 435.045,
+      "changePct": 2.039405934031498,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 3925781,
+      "volume": 4226334,
       "ohlc": [
         {
           "d": "05-18",
@@ -4896,24 +4753,24 @@
         {
           "d": "08-17",
           "o": 429.9700012207031,
-          "h": 434.9800109863281,
+          "h": 435.42999267578125,
           "l": 426.79998779296875,
-          "c": 434.747802734375
+          "c": 435.0450134277344
         }
       ],
-      "relVolume": 0.3082234941272533,
-      "marketCap": 2256342120000
+      "relVolume": 0.33182070849820994,
+      "marketCap": 2257883550000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 513.375,
-      "changePct": -0.19732394088777502,
+      "price": 511.16,
+      "changePct": -0.627930343580968,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 10209395,
+      "volume": 10641496,
       "ohlc": [
         {
           "d": "05-18",
@@ -5354,22 +5211,22 @@
           "o": 513.8049926757812,
           "h": 517.2999877929688,
           "l": 506.3301086425781,
-          "c": 513.375
+          "c": 511.1600036621094
         }
       ],
-      "relVolume": 0.3582429894605053,
-      "marketCap": 831667500000
+      "relVolume": 0.37340521542873106,
+      "marketCap": 828079200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 175.545,
-      "changePct": 0.864746576000021,
+      "price": 174.9,
+      "changePct": 0.4941396480851771,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 12411903,
+      "volume": 12925583,
       "ohlc": [
         {
           "d": "05-18",
@@ -5810,22 +5667,22 @@
           "o": 174.197998046875,
           "h": 176.27000427246094,
           "l": 172.30130004882812,
-          "c": 175.5449981689453
+          "c": 174.89999389648438
         }
       ],
-      "relVolume": 0.26433520146292744,
-      "marketCap": 421308000000
+      "relVolume": 0.27527499903365266,
+      "marketCap": 419760000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 149.065,
-      "changePct": -0.9666501393535331,
+      "price": 148.53,
+      "changePct": -1.3220870559915026,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 10592047,
+      "volume": 11076466,
       "ohlc": [
         {
           "d": "05-18",
@@ -6266,11 +6123,11 @@
           "o": 148.4499969482422,
           "h": 150.39999389648438,
           "l": 145.5,
-          "c": 149.06500244140625
+          "c": 148.52999877929688
         }
       ],
-      "relVolume": 0.32923425245708465,
-      "marketCap": 418872650000
+      "relVolume": 0.3442915239496496,
+      "marketCap": 417369300000
     }
   ],
   "compute": [
@@ -6280,7 +6137,7 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6296,7 +6153,7 @@
       "rate": "$5.31 – $7.50/hr",
       "trend": "↑ 6% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6317,14 +6174,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.56 – $1.59/hr",
-      "trend": "↓ 17% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-17T16:00:30.315Z",
+    "updatedAt": "2026-08-17T16:15:21.462Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6334,10 +6191,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 317,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 220,
         "validatedStoryCount": 39,
-        "storyCoverage": 0.9463722397476341,
-        "estimatedRelevantDiscussions": 45,
+        "storyCoverage": 0.694006309148265,
+        "estimatedRelevantDiscussions": 60,
         "isEstimated": true,
         "rawCommentHits": 2430,
         "fetchedCommentCount": 300,
@@ -6406,7 +6263,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 41,
+            "discussions": 56,
             "isEstimated": true
           },
           {
@@ -6421,16 +6278,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 964,
+        "rawStoryHits": 962,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.3112033195020747,
+        "storyCoverage": 0.31185031185031187,
         "estimatedRelevantDiscussions": 73,
         "isEstimated": true,
-        "rawCommentHits": 6593,
+        "rawCommentHits": 6596,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 27,
-        "commentCoverage": 0.04550280600637039,
+        "commentCoverage": 0.04548211036992116,
         "limited": false,
         "points": 371,
         "themes": [
@@ -6520,10 +6377,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
-        "rawCommentHits": 1341,
+        "rawCommentHits": 1345,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.22371364653243847,
+        "commentCoverage": 0.22304832713754646,
         "limited": false,
         "points": 437,
         "themes": [
@@ -6613,10 +6470,10 @@
         "storyCoverage": 0.5484460694698354,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 10091,
+        "rawCommentHits": 10099,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 22,
-        "commentCoverage": 0.029729461896739667,
+        "commentCoverage": 0.029705911476383802,
         "limited": false,
         "points": 404,
         "themes": [
@@ -6686,12 +6543,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 701,
+        "rawCommentHits": 703,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 55,
-        "commentCoverage": 0.42796005706134094,
+        "validatedCommentCount": 54,
+        "commentCoverage": 0.4267425320056899,
         "limited": false,
-        "points": 267,
+        "points": 268,
         "themes": [
           {
             "id": "local",
@@ -6749,8 +6606,8 @@
           },
           {
             "title": "Show HN: 1667, a terminal UI for writing fiction with language models",
-            "points": 30,
-            "comments": 82,
+            "points": 31,
+            "comments": 86,
             "url": "https://1667.ai/",
             "date": "AUG 17 2026"
           }
@@ -6768,8 +6625,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
+        "rawStoryHits": 148,
+        "fetchedStoryCount": 148,
         "validatedStoryCount": 26,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 26,
@@ -6862,10 +6719,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 4711,
+        "rawCommentHits": 4714,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.06368074718743366,
+        "commentCoverage": 0.06364022061943148,
         "limited": false,
         "points": 434,
         "themes": [
