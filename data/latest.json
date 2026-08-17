@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-17T15:30:29.082Z",
+  "updatedAt": "2026-08-17T15:32:23.672Z",
   "build": {
-    "sha": "49d82a67bee7ae7d9ffe390f27a348e5e0e91317",
-    "shortSha": "49d82a6",
+    "sha": "76b86ffa2ec7fd63c1e94a1353068313b40fe7d3",
+    "shortSha": "76b86ff",
     "ref": "main",
-    "builtAt": "2026-08-17T15:30:45.366Z"
+    "builtAt": "2026-08-17T15:32:38.445Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 38.6,
-    "estimatedDatasets": 5,
-    "buildSha": "49d82a6",
-    "lastSuccessfulUpdate": "2026-08-17T15:30:29.082Z"
+    "estimatedDatasets": 4,
+    "buildSha": "76b86ff",
+    "lastSuccessfulUpdate": "2026-08-17T15:32:23.672Z"
   },
   "ticker": [
     "ANTHROPIC EXPLAINS HOW CLAUDE’S INVISIBLE TEXT WATERMARKS WILL WORK",
@@ -24,9 +24,9 @@
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "HOW DATA SCIENCE TEAMS USE CHATGPT WORK",
-    "THE DEFENDER’S WINDOW",
     "WISPR RAISES $280M AT $2B VALUATION AS IT LOOKS BEYOND DICTATION",
-    "GET CLOSER TO THE GAME WITH GEMINI AND PIXEL"
+    "GET CLOSER TO THE GAME WITH GEMINI AND PIXEL",
+    "THE DEFENDER’S WINDOW"
   ],
   "signals": [
     {
@@ -93,7 +93,7 @@
       "category": "compute",
       "catConfidence": 0.44,
       "family": "market",
-      "significance": 63,
+      "significance": 62,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -152,11 +152,11 @@
       "family": "product",
       "significance": 58,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 6,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
         },
         {
@@ -180,7 +180,7 @@
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVW04WFFFTWxrMWR2WFBhNUZlZGkzV3V4czZ4WE1KV3FDTWNQd19XZGpuM1V4dmw0ZjM2c24zRVhOOFVVLUtzT3lrM19nVDdxNmhuNFlCUTlOMGJvaDE1Rks3ZlZ5c1dKdGtoNVRjbFFCUmxpVEdIWURWWUw4emVfalV0dGVQMGJfYklVQUw5TS1MVWdoLUotSHZJN1lvaktqWXZBeFBEX3NOZHRN?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -274,32 +274,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/the-defenders-window",
-      "clusterId": "10g9300",
-      "title": "The Defender’s Window",
-      "desc": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
-      "url": "https://openai.com/index/the-defenders-window",
-      "dateISO": "2026-08-17T05:30:00.000Z",
-      "date": "AUG 17 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/the-defenders-window"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
       "clusterId": "11gfjgp",
       "title": "Wispr raises $280M at $2B valuation as it looks beyond dictation",
@@ -347,6 +321,32 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/the-defenders-window",
+      "clusterId": "10g9300",
+      "title": "The Defender’s Window",
+      "desc": "AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.",
+      "url": "https://openai.com/index/the-defenders-window",
+      "dateISO": "2026-08-17T05:30:00.000Z",
+      "date": "AUG 17 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/the-defenders-window"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -400,7 +400,7 @@
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYVQ5VktmelZuekFOV3k5TDBQN3E0VHpCNnVqOExoTDNLUzlqTGJfemlja1ZVMU4tdFh0WDc2VFRaY1BYODNyb1VBcVJhMTZvMnl0LVFaN0R1ODZ5SHRHSDdwaW4wRFJwS0t6N3RkN3hEZ053RDA0VEhndzJCNjZCWVZtSnN2VkFIY2NZdDA0RVNDeXlVV0EwaDBLeTF2SlhWYldvaldZWTFnUXByYlE?oc=5"
         },
         {
-          "name": "Fortune",
+          "name": "fortune.com",
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOemlxN2NjY2JHZlQweGxfOFBYc3pqbExwWFhXMjVzUmFxa2RyMURaQTFkQ2Y3dEJYdHo5V2EtdHRvd0RnUUdTWnRuQ0tESDR6c3VWX2hTVFRxVk9xRU0tUnpSRzdCRHNvWnZ3YnNEUGxRbWxvam1Zc3RFbWFKMGhhcmJicmtrTEE?oc=5"
         }
       ],
@@ -530,19 +530,19 @@
       "family": "product",
       "significance": 45,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -722,15 +722,15 @@
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
         },
         {
-          "name": "bbc.com",
+          "name": "BBC",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
         },
         {
-          "name": "ft.com",
+          "name": "Financial Times",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZXNhY20yblU5Q1d4YllxXzJQZHJQYTYwZnJZRWp1YUFYNHRBTS1VZnlQQmRkRHd1NHlFMVRhT2QyRjZmZWVSTDZQeVBjZ0JyLTI5UUNndXFyUFBXT0pjelU0VFZSbDJaaUlTQV9RQVVoeDl4UTFpUFpGOTRqTHpQaElBZW0?oc=5"
         },
         {
-          "name": "bbc.com",
+          "name": "BBC",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9WbnpDZDliX05XS1E5bnBmZ201cHc0alFOb0Q4MXFsTXYwem9ySkg4R0luZDhIQmpaYXRzbnV2dno3cEN4NEZXZHBrWnlQMGpxLWdEbnB6Q2Z1dw?oc=5"
         },
         {
@@ -899,15 +899,15 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -1307,9 +1307,9 @@
           "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 1,
-          "verification": "official",
+          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1329,9 +1329,9 @@
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 1,
-          "verification": "official",
+          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1340,9 +1340,9 @@
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 6,
-          "verification": "official",
+          "verification": "corroborated",
           "impact": "notable"
         },
         {
@@ -1351,9 +1351,9 @@
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 1,
-          "verification": "official",
+          "verification": "single",
           "impact": "emerging"
         }
       ]
@@ -1717,11 +1717,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 227.37,
-      "changePct": 0.98152043841436,
+      "price": 227.405,
+      "changePct": 0.9970665662967809,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 34623134,
+      "volume": 34926595,
       "ohlc": [
         {
           "d": "05-18",
@@ -2162,22 +2162,22 @@
           "o": 226.02000427246094,
           "h": 227.75,
           "l": 225.02999877929688,
-          "c": 227.3699951171875
+          "c": 227.40499877929688
         }
       ],
-      "relVolume": 0.28769981881205353,
-      "marketCap": 5547828000000
+      "relVolume": 0.2902214182350441,
+      "marketCap": 5548682000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 484.79,
-      "changePct": -2.1417007432946185,
+      "price": 484.48,
+      "changePct": -2.204275947657363,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 9212889,
+      "volume": 9292769,
       "ohlc": [
         {
           "d": "05-18",
@@ -2618,22 +2618,22 @@
           "o": 490.2174987792969,
           "h": 492.6600036621094,
           "l": 481.6700134277344,
-          "c": 484.7900085449219
+          "c": 484.4800109863281
         }
       ],
-      "relVolume": 0.24403992258334192,
-      "marketCap": 3601989700000
+      "relVolume": 0.24615586135303266,
+      "marketCap": 3599686400000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 394.29,
-      "changePct": 0.3308018888144093,
+      "price": 394.56,
+      "changePct": 0.3995031332178244,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7361063,
+      "volume": 7430878,
       "ohlc": [
         {
           "d": "05-18",
@@ -3074,22 +3074,22 @@
           "o": 397.0799865722656,
           "h": 398.15869140625,
           "l": 392.05010986328125,
-          "c": 394.2900085449219
+          "c": 394.55999755859375
         }
       ],
-      "relVolume": 0.40670373066398885,
-      "marketCap": 1939906800000
+      "relVolume": 0.41056105683499244,
+      "marketCap": 1941235200000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 343.885,
-      "changePct": -0.5825337283649644,
+      "price": 343.92,
+      "changePct": -0.5724141380998515,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 6230480,
+      "volume": 6295921,
       "ohlc": [
         {
           "d": "05-18",
@@ -3530,22 +3530,22 @@
           "o": 346.260009765625,
           "h": 347.25,
           "l": 341.92999267578125,
-          "c": 343.885009765625
+          "c": 343.9200134277344
         }
       ],
-      "relVolume": 0.1990823108384458,
-      "marketCap": 4195397000000
+      "relVolume": 0.2011733448364008,
+      "marketCap": 4195824000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 261.61,
-      "changePct": -0.3959674734779408,
+      "price": 261.142,
+      "changePct": 0.00018763398984427394,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 17829055,
+      "volume": 18020049,
       "ohlc": [
         {
           "d": "05-18",
@@ -3986,22 +3986,22 @@
           "o": 265.44000244140625,
           "h": 265.75,
           "l": 260.0799865722656,
-          "c": 261.6099853515625
+          "c": 261.1415100097656
         }
       ],
-      "relVolume": 0.37172386645836797,
-      "marketCap": 2799227000000
+      "relVolume": 0.37570596355495267,
+      "marketCap": 2794219400000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 574.611,
-      "changePct": -2.583602697901988,
+      "price": 573.91,
+      "changePct": -2.702382487270933,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 5545895,
+      "volume": 5611923,
       "ohlc": [
         {
           "d": "05-18",
@@ -4442,22 +4442,22 @@
           "o": 589.75,
           "h": 590.239990234375,
           "l": 572.8510131835938,
-          "c": 574.610595703125
+          "c": 573.9099731445312
         }
       ],
-      "relVolume": 0.3515115886615401,
-      "marketCap": 1448019720000
+      "relVolume": 0.3556965952612222,
+      "marketCap": 1446253200000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 433.7,
-      "changePct": 1.7239371404467814,
+      "price": 433.62,
+      "changePct": 1.7051692059567507,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 3354312,
+      "volume": 3403443,
       "ohlc": [
         {
           "d": "05-18",
@@ -4898,22 +4898,22 @@
           "o": 429.9700012207031,
           "h": 434.3550109863281,
           "l": 426.79998779296875,
-          "c": 433.70001220703125
+          "c": 433.6199951171875
         }
       ],
-      "relVolume": 0.2633559449783305,
-      "marketCap": 2250903000000
+      "relVolume": 0.2672133502920671,
+      "marketCap": 2250487800000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 514.99,
-      "changePct": 0.11666199559883367,
+      "price": 515.235,
+      "changePct": 0.16426654465726742,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 8963961,
+      "volume": 9027263,
       "ohlc": [
         {
           "d": "05-18",
@@ -5354,22 +5354,22 @@
           "o": 513.8049926757812,
           "h": 517.2999877929688,
           "l": 506.3301086425781,
-          "c": 514.9901123046875
+          "c": 515.2349853515625
         }
       ],
-      "relVolume": 0.3145412814419837,
-      "marketCap": 834283800000
+      "relVolume": 0.3167625195975089,
+      "marketCap": 834680700000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 174.935,
-      "changePct": 0.5142520725046763,
+      "price": 175.075,
+      "changePct": 0.5946930027788286,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 11169260,
+      "volume": 11269428,
       "ohlc": [
         {
           "d": "05-18",
@@ -5810,22 +5810,22 @@
           "o": 174.197998046875,
           "h": 176.27000427246094,
           "l": 172.30130004882812,
-          "c": 174.93499755859375
+          "c": 175.0749969482422
         }
       ],
-      "relVolume": 0.23787074329309674,
-      "marketCap": 419844000000
+      "relVolume": 0.2400040123381528,
+      "marketCap": 420180000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 147.665,
-      "changePct": -1.8967651510029067,
+      "price": 147.38,
+      "changePct": -2.0861010500402504,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 9377245,
+      "volume": 9462224,
       "ohlc": [
         {
           "d": "05-18",
@@ -6266,28 +6266,28 @@
           "o": 148.4499969482422,
           "h": 150.39999389648438,
           "l": 145.5,
-          "c": 147.6649932861328
+          "c": 147.3800048828125
         }
       ],
-      "relVolume": 0.29147437201533705,
-      "marketCap": 414938650000
+      "relVolume": 0.2941157875547083,
+      "marketCap": 414137800000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.29/hr",
-      "trend": "↑ 4% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$1.87 – $3.29/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.87/hr",
-      "trend": "↑ 3% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6324,7 +6324,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-17T15:30:29.082Z",
+    "updatedAt": "2026-08-17T15:32:23.672Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6334,10 +6334,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 316,
-        "fetchedStoryCount": 257,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 39,
-        "storyCoverage": 0.8132911392405063,
-        "estimatedRelevantDiscussions": 52,
+        "storyCoverage": 0.9493670886075949,
+        "estimatedRelevantDiscussions": 45,
         "isEstimated": true,
         "rawCommentHits": 2429,
         "fetchedCommentCount": 300,
@@ -6406,7 +6406,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 48,
+            "discussions": 41,
             "isEstimated": true
           },
           {
@@ -6515,15 +6515,15 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 151,
-        "fetchedStoryCount": 151,
+        "fetchedStoryCount": 149,
         "validatedStoryCount": 19,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9867549668874173,
         "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
-        "rawCommentHits": 1338,
+        "rawCommentHits": 1336,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.2242152466367713,
+        "commentCoverage": 0.2245508982035928,
         "limited": false,
         "points": 437,
         "themes": [
@@ -6588,7 +6588,7 @@
           {
             "name": "Hacker News",
             "discussions": 19,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6768,12 +6768,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 141,
-        "fetchedStoryCount": 138,
+        "rawStoryHits": 148,
+        "fetchedStoryCount": 148,
         "validatedStoryCount": 26,
-        "storyCoverage": 0.9787234042553191,
-        "estimatedRelevantDiscussions": 27,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 26,
+        "isEstimated": false,
         "rawCommentHits": 1446,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
@@ -6846,8 +6846,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 27,
-            "isEstimated": true
+            "discussions": 26,
+            "isEstimated": false
           }
         ]
       },
@@ -6862,10 +6862,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 4699,
+        "rawCommentHits": 4700,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.0638433709299851,
+        "commentCoverage": 0.06382978723404255,
         "limited": false,
         "points": 434,
         "themes": [
@@ -6930,6 +6930,11 @@
           {
             "name": "Hacker News",
             "discussions": 9,
+            "isEstimated": false
+          },
+          {
+            "name": "Qwen GitHub",
+            "discussions": 0,
             "isEstimated": false
           }
         ]
