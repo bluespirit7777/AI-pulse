@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-19T23:30:34.844Z",
+  "updatedAt": "2026-08-19T23:45:24.327Z",
   "build": {
-    "sha": "9e54cee9d22996e156346975f3e8a52d6b8a2897",
-    "shortSha": "9e54cee",
+    "sha": "8f00678f543ec4a37835221bd153b57103ce6188",
+    "shortSha": "8f00678",
     "ref": "main",
-    "builtAt": "2026-08-19T23:30:50.478Z"
+    "builtAt": "2026-08-19T23:45:40.567Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 41,
-    "estimatedDatasets": 5,
-    "buildSha": "9e54cee",
-    "lastSuccessfulUpdate": "2026-08-19T23:30:34.844Z"
+    "estimatedDatasets": 4,
+    "buildSha": "8f00678",
+    "lastSuccessfulUpdate": "2026-08-19T23:45:24.327Z"
   },
   "ticker": [
     "OFFERING ZERO DATA RETENTION FOR FRONTIER MODELS",
@@ -1072,32 +1072,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
-      "clusterId": "1ro7i05",
-      "title": "Anthropic’s annualized revenue surges to $65B",
-      "desc": "The model maker added $18 billion in annualized revenue in two months.",
-      "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
-      "dateISO": "2026-08-17T23:56:26.000Z",
-      "date": "AUG 17 2026",
-      "category": "capital",
-      "catConfidence": 0.4,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUjhQd2FfckN3bVZ1MS1YQUs1OUJ2R0lsVDREY0tJMlRPbVBTMHFscE92X3B5UnVOajZaYnhsSUhNSHdmNE1md3hIc0FJWWRfcEktajFjTjBkX04tNEIxOVpFajd3eWJJRk05T1d2WTJhRjF5Mkl1TFNjbTJNY0czVGR2bDNFVTdrOUI5czR1dUZpckVzMXdqenJNbGppNjVVWXZNbHpUMlIteTJ1Q3hnSDltTnpSSFBhWmpZ?oc=5",
       "clusterId": "18co4yc",
       "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
@@ -1208,6 +1182,33 @@
         "chatgpt",
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/chatgpt-for-academic-researchers",
+      "clusterId": "ke9mbo",
+      "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+      "desc": "OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.",
+      "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+      "dateISO": "2026-07-29T10:00:00.000Z",
+      "date": "JUL 29 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1292,7 +1293,7 @@
     "perplexity": 1,
     "gpt": 82,
     "claude": 74,
-    "gemini": 32,
+    "gemini": 31,
     "grok": 0,
     "llama": 1,
     "deepseek": 0,
@@ -1473,6 +1474,18 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 19 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Stripe didn’t really buy OpenRouter because of the ‘singularity’",
+      "p": "What does a payments giant want with a startup that routes prompts between different AI models? Stripe says it's because of \"the singularity\" but it's really for a far more real and powerful reason.",
+      "url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "OPENAI",
       "logoKey": "openai",
       "date": "AUG 19 2026",
@@ -1553,18 +1566,6 @@
       "h": "OpenAI hit the brakes. Now what?",
       "p": "With a looming IPO, intense competition from Anthropic, and Chinese and open-weight rivals nipping at its heels, OpenAI has plenty of reasons to move fast. Instead, it hit the brakes. On Tuesday, the company said it had slowed the pace of some AI development…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "META",
-      "logoKey": "meta",
-      "date": "AUG 19 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Meta AI is getting a Mac app",
-      "p": "Meta is launching a new Mac app dedicated to its AI chatbot. In an announcement on Wednesday, Meta says you can share your window with its AI chatbot, which can provide suggestions, answer questions, or create content based on what's on your screen. Meta AI o…",
-      "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
       "sourceName": "The Verge",
       "sourceCount": 1
     }
@@ -5333,7 +5334,7 @@
       "changePct": 2.127789027708037,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 35885884,
+      "volume": 35885885,
       "ohlc": [
         {
           "d": "05-20",
@@ -5777,7 +5778,7 @@
           "c": 175.19000244140625
         }
       ],
-      "relVolume": 0.7650566300645245,
+      "relVolume": 0.765056651383677,
       "marketCap": 420456000000
     },
     {
@@ -6244,15 +6245,15 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.34 – $4.59/hr",
-      "trend": "↓ 3% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6284,11 +6285,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-19T23:30:34.844Z",
+    "updatedAt": "2026-08-19T23:45:24.327Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6297,16 +6298,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 335,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 278,
+        "fetchedStoryCount": 238,
         "validatedStoryCount": 40,
-        "storyCoverage": 0.8955223880597015,
-        "estimatedRelevantDiscussions": 49,
+        "storyCoverage": 0.8561151079136691,
+        "estimatedRelevantDiscussions": 51,
         "isEstimated": true,
-        "rawCommentHits": 2464,
+        "rawCommentHits": 2462,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.12175324675324675,
+        "commentCoverage": 0.12185215272136475,
         "limited": false,
         "points": 978,
         "themes": [
@@ -6370,7 +6371,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 45,
+            "discussions": 47,
             "isEstimated": true
           },
           {
@@ -6385,28 +6386,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 986,
+        "rawStoryHits": 985,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.30425963488843816,
+        "storyCoverage": 0.30456852791878175,
         "estimatedRelevantDiscussions": 82,
         "isEstimated": true,
-        "rawCommentHits": 6556,
+        "rawCommentHits": 6559,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 30,
-        "commentCoverage": 0.04575960951799878,
+        "validatedCommentCount": 31,
+        "commentCoverage": 0.04573867967678,
         "limited": false,
         "points": 384,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 20
+            "count": 21
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 16
+            "count": 17
           },
           {
             "id": "writing",
@@ -6479,10 +6480,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 1380,
+        "rawCommentHits": 1381,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.21739130434782608,
+        "commentCoverage": 0.2172338884866039,
         "limited": false,
         "points": 418,
         "themes": [
@@ -6561,10 +6562,10 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 580,
+        "rawStoryHits": 579,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5172413793103449,
+        "storyCoverage": 0.5181347150259067,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
         "rawCommentHits": 10489,
@@ -6645,10 +6646,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
         "isEstimated": false,
-        "rawCommentHits": 676,
+        "rawCommentHits": 675,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 56,
-        "commentCoverage": 0.4437869822485207,
+        "commentCoverage": 0.4444444444444444,
         "limited": false,
         "points": 274,
         "themes": [
@@ -6727,15 +6728,15 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 155,
-        "fetchedStoryCount": 148,
+        "rawStoryHits": 157,
+        "fetchedStoryCount": 157,
         "validatedStoryCount": 27,
-        "storyCoverage": 0.9548387096774194,
-        "estimatedRelevantDiscussions": 28,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 27,
+        "isEstimated": false,
         "rawCommentHits": 1377,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 41,
+        "validatedCommentCount": 42,
         "commentCoverage": 0.2178649237472767,
         "limited": false,
         "points": 1857,
@@ -6743,12 +6744,12 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
+            "count": 20
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 13
           },
           {
             "id": "price",
@@ -6805,8 +6806,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 28,
-            "isEstimated": true
+            "discussions": 27,
+            "isEstimated": false
           }
         ]
       },
@@ -6821,10 +6822,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4818,
+        "rawCommentHits": 4817,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.062266500622665005,
+        "commentCoverage": 0.062279427029271334,
         "limited": false,
         "points": 216,
         "themes": [
