@@ -1,34 +1,61 @@
 {
-  "updatedAt": "2026-08-19T17:53:16.412Z",
+  "updatedAt": "2026-08-19T18:00:28.845Z",
   "build": {
-    "sha": "0369cb48603868466e713a42b133f14426ae50a0",
-    "shortSha": "0369cb4",
+    "sha": "0727187c331a88ccb5f685ce2d8be5a7aba121ba",
+    "shortSha": "0727187",
     "ref": "main",
-    "builtAt": "2026-08-19T17:53:32.418Z"
+    "builtAt": "2026-08-19T18:00:55.986Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 40.7,
+    "historyDepthDays": 40.8,
     "estimatedDatasets": 4,
-    "buildSha": "0369cb4",
-    "lastSuccessfulUpdate": "2026-08-19T17:53:16.412Z"
+    "buildSha": "0727187",
+    "lastSuccessfulUpdate": "2026-08-19T18:00:28.845Z"
   },
   "ticker": [
+    "OPENAI HIT THE BRAKES. NOW WHAT?",
     "NVIDIA’S NEW FINANCIAL STRATEGY DOES NOT COMPUTE",
     "OFFERING ZERO DATA RETENTION FOR FRONTIER MODELS",
+    "META AI IS GETTING A MAC APP",
     "REPLIT EXPANDS ACCESS TO SOFTWARE CREATION WITH GPT-5.6 LUNA",
     "STRENGTHENING DEMOCRATIC OVERSIGHT IN NATIONAL SECURITY",
     "OPENAI LAUNCHES A SAFER CHATGPT FOR TEENS — YEARS AFTER TEENS STARTED USING IT",
     "INTRODUCING CHATGPT FOR TEENS: BUILT FOR LEARNING, BACKED BY PROTECTIONS",
     "CHATGPT IS GETTING A DEDICATED MODE FOR TEENS",
-    "INTRODUCING CLAUDE TAG",
-    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
-    "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH"
+    "INTRODUCING CLAUDE TAG"
   ],
   "signals": [
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+      "clusterId": "2v9nqv",
+      "title": "OpenAI hit the brakes. Now what?",
+      "desc": "With a looming IPO, intense competition from Anthropic, and Chinese and open-weight rivals nipping at its heels, OpenAI has plenty of reasons to move fast. Instead, it hit the brakes. On Tuesday, the company said it had slowed the pace of some AI development while it tightened security and safeguards. That included a two-week pause […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+      "dateISO": "2026-08-19T17:10:09.000Z",
+      "date": "AUG 19 2026",
+      "category": "capital",
+      "catConfidence": 0.46,
+      "family": "market",
+      "significance": 77,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "claude"
+      ]
+    },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/981668/nvidias-goldman-blackrock-gpu-compute-asset",
       "clusterId": "1wj28s",
@@ -79,6 +106,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+      "clusterId": "h1ve0b",
+      "title": "Meta AI is getting a Mac app",
+      "desc": "Meta is launching a new Mac app dedicated to its AI chatbot. In an announcement on Wednesday, Meta says you can share your window with its AI chatbot, which can provide suggestions, answer questions, or create content based on what's on your screen. Meta AI on the Mac also supports dictation across all apps. The […]",
+      "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+      "dateISO": "2026-08-19T17:00:00.000Z",
+      "date": "AUG 19 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 71,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "llama"
       ]
     },
     {
@@ -617,33 +670,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system",
-      "clusterId": "pjpo6l",
-      "title": "Anthropic explains how Claude’s invisible text watermarks will work",
-      "desc": "Anthropic has clarified how it's planning to apply invisible watermarks to Claude-generated text in order to comply with Europe's AI transparency rules. On Friday, Anthropic announced that Claude's text marking system is \"a version of the SynthID-Text approach\" - an open-source watermarking technology developed by Google DeepMind that creates detectable patterns using wording probabilities. This [",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system",
-      "dateISO": "2026-08-17T10:57:13.000Z",
-      "date": "AUG 17 2026",
-      "category": "opensource",
-      "catConfidence": 0.71,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "claude",
-        "gemini"
-      ]
-    },
-    {
       "id": "https://openai.com/index/openai-joins-ports-pike-project",
       "clusterId": "qd84ku",
       "title": "OpenAI joins PORTS-Pike project",
@@ -680,7 +706,7 @@
       "category": "analysis",
       "catConfidence": 0.5,
       "family": "product",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "analysis",
       "sourceCount": 1,
@@ -1018,7 +1044,7 @@
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
         },
         {
-          "name": "DW.com",
+          "name": "dw.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
@@ -1057,7 +1083,7 @@
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
         },
         {
-          "name": "South China Morning Post",
+          "name": "scmp.com",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
         },
         {
@@ -1192,32 +1218,6 @@
         "claude",
         "qwen"
       ]
-    },
-    {
-      "id": "https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/",
-      "clusterId": "11ipnob",
-      "title": "Microsoft Copilot reveals secret input that allowed it to be hacked",
-      "desc": "Secret parameter allowed hackers to steal passwords when a target clicked on a link.",
-      "url": "https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/",
-      "dateISO": "2026-08-18T13:00:04.000Z",
-      "date": "AUG 18 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "copilot"
-      ]
     }
   ],
   "waves": [
@@ -1247,25 +1247,26 @@
     {
       "family": "market",
       "category": "capital",
-      "title": "Nvidia’s new financial strategy does not compute",
-      "summary": "April - 1805 Napoleon is master of Europe Only the British fleet stands before him Compute is now an asset class I see it is once again time to talk financial innovation. Apollo,…",
-      "significance": 75,
+      "title": "OpenAI hit the brakes. Now what?",
+      "summary": "With a looming IPO, intense competition from Anthropic, and Chinese and open-weight rivals nipping at its heels, OpenAI has plenty of reasons to move fast. Instead, it hit the bra…",
+      "significance": 77,
       "impact": "high",
       "verification": "single",
       "date": "AUG 19 2026",
-      "dateISO": "2026-08-19T12:00:00.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/981668/nvidias-goldman-blackrock-gpu-compute-asset",
+      "dateISO": "2026-08-19T17:10:09.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
       "sourceCount": 1,
       "sources": [
         {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/981668/nvidias-goldman-blackrock-gpu-compute-asset"
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai"
         }
       ],
       "entityIds": [
-        "nvidia"
+        "gpt",
+        "claude"
       ],
-      "whyItMatters": "If it holds up, where the money flows signals which bets investors expect to pay off."
+      "whyItMatters": "If it holds up, fresh capital extends how long the company can fund training runs and hiring before it needs revenue."
     },
     {
       "family": "research",
@@ -1297,11 +1298,11 @@
     "chatgpt": 30,
     "copilot": 2,
     "perplexity": 1,
-    "gpt": 80,
+    "gpt": 81,
     "claude": 72,
-    "gemini": 29,
+    "gemini": 28,
     "grok": 0,
-    "llama": 0,
+    "llama": 1,
     "deepseek": 0,
     "qwen": 3,
     "mistral": 0,
@@ -1508,6 +1509,30 @@
       "logoKey": "anthropic",
       "date": "AUG 19 2026",
       "verification": "single",
+      "impact": "high",
+      "h": "OpenAI hit the brakes. Now what?",
+      "p": "With a looming IPO, intense competition from Anthropic, and Chinese and open-weight rivals nipping at its heels, OpenAI has plenty of reasons to move fast. Instead, it hit the brakes. On Tuesday, the company said it had slowed the pace of some AI development…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "AUG 19 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Meta AI is getting a Mac app",
+      "p": "Meta is launching a new Mac app dedicated to its AI chatbot. In an announcement on Wednesday, Meta says you can share your window with its AI chatbot, which can provide suggestions, answer questions, or create content based on what's on your screen. Meta AI o…",
+      "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "AUG 19 2026",
+      "verification": "single",
       "impact": "notable",
       "h": "Coders Say They Already Found Workarounds to Claude’s Invisible Watermarks",
       "p": "Anthropic announced last week it would include invisible watermarks in AI-generated content to comply with new EU rules. Within hours, overrides were being touted online.",
@@ -1550,30 +1575,6 @@
       "url": "https://techcrunch.com/2026/08/19/amazon-makes-its-ai-powered-alexa-free-on-fire-tv-no-prime-required/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 19 2026",
-      "verification": "analysis",
-      "impact": "notable",
-      "h": "VentureBeat names Rob Strechay as its first Lead Analyst, expanding its enterpr…",
-      "p": "Rob Strechay, until recently managing director and principal analyst at theCUBE Research, has joined VentureBeat as our first Lead Analyst and a founding analyst of VentureBeat Research. His arrival is the next step in a deliberate move at VentureBeat toward…",
-      "url": "https://venturebeat.com/ai/venturebeat-names-rob-strechay-as-its-first-lead-analyst-expanding-its-enterprise-ai-research-push",
-      "sourceName": "VentureBeat",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 19 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Calendly throws its hat into meeting note-taker circus",
-      "p": "Calendly is also releasing a meeting scheduling assistant called Callie.",
-      "url": "https://techcrunch.com/2026/08/19/calendly-throws-its-hat-into-meeting-note-taker-circus/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1588,18 +1589,6 @@
       "sourceName": "OpenAI",
       "verification": "official",
       "impact": "emerging"
-    },
-    {
-      "name": "Anthropic explains how Claude’s invisible text watermarks w…",
-      "org": "The Verge",
-      "date": "AUG 17 2026",
-      "lic": "open weights",
-      "licClass": "lic-open",
-      "desc": "Anthropic has clarified how it's planning to apply invisible watermarks to Claude-generated text in order to comply with Europe's AI transp…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system",
-      "sourceName": "The Verge",
-      "verification": "single",
-      "impact": "notable"
     },
     {
       "name": "Tech Visionary Says the Big AI Labs Don’t Get What People W…",
@@ -1700,11 +1689,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 219.38,
-      "changePct": -0.16383025455178749,
+      "price": 219.17,
+      "changePct": -0.2594007963818325,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 55420610,
+      "volume": 56063108,
       "ohlc": [
         {
           "d": "05-19",
@@ -2152,22 +2141,22 @@
           "o": 221.6699981689453,
           "h": 222.8699951171875,
           "l": 216.75999450683594,
-          "c": 219.3800048828125
+          "c": 219.1699981689453
         }
       ],
-      "relVolume": 0.4606615415932812,
-      "marketCap": 5352872000000
+      "relVolume": 0.46600204793470545,
+      "marketCap": 5347748000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 484.18,
-      "changePct": 0.5294495291233359,
+      "price": 483.91,
+      "changePct": 0.47339217992691957,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 10069876,
+      "volume": 10145702,
       "ohlc": [
         {
           "d": "05-19",
@@ -2615,22 +2604,22 @@
           "o": 479.80999755859375,
           "h": 489.2900085449219,
           "l": 479.54998779296875,
-          "c": 484.17999267578125
+          "c": 483.9100036621094
         }
       ],
-      "relVolume": 0.2661535241063528,
-      "marketCap": 3597457400000
+      "relVolume": 0.26815765574798256,
+      "marketCap": 3595451300000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 364.4,
-      "changePct": -4.105264764083059,
+      "price": 363.95,
+      "changePct": -4.223680998149671,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 21386190,
+      "volume": 21595271,
       "ohlc": [
         {
           "d": "05-19",
@@ -3078,22 +3067,22 @@
           "o": 371.6600036621094,
           "h": 373.9100036621094,
           "l": 357.610107421875,
-          "c": 364.3999938964844
+          "c": 363.95001220703125
         }
       ],
-      "relVolume": 1.145994587305487,
-      "marketCap": 1792848000000
+      "relVolume": 1.157198345165509,
+      "marketCap": 1790634000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 343.95,
-      "changePct": -0.07263218801097215,
+      "price": 343.69,
+      "changePct": -0.14817250073722735,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 10716669,
+      "volume": 10828670,
       "ohlc": [
         {
           "d": "05-19",
@@ -3541,22 +3530,22 @@
           "o": 342.4549865722656,
           "h": 346.7300109863281,
           "l": 340.6600036621094,
-          "c": 343.95001220703125
+          "c": 343.69000244140625
         }
       ],
-      "relVolume": 0.348305221912088,
-      "marketCap": 4196190000000
+      "relVolume": 0.3519453952867976,
+      "marketCap": 4193018000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 264.41,
-      "changePct": 1.9117329819665765,
+      "price": 264.47,
+      "changePct": 1.9348578830152896,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 19252240,
+      "volume": 19496754,
       "ohlc": [
         {
           "d": "05-19",
@@ -4004,22 +3993,22 @@
           "o": 260.8450012207031,
           "h": 265.1499938964844,
           "l": 258.5799865722656,
-          "c": 264.4100036621094
+          "c": 264.4700012207031
         }
       ],
-      "relVolume": 0.3944376623856891,
-      "marketCap": 2829187000000.0005
+      "relVolume": 0.39944723688614076,
+      "marketCap": 2829829000000.0005
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 552.32,
-      "changePct": 1.5910432221695698,
+      "price": 552.19,
+      "changePct": 1.5671307592970367,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 10412546,
+      "volume": 10505399,
       "ohlc": [
         {
           "d": "05-19",
@@ -4467,22 +4456,22 @@
           "o": 541.3400268554688,
           "h": 554.0599975585938,
           "l": 537.280029296875,
-          "c": 552.3200073242188
+          "c": 552.1900024414062
         }
       ],
-      "relVolume": 0.6117186265369271,
-      "marketCap": 1391846400000.0002
+      "relVolume": 0.6171735757520214,
+      "marketCap": 1391518800000.0002
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 412.862,
-      "changePct": -0.00011814901647625911,
+      "price": 412.605,
+      "changePct": -0.19472017335100367,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 5243839,
+      "volume": 5296398,
       "ohlc": [
         {
           "d": "05-19",
@@ -4930,22 +4919,22 @@
           "o": 418.1300048828125,
           "h": 419.6000061035156,
           "l": 407.8800048828125,
-          "c": 412.86248779296875
+          "c": 412.6050109863281
         }
       ],
-      "relVolume": 0.4222464863045494,
-      "marketCap": 2142753780000
+      "relVolume": 0.4264786629739095,
+      "marketCap": 2141419950000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 465.865,
-      "changePct": -3.82440262058409,
+      "price": 466.09,
+      "changePct": -3.777951187500992,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 12388151,
+      "volume": 12484189,
       "ohlc": [
         {
           "d": "05-19",
@@ -5393,22 +5382,22 @@
           "o": 485.54998779296875,
           "h": 487.0050048828125,
           "l": 462.54998779296875,
-          "c": 465.864990234375
+          "c": 466.0899963378906
         }
       ],
-      "relVolume": 0.44142931845291383,
-      "marketCap": 754701300000
+      "relVolume": 0.44485145860002545,
+      "marketCap": 755065800000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 174.43,
-      "changePct": 1.684737963600039,
+      "price": 174.746,
+      "changePct": 0.0002257746333311237,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 22912493,
+      "volume": 23163126,
       "ohlc": [
         {
           "d": "05-19",
@@ -5856,22 +5845,22 @@
           "o": 172.6199951171875,
           "h": 176.82000732421875,
           "l": 169.77049255371094,
-          "c": 174.42999267578125
+          "c": 174.74560546875
         }
       ],
-      "relVolume": 0.4885081006021044,
-      "marketCap": 418632000000
+      "relVolume": 0.4938517465675699,
+      "marketCap": 419390400000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 144.59,
-      "changePct": 1.260594674971962,
+      "price": 144.8,
+      "changePct": 1.4076685062917529,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 17852286,
+      "volume": 18064370,
       "ohlc": [
         {
           "d": "05-19",
@@ -6319,11 +6308,11 @@
           "o": 142.69500732421875,
           "h": 146.0800018310547,
           "l": 137.42999267578125,
-          "c": 144.58999633789062
+          "c": 144.8000030517578
         }
       ],
-      "relVolume": 0.5770961910709922,
-      "marketCap": 406297900000
+      "relVolume": 0.5839520563975448,
+      "marketCap": 406888000000.00006
     }
   ],
   "compute": [
@@ -6333,22 +6322,22 @@
       "rate": "$1.87 – $3.29/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.28 – $4.60/hr",
-      "trend": "↓ 4% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $8.13/hr",
-      "trend": "↑ 11% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$5.31 – $7.00/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6373,11 +6362,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-19T17:53:16.412Z",
+    "updatedAt": "2026-08-19T18:00:28.845Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6387,10 +6376,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 331,
-        "fetchedStoryCount": 233,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 41,
-        "storyCoverage": 0.7039274924471299,
-        "estimatedRelevantDiscussions": 62,
+        "storyCoverage": 0.9063444108761329,
+        "estimatedRelevantDiscussions": 49,
         "isEstimated": true,
         "rawCommentHits": 2474,
         "fetchedCommentCount": 300,
@@ -6459,7 +6448,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 58,
+            "discussions": 45,
             "isEstimated": true
           },
           {
@@ -6474,23 +6463,23 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 988,
+        "rawStoryHits": 989,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.30364372469635625,
+        "storyCoverage": 0.3033367037411527,
         "estimatedRelevantDiscussions": 81,
         "isEstimated": true,
-        "rawCommentHits": 6546,
+        "rawCommentHits": 6544,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 28,
-        "commentCoverage": 0.045829514207149404,
+        "validatedCommentCount": 29,
+        "commentCoverage": 0.04584352078239609,
         "limited": false,
         "points": 384,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 17
+            "count": 18
           },
           {
             "id": "reasoning",
@@ -6515,6 +6504,11 @@
           {
             "id": "reliability",
             "label": "Reliability",
+            "count": 1
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
             "count": 1
           },
           {
@@ -6568,10 +6562,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 1380,
+        "rawCommentHits": 1379,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.21739130434782608,
+        "commentCoverage": 0.21754894851341552,
         "limited": false,
         "points": 418,
         "themes": [
@@ -6650,15 +6644,15 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 580,
+        "rawStoryHits": 577,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 15,
-        "storyCoverage": 0.5172413793103449,
+        "storyCoverage": 0.5199306759098787,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
         "rawCommentHits": 10460,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 22,
+        "validatedCommentCount": 23,
         "commentCoverage": 0.028680688336520075,
         "limited": false,
         "points": 405,
@@ -6666,7 +6660,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 9
+            "count": 10
           },
           {
             "id": "reasoning",
@@ -6681,6 +6675,11 @@
           {
             "id": "speed",
             "label": "Speed",
+            "count": 1
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
             "count": 1
           },
           {
@@ -6723,8 +6722,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 61,
-        "fetchedStoryCount": 61,
+        "rawStoryHits": 65,
+        "fetchedStoryCount": 65,
         "validatedStoryCount": 9,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 9,
@@ -6811,8 +6810,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 147,
-        "fetchedStoryCount": 147,
+        "rawStoryHits": 157,
+        "fetchedStoryCount": 157,
         "validatedStoryCount": 27,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 27,
@@ -6899,16 +6898,16 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 286,
-        "fetchedStoryCount": 286,
+        "rawStoryHits": 287,
+        "fetchedStoryCount": 287,
         "validatedStoryCount": 9,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4808,
+        "rawCommentHits": 4810,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.06239600665557404,
+        "validatedCommentCount": 36,
+        "commentCoverage": 0.062370062370062374,
         "limited": false,
         "points": 216,
         "themes": [
