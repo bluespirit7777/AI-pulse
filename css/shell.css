@@ -174,10 +174,22 @@ body{padding-top:var(--header-h);}
  *  2. Let the row wrap (flex-wrap:wrap) so the new Vocab pill, which still
  *     doesn't fit alongside them at 320px, flows to its own second line
  *     instead of clipping off-screen. .wrap's fixed height/no-wrap are
- *     overridden here only, and body's fixed-header offset (set just above,
- *     unconditionally) grows to match the taller two-line header at this
- *     width -- this rule must stay below that one so the cascade (same
- *     specificity, later wins) doesn't let the unconditional rule clobber it.
+ *     overridden here only.
+ *  3. Re-point --header-h (and therefore --chrome-h, which is defined as
+ *     var(--header-h)) at the real two-line header height for this
+ *     breakpoint. Both tokens are the documented single source of truth for
+ *     "how tall is the fixed header" -- js/nav.js reads --chrome-h for its
+ *     scroll-spy trigger line, and scroll-margin-top:var(--chrome-h) /
+ *     var(--header-h) rules on real anchor targets in app.html and
+ *     index.html (including every "See it on the dashboard ->" link on
+ *     vocab.html) rely on it to land jumps below the header instead of
+ *     underneath it. Measured: the two-line header renders 111px tall at
+ *     320-479px (checked at 320/375px on both pages); 112px below leaves a
+ *     comfortable 1px margin. body's padding-top now simply reads
+ *     var(--header-h) like the unconditional rule above it does -- with the
+ *     token itself already carrying the taller mobile value, adding a
+ *     further literal offset on top (the previous "+48px") would double
+ *     count and push content 48px too far down.
  * Verified down to 320px on both pages, with room to spare at 375px; the
  * wordmark stays on one line throughout.
  */
@@ -192,7 +204,8 @@ body{padding-top:var(--header-h);}
   }
   .nav-pill{padding:6px 10px;}
   .nav-pill--cta{padding:8px 13px;}
-  body{padding-top:calc(var(--header-h) + 48px);}
+  :root{--header-h:112px;}
+  body{padding-top:var(--header-h);}
 }
 
 /* ---------- depth rail ----------
