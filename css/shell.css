@@ -150,6 +150,51 @@ body{
    Offset the document once, here, rather than per-page. */
 body{padding-top:var(--header-h);}
 
+/* ---------- mobile: reclaim room for the extra nav-pill ----------
+ * Task 3 added a second, plain .nav-pill ("Vocab") next to the existing
+ * .nav-pill--cta in .site-header .wrap on both pages. Below ~480px that row
+ * no longer fits: the last pill's right edge ran past the viewport (measured
+ * pre-fix, at 320px: app.html 70px over, index.html 54px over).
+ *
+ * Gap/padding tightening alone can't close that gap without also crushing
+ * the brand wordmark: .site-brand and the two pills all use white-space:
+ * nowrap except the <h1> wordmark itself, so once the row's fixed-width
+ * content (wordmark + both pills, none of which can shrink below their own
+ * text width) exceeds the viewport, the flex-shrink the row is forced to
+ * absorb lands entirely on the one item that CAN shrink -- the wordmark --
+ * wrapping "AI Market Pulse" into 2-3 lines and pushing part of it above the
+ * fixed header's visible band (confirmed empirically at 320px).
+ *
+ * So the fix has two parts:
+ *  1. Drop the brand subtitle (".site-brand span" -- "A quiet view of a
+ *     loud industry" on app.html, "Quiet view" on index.html) and tighten
+ *     the row's gap/pill padding a little, same as the live-cluster rule
+ *     above -- it's a caption, not a link, so hiding it costs no navigation.
+ *     This is enough to keep brand + the existing CTA pill on one line.
+ *  2. Let the row wrap (flex-wrap:wrap) so the new Vocab pill, which still
+ *     doesn't fit alongside them at 320px, flows to its own second line
+ *     instead of clipping off-screen. .wrap's fixed height/no-wrap are
+ *     overridden here only, and body's fixed-header offset (set just above,
+ *     unconditionally) grows to match the taller two-line header at this
+ *     width -- this rule must stay below that one so the cascade (same
+ *     specificity, later wins) doesn't let the unconditional rule clobber it.
+ * Verified down to 320px on both pages, with room to spare at 375px; the
+ * wordmark stays on one line throughout.
+ */
+@media (max-width:480px){
+  .site-brand span{display:none;}
+  .site-header .wrap{
+    flex-wrap:wrap;
+    height:auto;
+    gap:10px 12px;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .nav-pill{padding:6px 10px;}
+  .nav-pill--cta{padding:8px 13px;}
+  body{padding-top:calc(var(--header-h) + 48px);}
+}
+
 /* ---------- depth rail ----------
  * A READOUT on both pages: it reports which evidence depths the current view
  * spans. It is never navigation. The landing fades it in past the hero; the
