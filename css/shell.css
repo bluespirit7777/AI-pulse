@@ -77,6 +77,13 @@ body{
 .site-brand b,.site-brand h1{
   font-family:var(--font-display);font-weight:700;font-size:22px;
   color:var(--deep);margin:0;letter-spacing:.01em;
+  /* Unlike .nav-pill and .nav-pill--cta (both nowrap already), the wordmark
+     had nothing stopping it from line-wrapping when the header row runs
+     short of space. As a flex item it could then be squeezed narrower than
+     its own text, wrapping "AI Market Pulse" onto 2-3 lines and, since
+     .site-header is a fixed 64px-tall bar, pushing part of it above/below
+     the visible band -- genuinely invisible, not just cramped. */
+  white-space:nowrap;
 }
 .site-brand a{color:inherit;text-decoration:none;}
 .site-brand a:hover,.site-brand a:focus-visible{color:var(--teal);}
@@ -118,7 +125,7 @@ body{
 }
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
 
-/* ---------- mobile: drop the live cluster ----------
+/* ---------- mobile: drop the live cluster and the subtitle ----------
  * .site-header .wrap is one flex row: brand, live-cluster, cross-page CTA.
  * The dashboard has no page-local mobile handling for it (its markup only
  * moved into this shared file), so at 375px the row needed ~469px of content
@@ -136,9 +143,19 @@ body{
  * is ~134px + ~110px + one 24px gap = ~268px of content, plus the ~40px of
  * .wrap padding a 375px viewport carries -- ~308px, comfortably under 375px
  * with room to spare for either element growing.
+ *
+ * The .site-brand subtitle span is the next-lowest-value element -- purely
+ * descriptive ("A quiet view of a loud industry" on the dashboard), never
+ * navigation. Once the wordmark itself stopped wrapping (see the nowrap
+ * added above), the subtitle became the row's only remaining wrappable
+ * text, and the dashboard's copy is long enough to still wrap across
+ * several lines on its own, again pushing content above/below the fixed
+ * 64px header. Same fix, same threshold: drop it below 900px alongside the
+ * live-cluster rather than tuning it a separate width.
  */
 @media (max-width:900px){
   .site-header .live-cluster{display:none;}
+  .site-brand span{display:none;}
 }
 
 /* ---------- focus ----------
