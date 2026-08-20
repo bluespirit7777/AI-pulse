@@ -190,10 +190,40 @@ body{padding-top:var(--header-h);}
  *     token itself already carrying the taller mobile value, adding a
  *     further literal offset on top (the previous "+48px") would double
  *     count and push content 48px too far down.
- * Verified down to 320px on both pages, with room to spare at 375px; the
- * wordmark stays on one line throughout.
+ *
+ * A final whole-branch review then found the original 480px cutoff wasn't
+ * wide enough: app.html's row (brand + subtitle + CTA + Vocab, all nowrap
+ * except the wordmark) starts clipping again as soon as this block stops
+ * applying. Bisecting confirmed the exact crossover: 675px still clips the
+ * wordmark, 676px is the first width where the unmodified row (no
+ * mitigation) fits on one line on its own. index.html never hits this --
+ * its shorter "Quiet view" subtitle plus its narrower CTA text keep it clear
+ * even at 481px, right where this block used to stop -- but the mitigation
+ * is harmless to apply there too (it already fits either way), so both pages
+ * share one threshold rather than tuning two. 480px -> 700px gives ~24px of
+ * margin past the measured 676px crossover, to absorb font-hinting/
+ * subpixel differences across browsers and platforms rather than shipping a
+ * threshold that only just clears one measured environment. Re-verified the
+ * wordmark clips nowhere in the closed 676-699px gap this margin covers, and
+ * that 700px+ renders identically to pre-mobile-CSS desktop (subtitle
+ * visible, standard gap/padding, single line, unwrapped) on both pages.
+ *
+ * Widening the cutoff does not change the height math above: this block's
+ * content still only ever renders as ONE line (brand+CTA) or TWO (brand+CTA,
+ * then Vocab alone) depending on how much room hiding the subtitle freed up
+ * at a given width -- never three -- so --header-h:112px (the two-line
+ * figure) still covers every width this block applies to without any
+ * wordmark clipping. Widths where the row happens to fit on one line under
+ * this block (roughly 390-700px, on both pages) render shorter than 112px
+ * and so carry some empty space below the header before body content
+ * starts -- a pre-existing trait of this same block at its original 480px
+ * cutoff (unrelated to the Vocab pill, present before Task 3, not something
+ * this pass introduces) and not something any width in the required sweep
+ * flags, since nothing clips or overflows there. Left as-is; a follow-up
+ * that wants a flush fit at every single-line width would need this block
+ * split into its own narrower (wrap) and wider (no-wrap) tiers.
  */
-@media (max-width:480px){
+@media (max-width:700px){
   .site-brand span{display:none;}
   .site-header .wrap{
     flex-wrap:wrap;

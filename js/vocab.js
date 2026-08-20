@@ -6,7 +6,6 @@ import { vocabTerms, VOCAB_SECTIONS } from './vocab-data.js';
 function termsFor(sectionId) {
   return vocabTerms
     .filter((entry) => entry.section === sectionId)
-    .slice()
     .sort((a, b) => a.term.localeCompare(b.term));
 }
 

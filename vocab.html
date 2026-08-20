@@ -35,6 +35,30 @@ p{margin:0;text-wrap:pretty}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:200;background:var(--paper);color:var(--deep);padding:10px 16px;border-radius:0 0 10px 0}
 .skip-link:focus{left:0}
 
+/* The skip-link's target -- matches the same rule app.html already carries
+   on its own #main-content, so the skip-link lands its target below the
+   fixed header instead of tight against it. */
+#main-content{scroll-margin-top:var(--chrome-h);}
+
+/* css/shell.css's "mobile: reclaim room for the extra nav-pill" block
+   (max-width:700px) re-points --header-h to 112px -- the height of the
+   OTHER two pages' two-line header once their subtitle hides and their
+   extra Vocab nav-pill wraps to its own row. This page's own header never
+   has that problem: it's always just brand + one "Dashboard" CTA, which is
+   two items, not four, and stays on one line at every width from 320px up
+   (measured: 61px tall at 340/480/700px, same as its normal >700px height
+   minus the 3-4px the shared block's tightened row padding trims). Inheriting
+   the other pages' 112px anyway -- vocab.html links the same shell.css --
+   would leave ~51px of dead space between this page's real (shorter) header
+   and its content. Re-point it back to the real measured value, at the same
+   breakpoint, so body's padding-top (which reads --header-h unconditionally
+   in shell.css) matches what's actually on screen. 62px leaves the same 1px
+   margin over the 61px measurement that shell.css's own 112px leaves over
+   its 111px measurement. */
+@media (max-width:700px){
+  :root{--header-h:62px;}
+}
+
 main.wrap{padding-top:56px;padding-bottom:80px}
 
 .vocab-intro{max-width:64ch;margin-bottom:40px}
