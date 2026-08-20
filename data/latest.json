@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-08-20T06:45:19.914Z",
+  "updatedAt": "2026-08-20T06:58:18.627Z",
   "build": {
-    "sha": "febb88d7a742d086abbc4cd34f055194097620f6",
-    "shortSha": "febb88d",
+    "sha": "dda557ca1c8505b9ddde0978f96ea62e2acaf682",
+    "shortSha": "dda557c",
     "ref": "main",
-    "builtAt": "2026-08-20T06:45:36.305Z"
+    "builtAt": "2026-08-20T06:58:34.401Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 11,
+    "feedsSucceeded": 10,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 41.3,
     "estimatedDatasets": 4,
-    "buildSha": "febb88d",
-    "lastSuccessfulUpdate": "2026-08-20T06:45:19.914Z"
+    "buildSha": "dda557c",
+    "lastSuccessfulUpdate": "2026-08-20T06:58:18.627Z"
   },
   "ticker": [
     "OFFERING ZERO DATA RETENTION FOR FRONTIER MODELS",
@@ -692,6 +692,33 @@
       ]
     },
     {
+      "id": "https://openai.com/index/nvidia/chatgpt-work",
+      "clusterId": "kw1uc",
+      "title": "How NVIDIA scales expertise with ChatGPT Work",
+      "desc": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
+      "url": "https://openai.com/index/nvidia/chatgpt-work",
+      "dateISO": "2026-08-18T00:00:00.000Z",
+      "date": "AUG 18 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/nvidia/chatgpt-work"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/08/19/ai-was-supposed-to-win-people-over-by-now-it-hasnt/",
       "clusterId": "1gifmvb",
       "title": "AI was supposed to win people over by now — it hasn’t",
@@ -813,20 +840,8 @@
       "significance": 44,
       "impact": "emerging",
       "verification": "official",
-      "sourceCount": 8,
+      "sourceCount": 5,
       "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/nvidia/chatgpt-work"
-        },
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=6VwIXjFj6YQ"
-        },
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=-vvGAKtV_Ek"
-        },
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
@@ -1189,32 +1204,6 @@
         "claude",
         "qwen"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-joins-ports-pike-project",
-      "clusterId": "qd84ku",
-      "title": "OpenAI joins PORTS-Pike project",
-      "desc": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
-      "url": "https://openai.com/index/openai-joins-ports-pike-project",
-      "dateISO": "2026-08-17T05:00:00.000Z",
-      "date": "AUG 17 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-joins-ports-pike-project"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1294,7 +1283,7 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 30,
+    "chatgpt": 31,
     "copilot": 2,
     "perplexity": 1,
     "gpt": 81,
@@ -1310,7 +1299,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 1,
+    "nvidia": 2,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 1
@@ -6251,13 +6240,13 @@
       "rate": "$1.33 – $3.29/hr",
       "trend": "↓ 12% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.37 – $4.59/hr",
-      "trend": "→ 3% vs 7d ago",
+      "rate": "$3.59 – $4.79/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
@@ -6295,7 +6284,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-20T06:45:19.914Z",
+    "updatedAt": "2026-08-20T06:58:18.627Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6305,10 +6294,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 334,
-        "fetchedStoryCount": 264,
+        "fetchedStoryCount": 237,
         "validatedStoryCount": 40,
-        "storyCoverage": 0.7904191616766467,
-        "estimatedRelevantDiscussions": 55,
+        "storyCoverage": 0.7095808383233533,
+        "estimatedRelevantDiscussions": 60,
         "isEstimated": true,
         "rawCommentHits": 2458,
         "fetchedCommentCount": 300,
@@ -6377,7 +6366,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 51,
+            "discussions": 56,
             "isEstimated": true
           },
           {
@@ -6392,16 +6381,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 990,
+        "rawStoryHits": 989,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.30303030303030304,
+        "storyCoverage": 0.3033367037411527,
         "estimatedRelevantDiscussions": 82,
         "isEstimated": true,
-        "rawCommentHits": 6564,
+        "rawCommentHits": 6566,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.04570383912248629,
+        "commentCoverage": 0.045689917758148034,
         "limited": false,
         "points": 384,
         "themes": [
@@ -6489,7 +6478,7 @@
         "fetchedStoryCount": 143,
         "validatedStoryCount": 16,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 23,
+        "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
         "rawCommentHits": 1377,
         "fetchedCommentCount": 300,
@@ -6521,7 +6510,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 2
+            "count": 3
           },
           {
             "id": "local",
@@ -6558,7 +6547,7 @@
           },
           {
             "name": "Google AI forum",
-            "discussions": 2,
+            "discussions": 3,
             "isEstimated": true
           },
           {
@@ -6579,10 +6568,10 @@
         "storyCoverage": 0.5172413793103449,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 10497,
+        "rawCommentHits": 10498,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 23,
-        "commentCoverage": 0.02857959416976279,
+        "commentCoverage": 0.028576871785101925,
         "limited": false,
         "points": 417,
         "themes": [
@@ -6739,18 +6728,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 153,
-        "fetchedStoryCount": 153,
-        "validatedStoryCount": 27,
+        "rawStoryHits": 147,
+        "fetchedStoryCount": 147,
+        "validatedStoryCount": 26,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 27,
+        "estimatedRelevantDiscussions": 26,
         "isEstimated": false,
-        "rawCommentHits": 1302,
+        "rawCommentHits": 1353,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.2304147465437788,
+        "commentCoverage": 0.22172949002217296,
         "limited": false,
-        "points": 1858,
+        "points": 1856,
         "themes": [
           {
             "id": "coding",
@@ -6817,7 +6806,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 27,
+            "discussions": 26,
             "isEstimated": false
           }
         ]
@@ -6833,10 +6822,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4823,
+        "rawCommentHits": 4821,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.062201948994401825,
+        "commentCoverage": 0.06222775357809583,
         "limited": false,
         "points": 216,
         "themes": [
@@ -7055,13 +7044,14 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding"
+          "coding",
+          "multimodal"
         ],
-        "excerpt": "Model / surface: gemini-3.5-live-translate-preview over the raw Live websocket ( v1beta BidiGenerateContent ), automatic VAD, 16 kHz PCM in / 24 kHz out, voice pinned to Kore,…",
+        "excerpt": "I am using the Multimodal Live API with ephemeral AuthTokens ( authTokens.create → BidiGenerateContentConstrained WebSocket). My implementation strictly follows the API…",
         "source": "Google AI forum",
-        "author": "Eph_Imp",
-        "publishedAt": "2026-08-20T04:06:25.271Z",
-        "url": "https://discuss.ai.google.dev/t/gemini-3-5-live-translate-preview-first-translated-word-distortion-bug/179033"
+        "author": "Tuong_Nguyen",
+        "publishedAt": "2026-08-20T06:45:35.496Z",
+        "url": "https://discuss.ai.google.dev/t/bug-voicename-configuration-is-silently-ignored-in-gemini-3-1-flash-live-preview-multimodal-live-api/179065"
       },
       {
         "modelId": "gemini",
@@ -7092,11 +7082,11 @@
         "themes": [
           "coding"
         ],
-        "excerpt": "thanks for checking. was synthid text always applied to api text, or was it introduced at some point? if it was introduced later, can you say approximately when? I'm asking…",
+        "excerpt": "Model / surface: gemini-3.5-live-translate-preview over the raw Live websocket ( v1beta BidiGenerateContent ), automatic VAD, 16 kHz PCM in / 24 kHz out, voice pinned to Kore,…",
         "source": "Google AI forum",
-        "author": "einx",
-        "publishedAt": "2026-08-19T18:35:49.489Z",
-        "url": "https://discuss.ai.google.dev/t/does-gemini-api-text-output-carry-synthid-watermarking-gemini-2-5-flash-lite-gemini-3-1-flash-lite-eu-ai-act-art-50-2/177241"
+        "author": "Eph_Imp",
+        "publishedAt": "2026-08-20T04:06:25.271Z",
+        "url": "https://discuss.ai.google.dev/t/gemini-3-5-live-translate-preview-first-translated-word-distortion-bug/179033"
       },
       {
         "modelId": "gemini",
