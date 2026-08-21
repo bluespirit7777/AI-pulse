@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-08-21T06:15:20.468Z",
+  "updatedAt": "2026-08-21T06:30:29.447Z",
   "build": {
-    "sha": "0fc4c564a3d4a77bde25e1c3efa42361dca0ebf2",
-    "shortSha": "0fc4c56",
+    "sha": "48a915a4db6af166f0b671837233d67d6a1e4f02",
+    "shortSha": "48a915a",
     "ref": "main",
-    "builtAt": "2026-08-21T06:15:37.253Z"
+    "builtAt": "2026-08-21T06:30:51.705Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 11,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 42.3,
     "estimatedDatasets": 5,
-    "buildSha": "0fc4c56",
-    "lastSuccessfulUpdate": "2026-08-21T06:15:20.468Z"
+    "buildSha": "48a915a",
+    "lastSuccessfulUpdate": "2026-08-21T06:30:29.447Z"
   },
   "ticker": [
     "OPENAI IS GAINING ON ANTHROPIC WITH BUSINESS USERS, NEW DATA INDICATES",
@@ -40,7 +40,7 @@
       "category": "adoption",
       "catConfidence": 0.56,
       "family": "product",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -154,7 +154,7 @@
       "category": "capital",
       "catConfidence": 0.45,
       "family": "market",
-      "significance": 62,
+      "significance": 61,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -858,37 +858,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/nvidia/chatgpt-work",
-      "clusterId": "kw1uc",
-      "title": "How NVIDIA scales expertise with ChatGPT Work",
-      "desc": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
-      "url": "https://openai.com/index/nvidia/chatgpt-work",
-      "dateISO": "2026-08-18T00:00:00.000Z",
-      "date": "AUG 18 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/stampli"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/nvidia/chatgpt-work"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex",
       "clusterId": "1g45cro",
       "title": "Data science workflows with ChatGPT Work",
@@ -902,8 +871,24 @@
       "significance": 44,
       "impact": "emerging",
       "verification": "official",
-      "sourceCount": 5,
+      "sourceCount": 9,
       "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/stampli"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/nvidia/chatgpt-work"
+        },
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=6VwIXjFj6YQ"
+        },
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=-vvGAKtV_Ek"
+        },
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
@@ -1199,6 +1184,30 @@
         "claude",
         "qwen"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
+      "clusterId": "o8ur2v",
+      "title": "Slack is launching collaborative vibe-coding channels",
+      "desc": "Slack is introducing dedicated channels where teams can vibe-code together with AI agents instead of jumping between different tools and conversations. The Slack Code launch includes open, project-specific code channels with dedicated user tabs, alongside features that compare coding changes and preview HTML output before the project is shipped. \"With Slack Code, when you have […]",
+      "url": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch",
+      "dateISO": "2026-08-20T12:00:00.000Z",
+      "date": "AUG 20 2026",
+      "category": "product",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     }
   ],
   "waves": [
@@ -1207,7 +1216,7 @@
       "category": "adoption",
       "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
       "summary": "Businesses are willing to flop back and forth as each lab releases new models, volatility that should give both companies' investors pause about how \"sticky\" enterprise AI spendin…",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "date": "AUG 20 2026",
@@ -1279,7 +1288,7 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 31,
+    "chatgpt": 30,
     "copilot": 2,
     "perplexity": 0,
     "gpt": 81,
@@ -1295,7 +1304,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 2,
+    "nvidia": 1,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 1
@@ -6224,23 +6233,23 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.37 – $4.59/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "↑ 4% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $6.79/hr",
-      "trend": "↓ 5% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $8.13/hr",
+      "trend": "↑ 5% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6248,7 +6257,7 @@
       "rate": "$6.94 – $7.89/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6264,11 +6273,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-21T06:15:20.468Z",
+    "updatedAt": "2026-08-21T06:30:29.447Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6277,16 +6286,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 329,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 239,
+        "fetchedStoryCount": 235,
         "validatedStoryCount": 40,
-        "storyCoverage": 0.9118541033434651,
-        "estimatedRelevantDiscussions": 48,
+        "storyCoverage": 0.9832635983263598,
+        "estimatedRelevantDiscussions": 45,
         "isEstimated": true,
-        "rawCommentHits": 2398,
+        "rawCommentHits": 1849,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.12510425354462051,
+        "commentCoverage": 0.16224986479177933,
         "limited": false,
         "points": 979,
         "themes": [
@@ -6345,7 +6354,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 44,
+            "discussions": 41,
             "isEstimated": true
           },
           {
@@ -6366,10 +6375,10 @@
         "storyCoverage": 0.3070624360286592,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
-        "rawCommentHits": 6634,
+        "rawCommentHits": 6635,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.045221585770274346,
+        "commentCoverage": 0.0452147701582517,
         "limited": false,
         "points": 391,
         "themes": [
@@ -6442,19 +6451,19 @@
         "fetchedStoryCount": 128,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
+        "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 1246,
+        "rawCommentHits": 1245,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.24077046548956663,
+        "commentCoverage": 0.24096385542168675,
         "limited": false,
         "points": 400,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 20
+            "count": 19
           },
           {
             "id": "reasoning",
@@ -6479,7 +6488,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 3
+            "count": 2
           },
           {
             "id": "local",
@@ -6516,7 +6525,7 @@
           },
           {
             "name": "Google AI forum",
-            "discussions": 2,
+            "discussions": 1,
             "isEstimated": true
           },
           {
@@ -6531,16 +6540,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 563,
+        "rawStoryHits": 562,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 14,
-        "storyCoverage": 0.5328596802841918,
+        "storyCoverage": 0.5338078291814946,
         "estimatedRelevantDiscussions": 26,
         "isEstimated": true,
-        "rawCommentHits": 10370,
+        "rawCommentHits": 10371,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 21,
-        "commentCoverage": 0.02892960462873674,
+        "commentCoverage": 0.028926815157651144,
         "limited": false,
         "points": 414,
         "themes": [
@@ -6697,16 +6706,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 153,
-        "fetchedStoryCount": 152,
+        "rawStoryHits": 151,
+        "fetchedStoryCount": 148,
         "validatedStoryCount": 26,
-        "storyCoverage": 0.9934640522875817,
-        "estimatedRelevantDiscussions": 26,
+        "storyCoverage": 0.9801324503311258,
+        "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 1305,
+        "rawCommentHits": 1304,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.22988505747126436,
+        "commentCoverage": 0.23006134969325154,
         "limited": false,
         "points": 1861,
         "themes": [
@@ -6775,7 +6784,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 26,
+            "discussions": 27,
             "isEstimated": true
           }
         ]
@@ -6791,10 +6800,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4801,
+        "rawCommentHits": 4802,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.06248698187877526,
+        "commentCoverage": 0.06247396917950854,
         "limited": false,
         "points": 218,
         "themes": [
