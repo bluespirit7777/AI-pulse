@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-22T14:15:20.243Z",
+  "updatedAt": "2026-08-22T14:29:17.907Z",
   "build": {
-    "sha": "2b5ffa71ccd90a08ffd84d6b7657e61c88662b21",
-    "shortSha": "2b5ffa7",
+    "sha": "7d13028baade02537c63565978a8e543522aca5d",
+    "shortSha": "7d13028",
     "ref": "main",
-    "builtAt": "2026-08-22T14:15:35.574Z"
+    "builtAt": "2026-08-22T14:29:34.768Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 43.6,
-    "estimatedDatasets": 5,
-    "buildSha": "2b5ffa7",
-    "lastSuccessfulUpdate": "2026-08-22T14:15:20.243Z"
+    "estimatedDatasets": 4,
+    "buildSha": "7d13028",
+    "lastSuccessfulUpdate": "2026-08-22T14:29:17.907Z"
   },
   "ticker": [
     "NVIDIA PARTNERS WITH DATA CENTER DEVELOPER CLOVERLEAF",
@@ -22,11 +22,11 @@
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
     "INTRODUCING COMPUTER USE IN GEMINI 3.5 FLASH",
     "OPENAI IS GAINING ON ANTHROPIC WITH BUSINESS USERS, NEW DATA INDICATES",
+    "INTRODUCING CLAUDE FOR TEACHERS",
     "ANTHROPIC’S OPUS 4.6 IS A SMUT-MACHINE",
     "NVIDIA JUST SHOWED THAT THE HARNESS, NOT THE AI MODEL, IS NOW THE REAL HERO",
     "META AI IS GETTING A MAC APP",
-    "OPENAI HIT THE BRAKES. NOW WHAT?",
-    "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION"
+    "OPENAI HIT THE BRAKES. NOW WHAT?"
   ],
   "signals": [
     {
@@ -189,6 +189,40 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gpt",
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "clusterId": "1vw2030",
+      "title": "Introducing Claude for Teachers",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
+      "dateISO": "2026-07-14T07:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        },
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
         "claude"
       ]
     },
@@ -411,8 +445,8 @@
       "category": "research",
       "catConfidence": 0.38,
       "family": "research",
-      "significance": 45,
-      "impact": "notable",
+      "significance": 44,
+      "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -424,36 +458,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "chatgpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
-      "clusterId": "1vw2030",
-      "title": "Introducing Claude for Teachers",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
-      "dateISO": "2026-07-14T07:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
-        },
-        {
-          "name": "The Hill",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -687,7 +691,7 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
         },
         {
-          "name": "dw.com",
+          "name": "DW.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
@@ -722,15 +726,11 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         {
           "name": "Cybersecurity Dive",
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
-        },
-        {
-          "name": "The Week",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBXbkVBUWJ6VzFETGtIQ0FVSTdONGhDYm9IZnZ2WHl0b1Rhc29PZllRUWVqQlVLWEt1WEF6Mk9KS2VkS0UxdHdsMXBQQkxCU0dRQVBVVjJPR3hVd1U4U0lFYzZidnBVNmtN?oc=5"
         },
         {
           "name": "cio.com",
@@ -909,32 +909,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
-      "clusterId": "wfyn7h",
-      "title": "Offering Zero Data Retention for frontier models",
-      "desc": "OpenAI reaffirms Zero Data Retention for eligible API customers and previews Private Safety Processing for advanced AI safety without compromising data privacy.",
-      "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
-      "dateISO": "2026-08-19T19:00:00.000Z",
-      "date": "AUG 19 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
       "clusterId": "18djbjh",
       "title": "5 new ways to level up your learning with Search",
@@ -1061,6 +1035,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "clusterId": "wfyn7h",
+      "title": "Offering Zero Data Retention for frontier models",
+      "desc": "OpenAI reaffirms Zero Data Retention for eligible API customers and previews Private Safety Processing for advanced AI safety without compromising data privacy.",
+      "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "dateISO": "2026-08-19T19:00:00.000Z",
+      "date": "AUG 19 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
     },
     {
       "id": "https://openai.com/index/chatgpt-for-teens",
@@ -1361,14 +1361,14 @@
           "impact": "emerging"
         },
         {
-          "h": "Introducing Claude Opus 5",
+          "h": "Anthropic releases new model, Opus 5",
           "d": "JUL 24 2026",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBBd0pLTktMWnd3bV9meUlYZjZMLTVGTDZCNzlXWHBHUXlNRWtkMTVyck5HaFVtYzd1ODZJVGpUWXhlOW4zemxURU1jZldrblRaT19DRVJMN3hZTG1CcTZVczgwb3JadjZJcmFsM1JBLXp2WUdHbExV?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "Axios",
           "sourceCount": 1,
-          "verification": "official",
+          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1389,7 +1389,7 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Anthropic",
-          "sourceCount": 2,
+          "sourceCount": 3,
           "verification": "official",
           "impact": "notable"
         }
@@ -1408,7 +1408,7 @@
           "sourceName": "TechCrunch",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "notable"
+          "impact": "emerging"
         },
         {
           "h": "Introducing AI Futures",
@@ -1561,11 +1561,11 @@
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 21 2026",
-      "verification": "uncertain",
+      "verification": "single",
       "impact": "emerging",
-      "h": "The DOJ is investigating a16z. What does this mean for venture capital?",
-      "p": "Andreessen Horowitz has two partners sitting on the boards of companies that now compete with each other: Ben Horowitz at Databricks and Martin Casado at Fivetran. Nothing too scandalous on the surface, except the Department of Justice has reportedly been inv…",
-      "url": "https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/",
+      "h": "Starcloud raises $250 million for orbital data centers as launch options dry up",
+      "p": "There's about to be a big fight to secure access to space.",
+      "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     },
@@ -1573,11 +1573,11 @@
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 21 2026",
-      "verification": "single",
+      "verification": "uncertain",
       "impact": "emerging",
-      "h": "Starcloud raises $250 million for orbital data centers as launch options dry up",
-      "p": "There's about to be a big fight to secure access to space.",
-      "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
+      "h": "The DOJ is investigating a16z. What does this mean for venture capital?",
+      "p": "Andreessen Horowitz has two partners sitting on the boards of companies that now compete with each other: Ben Horowitz at Databricks and Martin Casado at Fivetran. Nothing too scandalous on the surface, except the Department of Justice has reportedly been inv…",
+      "url": "https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     },
@@ -6258,8 +6258,8 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $7.26/hr",
-      "trend": "↑ 4% vs 7d ago",
+      "rate": "$5.31 – $8.76/hr",
+      "trend": "↑ 16% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
@@ -6289,7 +6289,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-22T14:15:20.243Z",
+    "updatedAt": "2026-08-22T14:29:17.907Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6304,10 +6304,10 @@
         "storyCoverage": 0.6930379746835443,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 2331,
+        "rawCommentHits": 2329,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 28,
-        "commentCoverage": 0.1287001287001287,
+        "commentCoverage": 0.12881064834693,
         "limited": false,
         "points": 984,
         "themes": [
@@ -6392,10 +6392,10 @@
         "storyCoverage": 0.3157894736842105,
         "estimatedRelevantDiscussions": 79,
         "isEstimated": true,
-        "rawCommentHits": 6725,
+        "rawCommentHits": 6721,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.04460966542750929,
+        "commentCoverage": 0.04463621484898081,
         "limited": false,
         "points": 381,
         "themes": [
@@ -6475,10 +6475,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 1219,
+        "rawCommentHits": 1217,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.2461033634126333,
+        "commentCoverage": 0.2465078060805259,
         "limited": false,
         "points": 207,
         "themes": [
@@ -6568,12 +6568,12 @@
         "storyCoverage": 0.5474452554744526,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 10198,
+        "rawCommentHits": 10197,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 24,
-        "commentCoverage": 0.02941753284957835,
+        "commentCoverage": 0.029420417769932334,
         "limited": false,
-        "points": 259,
+        "points": 260,
         "themes": [
           {
             "id": "coding",
@@ -6616,7 +6616,7 @@
           },
           {
             "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
-            "points": 39,
+            "points": 40,
             "comments": 15,
             "url": "https://github.com/proliferate-ai/proliferate",
             "date": "AUG 21 2026"
@@ -6729,11 +6729,11 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 154,
-        "fetchedStoryCount": 153,
+        "fetchedStoryCount": 154,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.9935064935064936,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 24,
-        "isEstimated": true,
+        "isEstimated": false,
         "rawCommentHits": 1324,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
@@ -6807,7 +6807,7 @@
           {
             "name": "Hacker News",
             "discussions": 24,
-            "isEstimated": true
+            "isEstimated": false
           }
         ]
       },
@@ -6822,10 +6822,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4757,
+        "rawCommentHits": 4755,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.06306495690561278,
+        "commentCoverage": 0.06309148264984227,
         "limited": false,
         "points": 218,
         "themes": [
