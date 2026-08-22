@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-22T19:30:23.956Z",
+  "updatedAt": "2026-08-22T19:45:20.578Z",
   "build": {
-    "sha": "33480253a2c6a33f75e37dd7467666a6710552dd",
-    "shortSha": "3348025",
+    "sha": "5b27999d6452d4bf77246ba19bab1b1953fa97ad",
+    "shortSha": "5b27999",
     "ref": "main",
-    "builtAt": "2026-08-22T19:30:37.939Z"
+    "builtAt": "2026-08-22T19:45:35.858Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 43.8,
     "estimatedDatasets": 4,
-    "buildSha": "3348025",
-    "lastSuccessfulUpdate": "2026-08-22T19:30:23.956Z"
+    "buildSha": "5b27999",
+    "lastSuccessfulUpdate": "2026-08-22T19:45:20.578Z"
   },
   "ticker": [
     "NVIDIA PARTNERS WITH DATA CENTER DEVELOPER CLOVERLEAF",
@@ -489,7 +489,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -1170,30 +1170,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/983502/linkedin-ai-slop-button-one-million-people-message",
-      "clusterId": "hqpqra",
-      "title": "Over 1 million people have clicked LinkedIn’s AI slop button",
-      "desc": "LinkedIn actually announced a \"Seems like AI slop\" button on July 30th, and the company says that a lot of people have already used it. According to a Thursday post from chief product officer Hari Srinivasan, \"over a million people\" have clicked on the button, which is accessible from the three dots menu on a […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/983502/linkedin-ai-slop-button-one-million-people-message",
-      "dateISO": "2026-08-21T21:25:50.000Z",
-      "date": "AUG 21 2026",
-      "category": "adoption",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/983502/linkedin-ai-slop-button-one-million-people-message"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
       "id": "https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/",
       "clusterId": "4e1pb8",
       "title": "The DOJ is investigating a16z. What does this mean for venture capital?",
@@ -1216,6 +1192,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+      "clusterId": "18djbjh",
+      "title": "5 new ways to level up your learning with Search",
+      "desc": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+      "dateISO": "2026-08-19T19:00:00.000Z",
+      "date": "AUG 19 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
+      ]
     }
   ],
   "waves": [
@@ -6243,21 +6245,21 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.30 – $4.59/hr",
-      "trend": "↓ 4% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.88 – $8.76/hr",
-      "trend": "↑ 21% vs 7d ago",
+      "rate": "$5.88 – $7.26/hr",
+      "trend": "↑ 9% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
@@ -6287,7 +6289,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-22T19:30:23.956Z",
+    "updatedAt": "2026-08-22T19:45:20.578Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6296,16 +6298,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 309,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 243,
+        "fetchedStoryCount": 243,
         "validatedStoryCount": 39,
-        "storyCoverage": 0.970873786407767,
-        "estimatedRelevantDiscussions": 44,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 43,
         "isEstimated": true,
-        "rawCommentHits": 2308,
+        "rawCommentHits": 1466,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.12998266897746968,
+        "commentCoverage": 0.20463847203274216,
         "limited": false,
         "points": 888,
         "themes": [
@@ -6369,8 +6371,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 40,
-            "isEstimated": true
+            "discussions": 39,
+            "isEstimated": false
           },
           {
             "name": "OpenAI forum",
@@ -6384,16 +6386,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 930,
+        "rawStoryHits": 931,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.3225806451612903,
+        "storyCoverage": 0.322234156820623,
         "estimatedRelevantDiscussions": 77,
         "isEstimated": true,
-        "rawCommentHits": 6726,
+        "rawCommentHits": 6729,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.04460303300624442,
+        "commentCoverage": 0.04458314757021846,
         "limited": false,
         "points": 381,
         "themes": [
@@ -6473,9 +6475,9 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 120,
-        "fetchedStoryCount": 120,
+        "fetchedStoryCount": 119,
         "validatedStoryCount": 12,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9916666666666667,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
         "rawCommentHits": 1213,
@@ -6546,7 +6548,7 @@
           {
             "name": "Hacker News",
             "discussions": 12,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6565,16 +6567,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 547,
+        "rawStoryHits": 548,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.5484460694698354,
+        "storyCoverage": 0.5474452554744526,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 10178,
+        "rawCommentHits": 10177,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 24,
-        "commentCoverage": 0.029475338966398115,
+        "commentCoverage": 0.029478235236317187,
         "limited": false,
         "points": 262,
         "themes": [
@@ -6731,16 +6733,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 152,
-        "fetchedStoryCount": 152,
+        "rawStoryHits": 151,
+        "fetchedStoryCount": 151,
         "validatedStoryCount": 24,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": false,
-        "rawCommentHits": 1312,
+        "rawCommentHits": 1313,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 48,
-        "commentCoverage": 0.22865853658536586,
+        "validatedCommentCount": 49,
+        "commentCoverage": 0.2284843869002285,
         "limited": false,
         "points": 1670,
         "themes": [
@@ -6752,7 +6754,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 15
+            "count": 16
           },
           {
             "id": "price",
@@ -6825,10 +6827,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4733,
+        "rawCommentHits": 4737,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.06338474540460595,
+        "commentCoverage": 0.06333122229259025,
         "limited": false,
         "points": 218,
         "themes": [
@@ -7264,14 +7266,14 @@
       {
         "modelId": "deepseek",
         "themes": [
-          "reasoning",
+          "writing",
           "local"
         ],
-        "excerpt": "… of the art for even a modestly sized local model (this isn't deepseek v4 flash 0731 Q8 which I am running myself locally on a great deal more hardware), this is a 27B dense, but…",
+        "excerpt": "… and multiple models at the same time.Let me return the favor:Deepseek V4 Flash 0731 Q8This is on a 4x3090 box with 256G RAM and a 5955WX TR; the CUDA drivers are patched to allow…",
         "source": "Hacker News",
-        "author": "walrus01",
-        "publishedAt": "2026-08-20T08:22:31.000Z",
-        "url": "https://news.ycombinator.com/item?id=49371867"
+        "author": "jacquesm",
+        "publishedAt": "2026-08-14T19:09:57.000Z",
+        "url": "https://news.ycombinator.com/item?id=49303278"
       },
       {
         "modelId": "qwen",
