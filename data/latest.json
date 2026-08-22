@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-22T20:45:20.971Z",
+  "updatedAt": "2026-08-22T20:51:37.627Z",
   "build": {
-    "sha": "dcdf338b797d1d07b39efed9c3b16fb223ef9c56",
-    "shortSha": "dcdf338",
+    "sha": "a4d5c1b7a3b98d2f082f64c2c24697bbd7e49300",
+    "shortSha": "a4d5c1b",
     "ref": "main",
-    "builtAt": "2026-08-22T20:45:35.625Z"
+    "builtAt": "2026-08-22T20:51:53.068Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 43.9,
     "estimatedDatasets": 4,
-    "buildSha": "dcdf338",
-    "lastSuccessfulUpdate": "2026-08-22T20:45:20.971Z"
+    "buildSha": "a4d5c1b",
+    "lastSuccessfulUpdate": "2026-08-22T20:51:37.627Z"
   },
   "ticker": [
     "NVIDIA PARTNERS WITH DATA CENTER DEVELOPER CLOVERLEAF",
@@ -450,32 +450,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "nvidia"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xOVkyRXJmZzVxWWJubzdfRHRMZWJmZ0ZaSEhhRkNjUU1wZkNsdEJBanRIOHAwa3p4dEdhd2dlMmNhY2tPRVdzTjY0Qi1sVjRPcXFMa1JXcEwteWNDclIwSks2VFN4cjA?oc=5",
-      "clusterId": "1d74ejw",
-      "title": "Anthropic brings Mythos 5 to its Claude Security vulnerability scanner",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xOVkyRXJmZzVxWWJubzdfRHRMZWJmZ0ZaSEhhRkNjUU1wZkNsdEJBanRIOHAwa3p4dEdhd2dlMmNhY2tPRVdzTjY0Qi1sVjRPcXFMa1JXcEwteWNDclIwSks2VFN4cjA?oc=5",
-      "dateISO": "2026-08-21T19:13:06.000Z",
-      "date": "AUG 21 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The New Stack",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xOVkyRXJmZzVxWWJubzdfRHRMZWJmZ0ZaSEhhRkNjUU1wZkNsdEJBanRIOHAwa3p4dEdhd2dlMmNhY2tPRVdzTjY0Qi1sVjRPcXFMa1JXcEwteWNDclIwSks2VFN4cjA?oc=5"
-        }
-      ],
-      "sourceName": "The New Stack",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -1226,6 +1200,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+      "clusterId": "18djbjh",
+      "title": "5 new ways to level up your learning with Search",
+      "desc": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+      "dateISO": "2026-08-19T19:00:00.000Z",
+      "date": "AUG 19 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
+      ]
     }
   ],
   "waves": [
@@ -1590,15 +1590,15 @@
       "sourceCount": 1
     },
     {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "AUG 21 2026",
       "verification": "single",
-      "impact": "notable",
-      "h": "Anthropic brings Mythos 5 to its Claude Security vulnerability scanner",
-      "p": "Anthropic brings Mythos 5 to its Claude Security vulnerability scanner",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5xOVkyRXJmZzVxWWJubzdfRHRMZWJmZ0ZaSEhhRkNjUU1wZkNsdEJBanRIOHAwa3p4dEdhd2dlMmNhY2tPRVdzTjY0Qi1sVjRPcXFMa1JXcEwteWNDclIwSks2VFN4cjA?oc=5",
-      "sourceName": "The New Stack",
+      "impact": "emerging",
+      "h": "Starcloud raises $250 million for orbital data centers as launch options dry up",
+      "p": "There's about to be a big fight to secure access to space.",
+      "url": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
+      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -6258,10 +6258,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.74/hr",
+      "rate": "$3.59 – $4.77/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6269,7 +6269,7 @@
       "rate": "$5.98 – $8.76/hr",
       "trend": "↑ 22% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6290,14 +6290,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.98 – $1.59/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-22T20:45:20.971Z",
+    "updatedAt": "2026-08-22T20:51:37.627Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6312,10 +6312,10 @@
         "storyCoverage": 0.9803921568627451,
         "estimatedRelevantDiscussions": 44,
         "isEstimated": true,
-        "rawCommentHits": 1465,
+        "rawCommentHits": 2304,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.20477815699658702,
+        "commentCoverage": 0.13020833333333334,
         "limited": false,
         "points": 888,
         "themes": [
@@ -6330,6 +6330,11 @@
             "count": 6
           },
           {
+            "id": "price",
+            "label": "Price",
+            "count": 5
+          },
+          {
             "id": "writing",
             "label": "Writing",
             "count": 4
@@ -6340,23 +6345,18 @@
             "count": 4
           },
           {
-            "id": "price",
-            "label": "Price",
-            "count": 4
-          },
-          {
             "id": "reliability",
             "label": "Reliability",
             "count": 3
           },
           {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 2
-          },
-          {
             "id": "local",
             "label": "Local use",
+            "count": 3
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
             "count": 2
           }
         ],
@@ -6394,16 +6394,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 923,
+        "rawStoryHits": 922,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.3250270855904659,
+        "storyCoverage": 0.32537960954446854,
         "estimatedRelevantDiscussions": 77,
         "isEstimated": true,
-        "rawCommentHits": 6738,
+        "rawCommentHits": 6736,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.04452359750667854,
+        "commentCoverage": 0.04453681710213777,
         "limited": false,
         "points": 381,
         "themes": [
@@ -6575,10 +6575,10 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 546,
+        "rawStoryHits": 545,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.5494505494505495,
+        "storyCoverage": 0.5504587155963303,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
         "rawCommentHits": 10175,
@@ -6835,10 +6835,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": false,
-        "rawCommentHits": 4736,
+        "rawCommentHits": 4741,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.0633445945945946,
+        "commentCoverage": 0.06327778949588694,
         "limited": false,
         "points": 218,
         "themes": [
