@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-23T06:00:28.845Z",
+  "updatedAt": "2026-08-23T06:15:19.996Z",
   "build": {
-    "sha": "fa5dc95c734cc6e9db4523a31b1923ccf51ddcaa",
-    "shortSha": "fa5dc95",
+    "sha": "a6adef00978a7081d8e3a0bd53141b82bc97a9ce",
+    "shortSha": "a6adef0",
     "ref": "main",
-    "builtAt": "2026-08-23T06:01:30.162Z"
+    "builtAt": "2026-08-23T06:15:35.401Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 44.3,
-    "estimatedDatasets": 5,
-    "buildSha": "fa5dc95",
-    "lastSuccessfulUpdate": "2026-08-23T06:00:28.845Z"
+    "estimatedDatasets": 4,
+    "buildSha": "a6adef0",
+    "lastSuccessfulUpdate": "2026-08-23T06:15:19.996Z"
   },
   "ticker": [
     "NVIDIA PARTNERS WITH DATA CENTER DEVELOPER CLOVERLEAF",
@@ -150,7 +150,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 55,
+      "significance": 54,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -425,32 +425,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
-      "clusterId": "xc7iak",
-      "title": "Anthropic’s Opus 4.6 is a smut-machine",
-      "desc": "Anthropic forbids its Claude models from generating sexually explicit content. But a series of tests conducted by TechCrunch found that it didn't take much to get past the restriction.",
-      "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
-      "dateISO": "2026-08-21T23:07:25.000Z",
-      "date": "AUG 21 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/",
       "clusterId": "j8b721",
       "title": "Nvidia just showed that the harness, not the AI model, is now the real hero",
@@ -584,6 +558,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
+      "clusterId": "xc7iak",
+      "title": "Anthropic’s Opus 4.6 is a smut-machine",
+      "desc": "Anthropic forbids its Claude models from generating sexually explicit content. But a series of tests conducted by TechCrunch found that it didn't take much to get past the restriction.",
+      "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
+      "dateISO": "2026-08-21T23:07:25.000Z",
+      "date": "AUG 21 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -1292,7 +1292,7 @@
       "category": "research",
       "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
       "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "significance": 55,
+      "significance": 54,
       "impact": "notable",
       "verification": "official",
       "date": "AUG 21 2026",
@@ -1317,7 +1317,7 @@
     "perplexity": 0,
     "gpt": 74,
     "claude": 72,
-    "gemini": 33,
+    "gemini": 32,
     "grok": 2,
     "llama": 1,
     "deepseek": 0,
@@ -1595,6 +1595,18 @@
     }
   ],
   "feed": [
+    {
+      "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
+      "org": "The Information",
+      "date": "JUL 28 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "Open-weight coverage — confirm exact license on the model card.",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUnMyMUZTeWhKa1pYUFAtNFBJVWVQdEpXZEl5MnhMM2pMTlpPdG9kQkRLck1nODFuaDRoMFJNQnBQRkszd3JJdUYwc1BXbUg3ekVvMHZ5STlZNHZEd3dRV294WlBRWm1IXzFHOUZoMmVZOTROWkx5d0UtNkdOWTNoRU9xTzJla0h2Q2I5Z09LTVo4NjNLTGg3TjNhUlJvNWNDeEI1R0gwYzhSVzF6RUVnM0kxVTBfTTQ1ZWc?oc=5",
+      "sourceName": "The Information",
+      "verification": "single",
+      "impact": "emerging"
+    },
     {
       "name": "OpenAI and Hugging Face partner to address security inciden…",
       "org": "OpenAI",
@@ -6250,10 +6262,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.49 – $4.59/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$3.30 – $4.59/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6289,7 +6301,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-23T06:00:28.845Z",
+    "updatedAt": "2026-08-23T06:15:19.996Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6304,10 +6316,10 @@
         "storyCoverage": 0.9771986970684039,
         "estimatedRelevantDiscussions": 43,
         "isEstimated": true,
-        "rawCommentHits": 2301,
+        "rawCommentHits": 2302,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.1303780964797914,
+        "commentCoverage": 0.13032145960034752,
         "limited": false,
         "points": 888,
         "themes": [
@@ -6392,22 +6404,22 @@
         "storyCoverage": 0.3246753246753247,
         "estimatedRelevantDiscussions": 77,
         "isEstimated": true,
-        "rawCommentHits": 6767,
+        "rawCommentHits": 6768,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 32,
-        "commentCoverage": 0.04433279148810403,
+        "validatedCommentCount": 33,
+        "commentCoverage": 0.044326241134751775,
         "limited": false,
         "points": 381,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 24
+            "count": 25
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 13
           },
           {
             "id": "writing",
@@ -6475,9 +6487,9 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 118,
-        "fetchedStoryCount": 116,
+        "fetchedStoryCount": 118,
         "validatedStoryCount": 12,
-        "storyCoverage": 0.9830508474576272,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
         "rawCommentHits": 1213,
@@ -6548,7 +6560,7 @@
           {
             "name": "Hacker News",
             "discussions": 12,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6573,10 +6585,10 @@
         "storyCoverage": 0.546448087431694,
         "estimatedRelevantDiscussions": 26,
         "isEstimated": true,
-        "rawCommentHits": 10189,
+        "rawCommentHits": 10190,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.029443517518892924,
+        "commentCoverage": 0.029440628066732092,
         "limited": false,
         "points": 267,
         "themes": [
@@ -6734,15 +6746,15 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 152,
-        "fetchedStoryCount": 149,
+        "fetchedStoryCount": 152,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.9802631578947368,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 24,
-        "isEstimated": true,
-        "rawCommentHits": 1321,
+        "isEstimated": false,
+        "rawCommentHits": 1304,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.22710068130204392,
+        "commentCoverage": 0.23006134969325154,
         "limited": false,
         "points": 1671,
         "themes": [
@@ -6812,7 +6824,7 @@
           {
             "name": "Hacker News",
             "discussions": 24,
-            "isEstimated": true
+            "isEstimated": false
           }
         ]
       },
