@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-24T04:45:21.456Z",
+  "updatedAt": "2026-08-24T05:00:29.887Z",
   "build": {
-    "sha": "ca417787da038c31f4e5dbf57e27e1cf98db5db5",
-    "shortSha": "ca41778",
+    "sha": "a5ee0e3a6b4c0f43cc73f5d50e86e6c78c21c6d1",
+    "shortSha": "a5ee0e3",
     "ref": "main",
-    "builtAt": "2026-08-24T04:45:36.411Z"
+    "builtAt": "2026-08-24T05:00:58.017Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 45.2,
-    "estimatedDatasets": 5,
-    "buildSha": "ca41778",
-    "lastSuccessfulUpdate": "2026-08-24T04:45:21.456Z"
+    "estimatedDatasets": 4,
+    "buildSha": "a5ee0e3",
+    "lastSuccessfulUpdate": "2026-08-24T05:00:29.887Z"
   },
   "ticker": [
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
@@ -25,8 +25,8 @@
     "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION",
     "HOW CLAUDE'S VALUES VARY BY MODEL AND LANGUAGE",
     "FLOCK CEO CALLS FOR ‘COMPROMISE’ AS SURVEILLANCE COMPANY FACES GROWING BACKLASH",
-    "FROM ATARI TO EVE ONLINE: BUILDING ON 15 YEARS OF AI RESEARCH IN GAMES",
-    "DATA SCIENCE WORKFLOWS WITH CHATGPT WORK"
+    "DATA SCIENCE WORKFLOWS WITH CHATGPT WORK",
+    "APPLE IS GETTING THIS WRONG"
   ],
   "signals": [
     {
@@ -276,8 +276,8 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 45,
-      "impact": "notable",
+      "significance": 44,
+      "impact": "emerging",
       "verification": "uncertain",
       "sourceCount": 1,
       "sources": [
@@ -288,32 +288,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "clusterId": "fvmzh5",
-      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-      "desc": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "dateISO": "2026-08-21T11:59:48.000Z",
-      "date": "AUG 21 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
     },
     {
       "id": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex",
@@ -470,6 +444,32 @@
       "entityIds": [
         "gpt",
         "claude",
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "clusterId": "fvmzh5",
+      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "desc": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "dateISO": "2026-08-21T11:59:48.000Z",
+      "date": "AUG 21 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
         "gemini"
       ]
     },
@@ -816,30 +816,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
-      "clusterId": "10rxoei",
-      "title": "Is it legal to train AI models on copyrighted books? It’s complicated",
-      "desc": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?",
-      "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
-      "dateISO": "2026-08-23T15:00:00.000Z",
-      "date": "AUG 23 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://openai.com/index/chatgpt-for-teens",
       "clusterId": "1azzl9u",
       "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
@@ -1047,6 +1023,30 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
+      "clusterId": "10rxoei",
+      "title": "Is it legal to train AI models on copyrighted books? It’s complicated",
+      "desc": "Most published authors have, without their knowledge or consent, contributed to the development of the same AI tools that threaten to undermine their livelihoods. That seems illegal, right?",
+      "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
+      "dateISO": "2026-08-23T15:00:00.000Z",
+      "date": "AUG 23 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://openai.com/index/introducing-ai-futures",
@@ -1277,7 +1277,7 @@
       "category": "research",
       "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
       "summary": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "significance": 44,
+      "significance": 43,
       "impact": "emerging",
       "verification": "official",
       "date": "AUG 21 2026",
@@ -1511,7 +1511,7 @@
       "logoKey": "other",
       "date": "AUG 23 2026",
       "verification": "uncertain",
-      "impact": "notable",
+      "impact": "emerging",
       "h": "Flock CEO calls for ‘compromise’ as surveillance company faces growing backlash",
       "p": "Flock Safety faces a growing public outcry over concerns that its surveillance technology could be misused.",
       "url": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
@@ -6242,13 +6242,13 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.10 – $4.59/hr",
-      "trend": "↓ 6% vs 7d ago",
+      "rate": "$3.30 – $4.59/hr",
+      "trend": "↓ 4% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
@@ -6263,10 +6263,10 @@
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $10.00/hr",
-      "trend": "↑ 14% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $7.89/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6279,14 +6279,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.56 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "↑ 20% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-24T04:45:21.456Z",
+    "updatedAt": "2026-08-24T05:00:29.887Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6383,16 +6383,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 898,
+        "rawStoryHits": 897,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.33407572383073497,
+        "storyCoverage": 0.33444816053511706,
         "estimatedRelevantDiscussions": 69,
         "isEstimated": true,
-        "rawCommentHits": 6555,
+        "rawCommentHits": 6552,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.04576659038901602,
+        "commentCoverage": 0.045787545787545784,
         "limited": false,
         "points": 351,
         "themes": [
@@ -6505,13 +6505,13 @@
             "count": 3
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 2
-          },
-          {
             "id": "multimodal",
             "label": "Image/video",
+            "count": 3
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
             "count": 2
           },
           {
@@ -6570,10 +6570,10 @@
         "storyCoverage": 0.5586592178770949,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 9971,
+        "rawCommentHits": 9970,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.030087253033798014,
+        "commentCoverage": 0.03009027081243731,
         "limited": false,
         "points": 270,
         "themes": [
@@ -6731,11 +6731,11 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 153,
-        "fetchedStoryCount": 148,
+        "fetchedStoryCount": 153,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.9673202614379085,
-        "estimatedRelevantDiscussions": 25,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 24,
+        "isEstimated": false,
         "rawCommentHits": 1303,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
@@ -6808,8 +6808,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 25,
-            "isEstimated": true
+            "discussions": 24,
+            "isEstimated": false
           }
         ]
       },
@@ -7041,13 +7041,13 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding"
+          "multimodal"
         ],
-        "excerpt": "Hi Google AI team, Requesting allowlist access (and quota if applicable) for the gemini-omni-flash-preview model via the Interactions API in Google AI Studio. Model:…",
+        "excerpt": "Hello Google Vertex AI team, I would like to request allowlist access to the Veo 3.1 preview video generation models on Vertex AI for our Google Cloud project. **Project** -…",
         "source": "Google AI forum",
-        "author": "Skyhill_marketing",
-        "publishedAt": "2026-08-24T03:19:20.527Z",
-        "url": "https://discuss.ai.google.dev/t/allowlist-request-gemini-omni-flash-preview-interactions-api-video-generation-skyhill-hq/179431"
+        "author": "XenLook_Inc",
+        "publishedAt": "2026-08-24T04:47:15.193Z",
+        "url": "https://discuss.ai.google.dev/t/request-allowlist-access-for-veo-3-1-vertex-ai-project-centering-rider-502315-s8/179520"
       },
       {
         "modelId": "gemini",
@@ -7072,6 +7072,17 @@
         "author": "tkgally",
         "publishedAt": "2026-08-18T10:16:51.000Z",
         "url": "https://news.ycombinator.com/item?id=49343585"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "Hi Google AI team, Requesting allowlist access (and quota if applicable) for the gemini-omni-flash-preview model via the Interactions API in Google AI Studio. Model:…",
+        "source": "Google AI forum",
+        "author": "Skyhill_marketing",
+        "publishedAt": "2026-08-24T03:19:20.527Z",
+        "url": "https://discuss.ai.google.dev/t/allowlist-request-gemini-omni-flash-preview-interactions-api-video-generation-skyhill-hq/179431"
       },
       {
         "modelId": "gemini",
