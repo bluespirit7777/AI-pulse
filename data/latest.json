@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-25T12:30:33.153Z",
+  "updatedAt": "2026-08-25T12:45:21.550Z",
   "build": {
-    "sha": "34328d88055e2e5be3486075da8738fe826e1599",
-    "shortSha": "34328d8",
+    "sha": "ce95b3e812d53887de497d12b66aefd455bd44c4",
+    "shortSha": "ce95b3e",
     "ref": "main",
-    "builtAt": "2026-08-25T12:30:48.455Z"
+    "builtAt": "2026-08-25T12:45:36.310Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 46.5,
-    "estimatedDatasets": 4,
-    "buildSha": "34328d8",
-    "lastSuccessfulUpdate": "2026-08-25T12:30:33.153Z"
+    "estimatedDatasets": 5,
+    "buildSha": "ce95b3e",
+    "lastSuccessfulUpdate": "2026-08-25T12:45:21.550Z"
   },
   "ticker": [
     "DISRUPTING A NEW COVERT INFLUENCE CAMPAIGN FROM RUSSIA",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
+    "‘THE WORLD SEEMS TO BE READY’: AN INTERVIEW WITH OPENAI HEAD OF PRODUCT THIBAULT SOTTIAUX",
     "INTRODUCING CLAUDE FOR TEACHERS",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
     "NVIDIA SENIOR MANAGER LINKED TO SUPERMICRO SCHEME SMUGGLING AI SERVERS TO CHINA",
     "OPENAI HIT THE BRAKES. NOW WHAT?",
     "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION",
     "OPENAI IS BUILDING AI AGENTS FOR EVERYTHING. WILL EVERYONE USE THEM?",
-    "HOW CLAUDE'S VALUES VARY BY MODEL AND LANGUAGE",
-    "KIDS OUTLEARN AI—AND WE STILL DON’T KNOW WHY"
+    "HOW CLAUDE'S VALUES VARY BY MODEL AND LANGUAGE"
   ],
   "signals": [
     {
@@ -99,6 +99,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
+      "clusterId": "p8m8jn",
+      "title": "‘The world seems to be ready’: An interview with OpenAI head of product Thibault Sottiaux",
+      "desc": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
+      "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
+      "dateISO": "2026-08-25T12:00:00.000Z",
+      "date": "AUG 25 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -328,7 +354,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 47,
+      "significance": 46,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -1189,32 +1215,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "clusterId": "fvmzh5",
-      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-      "desc": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "dateISO": "2026-08-21T11:59:48.000Z",
-      "date": "AUG 21 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
     }
   ],
   "waves": [
@@ -1310,7 +1310,7 @@
     "chatgpt": 28,
     "copilot": 2,
     "perplexity": 0,
-    "gpt": 73,
+    "gpt": 74,
     "claude": 67,
     "gemini": 30,
     "grok": 1,
@@ -1493,6 +1493,18 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 25 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "‘The world seems to be ready’: An interview with OpenAI head of product Thibaul…",
+      "p": "TechCrunch talks agents, UX, and reporting to Greg Brockman with OpenAI's head of product.",
+      "url": "https://techcrunch.com/2026/08/25/the-world-seems-to-be-ready-an-interview-with-openai-head-of-product-thibault-sottiaux/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 25 2026",
@@ -1573,18 +1585,6 @@
       "h": "Amjad Masad, CEO and co-founder of Replit, joins the Disrupt Stage at TechCrunc…",
       "p": "At TechCrunch Disrupt 2026, Replit CEO Amjad Masad will share his perspective on the future of programming and Replit's role in developing it.",
       "url": "https://techcrunch.com/2026/08/24/amjad-masad-ceo-and-co-founder-of-replit-joins-the-disrupt-stage-at-techcrunch-disrupt-2026/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 24 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Instinct’s powerful AI assistant is raising privacy and security concerns",
-      "p": "Early testers are raving about what Instinct can do, but some say the AI assistant’s sweeping access, broad terms and ability to act on users’ behalf come with uncomfortable trade-offs.",
-      "url": "https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -6237,16 +6237,16 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.79 – $3.29/hr",
-      "trend": "↓ 4% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "rate": "$1.87 – $3.29/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.33 – $4.94/hr",
-      "trend": "↑ 6% vs 7d ago",
+      "rate": "$3.19 – $4.94/hr",
+      "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
@@ -6256,7 +6256,7 @@
       "rate": "$5.98 – $8.76/hr",
       "trend": "↑ 15% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6280,11 +6280,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-25T12:30:33.153Z",
+    "updatedAt": "2026-08-25T12:45:21.550Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6293,8 +6293,8 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 208,
-        "fetchedStoryCount": 208,
+        "rawStoryHits": 297,
+        "fetchedStoryCount": 297,
         "validatedStoryCount": 39,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 41,
@@ -6381,28 +6381,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 888,
+        "rawStoryHits": 890,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 24,
-        "storyCoverage": 0.33783783783783783,
-        "estimatedRelevantDiscussions": 74,
+        "validatedStoryCount": 23,
+        "storyCoverage": 0.33707865168539325,
+        "estimatedRelevantDiscussions": 71,
         "isEstimated": true,
-        "rawCommentHits": 6508,
+        "rawCommentHits": 6511,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 33,
-        "commentCoverage": 0.046097111247695145,
+        "validatedCommentCount": 34,
+        "commentCoverage": 0.04607587160190447,
         "limited": false,
-        "points": 361,
+        "points": 360,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 20
+            "count": 21
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 13
+            "count": 14
           },
           {
             "id": "writing",
@@ -6454,7 +6454,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 71,
+            "discussions": 68,
             "isEstimated": true
           },
           {
@@ -6480,7 +6480,7 @@
         "validatedCommentCount": 33,
         "commentCoverage": 0.2564102564102564,
         "limited": false,
-        "points": 210,
+        "points": 211,
         "themes": [
           {
             "id": "coding",
@@ -6568,10 +6568,10 @@
         "storyCoverage": 0.5484460694698354,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 10065,
+        "rawCommentHits": 10072,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 27,
-        "commentCoverage": 0.029806259314456036,
+        "commentCoverage": 0.029785544082605243,
         "limited": false,
         "points": 271,
         "themes": [
@@ -6729,15 +6729,15 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 155,
-        "fetchedStoryCount": 155,
+        "fetchedStoryCount": 153,
         "validatedStoryCount": 22,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9870967741935484,
         "estimatedRelevantDiscussions": 22,
-        "isEstimated": false,
-        "rawCommentHits": 1294,
+        "isEstimated": true,
+        "rawCommentHits": 1293,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
-        "commentCoverage": 0.23183925811437403,
+        "commentCoverage": 0.23201856148491878,
         "limited": false,
         "points": 1667,
         "themes": [
@@ -6807,7 +6807,7 @@
           {
             "name": "Hacker News",
             "discussions": 22,
-            "isEstimated": false
+            "isEstimated": true
           }
         ]
       },
@@ -6822,12 +6822,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4695,
+        "rawCommentHits": 4699,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.06389776357827476,
+        "commentCoverage": 0.0638433709299851,
         "limited": false,
-        "points": 222,
+        "points": 223,
         "themes": [
           {
             "id": "reasoning",
@@ -7018,17 +7018,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding"
-        ],
-        "excerpt": "…ex/introducing-the-codex-app/- https://www.anthropic.com/news/claude-3-7-sonnetanthropic specifically brags about how good claude code is every annoucement of a new model. I will…",
-        "source": "Hacker News",
-        "author": "0x457",
-        "publishedAt": "2026-08-23T21:40:43.000Z",
-        "url": "https://news.ycombinator.com/item?id=49412903"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "speed",
           "local"
         ],
@@ -7037,6 +7026,17 @@
         "author": "wccrawford",
         "publishedAt": "2026-08-23T10:38:33.000Z",
         "url": "https://news.ycombinator.com/item?id=49407702"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "…ex/introducing-the-codex-app/- https://www.anthropic.com/news/claude-3-7-sonnetanthropic specifically brags about how good claude code is every annoucement of a new model. I will…",
+        "source": "Hacker News",
+        "author": "0x457",
+        "publishedAt": "2026-08-23T21:40:43.000Z",
+        "url": "https://news.ycombinator.com/item?id=49412903"
       },
       {
         "modelId": "gemini",
