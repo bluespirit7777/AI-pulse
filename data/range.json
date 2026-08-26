@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T16:53:07.268Z",
+  "generatedAt": "2026-08-26T17:00:45.570Z",
   "historyDepthDays": 47.7,
   "ranges": {
     "24H": {
@@ -8,8 +8,8 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": 2,
-        "claude": 8,
-        "gemini": 0,
+        "claude": 4,
+        "gemini": 1,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -30,8 +30,8 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": -7,
-        "claude": -4,
-        "gemini": -1,
+        "claude": -12,
+        "gemini": 0,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -48,26 +48,31 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "general": 15,
+        "general": 12,
         "capital": 8,
         "orggov": 2,
-        "market": 1,
         "analysis": 1,
-        "adoption": 2
+        "adoption": 2,
+        "product": 1
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 8,
-          "delta": -4
+          "count": 4,
+          "delta": -12
         },
         {
           "id": "gpt",
           "count": 2,
           "delta": -7
+        },
+        {
+          "id": "gemini",
+          "count": 1,
+          "delta": 0
         }
       ],
-      "eventCount": 29,
+      "eventCount": 26,
       "previousWindowComplete": true
     },
     "7D": {
@@ -77,9 +82,9 @@
         "perplexity": 0,
         "gpt": 74,
         "claude": 166,
-        "gemini": 59,
+        "gemini": 60,
         "grok": 12,
-        "llama": 9,
+        "llama": 2,
         "deepseek": 0,
         "qwen": 0,
         "mistral": 0,
@@ -99,9 +104,9 @@
         "perplexity": -3,
         "gpt": -122,
         "claude": -61,
-        "gemini": 10,
+        "gemini": 11,
         "grok": 7,
-        "llama": 9,
+        "llama": -5,
         "deepseek": 0,
         "qwen": -5,
         "mistral": 0,
@@ -119,9 +124,9 @@
         "adoption": 32,
         "general": 260,
         "capital": 46,
-        "product": 36,
         "research": 41,
         "market": 11,
+        "product": 30,
         "analysis": 27,
         "policy": 19,
         "compute": 18,
@@ -141,8 +146,8 @@
         },
         {
           "id": "gemini",
-          "count": 59,
-          "delta": 10
+          "count": 60,
+          "delta": 11
         },
         {
           "id": "chatgpt",
@@ -160,27 +165,27 @@
           "delta": 7
         },
         {
-          "id": "llama",
-          "count": 9,
-          "delta": 9
-        },
-        {
           "id": "amd",
           "count": 3,
           "delta": 3
+        },
+        {
+          "id": "llama",
+          "count": 2,
+          "delta": -5
         }
       ],
-      "eventCount": 504,
+      "eventCount": 498,
       "previousWindowComplete": true
     },
     "30D": {
       "entityActivity": {
-        "chatgpt": 327,
+        "chatgpt": 322,
         "copilot": 40,
         "perplexity": 12,
         "gpt": 1013,
         "claude": 1133,
-        "gemini": 492,
+        "gemini": 493,
         "grok": 54,
         "llama": 12,
         "deepseek": 0,
@@ -198,9 +203,9 @@
       },
       "entityDelta": {},
       "categoryCounts": {
-        "general": 2299,
-        "product": 261,
+        "product": 262,
         "capital": 297,
+        "general": 2294,
         "policy": 170,
         "opensource": 138,
         "compute": 119,
@@ -223,12 +228,12 @@
         },
         {
           "id": "gemini",
-          "count": 492,
+          "count": 493,
           "delta": null
         },
         {
           "id": "chatgpt",
-          "count": 327,
+          "count": 322,
           "delta": null
         },
         {
@@ -252,7 +257,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4338,
+      "eventCount": 4334,
       "previousWindowComplete": false
     }
   },
@@ -1014,7 +1019,7 @@
       "counts": {
         "compute": 4,
         "policy": 9,
-        "product": 25,
+        "product": 26,
         "general": 188,
         "capital": 20,
         "analysis": 32,
