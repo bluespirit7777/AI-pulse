@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-26T19:15:24.472Z",
+  "updatedAt": "2026-08-26T19:30:26.185Z",
   "build": {
-    "sha": "ea573f8cfc13b1eb0909d8b48b1654c435bc0622",
-    "shortSha": "ea573f8",
+    "sha": "1f251fb3afa759f810acccbeaf22f9c359fc1c46",
+    "shortSha": "1f251fb",
     "ref": "main",
-    "builtAt": "2026-08-26T19:15:42.507Z"
+    "builtAt": "2026-08-26T19:30:43.529Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 47.8,
     "estimatedDatasets": 4,
-    "buildSha": "ea573f8",
-    "lastSuccessfulUpdate": "2026-08-26T19:15:24.472Z"
+    "buildSha": "1f251fb",
+    "lastSuccessfulUpdate": "2026-08-26T19:30:26.185Z"
   },
   "ticker": [
     "GOOGLE’S NEW AI TRANSCRIPTION EDITS OUT YOUR ‘UMS’ AND ‘AHS’",
     "JALAPEÑO’S FIRST RESULTS SHOW INDUSTRY-LEADING SPEED AND EFFICIENCY IN AI INFERENCE",
+    "OPENAI’S HUGGING FACE HACK DEBRIEF RAISES MORE QUESTIONS THAN IT ANSWERS",
     "DISRUPTING A NEW COVERT INFLUENCE CAMPAIGN FROM RUSSIA",
     "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
+    "GOOGLE ANNOUNCES GEMINI 3.5 TRANSCRIBE FOR AI-POWERED SPEECH-TO-TEXT",
     "ENABLING INDEPENDENT RESEARCH ON HOW PEOPLE USE CLAUDE",
     "HOW LOVEHOLIDAYS IS MAKING EVERYONE A BUILDER WITH CODEX",
     "CANDIDATES ARE SIGNING A PACT PROMISING ACTION ON DATA CENTERS AND AI SAFETY",
-    "INTELLIGENT TRANSCRIPTION WITH GEMINI 3.5 TRANSCRIBE",
-    "BRINGING CHATGPT FOR TEACHERS TO MORE U.S. SCHOOL DISTRICTS",
-    "OPENAI LOSES A TOP DATA CENTER EXEC AS STREAM OF HIGH-PROFILE DEPARTURES CONTINUES"
+    "INTELLIGENT TRANSCRIPTION WITH GEMINI 3.5 TRANSCRIBE"
   ],
   "signals": [
     {
@@ -85,6 +85,32 @@
         }
       ],
       "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/openais-hugging-face-hack-debrief-raises-more-questions-than-it-answers/",
+      "clusterId": "g6679k",
+      "title": "OpenAI’s Hugging Face Hack Debrief Raises More Questions Than It Answers",
+      "desc": "The AI giant acknowledges that it could have done far more to prevent its AI agents from going rogue. But it still fails to explain why it didn't see this fiasco coming.",
+      "url": "https://www.wired.com/story/openais-hugging-face-hack-debrief-raises-more-questions-than-it-answers/",
+      "dateISO": "2026-08-26T19:16:42.000Z",
+      "date": "AUG 26 2026",
+      "category": "opensource",
+      "catConfidence": 0.44,
+      "family": "product",
+      "significance": 61,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openais-hugging-face-hack-debrief-raises-more-questions-than-it-answers/"
+        }
+      ],
+      "sourceName": "Wired",
       "entityIds": [
         "gpt"
       ]
@@ -159,6 +185,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text/",
+      "clusterId": "bp5tee",
+      "title": "Google announces Gemini 3.5 Transcribe for AI-powered speech-to-text",
+      "desc": "The AI that powers Gboard's Rambler is coming to more Google products, including Chrome.",
+      "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text/",
+      "dateISO": "2026-08-26T19:19:22.000Z",
+      "date": "AUG 26 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -300,7 +352,7 @@
       "category": "orggov",
       "catConfidence": 0.4,
       "family": "market",
-      "significance": 53,
+      "significance": 52,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -498,6 +550,44 @@
       ]
     },
     {
+      "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "clusterId": "1vfj8jd",
+      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+      "desc": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "dateISO": "2026-07-21T07:00:00.000Z",
+      "date": "JUL 21 2026",
+      "category": "opensource",
+      "catConfidence": 0.44,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/984239/alabama-attorney-general-subpoena-openai-hugging-face-hack"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://venturebeat.com/orchestration/orchestration-is-the-new-challenge-for-cx-in-the-age-of-ai-agents",
       "clusterId": "3zftha",
       "title": "Orchestration is the new challenge for CX in the age of AI agents",
@@ -642,7 +732,7 @@
       "category": "capital",
       "catConfidence": 0.87,
       "family": "market",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -800,40 +890,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "clusterId": "1vfj8jd",
-      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-      "desc": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "dateISO": "2026-07-21T07:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "opensource",
-      "catConfidence": 0.44,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/984239/alabama-attorney-general-subpoena-openai-hugging-face-hack"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
       "clusterId": "1i84g2z",
       "title": "Claude Code’s hidden tracker was an “experiment,” says Anthropic",
@@ -893,7 +949,7 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         {
           "name": "Forbes",
@@ -910,10 +966,6 @@
         {
           "name": "France 24",
           "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOSFRqU1NZejkxVkhNNjE0RkJJdTc3TWR0RWp6LVo2NFc2bkVaZWxLY3RvTXk1NnpZLUotTHRLQnpSU3JFb2JSQTlPOW52OXZEcDhiQUNCTHZuVUg1Rm9KdFVScjI2SjdPVGxQaTYweEJMT3BSQS1XZV9pWE9JVXA5SWZGQ1NLMXJyTUZiaWo4T2s0Z0NNdFp6LU5OWmZfZDhBMjF5QkgzMWRaS1lORU40RUtYT3NYMFY0aGl0eWwteEQtQkRXYjZQN0h5cTY?oc=5"
-        },
-        {
-          "name": "Business Insider",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa3JxWEh1SXZQaEhVdXROUzlxRTQwaUJRS3Z3N0tTdko0Z3pSRXFIRzR2VzJDZ1Vob1VBX01rZDJSRWpCMzhaU3dWMG94MlVqdGVhZ09HTXRFZ1pNR1ZZdVBMUHU3OUlld2NwZTZLSm44a1FfM2RuZ1EwZHBISDZLaHNnaUpaTWhlSnVramR0U3h6UkxETngtQ25aWC0yeUNndW94QVRLWUY?oc=5"
         },
         {
           "name": "Axios",
@@ -1157,58 +1209,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-joins-ports-pike-project",
-      "clusterId": "qd84ku",
-      "title": "OpenAI joins PORTS-Pike project",
-      "desc": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
-      "url": "https://openai.com/index/openai-joins-ports-pike-project",
-      "dateISO": "2026-08-17T05:00:00.000Z",
-      "date": "AUG 17 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-joins-ports-pike-project"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "clusterId": "1msd1dg",
-      "title": "Building AI infrastructure with the Effingham County community",
-      "desc": "OpenAI announces Project Camellia in Effingham County, Georgia, with commitments to responsible energy, community investment, jobs, and access to Codex.",
-      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community",
-      "dateISO": "2026-07-22T13:00:00.000Z",
-      "date": "JUL 22 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1295,9 +1295,9 @@
     "chatgpt": 28,
     "copilot": 2,
     "perplexity": 0,
-    "gpt": 74,
-    "claude": 62,
-    "gemini": 29,
+    "gpt": 75,
+    "claude": 63,
+    "gemini": 30,
     "grok": 1,
     "llama": 1,
     "deepseek": 0,
@@ -1489,6 +1489,18 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "AUG 26 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Google announces Gemini 3.5 Transcribe for AI-powered speech-to-text",
+      "p": "The AI that powers Gboard's Rambler is coming to more Google products, including Chrome.",
+      "url": "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-5-transcribe-for-ai-powered-speech-to-text/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 26 2026",
@@ -1571,21 +1583,21 @@
       "url": "https://www.technologyreview.com/2026/08/26/1142946/bill-gates-ai-danger-threshold/",
       "sourceName": "MIT Technology Review",
       "sourceCount": 3
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 26 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Orchestration is the new challenge for CX in the age of AI agents",
-      "p": "Presented by Tata Communications Enterprises are deploying AI agents, voice AI, and automation across messaging, voice, and digital channels faster than the architecture meant to support it. Most of that deployment has involved attaching conversational AI to…",
-      "url": "https://venturebeat.com/orchestration/orchestration-is-the-new-challenge-for-cx-in-the-age-of-ai-agents",
-      "sourceName": "VentureBeat",
-      "sourceCount": 1
     }
   ],
   "feed": [
+    {
+      "name": "OpenAI’s Hugging Face Hack Debrief Raises More Questions Th…",
+      "org": "Wired",
+      "date": "AUG 26 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "The AI giant acknowledges that it could have done far more to prevent its AI agents from going rogue. But it still fails to explain why it…",
+      "url": "https://www.wired.com/story/openais-hugging-face-hack-debrief-raises-more-questions-than-it-answers/",
+      "sourceName": "Wired",
+      "verification": "single",
+      "impact": "notable"
+    },
     {
       "name": "OpenAI and Hugging Face partner to address security inciden…",
       "org": "OpenAI",
@@ -1596,7 +1608,7 @@
       "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
       "sourceName": "OpenAI",
       "verification": "official",
-      "impact": "emerging"
+      "impact": "notable"
     },
     {
       "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
@@ -1646,17 +1658,6 @@
       "sourceCount": 1
     },
     {
-      "field": "Hardware",
-      "date": "AUG 18 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "AI’s recursive self-improvement might not come so quickly after all",
-      "p": "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer chips they run on. Forecasts of explosive AI…",
-      "url": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/",
-      "sourceName": "MIT Technology Review",
-      "sourceCount": 1
-    },
-    {
       "field": "Research",
       "date": "AUG 13 2026",
       "verification": "official",
@@ -1677,6 +1678,17 @@
       "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
       "sourceName": "Google DeepMind",
       "sourceCount": 1
+    },
+    {
+      "field": "Research",
+      "date": "AUG 06 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+      "p": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "sourceName": "Google DeepMind",
+      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1685,11 +1697,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 210.98,
-      "changePct": -0.9716063339909307,
+      "price": 210.63,
+      "changePct": -1.1358827196812593,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 79601553,
+      "volume": 83346745,
       "ohlc": [
         {
           "d": "05-26",
@@ -2144,22 +2156,22 @@
           "o": 212.4199981689453,
           "h": 213.60000610351562,
           "l": 209.47000122070312,
-          "c": 210.97999572753906
+          "c": 210.6300048828125
         }
       ],
-      "relVolume": 0.6921662912723272,
-      "marketCap": 5147912000000
+      "relVolume": 0.7245474303054428,
+      "marketCap": 5139372000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 495.92,
-      "changePct": 0.8562002086225395,
+      "price": 496.24,
+      "changePct": 0.9212745028612518,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 12252473,
+      "volume": 12601207,
       "ohlc": [
         {
           "d": "05-26",
@@ -2614,22 +2626,22 @@
           "o": 487.8500061035156,
           "h": 497.139892578125,
           "l": 487.30999755859375,
-          "c": 495.9200134277344
+          "c": 496.239990234375
         }
       ],
-      "relVolume": 0.3453490449996223,
-      "marketCap": 3684685600000
+      "relVolume": 0.355168374552876,
+      "marketCap": 3687063200000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 354.995,
-      "changePct": -0.48915040784775876,
+      "price": 353.74,
+      "changePct": -0.8409486130301868,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 12901479,
+      "volume": 13313030,
       "ohlc": [
         {
           "d": "05-26",
@@ -3084,22 +3096,22 @@
           "o": 357.239990234375,
           "h": 359.46990966796875,
           "l": 350.07000732421875,
-          "c": 354.9949951171875
+          "c": 353.739990234375
         }
       ],
-      "relVolume": 0.6507021986673734,
-      "marketCap": 1746575400000
+      "relVolume": 0.6714054446607426,
+      "marketCap": 1740400800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 341.66,
-      "changePct": -1.5275501278235863,
+      "price": 341.445,
+      "changePct": -1.589515871190415,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 11869403,
+      "volume": 12201662,
       "ohlc": [
         {
           "d": "05-26",
@@ -3554,22 +3566,22 @@
           "o": 346.6199951171875,
           "h": 346.8800048828125,
           "l": 340.17999267578125,
-          "c": 341.6600036621094
+          "c": 341.44500732421875
         }
       ],
-      "relVolume": 0.4539171733496298,
-      "marketCap": 4168252000000.0005
+      "relVolume": 0.4665965082685318,
+      "marketCap": 4165629000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 260.2,
-      "changePct": -0.32942057749367754,
+      "price": 259.91,
+      "changePct": -0.44050942589404724,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 14008456,
+      "volume": 14643237,
       "ohlc": [
         {
           "d": "05-26",
@@ -4024,22 +4036,22 @@
           "o": 261.2749938964844,
           "h": 262.04998779296875,
           "l": 258.239990234375,
-          "c": 260.20001220703125
+          "c": 259.9100036621094
         }
       ],
-      "relVolume": 0.3001038803788195,
-      "marketCap": 2784140000000
+      "relVolume": 0.3136862616188481,
+      "marketCap": 2781037000000.0005
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 578.135,
-      "changePct": 1.418300525530855,
+      "price": 577.14,
+      "changePct": 1.243765992886923,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 27452964,
+      "volume": 27816204,
       "ohlc": [
         {
           "d": "05-26",
@@ -4494,22 +4506,22 @@
           "o": 590.4375,
           "h": 593.27001953125,
           "l": 561.9450073242188,
-          "c": 578.135009765625
+          "c": 577.1400756835938
         }
       ],
-      "relVolume": 1.5835035776395365,
-      "marketCap": 1456900200000
+      "relVolume": 1.6043684921780688,
+      "marketCap": 1454392800000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 417.845,
-      "changePct": 0.10421349626921679,
+      "price": 417.925,
+      "changePct": 0.12337608738200037,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 4649150,
+      "volume": 4818773,
       "ohlc": [
         {
           "d": "05-26",
@@ -4964,22 +4976,22 @@
           "o": 418.45001220703125,
           "h": 420.75,
           "l": 414.4100036621094,
-          "c": 417.8450012207031
+          "c": 417.92498779296875
         }
       ],
-      "relVolume": 0.4135176506480072,
-      "marketCap": 2168615550000.0002
+      "relVolume": 0.42857785760565864,
+      "marketCap": 2169030750000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 482.465,
-      "changePct": 0.6855469160483181,
+      "price": 481.965,
+      "changePct": 0.5812019918773489,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 10836948,
+      "volume": 11204154,
       "ohlc": [
         {
           "d": "05-26",
@@ -5434,22 +5446,22 @@
           "o": 475.0400085449219,
           "h": 491.1199951171875,
           "l": 474.5799865722656,
-          "c": 482.4649963378906
+          "c": 481.9649963378906
         }
       ],
-      "relVolume": 0.4348782278938181,
-      "marketCap": 781593300000
+      "relVolume": 0.4495692656781816,
+      "marketCap": 780783300000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 178.04,
-      "changePct": 3.0741606495316756,
+      "price": 178.078,
+      "changePct": 0.0001697270896721967,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 18591067,
+      "volume": 19102273,
       "ohlc": [
         {
           "d": "05-26",
@@ -5902,24 +5914,24 @@
         {
           "d": "08-26",
           "o": 170.4239959716797,
-          "h": 178.2299041748047,
+          "h": 178.39999389648438,
           "l": 168.89999389648438,
-          "c": 178.0399932861328
+          "c": 178.07769775390625
         }
       ],
-      "relVolume": 0.39888920345711315,
-      "marketCap": 427296000000
+      "relVolume": 0.40983378926386843,
+      "marketCap": 427387200000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 148.8,
-      "changePct": 2.790895448303893,
+      "price": 148.95,
+      "changePct": 2.894447775907029,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 12710197,
+      "volume": 13112066,
       "ohlc": [
         {
           "d": "05-26",
@@ -6374,11 +6386,11 @@
           "o": 147,
           "h": 151.61000061035156,
           "l": 146.8249969482422,
-          "c": 148.8000946044922
+          "c": 148.9499969482422
         }
       ],
-      "relVolume": 0.4710829421138472,
-      "marketCap": 418128000000.00006
+      "relVolume": 0.48593533371752373,
+      "marketCap": 418549499999.99994
     }
   ],
   "compute": [
@@ -6388,15 +6400,15 @@
       "rate": "$1.79 – $3.29/hr",
       "trend": "↓ 4% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $5.08/hr",
+      "trend": "↑ 6% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6404,15 +6416,15 @@
       "rate": "$5.25 – $6.79/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.25/hr",
+      "rate": "$6.94 – $11.26/hr",
       "trend": "↑ 23% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6432,7 +6444,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-26T19:15:24.472Z",
+    "updatedAt": "2026-08-26T19:30:26.185Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6441,16 +6453,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 300,
-        "fetchedStoryCount": 230,
+        "rawStoryHits": 299,
+        "fetchedStoryCount": 299,
         "validatedStoryCount": 38,
-        "storyCoverage": 0.7666666666666667,
-        "estimatedRelevantDiscussions": 51,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 39,
         "isEstimated": true,
-        "rawCommentHits": 2314,
+        "rawCommentHits": 2315,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.12964563526361278,
+        "commentCoverage": 0.12958963282937366,
         "limited": false,
         "points": 869,
         "themes": [
@@ -6514,8 +6526,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 50,
-            "isEstimated": true
+            "discussions": 38,
+            "isEstimated": false
           },
           {
             "name": "OpenAI forum",
@@ -6535,10 +6547,10 @@
         "storyCoverage": 0.3409090909090909,
         "estimatedRelevantDiscussions": 76,
         "isEstimated": true,
-        "rawCommentHits": 6514,
+        "rawCommentHits": 6516,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 28,
-        "commentCoverage": 0.0460546515198035,
+        "commentCoverage": 0.04604051565377532,
         "limited": false,
         "points": 370,
         "themes": [
@@ -6618,10 +6630,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 1207,
+        "rawCommentHits": 1208,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.24855012427506215,
+        "commentCoverage": 0.24834437086092714,
         "limited": false,
         "points": 216,
         "themes": [
@@ -6705,16 +6717,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 551,
+        "rawStoryHits": 554,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5444646098003629,
-        "estimatedRelevantDiscussions": 29,
+        "storyCoverage": 0.5415162454873647,
+        "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 10102,
+        "rawCommentHits": 10122,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.02969708968521085,
+        "commentCoverage": 0.02963841138114997,
         "limited": false,
         "points": 273,
         "themes": [
@@ -6773,7 +6785,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 29,
+            "discussions": 30,
             "isEstimated": true
           },
           {
@@ -6794,10 +6806,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 692,
+        "rawCommentHits": 693,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.43352601156069365,
+        "commentCoverage": 0.4329004329004329,
         "limited": false,
         "points": 84,
         "themes": [
@@ -6866,16 +6878,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 150,
-        "fetchedStoryCount": 150,
+        "rawStoryHits": 159,
+        "fetchedStoryCount": 159,
         "validatedStoryCount": 22,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": false,
-        "rawCommentHits": 1289,
+        "rawCommentHits": 1335,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 45,
-        "commentCoverage": 0.23273855702094648,
+        "validatedCommentCount": 44,
+        "commentCoverage": 0.2247191011235955,
         "limited": false,
         "points": 1666,
         "themes": [
@@ -6887,12 +6899,12 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 14
+            "count": 13
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 12
+            "count": 11
           },
           {
             "id": "local",
@@ -6960,10 +6972,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4891,
+        "rawCommentHits": 4895,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.06133714986710284,
+        "commentCoverage": 0.06128702757916241,
         "limited": false,
         "points": 698,
         "themes": [
@@ -7007,7 +7019,7 @@
           {
             "title": "Qwen 3.8-Flash-Next releasing tomorrow (125B a6B)",
             "points": 333,
-            "comments": 163,
+            "comments": 164,
             "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next",
             "date": "AUG 25 2026"
           },
@@ -7377,6 +7389,17 @@
       {
         "modelId": "deepseek",
         "themes": [
+          "price"
+        ],
+        "excerpt": "…higher. But everybody is doing that. One fine point is that deepseek-v4-flash-0731 is really a different model than deepseek-v4-flash and it's priced…",
+        "source": "Hacker News",
+        "author": "drob518",
+        "publishedAt": "2026-08-26T17:05:48.000Z",
+        "url": "https://news.ycombinator.com/item?id=49452432"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
           "speed",
           "price"
         ],
@@ -7385,17 +7408,6 @@
         "author": "johntrob14",
         "publishedAt": "2026-08-22T14:07:09.000Z",
         "url": "https://news.ycombinator.com/item?id=49399888"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
-          "price"
-        ],
-        "excerpt": "…higher. But everybody is doing that. One fine point is that deepseek-v4-flash-0731 is really a different model than deepseek-v4-flash and it's priced…",
-        "source": "Hacker News",
-        "author": "drob518",
-        "publishedAt": "2026-08-26T17:05:48.000Z",
-        "url": "https://news.ycombinator.com/item?id=49452432"
       },
       {
         "modelId": "deepseek",
