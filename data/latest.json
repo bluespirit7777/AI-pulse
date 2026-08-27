@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-08-27T10:45:25.141Z",
+  "updatedAt": "2026-08-27T11:00:31.884Z",
   "build": {
-    "sha": "33a2872e13ef3ec18a7885b01a66080bf6c8a68b",
-    "shortSha": "33a2872",
+    "sha": "06057d98d43508e44eb827045917a705603a5d32",
+    "shortSha": "06057d9",
     "ref": "main",
-    "builtAt": "2026-08-27T10:45:42.184Z"
+    "builtAt": "2026-08-27T11:00:57.003Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 48.4,
-    "estimatedDatasets": 4,
-    "buildSha": "33a2872",
-    "lastSuccessfulUpdate": "2026-08-27T10:45:25.141Z"
+    "historyDepthDays": 48.5,
+    "estimatedDatasets": 5,
+    "buildSha": "06057d9",
+    "lastSuccessfulUpdate": "2026-08-27T11:00:31.884Z"
   },
   "ticker": [
     "AMAZON JUST TRIPLED ITS ORDER OF NVIDIA CHIPS OVER ‘SURGING DEMAND’",
+    "EXPANDING OPENAI’S PRESENCE IN BRAZIL",
     "NVIDIA IS ABOUT TO BE A HUNDRED-BILLION-DOLLAR-A-QUARTER COMPANY",
     "ANTHROPIC CONTINUES COMPUTE-GOBBLING STREAK IN $45B DEAL WITH NSCALE",
     "OPENAI’S ROGUE AI MODEL INCIDENT WAS WORSE THAN WE THOUGHT",
     "VIRAL AI STARTUP INSTINCT HAS RAISED $350M AT A $2.5B VALUATION",
     "GOOGLE’S NEW AI TRANSCRIPTION EDITS OUT YOUR ‘UMS’ AND ‘AHS’",
     "JALAPEÑO’S FIRST RESULTS SHOW INDUSTRY-LEADING SPEED AND EFFICIENCY IN AI INFERENCE",
-    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE",
-    "HOW DO WE EXPLAIN OPENAI’S EXECUTIVE EXODUS?",
-    "WHAT WE STILL DON’T KNOW ABOUT OPENAI’S HUGGING FACE HACK"
+    "INTRODUCING CLAUDE SONNET 5",
+    "CLAUDE SCIENCE, AN AI WORKBENCH FOR SCIENTISTS, IS NOW AVAILABLE"
   ],
   "signals": [
     {
@@ -53,6 +53,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "clusterId": "1psfy2j",
+      "title": "Expanding OpenAI’s presence in Brazil",
+      "desc": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "dateISO": "2026-08-27T03:00:00.000Z",
+      "date": "AUG 27 2026",
+      "category": "adoption",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 70,
+      "impact": "high",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/expanding-our-presence-in-brazil"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -216,6 +242,44 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
+      "clusterId": "1e0i15t",
+      "title": "Introducing Claude Sonnet 5",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
+      "dateISO": "2026-06-30T07:00:00.000Z",
+      "date": "JUN 30 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
+        },
+        {
+          "name": "The Hill",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5",
       "clusterId": "1syefyo",
       "title": "Claude Science, an AI workbench for scientists, is now available",
@@ -240,12 +304,12 @@
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81R0J0dXluYzJGcmxVb3dDY0Z2UjVYT2I5ZkYwSVRrWTBSUm5HZXpWRkFsQ2k5bm1jbVU5cENOY0xkX0tybV9FbnhRcFVac1dncWtqTF85OTZyd3o1dlRXenJkd1h3T1pTSGc?oc=5"
         },
         {
-          "name": "MIT Technology Review",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
-        },
-        {
           "name": "STAT",
           "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeWlCbzhyVDZCYmhIaGpiOWp4QldGLXBTdDhlM2J1RzBRRjlMUVozMk1IQ1h4VVhndTBrX2tYUGtlWnhHN3ZLSFVEd0h2b2QyVnBjX2s5RVZ0WTdHbWRtT0hqTHFuZUtnZjhLcFZ1b1Z6SjdubHZORERWQ3RTN2oxRmVYNjRJa0NqTElhNFVpVQ?oc=5"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPelNhdFZ2aEV4V2V0VndMeXNwT2ROZVg4U1ZWLVBrUnRxeEttR001MWNqZVQ4RHNabkx5MnM1Ylk3bl9XS1Y1QkR4MUNrb3RDVnItMVRhVDNlR3dUcEFPSmFLNXJwWDBBM3J6SHlyaEhSa000dEwxTmhKNkpDMnlWd3hPSFFsU2ZuVHVDdm90bzY1dHhFY2k3SmVSQkZYNXFjY0IwLUNCNFHSAa4BQVVfeXFMUHBTWFJfa3NXSXBmUkhZdWpZYlZBa2w2U1U4enVxOEtaSHoxd0NSZExMSEhUcmhLWGtiVXdYODNmTWwtaVFvVlhiVFdFM3hJbjd0azdWOFNNNFhuMTU0ZURld2R2bXk4MEtBTFJrWlJjR3EzWVJTVDFSaEZiWU8yZTk2cXMtYTVhWS1IRmtYQ0NLQmZqMF9zUFJDcWJuaWQtb3lLT1ZMRW9rSldJTjFB?oc=5"
         },
         {
           "name": "Northeastern Global News",
@@ -337,40 +401,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
-      "clusterId": "1vw2030",
-      "title": "Introducing Claude for Teachers",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
-      "dateISO": "2026-07-14T07:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
-        },
-        {
-          "name": "The Hill",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -698,32 +728,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "clusterId": "140ifcz",
-      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
-      "desc": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
-      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
-      "dateISO": "2026-08-26T10:00:00.000Z",
-      "date": "AUG 26 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42R0NZbVlVSHl5WnhDQkFkTkVnN2pSMW5RQ3cxUDJNVWl4cVp3U1VFNVg0OVpzUmpjcnZ0aTN6WXIwY2YtaVdodENnSmdjanJMY21LM0ItOURxSFhsQ185UmdjejNzQTNRMDZiZUJpSjEwdVE?oc=5",
       "clusterId": "sgv7zy",
       "title": "How Claude's values vary by model and language",
@@ -758,29 +762,29 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
-      "clusterId": "1d2nm5q",
-      "title": "OpenAI loses a top data center exec as stream of high-profile departures continues",
-      "desc": "In a statement to TechCrunch about Malone's departure, OpenAI said it had \"recently reorganized\" its \"infrastructure organization to support the scale and pace of our work.\"",
-      "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
-      "dateISO": "2026-08-26T00:06:20.000Z",
+      "id": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "clusterId": "140ifcz",
+      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
+      "desc": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
+      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "dateISO": "2026-08-26T10:00:00.000Z",
       "date": "AUG 26 2026",
-      "category": "orggov",
-      "catConfidence": 0.4,
-      "family": "market",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
       "significance": 47,
       "impact": "notable",
-      "verification": "single",
+      "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "OpenAI",
       "entityIds": [
-        "gpt"
+        "chatgpt"
       ]
     },
     {
@@ -832,6 +836,32 @@
       ],
       "sourceName": "Wired",
       "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
+      "clusterId": "1d2nm5q",
+      "title": "OpenAI loses a top data center exec as stream of high-profile departures continues",
+      "desc": "In a statement to TechCrunch about Malone's departure, OpenAI said it had \"recently reorganized\" its \"infrastructure organization to support the scale and pace of our work.\"",
+      "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/",
+      "dateISO": "2026-08-26T00:06:20.000Z",
+      "date": "AUG 26 2026",
+      "category": "orggov",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/25/openai-loses-a-top-data-center-exec-as-stream-of-high-profile-departures-continues/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
     },
     {
       "id": "https://openai.com/index/introducing-ai-futures",
@@ -1090,7 +1120,7 @@
       "sourceCount": 5,
       "sources": [
         {
-          "name": "Cyber Security Dive",
+          "name": "Cybersecurity Dive",
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
         },
         {
@@ -1194,58 +1224,31 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "clusterId": "q11r6f",
-      "title": "Alibaba to ban employees from using Anthropic's coding tool, source says",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5",
-      "dateISO": "2026-07-04T07:00:00.000Z",
-      "date": "JUL 04 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1ozV1JIcjJDWWRCZGZZZEN0Z0p4dHVpMkw3eXBWMF9EMlJOemlKSEg1WVRjV2I5VklmMGFFT3FLblVuTEtKa3dYUXctSmpMS0tQdzJhbmhGTEVlRjhHSWdrUUlXZXJydTN2Q3JQTXRSWUVzVkh5TThmaEtVZURBMzdFTHFHaWI0UE43aUw1QS1vbXRoS3BmRUQ0bExHZ0hDQzRmc09kSkxlNUVDOGxNRXctN2dWWGwtX21DSnN3?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude",
-        "qwen"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
-      "category": "opensource",
-      "title": "OpenAI’s rogue AI model incident was worse than we thought",
-      "summary": "In July, an unreleased OpenAI model broke out of a restricted environment, figured out how to get access to the internet, allowed AI agents to talk to each other using a secret \"m…",
-      "significance": 69,
-      "impact": "notable",
-      "verification": "single",
-      "date": "AUG 26 2026",
-      "dateISO": "2026-08-26T21:36:06.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/985385/openais-rogue-ai-model-hugging-face-cybersecurity-incident-reports-metr",
+      "category": "adoption",
+      "title": "Expanding OpenAI’s presence in Brazil",
+      "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+      "significance": 70,
+      "impact": "high",
+      "verification": "official",
+      "date": "AUG 27 2026",
+      "dateISO": "2026-08-27T03:00:00.000Z",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/985385/openais-rogue-ai-model-hugging-face-cybersecurity-incident-reports-metr"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/expanding-our-presence-in-brazil"
         }
       ],
       "entityIds": [
         "gpt"
       ],
-      "whyItMatters": "If it holds up, open weights let anyone run and build on the model, widening who can compete."
+      "whyItMatters": "This is where model capability turns into real usage and revenue."
     },
     {
       "family": "market",
@@ -1299,8 +1302,8 @@
     "chatgpt": 28,
     "copilot": 2,
     "perplexity": 0,
-    "gpt": 76,
-    "claude": 65,
+    "gpt": 77,
+    "claude": 64,
     "gemini": 31,
     "grok": 1,
     "llama": 1,
@@ -1356,17 +1359,6 @@
           "impact": "emerging"
         },
         {
-          "h": "Introducing Claude for Teachers",
-          "d": "JUL 14 2026",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 3,
-          "verification": "official",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing a way to reflect on how you use Claude",
           "d": "JUL 09 2026",
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uQmgzMW5SUGNxN3VQLUJmU3YtcEhCVXpyUl9aOVRMVEFDZU94NGJyVS1yV1NUMGoyY2Fycm1iamhuNVBNUlFEQjd2djFiRGRXSmRiZW14akhXdS1XZlNB?oc=5",
@@ -1376,6 +1368,17 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
+        },
+        {
+          "h": "Introducing Claude Sonnet 5",
+          "d": "JUN 30 2026",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94UjQ1SEhHSWRtZUVlMlZDdHJBbDU1aEFlbzJpV3A1V19NVF9sLVNnbjlkSEcwMV9vZTBUZ0dGdUFybWhHRmRkUVlyVzFTdWo3aFlIaU5wbzlOZw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 4,
+          "verification": "official",
+          "impact": "notable"
         }
       ]
     },
@@ -1517,6 +1520,18 @@
       "sourceCount": 1
     },
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 27 2026",
+      "verification": "official",
+      "impact": "high",
+      "h": "Expanding OpenAI’s presence in Brazil",
+      "p": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 27 2026",
@@ -1574,18 +1589,6 @@
       "p": "The new deal with the infrastructure provider is the latest example of Anthropic's white-hot compute-gobbling streak.",
       "url": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "META",
-      "logoKey": "meta",
-      "date": "AUG 26 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "AI agents meant to replace Meta workers made “large-scale, disruptive actions”",
-      "p": "Report shows Meta's challenges replacing people with AI agents.",
-      "url": "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/",
-      "sourceName": "Ars Technica",
       "sourceCount": 1
     }
   ],
@@ -6346,14 +6349,14 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.08/hr",
-      "trend": "↑ 6% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$3.26 – $4.59/hr",
+      "trend": "↓ 4% vs 7d ago",
+      "trendClass": "trend-down",
       "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6386,11 +6389,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-27T10:45:25.141Z",
+    "updatedAt": "2026-08-27T11:00:31.884Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6482,16 +6485,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 876,
+        "rawStoryHits": 875,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.3424657534246575,
+        "storyCoverage": 0.34285714285714286,
         "estimatedRelevantDiscussions": 73,
         "isEstimated": true,
-        "rawCommentHits": 6460,
+        "rawCommentHits": 6458,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.04643962848297214,
+        "commentCoverage": 0.04645401052957572,
         "limited": false,
         "points": 369,
         "themes": [
@@ -6576,10 +6579,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 1218,
+        "rawCommentHits": 1217,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.24630541871921183,
+        "commentCoverage": 0.2465078060805259,
         "limited": false,
         "points": 216,
         "themes": [
@@ -6663,16 +6666,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 562,
+        "rawStoryHits": 563,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5338078291814946,
+        "storyCoverage": 0.5328596802841918,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 10287,
+        "rawCommentHits": 10288,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.029163021289005542,
+        "commentCoverage": 0.0291601866251944,
         "limited": false,
         "points": 277,
         "themes": [
@@ -6825,15 +6828,15 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 159,
-        "fetchedStoryCount": 159,
+        "fetchedStoryCount": 155,
         "validatedStoryCount": 22,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 22,
-        "isEstimated": false,
-        "rawCommentHits": 1335,
+        "storyCoverage": 0.9748427672955975,
+        "estimatedRelevantDiscussions": 23,
+        "isEstimated": true,
+        "rawCommentHits": 1334,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.2247191011235955,
+        "commentCoverage": 0.22488755622188905,
         "limited": false,
         "points": 1667,
         "themes": [
@@ -6897,8 +6900,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
-            "isEstimated": false
+            "discussions": 23,
+            "isEstimated": true
           }
         ]
       },
