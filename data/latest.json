@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-28T19:30:32.204Z",
+  "updatedAt": "2026-08-28T19:45:29.833Z",
   "build": {
-    "sha": "0e563cfcdf60faa305f5f0055b89394b281f50e2",
-    "shortSha": "0e563cf",
+    "sha": "7d0aadf59d6cf93f151927ff0fc29d9aa3d1d2f5",
+    "shortSha": "7d0aadf",
     "ref": "main",
-    "builtAt": "2026-08-28T19:30:47.408Z"
+    "builtAt": "2026-08-28T19:45:46.807Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,11 +12,12 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 49.8,
-    "estimatedDatasets": 4,
-    "buildSha": "0e563cf",
-    "lastSuccessfulUpdate": "2026-08-28T19:30:32.204Z"
+    "estimatedDatasets": 5,
+    "buildSha": "7d0aadf",
+    "lastSuccessfulUpdate": "2026-08-28T19:45:29.833Z"
   },
   "ticker": [
+    "AN ANTHROPIC RESEARCHER JUST GAVE US A PEEK AT SELF-IMPROVING AI",
     "ELON MUSK’S XAI USED CHILD PORN TO TRAIN GROK MODELS, LAWSUIT SAYS",
     "JENSEN HUANG SAYS NVIDIA ACHIEVED AGI, AGAIN — NOT THAT IT MATTERS",
     "OPENAI’S EXECUTIVE EXODUS HAS ONE BIG WINNER",
@@ -25,10 +26,35 @@
     "AMAZON JUST TRIPLED ITS ORDER OF NVIDIA CHIPS OVER ‘SURGING DEMAND’",
     "TRUMP BLACKLISTING OF \"WOKE\" ANTHROPIC DEEMED ILLEGAL BY FEDERAL JUDGE",
     "SUPPORTING THAILAND’S NEXT GENERATION OF AI STARTUPS",
-    "EXPANDING OPENAI’S PRESENCE IN BRAZIL",
     "META EXECUTIVE LEAVES FOR OPENAI AS THE SOCIAL MEDIA GIANT FACES GROWING SCRUTINY IN INDIA"
   ],
   "signals": [
+    {
+      "id": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+      "clusterId": "u9k5cu",
+      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "desc": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+      "dateISO": "2026-08-28T19:30:38.000Z",
+      "date": "AUG 28 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
+      ]
+    },
     {
       "id": "https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says/",
       "clusterId": "92e9vb",
@@ -74,7 +100,7 @@
       "category": "market",
       "catConfidence": 0.45,
       "family": "market",
-      "significance": 64,
+      "significance": 63,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -266,32 +292,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/expanding-our-presence-in-brazil",
-      "clusterId": "1psfy2j",
-      "title": "Expanding OpenAI’s presence in Brazil",
-      "desc": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
-      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
-      "dateISO": "2026-08-27T03:00:00.000Z",
-      "date": "AUG 27 2026",
-      "category": "adoption",
-      "catConfidence": 0.71,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/expanding-our-presence-in-brazil"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/",
       "clusterId": "1u6r0vu",
       "title": "Meta executive leaves for OpenAI as the social media giant faces growing scrutiny in India",
@@ -313,6 +313,32 @@
         }
       ],
       "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "clusterId": "1psfy2j",
+      "title": "Expanding OpenAI’s presence in Brazil",
+      "desc": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "dateISO": "2026-08-27T03:00:00.000Z",
+      "date": "AUG 27 2026",
+      "category": "adoption",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/expanding-our-presence-in-brazil"
+        }
+      ],
+      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -575,34 +601,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
-      "clusterId": "1ggwrv6",
-      "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
-      "desc": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
-      "url": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
-      "dateISO": "2026-08-27T23:16:45.000Z",
-      "date": "AUG 27 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt",
-        "claude",
-        "gemini"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/",
       "clusterId": "lfnyj2",
       "title": "Viral AI startup Instinct has raised $350M at a $2.5B valuation",
@@ -629,28 +627,30 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai",
-      "clusterId": "tq5uvx",
-      "title": "Google’s new AI transcription edits out your ‘ums’ and ‘ahs’",
-      "desc": "Google has updated Gemini Audio with new transcription capabilities that automatically detect specialized jargon and more than 85 languages. Gemini 3.5 Transcribe is a new addition to the Gemini family that follows the launch of 3.5 Live Translate, and comes as we're still waiting for Google to release the Gemini 3.5 Pro model that it […]",
-      "url": "https://www.theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai",
-      "dateISO": "2026-08-26T17:00:00.000Z",
-      "date": "AUG 26 2026",
-      "category": "product",
-      "catConfidence": 0.71,
+      "id": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
+      "clusterId": "1ggwrv6",
+      "title": "Anthropic and OpenAI are joining the AI stage at TechCrunch Disrupt 2026",
+      "desc": "At TechCrunch Disrupt 2026, the AI Stage is back to dig into the single hottest topic in the community for the past few years, presented by Google for Startups.",
+      "url": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/",
+      "dateISO": "2026-08-27T23:16:45.000Z",
+      "date": "AUG 27 2026",
+      "category": "general",
+      "catConfidence": 0.3,
       "family": "product",
-      "significance": 49,
+      "significance": 48,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/27/anthropic-and-openai-are-joining-the-ai-stage-at-techcrunch-disrupt-2026/"
         }
       ],
-      "sourceName": "The Verge",
+      "sourceName": "TechCrunch",
       "entityIds": [
+        "gpt",
+        "claude",
         "gemini"
       ]
     },
@@ -668,7 +668,7 @@
       "significance": 48,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 8,
+      "sourceCount": 7,
       "sources": [
         {
           "name": "Ars Technica",
@@ -689,10 +689,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/26/openai-releases-its-official-report-on-the-hugging-face-breach/"
         },
         {
           "name": "MIT Technology Review",
@@ -958,58 +954,6 @@
       ]
     },
     {
-      "id": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
-      "clusterId": "1rto48v",
-      "title": "Gemini Omni 1.1 Flash lets you build with more control",
-      "desc": "",
-      "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
-      "dateISO": "2026-08-27T16:11:32.000Z",
-      "date": "AUG 27 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
-      "clusterId": "mgioi4",
-      "title": "3 new ways to plan and book travel in Search",
-      "desc": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
-      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
-      "dateISO": "2026-08-27T16:00:00.000Z",
-      "date": "AUG 27 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google",
-          "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/"
-        }
-      ],
-      "sourceName": "Google",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/08/27/heres-all-the-times-ai-has-gone-rogue-and-hacked-other-companies/",
       "clusterId": "7umgh5",
       "title": "Here’s all the times AI has gone rogue and hacked other companies",
@@ -1061,6 +1005,58 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "clusterId": "1rto48v",
+      "title": "Gemini Omni 1.1 Flash lets you build with more control",
+      "desc": "",
+      "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "dateISO": "2026-08-27T16:11:32.000Z",
+      "date": "AUG 27 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "clusterId": "mgioi4",
+      "title": "3 new ways to plan and book travel in Search",
+      "desc": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+      "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "dateISO": "2026-08-27T16:00:00.000Z",
+      "date": "AUG 27 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -1262,23 +1258,23 @@
     {
       "family": "research",
       "category": "research",
-      "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-      "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
-      "significance": 61,
-      "impact": "notable",
-      "verification": "official",
-      "date": "AUG 27 2026",
-      "dateISO": "2026-08-27T09:00:00.000Z",
-      "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+      "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "summary": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "date": "AUG 28 2026",
+      "dateISO": "2026-08-28T19:30:38.000Z",
+      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/"
         }
       ],
       "entityIds": [
-        "chatgpt"
+        "claude"
       ],
       "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
     }
@@ -1289,7 +1285,7 @@
     "perplexity": 0,
     "gpt": 80,
     "claude": 72,
-    "gemini": 35,
+    "gemini": 34,
     "grok": 2,
     "llama": 1,
     "deepseek": 0,
@@ -1433,17 +1429,6 @@
       "logoKey": "google",
       "items": [
         {
-          "h": "Google’s new AI transcription edits out your ‘ums’ and ‘ahs’",
-          "d": "AUG 26 2026",
-          "url": "https://www.theverge.com/tech/985186/google-gemini-3-5-transcribe-audio-ai",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation…",
           "d": "AUG 11 2026",
           "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
@@ -1505,6 +1490,18 @@
       "sourceCount": 1
     },
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 28 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Trump’s EPA wants to let data centers hide their air pollution",
+      "p": "Just as new data centers face growing backlash from neighboring communities, the US Environmental Protection Agency (EPA) is about to make it harder for people to weigh in on any pollution those centers create. The EPA plans to toss out a federal rule requiri…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986176/data-center-pollution-epa-rule-change-air-permit",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "META",
       "logoKey": "meta",
       "date": "AUG 28 2026",
@@ -1563,18 +1560,6 @@
       "url": "https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/",
       "sourceName": "Wired",
       "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "AUG 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "A Judge Has Blocked the Pentagon’s Attempt to Blacklist Anthropic",
-      "p": "A federal judge has called the Department of Defense’s designation of Anthropic as a national security supply-chain risk “illegal and baseless.”",
-      "url": "https://www.wired.com/story/a-judge-has-blocked-the-pentagons-attempt-to-blacklist-anthropic/",
-      "sourceName": "Wired",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1629,6 +1614,17 @@
   ],
   "breakthroughs": [
     {
+      "field": "Reasoning",
+      "date": "AUG 28 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "An Anthropic researcher just gave us a peek at self-improving AI",
+      "p": "Given 10 benchmarks for specific misaligned behaviors, the automated systems were able to improve performance on every single one without degrading overall performance.",
+      "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "field": "Research",
       "date": "AUG 28 2026",
       "verification": "single",
@@ -1682,17 +1678,6 @@
       "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
       "sourceName": "Google",
       "sourceCount": 1
-    },
-    {
-      "field": "Research",
-      "date": "AUG 13 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "Bring your spreadsheet data to life with Sheets canvas",
-      "p": "Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.",
-      "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
-      "sourceName": "Google",
-      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1701,11 +1686,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 217.28,
-      "changePct": -4.693392906731102,
+      "price": 217.24,
+      "changePct": -4.710935360842123,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 149959242,
+      "volume": 154903927,
       "ohlc": [
         {
           "d": "05-28",
@@ -2159,23 +2144,23 @@
           "d": "08-28",
           "o": 227.3300018310547,
           "h": 229.25999450683594,
-          "l": 216.82000732421875,
-          "c": 217.27999877929688
+          "l": 216.80999755859375,
+          "c": 217.24000549316406
         }
       ],
-      "relVolume": 1.1986685407747397,
-      "marketCap": 5301632000000
+      "relVolume": 1.2381928693489048,
+      "marketCap": 5300656000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 513.23,
-      "changePct": 1.6176262126577194,
+      "price": 513.5,
+      "changePct": 1.671089075001846,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 20158839,
+      "volume": 20988648,
       "ohlc": [
         {
           "d": "05-28",
@@ -2630,22 +2615,22 @@
           "o": 505.3299865722656,
           "h": 517.780029296875,
           "l": 504.86749267578125,
-          "c": 513.22998046875
+          "c": 513.5
         }
       ],
-      "relVolume": 0.6701417534490934,
-      "marketCap": 3813298900000
+      "relVolume": 0.6977271544877068,
+      "marketCap": 3815305000000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 368.675,
-      "changePct": -0.771120387054285,
+      "price": 368.93,
+      "changePct": -0.7024858182466923,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 10609244,
+      "volume": 10989225,
       "ohlc": [
         {
           "d": "05-28",
@@ -3100,22 +3085,22 @@
           "o": 373.5199890136719,
           "h": 376.5899963378906,
           "l": 365.3512878417969,
-          "c": 368.67498779296875
+          "c": 368.92999267578125
         }
       ],
-      "relVolume": 0.541253302403341,
-      "marketCap": 1813881000000
+      "relVolume": 0.5606388468493472,
+      "marketCap": 1815135600000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 347.645,
-      "changePct": 2.0534258748036605,
+      "price": 347.515,
+      "changePct": 2.0152710626612382,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 13867221,
+      "volume": 15329291,
       "ohlc": [
         {
           "d": "05-28",
@@ -3570,22 +3555,22 @@
           "o": 340.7550048828125,
           "h": 349.1400146484375,
           "l": 340.2699890136719,
-          "c": 347.6449890136719
+          "c": 347.5150146484375
         }
       ],
-      "relVolume": 0.5447632535208501,
-      "marketCap": 4241269000000
+      "relVolume": 0.6021995639449235,
+      "marketCap": 4239683000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 266,
-      "changePct": 3.800823329119194,
+      "price": 266.16,
+      "changePct": 3.863261343640349,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 37325553,
+      "volume": 38477263,
       "ohlc": [
         {
           "d": "05-28",
@@ -4040,22 +4025,22 @@
           "o": 258.32000732421875,
           "h": 267.55999755859375,
           "l": 257.7799987792969,
-          "c": 266
+          "c": 266.1600036621094
         }
       ],
-      "relVolume": 0.8842747946564297,
-      "marketCap": 2846200000000
+      "relVolume": 0.9115598056448471,
+      "marketCap": 2847912000000.0005
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 577.21,
-      "changePct": 1.069873340556522,
+      "price": 575.799,
+      "changePct": 0.8228364473625993,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 11718505,
+      "volume": 11971095,
       "ohlc": [
         {
           "d": "05-28",
@@ -4510,22 +4495,22 @@
           "o": 571.9500122070312,
           "h": 589.1900024414062,
           "l": 571.0800170898438,
-          "c": 577.2100219726562
+          "c": 575.7991943359375
         }
       ],
-      "relVolume": 0.7129757453889468,
-      "marketCap": 1454569200000
+      "relVolume": 0.7283437930646354,
+      "marketCap": 1451013480000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 418.336,
-      "changePct": -2.0977710954461033,
+      "price": 418.388,
+      "changePct": 0.0001165887973457087,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6314552,
+      "volume": 6807952,
       "ohlc": [
         {
           "d": "05-28",
@@ -4980,22 +4965,22 @@
           "o": 427.489990234375,
           "h": 429.1199951171875,
           "l": 417.7900085449219,
-          "c": 418.3362121582031
+          "c": 418.38751220703125
         }
       ],
-      "relVolume": 0.6134271883612512,
-      "marketCap": 2171163840000
+      "relVolume": 0.6613585340430099,
+      "marketCap": 2171433720000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 469.26,
-      "changePct": -1.554535308152496,
+      "price": 470,
+      "changePct": -1.3992936916191359,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 10766127,
+      "volume": 11111383,
       "ohlc": [
         {
           "d": "05-28",
@@ -5450,22 +5435,22 @@
           "o": 472.5199890136719,
           "h": 478.75,
           "l": 465.4700012207031,
-          "c": 469.260009765625
+          "c": 470
         }
       ],
-      "relVolume": 0.4681436687533441,
-      "marketCap": 760201200000
+      "relVolume": 0.4831564408021138,
+      "marketCap": 761400000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 186.05,
-      "changePct": 0.06454600156190655,
+      "price": 186.6,
+      "changePct": 0.36035790573214455,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 18555477,
+      "volume": 19552474,
       "ohlc": [
         {
           "d": "05-28",
@@ -5920,22 +5905,22 @@
           "o": 184.94000244140625,
           "h": 188.3699951171875,
           "l": 184.3800048828125,
-          "c": 186.0500030517578
+          "c": 186.60000610351562
         }
       ],
-      "relVolume": 0.39239181244935967,
-      "marketCap": 446520000000
+      "relVolume": 0.41347526181779004,
+      "marketCap": 447840000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 151.6547,
-      "changePct": -0.18777730242610122,
+      "price": 150.9874,
+      "changePct": -0.6269620809959086,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 13108299,
+      "volume": 13602076,
       "ohlc": [
         {
           "d": "05-28",
@@ -6390,11 +6375,11 @@
           "o": 153.60000610351562,
           "h": 153.99000549316406,
           "l": 149.7100067138672,
-          "c": 151.65469360351562
+          "c": 150.98739624023438
         }
       ],
-      "relVolume": 0.5053147428419875,
-      "marketCap": 426149707000
+      "relVolume": 0.5243494625852805,
+      "marketCap": 424274594000
     }
   ],
   "compute": [
@@ -6409,18 +6394,18 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.59/hr",
-      "trend": "↑ 3% vs 7d ago",
+      "rate": "$3.59 – $5.01/hr",
+      "trend": "↑ 9% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $6.79/hr",
-      "trend": "↓ 4% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$5.63 – $7.51/hr",
+      "trend": "↑ 5% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6444,11 +6429,11 @@
       "rate": "$0.67 – $1.59/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-28T19:30:32.204Z",
+    "updatedAt": "2026-08-28T19:45:29.833Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6458,15 +6443,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 302,
-        "fetchedStoryCount": 282,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 37,
-        "storyCoverage": 0.9337748344370861,
-        "estimatedRelevantDiscussions": 41,
+        "storyCoverage": 0.9933774834437086,
+        "estimatedRelevantDiscussions": 38,
         "isEstimated": true,
-        "rawCommentHits": 2296,
+        "rawCommentHits": 2024,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.13066202090592335,
+        "commentCoverage": 0.1482213438735178,
         "limited": false,
         "points": 865,
         "themes": [
@@ -6525,7 +6510,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 40,
+            "discussions": 37,
             "isEstimated": true
           },
           {
@@ -6540,28 +6525,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 853,
+        "rawStoryHits": 854,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 23,
-        "storyCoverage": 0.3516998827667057,
-        "estimatedRelevantDiscussions": 68,
+        "storyCoverage": 0.351288056206089,
+        "estimatedRelevantDiscussions": 69,
         "isEstimated": true,
-        "rawCommentHits": 6514,
+        "rawCommentHits": 6517,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.0460546515198035,
+        "commentCoverage": 0.04603345097437471,
         "limited": false,
         "points": 139,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 17
+            "count": 18
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 15
           },
           {
             "id": "writing",
@@ -6608,7 +6593,7 @@
           },
           {
             "name": "Anthropic GitHub",
-            "discussions": 3,
+            "discussions": 4,
             "isEstimated": false
           }
         ]
@@ -6644,7 +6629,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 7
+            "count": 8
           },
           {
             "id": "speed",
@@ -6711,16 +6696,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 551,
+        "rawStoryHits": 552,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5444646098003629,
+        "storyCoverage": 0.5434782608695652,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 10315,
+        "rawCommentHits": 10318,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 24,
-        "commentCoverage": 0.029083858458555503,
+        "commentCoverage": 0.029075402209730566,
         "limited": false,
         "points": 284,
         "themes": [
@@ -6872,12 +6857,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 156,
-        "fetchedStoryCount": 156,
+        "rawStoryHits": 155,
+        "fetchedStoryCount": 151,
         "validatedStoryCount": 22,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 22,
-        "isEstimated": false,
+        "storyCoverage": 0.9741935483870968,
+        "estimatedRelevantDiscussions": 23,
+        "isEstimated": true,
         "rawCommentHits": 1329,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
@@ -6935,8 +6920,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
-            "isEstimated": false
+            "discussions": 23,
+            "isEstimated": true
           }
         ]
       },
@@ -6945,8 +6930,8 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 254,
-        "fetchedStoryCount": 254,
+        "rawStoryHits": 253,
+        "fetchedStoryCount": 253,
         "validatedStoryCount": 11,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
@@ -7103,11 +7088,11 @@
           "coding",
           "reasoning"
         ],
-        "excerpt": "I built Pragma as a set of Claude Code slash commands that take an iOS feature from idea to a merged, tagged release, with human approval at exactly two points: after the spec and…",
+        "excerpt": "I open-sourced something today: morning-qa, the QA framework that's been watching my SaaS in production every morning since May. It's a scheduled Claude Code agent that runs a…",
         "source": "Anthropic GitHub",
-        "author": "akshaypimprikar",
-        "publishedAt": "2026-08-19T18:11:47.000Z",
-        "url": "https://github.com/anthropics/claude-code-action/discussions/1699"
+        "author": "PecanStreetAI",
+        "publishedAt": "2026-08-28T19:44:09.000Z",
+        "url": "https://github.com/anthropics/claude-code-action/discussions/1746"
       },
       {
         "modelId": "claude",
@@ -7127,11 +7112,11 @@
           "coding",
           "reasoning"
         ],
-        "excerpt": "I run Claude unattended on a schedule — in my case from a local scheduler that shells out to claude -p, but I think anyone driving this from a schedule: trigger in Actions ends up…",
+        "excerpt": "I built Pragma as a set of Claude Code slash commands that take an iOS feature from idea to a merged, tagged release, with human approval at exactly two points: after the spec and…",
         "source": "Anthropic GitHub",
-        "author": "noagogo",
-        "publishedAt": "2026-08-17T07:05:06.000Z",
-        "url": "https://github.com/anthropics/claude-code-action/discussions/1686"
+        "author": "akshaypimprikar",
+        "publishedAt": "2026-08-19T18:11:47.000Z",
+        "url": "https://github.com/anthropics/claude-code-action/discussions/1699"
       },
       {
         "modelId": "claude",
@@ -7172,13 +7157,13 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding"
+          "price"
         ],
-        "excerpt": "…ogle.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview Gemini 3.1 Flash Live guide ). If you still face issues, let us know. A Python script that can help us reproduce the…",
+        "excerpt": "The implicit cache situation just got worst these 2 weeks on release of gemini 3.7 flash which works really nicely with my app except it now cost more than 2x as much because…",
         "source": "Google AI forum",
-        "author": "Pooja_Kapse",
-        "publishedAt": "2026-08-28T11:02:15.069Z",
-        "url": "https://discuss.ai.google.dev/t/live-api-bidigeneratecontent-hard-closures-severe-latency-content-type-audio-error-close-code-1007/179817"
+        "author": "Mathew",
+        "publishedAt": "2026-08-28T19:32:53.140Z",
+        "url": "https://discuss.ai.google.dev/t/has-anyone-gotten-implicit-caching-to-work/142699"
       },
       {
         "modelId": "gemini",
@@ -7207,14 +7192,13 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding",
-          "price"
+          "coding"
         ],
-        "excerpt": "…5,000 free search requests per month (shared across all Gemini 3.x models), additional requests can be purchased at a rate of $14 per 1,000…",
+        "excerpt": "…ogle.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview Gemini 3.1 Flash Live guide ). If you still face issues, let us know. A Python script that can help us reproduce the…",
         "source": "Google AI forum",
         "author": "Pooja_Kapse",
-        "publishedAt": "2026-08-28T10:55:17.402Z",
-        "url": "https://discuss.ai.google.dev/t/429-resource-exhausted-on-gemini-3-standard-api-search-grounding-after-monthly-free-tier-exhausted-pay-as-you-go-billing-not-activating-tier-3/167290"
+        "publishedAt": "2026-08-28T11:02:15.069Z",
+        "url": "https://discuss.ai.google.dev/t/live-api-bidigeneratecontent-hard-closures-severe-latency-content-type-audio-error-close-code-1007/179817"
       },
       {
         "modelId": "gemini",
