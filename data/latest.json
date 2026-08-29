@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-29T18:30:26.986Z",
+  "updatedAt": "2026-08-29T18:45:21.316Z",
   "build": {
-    "sha": "881023508710bab476f9805e17353336a9ee1ca7",
-    "shortSha": "8810235",
+    "sha": "f4baf432a89f37fc480ebfcbd56b3a37a781b72d",
+    "shortSha": "f4baf43",
     "ref": "main",
-    "builtAt": "2026-08-29T18:30:44.140Z"
+    "builtAt": "2026-08-29T18:45:38.901Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,12 +12,13 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 50.8,
-    "estimatedDatasets": 5,
-    "buildSha": "8810235",
-    "lastSuccessfulUpdate": "2026-08-29T18:30:26.986Z"
+    "estimatedDatasets": 4,
+    "buildSha": "f4baf43",
+    "lastSuccessfulUpdate": "2026-08-29T18:45:21.316Z"
   },
   "ticker": [
     "SONY MUSIC AND WARNER CHAPPELL ARE SUING ANTHROPIC",
+    "NVIDIA’S AI ADVANTAGE IS MOVING BEYOND THE GPU",
     "NEOCLOUD LAMBDA SECURES $1B IN DEBT TO BUY MORE CHIPS",
     "BUILD A SHAREABLE SITE",
     "AN ANTHROPIC RESEARCHER JUST GAVE US A PEEK AT SELF-IMPROVING AI",
@@ -25,7 +26,6 @@
     "OUR DECISION ON CURSOR FOLLOWING ITS ACQUISITION BY SPACEX",
     "HOW CLAUDE PERFORMS ON ROBOTICS TASKS",
     "“WE’RE NOT DOING 30 BETS A YEAR”: VIJAY PANDE ON BETTING SMALL AFTER RUNNING $4 BILLION AT A16Z",
-    "AMAZON JUST TRIPLED ITS ORDER OF NVIDIA CHIPS OVER ‘SURGING DEMAND’",
     "JENSEN HUANG SAYS NVIDIA ACHIEVED AGI, AGAIN — NOT THAT IT MATTERS"
   ],
   "signals": [
@@ -40,11 +40,15 @@
       "category": "policy",
       "catConfidence": 0.8,
       "family": "market",
-      "significance": 78,
+      "significance": 84,
       "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
+        },
         {
           "name": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
@@ -53,6 +57,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "clusterId": "1p7lmp6",
+      "title": "Nvidia’s AI advantage is moving beyond the GPU",
+      "desc": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "dateISO": "2026-08-29T13:00:00.000Z",
+      "date": "AUG 29 2026",
+      "category": "compute",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
       ]
     },
     {
@@ -66,7 +96,7 @@
       "category": "capital",
       "catConfidence": 0.78,
       "family": "market",
-      "significance": 68,
+      "significance": 67,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -145,7 +175,7 @@
       "category": "policy",
       "catConfidence": 0.71,
       "family": "market",
-      "significance": 62,
+      "significance": 61,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 3,
@@ -179,7 +209,7 @@
       "category": "capital",
       "catConfidence": 0.71,
       "family": "market",
-      "significance": 60,
+      "significance": 59,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -255,36 +285,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
-      "clusterId": "1q58fa8",
-      "title": "Amazon just tripled its order of Nvidia chips over ‘surging demand’",
-      "desc": "Amazon is adding another 2 million Nvidia GPU chips to its data centers over the next two years. But this extended partnerships stretches beyond buying more chips.",
-      "url": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
-      "dateISO": "2026-08-26T23:47:18.000Z",
-      "date": "AUG 26 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "nvidia"
-      ]
     },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi",
@@ -381,32 +381,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
-      "clusterId": "k4t5qv",
-      "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
-      "desc": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
-      "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
-      "dateISO": "2026-08-27T09:00:00.000Z",
-      "date": "AUG 27 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/nvidia/chatgpt-work",
       "clusterId": "kw1uc",
       "title": "How NVIDIA scales expertise with ChatGPT Work",
@@ -465,6 +439,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+      "clusterId": "k4t5qv",
+      "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+      "desc": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
+      "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+      "dateISO": "2026-08-27T09:00:00.000Z",
+      "date": "AUG 27 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
       ]
     },
     {
@@ -1237,14 +1237,18 @@
       "category": "policy",
       "title": "Sony Music and Warner Chappell are suing Anthropic",
       "summary": "Sony Music and Warner Chappell have filed suit against Anthropic in the US District Court for the Northern District of California seeking damages for \"tens of thousands\" copyright…",
-      "significance": 78,
+      "significance": 84,
       "impact": "high",
-      "verification": "single",
+      "verification": "corroborated",
       "date": "AUG 29 2026",
       "dateISO": "2026-08-29T18:19:53.000Z",
       "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
-      "sourceCount": 1,
+      "sourceCount": 2,
       "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
+        },
         {
           "name": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
@@ -1469,13 +1473,13 @@
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "AUG 29 2026",
-      "verification": "single",
+      "verification": "corroborated",
       "impact": "high",
       "h": "Sony Music and Warner Chappell are suing Anthropic",
       "p": "Sony Music and Warner Chappell have filed suit against Anthropic in the US District Court for the Northern District of California seeking damages for \"tens of thousands\" copyrighted works. The companies are asking for up to $150,000 per work, plus up to $25,0…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
       "sourceName": "The Verge",
-      "sourceCount": 1
+      "sourceCount": 2
     },
     {
       "org": "AI WIRE",
@@ -1492,14 +1496,14 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
-      "date": "AUG 26 2026",
-      "verification": "corroborated",
-      "impact": "notable",
-      "h": "Amazon just tripled its order of Nvidia chips over ‘surging demand’",
-      "p": "Amazon is adding another 2 million Nvidia GPU chips to its data centers over the next two years. But this extended partnerships stretches beyond buying more chips.",
-      "url": "https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/",
+      "date": "AUG 29 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Nvidia’s AI advantage is moving beyond the GPU",
+      "p": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
       "sourceName": "TechCrunch",
-      "sourceCount": 2
+      "sourceCount": 1
     },
     {
       "org": "AI WIRE",
@@ -6242,10 +6246,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.14 – $4.59/hr",
+      "rate": "$3.13 – $4.59/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6253,15 +6257,15 @@
       "rate": "$5.98 – $7.51/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $9.69/hr",
-      "trend": "↑ 12% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $7.89/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6277,11 +6281,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-29T18:30:26.986Z",
+    "updatedAt": "2026-08-29T18:45:21.316Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6290,16 +6294,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 299,
-        "fetchedStoryCount": 299,
+        "rawStoryHits": 298,
+        "fetchedStoryCount": 298,
         "validatedStoryCount": 37,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 38,
         "isEstimated": true,
-        "rawCommentHits": 2254,
+        "rawCommentHits": 2252,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.13309671694764863,
+        "commentCoverage": 0.13321492007104796,
         "limited": false,
         "points": 864,
         "themes": [
@@ -6373,10 +6377,10 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 831,
+        "rawStoryHits": 833,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.36101083032490977,
+        "storyCoverage": 0.36014405762304924,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
         "rawCommentHits": 6441,
@@ -6452,9 +6456,9 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 117,
-        "fetchedStoryCount": 116,
+        "fetchedStoryCount": 117,
         "validatedStoryCount": 12,
-        "storyCoverage": 0.9914529914529915,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
         "rawCommentHits": 1234,
@@ -6520,7 +6524,7 @@
           {
             "name": "Hacker News",
             "discussions": 12,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6539,10 +6543,10 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 554,
+        "rawStoryHits": 555,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 15,
-        "storyCoverage": 0.5415162454873647,
+        "storyCoverage": 0.5405405405405406,
         "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
         "rawCommentHits": 10378,
@@ -6700,16 +6704,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 159,
-        "fetchedStoryCount": 154,
+        "rawStoryHits": 152,
+        "fetchedStoryCount": 152,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.9685534591194969,
-        "estimatedRelevantDiscussions": 23,
-        "isEstimated": true,
-        "rawCommentHits": 1321,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": false,
+        "rawCommentHits": 1281,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.22710068130204392,
+        "commentCoverage": 0.234192037470726,
         "limited": false,
         "points": 1499,
         "themes": [
@@ -6763,8 +6767,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 23,
-            "isEstimated": true
+            "discussions": 22,
+            "isEstimated": false
           }
         ]
       },
@@ -6779,10 +6783,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4913,
+        "rawCommentHits": 4910,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.061062487278648485,
+        "commentCoverage": 0.06109979633401222,
         "limited": false,
         "points": 515,
         "themes": [
