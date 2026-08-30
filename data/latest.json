@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-30T14:00:29.105Z",
+  "updatedAt": "2026-08-30T14:15:19.534Z",
   "build": {
-    "sha": "6c54b5b8f9ebb602abd092d7a4e8fe8ae7d52c8e",
-    "shortSha": "6c54b5b",
+    "sha": "9a035064672f23c0f6c53be688573ed133bb464a",
+    "shortSha": "9a03506",
     "ref": "main",
-    "builtAt": "2026-08-30T14:00:50.880Z"
+    "builtAt": "2026-08-30T14:15:33.537Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,10 +13,11 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 51.6,
     "estimatedDatasets": 4,
-    "buildSha": "6c54b5b",
-    "lastSuccessfulUpdate": "2026-08-30T14:00:29.105Z"
+    "buildSha": "9a03506",
+    "lastSuccessfulUpdate": "2026-08-30T14:15:19.534Z"
   },
   "ticker": [
+    "SONY MUSIC PUBLISHING AND WARNER CHAPPELL ARE SUING ANTHROPIC",
     "NVIDIA’S AI ADVANTAGE IS MOVING BEYOND THE GPU",
     "ELON MUSK’S XAI USED CHILD PORN TO TRAIN GROK MODELS, LAWSUIT SAYS",
     "NEOCLOUD LAMBDA SECURES $1B IN DEBT TO BUY MORE CHIPS",
@@ -25,10 +26,35 @@
     "HOW CLAUDE PERFORMS ON ROBOTICS TASKS",
     "INTRODUCING CLAUDE FOR TEACHERS",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
-    "OUR DECISION ON CURSOR FOLLOWING ITS ACQUISITION BY SPACEX",
-    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK"
+    "OUR DECISION ON CURSOR FOLLOWING ITS ACQUISITION BY SPACEX"
   ],
   "signals": [
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
+      "clusterId": "1diuxb8",
+      "title": "Sony Music Publishing and Warner Chappell are suing Anthropic",
+      "desc": "Sony Music Publishing and Warner Chappell have filed suit against Anthropic in the US District Court for the Northern District of California seeking damages for \"tens of thousands\" copyrighted works. The companies are asking for up to $150,000 per work, plus up to $25,000 for each instance when identifiable copyright data was stripped. In total, […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
+      "dateISO": "2026-08-29T18:19:53.000Z",
+      "date": "AUG 29 2026",
+      "category": "policy",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 68,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
+      ]
+    },
     {
       "id": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
       "clusterId": "1p7lmp6",
@@ -69,15 +95,11 @@
       "significance": 58,
       "impact": "notable",
       "verification": "corroborated",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
         },
         {
           "name": "Music Business Worldwide",
@@ -429,30 +451,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/",
-      "clusterId": "1z6119",
-      "title": "Why the Hottest New Wearables Want to Be Ignored",
-      "desc": "Burnt out on wrist buzzes and notification overload? A new crop of minimalist wearables promises to collect your health data without demanding your attention.",
-      "url": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/",
-      "dateISO": "2026-08-30T10:30:00.000Z",
-      "date": "AUG 30 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": []
-    },
-    {
       "id": "https://openai.com/index/introducing-intelligence-age",
       "clusterId": "rxzxqx",
       "title": "Introducing Intelligence Age",
@@ -481,6 +479,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/",
+      "clusterId": "1z6119",
+      "title": "Why the Hottest New Wearables Want to Be Ignored",
+      "desc": "Burnt out on wrist buzzes and notification overload? A new crop of minimalist wearables promises to collect your health data without demanding your attention.",
+      "url": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/",
+      "dateISO": "2026-08-30T10:30:00.000Z",
+      "date": "AUG 30 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": []
     },
     {
       "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
@@ -1189,32 +1211,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "clusterId": "fvmzh5",
-      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-      "desc": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "dateISO": "2026-08-21T11:59:48.000Z",
-      "date": "AUG 21 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
     }
   ],
   "waves": [
@@ -1243,26 +1239,26 @@
     },
     {
       "family": "market",
-      "category": "compute",
-      "title": "Nvidia’s AI advantage is moving beyond the GPU",
-      "summary": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
-      "significance": 66,
+      "category": "policy",
+      "title": "Sony Music Publishing and Warner Chappell are suing Anthropic",
+      "summary": "Sony Music Publishing and Warner Chappell have filed suit against Anthropic in the US District Court for the Northern District of California seeking damages for \"tens of thousands…",
+      "significance": 68,
       "impact": "notable",
       "verification": "single",
       "date": "AUG 29 2026",
-      "dateISO": "2026-08-29T13:00:00.000Z",
-      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "dateISO": "2026-08-29T18:19:53.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
         }
       ],
       "entityIds": [
-        "nvidia"
+        "claude"
       ],
-      "whyItMatters": "If it holds up, compute supply and cost set the ceiling on how large — and how cheap — the next models can be."
+      "whyItMatters": "However it resolves, the case could set a precedent for how models may be built, trained or licensed."
     },
     {
       "family": "research",
@@ -1293,7 +1289,7 @@
     "copilot": 1,
     "perplexity": 0,
     "gpt": 76,
-    "claude": 74,
+    "claude": 75,
     "gemini": 30,
     "grok": 2,
     "llama": 1,
@@ -1520,7 +1516,19 @@
       "p": "xAI accused of training Grok on real and AI-generated child pornography.",
       "url": "https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says/",
       "sourceName": "Ars Technica",
-      "sourceCount": 6
+      "sourceCount": 5
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "AUG 29 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Sony Music Publishing and Warner Chappell are suing Anthropic",
+      "p": "Sony Music Publishing and Warner Chappell have filed suit against Anthropic in the US District Court for the Northern District of California seeking damages for \"tens of thousands\" copyrighted works. The companies are asking for up to $150,000 per work, plus…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
+      "sourceName": "The Verge",
+      "sourceCount": 1
     },
     {
       "org": "AI WIRE",
@@ -1556,18 +1564,6 @@
       "p": "As audio-focused generative tools and platforms have gotten more sophisticated, the internet has become increasingly filled with AI-generated music whose melodies and vocals are algorithmically derived from the work of human artists. While some of the people…",
       "url": "https://www.theverge.com/entertainment/985866/h4rris-nihil-young-edm-suno-ai",
       "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 29 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "The Cybersecurity Apocalypse Is Coming in ‘Months,’ AI Giants Warn",
-      "p": "Plus: Hackers target over 100 US water systems, ICE puts in an order for robot dogs, and you’ll never guess what “MrChildPorn” was arrested for.",
-      "url": "https://www.wired.com/story/security-news-this-week-the-cybersecurity-apocalypse-is-coming-in-months-ai-giants-warn/",
-      "sourceName": "Wired",
       "sourceCount": 1
     }
   ],
@@ -6316,23 +6312,23 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.62/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$3.59 – $4.67/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $7.51/hr",
-      "trend": "↑ 6% vs 7d ago",
+      "rate": "$5.75 – $7.51/hr",
+      "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6360,7 +6356,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-08-30T14:00:29.105Z",
+    "updatedAt": "2026-08-30T14:15:19.534Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6369,8 +6365,8 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 217,
-        "fetchedStoryCount": 217,
+        "rawStoryHits": 293,
+        "fetchedStoryCount": 293,
         "validatedStoryCount": 35,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 35,
@@ -6452,16 +6448,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 828,
+        "rawStoryHits": 827,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.36231884057971014,
+        "storyCoverage": 0.36275695284159615,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 6352,
+        "rawCommentHits": 6354,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 16,
-        "commentCoverage": 0.04722921914357683,
+        "validatedCommentCount": 17,
+        "commentCoverage": 0.047214353163361665,
         "limited": false,
         "points": 129,
         "themes": [
@@ -6536,9 +6532,9 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 109,
-        "fetchedStoryCount": 108,
+        "fetchedStoryCount": 109,
         "validatedStoryCount": 11,
-        "storyCoverage": 0.9908256880733946,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": true,
         "rawCommentHits": 1210,
@@ -6604,7 +6600,7 @@
           {
             "name": "Hacker News",
             "discussions": 11,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6623,16 +6619,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 558,
+        "rawStoryHits": 557,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 15,
-        "storyCoverage": 0.5376344086021505,
+        "storyCoverage": 0.5385996409335727,
         "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
-        "rawCommentHits": 10354,
+        "rawCommentHits": 10355,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 20,
-        "commentCoverage": 0.02897430944562488,
+        "commentCoverage": 0.028971511347175277,
         "limited": false,
         "points": 116,
         "themes": [
@@ -6790,10 +6786,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": false,
-        "rawCommentHits": 1229,
+        "rawCommentHits": 1227,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
-        "commentCoverage": 0.24410089503661514,
+        "commentCoverage": 0.24449877750611246,
         "limited": false,
         "points": 1501,
         "themes": [
@@ -6868,10 +6864,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4880,
+        "rawCommentHits": 4879,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.06147540983606557,
+        "commentCoverage": 0.06148800983808157,
         "limited": false,
         "points": 515,
         "themes": [
