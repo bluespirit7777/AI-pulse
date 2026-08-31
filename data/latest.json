@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-31T04:00:30.485Z",
+  "updatedAt": "2026-08-31T04:15:22.097Z",
   "build": {
-    "sha": "194bb131abe823226c6690482108acb7bdf4ad16",
-    "shortSha": "194bb13",
+    "sha": "3d31f3c2a3d9c1e1730e2bb4c78ae48bcf4d68ba",
+    "shortSha": "3d31f3c",
     "ref": "main",
-    "builtAt": "2026-08-31T04:00:54.830Z"
+    "builtAt": "2026-08-31T04:15:40.118Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 52.2,
     "estimatedDatasets": 5,
-    "buildSha": "194bb13",
-    "lastSuccessfulUpdate": "2026-08-31T04:00:30.485Z"
+    "buildSha": "3d31f3c",
+    "lastSuccessfulUpdate": "2026-08-31T04:15:22.097Z"
   },
   "ticker": [
     "SONY MUSIC PUBLISHING AND WARNER CHAPPELL ARE SUING ANTHROPIC",
@@ -6329,18 +6329,18 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.59/hr",
-      "trend": "↑ 3% vs 7d ago",
+      "rate": "$3.59 – $4.75/hr",
+      "trend": "↑ 5% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.88 – $7.51/hr",
-      "trend": "↓ 9% vs 7d ago",
+      "rate": "$5.63 – $7.51/hr",
+      "trend": "↓ 11% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6361,14 +6361,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$1.19 – $1.59/hr",
+      "trend": "↑ 7% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-31T04:00:30.485Z",
+    "updatedAt": "2026-08-31T04:15:22.097Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6383,10 +6383,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 35,
         "isEstimated": true,
-        "rawCommentHits": 2246,
+        "rawCommentHits": 2247,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.13357079252003562,
+        "commentCoverage": 0.13351134846461948,
         "limited": false,
         "points": 722,
         "themes": [
@@ -6465,16 +6465,16 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 823,
+        "rawStoryHits": 824,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.3645200486026732,
+        "storyCoverage": 0.3640776699029126,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 6358,
+        "rawCommentHits": 6359,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 24,
-        "commentCoverage": 0.04718464926077383,
+        "commentCoverage": 0.04717722912407611,
         "limited": false,
         "points": 129,
         "themes": [
@@ -6559,10 +6559,10 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 108,
-        "fetchedStoryCount": 108,
+        "fetchedStoryCount": 107,
         "validatedStoryCount": 11,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 16,
+        "storyCoverage": 0.9907407407407407,
+        "estimatedRelevantDiscussions": 14,
         "isEstimated": true,
         "rawCommentHits": 1204,
         "fetchedCommentCount": 300,
@@ -6610,6 +6610,11 @@
             "id": "context",
             "label": "Context limits",
             "count": 1
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 1
           }
         ],
         "topThreads": [
@@ -6632,11 +6637,11 @@
           {
             "name": "Hacker News",
             "discussions": 11,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
-            "discussions": 3,
+            "discussions": 1,
             "isEstimated": true
           },
           {
@@ -6657,10 +6662,10 @@
         "storyCoverage": 0.546448087431694,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 10283,
+        "rawCommentHits": 10282,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 19,
-        "commentCoverage": 0.0291743654575513,
+        "commentCoverage": 0.02917720287881735,
         "limited": false,
         "points": 116,
         "themes": [
@@ -6813,9 +6818,9 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 144,
-        "fetchedStoryCount": 137,
+        "fetchedStoryCount": 139,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.9513888888888888,
+        "storyCoverage": 0.9652777777777778,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
         "rawCommentHits": 1175,
@@ -6896,10 +6901,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4859,
+        "rawCommentHits": 4860,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.06174109899156205,
+        "commentCoverage": 0.06172839506172839,
         "limited": false,
         "points": 515,
         "themes": [
@@ -7090,13 +7095,13 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding"
+          "multimodal"
         ],
-        "excerpt": "The Truth Google officially launched https://antigravity.google/ Antigravity Extensions across https://code.visualstudio.com/ Visual Studio Code ,…",
+        "excerpt": "Hello, I would like to report a possible issue with Omni 1.1 video generation. Before the Omni 1.1 update, I was able to successfully generate videos through Gemini Enterprise…",
         "source": "Google AI forum",
-        "author": "DakerTT",
-        "publishedAt": "2026-08-30T13:32:32.070Z",
-        "url": "https://discuss.ai.google.dev/t/antigravitys-strategic-pivot-and-the-erosion-of-developer-trust/180101"
+        "author": "Toshiyuki_Imakita",
+        "publishedAt": "2026-08-31T04:04:28.327Z",
+        "url": "https://discuss.ai.google.dev/t/bug-omni-1-1-video-generation-fails-on-agent-platform-with-agentplatform-quota-exhausted-while-omni-1-0-previously-worked/180162"
       },
       {
         "modelId": "gemini",
@@ -7120,6 +7125,17 @@
         "author": "simonw",
         "publishedAt": "2026-08-30T13:41:04.000Z",
         "url": "https://news.ycombinator.com/item?id=49498594"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "The Truth Google officially launched https://antigravity.google/ Antigravity Extensions across https://code.visualstudio.com/ Visual Studio Code ,…",
+        "source": "Google AI forum",
+        "author": "DakerTT",
+        "publishedAt": "2026-08-30T13:32:32.070Z",
+        "url": "https://discuss.ai.google.dev/t/antigravitys-strategic-pivot-and-the-erosion-of-developer-trust/180101"
       },
       {
         "modelId": "gemini",
