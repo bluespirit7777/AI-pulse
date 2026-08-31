@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-31T15:45:29.221Z",
+  "updatedAt": "2026-08-31T16:00:34.659Z",
   "build": {
-    "sha": "c9dcaa71370c4bda778c8cacf32a4d0816cd3394",
-    "shortSha": "c9dcaa7",
+    "sha": "8190140e95ab99f924b35b5593f2682489d531d6",
+    "shortSha": "8190140",
     "ref": "main",
-    "builtAt": "2026-08-31T15:45:46.738Z"
+    "builtAt": "2026-08-31T16:01:06.181Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 52.7,
     "estimatedDatasets": 4,
-    "buildSha": "c9dcaa7",
-    "lastSuccessfulUpdate": "2026-08-31T15:45:29.221Z"
+    "buildSha": "8190140",
+    "lastSuccessfulUpdate": "2026-08-31T16:00:34.659Z"
   },
   "ticker": [
     "CHATGPT AND REDDIT NOW FACE EU'S TOUGHEST ONLINE SAFETY RULES",
     "CHATGPT TO FACE TOUGHER REGULATION IN THE EU",
     "ANTHROPIC SUED OVER ALLEGED THEFT OF ‘TENS OF THOUSANDS’ OF SONGS",
     "NVIDIA’S $3.5B MEDIATEK BET REVEALS ITS PLAN FOR TACKLING BIG TECH’S AI CHIP BUILDOUT",
+    "SALES WORKFLOWS WITH CHATGPT WORK",
     "A MILESTONE IN EXPANDING ACCESS TO AI",
     "SONY MUSIC PUBLISHING AND WARNER CHAPPELL ARE SUING ANTHROPIC",
+    "DEBIAN WON’T BAN AI CODE FROM ITS LINUX DISTRIBUTION",
     "ELON MUSK’S XAI USED CHILD PORN TO TRAIN GROK MODELS, LAWSUIT SAYS",
-    "NVIDIA’S AI ADVANTAGE IS MOVING BEYOND THE GPU",
-    "HOW CLAUDE PERFORMS ON ROBOTICS TASKS",
-    "INTRODUCING CLAUDE FOR TEACHERS"
+    "HOW CLAUDE PERFORMS ON ROBOTICS TASKS"
   ],
   "signals": [
     {
@@ -135,6 +135,48 @@
       ]
     },
     {
+      "id": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex",
+      "clusterId": "ziq1cn",
+      "title": "Sales workflows with ChatGPT Work",
+      "desc": "Learn practical ChatGPT Work workflows for pipeline briefs, meeting prep, account plans, forecast reviews, and deal diagnosis.",
+      "url": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex",
+      "dateISO": "2026-07-14T00:00:00.000Z",
+      "date": "JUL 14 2026",
+      "category": "market",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 61,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 5,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/zapier"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/learn-teach-chatgpt-work-codex"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
       "clusterId": "1ttwiu7",
       "title": "A milestone in expanding access to AI",
@@ -187,6 +229,30 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+      "clusterId": "6sewth",
+      "title": "Debian won’t ban AI code from its Linux distribution",
+      "desc": "Debian voted to allow developers to use AI tools in their contributions to the Linux distribution's \"development, maintenance, [and] documentation.\" The new policy on AI acknowledges that \"responsible\" use of AI can improve developers' productivity, and goes on to say, \"generative AI is neither exempt from nor subject to special rules beyond the standards already […]",
+      "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+      "dateISO": "2026-08-31T15:34:58.000Z",
+      "date": "AUG 31 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says/",
       "clusterId": "92e9vb",
       "title": "Elon Musk’s xAI used child porn to train Grok models, lawsuit says",
@@ -225,32 +291,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-      "clusterId": "1p7lmp6",
-      "title": "Nvidia’s AI advantage is moving beyond the GPU",
-      "desc": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
-      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
-      "dateISO": "2026-08-29T13:00:00.000Z",
-      "date": "AUG 29 2026",
-      "category": "compute",
-      "catConfidence": 0.8,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91VmFtc1pJZHh6Nmk0MV9TQy1LWmRuTGxwdUlSSkljREEzYjRzSXRnX21tOWxfdFg5QlRDYWNkMUZyRVUtR0xmZXc0UEFPM2tVSU1JZ09OVWFYZ3ZucGdkVzR4TldYeGM?oc=5",
       "clusterId": "1d90p2i",
       "title": "How Claude performs on robotics tasks",
@@ -286,6 +326,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "clusterId": "1p7lmp6",
+      "title": "Nvidia’s AI advantage is moving beyond the GPU",
+      "desc": "The new generation of data center systems is increasing efficiency with smarter traffic control instead of just more processor cycles.",
+      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+      "dateISO": "2026-08-29T13:00:00.000Z",
+      "date": "AUG 29 2026",
+      "category": "compute",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
       ]
     },
     {
@@ -465,6 +531,36 @@
       ]
     },
     {
+      "id": "https://openai.com/index/introducing-ai-futures",
+      "clusterId": "1cdab7",
+      "title": "Introducing Intelligence Age",
+      "desc": "Introducing Intelligence Age, a new OpenAI blog exploring how transformative AI could reshape power, governance, the economy, and individual freedom.",
+      "url": "https://openai.com/index/introducing-ai-futures",
+      "dateISO": "2026-08-20T07:00:00.000Z",
+      "date": "AUG 20 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-ai-futures"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-intelligence-age"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
       "clusterId": "1owa1o6",
       "title": "Neocloud Lambda secures $1B in debt to buy more chips",
@@ -475,7 +571,7 @@
       "category": "capital",
       "catConfidence": 0.78,
       "family": "market",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -489,36 +585,6 @@
       "entityIds": [
         "coreweave",
         "nvidia"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/introducing-intelligence-age",
-      "clusterId": "rxzxqx",
-      "title": "Introducing Intelligence Age",
-      "desc": "Introducing Intelligence Age, a new OpenAI blog exploring how transformative AI could reshape power, governance, the economy, and individual freedom.",
-      "url": "https://openai.com/index/introducing-intelligence-age",
-      "dateISO": "2026-08-20T07:00:00.000Z",
-      "date": "AUG 20 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-intelligence-age"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-ai-futures"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -545,48 +611,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex",
-      "clusterId": "1g45cro",
-      "title": "Data science workflows with ChatGPT Work",
-      "desc": "Learn practical ChatGPT Work workflows for root-cause briefs, KPI memos, scoped analyses, and dashboard specifications.",
-      "url": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex",
-      "dateISO": "2026-07-14T00:00:00.000Z",
-      "date": "JUL 14 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 5,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/zapier"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/learn-teach-chatgpt-work-codex"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/academy/chatgpt-work/how-data-science-teams-use-codex"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
       ]
     },
     {
@@ -768,7 +792,7 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
         },
         {
-          "name": "DW.com",
+          "name": "dw.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
@@ -954,32 +978,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi",
-      "clusterId": "dgkb8b",
-      "title": "Jensen Huang says Nvidia achieved AGI, again — not that it matters",
-      "desc": "On Nvidia's earnings call Wednesday, CEO Jensen Huang casually announced the company had \"achieved AGI,\" one of the tech industry's ultimate goals some of its biggest players have spent years chasing. Almost immediately, Huang dismissed the coveted milestone as \"senseless.\" He's right. For the supposed finish line of the AI race, there is no consensus […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi",
-      "dateISO": "2026-08-27T16:15:52.000Z",
-      "date": "AUG 27 2026",
-      "category": "market",
-      "catConfidence": 0.45,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "nvidia"
       ]
     },
     {
@@ -1311,7 +1309,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 1,
-    "nvidia": 6,
+    "nvidia": 5,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1407,7 +1405,7 @@
         {
           "h": "Introducing Intelligence Age",
           "d": "AUG 20 2026",
-          "url": "https://openai.com/index/introducing-intelligence-age",
+          "url": "https://openai.com/index/introducing-ai-futures",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1480,6 +1478,18 @@
     }
   ],
   "wire": [
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 31 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Debian won’t ban AI code from its Linux distribution",
+      "p": "Debian voted to allow developers to use AI tools in their contributions to the Linux distribution's \"development, maintenance, [and] documentation.\" The new policy on AI acknowledges that \"responsible\" use of AI can improve developers' productivity, and goes…",
+      "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
     {
       "org": "AI WIRE",
       "logoKey": "other",
@@ -1562,18 +1572,6 @@
       "p": "Instagram is finally taking steps to address the rise of fake AI-influencer accounts that have gotten harder to spot. It's also renaming the \"AI creator\" label to \"AI-generated profile\" to make it clear when a profile features an AI-generated person that's no…",
       "url": "https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop",
       "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 31 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Meeting note-taker Circleback adds a free tier to attract more customers",
-      "p": "Circleback is also introducing new pricing plans starting from $14 per month.",
-      "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1677,11 +1675,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 219.73,
-      "changePct": 1.0020651092625372,
+      "price": 219.38,
+      "changePct": 0.8411867641386829,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 46244595,
+      "volume": 48495384,
       "ohlc": [
         {
           "d": "06-01",
@@ -2129,22 +2127,22 @@
           "o": 218.86199951171875,
           "h": 220.60000610351562,
           "l": 216.2100067138672,
-          "c": 219.72999572753906
+          "c": 219.3800048828125
         }
       ],
-      "relVolume": 0.36165307519833906,
-      "marketCap": 5361412000000
+      "relVolume": 0.37925523526639876,
+      "marketCap": 5352872000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 510.955,
-      "changePct": -0.501439561019464,
+      "price": 509.82,
+      "changePct": -0.7224547272797288,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 6558065,
+      "volume": 6902265,
       "ohlc": [
         {
           "d": "06-01",
@@ -2592,22 +2590,22 @@
           "o": 510.32501220703125,
           "h": 512.1900024414062,
           "l": 507.30999755859375,
-          "c": 510.9549865722656
+          "c": 509.82000732421875
         }
       ],
-      "relVolume": 0.23010718053252197,
-      "marketCap": 3796395650000
+      "relVolume": 0.24218435444575614,
+      "marketCap": 3787962600000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 368.535,
-      "changePct": -0.06914636430054968,
+      "price": 368.08,
+      "changePct": -0.19252744277364636,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 5236776,
+      "volume": 5601981,
       "ohlc": [
         {
           "d": "06-01",
@@ -3054,23 +3052,23 @@
           "d": "08-31",
           "o": 369.4549865722656,
           "h": 372.75,
-          "l": 366.5,
-          "c": 368.5350036621094
+          "l": 366.29998779296875,
+          "c": 368.0799865722656
         }
       ],
-      "relVolume": 0.26975225206662656,
-      "marketCap": 1813192200000.0002
+      "relVolume": 0.2885643744900398,
+      "marketCap": 1810953600000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 338.595,
-      "changePct": -2.306758764437384,
+      "price": 337.93,
+      "changePct": -2.4986305876141723,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 7497541,
+      "volume": 7950739,
       "ohlc": [
         {
           "d": "06-01",
@@ -3518,22 +3516,22 @@
           "o": 343.697998046875,
           "h": 344.5899963378906,
           "l": 337.156005859375,
-          "c": 338.5950012207031
+          "c": 337.92999267578125
         }
       ],
-      "relVolume": 0.30729610620357667,
-      "marketCap": 4130859000000.0005
+      "relVolume": 0.32587099372193085,
+      "marketCap": 4122746000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 261.16,
-      "changePct": -1.9780014107063864,
+      "price": 260.8,
+      "changePct": -2.113127289562949,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 11774524,
+      "volume": 12299733,
       "ohlc": [
         {
           "d": "06-01",
@@ -3981,22 +3979,22 @@
           "o": 263.82501220703125,
           "h": 264.3599853515625,
           "l": 259.71600341796875,
-          "c": 261.1600036621094
+          "c": 260.79998779296875
         }
       ],
-      "relVolume": 0.30795037077808146,
-      "marketCap": 2794412000000.0005
+      "relVolume": 0.3216866633268066,
+      "marketCap": 2790560000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 572.08,
-      "changePct": -1.0276464898609121,
+      "price": 570.865,
+      "changePct": -1.2378514679608206,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 4079620,
+      "volume": 4233364,
       "ohlc": [
         {
           "d": "06-01",
@@ -4444,22 +4442,22 @@
           "o": 576.77001953125,
           "h": 578.6749877929688,
           "l": 569.1386108398438,
-          "c": 572.0800170898438
+          "c": 570.864990234375
         }
       ],
-      "relVolume": 0.25457235504794423,
-      "marketCap": 1441641600000
+      "relVolume": 0.26416613391815547,
+      "marketCap": 1438579800000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 418.408,
-      "changePct": 0.21275763734354092,
+      "price": 417.38,
+      "changePct": -0.03352752791311057,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 3135034,
+      "volume": 3255409,
       "ohlc": [
         {
           "d": "06-01",
@@ -4905,24 +4903,24 @@
         {
           "d": "08-31",
           "o": 417.2300109863281,
-          "h": 423.6000061035156,
+          "h": 423.6499938964844,
           "l": 417.2300109863281,
-          "c": 418.4082946777344
+          "c": 417.3800048828125
         }
       ],
-      "relVolume": 0.30914553003584966,
-      "marketCap": 2171537520000
+      "relVolume": 0.321015702154578,
+      "marketCap": 2166202200000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 466.5,
-      "changePct": 0.19760587960573214,
+      "price": 465.491,
+      "changePct": -0.019198846364984555,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 5388024,
+      "volume": 5581662,
       "ohlc": [
         {
           "d": "06-01",
@@ -5370,22 +5368,22 @@
           "o": 466.2200012207031,
           "h": 475.8099060058594,
           "l": 463.70001220703125,
-          "c": 466.5
+          "c": 465.4906005859375
         }
       ],
-      "relVolume": 0.24015564583885843,
-      "marketCap": 755730000000
+      "relVolume": 0.24878650177954184,
+      "marketCap": 754095420000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 185.79,
-      "changePct": -0.268398742831035,
+      "price": 185.98,
+      "changePct": -0.16640591001450522,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 8470718,
+      "volume": 8985485,
       "ohlc": [
         {
           "d": "06-01",
@@ -5833,22 +5831,22 @@
           "o": 184.4949951171875,
           "h": 186.94000244140625,
           "l": 183.7899932861328,
-          "c": 185.7899932861328
+          "c": 185.97999572753906
         }
       ],
-      "relVolume": 0.17989114853417068,
-      "marketCap": 445896000000
+      "relVolume": 0.19082316478798642,
+      "marketCap": 446352000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 149.775,
-      "changePct": -0.7126365021779051,
+      "price": 149.25,
+      "changePct": -1.0606602842413384,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 4772839,
+      "volume": 5074116,
       "ohlc": [
         {
           "d": "06-01",
@@ -6296,11 +6294,11 @@
           "o": 149.30999755859375,
           "h": 150.19000244140625,
           "l": 147.75,
-          "c": 149.77499389648438
+          "c": 149.25
         }
       ],
-      "relVolume": 0.1900545514384087,
-      "marketCap": 420867750000
+      "relVolume": 0.20205140804591407,
+      "marketCap": 419392500000
     }
   ],
   "compute": [
@@ -6310,20 +6308,20 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "↑ 14% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.82/hr",
-      "trend": "↑ 6% vs 7d ago",
+      "rate": "$3.59 – $4.66/hr",
+      "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.38 – $7.51/hr",
+      "rate": "$5.31 – $7.51/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 9 rented offers across Vast.ai + RunPod"
@@ -6350,11 +6348,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-31T15:45:29.221Z",
+    "updatedAt": "2026-08-31T16:00:34.659Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6364,27 +6362,27 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 300,
-        "fetchedStoryCount": 258,
+        "fetchedStoryCount": 228,
         "validatedStoryCount": 35,
-        "storyCoverage": 0.86,
-        "estimatedRelevantDiscussions": 41,
+        "storyCoverage": 0.76,
+        "estimatedRelevantDiscussions": 46,
         "isEstimated": true,
-        "rawCommentHits": 2279,
+        "rawCommentHits": 2281,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 32,
-        "commentCoverage": 0.13163668275559456,
+        "validatedCommentCount": 31,
+        "commentCoverage": 0.131521262604121,
         "limited": false,
         "points": 722,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 13
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 9
+            "count": 8
           },
           {
             "id": "writing",
@@ -6436,7 +6434,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 41,
+            "discussions": 46,
             "isEstimated": true
           },
           {
@@ -6451,10 +6449,10 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 834,
+        "rawStoryHits": 835,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.3597122302158273,
+        "storyCoverage": 0.3592814371257485,
         "estimatedRelevantDiscussions": 60,
         "isEstimated": true,
         "rawCommentHits": 6409,
@@ -6545,9 +6543,9 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 105,
-        "fetchedStoryCount": 105,
+        "fetchedStoryCount": 104,
         "validatedStoryCount": 10,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9904761904761905,
         "estimatedRelevantDiscussions": 15,
         "isEstimated": true,
         "rawCommentHits": 1201,
@@ -6623,7 +6621,7 @@
           {
             "name": "Hacker News",
             "discussions": 10,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6642,16 +6640,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 553,
+        "rawStoryHits": 554,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5424954792043399,
-        "estimatedRelevantDiscussions": 29,
+        "storyCoverage": 0.5415162454873647,
+        "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 10468,
+        "rawCommentHits": 10466,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 19,
-        "commentCoverage": 0.02865876958349255,
+        "commentCoverage": 0.02866424613032677,
         "limited": false,
         "points": 121,
         "themes": [
@@ -6710,7 +6708,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 29,
+            "discussions": 30,
             "isEstimated": true
           },
           {
@@ -6725,8 +6723,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 33,
-        "fetchedStoryCount": 33,
+        "rawStoryHits": 56,
+        "fetchedStoryCount": 56,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
@@ -6803,8 +6801,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 136,
-        "fetchedStoryCount": 136,
+        "rawStoryHits": 142,
+        "fetchedStoryCount": 142,
         "validatedStoryCount": 21,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
@@ -6887,10 +6885,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4879,
+        "rawCommentHits": 4881,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.06148800983808157,
+        "commentCoverage": 0.06146281499692686,
         "limited": false,
         "points": 516,
         "themes": [
@@ -6998,17 +6996,6 @@
       {
         "modelId": "gpt",
         "themes": [
-          "multimodal"
-        ],
-        "excerpt": "… and ugly. Changes will occur, but even dry runs make Claude, ChatGPT etc. go rookie level in what they do.Processing a table and creating a graph structure out of it - no way.…",
-        "source": "Hacker News",
-        "author": "_the_inflator",
-        "publishedAt": "2026-08-29T12:33:34.000Z",
-        "url": "https://news.ycombinator.com/item?id=49489408"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
           "coding",
           "writing"
         ],
@@ -7017,6 +7004,17 @@
         "author": "applfanboysbgon",
         "publishedAt": "2026-08-26T16:15:56.000Z",
         "url": "https://news.ycombinator.com/item?id=49451636"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "multimodal"
+        ],
+        "excerpt": "… and ugly. Changes will occur, but even dry runs make Claude, ChatGPT etc. go rookie level in what they do.Processing a table and creating a graph structure out of it - no way.…",
+        "source": "Hacker News",
+        "author": "_the_inflator",
+        "publishedAt": "2026-08-29T12:33:34.000Z",
+        "url": "https://news.ycombinator.com/item?id=49489408"
       },
       {
         "modelId": "claude",
