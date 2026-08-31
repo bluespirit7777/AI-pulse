@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-31T16:15:22.619Z",
+  "updatedAt": "2026-08-31T16:30:27.355Z",
   "build": {
-    "sha": "73f52c22ee3119927de9d272d4d1b9fb87ca0809",
-    "shortSha": "73f52c2",
+    "sha": "c2518a3bd059bb6df54816949aa4e1641ffe6d2a",
+    "shortSha": "c2518a3",
     "ref": "main",
-    "builtAt": "2026-08-31T16:15:39.593Z"
+    "builtAt": "2026-08-31T16:30:49.519Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 52.7,
     "estimatedDatasets": 4,
-    "buildSha": "73f52c2",
-    "lastSuccessfulUpdate": "2026-08-31T16:15:22.619Z"
+    "buildSha": "c2518a3",
+    "lastSuccessfulUpdate": "2026-08-31T16:30:27.355Z"
   },
   "ticker": [
     "CHATGPT AND REDDIT NOW FACE EU'S TOUGHEST ONLINE SAFETY RULES",
@@ -40,7 +40,7 @@
       "category": "policy",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 79,
+      "significance": 78,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -327,6 +327,30 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+      "clusterId": "wiw56s",
+      "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
+      "desc": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
+      "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+      "dateISO": "2026-08-31T16:00:00.000Z",
+      "date": "AUG 31 2026",
+      "category": "capital",
+      "catConfidence": 0.78,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
@@ -1185,32 +1209,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/ten-advances-in-mathematics",
-      "clusterId": "1w0g6eb",
-      "title": "Ten advances in mathematics and theoretical computer science",
-      "desc": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.",
-      "url": "https://openai.com/index/ten-advances-in-mathematics",
-      "dateISO": "2026-08-01T00:00:00.000Z",
-      "date": "AUG 01 2026",
-      "category": "market",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/ten-advances-in-mathematics"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1250,7 +1248,7 @@
       "category": "policy",
       "title": "ChatGPT and Reddit now face EU's toughest online safety rules",
       "summary": "Explosive growth comes with a new regulatory burden in the European Union.",
-      "significance": 79,
+      "significance": 78,
       "impact": "high",
       "verification": "single",
       "date": "AUG 31 2026",
@@ -1298,7 +1296,7 @@
     "perplexity": 0,
     "gpt": 74,
     "claude": 74,
-    "gemini": 29,
+    "gemini": 28,
     "grok": 1,
     "llama": 0,
     "deepseek": 0,
@@ -1484,6 +1482,18 @@
       "date": "AUG 31 2026",
       "verification": "single",
       "impact": "notable",
+      "h": "Clipto uses AI to search terabytes of video and is now valued at $250M",
+      "p": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
+      "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 31 2026",
+      "verification": "single",
+      "impact": "notable",
       "h": "Debian won’t ban AI code from its Linux distribution",
       "p": "Debian voted to allow developers to use AI tools in their contributions to the Linux distribution's \"development, maintenance, [and] documentation.\" The new policy on AI acknowledges that \"responsible\" use of AI can improve developers' productivity, and goes…",
       "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
@@ -1559,18 +1569,6 @@
       "h": "ChatGPT to face tougher regulation in the EU",
       "p": "OpenAI will soon be held accountable for mitigating risks related to ChatGPT's impact on minors, user mental health, and the spread of illegal content in the European Union. That's because ChatGPT is now considered a Very Large Online Search Engine under the…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 31 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Instagram cracks down on AI accounts pretending to be human",
-      "p": "Instagram is finally taking steps to address the rise of fake AI-influencer accounts that have gotten harder to spot. It's also renaming the \"AI creator\" label to \"AI-generated profile\" to make it clear when a profile features an AI-generated person that's no…",
-      "url": "https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop",
       "sourceName": "The Verge",
       "sourceCount": 1
     }
@@ -1675,11 +1673,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 219.768,
-      "changePct": 1.0195367907249568,
+      "price": 220.191,
+      "changePct": 0.00022435960737182299,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 50408347,
+      "volume": 52219974,
       "ohlc": [
         {
           "d": "06-01",
@@ -2127,22 +2125,22 @@
           "o": 218.86199951171875,
           "h": 220.60000610351562,
           "l": 216.2100067138672,
-          "c": 219.76800537109375
+          "c": 220.1905059814453
         }
       ],
-      "relVolume": 0.39421544740990744,
-      "marketCap": 5362339200000
+      "relVolume": 0.40838316745724146,
+      "marketCap": 5372660400000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 510.535,
-      "changePct": -0.5832230763342919,
+      "price": 510.54,
+      "changePct": -0.5822484726057908,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 7153200,
+      "volume": 7364096,
       "ohlc": [
         {
           "d": "06-01",
@@ -2590,22 +2588,22 @@
           "o": 510.32501220703125,
           "h": 512.1900024414062,
           "l": 507.30999755859375,
-          "c": 510.5350036621094
+          "c": 510.5400085449219
         }
       ],
-      "relVolume": 0.2509890773856673,
-      "marketCap": 3793275050000
+      "relVolume": 0.25838892535081964,
+      "marketCap": 3793312200000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 368.915,
-      "changePct": 0.033894627593950635,
+      "price": 370.79,
+      "changePct": 0.5423140415032102,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 5904917,
+      "volume": 6390312,
       "ohlc": [
         {
           "d": "06-01",
@@ -3053,22 +3051,22 @@
           "o": 369.4549865722656,
           "h": 372.75,
           "l": 366.5,
-          "c": 368.9150085449219
+          "c": 370.7900085449219
         }
       ],
-      "relVolume": 0.3041689503267866,
-      "marketCap": 1815061800000
+      "relVolume": 0.3291721955280097,
+      "marketCap": 1824286800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 338.575,
-      "changePct": -2.312526101603223,
+      "price": 338.25,
+      "changePct": -2.406300362391291,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 8448334,
+      "volume": 8807144,
       "ohlc": [
         {
           "d": "06-01",
@@ -3516,22 +3514,22 @@
           "o": 343.697998046875,
           "h": 344.5899963378906,
           "l": 337.156005859375,
-          "c": 338.57501220703125
+          "c": 338.25
         }
       ],
-      "relVolume": 0.3462655478786028,
-      "marketCap": 4130615000000
+      "relVolume": 0.3609718250255908,
+      "marketCap": 4126650000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 261.245,
-      "changePct": -1.9461013028301868,
+      "price": 260.975,
+      "changePct": -2.047437121279285,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 12788872,
+      "volume": 13197405,
       "ohlc": [
         {
           "d": "06-01",
@@ -3979,22 +3977,22 @@
           "o": 263.82501220703125,
           "h": 264.3599853515625,
           "l": 259.71600341796875,
-          "c": 261.2449951171875
+          "c": 260.9750061035156
         }
       ],
-      "relVolume": 0.33447958271887884,
-      "marketCap": 2795321500000
+      "relVolume": 0.34516433641466154,
+      "marketCap": 2792432500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 571.5,
-      "changePct": -1.1279919917890495,
+      "price": 570.68,
+      "changePct": -1.2698568574530005,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 4415229,
+      "volume": 4590658,
       "ohlc": [
         {
           "d": "06-01",
@@ -4442,22 +4440,22 @@
           "o": 576.77001953125,
           "h": 578.6749877929688,
           "l": 569.1386108398438,
-          "c": 571.5
+          "c": 570.6799926757812
         }
       ],
-      "relVolume": 0.275514691222707,
-      "marketCap": 1440180000000
+      "relVolume": 0.2864616357110921,
+      "marketCap": 1438113599999.9998
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 417.809,
-      "changePct": 0.06931361395248037,
+      "price": 417.935,
+      "changePct": 0.09939848530420548,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 3420130,
+      "volume": 3499348,
       "ohlc": [
         {
           "d": "06-01",
@@ -4905,22 +4903,22 @@
           "o": 417.2300109863281,
           "h": 423.6499938964844,
           "l": 416.6400146484375,
-          "c": 417.80938720703125
+          "c": 417.93499755859375
         }
       ],
-      "relVolume": 0.33725883089035413,
-      "marketCap": 2168428710000.0002
+      "relVolume": 0.34507051350635765,
+      "marketCap": 2169082650000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 466.385,
-      "changePct": 0.17290760268416783,
+      "price": 467.522,
+      "changePct": 0.41709805078288226,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 5838792,
+      "volume": 6072917,
       "ohlc": [
         {
           "d": "06-01",
@@ -5368,22 +5366,22 @@
           "o": 466.2200012207031,
           "h": 475.8099060058594,
           "l": 463.70001220703125,
-          "c": 466.385009765625
+          "c": 467.52191162109375
         }
       ],
-      "relVolume": 0.2602473306872352,
-      "marketCap": 755543700000
+      "relVolume": 0.2706827780018765,
+      "marketCap": 757385640000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 186.21,
-      "changePct": -0.042936590878914965,
+      "price": 187.12,
+      "changePct": 0.44554289600507047,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 9371645,
+      "volume": 11133077,
       "ohlc": [
         {
           "d": "06-01",
@@ -5829,24 +5827,24 @@
         {
           "d": "08-31",
           "o": 184.4949951171875,
-          "h": 186.94000244140625,
+          "h": 187.25999450683594,
           "l": 183.7899932861328,
-          "c": 186.2100067138672
+          "c": 187.1199951171875
         }
       ],
-      "relVolume": 0.19902397679919437,
-      "marketCap": 446904000000
+      "relVolume": 0.23643119842371796,
+      "marketCap": 449088000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 149.55,
-      "changePct": -0.8617852165453213,
+      "price": 149.53,
+      "changePct": -0.8750462517800234,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 5312423,
+      "volume": 5602575,
       "ohlc": [
         {
           "d": "06-01",
@@ -6294,11 +6292,11 @@
           "o": 149.30999755859375,
           "h": 150.19000244140625,
           "l": 147.75,
-          "c": 149.5500030517578
+          "c": 149.52999877929688
         }
       ],
-      "relVolume": 0.21154079790164415,
-      "marketCap": 420235500000.00006
+      "relVolume": 0.22309465677032947,
+      "marketCap": 420179300000
     }
   ],
   "compute": [
@@ -6308,7 +6306,7 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "↑ 14% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6321,10 +6319,10 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $7.51/hr",
+      "rate": "$5.38 – $7.51/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6345,14 +6343,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.27 – $1.59/hr",
-      "trend": "↓ 28% vs 7d ago",
-      "trendClass": "trend-down",
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-31T16:15:22.619Z",
+    "updatedAt": "2026-08-31T16:30:27.355Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6361,16 +6359,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 230,
-        "fetchedStoryCount": 230,
+        "rawStoryHits": 301,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 35,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9966777408637874,
         "estimatedRelevantDiscussions": 35,
         "isEstimated": true,
-        "rawCommentHits": 2010,
+        "rawCommentHits": 2281,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.14925373134328357,
+        "commentCoverage": 0.131521262604121,
         "limited": false,
         "points": 722,
         "themes": [
@@ -6435,7 +6433,7 @@
           {
             "name": "Hacker News",
             "discussions": 35,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6455,10 +6453,10 @@
         "storyCoverage": 0.3592814371257485,
         "estimatedRelevantDiscussions": 60,
         "isEstimated": true,
-        "rawCommentHits": 6412,
+        "rawCommentHits": 6410,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 28,
-        "commentCoverage": 0.046787273861509666,
+        "commentCoverage": 0.046801872074883,
         "limited": false,
         "points": 120,
         "themes": [
@@ -6723,8 +6721,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 55,
-        "fetchedStoryCount": 55,
+        "rawStoryHits": 56,
+        "fetchedStoryCount": 56,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
@@ -6801,16 +6799,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 143,
-        "fetchedStoryCount": 143,
+        "rawStoryHits": 140,
+        "fetchedStoryCount": 140,
         "validatedStoryCount": 21,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": false,
-        "rawCommentHits": 1173,
+        "rawCommentHits": 1161,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 51,
-        "commentCoverage": 0.2557544757033248,
+        "commentCoverage": 0.25839793281653745,
         "limited": false,
         "points": 1481,
         "themes": [
@@ -6885,10 +6883,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4884,
+        "rawCommentHits": 4885,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.06142506142506143,
+        "commentCoverage": 0.06141248720573183,
         "limited": false,
         "points": 516,
         "themes": [
