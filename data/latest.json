@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-08-31T06:15:20.143Z",
+  "updatedAt": "2026-08-31T06:30:27.521Z",
   "build": {
-    "sha": "c84e88906e3a0978840c1d97871ebe449634e5c6",
-    "shortSha": "c84e889",
+    "sha": "79eee45f35da3aea2c60f40be4fe2a1dbf886b87",
+    "shortSha": "79eee45",
     "ref": "main",
-    "builtAt": "2026-08-31T06:15:35.276Z"
+    "builtAt": "2026-08-31T06:30:42.671Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 15,
+    "feedsSucceeded": 10,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 52.3,
     "estimatedDatasets": 4,
-    "buildSha": "c84e889",
-    "lastSuccessfulUpdate": "2026-08-31T06:15:20.143Z"
+    "buildSha": "79eee45",
+    "lastSuccessfulUpdate": "2026-08-31T06:30:27.521Z"
   },
   "ticker": [
     "SONY MUSIC PUBLISHING AND WARNER CHAPPELL ARE SUING ANTHROPIC",
@@ -26,7 +26,7 @@
     "NEOCLOUD LAMBDA SECURES $1B IN DEBT TO BUY MORE CHIPS",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
     "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION",
-    "BUILD A SHAREABLE SITE"
+    "OPENAI AND HUGGING FACE PARTNER TO ADDRESS SECURITY INCIDENT DURING MODEL EVALUATION"
   ],
   "signals": [
     {
@@ -316,32 +316,6 @@
       "entityIds": [
         "claude",
         "qwen"
-      ]
-    },
-    {
-      "id": "https://www.youtube.com/watch?v=0qK3KqvtRrg",
-      "clusterId": "zd845p",
-      "title": "Build a Shareable Site",
-      "desc": "Turn a conversation into a website people can use with ChatGPT Work. Build a group-trip site with an itinerary, activity voting, and shared expenses, then refine it by asking for changes. See how to choose who can visit, manage your projects in Sites, and bring launch metrics and team updates together in a dashboard. Follow the lesson and try it yourself: https://learn.chatgpt.com/training/walkthr",
-      "url": "https://www.youtube.com/watch?v=0qK3KqvtRrg",
-      "dateISO": "2026-08-28T20:51:45.000Z",
-      "date": "AUG 28 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=0qK3KqvtRrg"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt"
       ]
     },
     {
@@ -1215,6 +1189,32 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "clusterId": "fvmzh5",
+      "title": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
+      "desc": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
+      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
+      "dateISO": "2026-08-21T11:59:48.000Z",
+      "date": "AUG 21 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 40,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
     }
   ],
   "waves": [
@@ -1297,12 +1297,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 29,
+    "chatgpt": 28,
     "copilot": 1,
     "perplexity": 0,
     "gpt": 75,
     "claude": 74,
-    "gemini": 29,
+    "gemini": 30,
     "grok": 2,
     "llama": 1,
     "deepseek": 0,
@@ -1385,17 +1385,6 @@
       "logoKey": "openai",
       "items": [
         {
-          "h": "Build a Shareable Site",
-          "d": "AUG 28 2026",
-          "url": "https://www.youtube.com/watch?v=0qK3KqvtRrg",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Supporting Thailand’s next generation of AI startups",
           "d": "AUG 28 2026",
           "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
@@ -1432,6 +1421,17 @@
           "h": "Strengthening democratic oversight in national security",
           "d": "AUG 18 2026",
           "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+          "d": "AUG 18 2026",
+          "url": "https://openai.com/index/chatgpt-for-teens",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1602,6 +1602,18 @@
       "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
       "sourceName": "OpenAI",
       "verification": "official",
+      "impact": "emerging"
+    },
+    {
+      "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
+      "org": "The Information",
+      "date": "JUL 28 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "Open-weight coverage — confirm exact license on the model card.",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUnMyMUZTeWhKa1pYUFAtNFBJVWVQdEpXZEl5MnhMM2pMTlpPdG9kQkRLck1nODFuaDRoMFJNQnBQRkszd3JJdUYwc1BXbUg3ekVvMHZ5STlZNHZEd3dRV294WlBRWm1IXzFHOUZoMmVZOTROWkx5d0UtNkdOWTNoRU9xTzJla0h2Q2I5Z09LTVo4NjNLTGg3TjNhUlJvNWNDeEI1R0gwYzhSVzF6RUVnM0kxVTBfTTQ1ZWc?oc=5",
+      "sourceName": "The Information",
+      "verification": "single",
       "impact": "emerging"
     }
   ],
@@ -6317,18 +6329,18 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.59/hr",
-      "trend": "↑ 3% vs 7d ago",
+      "rate": "$3.59 – $4.67/hr",
+      "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.31 – $7.51/hr",
+      "rate": "$5.38 – $7.51/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6352,11 +6364,11 @@
       "rate": "$0.44 – $1.59/hr",
       "trend": "↓ 21% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-31T06:15:20.143Z",
+    "updatedAt": "2026-08-31T06:30:27.521Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6366,10 +6378,10 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 289,
-        "fetchedStoryCount": 289,
+        "fetchedStoryCount": 242,
         "validatedStoryCount": 35,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 35,
+        "storyCoverage": 0.8373702422145328,
+        "estimatedRelevantDiscussions": 42,
         "isEstimated": true,
         "rawCommentHits": 2251,
         "fetchedCommentCount": 300,
@@ -6438,8 +6450,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 35,
-            "isEstimated": false
+            "discussions": 42,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6546,16 +6558,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 108,
-        "fetchedStoryCount": 108,
+        "rawStoryHits": 107,
+        "fetchedStoryCount": 107,
         "validatedStoryCount": 11,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": true,
-        "rawCommentHits": 1206,
+        "rawCommentHits": 1205,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.24875621890547264,
+        "commentCoverage": 0.24896265560165975,
         "limited": false,
         "points": 37,
         "themes": [
@@ -6644,16 +6656,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 549,
+        "rawStoryHits": 550,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 15,
-        "storyCoverage": 0.546448087431694,
-        "estimatedRelevantDiscussions": 27,
+        "storyCoverage": 0.5454545454545454,
+        "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
-        "rawCommentHits": 10283,
+        "rawCommentHits": 10279,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 19,
-        "commentCoverage": 0.0291743654575513,
+        "commentCoverage": 0.029185718455102636,
         "limited": false,
         "points": 116,
         "themes": [
@@ -6712,7 +6724,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 27,
+            "discussions": 28,
             "isEstimated": true
           },
           {
@@ -6805,16 +6817,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 144,
-        "fetchedStoryCount": 144,
+        "rawStoryHits": 137,
+        "fetchedStoryCount": 137,
         "validatedStoryCount": 21,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": false,
-        "rawCommentHits": 1175,
+        "rawCommentHits": 1141,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 51,
-        "commentCoverage": 0.2553191489361702,
+        "commentCoverage": 0.26292725679228746,
         "limited": false,
         "points": 1481,
         "themes": [
@@ -6889,10 +6901,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4865,
+        "rawCommentHits": 4864,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.06166495375128469,
+        "commentCoverage": 0.061677631578947366,
         "limited": false,
         "points": 515,
         "themes": [
