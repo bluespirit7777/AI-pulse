@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-31T17:30:27.692Z",
+  "updatedAt": "2026-08-31T17:45:21.817Z",
   "build": {
-    "sha": "63446046d38f8331399e9702ee8eed0bfe5e174f",
-    "shortSha": "6344604",
+    "sha": "5f89bd73e0eb23c84e72bdc66eb3bd297717e973",
+    "shortSha": "5f89bd7",
     "ref": "main",
-    "builtAt": "2026-08-31T17:30:46.276Z"
+    "builtAt": "2026-08-31T17:45:36.908Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 52.7,
     "estimatedDatasets": 5,
-    "buildSha": "6344604",
-    "lastSuccessfulUpdate": "2026-08-31T17:30:27.692Z"
+    "buildSha": "5f89bd7",
+    "lastSuccessfulUpdate": "2026-08-31T17:45:21.817Z"
   },
   "ticker": [
     "CHATGPT AND REDDIT NOW FACE EU'S TOUGHEST ONLINE SAFETY RULES",
+    "CHATGPT TO FACE TOUGHER REGULATION IN THE EU",
     "ANTHROPIC SUED OVER ALLEGED THEFT OF ‘TENS OF THOUSANDS’ OF SONGS",
     "NVIDIA’S $3.5B MEDIATEK BET REVEALS ITS PLAN FOR TACKLING BIG TECH’S AI CHIP BUILDOUT",
     "SALES WORKFLOWS WITH CHATGPT WORK",
     "A MILESTONE IN EXPANDING ACCESS TO AI",
     "ELON MUSK’S XAI USED CHILD PORN TO TRAIN GROK MODELS, LAWSUIT SAYS",
     "SONY MUSIC PUBLISHING AND WARNER CHAPPELL ARE SUING ANTHROPIC",
-    "ANTHROPIC’S CLAUDE FIXED ALL 10 ALIGNMENT FAILURES. THEN IT TRIED TO CHEAT 2.4% OF THE TIME.",
-    "HOW CLAUDE PERFORMS ON ROBOTICS TASKS",
-    "CLIPTO USES AI TO SEARCH TERABYTES OF VIDEO AND IS NOW VALUED AT $250M"
+    "DEBIAN WON’T BAN AI CODE FROM ITS LINUX DISTRIBUTION",
+    "ANTHROPIC’S CLAUDE FIXED ALL 10 ALIGNMENT FAILURES. THEN IT TRIED TO CHEAT 2.4% OF THE TIME."
   ],
   "signals": [
     {
@@ -53,6 +53,33 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+      "clusterId": "30vm41",
+      "title": "ChatGPT to face tougher regulation in the EU",
+      "desc": "OpenAI will soon be held accountable for mitigating risks related to ChatGPT's impact on minors, user mental health, and the spread of illegal content in the European Union. That's because ChatGPT is now considered a Very Large Online Search Engine under the EU's Digital Services Act, a set of laws regulating major online services and […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+      "dateISO": "2026-08-31T13:27:36.000Z",
+      "date": "AUG 31 2026",
+      "category": "policy",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 78,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
       ]
     },
     {
@@ -240,6 +267,30 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+      "clusterId": "6sewth",
+      "title": "Debian won’t ban AI code from its Linux distribution",
+      "desc": "Debian voted to allow developers to use AI tools in their contributions to the Linux distribution's \"development, maintenance, [and] documentation.\" The new policy on AI acknowledges that \"responsible\" use of AI can improve developers' productivity, and goes on to say, \"generative AI is neither exempt from nor subject to special rules beyond the standards already […]",
+      "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+      "dateISO": "2026-08-31T15:34:58.000Z",
+      "date": "AUG 31 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5pS0VQbmJZQjZla3BxWVlITXhCVXpZclBiNGZxSGxvTENmejdnLUtCNUhFTllxNFlPUk5sX1B2REdvdXJqOGZKamQwSk9vU2dnYVpaX0Q0ZVdLN2NMdV8tNE1UT2hlY2dtSmxZ?oc=5",
       "clusterId": "1kyoflb",
       "title": "Anthropic’s Claude fixed all 10 alignment failures. Then it tried to cheat 2.4% of the time.",
@@ -304,30 +355,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
-      "clusterId": "wiw56s",
-      "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
-      "desc": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
-      "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
-      "dateISO": "2026-08-31T16:00:00.000Z",
-      "date": "AUG 31 2026",
-      "category": "capital",
-      "catConfidence": 0.78,
-      "family": "market",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
       "clusterId": "1p7lmp6",
       "title": "Nvidia’s AI advantage is moving beyond the GPU",
@@ -352,6 +379,30 @@
       "entityIds": [
         "nvidia"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+      "clusterId": "wiw56s",
+      "title": "Clipto uses AI to search terabytes of video and is now valued at $250M",
+      "desc": "The three-year-old startup says it reached $15 million in ARR and profitability before raising its latest $15 million round.",
+      "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/",
+      "dateISO": "2026-08-31T16:00:00.000Z",
+      "date": "AUG 31 2026",
+      "category": "capital",
+      "catConfidence": 0.78,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5",
@@ -501,19 +552,11 @@
       "significance": 48,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 6,
+      "sourceCount": 4,
       "sources": [
         {
           "name": "Ars Technica",
           "url": "https://arstechnica.com/ai/2026/08/report-nvidia-to-acquire-ai-model-repository-hugging-face-for-13-billion/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/gadgets/985549/hugging-face-microduck-robot"
         },
         {
           "name": "Ars Technica",
@@ -693,7 +736,7 @@
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
         },
         {
-          "name": "scmp.com",
+          "name": "South China Morning Post",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
         },
         {
@@ -958,32 +1001,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi",
-      "clusterId": "dgkb8b",
-      "title": "Jensen Huang says Nvidia achieved AGI, again — not that it matters",
-      "desc": "On Nvidia's earnings call Wednesday, CEO Jensen Huang casually announced the company had \"achieved AGI,\" one of the tech industry's ultimate goals some of its biggest players have spent years chasing. Almost immediately, Huang dismissed the coveted milestone as \"senseless.\" He's right. For the supposed finish line of the AI race, there is no consensus […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi",
-      "dateISO": "2026-08-27T16:15:52.000Z",
-      "date": "AUG 27 2026",
-      "category": "market",
-      "catConfidence": 0.45,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/985597/jensen-huang-says-nvidia-achieved-senseless-agi"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://openai.com/index/jalapeno-first-results",
       "clusterId": "16lzk97",
       "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
@@ -1188,32 +1205,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
-      "clusterId": "jl7n28",
-      "title": "Working with the American Psychological Association on youth mental health and AI",
-      "desc": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
-      "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
-      "dateISO": "2026-08-06T06:00:00.000Z",
-      "date": "AUG 06 2026",
-      "category": "market",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1296,7 +1287,7 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 31,
+    "chatgpt": 32,
     "copilot": 1,
     "perplexity": 0,
     "gpt": 74,
@@ -1312,7 +1303,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 1,
-    "nvidia": 6,
+    "nvidia": 5,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1350,7 +1341,7 @@
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "edweek.org",
+          "sourceName": "Education Week",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1499,6 +1490,18 @@
       "date": "AUG 31 2026",
       "verification": "single",
       "impact": "notable",
+      "h": "Debian won’t ban AI code from its Linux distribution",
+      "p": "Debian voted to allow developers to use AI tools in their contributions to the Linux distribution's \"development, maintenance, [and] documentation.\" The new policy on AI acknowledges that \"responsible\" use of AI can improve developers' productivity, and goes…",
+      "url": "https://www.theverge.com/tech/986789/linux-debian-generative-ai-policy",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 31 2026",
+      "verification": "single",
+      "impact": "notable",
       "h": "Nvidia’s $3.5B MediaTek bet reveals its plan for tackling Big Tech’s AI chip bu…",
       "p": "Nvidia invests $3.5 billion into Taiwanese chipmaker MediaTek. The deal shows how Nvidia plans to stay essential to AI infrastructure as Big Tech begins to build its own AI chips.",
       "url": "https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/",
@@ -1509,12 +1512,12 @@
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 31 2026",
-      "verification": "official",
+      "verification": "single",
       "impact": "emerging",
-      "h": "Beneficial Deployments",
-      "p": "Beneficial Deployments",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1tUjhUSk5BM3ctZ1I5clprQ3d4dmxablE3VDBoY1RVaUU4TnJ5ZGpSUk96OGViUm96cDJyczdUV3kySjZxZXhLckVyZ2E2YXpaeVV3UjB4TXR0UDhG?oc=5",
-      "sourceName": "Anthropic",
+      "h": "New York Governor Kathy Hochul thinks AI should be ‘less evil’",
+      "p": "Today, I’m talking with New York Governor Kathy Hochul, and I’ll just warn you — this episode moves really fast. It’s an election year, after all, with a shocking amount of tech policy at stake, and Governor Hochul has taken strong positions on almost every m…",
+      "url": "https://www.theverge.com/podcast/986661/ny-gov-kathy-hochul-ai-data-centers-ban-3d-printed-guns-flock-cameras",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1527,6 +1530,18 @@
       "p": "Explosive growth comes with a new regulatory burden in the European Union.",
       "url": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/",
       "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 31 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "ChatGPT to face tougher regulation in the EU",
+      "p": "OpenAI will soon be held accountable for mitigating risks related to ChatGPT's impact on minors, user mental health, and the spread of illegal content in the European Union. That's because ChatGPT is now considered a Very Large Online Search Engine under the…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1547,34 +1562,10 @@
       "date": "AUG 31 2026",
       "verification": "single",
       "impact": "emerging",
-      "h": "Meeting note-taker Circleback adds a free tier to attract more customers",
-      "p": "Circleback is also introducing new pricing plans starting from $14 per month.",
-      "url": "https://techcrunch.com/2026/08/31/meeting-notetaker-circleback-adds-a-free-tier-to-attract-more-customers/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "AUG 31 2026",
-      "verification": "uncertain",
-      "impact": "high",
-      "h": "Anthropic sued over alleged theft of ‘tens of thousands’ of songs",
-      "p": "Anthropic sued over alleged theft of ‘tens of thousands’ of songs",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5",
-      "sourceName": "The Guardian",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 31 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "You Know Who Really Hates AI? Insurance Claims Adjusters",
-      "p": "Of the Glassdoor reviews from claims adjusters that mentioned AI, a staggering 98 percent were negative. “AI is just a tool,” one person tells WIRED. “It should never be given the keys.”",
-      "url": "https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/",
-      "sourceName": "Wired",
+      "h": "Instagram cracks down on AI accounts pretending to be human",
+      "p": "Instagram is finally taking steps to address the rise of fake AI-influencer accounts that have gotten harder to spot. It's also renaming the \"AI creator\" label to \"AI-generated profile\" to make it clear when a profile features an AI-generated person that's no…",
+      "url": "https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop",
+      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -1678,11 +1669,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 219.33,
-      "changePct": 0.8182021394287876,
+      "price": 219.635,
+      "changePct": 0.958396426490548,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 59115909,
+      "volume": 61136862,
       "ohlc": [
         {
           "d": "06-01",
@@ -2130,22 +2121,22 @@
           "o": 218.86199951171875,
           "h": 220.60000610351562,
           "l": 216.2100067138672,
-          "c": 219.3300018310547
+          "c": 219.63499450683594
         }
       ],
-      "relVolume": 0.46231241257481376,
-      "marketCap": 5351652000000
+      "relVolume": 0.47811715402149113,
+      "marketCap": 5359094000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 510.6,
-      "changePct": -0.5705651132751012,
+      "price": 510.665,
+      "changePct": -0.5579665772725263,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 8587820,
+      "volume": 8819967,
       "ohlc": [
         {
           "d": "06-01",
@@ -2593,22 +2584,22 @@
           "o": 510.32501220703125,
           "h": 512.1900024414062,
           "l": 507.30999755859375,
-          "c": 510.6000061035156
+          "c": 510.6647033691406
         }
       ],
-      "relVolume": 0.3013265417651095,
-      "marketCap": 3793758000000
+      "relVolume": 0.30947203767573,
+      "marketCap": 3794240950000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 369.345,
-      "changePct": 0.15049016050380523,
+      "price": 370.131,
+      "changePct": 0.36362249163412574,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 7739633,
+      "volume": 7947146,
       "ohlc": [
         {
           "d": "06-01",
@@ -3056,22 +3047,22 @@
           "o": 369.4549865722656,
           "h": 372.75,
           "l": 366.5,
-          "c": 369.3450012207031
+          "c": 370.1310119628906
         }
       ],
-      "relVolume": 0.3986772456792464,
-      "marketCap": 1817177400000.0002
+      "relVolume": 0.4093664749078981,
+      "marketCap": 1821044519999.9998
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 338.34,
-      "changePct": -2.380360552787381,
+      "price": 338.7,
+      "changePct": -2.276460432853183,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 10283205,
+      "volume": 10593625,
       "ohlc": [
         {
           "d": "06-01",
@@ -3519,22 +3510,22 @@
           "o": 343.697998046875,
           "h": 344.5899963378906,
           "l": 337.156005859375,
-          "c": 338.33990478515625
+          "c": 338.70001220703125
         }
       ],
-      "relVolume": 0.4214700334140421,
-      "marketCap": 4127747999999.9995
+      "relVolume": 0.4341929858177321,
+      "marketCap": 4132140000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 260.825,
-      "changePct": -2.1037347981954504,
+      "price": 261.02,
+      "changePct": -2.0305879081066136,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 15108573,
+      "volume": 15508480,
       "ohlc": [
         {
           "d": "06-01",
@@ -3982,22 +3973,22 @@
           "o": 263.82501220703125,
           "h": 264.3599853515625,
           "l": 259.71600341796875,
-          "c": 260.82501220703125
+          "c": 261.0198974609375
         }
       ],
-      "relVolume": 0.3951489382736585,
-      "marketCap": 2790827500000
+      "relVolume": 0.4056080879536583,
+      "marketCap": 2792914000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 571.065,
-      "changePct": -1.203248478397682,
+      "price": 571.863,
+      "changePct": -1.0652483347905237,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 5337927,
+      "volume": 5542387,
       "ohlc": [
         {
           "d": "06-01",
@@ -4445,22 +4436,22 @@
           "o": 576.77001953125,
           "h": 578.6749877929688,
           "l": 569.1386108398438,
-          "c": 571.0650024414062
+          "c": 571.8626708984375
         }
       ],
-      "relVolume": 0.33309196627725324,
-      "marketCap": 1439083800000.0002
+      "relVolume": 0.34585047410717434,
+      "marketCap": 1441094760000.0002
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 416.29,
-      "changePct": -0.29459199586004103,
+      "price": 416.9,
+      "changePct": -0.14849471486434582,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 3967451,
+      "volume": 4056335,
       "ohlc": [
         {
           "d": "06-01",
@@ -4908,22 +4899,22 @@
           "o": 417.2300109863281,
           "h": 423.6499938964844,
           "l": 416.1199951171875,
-          "c": 416.2900085449219
+          "c": 416.8999938964844
         }
       ],
-      "relVolume": 0.3912301245492909,
-      "marketCap": 2160545100000
+      "relVolume": 0.3999949708928095,
+      "marketCap": 2163711000000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 467.84,
-      "changePct": 0.48541815172594616,
+      "price": 468.55,
+      "changePct": 0.6379142803300314,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 6895052,
+      "volume": 7083704,
       "ohlc": [
         {
           "d": "06-01",
@@ -5371,22 +5362,22 @@
           "o": 466.2200012207031,
           "h": 475.8099060058594,
           "l": 463.70001220703125,
-          "c": 467.8399963378906
+          "c": 468.54998779296875
         }
       ],
-      "relVolume": 0.30732707689359073,
-      "marketCap": 757900800000
+      "relVolume": 0.31573569624992476,
+      "marketCap": 759051000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 185.755,
-      "changePct": -0.2871804297607092,
+      "price": 186.085,
+      "changePct": -0.11003627658667371,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 13702197,
+      "volume": 14036281,
       "ohlc": [
         {
           "d": "06-01",
@@ -5834,22 +5825,22 @@
           "o": 184.4949951171875,
           "h": 187.94000244140625,
           "l": 183.7899932861328,
-          "c": 185.7550048828125
+          "c": 186.0850067138672
         }
       ],
-      "relVolume": 0.2909911480669606,
-      "marketCap": 445812000000
+      "relVolume": 0.2980860312240778,
+      "marketCap": 446604000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 148.78,
-      "changePct": -1.3722288634170017,
+      "price": 149.535,
+      "changePct": -0.8717284641698156,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 6802074,
+      "volume": 7082158,
       "ohlc": [
         {
           "d": "06-01",
@@ -6297,11 +6288,11 @@
           "o": 149.30999755859375,
           "h": 150.19000244140625,
           "l": 147.75,
-          "c": 148.77999877929688
+          "c": 149.53500366210938
         }
       ],
-      "relVolume": 0.2708587326999428,
-      "marketCap": 418071800000
+      "relVolume": 0.2820116835924986,
+      "marketCap": 420193350000
     }
   ],
   "compute": [
@@ -6311,7 +6302,7 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "↑ 14% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6319,7 +6310,7 @@
       "rate": "$3.59 – $4.61/hr",
       "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 14 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6351,11 +6342,11 @@
       "rate": "$1.00 – $1.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-31T17:30:27.692Z",
+    "updatedAt": "2026-08-31T17:45:21.817Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6364,16 +6355,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 300,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 286,
+        "fetchedStoryCount": 271,
         "validatedStoryCount": 35,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 35,
+        "storyCoverage": 0.9475524475524476,
+        "estimatedRelevantDiscussions": 37,
         "isEstimated": true,
-        "rawCommentHits": 2278,
+        "rawCommentHits": 2282,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.13169446883230904,
+        "commentCoverage": 0.13146362839614373,
         "limited": false,
         "points": 722,
         "themes": [
@@ -6437,8 +6428,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 35,
-            "isEstimated": false
+            "discussions": 37,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6452,18 +6443,18 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 832,
+        "rawStoryHits": 833,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 21,
-        "storyCoverage": 0.3605769230769231,
-        "estimatedRelevantDiscussions": 62,
+        "validatedStoryCount": 20,
+        "storyCoverage": 0.36014405762304924,
+        "estimatedRelevantDiscussions": 60,
         "isEstimated": true,
-        "rawCommentHits": 6393,
+        "rawCommentHits": 6394,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 28,
-        "commentCoverage": 0.04692632566870014,
+        "validatedCommentCount": 29,
+        "commentCoverage": 0.046918986549890525,
         "limited": false,
-        "points": 122,
+        "points": 120,
         "themes": [
           {
             "id": "coding",
@@ -6473,7 +6464,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 16
+            "count": 17
           },
           {
             "id": "writing",
@@ -6486,6 +6477,11 @@
             "count": 3
           },
           {
+            "id": "context",
+            "label": "Context limits",
+            "count": 2
+          },
+          {
             "id": "speed",
             "label": "Speed",
             "count": 1
@@ -6493,11 +6489,6 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 1
-          },
-          {
-            "id": "context",
-            "label": "Context limits",
             "count": 1
           },
           {
@@ -6530,7 +6521,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 58,
+            "discussions": 56,
             "isEstimated": true
           },
           {
@@ -6551,10 +6542,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 15,
         "isEstimated": true,
-        "rawCommentHits": 1204,
+        "rawCommentHits": 1205,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.24916943521594684,
+        "commentCoverage": 0.24896265560165975,
         "limited": false,
         "points": 30,
         "themes": [
@@ -6649,10 +6640,10 @@
         "storyCoverage": 0.5415162454873647,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 10474,
+        "rawCommentHits": 10475,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 17,
-        "commentCoverage": 0.028642352491884668,
+        "commentCoverage": 0.028639618138424822,
         "limited": false,
         "points": 121,
         "themes": [
@@ -6888,10 +6879,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4888,
+        "rawCommentHits": 4890,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.06137479541734861,
+        "commentCoverage": 0.06134969325153374,
         "limited": false,
         "points": 516,
         "themes": [
@@ -7070,17 +7061,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "context"
-        ],
-        "excerpt": "…takes the boat 11 minutes How many people can be saved?Claude and Gemini got it right, the others all got it wrong first shot, some needed longer conversations to get it…",
-        "source": "Hacker News",
-        "author": "schulzi",
-        "publishedAt": "2026-08-30T20:42:14.000Z",
-        "url": "https://news.ycombinator.com/item?id=49502568"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "coding",
           "reasoning"
         ],
@@ -7089,6 +7069,18 @@
         "author": "Topfi",
         "publishedAt": "2026-08-29T19:46:33.000Z",
         "url": "https://news.ycombinator.com/item?id=49492740"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "local"
+        ],
+        "excerpt": "…https://github.com/Medicos-por-Venezuela - AI tooling: Claude Code for scaffolding and optimizationWe’d appreciate any feedback on performance, mobile responsiveness, or…",
+        "source": "Hacker News",
+        "author": "softronic",
+        "publishedAt": "2026-08-30T19:47:17.000Z",
+        "url": "https://news.ycombinator.com/item?id=49502098"
       },
       {
         "modelId": "gemini",
