@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-31T13:30:08.180Z",
+  "updatedAt": "2026-08-31T13:30:41.223Z",
   "build": {
     "sha": "6dad90c9e32d3105fd8eb03b38d4329f49439c61",
     "shortSha": "6dad90c",
     "ref": "main",
-    "builtAt": "2026-08-31T13:30:26.944Z"
+    "builtAt": "2026-08-31T13:30:58.360Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,11 +12,12 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 52.6,
-    "estimatedDatasets": 4,
+    "estimatedDatasets": 5,
     "buildSha": "6dad90c",
-    "lastSuccessfulUpdate": "2026-08-31T13:30:08.180Z"
+    "lastSuccessfulUpdate": "2026-08-31T13:30:41.223Z"
   },
   "ticker": [
+    "CHATGPT TO FACE TOUGHER REGULATION IN THE EU",
     "SONY MUSIC PUBLISHING AND WARNER CHAPPELL ARE SUING ANTHROPIC",
     "ELON MUSK’S XAI USED CHILD PORN TO TRAIN GROK MODELS, LAWSUIT SAYS",
     "NVIDIA’S AI ADVANTAGE IS MOVING BEYOND THE GPU",
@@ -25,10 +26,36 @@
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
     "CHINA'S ALIBABA BANS ANTHROPIC AI FOR EMPLOYEES AFTER 'DISTILLATION ATTACK' ACCUSATION",
-    "OPENAI AND HUGGING FACE PARTNER TO ADDRESS SECURITY INCIDENT DURING MODEL EVALUATION",
-    "NEOCLOUD LAMBDA SECURES $1B IN DEBT TO BUY MORE CHIPS"
+    "OPENAI AND HUGGING FACE PARTNER TO ADDRESS SECURITY INCIDENT DURING MODEL EVALUATION"
   ],
   "signals": [
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+      "clusterId": "30vm41",
+      "title": "ChatGPT to face tougher regulation in the EU",
+      "desc": "OpenAI will soon be held accountable for mitigating risks related to ChatGPT's impact on minors, user mental health, and the spread of illegal content in the European Union. That's because ChatGPT is now considered a Very Large Online Search Engine under the EU's Digital Services Act, a set of laws regulating major online services and […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+      "dateISO": "2026-08-31T13:27:36.000Z",
+      "date": "AUG 31 2026",
+      "category": "policy",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 80,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
       "clusterId": "1diuxb8",
@@ -305,7 +332,7 @@
       "significance": 48,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         {
           "name": "Ars Technica",
@@ -314,10 +341,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/gadgets/985549/hugging-face-microduck-robot"
         },
         {
           "name": "Ars Technica",
@@ -1189,32 +1212,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus",
-      "clusterId": "8z84j1",
-      "title": "OpenAI’s executive exodus has one big winner",
-      "desc": "Today on Decoder, I’m talking to Verge senior AI reporter Hayden Field about some pure Decoder bait: the seemingly-endless org chart changes at OpenAI, and how all of them seem to consolidate power under cofounder Greg Brockman, the company’s president. While Sam Altman is the CEO and still OpenAI’s most public face, Brockman has amassed […]",
-      "url": "https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus",
-      "dateISO": "2026-08-27T14:00:00.000Z",
-      "date": "AUG 27 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 40,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/podcast/985332/openai-greg-brockman-sam-altman-leader-executive-exodus"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1252,25 +1249,26 @@
     {
       "family": "market",
       "category": "policy",
-      "title": "Sony Music Publishing and Warner Chappell are suing Anthropic",
-      "summary": "Sony Music Publishing and Warner Chappell have filed suit against Anthropic in the US District Court for the Northern District of California seeking damages for \"tens of thousands…",
-      "significance": 57,
-      "impact": "notable",
+      "title": "ChatGPT to face tougher regulation in the EU",
+      "summary": "OpenAI will soon be held accountable for mitigating risks related to ChatGPT's impact on minors, user mental health, and the spread of illegal content in the European Union. That'…",
+      "significance": 80,
+      "impact": "high",
       "verification": "single",
-      "date": "AUG 29 2026",
-      "dateISO": "2026-08-29T18:19:53.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright",
+      "date": "AUG 31 2026",
+      "dateISO": "2026-08-31T13:27:36.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
       "sourceCount": 1,
       "sources": [
         {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright"
+          "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa"
         }
       ],
       "entityIds": [
-        "claude"
+        "chatgpt",
+        "gpt"
       ],
-      "whyItMatters": "However it resolves, the case could set a precedent for how models may be built, trained or licensed."
+      "whyItMatters": "If it holds up, new rules here can change what products are allowed to ship, and in which markets."
     },
     {
       "family": "research",
@@ -1297,10 +1295,10 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 29,
+    "chatgpt": 30,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 75,
+    "gpt": 76,
     "claude": 75,
     "gemini": 29,
     "grok": 1,
@@ -1483,6 +1481,30 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "AUG 31 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "ChatGPT to face tougher regulation in the EU",
+      "p": "OpenAI will soon be held accountable for mitigating risks related to ChatGPT's impact on minors, user mental health, and the spread of illegal content in the European Union. That's because ChatGPT is now considered a Very Large Online Search Engine under the…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "AUG 31 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Instagram cracks down on AI accounts pretending to be human",
+      "p": "Instagram is finally taking steps to address the rise of fake AI-influencer accounts that have gotten harder to spot. It's also renaming the \"AI creator\" label to \"AI-generated profile\" to make it clear when a profile features an AI-generated person that's no…",
+      "url": "https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "AUG 31 2026",
@@ -1551,30 +1573,6 @@
       "h": "Musk’s faster path to more gas turbines comes with pollution problem",
       "p": "Elon Musk says a secretive new SpaceX foundry will let him cast his own turbine blades and get gas power online 18 months faster than anyone else — but it's a bet on a fuel source that's already triggering lawsuits and health studies everywhere his (and other…",
       "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 30 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Texas Governor Abbott blocks funding for more Flock cameras",
-      "p": "As backlash grows over Flock's AI surveillance cameras, Texas Governor Greg Abbott has frozen state spending on them. The move came just ahead of the publication of a Texas Tribune investigation that revealed the state spent over $30 million on Flock cameras.…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/986541/texas-governor-abbott-flock-cameras",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "AUG 30 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Caterpillar is bringing to AI deployment what it learned from automating mining",
-      "p": "Caterpillar has spent decades putting autonomous machines to work at remote mining sites. It's now bringing that experience to AI deployment.",
-      "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1679,11 +1677,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 218.7,
-      "changePct": 0.5286127014985965,
+      "price": 218.39,
+      "changePct": 0.3861164450044984,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 3789193,
+      "volume": 5118944,
       "ohlc": [
         {
           "d": "06-01",
@@ -2125,21 +2123,28 @@
           "h": 229.25999450683594,
           "l": 216.80999755859375,
           "c": 217.5500030517578
+        },
+        {
+          "d": "08-31",
+          "o": 218.86199951171875,
+          "h": 218.9980010986328,
+          "l": 218.17999267578125,
+          "c": 218.38999938964844
         }
       ],
-      "relVolume": 1.5549664762181026,
-      "marketCap": 5336280000000
+      "relVolume": 0.04003239382609117,
+      "marketCap": 5328716000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 510.3,
-      "changePct": -0.6289854755519444,
+      "price": 509.33,
+      "changePct": -0.8178767520879102,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 1524828,
+      "volume": 1558980,
       "ohlc": [
         {
           "d": "06-01",
@@ -2581,21 +2586,28 @@
           "h": 517.780029296875,
           "l": 504.8699951171875,
           "c": 513.530029296875
+        },
+        {
+          "d": "08-31",
+          "o": 510.32501220703125,
+          "h": 511.489990234375,
+          "l": 508.94000244140625,
+          "c": 509.3299865722656
         }
       ],
-      "relVolume": 0.9699126728567853,
-      "marketCap": 3791529000000
+      "relVolume": 0.05470096626163222,
+      "marketCap": 3784321900000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 369.455,
-      "changePct": 0.1803171017842549,
+      "price": 369.61,
+      "changePct": 0.2223424679740868,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 640388,
+      "volume": 931399,
       "ohlc": [
         {
           "d": "06-01",
@@ -3037,21 +3049,28 @@
           "h": 376.5899963378906,
           "l": 365.3500061035156,
           "c": 368.7900085449219
+        },
+        {
+          "d": "08-31",
+          "o": 369.4549865722656,
+          "h": 370,
+          "l": 369.3299865722656,
+          "c": 369.6099853515625
         }
       ],
-      "relVolume": 0.845354351273107,
-      "marketCap": 1817718600000
+      "relVolume": 0.04797741545993258,
+      "marketCap": 1818481200000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 344.185,
-      "changePct": -0.6939024101393831,
+      "price": 343.28,
+      "changePct": -0.9550182040934709,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 529929,
+      "volume": 557766,
       "ohlc": [
         {
           "d": "06-01",
@@ -3493,21 +3512,28 @@
           "h": 349.1400146484375,
           "l": 340.2699890136719,
           "c": 346.5899963378906
+        },
+        {
+          "d": "08-31",
+          "o": 343.697998046875,
+          "h": 344.5899963378906,
+          "l": 343.2699890136719,
+          "c": 343.2799987792969
         }
       ],
-      "relVolume": 0.9944984681304553,
-      "marketCap": 4199057000000
+      "relVolume": 0.022860737936977488,
+      "marketCap": 4188015999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 263.83,
-      "changePct": -0.9758633589519321,
+      "price": 263.78,
+      "changePct": -0.9946304730448098,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 985687,
+      "volume": 1023835,
       "ohlc": [
         {
           "d": "06-01",
@@ -3949,21 +3975,28 @@
           "h": 267.55999755859375,
           "l": 257.7799987792969,
           "c": 266.42999267578125
+        },
+        {
+          "d": "08-31",
+          "o": 263.82501220703125,
+          "h": 264.3599853515625,
+          "l": 263.5,
+          "c": 263.7799987792969
         }
       ],
-      "relVolume": 1.1720136163035573,
-      "marketCap": 2822981000000
+      "relVolume": 0.026777334511830547,
+      "marketCap": 2822445999999.9995
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 578.02,
-      "changePct": 1.2117044722708434,
+      "price": 576.625,
+      "changePct": -0.24134450090176848,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 258108,
+      "volume": 458266,
       "ohlc": [
         {
           "d": "06-01",
@@ -4405,21 +4438,28 @@
           "h": 589.1900024414062,
           "l": 571,
           "c": 578.02001953125
+        },
+        {
+          "d": "08-31",
+          "o": 576.77001953125,
+          "h": 578.6500244140625,
+          "l": 576.625,
+          "c": 576.625
         }
       ],
-      "relVolume": 0.9744946705849322,
-      "marketCap": 1456610400000
+      "relVolume": 0.028596255253773933,
+      "marketCap": 1453095000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 418.61,
-      "changePct": 0.26106446794693045,
+      "price": 419.99,
+      "changePct": 0.5915887348383322,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 329387,
+      "volume": 394389,
       "ohlc": [
         {
           "d": "06-01",
@@ -4865,24 +4905,24 @@
         {
           "d": "08-31",
           "o": 427.489990234375,
-          "h": 418.79998779296875,
+          "h": 420.04998779296875,
           "l": 417.2300109863281,
-          "c": 418.6099853515625
+          "c": 419.989990234375
         }
       ],
-      "relVolume": 0.03248083392458213,
-      "marketCap": 2172585900000
+      "relVolume": 0.038890677563722977,
+      "marketCap": 2179748100000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 465.08,
-      "changePct": -0.10739004825930912,
+      "price": 464.3,
+      "changePct": -0.27492564461814517,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 359064,
+      "volume": 395611,
       "ohlc": [
         {
           "d": "06-01",
@@ -5324,21 +5364,28 @@
           "h": 478.75,
           "l": 465.2900085449219,
           "c": 465.5799865722656
+        },
+        {
+          "d": "08-31",
+          "o": 466.2200012207031,
+          "h": 466.239990234375,
+          "l": 463.70001220703125,
+          "c": 464.29998779296875
         }
       ],
-      "relVolume": 0.6669218907714747,
-      "marketCap": 753429600000
+      "relVolume": 0.0176332204915859,
+      "marketCap": 752166000000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 184.59,
-      "changePct": -0.912552121638492,
+      "price": 185.01,
+      "changePct": -0.6870427902198604,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 733884,
+      "volume": 785123,
       "ohlc": [
         {
           "d": "06-01",
@@ -5780,21 +5827,28 @@
           "h": 188.3699951171875,
           "l": 184.3800048828125,
           "c": 186.2899932861328
+        },
+        {
+          "d": "08-31",
+          "o": 184.4949951171875,
+          "h": 185.44000244140625,
+          "l": 184.32000732421875,
+          "c": 185.01010131835938
         }
       ],
-      "relVolume": 0.5285277233675822,
-      "marketCap": 443016000000
+      "relVolume": 0.016673519081923598,
+      "marketCap": 444024000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 148.9,
-      "changePct": -1.2926828824210463,
+      "price": 149.714,
+      "changePct": -0.00026800702794912355,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 651512,
+      "volume": 713878,
       "ohlc": [
         {
           "d": "06-01",
@@ -6240,13 +6294,13 @@
         {
           "d": "08-31",
           "o": 153.60000610351562,
-          "h": 149.2449951171875,
-          "l": 148.89999389648438,
-          "c": 148.89999389648438
+          "h": 150.13999938964844,
+          "l": 148.88499450683594,
+          "c": 149.7144012451172
         }
       ],
-      "relVolume": 0.025943221825990886,
-      "marketCap": 418409000000
+      "relVolume": 0.02842663728480016,
+      "marketCap": 420696340000
     }
   ],
   "compute": [
@@ -6261,10 +6315,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.74/hr",
-      "trend": "↑ 5% vs 7d ago",
+      "rate": "$3.59 – $4.59/hr",
+      "trend": "↑ 3% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6293,14 +6347,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$0.67 – $1.59/hr",
+      "trend": "↓ 13% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-08-31T13:30:08.180Z",
+    "updatedAt": "2026-08-31T13:30:41.223Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6671,8 +6725,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 55,
-        "fetchedStoryCount": 55,
+        "rawStoryHits": 56,
+        "fetchedStoryCount": 56,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
@@ -6750,11 +6804,11 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
+        "fetchedStoryCount": 138,
         "validatedStoryCount": 21,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
-        "isEstimated": false,
+        "storyCoverage": 0.9517241379310345,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": true,
         "rawCommentHits": 1173,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
@@ -6817,8 +6871,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": false
+            "discussions": 22,
+            "isEstimated": true
           }
         ]
       },
