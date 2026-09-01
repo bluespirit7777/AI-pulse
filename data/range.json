@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T16:01:47.362Z",
+  "generatedAt": "2026-09-01T16:15:21.073Z",
   "historyDepthDays": 53.7,
   "ranges": {
     "24H": {
@@ -8,8 +8,8 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": 3,
-        "claude": 16,
-        "gemini": 2,
+        "claude": 14,
+        "gemini": 4,
         "grok": 2,
         "llama": 0,
         "deepseek": 0,
@@ -29,9 +29,9 @@
         "chatgpt": -3,
         "copilot": 0,
         "perplexity": 0,
-        "gpt": -3,
-        "claude": 0,
-        "gemini": 2,
+        "gpt": -2,
+        "claude": -3,
+        "gemini": 4,
         "grok": 2,
         "llama": 0,
         "deepseek": 0,
@@ -48,17 +48,22 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "policy": 4,
+        "policy": 3,
         "capital": 4,
         "general": 16,
         "market": 2,
-        "product": 2
+        "product": 4
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 16,
-          "delta": 0
+          "count": 14,
+          "delta": -3
+        },
+        {
+          "id": "gemini",
+          "count": 4,
+          "delta": 4
         },
         {
           "id": "chatgpt",
@@ -68,12 +73,7 @@
         {
           "id": "gpt",
           "count": 3,
-          "delta": -3
-        },
-        {
-          "id": "gemini",
-          "count": 2,
-          "delta": 2
+          "delta": -2
         },
         {
           "id": "grok",
@@ -86,7 +86,7 @@
           "delta": -1
         }
       ],
-      "eventCount": 28,
+      "eventCount": 29,
       "previousWindowComplete": true
     },
     "7D": {
@@ -96,7 +96,7 @@
         "perplexity": 0,
         "gpt": 93,
         "claude": 272,
-        "gemini": 64,
+        "gemini": 66,
         "grok": 8,
         "llama": 0,
         "deepseek": 0,
@@ -118,7 +118,7 @@
         "perplexity": 0,
         "gpt": -58,
         "claude": 28,
-        "gemini": -16,
+        "gemini": -14,
         "grok": -9,
         "llama": -14,
         "deepseek": 0,
@@ -135,13 +135,13 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "general": 401,
-        "capital": 80,
+        "general": 402,
+        "capital": 72,
         "orggov": 14,
         "market": 30,
         "analysis": 36,
         "adoption": 32,
-        "product": 23,
+        "product": 25,
         "policy": 37,
         "opensource": 13,
         "research": 23,
@@ -160,8 +160,8 @@
         },
         {
           "id": "gemini",
-          "count": 64,
-          "delta": -16
+          "count": 66,
+          "delta": -14
         },
         {
           "id": "chatgpt",
@@ -189,7 +189,7 @@
           "delta": 1
         }
       ],
-      "eventCount": 707,
+      "eventCount": 702,
       "previousWindowComplete": true
     },
     "30D": {
@@ -199,7 +199,7 @@
         "perplexity": 3,
         "gpt": 988,
         "claude": 1075,
-        "gemini": 395,
+        "gemini": 397,
         "grok": 45,
         "llama": 17,
         "deepseek": 0,
@@ -219,14 +219,14 @@
       "categoryCounts": {
         "orggov": 78,
         "opensource": 111,
-        "general": 2170,
+        "general": 2171,
         "capital": 301,
         "policy": 149,
         "adoption": 242,
         "analysis": 280,
         "market": 184,
         "compute": 117,
-        "product": 271,
+        "product": 273,
         "research": 279
       },
       "topEntities": [
@@ -242,7 +242,7 @@
         },
         {
           "id": "gemini",
-          "count": 395,
+          "count": 397,
           "delta": null
         },
         {
@@ -271,7 +271,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4182,
+      "eventCount": 4185,
       "previousWindowComplete": false
     }
   },
@@ -1130,9 +1130,9 @@
         "policy": 18,
         "market": 11,
         "capital": 19,
-        "general": 188,
+        "general": 189,
         "analysis": 23,
-        "product": 24,
+        "product": 26,
         "compute": 5,
         "opensource": 2,
         "research": 14,
