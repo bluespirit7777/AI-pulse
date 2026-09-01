@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T15:00:32.211Z",
+  "generatedAt": "2026-09-01T15:15:25.265Z",
   "historyDepthDays": 53.6,
   "ranges": {
     "24H": {
@@ -20,7 +20,7 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 3,
+        "nvidia": 1,
         "amd": 0,
         "tsmc": 0,
         "broadcom": 0
@@ -42,16 +42,17 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 3,
+        "nvidia": -1,
         "amd": 0,
         "tsmc": 0,
         "broadcom": 0
       },
       "categoryCounts": {
-        "capital": 7,
         "policy": 5,
+        "capital": 5,
         "general": 16,
-        "market": 2
+        "market": 2,
+        "product": 1
       },
       "topEntities": [
         {
@@ -70,11 +71,6 @@
           "delta": -3
         },
         {
-          "id": "nvidia",
-          "count": 3,
-          "delta": 3
-        },
-        {
           "id": "gemini",
           "count": 2,
           "delta": 2
@@ -83,9 +79,14 @@
           "id": "grok",
           "count": 2,
           "delta": 2
+        },
+        {
+          "id": "nvidia",
+          "count": 1,
+          "delta": -1
         }
       ],
-      "eventCount": 30,
+      "eventCount": 29,
       "previousWindowComplete": true
     },
     "7D": {
@@ -134,13 +135,13 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "general": 409,
+        "general": 401,
         "capital": 79,
         "orggov": 14,
         "market": 34,
         "analysis": 36,
         "adoption": 32,
-        "product": 21,
+        "product": 22,
         "policy": 37,
         "opensource": 13,
         "research": 23,
@@ -188,7 +189,7 @@
           "delta": 1
         }
       ],
-      "eventCount": 716,
+      "eventCount": 709,
       "previousWindowComplete": true
     },
     "30D": {
@@ -225,7 +226,7 @@
         "analysis": 280,
         "market": 184,
         "compute": 117,
-        "product": 269,
+        "product": 270,
         "research": 279
       },
       "topEntities": [
@@ -270,7 +271,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4179,
+      "eventCount": 4180,
       "previousWindowComplete": false
     }
   },
@@ -1131,7 +1132,7 @@
         "capital": 18,
         "general": 188,
         "analysis": 23,
-        "product": 22,
+        "product": 23,
         "compute": 5,
         "opensource": 2,
         "research": 14,
