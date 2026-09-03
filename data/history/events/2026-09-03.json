@@ -69,7 +69,7 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 52,
+    "significance": 51,
     "sourceCount": 1,
     "verification": "single",
     "collectedOn": "2026-09-03"
@@ -99,7 +99,7 @@
     "entityIds": [
       "gemini"
     ],
-    "significance": 51,
+    "significance": 50,
     "sourceCount": 1,
     "verification": "official",
     "collectedOn": "2026-09-03"
@@ -159,8 +159,8 @@
     "entityIds": [
       "gpt"
     ],
-    "significance": 50,
-    "sourceCount": 2,
+    "significance": 45,
+    "sourceCount": 1,
     "verification": "uncertain",
     "collectedOn": "2026-09-03"
   },
@@ -388,7 +388,7 @@
     "category": "capital",
     "family": "market",
     "entityIds": [],
-    "significance": 41,
+    "significance": 40,
     "sourceCount": 1,
     "verification": "single",
     "collectedOn": "2026-09-03"
@@ -569,9 +569,9 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 43,
-    "sourceCount": 6,
-    "verification": "official",
+    "significance": 33,
+    "sourceCount": 2,
+    "verification": "corroborated",
     "collectedOn": "2026-09-03"
   },
   {
@@ -1441,9 +1441,9 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 28,
-    "sourceCount": 1,
-    "verification": "single",
+    "significance": 43,
+    "sourceCount": 5,
+    "verification": "corroborated",
     "collectedOn": "2026-09-03"
   },
   {
@@ -1456,9 +1456,9 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 28,
-    "sourceCount": 1,
-    "verification": "single",
+    "significance": 33,
+    "sourceCount": 2,
+    "verification": "corroborated",
     "collectedOn": "2026-09-03"
   },
   {
@@ -3852,7 +3852,7 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 41,
+    "significance": 40,
     "sourceCount": 1,
     "verification": "single",
     "collectedOn": "2026-09-03"
@@ -4133,7 +4133,7 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 53,
+    "significance": 52,
     "sourceCount": 1,
     "verification": "single",
     "collectedOn": "2026-09-03"
@@ -4541,7 +4541,7 @@
       "deepseek"
     ],
     "significance": 43,
-    "sourceCount": 5,
+    "sourceCount": 4,
     "verification": "corroborated",
     "collectedOn": "2026-09-03"
   },
@@ -4720,8 +4720,8 @@
       "copilot",
       "claude"
     ],
-    "significance": 53,
-    "sourceCount": 4,
+    "significance": 46,
+    "sourceCount": 3,
     "verification": "corroborated",
     "collectedOn": "2026-09-03"
   },
@@ -4751,8 +4751,8 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 55,
-    "sourceCount": 3,
+    "significance": 49,
+    "sourceCount": 2,
     "verification": "uncertain",
     "collectedOn": "2026-09-03"
   },
@@ -5684,8 +5684,8 @@
     "entityIds": [
       "claude"
     ],
-    "significance": 33,
-    "sourceCount": 2,
+    "significance": 38,
+    "sourceCount": 3,
     "verification": "corroborated",
     "collectedOn": "2026-09-03"
   },
@@ -6509,6 +6509,84 @@
     "clusterId": "v71srj",
     "title": "Anthropic slips an invisible signature into Claude",
     "publishedAt": "2026-08-12T07:00:00.000Z",
+    "category": "general",
+    "family": "product",
+    "entityIds": [
+      "claude"
+    ],
+    "significance": 28,
+    "sourceCount": 1,
+    "verification": "single",
+    "collectedOn": "2026-09-03"
+  },
+  {
+    "id": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
+    "clusterId": "w9giy3",
+    "title": "Nvidia launches free tool that links idle computers into a personal AI data center",
+    "publishedAt": "2026-09-03T16:00:00.000Z",
+    "category": "opensource",
+    "family": "product",
+    "entityIds": [
+      "nvidia"
+    ],
+    "significance": 77,
+    "sourceCount": 1,
+    "verification": "single",
+    "collectedOn": "2026-09-03"
+  },
+  {
+    "id": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
+    "clusterId": "mnrksr",
+    "title": "Google now lets you chat with Gmail, Docs, and Keep",
+    "publishedAt": "2026-09-03T16:00:00.000Z",
+    "category": "general",
+    "family": "product",
+    "entityIds": [
+      "gemini"
+    ],
+    "significance": 55,
+    "sourceCount": 1,
+    "verification": "single",
+    "collectedOn": "2026-09-03"
+  },
+  {
+    "id": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down",
+    "clusterId": "qkdbgp",
+    "title": "ChatGPT, Grok, and Claude all went down at the same time",
+    "publishedAt": "2026-09-03T15:35:14.000Z",
+    "category": "general",
+    "family": "product",
+    "entityIds": [
+      "chatgpt",
+      "gpt",
+      "claude",
+      "grok"
+    ],
+    "significance": 55,
+    "sourceCount": 1,
+    "verification": "single",
+    "collectedOn": "2026-09-03"
+  },
+  {
+    "id": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNekZ5NzlucUlaZTJjdHRhMjR3cjA0R0dNbGVFZlNEbU9Kd2MyQm9fUVY3WmdiZy1QZE5PYTlMS0h6cWRPTm1VY21FeG1oLWpSeUlRZ1VUTzVRMjg4S3FtajA1ZDZuRE9tdUxwVG03RnBSRjhvaFF5YmhfSzRObE9yZnBqVkV6cll6Y0ZmYnZDMlFOZXFWOVlUNDZPONIBoAFBVV95cUxNU0FCdjNVVE5LejN5Q0R1dERNSU8wRnFwZk9WOEhYSWNrYnZidnRzU05kSV80MGRYWUpCcDNWVUQzT0NLSUF6cGFfcXZ1dHU5WGNqdzFOdHVDVHVxenAwc1pIOUNJNURkNU5zZUtObklXZEpaQlVqOElOVS14TVI1d0NIUmZET2dUS1g3WFpHS2wxbmFyWXNleTdWTmF5bmVD?oc=5",
+    "clusterId": "1080u6k",
+    "title": "Judge rules Pentagon’s supply chain risk designation for Anthropic was illegal",
+    "publishedAt": "2026-08-28T03:03:00.000Z",
+    "category": "general",
+    "family": "product",
+    "entityIds": [
+      "claude"
+    ],
+    "significance": 28,
+    "sourceCount": 1,
+    "verification": "single",
+    "collectedOn": "2026-09-03"
+  },
+  {
+    "id": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcklqU2RlQWZLY3c5dG9uaF83Z0xHSHNuQzNHSGZOTWw3c2wzSmtGTE45VzlWaF80R2tON1JfcFhFVC1walRFUmRyVDA1UkdoQ3pydUdKc1hPTm9SQTV0akl4aWV6NlVqR3ZtSEhCYjJlRTJTOTJYWHU2aDJIWjl0c21ReTJDRVlKb0pwRVE3MTJLdUdVeE9tSGJuQ2hoN3RBbFMtTGJrdw?oc=5",
+    "clusterId": "gssnzl",
+    "title": "Salesforce and Anthropic Announce Claudeforce: The #1 AI Meets the #1 AI CRM",
+    "publishedAt": "2026-08-26T07:00:00.000Z",
     "category": "general",
     "family": "product",
     "entityIds": [
