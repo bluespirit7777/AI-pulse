@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-02T23:45:25.658Z",
+  "updatedAt": "2026-09-03T00:00:32.335Z",
   "build": {
-    "sha": "71c83b805c24f91fae05670193fa09dae1144aaf",
-    "shortSha": "71c83b8",
+    "sha": "6e26ddcd7ca7c769fa0a0348c353cb9f17b80ca0",
+    "shortSha": "6e26ddc",
     "ref": "main",
-    "builtAt": "2026-09-02T23:45:41.409Z"
+    "builtAt": "2026-09-03T00:01:19.430Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 55,
-    "estimatedDatasets": 4,
-    "buildSha": "71c83b8",
-    "lastSuccessfulUpdate": "2026-09-02T23:45:25.658Z"
+    "estimatedDatasets": 5,
+    "buildSha": "6e26ddc",
+    "lastSuccessfulUpdate": "2026-09-03T00:00:32.335Z"
   },
   "ticker": [
     "GOOGLE SAYS ITS NEW GEMINI 3.8 FLASH MODEL ‘WORKS HARDER’ BUT MIGHT COST MORE",
@@ -23,10 +23,10 @@
     "TECHCRUNCH DISRUPT 2026’S NEW REAL WORLD AI STAGE FEATURES NVIDIA, ROBOTS, AND EXTINCT ANIMALS",
     "SALES WORKFLOWS WITH CHATGPT WORK",
     "ANTHROPIC CHANGES DATA RETENTION POLICY AFTER PUSHBACK FROM CUSTOMERS",
-    "INTRODUCING AGENTIC VIDEO UNDERSTANDING WITH GEMINI",
     "RESEARCHERS FEAR SAFETY DISASTER AHEAD OF OPENAI’S ASTRA RELEASE",
+    "INTRODUCING AGENTIC VIDEO UNDERSTANDING WITH GEMINI",
     "TRY GOOGLE PICS: EASY IMAGE CREATION AND EDITING IN GOOGLE WORKSPACE",
-    "INTRODUCING GEMINI 3.5 FLASH CYBER"
+    "ANTHROPIC LAUNCHES CLAUDE OPUS 5 WITH EFFICIENCY, SAFETY IMPROVEMENTS"
   ],
   "signals": [
     {
@@ -212,39 +212,13 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "cnbc.com",
+          "name": "CNBC",
           "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBkcVVPMGQtbVV6Mm9JNGxwN0RVR2VLMEZOcC1pN0tPZEdpekYzR1B0ZWpvWEpPUC1LY1pYamxsclZwTko0TTFpenBNQVZoWmJ6MnhLclVpYmxVY05HQm9ya0hQcWlRN0YyVWxNakFB0gFzQVVfeXFMT1VZRkJMTFhpYUZQVGVVdHdHTlRrbzVMQ09ETmpVUFh0MGY0bzBKdlBWU19Ral9wdFZkalowamlqenVuaHcwREpSQ2NDWWVjbS1jT2tJdzlLUmpYSFlCMkJWMkhjdGZsR0REMzdCOUxQdkh0QQ?oc=5"
         }
       ],
-      "sourceName": "cnbc.com",
+      "sourceName": "CNBC",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
-      "clusterId": "1ht9pnu",
-      "title": "Introducing agentic video understanding with Gemini",
-      "desc": "",
-      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
-      "dateISO": "2026-09-01T17:08:51.000Z",
-      "date": "SEP 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 59,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
       ]
     },
     {
@@ -274,6 +248,32 @@
       ]
     },
     {
+      "id": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+      "clusterId": "1ht9pnu",
+      "title": "Introducing agentic video understanding with Gemini",
+      "desc": "",
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+      "dateISO": "2026-09-01T17:08:51.000Z",
+      "date": "SEP 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
       "clusterId": "d1oux9",
       "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
@@ -297,6 +297,44 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNUxna2dxVzRlOEtZdFBOYTRDdG52R0NEQlVSSU9FVmg3MVpDWTdfejVIV1ZEWGxrYmlUdHk4Y09NNWc0WnZXeUkzOW80V1YySzZVdDh4NTdWZ2d3d1BOUVUtcnpvalh5Z0RFRW1XUDFINWpWRXJqS1pvRGRLZjdIcjhYVHhiWnZLWnJoMV9Ma0NtVTlwNHIxZC1MSWJmUkRMcUE?oc=5",
+      "clusterId": "1as5d6n",
+      "title": "Anthropic launches Claude Opus 5 with efficiency, safety improvements",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNUxna2dxVzRlOEtZdFBOYTRDdG52R0NEQlVSSU9FVmg3MVpDWTdfejVIV1ZEWGxrYmlUdHk4Y09NNWc0WnZXeUkzOW80V1YySzZVdDh4NTdWZ2d3d1BOUVUtcnpvalh5Z0RFRW1XUDFINWpWRXJqS1pvRGRLZjdIcjhYVHhiWnZLWnJoMV9Ma0NtVTlwNHIxZC1MSWJmUkRMcUE?oc=5",
+      "dateISO": "2026-07-24T07:00:00.000Z",
+      "date": "JUL 24 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "InfoWorld",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEVPanRHOURFbEtkeDNjV0RjN254bVNobGhMZHNDN1ZsQ0VxZ3Rock5abDliWGNoLS0yLTVEeTBTY1ZYVXgzZlJaUlAtcHRvWHN6M1VLUUhUZ1M1MmNkRG8taTRhTkRsWWJjeUlpdHZxa1Z3NTNFQTJPSDBFU3lRZUFzbjFxWUtKUW1RbDdqajZFRzVVbDVtbkNn?oc=5"
+        },
+        {
+          "name": "Google News (Anthropic)",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQU1hBN3ZoX2tqWFhrQWJNNVZxZHZHVDhHVHljMW9rSHpleVVvUXNZaG9yeU5lckdlbEZLMnFxUkQwdi11VTJkaVRKOGhQUnJLTk9LN0FLY0tBQ2l4WWc4Nkd6LThqLUJQR3JrRVNwanRQVXpNdlBfbkZwaTBOMGxmNGVLSEY1RnRWX1FmMzFzaHViVTlWTVZiSzNEMTBTTjlSdHVJZ251c1NGemMwcDg1ZEdNeldLS0NjR3MyMVJn?oc=5"
+        },
+        {
+          "name": "Google News (Anthropic)",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQd3dndnBYZjY0MVBWTjAtNGFYMmFkVUFEUHZmMkZpWVBscjh2VGlRNlJSREdfV3ZmNURtcWVWeTNhYnRudEU3eUhMMkt6bTBRNGRkS2I3WTMwWU5IcmxLdGFXcm56cGJMcmZoWjlpeWdwSjZlRVpRelhFcTkza01tdkZjcGNOQjBKa0JlOFV1bGtRSGJwVkRDb2h3STRKRVN5NEJmM1Q3aVZtUzBRQURlaXpxUENyWHFQZVk0LVBrdUM2QlZm?oc=5"
+        },
+        {
+          "name": "SiliconANGLE",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNUxna2dxVzRlOEtZdFBOYTRDdG52R0NEQlVSSU9FVmg3MVpDWTdfejVIV1ZEWGxrYmlUdHk4Y09NNWc0WnZXeUkzOW80V1YySzZVdDh4NTdWZ2d3d1BOUVUtcnpvalh5Z0RFRW1XUDFINWpWRXJqS1pvRGRLZjdIcjhYVHhiWnZLWnJoMV9Ma0NtVTlwNHIxZC1MSWJmUkRMcUE?oc=5"
+        }
+      ],
+      "sourceName": "SiliconANGLE",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -576,32 +614,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/",
-      "clusterId": "vllf6a",
-      "title": "ChatGPT and Reddit now face EU's toughest online safety rules",
-      "desc": "Explosive growth comes with a new regulatory burden in the European Union.",
-      "url": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/",
-      "dateISO": "2026-08-31T13:41:40.000Z",
-      "date": "AUG 31 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYzZqUDlvOWZzQ19EM3pESFJqMnFJdENmakRMV0gzVzA1QVBIUEQ0RHpRMVRhU2JheUhuSjFMOXFtdkVQVVlZMHB4eWxnZWVELVhlYUg4bFVfWF9RVEpYc1pJaHZYbHBsSFhkc25CUThtMUZoTVlaX0dERTh0dmVXcl9iZlJ5YjJNMEQ3UmVoMU5heXhOSzJfU2ZOWDg0RHYwRGIwSWtB?oc=5",
       "clusterId": "1n9mxtr",
       "title": "Sony, Warner Sue Anthropic for Allegedly Illegally Training Claude",
@@ -628,28 +640,30 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
-      "clusterId": "cx6zeu",
-      "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
-      "desc": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
-      "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
-      "dateISO": "2026-09-02T16:04:10.000Z",
-      "date": "SEP 02 2026",
-      "category": "capital",
-      "catConfidence": 0.9,
+      "id": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/",
+      "clusterId": "vllf6a",
+      "title": "ChatGPT and Reddit now face EU's toughest online safety rules",
+      "desc": "Explosive growth comes with a new regulatory burden in the European Union.",
+      "url": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/",
+      "dateISO": "2026-08-31T13:41:40.000Z",
+      "date": "AUG 31 2026",
+      "category": "policy",
+      "catConfidence": 0.67,
       "family": "market",
-      "significance": 50,
+      "significance": 51,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/"
         }
       ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "chatgpt"
+      ]
     },
     {
       "id": "https://openai.com/index/nvidia/chatgpt-work",
@@ -687,6 +701,30 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+      "clusterId": "cx6zeu",
+      "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
+      "desc": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
+      "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+      "dateISO": "2026-09-02T16:04:10.000Z",
+      "date": "SEP 02 2026",
+      "category": "capital",
+      "catConfidence": 0.9,
+      "family": "market",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
       "clusterId": "a5d4hd",
       "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
@@ -711,28 +749,30 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
-      "clusterId": "1bsf095",
-      "title": "Adobe acquires Indian market intelligence startup Rilo",
-      "desc": "This is Adobe's second acquisition out of India after Rephrase.ai in 2023",
-      "url": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
-      "dateISO": "2026-09-02T14:03:57.000Z",
-      "date": "SEP 02 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
+      "id": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE43bmJ1em1mUk9FdkRMWnJfR1Z3aVJxMG55dUhxUFdkZ2N1d2V6S2dDTm03ZFJoc0N3VTNRc1Qxc0xsaEFPQ3R6c3g1ZGpQNTFyTlRnXzNIQlVpOGdrUUhza1dR0gFqQVVfeXFMTWIyNlU4Y0JxcEdxUVhfR0s5S053Y2RWR1p4eWUtNmg3WDNpc3N5c1hkaFR4aVZCOGRhY0lPM2EtZEhSbDVDNDF3MUhkdVplTF85TkltSFZrYUN4Vy1UMUVHcEQ0dnBSQVdwUQ?oc=5",
+      "clusterId": "1axfqcp",
+      "title": "Anthropic Ships Claude Fable 5.1, More Than Doubling Its Predecessor on Key Benchmark",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE43bmJ1em1mUk9FdkRMWnJfR1Z3aVJxMG55dUhxUFdkZ2N1d2V6S2dDTm03ZFJoc0N3VTNRc1Qxc0xsaEFPQ3R6c3g1ZGpQNTFyTlRnXzNIQlVpOGdrUUhza1dR0gFqQVVfeXFMTWIyNlU4Y0JxcEdxUVhfR0s5S053Y2RWR1p4eWUtNmg3WDNpc3N5c1hkaFR4aVZCOGRhY0lPM2EtZEhSbDVDNDF3MUhkdVplTF85TkltSFZrYUN4Vy1UMUVHcEQ0dnBSQVdwUQ?oc=5",
+      "dateISO": "2026-09-01T19:29:12.000Z",
+      "date": "SEP 01 2026",
+      "category": "research",
+      "catConfidence": 0.38,
+      "family": "research",
       "significance": 49,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/"
+          "name": "decrypt.co",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE43bmJ1em1mUk9FdkRMWnJfR1Z3aVJxMG55dUhxUFdkZ2N1d2V6S2dDTm03ZFJoc0N3VTNRc1Qxc0xsaEFPQ3R6c3g1ZGpQNTFyTlRnXzNIQlVpOGdrUUhza1dR0gFqQVVfeXFMTWIyNlU4Y0JxcEdxUVhfR0s5S053Y2RWR1p4eWUtNmg3WDNpc3N5c1hkaFR4aVZCOGRhY0lPM2EtZEhSbDVDNDF3MUhkdVplTF85TkltSFZrYUN4Vy1UMUVHcEQ0dnBSQVdwUQ?oc=5"
         }
       ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
+      "sourceName": "decrypt.co",
+      "entityIds": [
+        "claude"
+      ]
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5",
@@ -785,6 +825,30 @@
       "entityIds": []
     },
     {
+      "id": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
+      "clusterId": "1bsf095",
+      "title": "Adobe acquires Indian market intelligence startup Rilo",
+      "desc": "This is Adobe's second acquisition out of India after Rephrase.ai in 2023",
+      "url": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
+      "dateISO": "2026-09-02T14:03:57.000Z",
+      "date": "SEP 02 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
       "clusterId": "1vfj8jd",
       "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
@@ -824,32 +888,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
-      "clusterId": "1tkkk8h",
-      "title": "Google needs Hollywood more than the studios need AI",
-      "desc": "Google has reportedly been reaching out to a number of Hollywood's biggest studios, hoping to strike licensing agreements that would allow it to train its AI models on copyrighted material in exchange for massive piles of cash. In theory, these deals would be a win-win: a huge financial boon to the studios that would also […]",
-      "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
-      "dateISO": "2026-09-01T22:50:29.000Z",
-      "date": "SEP 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
       ]
     },
     {
@@ -902,6 +940,32 @@
       "sourceName": "Wired",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
+      "clusterId": "1tkkk8h",
+      "title": "Google needs Hollywood more than the studios need AI",
+      "desc": "Google has reportedly been reaching out to a number of Hollywood's biggest studios, hoping to strike licensing agreements that would allow it to train its AI models on copyrighted material in exchange for massive piles of cash. In theory, these deals would be a win-win: a huge financial boon to the studios that would also […]",
+      "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
+      "dateISO": "2026-09-01T22:50:29.000Z",
+      "date": "SEP 01 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -1110,58 +1174,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/",
-      "clusterId": "151dyk2",
-      "title": "Google’s answer to Canva is an AI tool where you prompt instead of design",
-      "desc": "With Google Pics, Google is pushing deeper into the creative software market dominated by Canva and Adobe, but with a distinctly AI-first approach.",
-      "url": "https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/",
-      "dateISO": "2026-09-01T17:35:37.000Z",
-      "date": "SEP 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/path-to-astra",
-      "clusterId": "1g8rwjk",
-      "title": "Path to Astra: critical capabilities and frontier safeguards",
-      "desc": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
-      "url": "https://openai.com/index/path-to-astra",
-      "dateISO": "2026-09-01T13:00:00.000Z",
-      "date": "SEP 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/path-to-astra"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1251,20 +1263,20 @@
     "chatgpt": 35,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 79,
-    "claude": 69,
+    "gpt": 80,
+    "claude": 74,
     "gemini": 30,
     "grok": 1,
     "llama": 0,
     "deepseek": 0,
-    "qwen": 1,
+    "qwen": 0,
     "mistral": 0,
     "azure": 0,
     "aws": 1,
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 2,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1274,6 +1286,17 @@
       "lab": "Anthropic · Claude",
       "logoKey": "anthropic",
       "items": [
+        {
+          "h": "Anthropic Ships Claude Fable 5.1, More Than Doubling Its Predecessor on Key Benchmark",
+          "d": "SEP 01 2026",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE43bmJ1em1mUk9FdkRMWnJfR1Z3aVJxMG55dUhxUFdkZ2N1d2V6S2dDTm03ZFJoc0N3VTNRc1Qxc0xsaEFPQ3R6c3g1ZGpQNTFyTlRnXzNIQlVpOGdrUUhza1dR0gFqQVVfeXFMTWIyNlU4Y0JxcEdxUVhfR0s5S053Y2RWR1p4eWUtNmg3WDNpc3N5c1hkaFR4aVZCOGRhY0lPM2EtZEhSbDVDNDF3MUhkdVplTF85TkltSFZrYUN4Vy1UMUVHcEQ0dnBSQVdwUQ?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "decrypt.co",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
         {
           "h": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
           "d": "SEP 01 2026",
@@ -1297,6 +1320,17 @@
           "impact": "emerging"
         },
         {
+          "h": "Anthropic launches Claude Opus 5 with efficiency, safety improvements",
+          "d": "JUL 24 2026",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNUxna2dxVzRlOEtZdFBOYTRDdG52R0NEQlVSSU9FVmg3MVpDWTdfejVIV1ZEWGxrYmlUdHk4Y09NNWc0WnZXeUkzOW80V1YySzZVdDh4NTdWZ2d3d1BOUVUtcnpvalh5Z0RFRW1XUDFINWpWRXJqS1pvRGRLZjdIcjhYVHhiWnZLWnJoMV9Ma0NtVTlwNHIxZC1MSWJmUkRMcUE?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "SiliconANGLE",
+          "sourceCount": 4,
+          "verification": "corroborated",
+          "impact": "notable"
+        },
+        {
           "h": "Introducing Claude Opus 5",
           "d": "JUL 24 2026",
           "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
@@ -1305,28 +1339,6 @@
           "sourceName": "Anthropic",
           "sourceCount": 1,
           "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Anthropic Unveils More Cost-Efficient Model for Everyday Tasks",
-          "d": "JUL 24 2026",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVU9Uajk3emszZjY1dWVrOG5WSzBwdjVpYzBhU0JseXpWZzFEc0hXaVpLNU9VTXU3Yjc2YjVXWDZaRjhHNHZ3MjIwdUFhRUdHTXN2bDM4Q2J3WmxtVklTWHRaQVBjYnhWTmdyWTgweEcteVNuLW9tU0tqM01aZXlRdXV6a0hHSUM3OC1yRGQzZ2VCeHowV255NVUxUWtKYzdLQ0NQU2VTRXZjdkVQV0RqaVVDUQ?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Bloomberg.com",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
-          "h": "Anthropic Launches Claude for Teachers. Why Some Critics Are Concerned",
-          "d": "JUL 17 2026",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Education Week",
-          "sourceCount": 1,
-          "verification": "single",
           "impact": "emerging"
         }
       ]
@@ -1653,7 +1665,7 @@
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
       "price": 224.41,
-      "changePct": 3.2054824974449385,
+      "changePct": 3.205480813251903,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
       "volume": 155979384,
@@ -2098,16 +2110,9 @@
           "h": 220.41000366210938,
           "l": 215.10000610351562,
           "c": 217.44000244140625
-        },
-        {
-          "d": "09-02",
-          "o": 218.78500366210938,
-          "h": 227.9499969482422,
-          "l": 218.47999572753906,
-          "c": 224.41000366210938
         }
       ],
-      "relVolume": 1.233496562577561,
+      "relVolume": 0.859408513692893,
       "marketCap": 5475604000000
     },
     {
@@ -2116,7 +2121,7 @@
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
       "price": 496.82,
-      "changePct": -0.838286252355196,
+      "changePct": -0.8382877142167819,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
       "volume": 15280048,
@@ -2561,16 +2566,9 @@
           "h": 505.9700012207031,
           "l": 496.7799987792969,
           "c": 501.0199890136719
-        },
-        {
-          "d": "09-02",
-          "o": 500.1700134277344,
-          "h": 500.2699890136719,
-          "l": 493.80999755859375,
-          "c": 496.82000732421875
         }
       ],
-      "relVolume": 0.6098990536416108,
+      "relVolume": 0.7935089326260701,
       "marketCap": 3691372600000
     },
     {
@@ -2579,7 +2577,7 @@
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
       "price": 367.24,
-      "changePct": -0.6600309699600633,
+      "changePct": -0.6600283283172365,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
       "volume": 30822042,
@@ -3024,16 +3022,9 @@
           "h": 371.3999938964844,
           "l": 362,
           "c": 369.67999267578125
-        },
-        {
-          "d": "09-02",
-          "o": 369.67999267578125,
-          "h": 371.0899963378906,
-          "l": 364.6499938964844,
-          "c": 367.239990234375
         }
       ],
-      "relVolume": 1.610991755321095,
+      "relVolume": 0.9818180244888236,
       "marketCap": 1806820800000
     },
     {
@@ -3042,7 +3033,7 @@
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
       "price": 337.12,
-      "changePct": 0.6268300914516255,
+      "changePct": 0.6268315489206316,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
       "volume": 22400937,
@@ -3487,16 +3478,9 @@
           "h": 337.20001220703125,
           "l": 333.04998779296875,
           "c": 335.0199890136719
-        },
-        {
-          "d": "09-02",
-          "o": 334.05999755859375,
-          "h": 340,
-          "l": 332.82000732421875,
-          "c": 337.1199951171875
         }
       ],
-      "relVolume": 0.9523009434186854,
+      "relVolume": 0.9669273699510917,
       "marketCap": 4112864000000
     },
     {
@@ -3505,7 +3489,7 @@
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
       "price": 254.98,
-      "changePct": 0.02353583831190337,
+      "changePct": 0.023537514312592978,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
       "volume": 23785257,
@@ -3950,16 +3934,9 @@
           "h": 255.82000732421875,
           "l": 251.92999267578125,
           "c": 254.9199981689453
-        },
-        {
-          "d": "09-02",
-          "o": 254.2550048828125,
-          "h": 256.239990234375,
-          "l": 253.39999389648438,
-          "c": 254.97999572753906
         }
       ],
-      "relVolume": 0.6975293913744245,
+      "relVolume": 0.8805169979520406,
       "marketCap": 2728286000000
     },
     {
@@ -3968,7 +3945,7 @@
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
       "price": 592.85,
-      "changePct": 2.473467366488096,
+      "changePct": 2.473471586431998,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
       "volume": 16426291,
@@ -4413,16 +4390,9 @@
           "h": 584.9500122070312,
           "l": 556.0999755859375,
           "c": 578.5399780273438
-        },
-        {
-          "d": "09-02",
-          "o": 579.5499877929688,
-          "h": 600.3800048828125,
-          "l": 577,
-          "c": 592.8499755859375
         }
       ],
-      "relVolume": 1.0742625611807393,
+      "relVolume": 1.0258476674432386,
       "marketCap": 1493982000000
     },
     {
@@ -4876,16 +4846,9 @@
           "h": 418.6199951171875,
           "l": 412.07000732421875,
           "c": 414
-        },
-        {
-          "d": "09-02",
-          "o": 413.20001220703125,
-          "h": 416.3999938964844,
-          "l": 411.2699890136719,
-          "c": 415.5
         }
       ],
-      "relVolume": 0.656188495607671,
+      "relVolume": 0.8045125344511407,
       "marketCap": 2156445000000
     },
     {
@@ -4894,7 +4857,7 @@
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
       "price": 457.06,
-      "changePct": -0.5548155771720726,
+      "changePct": -0.5548150459812086,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
       "volume": 11852873,
@@ -5339,16 +5302,9 @@
           "h": 461.5,
           "l": 452.29998779296875,
           "c": 459.6099853515625
-        },
-        {
-          "d": "09-02",
-          "o": 458.45001220703125,
-          "h": 462.2099914550781,
-          "l": 452.3699951171875,
-          "c": 457.05999755859375
         }
       ],
-      "relVolume": 0.5859984278284257,
+      "relVolume": 0.7423667565045464,
       "marketCap": 740437200000
     },
     {
@@ -5357,7 +5313,7 @@
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
       "price": 169.46,
-      "changePct": -5.813690285421283,
+      "changePct": -5.813694017006014,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
       "volume": 39578542,
@@ -5802,16 +5758,9 @@
           "h": 186.5500030517578,
           "l": 179.75,
           "c": 179.9199981689453
-        },
-        {
-          "d": "09-02",
-          "o": 176.9949951171875,
-          "h": 177.5500030517578,
-          "l": 165.7100067138672,
-          "c": 169.4600067138672
         }
       ],
-      "relVolume": 1.0696671963849431,
+      "relVolume": 0.5517721552392605,
       "marketCap": 406704000000
     },
     {
@@ -6265,16 +6214,9 @@
           "h": 146.7899932861328,
           "l": 139.9499969482422,
           "c": 141.32000732421875
-        },
-        {
-          "d": "09-02",
-          "o": 140.25999450683594,
-          "h": 146.6898956298828,
-          "l": 139.72000122070312,
-          "c": 145.75
         }
       ],
-      "relVolume": 0.9687465171658488,
+      "relVolume": 1.085688268662754,
       "marketCap": 409557500000
     }
   ],
@@ -6282,17 +6224,17 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.29/hr",
-      "trend": "→ 0% vs 7d ago",
+      "rate": "$1.99 – $3.30/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
       "rate": "$3.59 – $5.00/hr",
-      "trend": "↑ 8% vs 7d ago",
-      "trendClass": "trend-up",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6322,14 +6264,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.73 – $1.59/hr",
-      "trend": "↓ 10% vs 7d ago",
+      "rate": "$0.67 – $1.59/hr",
+      "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-02T23:45:25.658Z",
+    "updatedAt": "2026-09-03T00:00:32.335Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6338,11 +6280,11 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 305,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 274,
+        "fetchedStoryCount": 274,
         "validatedStoryCount": 33,
-        "storyCoverage": 0.9836065573770492,
-        "estimatedRelevantDiscussions": 34,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 33,
         "isEstimated": true,
         "rawCommentHits": 2319,
         "fetchedCommentCount": 300,
@@ -6411,8 +6353,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 34,
-            "isEstimated": true
+            "discussions": 33,
+            "isEstimated": false
           },
           {
             "name": "OpenAI forum",
@@ -6432,10 +6374,10 @@
         "storyCoverage": 0.3472222222222222,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 6595,
+        "rawCommentHits": 6597,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.045489006823351025,
+        "commentCoverage": 0.04547521600727603,
         "limited": false,
         "points": 112,
         "themes": [
@@ -6515,15 +6457,15 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 122,
-        "fetchedStoryCount": 119,
+        "fetchedStoryCount": 122,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.9754098360655737,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": true,
-        "rawCommentHits": 1369,
+        "rawCommentHits": 1370,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 40,
-        "commentCoverage": 0.2191380569758948,
+        "validatedCommentCount": 41,
+        "commentCoverage": 0.21897810218978103,
         "limited": false,
         "points": 45,
         "themes": [
@@ -6593,7 +6535,7 @@
           {
             "name": "Hacker News",
             "discussions": 10,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6618,10 +6560,10 @@
         "storyCoverage": 0.5263157894736842,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 10466,
+        "rawCommentHits": 10463,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 20,
-        "commentCoverage": 0.02866424613032677,
+        "commentCoverage": 0.028672464876230527,
         "limited": false,
         "points": 123,
         "themes": [
@@ -6774,15 +6716,15 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
+        "fetchedStoryCount": 137,
         "validatedStoryCount": 23,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 23,
-        "isEstimated": false,
-        "rawCommentHits": 1162,
+        "storyCoverage": 0.9448275862068966,
+        "estimatedRelevantDiscussions": 24,
+        "isEstimated": true,
+        "rawCommentHits": 1185,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 51,
-        "commentCoverage": 0.25817555938037867,
+        "commentCoverage": 0.25316455696202533,
         "limited": false,
         "points": 1499,
         "themes": [
@@ -6846,8 +6788,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 23,
-            "isEstimated": false
+            "discussions": 24,
+            "isEstimated": true
           }
         ]
       },
@@ -6862,10 +6804,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 11,
         "isEstimated": false,
-        "rawCommentHits": 4930,
+        "rawCommentHits": 4929,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.060851926977687626,
+        "commentCoverage": 0.06086427267194157,
         "limited": false,
         "points": 516,
         "themes": [
