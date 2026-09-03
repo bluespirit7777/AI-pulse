@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-03T12:30:38.431Z",
+  "updatedAt": "2026-09-03T12:45:24.169Z",
   "build": {
-    "sha": "d218ad738e670b0fc091fe4f177c8a59b51fd213",
-    "shortSha": "d218ad7",
+    "sha": "692279c4a8ccd58f1e8334dca983d486b3457fc0",
+    "shortSha": "692279c",
     "ref": "main",
-    "builtAt": "2026-09-03T12:30:54.769Z"
+    "builtAt": "2026-09-03T12:45:39.144Z"
   },
   "dataHealth": {
     "feedsSucceeded": 15,
@@ -13,10 +13,11 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 55.5,
     "estimatedDatasets": 4,
-    "buildSha": "d218ad7",
-    "lastSuccessfulUpdate": "2026-09-03T12:30:38.431Z"
+    "buildSha": "692279c",
+    "lastSuccessfulUpdate": "2026-09-03T12:45:24.169Z"
   },
   "ticker": [
+    "NVIDIA’S HUGGING FACE ACQUISITION IS A $12.9 BILLION BET ON OPEN-SOURCE AI",
     "GOOGLE SAYS ITS NEW GEMINI 3.8 FLASH MODEL ‘WORKS HARDER’ BUT MIGHT COST MORE",
     "“ZLIBRARY MY BELOVED”: ANTHROPIC STAFF CHATS EXTOLLING PIRACY CITED IN SONY SUIT",
     "SALES WORKFLOWS WITH CHATGPT WORK",
@@ -25,10 +26,35 @@
     "RESEARCHERS FEAR SAFETY DISASTER AHEAD OF OPENAI’S ASTRA RELEASE",
     "INTRODUCING CLAUDE FABLE 5.1",
     "OPENAI FACES 30 MORE LAWSUITS TIED TO TUMBLER RIDGE SHOOTING",
-    "INTRODUCING AGENTIC VIDEO UNDERSTANDING WITH GEMINI",
-    "TRY GOOGLE PICS: EASY IMAGE CREATION AND EDITING IN GOOGLE WORKSPACE"
+    "INTRODUCING AGENTIC VIDEO UNDERSTANDING WITH GEMINI"
   ],
   "signals": [
+    {
+      "id": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/",
+      "clusterId": "abc0mx",
+      "title": "Nvidia’s Hugging Face Acquisition Is a $12.9 Billion Bet on Open-Source AI",
+      "desc": "The long-rumored deal will give the chip giant access to—and help it promote—a huge repository of open-source AI models and data sets.",
+      "url": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/",
+      "dateISO": "2026-09-03T12:43:09.000Z",
+      "date": "SEP 03 2026",
+      "category": "opensource",
+      "catConfidence": 0.56,
+      "family": "product",
+      "significance": 77,
+      "impact": "high",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
       "clusterId": "1umn1nb",
@@ -40,7 +66,7 @@
       "category": "product",
       "catConfidence": 0.75,
       "family": "product",
-      "significance": 66,
+      "significance": 65,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -464,11 +490,15 @@
       "significance": 48,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+        },
+        {
           "name": "The Verge",
-          "url": "https://www.theverge.com/tech/985474/nvidia-buying-hugging-face-deal"
+          "url": "https://www.theverge.com/ai-artificial-intelligence/987695/openai-astra-unreleased-model-cybersecurity-delay"
         },
         {
           "name": "Ars Technica",
@@ -573,30 +603,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
-      "clusterId": "1cai4ui",
-      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
-      "desc": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
-      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
-      "dateISO": "2026-09-02T22:44:56.000Z",
-      "date": "SEP 02 2026",
-      "category": "capital",
-      "catConfidence": 0.82,
-      "family": "market",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://www.theverge.com/tech/988355/mrbeast-google-partnership-gemini-fitbit",
       "clusterId": "1ldy7sx",
       "title": "Google is sending MrBeast into the wilderness, armed with AI",
@@ -621,6 +627,30 @@
       "entityIds": [
         "gemini"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+      "clusterId": "1cai4ui",
+      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
+      "desc": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
+      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+      "dateISO": "2026-09-02T22:44:56.000Z",
+      "date": "SEP 02 2026",
+      "category": "capital",
+      "catConfidence": 0.82,
+      "family": "market",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/",
@@ -1033,32 +1063,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
-      "clusterId": "1tkkk8h",
-      "title": "Google needs Hollywood more than the studios need AI",
-      "desc": "Google has reportedly been reaching out to a number of Hollywood's biggest studios, hoping to strike licensing agreements that would allow it to train its AI models on copyrighted material in exchange for massive piles of cash. In theory, these deals would be a win-win: a huge financial boon to the studios that would also […]",
-      "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
-      "dateISO": "2026-09-01T22:50:29.000Z",
-      "date": "SEP 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
       "clusterId": "8evhbx",
       "title": "OpenAI’s Astra model is on the way — and very good at breaking into computer systems",
@@ -1140,26 +1144,26 @@
   "waves": [
     {
       "family": "product",
-      "category": "product",
-      "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
-      "summary": "Google launched Gemini 3.8 Flash, arriving just a few weeks after its predecessor. The company claims the new model \"works harder\" than Gemini 3.7 Flash by performing more reasoni…",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "single",
-      "date": "SEP 02 2026",
-      "dateISO": "2026-09-02T20:11:40.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
+      "category": "opensource",
+      "title": "Nvidia’s Hugging Face Acquisition Is a $12.9 Billion Bet on Open-Source AI",
+      "summary": "The long-rumored deal will give the chip giant access to—and help it promote—a huge repository of open-source AI models and data sets.",
+      "significance": 77,
+      "impact": "high",
+      "verification": "uncertain",
+      "date": "SEP 03 2026",
+      "dateISO": "2026-09-03T12:43:09.000Z",
+      "url": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/"
         }
       ],
       "entityIds": [
-        "gemini"
+        "nvidia"
       ],
-      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, an acquisition folds talent and technology under one owner, reshaping who competes with whom."
     },
     {
       "family": "market",
@@ -1237,7 +1241,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 2,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1493,6 +1497,18 @@
     }
   ],
   "feed": [
+    {
+      "name": "Nvidia’s Hugging Face Acquisition Is a $12.9 Billion Bet on…",
+      "org": "Wired",
+      "date": "SEP 03 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "The long-rumored deal will give the chip giant access to—and help it promote—a huge repository of open-source AI models and data sets.",
+      "url": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/",
+      "sourceName": "Wired",
+      "verification": "uncertain",
+      "impact": "high"
+    },
     {
       "name": "OpenAI and Hugging Face partner to address security inciden…",
       "org": "OpenAI",
@@ -6225,14 +6241,14 @@
       "rate": "$1.99 – $3.29/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.00/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
+      "rate": "$3.47 – $6.17/hr",
+      "trend": "↑ 14% vs 7d ago",
+      "trendClass": "trend-up",
       "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6262,14 +6278,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$0.71 – $1.59/hr",
+      "trend": "↓ 11% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-03T12:30:38.431Z",
+    "updatedAt": "2026-09-03T12:45:24.169Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6284,12 +6300,12 @@
         "storyCoverage": 0.9584664536741214,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2303,
+        "rawCommentHits": 2305,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.13026487190620928,
+        "commentCoverage": 0.1301518438177874,
         "limited": false,
-        "points": 678,
+        "points": 679,
         "themes": [
           {
             "id": "reasoning",
@@ -6372,10 +6388,10 @@
         "storyCoverage": 0.3460207612456747,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 6543,
+        "rawCommentHits": 6542,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.04585052728106373,
+        "commentCoverage": 0.04585753592173647,
         "limited": false,
         "points": 113,
         "themes": [
@@ -6553,10 +6569,10 @@
         "storyCoverage": 0.5208333333333334,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 10453,
+        "rawCommentHits": 10450,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 20,
-        "commentCoverage": 0.028699894767052522,
+        "commentCoverage": 0.028708133971291867,
         "limited": false,
         "points": 123,
         "themes": [
@@ -6713,8 +6729,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 136,
-        "fetchedStoryCount": 136,
+        "rawStoryHits": 143,
+        "fetchedStoryCount": 143,
         "validatedStoryCount": 23,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 23,
@@ -6802,10 +6818,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4905,
+        "rawCommentHits": 4904,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.06116207951070336,
+        "commentCoverage": 0.061174551386623165,
         "limited": false,
         "points": 519,
         "themes": [
