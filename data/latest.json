@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-04T13:45:23.188Z",
+  "updatedAt": "2026-09-04T14:00:29.820Z",
   "build": {
-    "sha": "3b3beb1d7237a5e7948fc1b4834d77fd0d48bf2b",
-    "shortSha": "3b3beb1",
+    "sha": "ac6bd9aa65a16671cc6e74884e1d36580d95d45e",
+    "shortSha": "ac6bd9a",
     "ref": "main",
-    "builtAt": "2026-09-04T13:45:39.515Z"
+    "builtAt": "2026-09-04T14:00:48.712Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 56.6,
-    "estimatedDatasets": 6,
-    "buildSha": "3b3beb1",
-    "lastSuccessfulUpdate": "2026-09-04T13:45:23.188Z"
+    "estimatedDatasets": 4,
+    "buildSha": "ac6bd9a",
+    "lastSuccessfulUpdate": "2026-09-04T14:00:29.820Z"
   },
   "ticker": [
     "USE CHATGPT WORK TO TURN MARKETING IDEAS INTO FINISHED WORK",
@@ -22,11 +22,11 @@
     "NVIDIA LAUNCHES FREE TOOL THAT LINKS IDLE COMPUTERS INTO A PERSONAL AI DATA CENTER",
     "OPENAI LAUNCHES ASTRA, ITS POWERFUL (AND CONTROVERSIAL) NEW MODEL",
     "NVIDIA’S HUGGING FACE ACQUISITION IS A $12.9 BILLION BET ON OPEN-SOURCE AI",
+    "OH GOOD, LOOKS LIKE YET ANOTHER SWARM OF ROGUE AI AGENTS FROM OPENAI",
     "SAM ALTMAN APOLOGIZES FOR ‘MESSY’ GPT-6 ASTRA ROLLOUT THAT’S LOCKED OUT PAYING USERS",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
     "“ZLIBRARY MY BELOVED”: ANTHROPIC STAFF CHATS EXTOLLING PIRACY CITED IN SONY SUIT",
-    "HOW CLAUDE PERFORMS ON ROBOTICS TASKS",
-    "DAYBREAK FOR FRONTLINE DEFENDERS: $1B TO PROTECT ESSENTIAL SERVICES"
+    "HOW CLAUDE PERFORMS ON ROBOTICS TASKS"
   ],
   "signals": [
     {
@@ -144,7 +144,7 @@
       "category": "opensource",
       "catConfidence": 0.56,
       "family": "product",
-      "significance": 65,
+      "significance": 64,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -157,6 +157,32 @@
       "sourceName": "Wired",
       "entityIds": [
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+      "clusterId": "1j0qffy",
+      "title": "Oh good, looks like yet another swarm of rogue AI agents from OpenAI",
+      "desc": "A swarm of rogue AI agents from OpenAI reportedly commandeered a German website and transformed it into a messaging board for other agents, with officials staying quiet about the incident for weeks as the company prepared to launch its most advanced model yet, Astra. The finding adds to intensifying concern surrounding oversight at frontier AI […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+      "dateISO": "2026-09-04T13:34:12.000Z",
+      "date": "SEP 04 2026",
+      "category": "product",
+      "catConfidence": 0.43,
+      "family": "product",
+      "significance": 60,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -385,35 +411,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
-      "clusterId": "1aqclgh",
-      "title": "Four major AI models suffer rare overlapping downtime",
-      "desc": "Service interruptions hit ChatGPT, Claude, Grok, and Gemini practically simultaneously.",
-      "url": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
-      "dateISO": "2026-09-03T18:10:19.000Z",
-      "date": "SEP 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "chatgpt",
-        "claude",
-        "gemini",
-        "grok"
-      ]
-    },
-    {
       "id": "https://openai.com/index/nvidia/chatgpt-work",
       "clusterId": "kw1uc",
       "title": "How NVIDIA scales expertise with ChatGPT Work",
@@ -471,6 +468,35 @@
       ],
       "sourceName": "The Verge",
       "entityIds": []
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
+      "clusterId": "1aqclgh",
+      "title": "Four major AI models suffer rare overlapping downtime",
+      "desc": "Service interruptions hit ChatGPT, Claude, Grok, and Gemini practically simultaneously.",
+      "url": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/",
+      "dateISO": "2026-09-03T18:10:19.000Z",
+      "date": "SEP 03 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/four-major-ai-models-suffer-rare-overlapping-downtime/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "chatgpt",
+        "claude",
+        "gemini",
+        "grok"
+      ]
     },
     {
       "id": "https://www.wired.com/story/openai-says-gpt-6-can-use-a-computer-better-than-a-human/",
@@ -535,7 +561,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 49,
+      "significance": 48,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -597,32 +623,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/",
-      "clusterId": "1v2519w",
-      "title": "Nvidia RTX Spark ‘Superchip’: The First AI PCs Are Here",
-      "desc": "At IFA 2026, Nvidia and its partners showed off the first RTX Spark-powered laptops and mini PCs, designed to run AI models right on your computer.",
-      "url": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/",
-      "dateISO": "2026-09-03T13:00:00.000Z",
-      "date": "SEP 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "nvidia"
       ]
     },
     {
@@ -727,6 +727,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/",
+      "clusterId": "1v2519w",
+      "title": "Nvidia RTX Spark ‘Superchip’: The First AI PCs Are Here",
+      "desc": "At IFA 2026, Nvidia and its partners showed off the first RTX Spark-powered laptops and mini PCs, designed to run AI models right on your computer.",
+      "url": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/",
+      "dateISO": "2026-09-03T13:00:00.000Z",
+      "date": "SEP 03 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/nvidia-rtx-spark-laptops-first-look/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "nvidia"
       ]
     },
     {
@@ -859,32 +885,6 @@
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update",
-      "clusterId": "tox0x",
-      "title": "Google says its AI weather model is getting better",
-      "desc": "Google is rolling out an updated AI weather model that's supposed to be more accurate, especially when it comes to predicting rain and snowfall. In the announcement today, the company says it's now able to make forecasts with \"unprecedented resolution\" using its new WeatherNext 3 AI model. It can produce a global picture that's five […]",
-      "url": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update",
-      "dateISO": "2026-09-03T15:00:00.000Z",
-      "date": "SEP 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update"
-        }
-      ],
-      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -1112,64 +1112,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
-      "clusterId": "1i84g2z",
-      "title": "Claude Code’s hidden tracker was an “experiment,” says Anthropic",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
-      "dateISO": "2026-07-07T07:00:00.000Z",
-      "date": "JUL 07 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 9,
-      "sources": [
-        {
-          "name": "BleepingComputer",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3lzZENsdmlkQU5TVWo4VGFNdVYwV05wVDVEdEdEelc5dkhNeDVkQ3FqR0JPNHdLaXllWHphTWFSd3FkRUFCYTR5OUVFdGhVVzM5emZjalZHTDYxLTI1RXhvcGplRERpZ0dVR0RZWm5MU29uLVhURHREd1MzdjJHNFJMaGtxSUU3S0dDSXI4RXRKSEpjS2FiWDVQNS14MG1IZEo5a0pkcVJVY2tWV0hCaDJxSDN5Sjlpc3gwSTBTcnpMQmFJQ2p4UUttZTfSAdIBQVVfeXFMTll1YlFSYW1Ec3V6VFBOZzE2OE9mUC1nR1FLeWlZMHNXbk1ndzBYZm11SzQ4OWhQQWhZSnBTbkRYLTRaNG0tQTZSRmdTRXdDcDZpR3kzdUVjdWppdlp1d2ZwUTJGZEZGaFlGeVNOSnNiZGFvRmdGT0Fucjlkd3V2S0tRVmc1VnN4SXhSdGhlMG91QWxtRzhsSkNoUG5IdmtEeHFCc3JRVng4ZmdZeVJEZUpnWnQ0MnBOeHBoUk1aUm1rSVlyZk9WLXlkYV85WldhcENR?oc=5"
-        },
-        {
-          "name": "Mashable",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
-        },
-        {
-          "name": "South China Morning Post",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
-        },
-        {
-          "name": "WSJ",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
-        },
-        {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSzh3RjljVWVKMzNkcVEyVV9Ga1p5bEstNW9URTN2dlkzTWZ3T1J3M0dxN0pGa1hNS05MeFh0cGJzM3NMdUdaeVYxdXRQOEFjTUdpOTdIam43eDVPRzUwTXVhdE84b0NmOWZLSlluWGJoM05iUTBEYjlMcGViR0lGUlN2Mms4WFNfelExUHRLOWthekx2dkNaLXhmandtUEpubmN4SkJKY20xb3dndXRRa29kejBaV2VZemYwQVBuRlc?oc=5"
-        },
-        {
-          "name": "Malwarebytes",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
-        }
-      ],
-      "sourceName": "Malwarebytes",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
       "clusterId": "k4t5qv",
       "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
@@ -1193,6 +1135,60 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
+      "clusterId": "1i84g2z",
+      "title": "Claude Code’s hidden tracker was an “experiment,” says Anthropic",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5",
+      "dateISO": "2026-07-07T07:00:00.000Z",
+      "date": "JUL 07 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 8,
+      "sources": [
+        {
+          "name": "Mashable",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9vNklTVGFuNFNCVHF4NFFkWHdrTld6WEVuaEtBMjRoVnF0QzdVTnJqUjRuOENMVHZvbmQwQ2o5UkhndzZlUVB2T3ROMGNEc0w2dXZhR2YwaDlrQzJPRTdqXzF6X0tYZ0htbU5zNVkwRVJqdDhHNzJj?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
+        },
+        {
+          "name": "WSJ",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSzh3RjljVWVKMzNkcVEyVV9Ga1p5bEstNW9URTN2dlkzTWZ3T1J3M0dxN0pGa1hNS05MeFh0cGJzM3NMdUdaeVYxdXRQOEFjTUdpOTdIam43eDVPRzUwTXVhdE84b0NmOWZLSlluWGJoM05iUTBEYjlMcGViR0lGUlN2Mms4WFNfelExUHRLOWthekx2dkNaLXhmandtUEpubmN4SkJKY20xb3dndXRRa29kejBaV2VZemYwQVBuRlc?oc=5"
+        },
+        {
+          "name": "Malwarebytes",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPODBudnBldGVnY3pFRUhvS09kbC1oQ2FXUzhwT3VJZ2x2YmJSRXcwdjFhVlVsNHh0R3VVWTJUakNaUWpyc29BS1IwWTltR2VobUJtZVdWYnJFTGlDTEh6OHNEcHVCWnNfR1dhLTl2Qk1FNXVISGZhbk9pQUx2NXM5amFQQU9Fd0xxLWZzV0dIaHFzcEd0MS1mdGIzLWNnSGtyaDRIRWxTVDB4OTg?oc=5"
+        }
+      ],
+      "sourceName": "Malwarebytes",
+      "entityIds": [
+        "claude"
       ]
     }
   ],
@@ -1271,9 +1267,9 @@
     "chatgpt": 37,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 82,
-    "claude": 71,
-    "gemini": 30,
+    "gpt": 83,
+    "claude": 72,
+    "gemini": 29,
     "grok": 4,
     "llama": 0,
     "deepseek": 0,
@@ -1356,6 +1352,17 @@
       "logoKey": "openai",
       "items": [
         {
+          "h": "Oh good, looks like yet another swarm of rogue AI agents from OpenAI",
+          "d": "SEP 04 2026",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "uncertain",
+          "impact": "notable"
+        },
+        {
           "h": "Use ChatGPT Work to turn marketing ideas into finished work",
           "d": "SEP 04 2026",
           "url": "https://www.youtube.com/watch?v=NSqlZ1L81nQ",
@@ -1398,17 +1405,6 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "notable"
-        },
-        {
-          "h": "Build a Shareable Site",
-          "d": "AUG 28 2026",
-          "url": "https://www.youtube.com/watch?v=0qK3KqvtRrg",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
         }
       ]
     },
@@ -1708,11 +1704,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 232.736,
-      "changePct": 1.8760329071536903,
+      "price": 234.03,
+      "changePct": 2.442548437555417,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 21122403,
+      "volume": 33447594,
       "ohlc": [
         {
           "d": "06-04",
@@ -2165,24 +2161,24 @@
         {
           "d": "09-04",
           "o": 231.14199829101562,
-          "h": 233.77000427246094,
+          "h": 234.64999389648438,
           "l": 229.82000732421875,
-          "c": 232.7357940673828
+          "c": 234.02999877929688
         }
       ],
-      "relVolume": 0.16579389226546062,
-      "marketCap": 5678758400000
+      "relVolume": 0.2625367386549185,
+      "marketCap": 5710332000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 504.32,
-      "changePct": -1.136984993430094,
+      "price": 503.615,
+      "changePct": -1.2751911207319242,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 1541001,
+      "volume": 2314582,
       "ohlc": [
         {
           "d": "06-04",
@@ -2636,23 +2632,23 @@
           "d": "09-04",
           "o": 510,
           "h": 511,
-          "l": 504,
-          "c": 504.32000732421875
+          "l": 502.80999755859375,
+          "c": 503.614990234375
         }
       ],
-      "relVolume": 0.0654790505416359,
-      "marketCap": 3747097600000
+      "relVolume": 0.09834947009168761,
+      "marketCap": 3741859450000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 357.77,
-      "changePct": 0.17078769887671286,
+      "price": 356.78,
+      "changePct": -0.10639625907608709,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 4154367,
+      "volume": 6080880,
       "ohlc": [
         {
           "d": "06-04",
@@ -3107,22 +3103,22 @@
           "o": 360.0050048828125,
           "h": 360.0450134277344,
           "l": 354.510009765625,
-          "c": 357.7699890136719
+          "c": 356.7799987792969
         }
       ],
-      "relVolume": 0.18428176383854192,
-      "marketCap": 1760228400000
+      "relVolume": 0.2697391184001107,
+      "marketCap": 1755357599999.9998
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 340.92,
-      "changePct": -0.4555003236834238,
+      "price": 341.65,
+      "changePct": -0.24235490049575023,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 1600241,
+      "volume": 2565271,
       "ohlc": [
         {
           "d": "06-04",
@@ -3576,23 +3572,23 @@
           "d": "09-04",
           "o": 342.57501220703125,
           "h": 343.5299987792969,
-          "l": 340.5,
-          "c": 340.9200134277344
+          "l": 339.7200012207031,
+          "c": 341.6499938964844
         }
       ],
-      "relVolume": 0.07247896671429177,
-      "marketCap": 4159224000000
+      "relVolume": 0.11618761887874261,
+      "marketCap": 4168129999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 258.565,
-      "changePct": -0.12939029083641623,
+      "price": 257.5,
+      "changePct": -0.5407469793313833,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 3034238,
+      "volume": 4636458,
       "ohlc": [
         {
           "d": "06-04",
@@ -4046,23 +4042,23 @@
           "d": "09-04",
           "o": 259.2149963378906,
           "h": 261.1199951171875,
-          "l": 258.385009765625,
-          "c": 258.56500244140625
+          "l": 256.80999755859375,
+          "c": 257.5
         }
       ],
-      "relVolume": 0.09235952309819065,
-      "marketCap": 2766645500000
+      "relVolume": 0.14112968387608052,
+      "marketCap": 2755250000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 606.9,
-      "changePct": -0.6189769285147662,
+      "price": 609.36,
+      "changePct": -0.2161536877006483,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 1382663,
+      "volume": 2190701,
       "ohlc": [
         {
           "d": "06-04",
@@ -4517,22 +4513,22 @@
           "o": 612.4949951171875,
           "h": 616.3300170898438,
           "l": 605.27001953125,
-          "c": 606.9000244140625
+          "c": 609.3599853515625
         }
       ],
-      "relVolume": 0.0876875785607107,
-      "marketCap": 1529388000000
+      "relVolume": 0.13893281735356156,
+      "marketCap": 1535587200000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 423.356,
-      "changePct": 1.5217367758872133,
+      "price": 425.86,
+      "changePct": 2.1222453607076512,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 1404557,
+      "volume": 2137467,
       "ohlc": [
         {
           "d": "06-04",
@@ -4985,24 +4981,24 @@
         {
           "d": "09-04",
           "o": 421.8800048828125,
-          "h": 424.6400146484375,
+          "h": 426.20001220703125,
           "l": 419.4549865722656,
-          "c": 423.3558044433594
+          "c": 425.8599853515625
         }
       ],
-      "relVolume": 0.15469140894530511,
-      "marketCap": 2197217640000
+      "relVolume": 0.23541072509274774,
+      "marketCap": 2210213400000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 465.11,
-      "changePct": 1.9620268365489204,
+      "price": 470.51,
+      "changePct": 3.145847409033152,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 2482722,
+      "volume": 3927503,
       "ohlc": [
         {
           "d": "06-04",
@@ -5455,24 +5451,24 @@
         {
           "d": "09-04",
           "o": 462,
-          "h": 468.4700012207031,
+          "h": 471,
           "l": 458,
-          "c": 465.1099853515625
+          "c": 470.5101013183594
         }
       ],
-      "relVolume": 0.13907937963538972,
-      "marketCap": 753478200000
+      "relVolume": 0.2200144360730408,
+      "marketCap": 762226200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 177.435,
-      "changePct": -2.791322661905927,
+      "price": 176.61,
+      "changePct": -3.2433014893641565,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 3935951,
+      "volume": 5463963,
       "ohlc": [
         {
           "d": "06-04",
@@ -5926,23 +5922,23 @@
           "d": "09-04",
           "o": 180.02000427246094,
           "h": 182.19000244140625,
-          "l": 176.6999969482422,
-          "c": 177.43499755859375
+          "l": 176.55999755859375,
+          "c": 176.61000061035156
         }
       ],
-      "relVolume": 0.11046130094778717,
-      "marketCap": 425844000000
+      "relVolume": 0.1533445058921145,
+      "marketCap": 423864000000.00006
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 157.95,
-      "changePct": 2.5383042278159893,
+      "price": 157.25,
+      "changePct": 2.0838787677071156,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 4901982,
+      "volume": 6262818,
       "ohlc": [
         {
           "d": "06-04",
@@ -6396,30 +6392,30 @@
           "d": "09-04",
           "o": 159.4550018310547,
           "h": 159.6999969482422,
-          "l": 157.17999267578125,
-          "c": 157.9499969482422
+          "l": 156.91000366210938,
+          "c": 157.25
         }
       ],
-      "relVolume": 0.21749535125273256,
-      "marketCap": 443839499999.99994
+      "relVolume": 0.2778740927122817,
+      "marketCap": 441872500000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
-      "trend": "↑ 4% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$1.87 – $3.49/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.00/hr",
-      "trend": "↑ 6% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.61/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6427,7 +6423,7 @@
       "rate": "$5.98 – $6.79/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6448,14 +6444,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.87 – $1.59/hr",
-      "trend": "↑ 10% vs 7d ago",
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "↑ 15% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-04T13:45:23.188Z",
+    "updatedAt": "2026-09-04T14:00:29.820Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6470,10 +6466,10 @@
         "storyCoverage": 0.9230769230769231,
         "estimatedRelevantDiscussions": 35,
         "isEstimated": true,
-        "rawCommentHits": 2394,
+        "rawCommentHits": 2393,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.12531328320802004,
+        "commentCoverage": 0.12536564981195153,
         "limited": false,
         "points": 672,
         "themes": [
@@ -6552,28 +6548,28 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 865,
+        "rawStoryHits": 864,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.3468208092485549,
+        "storyCoverage": 0.3472222222222222,
         "estimatedRelevantDiscussions": 62,
         "isEstimated": true,
-        "rawCommentHits": 6718,
+        "rawCommentHits": 6724,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 33,
-        "commentCoverage": 0.04465614766299494,
+        "validatedCommentCount": 35,
+        "commentCoverage": 0.044616299821534804,
         "limited": false,
         "points": 107,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 25
+            "count": 27
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 15
+            "count": 16
           },
           {
             "id": "multimodal",
@@ -6646,10 +6642,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 1517,
+        "rawCommentHits": 1518,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.19775873434410018,
+        "commentCoverage": 0.1976284584980237,
         "limited": false,
         "points": 48,
         "themes": [
@@ -6738,16 +6734,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 574,
+        "rawStoryHits": 573,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5226480836236934,
+        "storyCoverage": 0.5235602094240838,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 10384,
+        "rawCommentHits": 10380,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 12,
-        "commentCoverage": 0.02889060092449923,
+        "commentCoverage": 0.028901734104046242,
         "limited": false,
         "points": 123,
         "themes": [
@@ -6816,16 +6812,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 64,
-        "fetchedStoryCount": 64,
+        "rawStoryHits": 38,
+        "fetchedStoryCount": 38,
         "validatedStoryCount": 7,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 717,
+        "rawCommentHits": 718,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.41841004184100417,
+        "commentCoverage": 0.4178272980501393,
         "limited": true,
         "points": 51,
         "themes": [
@@ -6899,12 +6895,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 144,
-        "fetchedStoryCount": 138,
+        "rawStoryHits": 146,
+        "fetchedStoryCount": 146,
         "validatedStoryCount": 23,
-        "storyCoverage": 0.9583333333333334,
-        "estimatedRelevantDiscussions": 24,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 23,
+        "isEstimated": false,
         "rawCommentHits": 1194,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 51,
@@ -6972,8 +6968,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 24,
-            "isEstimated": true
+            "discussions": 23,
+            "isEstimated": false
           }
         ]
       },
@@ -6983,11 +6979,11 @@
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
         "rawStoryHits": 262,
-        "fetchedStoryCount": 224,
+        "fetchedStoryCount": 262,
         "validatedStoryCount": 9,
-        "storyCoverage": 0.8549618320610687,
-        "estimatedRelevantDiscussions": 14,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 12,
+        "isEstimated": false,
         "rawCommentHits": 4960,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
@@ -7055,8 +7051,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 11,
-            "isEstimated": true
+            "discussions": 9,
+            "isEstimated": false
           },
           {
             "name": "Qwen GitHub",
@@ -7165,18 +7161,6 @@
         "modelId": "claude",
         "themes": [
           "coding",
-          "reasoning"
-        ],
-        "excerpt": "You can wrap claude code in a harness without -p, it works fine. I think most of the concern was that -p resubmits the entire chat history on each prompt which is really bad for…",
-        "source": "Hacker News",
-        "author": "dnautics",
-        "publishedAt": "2026-09-03T14:51:02.000Z",
-        "url": "https://news.ycombinator.com/item?id=49550695"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding",
           "writing"
         ],
         "excerpt": "With Claude Mythos 5.1 and Claude Fable 5.1 release, they also announced their Trusted Access For Claude Mythos 5.1 programs, Cyber Verification Program and Life Sciences…",
@@ -7196,6 +7180,17 @@
         "author": "grenbys",
         "publishedAt": "2026-09-03T18:01:24.000Z",
         "url": "https://news.ycombinator.com/item?id=49554042"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "… feel extremely unproductive for me. I spend more time making Claude code do what I want than before!…",
+        "source": "Hacker News",
+        "author": "de6u99er",
+        "publishedAt": "2026-09-04T11:36:02.000Z",
+        "url": "https://news.ycombinator.com/item?id=49563206"
       },
       {
         "modelId": "gemini",
