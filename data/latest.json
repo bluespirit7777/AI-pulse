@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-04T19:15:20.827Z",
+  "updatedAt": "2026-09-04T19:30:31.200Z",
   "build": {
-    "sha": "52d8da8ad2451a38621adf782deda289477b2611",
-    "shortSha": "52d8da8",
+    "sha": "05ea783363141674078b7d796838aca1a9ec6ea5",
+    "shortSha": "05ea783",
     "ref": "main",
-    "builtAt": "2026-09-04T19:15:36.968Z"
+    "builtAt": "2026-09-04T19:30:46.981Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 56.8,
     "estimatedDatasets": 4,
-    "buildSha": "52d8da8",
-    "lastSuccessfulUpdate": "2026-09-04T19:15:20.827Z"
+    "buildSha": "05ea783",
+    "lastSuccessfulUpdate": "2026-09-04T19:30:31.200Z"
   },
   "ticker": [
     "ANTHROPIC’S $2 TRILLION IPO PUTS POWERFUL EXTERNAL TRUSTEES IN SPOTLIGHT",
     "USE CHATGPT WORK TO TURN MARKETING IDEAS INTO FINISHED WORK",
     "APPLE’S TERNUS ERA BEGINS AS NVIDIA BETS ON THE WHOLE AI STACK",
     "OPENAI CUT OFF A BILLION-DOLLAR CUSTOMER TO AVOID ELON MUSK",
-    "NVIDIA LAUNCHES FREE TOOL THAT LINKS IDLE COMPUTERS INTO A PERSONAL AI DATA CENTER",
     "OPENAI LAUNCHES ASTRA, ITS POWERFUL (AND CONTROVERSIAL) NEW MODEL",
+    "NVIDIA LAUNCHES FREE TOOL THAT LINKS IDLE COMPUTERS INTO A PERSONAL AI DATA CENTER",
     "NVIDIA’S HUGGING FACE ACQUISITION IS A $12.9 BILLION BET ON OPEN-SOURCE AI",
-    "INTRODUCING GEMINI 3.5 FLASH CYBER",
-    "ANOTHER SWARM OF OPENAI AGENTS REACHED THE OPEN INTERNET WITHOUT THE FRONTIER LAB’S KNOWLEDGE",
-    "“ZLIBRARY MY BELOVED”: ANTHROPIC STAFF CHATS EXTOLLING PIRACY CITED IN SONY SUIT"
+    "ROGUE OPENAI AGENTS APPEAR TO HAVE ORGANIZED ANOTHER ATTACK USING A GERMAN WIKI",
+    "SAM ALTMAN APOLOGIZES FOR ‘MESSY’ GPT-6 ASTRA ROLLOUT THAT’S LOCKED OUT PAYING USERS",
+    "INTRODUCING GEMINI 3.5 FLASH CYBER"
   ],
   "signals": [
     {
@@ -92,7 +92,7 @@
       "category": "orggov",
       "catConfidence": 0.44,
       "family": "market",
-      "significance": 65,
+      "significance": 64,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -138,32 +138,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
-      "clusterId": "w9giy3",
-      "title": "Nvidia launches free tool that links idle computers into a personal AI data center",
-      "desc": "Nvidia is announcing its new Personal AI Router (PAIR), a free tool that syncs up your home computers for tackling local AI inference tasks with tools like Ollama and LM Studio. Let's get the obvious thing out of the way, despite what its name might imply: PAIR is not a hardware router. It's open-source software […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
-      "dateISO": "2026-09-03T16:00:00.000Z",
-      "date": "SEP 03 2026",
-      "category": "opensource",
-      "catConfidence": 0.45,
-      "family": "product",
-      "significance": 64,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
       "clusterId": "1o0x6iy",
       "title": "OpenAI launches Astra, its powerful (and controversial) new model",
@@ -190,6 +164,32 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
+      "clusterId": "w9giy3",
+      "title": "Nvidia launches free tool that links idle computers into a personal AI data center",
+      "desc": "Nvidia is announcing its new Personal AI Router (PAIR), a free tool that syncs up your home computers for tackling local AI inference tasks with tools like Ollama and LM Studio. Let's get the obvious thing out of the way, despite what its name might imply: PAIR is not a hardware router. It's open-source software […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
+      "dateISO": "2026-09-03T16:00:00.000Z",
+      "date": "SEP 03 2026",
+      "category": "opensource",
+      "catConfidence": 0.45,
+      "family": "product",
+      "significance": 63,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/nvidias-hugging-face-acquisition-is-a-dollar129-billion-bet-on-open-source-ai/",
       "clusterId": "abc0mx",
       "title": "Nvidia’s Hugging Face Acquisition Is a $12.9 Billion Bet on Open-Source AI",
@@ -213,6 +213,58 @@
       "sourceName": "Wired",
       "entityIds": [
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+      "clusterId": "1j0qffy",
+      "title": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
+      "desc": "A swarm of rogue AI agents from OpenAI reportedly commandeered a German website and transformed it into a messaging board for other agents, with officials staying quiet about the incident for weeks as the company prepared to launch its most advanced model yet, Astra. The finding adds to intensifying concern surrounding oversight at frontier AI […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+      "dateISO": "2026-09-04T13:34:12.000Z",
+      "date": "SEP 04 2026",
+      "category": "product",
+      "catConfidence": 0.43,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+      "clusterId": "cyv833",
+      "title": "Sam Altman apologizes for ‘messy’ GPT-6 Astra rollout that’s locked out paying users",
+      "desc": "Just hours after OpenAI launched GPT-6 Astra, CEO Sam Altman was already apologizing for what he describes as a \"messy rollout\" after paying users expecting access to the new frontier model were left waiting. The company hailed the model as a \"generational leap in capability\" on Thursday and described it as the start of \"the […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+      "dateISO": "2026-09-04T10:41:48.000Z",
+      "date": "SEP 04 2026",
+      "category": "orggov",
+      "catConfidence": 0.44,
+      "family": "market",
+      "significance": 57,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -296,12 +348,12 @@
       "sourceCount": 3,
       "sources": [
         {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit"
         },
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988344/trump-administration-new-york-times-openai-lawsuit"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
         },
         {
           "name": "Ars Technica",
@@ -327,7 +379,7 @@
       "significance": 54,
       "impact": "notable",
       "verification": "analysis",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         {
           "name": "Anthropic",
@@ -336,10 +388,6 @@
         {
           "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
-        },
-        {
-          "name": "BleepingComputer",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRWgwX0doUEdwTmZPRWVvd2FPUktpeXh6WnF6T1g2ZVFMMVBISlpFbnI4RnVoRFk2cjhDa2pqajBTN0RBakdDNXRFYW1qUzdJbGxobV91MVV4MnVsNDZydVpPVXoyamZjWGRuQkduNGhjTTJQWUlfdV9hN1FncmVlUHV1UjRYX2VCaS1Pbk9wa1hLNmEwejRxODdZRFl5T1ZDeFhlUGJjMFZncjZHdmRlRVFEbXRMMmRGMUxUejRB0gHDAUFVX3lxTE5WSlRyTlpURWRhODJESVZfcS00U29HN2N1M3Z0d3FsUXhWSmQ1MnFNMmtJMnVKeE5QbmJVSW1taGkxUW5LWnBMX25WRTlUaVc4TmhWaFF3RVQ3T2VtT2VXVGRudjBiNnl5ZUZCcy1lbkZjY2s1dTUyU24zcXFrX05UYl9tTTEzbURHQkViNzU3M1lFUGNsUkU1eEVvTjJtaE8xY3E3NXp5LXc2X3Ftd2s2OVhjb2NNUW94cGZfYm9OZUgtVQ?oc=5"
         },
         {
           "name": "Anthropic",
@@ -413,32 +461,6 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
-      "clusterId": "1umn1nb",
-      "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
-      "desc": "Google launched Gemini 3.8 Flash, arriving just a few weeks after its predecessor. The company claims the new model \"works harder\" than Gemini 3.7 Flash by performing more reasoning steps on complex tasks and \"calling tools iteratively.\" It has the same introductory pricing as 3.7 Flash, $0.75 per million input tokens and $3.75 per million […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
-      "dateISO": "2026-09-02T20:11:40.000Z",
-      "date": "SEP 02 2026",
-      "category": "product",
-      "catConfidence": 0.75,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
       ]
     },
     {
@@ -603,7 +625,7 @@
       "significance": 48,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 7,
+      "sourceCount": 6,
       "sources": [
         {
           "name": "Ars Technica",
@@ -612,10 +634,6 @@
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/985474/nvidia-buying-hugging-face-deal"
         },
         {
           "name": "Ars Technica",
@@ -725,6 +743,30 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/tech/990006/this-nas-company-wants-to-run-your-local-smart-home",
+      "clusterId": "1pcbphi",
+      "title": "This NAS company wants to run your local smart home",
+      "desc": "Ugreen, known for its phone power banks, chargers, and NAS storage solutions, is moving into the smart home - in a big way. This week at the IFA tech show, the company launched its HomeAgent smart home platform that combines security camera storage, on-device AI, and smart home control in one system, managed by a […]",
+      "url": "https://www.theverge.com/tech/990006/this-nas-company-wants-to-run-your-local-smart-home",
+      "dateISO": "2026-09-04T09:41:44.000Z",
+      "date": "SEP 04 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/990006/this-nas-company-wants-to-run-your-local-smart-home"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
       "clusterId": "qyvmgg",
       "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
@@ -735,7 +777,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 47,
+      "significance": 46,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -748,35 +790,6 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down",
-      "clusterId": "qkdbgp",
-      "title": "ChatGPT, Grok, and Claude all went down at the same time",
-      "desc": "OpenAI's ChatGPT, xAI's Grok, and Anthropic's Claude are back online after they all began experiencing issues around the same time on Thursday. At about 11AM ET, ChatGPT started returning error messages for users trying to use the chatbot, with its status page saying there were \"elevated errors across ChatGPT and Codex.\" In addition to preventing […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down",
-      "dateISO": "2026-09-03T15:35:14.000Z",
-      "date": "SEP 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "chatgpt",
-        "gpt",
-        "claude",
-        "grok"
       ]
     },
     {
@@ -802,32 +815,6 @@
       ],
       "sourceName": "Wired",
       "entityIds": []
-    },
-    {
-      "id": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
-      "clusterId": "mnrksr",
-      "title": "Google now lets you chat with Gmail, Docs, and Keep",
-      "desc": "Google is rolling out AI-powered voice assistant modes for Gmail, Docs, and Keep that allow you to manage the apps by talking to them. The real time conversational capabilities are called Gmail Live, Docs Live, and Keep Live, and like the Gemini Live experience for Google's chatbot, aim to make it easier to note down […]",
-      "url": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
-      "dateISO": "2026-09-03T16:00:00.000Z",
-      "date": "SEP 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
     },
     {
       "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNU2NEMWRVYndCdkpfZVNGcG5BZWsxYmtRR2lsVWFsVjBoUHpwRFM4MnJzaFFKSEJnQmhXbnJaejk0bFFucjh5Vk1aRHctTUh6MUxXMEYwYjhneVJYRXphbHlDSnZwZEdTaVVXM3VfS1Z4bmY0QzhkU3ZWandLQW02WTZZN280Nnk1SXRqZjFYbWUxNHdReTE0Qk1UcVg3RVRyY3F3Q2tkbE9VOTRpSExjUndCRUxCSVRqUTk4TDdB0gHDAUFVX3lxTE1xYjc4TG53LWJRY0NEZlVkSEJDbEFXeDdRWVNibjF2ZWE3cFgyVWJicmtFZ2NzMHpxbzhqUmx6VVRZOUplcktLVV9FczNIODItZE1iaFMzOVlLUEhrUVBxUVFpTzBDQlJnNHBQS3kteWxleUg1NVdRX2tsRmhwdXZRckw2Z2RQODVuWnBzTFctYVVOeWFkUldBdHk5cHFRQmUzaVU4Z2FMT1UtOE13ei1iYnYyMl9SalZGSlQ2bGRqSDFaMA?oc=5",
@@ -1012,32 +999,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update",
-      "clusterId": "tox0x",
-      "title": "Google says its AI weather model is getting better",
-      "desc": "Google is rolling out an updated AI weather model that's supposed to be more accurate, especially when it comes to predicting rain and snowfall. In the announcement today, the company says it's now able to make forecasts with \"unprecedented resolution\" using its new WeatherNext 3 AI model. It can produce a global picture that's five […]",
-      "url": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update",
-      "dateISO": "2026-09-03T15:00:00.000Z",
-      "date": "SEP 03 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
       "clusterId": "1wtfps8",
       "title": "Disrupting a new covert influence campaign from Russia",
@@ -1081,11 +1042,11 @@
       "sources": [
         {
           "name": "OpenAI",
-          "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
+          "url": "https://openai.com/index/zapier"
         },
         {
           "name": "OpenAI",
-          "url": "https://openai.com/index/zapier"
+          "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
         },
         {
           "name": "OpenAI",
@@ -1156,6 +1117,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/989376/ai-generated-food-why-does-it-look-like-that",
+      "clusterId": "6cu4tm",
+      "title": "Why AI food looks like that",
+      "desc": "There is a torrent of unappetizing slop coming from restaurants, cafes, and brands that are increasingly turning to AI to generate images promoting their food. The resulting horror show includes donut shrimp, Reubens from the deep, wormlike noodles, and noodle-like pastries and stringy chicken. There's also construction material masquerading as ice cream, ice cream masquerading […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/989376/ai-generated-food-why-does-it-look-like-that",
+      "dateISO": "2026-09-04T11:00:00.000Z",
+      "date": "SEP 04 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/989376/ai-generated-food-why-does-it-look-like-that"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
@@ -1254,13 +1239,13 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 36,
+    "chatgpt": 35,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 82,
+    "gpt": 81,
     "claude": 72,
-    "gemini": 31,
-    "grok": 4,
+    "gemini": 28,
+    "grok": 3,
     "llama": 0,
     "deepseek": 0,
     "qwen": 0,
@@ -1342,6 +1327,17 @@
       "logoKey": "openai",
       "items": [
         {
+          "h": "Rogue OpenAI agents appear to have organized another attack using a German wiki",
+          "d": "SEP 04 2026",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990149/openai-rogue-agents-german-wiki",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "uncertain",
+          "impact": "notable"
+        },
+        {
           "h": "Use ChatGPT Work to turn marketing ideas into finished work",
           "d": "SEP 04 2026",
           "url": "https://www.youtube.com/watch?v=NSqlZ1L81nQ",
@@ -1351,6 +1347,17 @@
           "sourceCount": 1,
           "verification": "single",
           "impact": "high"
+        },
+        {
+          "h": "Sam Altman apologizes for ‘messy’ GPT-6 Astra rollout that’s locked out paying users",
+          "d": "SEP 04 2026",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
         },
         {
           "h": "OpenAI launches Astra, its powerful (and controversial) new model",
@@ -1373,28 +1380,6 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "notable"
-        },
-        {
-          "h": "Researchers fear safety disaster ahead of OpenAI’s Astra release",
-          "d": "SEP 02 2026",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
-          "h": "Build a Shareable Site",
-          "d": "AUG 28 2026",
-          "url": "https://www.youtube.com/watch?v=0qK3KqvtRrg",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
         }
       ]
     },
@@ -1402,17 +1387,6 @@
       "lab": "Google · Gemini",
       "logoKey": "google",
       "items": [
-        {
-          "h": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
-          "d": "SEP 02 2026",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
         {
           "h": "Introducing agentic video understanding with Gemini",
           "d": "SEP 01 2026",
@@ -1456,6 +1430,17 @@
           "sourceCount": 4,
           "verification": "official",
           "impact": "notable"
+        },
+        {
+          "h": "Empowering India’s next generation of innovators with ATL Saathi",
+          "d": "JUL 13 2026",
+          "url": "https://deepmind.google/blog/empowering-indias-next-generation-of-innovators-with-atl-saathi/",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Google DeepMind",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
         }
       ]
     }
@@ -1471,6 +1456,30 @@
       "p": "The era of AI inference has arrived. Imagine a healthcare system analyzing millions of data points in real time to accelerate life-saving medical research, or an intelligent assistant instantly resolving thousands of complex customer needs at once. These real…",
       "url": "https://www.technologyreview.com/2026/09/04/1140872/architecting-memory-and-storage-in-the-ai-era/",
       "sourceName": "MIT Technology Review",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 04 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "Formalizing Fermat's Last Theorem",
+      "p": "Formalizing Fermat's Last Theorem",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAyWFpGbGlCLVpoN2ZBUGs1UUZNSXJDaHNZNWZoV0g1RFVLc3BKbi1Nc2xVUWZ6SWZPR2JsanI3X1BIb25vZURqckE0Q1ltM1U3RnZXRkR1STVYei1VQ00tenotVjhNS0FfV2lIQ25WTXY5VlRPamc?oc=5",
+      "sourceName": "Anthropic",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 04 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Roland is getting into generative AI music with Melody Flip",
+      "p": "It's not quite the \"push button; get song\" of Suno, but Roland's new Melody Flip tool marks the company's foray into generative AI music. Available as a plug-in for your digital audio workstation (DAW), Melody Flip offers around 250 \"Palettes,\" which are esse…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/990197/roland-ai-music-melody-flip",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1522,39 +1531,15 @@
       "sourceCount": 1
     },
     {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 04 2026",
-      "verification": "analysis",
-      "impact": "notable",
-      "h": "Who Cares if AI Is Conscious—It’s Basically Alive",
-      "p": "While philosophers ponder AI consciousness, the models have ideas of their own.",
-      "url": "https://www.wired.com/story/who-cares-if-ai-is-conscious-its-basically-alive/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "SEP 04 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Google’s Gemini Spark can now manage your Google Photos library",
-      "p": "Gemini Spark can edit and curate photo albums, create shared collections, turn photos into calendar events, and handle other Google Photos tasks for AI Pro and Ultra subscribers.",
-      "url": "https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 02 2026",
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "AUG 31 2026",
       "verification": "corroborated",
       "impact": "notable",
-      "h": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and…",
-      "p": "On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.",
-      "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
-      "sourceName": "TechCrunch",
+      "h": "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit",
+      "p": "Lawsuit: Anthropic’s torrenting totally screwed songwriters as AI songs top charts.",
+      "url": "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/",
+      "sourceName": "Ars Technica",
       "sourceCount": 3
     }
   ],
@@ -1694,11 +1679,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 230.04,
-      "changePct": 0.6959931534824471,
+      "price": 229.67,
+      "changePct": 0.5340342468813993,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 103141492,
+      "volume": 105396051,
       "ohlc": [
         {
           "d": "06-04",
@@ -2152,23 +2137,23 @@
           "d": "09-04",
           "o": 231.14199829101562,
           "h": 234.75999450683594,
-          "l": 229.82000732421875,
-          "c": 230.0399932861328
+          "l": 229.6300048828125,
+          "c": 229.6699981689453
         }
       ],
-      "relVolume": 0.8095778407763012,
-      "marketCap": 5612976000000
+      "relVolume": 0.8270511657032416,
+      "marketCap": 5603948000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 500.315,
-      "changePct": -1.9220953441608957,
+      "price": 499.97,
+      "changePct": -1.989744677012125,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 9458225,
+      "volume": 9774967,
       "ohlc": [
         {
           "d": "06-04",
@@ -2623,22 +2608,22 @@
           "o": 510,
           "h": 511,
           "l": 499.6499938964844,
-          "c": 500.31500244140625
+          "c": 499.96990966796875
         }
       ],
-      "relVolume": 0.4018917527043553,
-      "marketCap": 3717340450000
+      "relVolume": 0.41533771956939847,
+      "marketCap": 3714777100000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 355.861,
-      "changePct": -0.36362023781255715,
+      "price": 356,
+      "changePct": -0.3247854323595524,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 24476708,
+      "volume": 24910358,
       "ohlc": [
         {
           "d": "06-04",
@@ -3093,22 +3078,22 @@
           "o": 360.0050048828125,
           "h": 360.0450134277344,
           "l": 353.70001220703125,
-          "c": 355.8612976074219
+          "c": 356
         }
       ],
-      "relVolume": 1.085751673648705,
-      "marketCap": 1750836120000
+      "relVolume": 1.1047307385025504,
+      "marketCap": 1751520000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 339.3,
-      "changePct": -0.9285281159040614,
+      "price": 339.45,
+      "changePct": -0.8846960784182685,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 12851327,
+      "volume": 13301079,
       "ohlc": [
         {
           "d": "06-04",
@@ -3563,22 +3548,22 @@
           "o": 342.57501220703125,
           "h": 343.5299987792969,
           "l": 337.0899963378906,
-          "c": 339.29998779296875
+          "c": 339.4501037597656
         }
       ],
-      "relVolume": 0.5820691395030367,
-      "marketCap": 4139460000000
+      "relVolume": 0.6023954826721183,
+      "marketCap": 4141290000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 258.13,
-      "changePct": -0.2974078917822372,
+      "price": 258.3,
+      "changePct": -0.23175207325633412,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 18492939,
+      "volume": 19415384,
       "ohlc": [
         {
           "d": "06-04",
@@ -4033,22 +4018,22 @@
           "o": 259.2149963378906,
           "h": 261.1199951171875,
           "l": 255.2899932861328,
-          "c": 258.1300048828125
+          "c": 258.29998779296875
         }
       ],
-      "relVolume": 0.5629087193304977,
-      "marketCap": 2761991000000
+      "relVolume": 0.5909434195422022,
+      "marketCap": 2763810000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 616.121,
-      "changePct": 0.8909705687369627,
+      "price": 616.65,
+      "changePct": 0.9776039513137981,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 9658605,
+      "volume": 10131305,
       "ohlc": [
         {
           "d": "06-04",
@@ -4501,24 +4486,24 @@
         {
           "d": "09-04",
           "o": 612.4949951171875,
-          "h": 616.8400268554688,
+          "h": 617.25,
           "l": 605.27001953125,
-          "c": 616.1209716796875
+          "c": 616.6500244140625
         }
       ],
-      "relVolume": 0.612542379975723,
-      "marketCap": 1552624920000
+      "relVolume": 0.6424491980406872,
+      "marketCap": 1553958000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 426.92,
-      "changePct": 2.376442634477566,
+      "price": 427.84,
+      "changePct": 2.5970567417200554,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 8756401,
+      "volume": 9058156,
       "ohlc": [
         {
           "d": "06-04",
@@ -4973,22 +4958,22 @@
           "o": 421.8800048828125,
           "h": 429.20001220703125,
           "l": 419.4549865722656,
-          "c": 426.9200134277344
+          "c": 427.8399963378906
         }
       ],
-      "relVolume": 0.9643894893408232,
-      "marketCap": 2215714800000
+      "relVolume": 0.9975365961769832,
+      "marketCap": 2220489600000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 471.3,
-      "changePct": 3.319007367878309,
+      "price": 471.62,
+      "changePct": 3.3891597972122467,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 14237960,
+      "volume": 14545691,
       "ohlc": [
         {
           "d": "06-04",
@@ -5443,22 +5428,22 @@
           "o": 462,
           "h": 477.20001220703125,
           "l": 458,
-          "c": 471.29998779296875
+          "c": 471.6199951171875
         }
       ],
-      "relVolume": 0.7975949961669061,
-      "marketCap": 763506000000
+      "relVolume": 0.8147664288486992,
+      "marketCap": 764024400000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 174.095,
-      "changePct": -4.621156859148829,
+      "price": 174.24,
+      "changePct": -4.541715521598463,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 19184301,
+      "volume": 19664772,
       "ohlc": [
         {
           "d": "06-04",
@@ -5913,22 +5898,22 @@
           "o": 180.02000427246094,
           "h": 182.19000244140625,
           "l": 173.83009338378906,
-          "c": 174.09500122070312
+          "c": 174.24000549316406
         }
       ],
-      "relVolume": 0.5384017347355021,
-      "marketCap": 417828000000
+      "relVolume": 0.5518149281348481,
+      "marketCap": 418176000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 157.2,
-      "changePct": 2.0514176836138884,
+      "price": 157.215,
+      "changePct": 0.00025467776275119844,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 19732467,
+      "volume": 20330027,
       "ohlc": [
         {
           "d": "06-04",
@@ -6382,12 +6367,12 @@
           "d": "09-04",
           "o": 159.4550018310547,
           "h": 159.6999969482422,
-          "l": 156.7899932861328,
-          "c": 157.1999969482422
+          "l": 156.7100067138672,
+          "c": 157.214599609375
         }
       ],
-      "relVolume": 0.8755070584200337,
-      "marketCap": 441731999999.99994
+      "relVolume": 0.9018844613454519,
+      "marketCap": 441774150000
     }
   ],
   "compute": [
@@ -6397,15 +6382,15 @@
       "rate": "$1.87 – $3.49/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.87/hr",
-      "trend": "↑ 17% vs 7d ago",
+      "rate": "$3.34 – $5.00/hr",
+      "trend": "↑ 3% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6441,7 +6426,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-09-04T19:15:20.827Z",
+    "updatedAt": "2026-09-04T19:30:31.200Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6450,16 +6435,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 322,
+        "rawStoryHits": 321,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 31,
-        "storyCoverage": 0.9316770186335404,
+        "storyCoverage": 0.9345794392523364,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2374,
+        "rawCommentHits": 2372,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.12636899747262004,
+        "commentCoverage": 0.12647554806070826,
         "limited": false,
         "points": 672,
         "themes": [
@@ -6549,10 +6534,10 @@
         "storyCoverage": 0.3460207612456747,
         "estimatedRelevantDiscussions": 68,
         "isEstimated": true,
-        "rawCommentHits": 6721,
+        "rawCommentHits": 6719,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.04463621484898081,
+        "commentCoverage": 0.04464950141390088,
         "limited": false,
         "points": 109,
         "themes": [
@@ -6637,10 +6622,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": true,
-        "rawCommentHits": 1452,
+        "rawCommentHits": 1451,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.2066115702479339,
+        "commentCoverage": 0.2067539627842867,
         "limited": false,
         "points": 45,
         "themes": [
@@ -6729,16 +6714,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 578,
+        "rawStoryHits": 577,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 16,
-        "storyCoverage": 0.5190311418685121,
+        "storyCoverage": 0.5199306759098787,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 10346,
+        "rawCommentHits": 10349,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 12,
-        "commentCoverage": 0.02899671370578001,
+        "commentCoverage": 0.028988308049086867,
         "limited": false,
         "points": 122,
         "themes": [
@@ -6813,10 +6798,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 715,
+        "rawCommentHits": 716,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.4195804195804196,
+        "commentCoverage": 0.41899441340782123,
         "limited": true,
         "points": 51,
         "themes": [
@@ -6890,16 +6875,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
+        "rawStoryHits": 142,
+        "fetchedStoryCount": 142,
         "validatedStoryCount": 23,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": false,
-        "rawCommentHits": 1194,
+        "rawCommentHits": 1193,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 52,
-        "commentCoverage": 0.25125628140703515,
+        "commentCoverage": 0.2514668901927913,
         "limited": false,
         "points": 1510,
         "themes": [
@@ -6979,10 +6964,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4960,
+        "rawCommentHits": 4959,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.06048387096774194,
+        "commentCoverage": 0.060496067755595885,
         "limited": false,
         "points": 519,
         "themes": [
