@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-09-06T05:46:10.286Z",
+  "updatedAt": "2026-09-06T06:00:28.912Z",
   "build": {
-    "sha": "1d52845b2b089eaab5a4cfbd437fed26c7db556a",
-    "shortSha": "1d52845",
+    "sha": "de41a1703866bc5d74aa698ab74459787c034294",
+    "shortSha": "de41a17",
     "ref": "main",
-    "builtAt": "2026-09-06T05:46:26.590Z"
+    "builtAt": "2026-09-06T06:01:10.715Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 11,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 58.2,
+    "historyDepthDays": 58.3,
     "estimatedDatasets": 4,
-    "buildSha": "1d52845",
-    "lastSuccessfulUpdate": "2026-09-06T05:46:10.286Z"
+    "buildSha": "de41a17",
+    "lastSuccessfulUpdate": "2026-09-06T06:00:28.912Z"
   },
   "ticker": [
     "SEATTLE TIMES AND NEWSDAY ARE THE LATEST PUBLICATIONS TO SUE OPENAI AND MICROSOFT",
@@ -23,10 +23,10 @@
     "SALES WORKFLOWS WITH CHATGPT WORK",
     "ANTHROPIC CALLED SFPD OVER THREAT AGAINST CEO. CLAUDE USER SAYS IT WAS A MISUNDERSTANDING",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
+    "USE CHATGPT WORK TO TURN MARKETING IDEAS INTO FINISHED WORK",
     "“ZLIBRARY MY BELOVED”: ANTHROPIC STAFF CHATS EXTOLLING PIRACY CITED IN SONY SUIT",
     "HOW CLAUDE PERFORMS ON ROBOTICS TASKS",
-    "OPENAI CONFIRMS ‘WIKI INCIDENT,’ SAYS IT’S ‘WORKING ON A FRAMEWORK’ FOR MORE DISCLOSURE",
-    "INTRODUCING CLAUDE FOR TEACHERS"
+    "OPENAI CONFIRMS ‘WIKI INCIDENT,’ SAYS IT’S ‘WORKING ON A FRAMEWORK’ FOR MORE DISCLOSURE"
   ],
   "signals": [
     {
@@ -215,6 +215,32 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=NSqlZ1L81nQ",
+      "clusterId": "1rgmwq",
+      "title": "Use ChatGPT Work to turn marketing ideas into finished work",
+      "desc": "Turn marketing ideas into work your team can review. This is how our marketing team uses ChatGPT Work to connect its files and tools and build presentations, docs and creative assets—with marketers deciding what to refine and ship. Watch the full webinar: https://goldcast.registration.public-pr50.goldcast.io/on-demand/d863a2bc-77cf-4197-8ba4-b4a8b837c0b3?utm_medium=social&utm_source=youtube&utm_ca",
+      "url": "https://www.youtube.com/watch?v=NSqlZ1L81nQ",
+      "dateISO": "2026-09-04T12:20:19.000Z",
+      "date": "SEP 04 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 56,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=NSqlZ1L81nQ"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt"
       ]
     },
     {
@@ -493,32 +519,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/",
-      "clusterId": "a7gcjv",
-      "title": "OpenAI Cut Off a Billion-Dollar Customer to Avoid Elon Musk",
-      "desc": "OpenAI recently estimated its Cursor partnership would make more than $1 billion in revenue a year, WIRED has learned. It still walked away after Elon Musk’s SpaceX acquired the AI coding startup.",
-      "url": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/",
-      "dateISO": "2026-09-03T16:42:40.000Z",
-      "date": "SEP 03 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
       "clusterId": "1vfj8jd",
       "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
@@ -556,6 +556,32 @@
         }
       ],
       "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/",
+      "clusterId": "a7gcjv",
+      "title": "OpenAI Cut Off a Billion-Dollar Customer to Avoid Elon Musk",
+      "desc": "OpenAI recently estimated its Cursor partnership would make more than $1 billion in revenue a year, WIRED has learned. It still walked away after Elon Musk’s SpaceX acquired the AI coding startup.",
+      "url": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/",
+      "dateISO": "2026-09-03T16:42:40.000Z",
+      "date": "SEP 03 2026",
+      "category": "capital",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/"
+        }
+      ],
+      "sourceName": "Wired",
       "entityIds": [
         "gpt"
       ]
@@ -826,8 +852,8 @@
       "title": "Anthropic sued over alleged theft of ‘tens of thousands’ of songs",
       "desc": "",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5",
-      "dateISO": "2026-09-01T01:30:00.000Z",
-      "date": "SEP 01 2026",
+      "dateISO": "2026-08-31T12:42:00.000Z",
+      "date": "AUG 31 2026",
       "category": "policy",
       "catConfidence": 0.67,
       "family": "market",
@@ -837,57 +863,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "theguardian.com",
+          "name": "The Guardian",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5"
         }
       ],
-      "sourceName": "theguardian.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5",
-      "clusterId": "1q110t3",
-      "title": "China warns about AI risks with Anthropic's Claude Code",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5",
-      "dateISO": "2026-07-08T07:00:00.000Z",
-      "date": "JUL 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 6,
-      "sources": [
-        {
-          "name": "BleepingComputer",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3lzZENsdmlkQU5TVWo4VGFNdVYwV05wVDVEdEdEelc5dkhNeDVkQ3FqR0JPNHdLaXllWHphTWFSd3FkRUFCYTR5OUVFdGhVVzM5emZjalZHTDYxLTI1RXhvcGplRERpZ0dVR0RZWm5MU29uLVhURHREd1MzdjJHNFJMaGtxSUU3S0dDSXI4RXRKSEpjS2FiWDVQNS14MG1IZEo5a0pkcVJVY2tWV0hCaDJxSDN5Sjlpc3gwSTBTcnpMQmFJQ2p4UUttZTfSAdIBQVVfeXFMTll1YlFSYW1Ec3V6VFBOZzE2OE9mUC1nR1FLeWlZMHNXbk1ndzBYZm11SzQ4OWhQQWhZSnBTbkRYLTRaNG0tQTZSRmdTRXdDcDZpR3kzdUVjdWppdlp1d2ZwUTJGZEZGaFlGeVNOSnNiZGFvRmdGT0Fucjlkd3V2S0tRVmc1VnN4SXhSdGhlMG91QWxtRzhsSkNoUG5IdmtEeHFCc3JRVng4ZmdZeVJEZUpnWnQ0MnBOeHBoUk1aUm1rSVlyZk9WLXlkYV85WldhcENR?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
-        },
-        {
-          "name": "South China Morning Post",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
-        },
-        {
-          "name": "WSJ",
-          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
-        }
-      ],
-      "sourceName": "CNBC",
+      "sourceName": "The Guardian",
       "entityIds": [
         "claude"
       ]
@@ -919,6 +899,48 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5",
+      "clusterId": "1q110t3",
+      "title": "China warns about AI risks with Anthropic's Claude Code",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5",
+      "dateISO": "2026-07-08T07:00:00.000Z",
+      "date": "JUL 08 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 5,
+      "sources": [
+        {
+          "name": "techcrunch.com",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
+        },
+        {
+          "name": "South China Morning Post",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOellSU2ZVblNId0lhN2FnNXdkUjBkT2FhaUpEeUdNTkRHT0VjSC1IekFGVWtCVGpOTHRPYzZlYXZNMEVEZnZUSXBVMlluNHZVNGpwLVB4T3pQQWhmU3owZHdyWG16bkJ5OGNoQkZmRU1mSVp4NFFibnFCZEZ0MDdUNWpNTjhJRnh4Yk9TOE5ZZ2wwVkwwZ19vdTZoRGlvcmx0aVFKTVA3WTFTWXdaLTFCbF9n0gGyAUFVX3lxTFBsYk56aHEyeGRpdW9fbzBCSFl5dXNlTm9kSVF3c1k1aElJWVhWaDFFcE14M2ptVTBlbGpMdFdvOENxTmNQeThXeFhzb3llTjNkREl4YnQ3UkRPOFQtNk1yVzZlMzBVLUc1ZDhqZy1XU3ZCRnFJRnpjVWRNbnI0UTFZdlhBalhFRkpVWFlDNzh0QVVGVHdYYjBKb1F6c2hubkxBdUxQMWh2ZEVOblRfVFpiQXc?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOcWdNNXlUVVVRc0x4M2dHYVNnejA4SjE1SkR1LUdROVotOUN6V0RNcVFqWW1seGU2RDRjMUo0RHhPZG1ISGJJWFBsd0tTVEEyc0tMcFNlUWR5R1BvbzNDN1FDMS1CQWtrbzJrTFFIS2pha2d3dmc4eFdtNWl5OU5WQ1RvQU13NC1BWFBlX19PaTM5LUNWeDFR0gGcAUFVX3lxTE94bVUtdmNPZTlZbUdoMkt4RmpUVU81QVBJU1dJZ3R3MXR2Qm5vWER2RGFUS3FVVHNCTGlPTFcxZXZDNjRVaTF6bzdadFhqREswRDZkQnN3c2ZFUmFCY1c5dFFHZjJsOGFkUzBIVHYtSy1ORTVTYVBmYkJSVVhWbFFGaEpBa2JqS2g2UmlEOHJZdWJaVlRPTXBGcGFScA?oc=5"
+        },
+        {
+          "name": "WSJ",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQnhuNTk2eXJ6MFM2WmREY0pSNFN1REdpZXRFVU5FNElsTl9ZNFJ1YjFXQ084M19hN3FXWTFlY2ZDRnFLLWFXZGRybkhSa2hFbUtKRDJJUDR0QlNQcUZVZTVfOWRUUHRGenNleHFfcy1oS0NYVmN6QThLMjFBWF9qMDlwZ1hnNTE0cVAzNm1nNl9sOEVnM1Q0Vkg1WUNDQTlwUGVvWWsxRlVLVFNxS1ctVw?oc=5"
+        },
+        {
+          "name": "reuters.com",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQTmtuYVZDY0RoM0VTUW1Sa3poM1pYOHlYbVJwRk1lOXNPM1QwX25uMnlrdVUxUnlqSEhXZzlrWUxFQkRRa21HeEJWR1ZrY2UzeVUwdHBmcFR5bDR1OHNIQjRHNTZUYjd0NzJzZjNsQzdqNXRBUDZDdW1wekdXU1ZHcjNlbVVvM1NiSnJVQmppV2I3ZDNnSXIyZDBWMTZPQzhWTTRNUHo2WnZ0TG9RMzhmdjdBQnRzbUts?oc=5"
+        }
+      ],
+      "sourceName": "CNBC",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5",
       "clusterId": "1ycba4o",
       "title": "Anthropic says three Claude models reached real-world systems during cyber tests",
@@ -939,11 +961,11 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
         },
         {
-          "name": "DW.com",
+          "name": "dw.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
-          "name": "pbs.org",
+          "name": "PBS",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUzBYZ080YTJJRmVjeWFubUoyZkJTYjc5SzQ4bXJXaFA2TDh6YW8wU3AwR0twTmFaVGRWMmdUNlFhNXB0RS1GRWxuNVNxMmhzSkpqWE5BRUdndmFFU0NKb2xoZ3VlV25rVVduaDF1SUxEUTFuQTdsR05DMTdZeGRoaXRCX3pNTl81b29FVExUWU5QTUpzRmp6VFduU3ZYTF9Kd1laYw?oc=5"
         },
         {
@@ -1031,11 +1053,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Reuters",
+          "name": "reuters.com",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5"
         }
       ],
-      "sourceName": "Reuters",
+      "sourceName": "reuters.com",
       "entityIds": [
         "claude"
       ]
@@ -1169,32 +1191,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNekpfbDRZSnBaRFlzVnk5VXpFN0otblZTU3h2Q0ZKeUtRRElVN2dMT0xyeTZFOUhqTFZNcWJVRmd3dzRtbDBncmdCU25keUdvR2tMMldlMTY0YzF2NmtocDJmam5UdlRoTEd5V3Jfb010QlZEZ2d3RVlrZF96N2xwTFdleDdnb2JQMzlSYXplZXUyem9ueEVKT2xLSUs?oc=5",
-      "clusterId": "1v28bna",
-      "title": "From Claude to the Stock Market: Anthropic’s IPO Filing, Explained.",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNekpfbDRZSnBaRFlzVnk5VXpFN0otblZTU3h2Q0ZKeUtRRElVN2dMT0xyeTZFOUhqTFZNcWJVRmd3dzRtbDBncmdCU25keUdvR2tMMldlMTY0YzF2NmtocDJmam5UdlRoTEd5V3Jfb010QlZEZ2d3RVlrZF96N2xwTFdleDdnb2JQMzlSYXplZXUyem9ueEVKT2xLSUs?oc=5",
-      "dateISO": "2026-08-26T07:00:00.000Z",
-      "date": "AUG 26 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Direxion",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNekpfbDRZSnBaRFlzVnk5VXpFN0otblZTU3h2Q0ZKeUtRRElVN2dMT0xyeTZFOUhqTFZNcWJVRmd3dzRtbDBncmdCU25keUdvR2tMMldlMTY0YzF2NmtocDJmam5UdlRoTEd5V3Jfb010QlZEZ2d3RVlrZF96N2xwTFdleDdnb2JQMzlSYXplZXUyem9ueEVKT2xLSUs?oc=5"
-        }
-      ],
-      "sourceName": "Direxion",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1281,12 +1277,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 30,
+    "chatgpt": 32,
     "copilot": 1,
     "perplexity": 0,
     "gpt": 86,
     "claude": 73,
-    "gemini": 29,
+    "gemini": 30,
     "grok": 3,
     "llama": 0,
     "deepseek": 0,
@@ -1335,7 +1331,7 @@
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Education Week",
+          "sourceName": "edweek.org",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1380,6 +1376,17 @@
           "impact": "emerging"
         },
         {
+          "h": "Use ChatGPT Work to turn marketing ideas into finished work",
+          "d": "SEP 04 2026",
+          "url": "https://www.youtube.com/watch?v=NSqlZ1L81nQ",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
+        {
           "h": "Sam Altman apologizes for ‘messy’ GPT-6 Astra rollout that’s locked out paying users",
           "d": "SEP 04 2026",
           "url": "https://www.theverge.com/ai-artificial-intelligence/990060/altman-apologizes-messy-astra-rollout",
@@ -1388,6 +1395,17 @@
           "sourceName": "The Verge",
           "sourceCount": 1,
           "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing GPT-6 Astra: the most intelligent and aligned model in the world.",
+          "d": "SEP 03 2026",
+          "url": "https://www.youtube.com/watch?v=1QNsdr-Qx_I",
+          "isVideo": false,
+          "videoUrl": "https://www.youtube.com/watch?v=bOC3DisEOfg",
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 2,
+          "verification": "corroborated",
           "impact": "emerging"
         },
         {
@@ -1400,28 +1418,6 @@
           "sourceCount": 1,
           "verification": "single",
           "impact": "notable"
-        },
-        {
-          "h": "Daybreak for Frontline Defenders: $1B to protect essential services",
-          "d": "SEP 03 2026",
-          "url": "https://openai.com/index/daybreak-for-frontline-defenders",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "GPT-6 Astra: A new generation of intelligence",
-          "d": "SEP 03 2026",
-          "url": "https://openai.com/index/gpt-6-astra",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
         }
       ]
     },
@@ -6342,7 +6338,7 @@
       "rate": "$1.87 – $3.49/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6350,13 +6346,13 @@
       "rate": "$3.59 – $4.59/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $6.79/hr",
-      "trend": "↓ 5% vs 7d ago",
+      "rate": "$5.31 – $6.79/hr",
+      "trend": "↓ 10% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
@@ -6379,14 +6375,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$0.98 – $1.59/hr",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-06T05:46:10.286Z",
+    "updatedAt": "2026-09-06T06:00:28.912Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6401,10 +6397,10 @@
         "storyCoverage": 0.9174311926605505,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2300,
+        "rawCommentHits": 2299,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.13043478260869565,
+        "commentCoverage": 0.13049151805132667,
         "limited": false,
         "points": 661,
         "themes": [
@@ -6494,10 +6490,10 @@
         "storyCoverage": 0.35294117647058826,
         "estimatedRelevantDiscussions": 66,
         "isEstimated": true,
-        "rawCommentHits": 6677,
+        "rawCommentHits": 6676,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.04493035794518496,
+        "validatedCommentCount": 36,
+        "commentCoverage": 0.04493708807669263,
         "limited": false,
         "points": 111,
         "themes": [
@@ -6524,7 +6520,7 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 1
+            "count": 2
           },
           {
             "id": "context",
@@ -6577,10 +6573,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 1419,
+        "rawCommentHits": 1418,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.21141649048625794,
+        "commentCoverage": 0.21156558533145275,
         "limited": false,
         "points": 43,
         "themes": [
@@ -6669,16 +6665,16 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 553,
+        "rawStoryHits": 554,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 17,
-        "storyCoverage": 0.5424954792043399,
+        "storyCoverage": 0.5415162454873647,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 10159,
+        "rawCommentHits": 10157,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 12,
-        "commentCoverage": 0.02953046559700758,
+        "commentCoverage": 0.029536280397755243,
         "limited": false,
         "points": 123,
         "themes": [
@@ -6830,8 +6826,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 134,
-        "fetchedStoryCount": 134,
+        "rawStoryHits": 126,
+        "fetchedStoryCount": 126,
         "validatedStoryCount": 21,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
@@ -7118,6 +7114,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "coding"
+        ],
+        "excerpt": "…Crashlytics). LLM APIs (OpenAI, Anthropic), agentic coding (Claude Code, Codex). Also web (SvelteKit, Typescript, Tailwind) and backend (Node, Supabase, Vercel, AWS).Portfolio:…",
+        "source": "Hacker News",
+        "author": "albertodenia",
+        "publishedAt": "2026-09-05T08:19:38.000Z",
+        "url": "https://news.ycombinator.com/item?id=49574347"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "writing",
           "price"
         ],
@@ -7126,17 +7133,6 @@
         "author": "dao-",
         "publishedAt": "2026-09-05T20:45:11.000Z",
         "url": "https://news.ycombinator.com/item?id=49580468"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding"
-        ],
-        "excerpt": "…Crashlytics). LLM APIs (OpenAI, Anthropic), agentic coding (Claude Code, Codex). Also web (SvelteKit, Typescript, Tailwind) and backend (Node, Supabase, Vercel, AWS).Portfolio:…",
-        "source": "Hacker News",
-        "author": "albertodenia",
-        "publishedAt": "2026-09-05T08:19:38.000Z",
-        "url": "https://news.ycombinator.com/item?id=49574347"
       },
       {
         "modelId": "gemini",
