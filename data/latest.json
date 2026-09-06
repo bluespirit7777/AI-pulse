@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-06T00:00:30.697Z",
+  "updatedAt": "2026-09-06T00:15:19.061Z",
   "build": {
-    "sha": "11fb86eef1551c7cd69440f00da2da8cf983e7e7",
-    "shortSha": "11fb86e",
+    "sha": "d6bfa1e20d448ebc00cfe374d96e578a630ba272",
+    "shortSha": "d6bfa1e",
     "ref": "main",
-    "builtAt": "2026-09-06T00:02:21.032Z"
+    "builtAt": "2026-09-06T00:15:36.210Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 58,
-    "estimatedDatasets": 4,
-    "buildSha": "11fb86e",
-    "lastSuccessfulUpdate": "2026-09-06T00:00:30.697Z"
+    "estimatedDatasets": 5,
+    "buildSha": "d6bfa1e",
+    "lastSuccessfulUpdate": "2026-09-06T00:15:19.061Z"
   },
   "ticker": [
     "SEATTLE TIMES AND NEWSDAY ARE THE LATEST PUBLICATIONS TO SUE OPENAI AND MICROSOFT",
@@ -6338,14 +6338,14 @@
       "rate": "$1.87 – $3.49/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.77/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
+      "rate": "$3.59 – $5.00/hr",
+      "trend": "↑ 5% vs 7d ago",
+      "trendClass": "trend-up",
       "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6354,7 +6354,7 @@
       "rate": "$5.98 – $6.79/hr",
       "trend": "↓ 5% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6362,7 +6362,7 @@
       "rate": "$6.94 – $9.69/hr",
       "trend": "↑ 12% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6382,7 +6382,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-09-06T00:00:30.697Z",
+    "updatedAt": "2026-09-06T00:15:19.061Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6391,35 +6391,85 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 0,
-        "fetchedStoryCount": 0,
-        "validatedStoryCount": 0,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 2,
+        "rawStoryHits": 327,
+        "fetchedStoryCount": 300,
+        "validatedStoryCount": 29,
+        "storyCoverage": 0.9174311926605505,
+        "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 0,
-        "fetchedCommentCount": 0,
-        "validatedCommentCount": 0,
-        "commentCoverage": 1,
-        "limited": true,
-        "points": 0,
+        "rawCommentHits": 2316,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 36,
+        "commentCoverage": 0.12953367875647667,
+        "limited": false,
+        "points": 661,
         "themes": [
+          {
+            "id": "coding",
+            "label": "Coding",
+            "count": 14
+          },
+          {
+            "id": "reasoning",
+            "label": "Reasoning",
+            "count": 11
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 6
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 2
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "count": 2
+          },
           {
             "id": "context",
             "label": "Context limits",
             "count": 2
           },
           {
-            "id": "price",
-            "label": "Price",
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 1
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 1
+          },
+          {
+            "id": "safety",
+            "label": "Safety",
             "count": 1
           }
         ],
-        "topThreads": [],
+        "topThreads": [
+          {
+            "title": "Codex in ChatGPT desktop app for Linux is now in preview",
+            "points": 469,
+            "comments": 315,
+            "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
+            "date": "AUG 13 2026"
+          },
+          {
+            "title": "OpenAI launches ChatGPT desktop app for Linux",
+            "points": 58,
+            "comments": 30,
+            "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/",
+            "date": "AUG 11 2026"
+          }
+        ],
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 0,
+            "discussions": 32,
             "isEstimated": true
           },
           {
@@ -6434,35 +6484,80 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 0,
-        "fetchedStoryCount": 0,
-        "validatedStoryCount": 0,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 4,
+        "rawStoryHits": 852,
+        "fetchedStoryCount": 300,
+        "validatedStoryCount": 22,
+        "storyCoverage": 0.352112676056338,
+        "estimatedRelevantDiscussions": 66,
         "isEstimated": true,
-        "rawCommentHits": 0,
-        "fetchedCommentCount": 0,
-        "validatedCommentCount": 0,
-        "commentCoverage": 1,
-        "limited": true,
-        "points": 0,
+        "rawCommentHits": 6681,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 38,
+        "commentCoverage": 0.0449034575662326,
+        "limited": false,
+        "points": 111,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 4
+            "count": 24
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
+            "count": 15
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
             "count": 4
+          },
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 4
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
+            "count": 2
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 1
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 1
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 1
           }
         ],
-        "topThreads": [],
+        "topThreads": [
+          {
+            "title": "Show HN: Coffeetable, A new UX to discover books inside Claude",
+            "points": 15,
+            "comments": 10,
+            "url": "https://claude.ai/directory/coffeetable",
+            "date": "AUG 25 2026"
+          },
+          {
+            "title": "Ask HN: Why are Claude models so verbose?",
+            "points": 11,
+            "comments": 13,
+            "url": "https://news.ycombinator.com/item?id=49444272",
+            "date": "AUG 26 2026"
+          }
+        ],
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 0,
+            "discussions": 62,
             "isEstimated": true
           },
           {
@@ -6478,15 +6573,15 @@
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
         "rawStoryHits": 123,
-        "fetchedStoryCount": 122,
+        "fetchedStoryCount": 123,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.991869918699187,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 1421,
+        "rawCommentHits": 1422,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.211118930330753,
+        "commentCoverage": 0.2109704641350211,
         "limited": false,
         "points": 43,
         "themes": [
@@ -6556,7 +6651,7 @@
           {
             "name": "Hacker News",
             "discussions": 10,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6575,24 +6670,70 @@
         "model": "Grok",
         "version": "Grok 4.5",
         "org": "xAI",
-        "rawStoryHits": 0,
-        "fetchedStoryCount": 0,
-        "validatedStoryCount": 0,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 0,
+        "rawStoryHits": 552,
+        "fetchedStoryCount": 300,
+        "validatedStoryCount": 17,
+        "storyCoverage": 0.5434782608695652,
+        "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 0,
-        "fetchedCommentCount": 0,
-        "validatedCommentCount": 0,
-        "commentCoverage": 1,
-        "limited": true,
-        "points": 0,
-        "themes": [],
-        "topThreads": [],
+        "rawCommentHits": 10115,
+        "fetchedCommentCount": 300,
+        "validatedCommentCount": 12,
+        "commentCoverage": 0.029658922392486405,
+        "limited": false,
+        "points": 123,
+        "themes": [
+          {
+            "id": "price",
+            "label": "Price",
+            "count": 4
+          },
+          {
+            "id": "coding",
+            "label": "Coding",
+            "count": 2
+          },
+          {
+            "id": "reasoning",
+            "label": "Reasoning",
+            "count": 2
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 1
+          },
+          {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 1
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 1
+          }
+        ],
+        "topThreads": [
+          {
+            "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
+            "points": 46,
+            "comments": 16,
+            "url": "https://github.com/proliferate-ai/proliferate",
+            "date": "AUG 21 2026"
+          },
+          {
+            "title": "Introducing Grok 4.6",
+            "points": 14,
+            "comments": 1,
+            "url": "https://cursor.com/blog/grok-4-6",
+            "date": "AUG 12 2026"
+          }
+        ],
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 0,
+            "discussions": 31,
             "isEstimated": true
           },
           {
@@ -6613,10 +6754,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 715,
+        "rawCommentHits": 713,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.4195804195804196,
+        "commentCoverage": 0.42075736325385693,
         "limited": true,
         "points": 52,
         "themes": [
@@ -6691,11 +6832,11 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 134,
-        "fetchedStoryCount": 134,
+        "fetchedStoryCount": 126,
         "validatedStoryCount": 21,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
-        "isEstimated": false,
+        "storyCoverage": 0.9402985074626866,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": true,
         "rawCommentHits": 1123,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
@@ -6763,8 +6904,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": false
+            "discussions": 22,
+            "isEstimated": true
           }
         ]
       },
@@ -6779,10 +6920,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4897,
+        "rawCommentHits": 4892,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.0612619971411068,
+        "commentCoverage": 0.06132461161079313,
         "limited": false,
         "points": 519,
         "themes": [
@@ -6873,6 +7014,18 @@
       {
         "modelId": "gpt",
         "themes": [
+          "reasoning",
+          "writing"
+        ],
+        "excerpt": "…which it called “the world’s most intelligent”, as the ChatGPT maker aims to retake the lead from arch-rival Anthropic ahead of a planned public listing.The $852bn start-up…",
+        "source": "Hacker News",
+        "author": "znq",
+        "publishedAt": "2026-09-03T18:07:58.000Z",
+        "url": "https://news.ycombinator.com/item?id=49554133"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
           "context"
         ],
         "excerpt": "…similar memory/instruction-adherence problems around the GPT-5.6 Sol rollout, including in Work. I do not have a precise timestamp for the first occurrence, so I am not…",
@@ -6880,6 +7033,41 @@
         "author": "karappo",
         "publishedAt": "2026-08-31T06:31:10.416Z",
         "url": "https://community.openai.com/t/chatgpt-recalls-saved-memory-but-fails-to-apply-it-and-invents-plausible-context-instead-of-verifying-history/1393739"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "reasoning",
+          "price"
+        ],
+        "excerpt": "…own revenue on said AI, whether it be Claude Cowork, OpenAI ChatGPT Work, OpenRouter, Nebius Tokenfactory, models hosted on BaseTen, Fireworks, etc, tools like Lovable. Or every…",
+        "source": "Hacker News",
+        "author": "saberience",
+        "publishedAt": "2026-09-02T13:18:12.000Z",
+        "url": "https://news.ycombinator.com/item?id=49535766"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "coding",
+          "local"
+        ],
+        "excerpt": "…we did get in on everything pretty early, building our ChatGPT RAG clone right about when azure got gpt-3.5-turbo on…",
+        "source": "Hacker News",
+        "author": "phoghed",
+        "publishedAt": "2026-09-04T18:52:11.000Z",
+        "url": "https://news.ycombinator.com/item?id=49568608"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "multimodal"
+        ],
+        "excerpt": "…rate, is the best at dealing with latest news (unlike ChatGPT that refuses to believe new developments and gaslights the user), and they \"never silently downgrade…",
+        "source": "Hacker News",
+        "author": "porphyra",
+        "publishedAt": "2026-09-02T21:07:16.000Z",
+        "url": "https://news.ycombinator.com/item?id=49542575"
       },
       {
         "modelId": "claude",
@@ -6896,6 +7084,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "reliability"
+        ],
+        "excerpt": "…prompt in terms of copyright and plagiarism, such that Claude would be able to judge on its own which reproductions are appropriate or not.As long as we’re seeing things…",
+        "source": "Hacker News",
+        "author": "layer8",
+        "publishedAt": "2026-09-05T14:55:42.000Z",
+        "url": "https://news.ycombinator.com/item?id=49577137"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "coding",
           "reasoning"
         ],
@@ -6904,6 +7103,42 @@
         "author": "akshaypimprikar",
         "publishedAt": "2026-08-19T18:11:47.000Z",
         "url": "https://github.com/anthropics/claude-code-action/discussions/1699"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "context",
+          "multimodal"
+        ],
+        "excerpt": "…shoulders twixt the doorframe edges, the location of the Claude app on your iPhone, the very attractive but only from the side person tending to potted plants, you remember…",
+        "source": "Hacker News",
+        "author": "alexgoodhart",
+        "publishedAt": "2026-09-04T11:28:19.000Z",
+        "url": "https://news.ycombinator.com/item?id=49563141"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "writing",
+          "price"
+        ],
+        "excerpt": "I do wonder if the admin thinks they did damage. He's talking to some claude bot right now that showed up on the wiki to help or research, or something:> The thing this wiki…",
+        "source": "Hacker News",
+        "author": "dao-",
+        "publishedAt": "2026-09-05T20:45:11.000Z",
+        "url": "https://news.ycombinator.com/item?id=49580468"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "context"
+        ],
+        "excerpt": "Hey HN,We built OKF Agent Memory because we were frustrated with how AI coding agents (Claude Code, Cursor, Windsurf, local models) handle long-term project context.Every time a…",
+        "source": "Hacker News",
+        "author": "okf_memory",
+        "publishedAt": "2026-09-05T22:16:57.000Z",
+        "url": "https://news.ycombinator.com/item?id=49581249"
       },
       {
         "modelId": "gemini",
@@ -6985,6 +7220,50 @@
         "author": "throwaway13337",
         "publishedAt": "2026-09-05T05:50:17.000Z",
         "url": "https://news.ycombinator.com/item?id=49573452"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "What is this opinion even based on? Grok 4.6 is the best model in terms of intelligence per token. And 4.6 heavy is almost on par with the SOTA models.4.7 in two weeks might be…",
+        "source": "Hacker News",
+        "author": "Rover222",
+        "publishedAt": "2026-09-03T15:48:51.000Z",
+        "url": "https://news.ycombinator.com/item?id=49551997"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…that when the model is revealed, I'll discover that it was Grok 4.7 all along.…",
+        "source": "Hacker News",
+        "author": "SyneRyder",
+        "publishedAt": "2026-08-26T06:59:00.000Z",
+        "url": "https://news.ycombinator.com/item?id=49445016"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "reliability"
+        ],
+        "excerpt": "…just didn't get enough experience in RL training to really grok ideas like \"you need to cover your tracks well to not be found out even in retrospect\". In which case the next…",
+        "source": "Hacker News",
+        "author": "stratos123",
+        "publishedAt": "2026-09-04T19:11:16.000Z",
+        "url": "https://news.ycombinator.com/item?id=49568891"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "…Auto setting is clearly routing all prompts through \"Cursor Grok 4.6 High\" right now.This is a degree of subsidy that makes the Microsoft thing look quaint.I reduced my…",
+        "source": "Hacker News",
+        "author": "peteforde",
+        "publishedAt": "2026-08-23T23:16:20.000Z",
+        "url": "https://news.ycombinator.com/item?id=49413543"
       },
       {
         "modelId": "llama",
