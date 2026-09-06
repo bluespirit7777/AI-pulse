@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-06T19:15:22.906Z",
+  "updatedAt": "2026-09-06T19:30:26.840Z",
   "build": {
-    "sha": "5a41718df08c6b38f8fd8925863288e43d161e40",
-    "shortSha": "5a41718",
+    "sha": "a410a09953ce448f9ede0be0dfff2daf4baed73a",
+    "shortSha": "a410a09",
     "ref": "main",
-    "builtAt": "2026-09-06T19:15:40.610Z"
+    "builtAt": "2026-09-06T19:30:48.058Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 58.8,
     "estimatedDatasets": 4,
-    "buildSha": "5a41718",
-    "lastSuccessfulUpdate": "2026-09-06T19:15:22.906Z"
+    "buildSha": "a410a09",
+    "lastSuccessfulUpdate": "2026-09-06T19:30:26.840Z"
   },
   "ticker": [
     "SEATTLE TIMES AND NEWSDAY ARE THE LATEST PUBLICATIONS TO SUE OPENAI AND MICROSOFT",
@@ -314,7 +314,7 @@
           "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5qdmFxWUxkdG9wTlNsZXE4ZVhfWUU0QjMtMmRvenk1cTVCb1B6dmgzMnR3ZWJRNGcxUWRiRDRGbVdzTkdWUUNIUF91Ml9ZZzVmTjRtc3dzNHdIWklWREUw?oc=5"
         },
         {
-          "name": "The Hill",
+          "name": "thehill.com",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9LZ0hrSDhsTHprNnhsc0tGSDd4aGpUQ095bmhWRHp6eTlrdmVzRHdtT1RqRUxOb1lXVmhMZlNDSG5sdUlKakR6b3hWQ1RvWDVmYlpvbUNKV3NEai1zX2FWdTdPenY1SkNFenJLbHpGQlU5NTZzT2lPclZHc1pWd9IBgwFBVV95cUxPVGg3MUxmUWp1TG5xbzZyN2VQVEZtT1p6MmNhR0lOdjNvN1N2NUh3dDlfSkdYaXAwWVoxTS0weWNOTlVNWERYdkdhdnlZWkt3LVRBQ0txc3FmaWdSNERqSmxWRjNWTnF4R05LWmdaZng4aTFXXzhyeE9FWkRBM0NIdC0xdw?oc=5"
         }
       ],
@@ -909,11 +909,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVndVUlFjeXZyV1lrNVRsZzJEVXdIUTEwRmdBclIyMDJlRmVGcUNGREdVMVRIQ1l3NWpmNXM5UTdtV3RCZW01V2h5dk1VUy1OU3ZQSDk4b1I0Z0xybEQ2N0lkZUtOLWpvYnFEUWRNVEsyWnIydUtDZXY1cGN0T0RSM25oblAyVG1EaHR5WG9oUXVtRXFPWVR1M3NET1BMZ05mOE0yclA0eDFXTTBLS01wUEx2dG5qUGN4MWJtbWpB?oc=5"
         }
       ],
-      "sourceName": "reuters.com",
+      "sourceName": "Reuters",
       "entityIds": [
         "claude"
       ]
@@ -6312,7 +6312,7 @@
       "rate": "$1.87 – $3.49/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6320,15 +6320,15 @@
       "rate": "$3.59 – $4.61/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $7.51/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$5.31 – $7.51/hr",
+      "trend": "↓ 5% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6339,16 +6339,24 @@
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
+      "chip": "MI300X (AMD)",
+      "segment": "Nvidia alternative",
+      "rate": "$2.39/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 1 rented offer across Vast.ai + RunPod"
+    },
+    {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$0.69 – $1.59/hr",
+      "trend": "↓ 11% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-06T19:15:22.906Z",
+    "updatedAt": "2026-09-06T19:30:26.840Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6363,10 +6371,10 @@
         "storyCoverage": 0.9202453987730062,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 2276,
+        "rawCommentHits": 2011,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.13181019332161686,
+        "commentCoverage": 0.14917951268025859,
         "limited": false,
         "points": 656,
         "themes": [
@@ -6451,10 +6459,10 @@
         "storyCoverage": 0.35587188612099646,
         "estimatedRelevantDiscussions": 63,
         "isEstimated": true,
-        "rawCommentHits": 6644,
+        "rawCommentHits": 6647,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.04515352197471403,
+        "commentCoverage": 0.045133142771174965,
         "limited": false,
         "points": 106,
         "themes": [
@@ -6533,8 +6541,8 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro",
         "org": "Google DeepMind",
-        "rawStoryHits": 120,
-        "fetchedStoryCount": 120,
+        "rawStoryHits": 119,
+        "fetchedStoryCount": 119,
         "validatedStoryCount": 10,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 19,
@@ -6637,10 +6645,10 @@
         "storyCoverage": 0.5484460694698354,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 10142,
+        "rawCommentHits": 10141,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 12,
-        "commentCoverage": 0.029579964504042596,
+        "commentCoverage": 0.029582881372645697,
         "limited": false,
         "points": 123,
         "themes": [
@@ -6715,10 +6723,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 698,
+        "rawCommentHits": 699,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.4297994269340974,
+        "commentCoverage": 0.4291845493562232,
         "limited": true,
         "points": 52,
         "themes": [
@@ -6792,16 +6800,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 131,
-        "fetchedStoryCount": 131,
+        "rawStoryHits": 124,
+        "fetchedStoryCount": 124,
         "validatedStoryCount": 21,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": false,
-        "rawCommentHits": 1084,
+        "rawCommentHits": 1030,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 55,
-        "commentCoverage": 0.2767527675276753,
+        "commentCoverage": 0.2912621359223301,
         "limited": false,
         "points": 1472,
         "themes": [
