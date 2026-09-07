@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-07T00:15:20.580Z",
+  "updatedAt": "2026-09-07T00:30:25.321Z",
   "build": {
-    "sha": "8f48320364bce47c77da1aa25a42a6d36c1eb22c",
-    "shortSha": "8f48320",
+    "sha": "8720891b485c339370aa762d5003bc35cf33513f",
+    "shortSha": "8720891",
     "ref": "main",
-    "builtAt": "2026-09-07T00:15:36.196Z"
+    "builtAt": "2026-09-07T00:30:41.204Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59,
-    "estimatedDatasets": 5,
-    "buildSha": "8f48320",
-    "lastSuccessfulUpdate": "2026-09-07T00:15:20.580Z"
+    "estimatedDatasets": 4,
+    "buildSha": "8720891",
+    "lastSuccessfulUpdate": "2026-09-07T00:30:25.321Z"
   },
   "ticker": [
     "SEATTLE TIMES AND NEWSDAY ARE THE LATEST PUBLICATIONS TO SUE OPENAI AND MICROSOFT",
@@ -40,15 +40,11 @@
       "category": "policy",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 73,
-      "impact": "high",
-      "verification": "corroborated",
-      "sourceCount": 2,
+      "significance": 66,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
       "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft"
-        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
@@ -405,11 +401,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The San Francisco Standard",
+          "name": "sfstandard.com",
           "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1DY0E3Y1ZLcnJQamRtLUl3c19Za0Q1RmJzZDVSR3pMb3V2QjltWnJkR2FYeVBzQlhYdXhjUVFxOGNHb2xPWHpuV0hRS0JQZFA0RHp3bjB6bHpNV1lFM1VwWnREZGotdFBQY2lLT3hEOGE?oc=5"
         }
       ],
-      "sourceName": "The San Francisco Standard",
+      "sourceName": "sfstandard.com",
       "entityIds": [
         "claude"
       ]
@@ -1224,18 +1220,14 @@
       "category": "policy",
       "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
       "summary": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.",
-      "significance": 73,
-      "impact": "high",
-      "verification": "corroborated",
+      "significance": 66,
+      "impact": "notable",
+      "verification": "single",
       "date": "SEP 05 2026",
       "dateISO": "2026-09-05T22:49:55.000Z",
       "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
-      "sourceCount": 2,
+      "sourceCount": 1,
       "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft"
-        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/"
@@ -1274,7 +1266,7 @@
     "chatgpt": 31,
     "copilot": 1,
     "perplexity": 0,
-    "gpt": 82,
+    "gpt": 83,
     "claude": 76,
     "gemini": 28,
     "grok": 3,
@@ -1479,18 +1471,6 @@
   ],
   "wire": [
     {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "SEP 05 2026",
-      "verification": "corroborated",
-      "impact": "high",
-      "h": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microso…",
-      "p": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.",
-      "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 2
-    },
-    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "SEP 06 2026",
@@ -1560,6 +1540,18 @@
       "p": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
       "url": "https://openai.com/index/research-acceleration-view-inside-openai",
       "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "SEP 05 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microso…",
+      "p": "Two more news organizations are suing OpenAI and Microsoft over the supposed use of their journalism to train AI.",
+      "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+      "sourceName": "TechCrunch",
       "sourceCount": 1
     },
     {
@@ -6320,31 +6312,31 @@
       "rate": "$1.87 – $3.49/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.84/hr",
+      "trend": "↑ 3% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $7.51/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $6.79/hr",
+      "trend": "↓ 5% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.48/hr",
-      "trend": "↑ 24% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $7.89/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6357,14 +6349,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
+      "rate": "$0.94 – $1.59/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-07T00:15:20.580Z",
+    "updatedAt": "2026-09-07T00:30:25.321Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6374,15 +6366,15 @@
         "version": "GPT-5.6",
         "org": "OpenAI",
         "rawStoryHits": 323,
-        "fetchedStoryCount": 297,
+        "fetchedStoryCount": 250,
         "validatedStoryCount": 27,
-        "storyCoverage": 0.9195046439628483,
-        "estimatedRelevantDiscussions": 31,
+        "storyCoverage": 0.7739938080495357,
+        "estimatedRelevantDiscussions": 37,
         "isEstimated": true,
-        "rawCommentHits": 2276,
+        "rawCommentHits": 2275,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.13181019332161686,
+        "commentCoverage": 0.13186813186813187,
         "limited": false,
         "points": 656,
         "themes": [
@@ -6446,7 +6438,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 29,
+            "discussions": 35,
             "isEstimated": true
           },
           {
@@ -6461,10 +6453,10 @@
         "model": "Claude",
         "version": "Claude Opus 4.8",
         "org": "Anthropic",
-        "rawStoryHits": 838,
+        "rawStoryHits": 837,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.35799522673031026,
+        "storyCoverage": 0.35842293906810035,
         "estimatedRelevantDiscussions": 63,
         "isEstimated": true,
         "rawCommentHits": 6613,
@@ -6648,10 +6640,10 @@
         "storyCoverage": 0.5484460694698354,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 10160,
+        "rawCommentHits": 10162,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 12,
-        "commentCoverage": 0.02952755905511811,
+        "commentCoverage": 0.029521747687463098,
         "limited": false,
         "points": 119,
         "themes": [
@@ -6726,10 +6718,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 695,
+        "rawCommentHits": 696,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.4316546762589928,
+        "commentCoverage": 0.43103448275862066,
         "limited": true,
         "points": 52,
         "themes": [
@@ -6803,12 +6795,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 125,
-        "fetchedStoryCount": 124,
+        "rawStoryHits": 131,
+        "fetchedStoryCount": 131,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.992,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
-        "isEstimated": true,
+        "isEstimated": false,
         "rawCommentHits": 1037,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 56,
@@ -6877,7 +6869,7 @@
           {
             "name": "Hacker News",
             "discussions": 21,
-            "isEstimated": true
+            "isEstimated": false
           }
         ]
       },
@@ -6892,10 +6884,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 11,
         "isEstimated": false,
-        "rawCommentHits": 4851,
+        "rawCommentHits": 4850,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.06184291898577613,
+        "commentCoverage": 0.061855670103092786,
         "limited": false,
         "points": 508,
         "themes": [
