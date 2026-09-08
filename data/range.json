@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T16:15:23.910Z",
+  "generatedAt": "2026-09-08T16:30:30.214Z",
   "historyDepthDays": 59.7,
   "ranges": {
     "24H": {
@@ -9,7 +9,7 @@
         "perplexity": 0,
         "gpt": 1,
         "claude": 3,
-        "gemini": 1,
+        "gemini": 2,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -17,7 +17,7 @@
         "mistral": 1,
         "azure": 0,
         "aws": 0,
-        "gcp": 0,
+        "gcp": 1,
         "oracle": 0,
         "coreweave": 0,
         "nvidia": 0,
@@ -31,7 +31,7 @@
         "perplexity": 0,
         "gpt": -3,
         "claude": -5,
-        "gemini": 1,
+        "gemini": 2,
         "grok": -1,
         "llama": 0,
         "deepseek": 0,
@@ -39,7 +39,7 @@
         "mistral": 1,
         "azure": 0,
         "aws": 0,
-        "gcp": 0,
+        "gcp": 1,
         "oracle": 0,
         "coreweave": 0,
         "nvidia": 0,
@@ -50,7 +50,8 @@
       "categoryCounts": {
         "general": 8,
         "product": 3,
-        "capital": 1
+        "capital": 1,
+        "adoption": 1
       },
       "topEntities": [
         {
@@ -59,22 +60,27 @@
           "delta": -5
         },
         {
+          "id": "gemini",
+          "count": 2,
+          "delta": 2
+        },
+        {
           "id": "gpt",
           "count": 1,
           "delta": -3
         },
         {
-          "id": "gemini",
+          "id": "mistral",
           "count": 1,
           "delta": 1
         },
         {
-          "id": "mistral",
+          "id": "gcp",
           "count": 1,
           "delta": 1
         }
       ],
-      "eventCount": 12,
+      "eventCount": 13,
       "previousWindowComplete": true
     },
     "7D": {
@@ -84,7 +90,7 @@
         "perplexity": 0,
         "gpt": 123,
         "claude": 223,
-        "gemini": 57,
+        "gemini": 58,
         "grok": 21,
         "llama": 0,
         "deepseek": 0,
@@ -92,7 +98,7 @@
         "mistral": 1,
         "azure": 0,
         "aws": 1,
-        "gcp": 0,
+        "gcp": 1,
         "oracle": 0,
         "coreweave": 0,
         "nvidia": 20,
@@ -106,7 +112,7 @@
         "perplexity": 0,
         "gpt": -37,
         "claude": -253,
-        "gemini": -43,
+        "gemini": -42,
         "grok": 5,
         "llama": 0,
         "deepseek": 0,
@@ -114,7 +120,7 @@
         "mistral": 1,
         "azure": 0,
         "aws": 1,
-        "gcp": 0,
+        "gcp": 1,
         "oracle": 0,
         "coreweave": -5,
         "nvidia": -12,
@@ -126,7 +132,7 @@
         "capital": 54,
         "product": 88,
         "general": 367,
-        "adoption": 48,
+        "adoption": 49,
         "opensource": 10,
         "policy": 19,
         "compute": 8,
@@ -148,8 +154,8 @@
         },
         {
           "id": "gemini",
-          "count": 57,
-          "delta": -43
+          "count": 58,
+          "delta": -42
         },
         {
           "id": "chatgpt",
@@ -177,7 +183,7 @@
           "delta": 1
         }
       ],
-      "eventCount": 655,
+      "eventCount": 656,
       "previousWindowComplete": true
     },
     "30D": {
@@ -187,7 +193,7 @@
         "perplexity": 3,
         "gpt": 1026,
         "claude": 1551,
-        "gemini": 421,
+        "gemini": 422,
         "grok": 68,
         "llama": 17,
         "deepseek": 1,
@@ -195,7 +201,7 @@
         "mistral": 1,
         "azure": 0,
         "aws": 31,
-        "gcp": 0,
+        "gcp": 1,
         "oracle": 0,
         "coreweave": 6,
         "nvidia": 106,
@@ -214,7 +220,7 @@
         "product": 348,
         "opensource": 66,
         "market": 165,
-        "adoption": 224,
+        "adoption": 225,
         "compute": 86
       },
       "topEntities": [
@@ -230,7 +236,7 @@
         },
         {
           "id": "gemini",
-          "count": 421,
+          "count": 422,
           "delta": null
         },
         {
@@ -259,7 +265,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4816,
+      "eventCount": 4817,
       "previousWindowComplete": false
     }
   },
@@ -1219,7 +1225,7 @@
         "capital": 16,
         "opensource": 3,
         "compute": 5,
-        "adoption": 19,
+        "adoption": 20,
         "research": 14,
         "orggov": 5
       }
