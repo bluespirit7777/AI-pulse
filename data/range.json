@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:15:24.656Z",
+  "generatedAt": "2026-09-09T16:29:10.634Z",
   "historyDepthDays": 59.7,
   "ranges": {
     "24H": {
@@ -9,7 +9,7 @@
         "perplexity": 0,
         "gpt": 11,
         "claude": 10,
-        "gemini": 5,
+        "gemini": 3,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -17,7 +17,7 @@
         "mistral": 0,
         "azure": 0,
         "aws": 0,
-        "gcp": 2,
+        "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
         "nvidia": 0,
@@ -31,7 +31,7 @@
         "perplexity": 0,
         "gpt": 7,
         "claude": 6,
-        "gemini": 1,
+        "gemini": -3,
         "grok": 0,
         "llama": 0,
         "deepseek": 0,
@@ -39,7 +39,7 @@
         "mistral": -2,
         "azure": 0,
         "aws": 0,
-        "gcp": 2,
+        "gcp": -2,
         "oracle": 0,
         "coreweave": 0,
         "nvidia": 0,
@@ -48,7 +48,6 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "adoption": 3,
         "general": 23,
         "capital": 5,
         "policy": 4,
@@ -56,6 +55,7 @@
         "analysis": 3,
         "research": 4,
         "compute": 1,
+        "adoption": 1,
         "opensource": 1
       },
       "topEntities": [
@@ -70,27 +70,22 @@
           "delta": 6
         },
         {
-          "id": "gemini",
-          "count": 5,
-          "delta": 1
-        },
-        {
           "id": "chatgpt",
           "count": 3,
           "delta": 1
         },
         {
+          "id": "gemini",
+          "count": 3,
+          "delta": -3
+        },
+        {
           "id": "amd",
           "count": 3,
           "delta": 3
-        },
-        {
-          "id": "gcp",
-          "count": 2,
-          "delta": 2
         }
       ],
-      "eventCount": 49,
+      "eventCount": 47,
       "previousWindowComplete": true
     },
     "7D": {
@@ -221,7 +216,6 @@
       },
       "entityDelta": {},
       "categoryCounts": {
-        "opensource": 68,
         "market": 168,
         "general": 2659,
         "product": 361,
@@ -231,6 +225,7 @@
         "compute": 91,
         "orggov": 83,
         "analysis": 288,
+        "opensource": 65,
         "policy": 184
       },
       "topEntities": [
@@ -275,7 +270,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4768,
+      "eventCount": 4765,
       "previousWindowComplete": false
     }
   },
