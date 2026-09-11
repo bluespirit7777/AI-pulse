@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-11T10:15:24.043Z",
+  "updatedAt": "2026-09-11T10:30:27.131Z",
   "build": {
-    "sha": "b892e4beb91e21b1d6166e65b9ca9c5bd5f70204",
-    "shortSha": "b892e4b",
+    "sha": "408486b968a71b81fb44b8915e8873e14138709a",
+    "shortSha": "408486b",
     "ref": "main",
-    "builtAt": "2026-09-11T10:15:41.203Z"
+    "builtAt": "2026-09-11T10:30:46.087Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.4,
-    "estimatedDatasets": 5,
-    "buildSha": "b892e4b",
-    "lastSuccessfulUpdate": "2026-09-11T10:15:24.043Z"
+    "estimatedDatasets": 4,
+    "buildSha": "408486b",
+    "lastSuccessfulUpdate": "2026-09-11T10:30:27.131Z"
   },
   "ticker": [
     "OPENAI WANTS TO KNOW IF AN AI INDUSTRY SLOWDOWN WOULD EVEN BE LEGAL",
     "MATHEMATICIANS WANT PROOF OPENAI DIDN’T USE THEIR WORK",
-    "OPENAI’S SLY MATHEMATICAL BREAKTHROUGH SENDS A CHILL THROUGH ACADEMIA",
     "THE AI RESEARCHER WHO JUST QUIT ANTHROPIC SAYS IT’S ‘CRUNCH TIME FOR HUMANITY’",
+    "OPENAI’S SLY MATHEMATICAL BREAKTHROUGH SENDS A CHILL THROUGH ACADEMIA",
     "MAN TOLD CHATGPT HE WAS FEELING DELUSIONAL. CHATGPT INSISTED HE WAS JESUS.",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
-    "ANTHROPIC SAYS IT BLOCKED MISUSE OF ITS AI THAT COULD HAVE SUPPORTED BIOLOGICAL WEAPONS",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
     "ANTHROPIC DISRUPTS RUSSIAN, CHINESE AI CAMPAIGNS TARGETING ITS CLAUDE MODELS",
-    "IS AI ACTUALLY GOING TO KILL US ALL?"
+    "IS AI ACTUALLY GOING TO KILL US ALL?",
+    "HOW A RESEARCHER USES CODEX AND CHATGPT TO SEARCH FOR NEW ANTIMICROBIAL MOLECULES"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "policy",
       "catConfidence": 0.71,
       "family": "market",
-      "significance": 74,
+      "significance": 73,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -82,32 +82,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
-      "clusterId": "13zuq6o",
-      "title": "OpenAI’s sly mathematical breakthrough sends a chill through academia",
-      "desc": "OpenAI's announcement Tuesday that it has solved one of mathematics' legendary Millennium Prize problems should have been a moment of triumph. The result is both an undeniable achievement and a striking demonstration of just how rapidly AI is transforming mathematics. But before it was even formally announced, the breakthrough had been complicated by the unusual […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
-      "dateISO": "2026-09-09T21:16:34.000Z",
-      "date": "SEP 09 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 59,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
       "clusterId": "3946ss",
       "title": "The AI Researcher Who Just Quit Anthropic Says It’s ‘Crunch Time for Humanity’",
@@ -131,6 +105,32 @@
       "sourceName": "Wired",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
+      "clusterId": "13zuq6o",
+      "title": "OpenAI’s sly mathematical breakthrough sends a chill through academia",
+      "desc": "OpenAI's announcement Tuesday that it has solved one of mathematics' legendary Millennium Prize problems should have been a moment of triumph. The result is both an undeniable achievement and a striking demonstration of just how rapidly AI is transforming mathematics. But before it was even formally announced, the breakthrough had been complicated by the unusual […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes",
+      "dateISO": "2026-09-09T21:16:34.000Z",
+      "date": "SEP 09 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -196,36 +196,6 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaGI0WlVfV2ZBeFR5NGp5QmVKVEwzTnNObUdUNkdzM0czQkRNclRLY29Yc25fTDF2Z2RyR1BsZlJFcHNhNm9nODdScGx6NGlLUEpLM1J3UzU1NGhEYUFiVElNU082cW1SRkV1bEs5SXRnS0FoX1d2VmdMb2JCVWl3Nm9wUTB4b3RQTHNDeGUwR2l4emhmV1RIN2N3aGlPdXJKNVZQQ3ZXbXHSAa4BQVVfeXFMUHIyNWNxTUtBVkFLNXliZ3NucXNKLTI4MHVrRy1ET0pZWlU4MWFYSk93bzJlOUJlYTlVeWYweVA5Y1NfamxvY2x5ZUF4d0RpMFEzcFdfbmxIV3plWHhtMHN6WHVyZEJtU1MwLWp6RlVsTVpqdDRlSjE1RlA5dTVVbkVncEtNU29uWXM1a2tHNlZVSDJ3aGNxclc4aHZZakhDWm1CbHVsZ01BNU1MQnR3?oc=5",
-      "clusterId": "c61n5w",
-      "title": "Anthropic says it blocked misuse of its AI that could have supported biological weapons",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaGI0WlVfV2ZBeFR5NGp5QmVKVEwzTnNObUdUNkdzM0czQkRNclRLY29Yc25fTDF2Z2RyR1BsZlJFcHNhNm9nODdScGx6NGlLUEpLM1J3UzU1NGhEYUFiVElNU082cW1SRkV1bEs5SXRnS0FoX1d2VmdMb2JCVWl3Nm9wUTB4b3RQTHNDeGUwR2l4emhmV1RIN2N3aGlPdXJKNVZQQ3ZXbXHSAa4BQVVfeXFMUHIyNWNxTUtBVkFLNXliZ3NucXNKLTI4MHVrRy1ET0pZWlU4MWFYSk93bzJlOUJlYTlVeWYweVA5Y1NfamxvY2x5ZUF4d0RpMFEzcFdfbmxIV3plWHhtMHN6WHVyZEJtU1MwLWp6RlVsTVpqdDRlSjE1RlA5dTVVbkVncEtNU29uWXM1a2tHNlZVSDJ3aGNxclc4aHZZakhDWm1CbHVsZ01BNU1MQnR3?oc=5",
-      "dateISO": "2026-09-10T21:33:22.000Z",
-      "date": "SEP 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaGI0WlVfV2ZBeFR5NGp5QmVKVEwzTnNObUdUNkdzM0czQkRNclRLY29Yc25fTDF2Z2RyR1BsZlJFcHNhNm9nODdScGx6NGlLUEpLM1J3UzU1NGhEYUFiVElNU082cW1SRkV1bEs5SXRnS0FoX1d2VmdMb2JCVWl3Nm9wUTB4b3RQTHNDeGUwR2l4emhmV1RIN2N3aGlPdXJKNVZQQ3ZXbXHSAa4BQVVfeXFMUHIyNWNxTUtBVkFLNXliZ3NucXNKLTI4MHVrRy1ET0pZWlU4MWFYSk93bzJlOUJlYTlVeWYweVA5Y1NfamxvY2x5ZUF4d0RpMFEzcFdfbmxIV3plWHhtMHN6WHVyZEJtU1MwLWp6RlVsTVpqdDRlSjE1RlA5dTVVbkVncEtNU29uWXM1a2tHNlZVSDJ3aGNxclc4aHZZakhDWm1CbHVsZ01BNU1MQnR3?oc=5"
-        }
-      ],
-      "sourceName": "CNBC",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -399,6 +369,36 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5",
+      "clusterId": "b8jeuf",
+      "title": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5",
+      "dateISO": "2026-09-10T17:00:06.000Z",
+      "date": "SEP 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaGI0WlVfV2ZBeFR5NGp5QmVKVEwzTnNObUdUNkdzM0czQkRNclRLY29Yc25fTDF2Z2RyR1BsZlJFcHNhNm9nODdScGx6NGlLUEpLM1J3UzU1NGhEYUFiVElNU082cW1SRkV1bEs5SXRnS0FoX1d2VmdMb2JCVWl3Nm9wUTB4b3RQTHNDeGUwR2l4emhmV1RIN2N3aGlPdXJKNVZQQ3ZXbXHSAa4BQVVfeXFMUHIyNWNxTUtBVkFLNXliZ3NucXNKLTI4MHVrRy1ET0pZWlU4MWFYSk93bzJlOUJlYTlVeWYweVA5Y1NfamxvY2x5ZUF4d0RpMFEzcFdfbmxIV3plWHhtMHN6WHVyZEJtU1MwLWp6RlVsTVpqdDRlSjE1RlA5dTVVbkVncEtNU29uWXM1a2tHNlZVSDJ3aGNxclc4aHZZakhDWm1CbHVsZ01BNU1MQnR3?oc=5"
+        },
+        {
+          "name": "The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5"
+        }
+      ],
+      "sourceName": "The New York Times",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -662,11 +662,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "nbcnews.com",
+          "name": "NBC News",
           "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVXlQM2VMVVF3aUw0TGR0V3dXQ1ViOTd3SjlPTlFRQTY2YWxoc1FYUnh0TktzLXYtb2FtcUJ6MTZsUV80emFLdUc1RkIwWlpzUm1DY3dYZzJOaHE1M0pmU3dEZmlHcUFWcUh5U3ppSXpVVFpNRk96aEFnMnBZSlpaZ1Bsa2lmTXFJSXc2ejVkRXpPbFNoYWEya2NnS0xZbDRLVFNjZVgtNW9aSVRxYkpQNGFCdnh0dnh5enVvcQ?oc=5"
         }
       ],
-      "sourceName": "nbcnews.com",
+      "sourceName": "NBC News",
       "entityIds": [
         "claude"
       ]
@@ -728,32 +728,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
-      "clusterId": "px5hh3",
-      "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
-      "desc": "Meta's newest app Muse is off to a slower start than the company's other apps, like Meta AI or Threads.",
-      "url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
-      "dateISO": "2026-09-10T19:50:04.000Z",
-      "date": "SEP 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "llama"
-      ]
-    },
-    {
       "id": "https://openai.com/index/introducing-chatgpt-images-2-5",
       "clusterId": "dp8kll",
       "title": "Introducing ChatGPT Images 2.5",
@@ -781,6 +755,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+      "clusterId": "px5hh3",
+      "title": "Meta’s AI agent Muse is now the No. 2 app in the US",
+      "desc": "Meta's newest app Muse is off to a slower start than the company's other apps, like Meta AI or Threads.",
+      "url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/",
+      "dateISO": "2026-09-10T19:50:04.000Z",
+      "date": "SEP 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "llama"
       ]
     },
     {
@@ -840,36 +840,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5",
-      "clusterId": "1uhax04",
-      "title": "Anthropic discloses fourth AI hacking incident missed in earlier review",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5",
-      "dateISO": "2026-09-09T19:40:00.000Z",
-      "date": "SEP 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Hacker News",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE44Nk9jVHVyUWMyRUN6TFJGcXNNX281akYxdExzMlk1elhQbnhpbWt1VzFrS09McEhGemc3V0c5THFQa1VIcmI3ZmFLeFcyTXh3YTNCendNT3YyX3ZpNkNyU0hXWG1LS21KNG1FZ25NSVFGOHhETUx6Y0E2LW0?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/expanding-ai-access-us-government",
       "clusterId": "1vjm9hw",
       "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
@@ -893,6 +863,36 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5",
+      "clusterId": "1uhax04",
+      "title": "Anthropic discloses fourth AI hacking incident missed in earlier review",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5",
+      "dateISO": "2026-09-09T19:40:00.000Z",
+      "date": "SEP 09 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Hacker News",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE44Nk9jVHVyUWMyRUN6TFJGcXNNX281akYxdExzMlk1elhQbnhpbWt1VzFrS09McEhGemc3V0c5THFQa1VIcmI3ZmFLeFcyTXh3YTNCendNT3YyX3ZpNkNyU0hXWG1LS21KNG1FZ25NSVFGOHhETUx6Y0E2LW0?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaU1ZZ0ZRWnBaSnRlakoxVTU1SE9aZTEySkNZU2N2eU5XWG9remJKT29feUVoNlhhQVpfWnNFd1NKZ0xnb3lobTExTXE5dXZud0tCbGVLMzR4Y0NFRkRRUUlnWUllbjVTcXBWeHJzMDJVamFBQjJveC1PNThKSGUzNlRfUlVEVkJPbHhtendZdXdsSmdva0RvT3NidFdSb3BWSmd6R1lFb1NxYXdjR0xKeVVnZWY4c3JlbHlycFhkcXlmQ1Jv?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -950,30 +950,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
-      "clusterId": "1lu51k4",
-      "title": "Maven Robotics wants to steal your robot deployment deal",
-      "desc": "Maven Robotics emerged from stealth today with a $100 million Series A and active deployments.",
-      "url": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/",
-      "dateISO": "2026-09-10T14:17:37.000Z",
-      "date": "SEP 10 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/10/maven-robotics-wants-to-steal-your-robot-deployment-deal/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
     },
     {
       "id": "https://www.technologyreview.com/2026/09/08/1143747/what-openais-latest-controversy-tells-us-about-the-future-of-math/",
@@ -1162,14 +1138,38 @@
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
         },
         {
-          "name": "nbcnews.com",
+          "name": "NBC News",
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5"
         }
       ],
-      "sourceName": "nbcnews.com",
+      "sourceName": "NBC News",
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+      "clusterId": "7bi9wm",
+      "title": "AI agents are flooding public services with new requests",
+      "desc": "“The vast majority of cases we find are people who are entitled to claim for something, claiming for that thing,” the researcher told TechCrunch.",
+      "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/",
+      "dateISO": "2026-09-10T14:53:50.000Z",
+      "date": "SEP 10 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/10/ai-agents-are-flooding-public-services-with-new-requests/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     }
   ],
   "waves": [
@@ -1213,7 +1213,7 @@
       "category": "policy",
       "title": "OpenAI Wants to Know if an AI Industry Slowdown Would Even Be Legal",
       "summary": "AI leaders worry antitrust law could stand in the way of what they view as an increasingly urgent push to coordinate a slowdown in AI development.",
-      "significance": 74,
+      "significance": 73,
       "impact": "high",
       "verification": "single",
       "date": "SEP 10 2026",
@@ -1310,7 +1310,7 @@
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Education Week",
+          "sourceName": "edweek.org",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1461,7 +1461,7 @@
       "h": "Anthropic says Claude AI hacked three companies during cyber tests",
       "p": "Anthropic says Claude AI hacked three companies during cyber tests",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5",
-      "sourceName": "nbcnews.com",
+      "sourceName": "NBC News",
       "sourceCount": 7
     },
     {
@@ -1513,18 +1513,6 @@
       "sourceCount": 1
     },
     {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "SEP 10 2026",
-      "verification": "corroborated",
-      "impact": "notable",
-      "h": "Anthropic says it blocked misuse of its AI that could have supported biological…",
-      "p": "Anthropic says it blocked misuse of its AI that could have supported biological weapons",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaGI0WlVfV2ZBeFR5NGp5QmVKVEwzTnNObUdUNkdzM0czQkRNclRLY29Yc25fTDF2Z2RyR1BsZlJFcHNhNm9nODdScGx6NGlLUEpLM1J3UzU1NGhEYUFiVElNU082cW1SRkV1bEs5SXRnS0FoX1d2VmdMb2JCVWl3Nm9wUTB4b3RQTHNDeGUwR2l4emhmV1RIN2N3aGlPdXJKNVZQQ3ZXbXHSAa4BQVVfeXFMUHIyNWNxTUtBVkFLNXliZ3NucXNKLTI4MHVrRy1ET0pZWlU4MWFYSk93bzJlOUJlYTlVeWYweVA5Y1NfamxvY2x5ZUF4d0RpMFEzcFdfbmxIV3plWHhtMHN6WHVyZEJtU1MwLWp6RlVsTVpqdDRlSjE1RlA5dTVVbkVncEtNU29uWXM1a2tHNlZVSDJ3aGNxclc4aHZZakhDWm1CbHVsZ01BNU1MQnR3?oc=5",
-      "sourceName": "CNBC",
-      "sourceCount": 2
-    },
-    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 10 2026",
@@ -1535,6 +1523,18 @@
       "url": "https://techcrunch.com/2026/09/10/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "SEP 10 2026",
+      "verification": "corroborated",
+      "impact": "notable",
+      "h": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
+      "p": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5",
+      "sourceName": "The New York Times",
+      "sourceCount": 2
     },
     {
       "org": "GOOGLE",
@@ -6248,23 +6248,23 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "↑ 11% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.61/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
+      "rate": "$3.59 – $6.32/hr",
+      "trend": "↑ 21% vs 7d ago",
+      "trendClass": "trend-up",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $7.51/hr",
-      "trend": "↑ 11% vs 7d ago",
+      "rate": "$5.31 – $7.51/hr",
+      "trend": "↑ 6% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6285,14 +6285,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 3% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$0.73 – $1.59/hr",
+      "trend": "↓ 8% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-11T10:15:24.043Z",
+    "updatedAt": "2026-09-11T10:30:27.131Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6301,16 +6301,16 @@
         "model": "GPT",
         "version": "GPT-5.6",
         "org": "OpenAI",
-        "rawStoryHits": 328,
-        "fetchedStoryCount": 255,
+        "rawStoryHits": 313,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.7774390243902439,
-        "estimatedRelevantDiscussions": 30,
+        "storyCoverage": 0.9584664536741214,
+        "estimatedRelevantDiscussions": 25,
         "isEstimated": true,
-        "rawCommentHits": 1727,
+        "rawCommentHits": 2449,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.17371163867979156,
+        "commentCoverage": 0.12249897917517354,
         "limited": false,
         "points": 546,
         "themes": [
@@ -6369,7 +6369,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 28,
+            "discussions": 23,
             "isEstimated": true
           },
           {
@@ -6483,12 +6483,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 1445,
+        "rawCommentHits": 1447,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 38,
-        "commentCoverage": 0.20761245674740483,
+        "validatedCommentCount": 37,
+        "commentCoverage": 0.2073255010366275,
         "limited": false,
-        "points": 100,
+        "points": 101,
         "themes": [
           {
             "id": "coding",
@@ -6534,8 +6534,8 @@
         "topThreads": [
           {
             "title": "The Gemini app is now available for Windows",
-            "points": 48,
-            "comments": 37,
+            "points": 49,
+            "comments": 40,
             "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
             "date": "SEP 11 2026"
           },
@@ -6659,10 +6659,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 598,
+        "rawCommentHits": 595,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.5016722408026756,
+        "commentCoverage": 0.5042016806722689,
         "limited": true,
         "points": 55,
         "themes": [
@@ -6742,15 +6742,15 @@
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
         "rawStoryHits": 154,
-        "fetchedStoryCount": 148,
+        "fetchedStoryCount": 154,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.961038961038961,
-        "estimatedRelevantDiscussions": 25,
-        "isEstimated": true,
-        "rawCommentHits": 1101,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 24,
+        "isEstimated": false,
+        "rawCommentHits": 1926,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 56,
-        "commentCoverage": 0.2724795640326976,
+        "commentCoverage": 0.1557632398753894,
         "limited": false,
         "points": 1365,
         "themes": [
@@ -6814,8 +6814,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 25,
-            "isEstimated": true
+            "discussions": 24,
+            "isEstimated": false
           }
         ]
       },
@@ -6824,16 +6824,16 @@
         "model": "Qwen",
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
-        "rawStoryHits": 250,
-        "fetchedStoryCount": 250,
+        "rawStoryHits": 251,
+        "fetchedStoryCount": 251,
         "validatedStoryCount": 9,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4891,
+        "rawCommentHits": 4895,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 27,
-        "commentCoverage": 0.06133714986710284,
+        "validatedCommentCount": 26,
+        "commentCoverage": 0.06128702757916241,
         "limited": false,
         "points": 512,
         "themes": [
