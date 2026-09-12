@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-09-12T06:30:25.102Z",
+  "updatedAt": "2026-09-12T06:45:21.130Z",
   "build": {
-    "sha": "3827df6b8e4c34f75032518fa7b8c15cd889012b",
-    "shortSha": "3827df6",
+    "sha": "851f9871ab6b345c61a20773312c344269b21260",
+    "shortSha": "851f987",
     "ref": "main",
-    "builtAt": "2026-09-12T06:30:42.830Z"
+    "builtAt": "2026-09-12T06:45:38.338Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 9,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.3,
-    "estimatedDatasets": 4,
-    "buildSha": "3827df6",
-    "lastSuccessfulUpdate": "2026-09-12T06:30:25.102Z"
+    "estimatedDatasets": 6,
+    "buildSha": "851f987",
+    "lastSuccessfulUpdate": "2026-09-12T06:45:21.130Z"
   },
   "ticker": [
     "AN ANTHROPIC RESEARCHER’S DOOMSDAY WARNING COMES AT A VERY INTERESTING TIME",
     "NSCALE ADDS FORMER OPENAI EXEC FIDJI SIMO TO ITS BOARD AHEAD OF POTENTIAL IPO",
+    "GPT-LIVE-1 IS NOW IN THE API",
     "OPENAI WANTS TO KNOW IF AN AI INDUSTRY SLOWDOWN WOULD EVEN BE LEGAL",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
+    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
     "HOW ANTHROPIC SAYS CLAUDE WAS USED FOR WEAPONS, SPYING AND CYBER OPERATIONS",
     "MATHEMATICIANS WANT PROOF OPENAI DIDN’T USE THEIR WORK",
     "OPENAI’S FEUD WITH MATHEMATICIANS IS ONLY ESCALATING",
-    "CHATGPT-USING LAWYER PUNISHED FOR CITING FAKE TESTIMONY FROM MADE-UP WITNESSES",
-    "REBELS USED ANTHROPIC’S AI BOT TO DEVELOP GUIDED WEAPONS, REPORT SAYS",
-    "INTRODUCING CLAUDE FOR TEACHERS"
+    "CHATGPT-USING LAWYER PUNISHED FOR CITING FAKE TESTIMONY FROM MADE-UP WITNESSES"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "capital",
       "catConfidence": 0.55,
       "family": "market",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -66,7 +66,7 @@
       "category": "capital",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -78,6 +78,33 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=OSaP6bJoU44",
+      "clusterId": "1bzqkl6",
+      "title": "GPT-Live-1 is now in the API",
+      "desc": "GPT-Live-1 is now available in the API. Bring ChatGPT’s natural back-and-forth to your app, with voice agents that listen while they speak and work with the models and harness you choose. Learn more here: https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+      "url": "https://www.youtube.com/watch?v=OSaP6bJoU44",
+      "dateISO": "2026-09-11T17:06:25.000Z",
+      "date": "SEP 11 2026",
+      "category": "product",
+      "catConfidence": 0.78,
+      "family": "product",
+      "significance": 69,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=OSaP6bJoU44"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt",
         "gpt"
       ]
     },
@@ -143,6 +170,45 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/nvidia/chatgpt-work",
+      "clusterId": "kw1uc",
+      "title": "How NVIDIA scales expertise with ChatGPT Work",
+      "desc": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
+      "url": "https://openai.com/index/nvidia/chatgpt-work",
+      "dateISO": "2026-08-18T00:00:00.000Z",
+      "date": "AUG 18 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 56,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=MSiAd36bGeQ"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-admin-plugin"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/stampli"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/nvidia/chatgpt-work"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "nvidia"
       ]
     },
     {
@@ -360,41 +426,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/nvidia/chatgpt-work",
-      "clusterId": "kw1uc",
-      "title": "How NVIDIA scales expertise with ChatGPT Work",
-      "desc": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
-      "url": "https://openai.com/index/nvidia/chatgpt-work",
-      "dateISO": "2026-08-18T00:00:00.000Z",
-      "date": "AUG 18 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-admin-plugin"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/stampli"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/nvidia/chatgpt-work"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
       "clusterId": "1mdqn4g",
       "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
@@ -528,38 +559,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
-      "clusterId": "1v7snzd",
-      "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
-      "desc": "A new report released Thursday by Anthropic alleges persistent distillation attacks by China-based AI companies, which have escalated in recent months as competition in the space has intensified.",
-      "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
-      "dateISO": "2026-09-10T20:57:30.000Z",
-      "date": "SEP 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude",
-        "deepseek",
-        "qwen"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTXhtUUpua3FMcFpYZmN0UHdoZjhoa1p2TS0wSXRoVjYxNDFJRTkyRDJQWWx3TDZDN3d0dnIwNnZ1RHg3Y29fNmFDWUMwZVZXdHdOYVp3eVhtZ1UtaHRTWVFHeGtqcktOUlNKSHZ3VHIzMlVCNl9kNlN3R0NXS0xKb0JxSVhEZVJLMTNNVzBmaEszV19penQ4QmpRc0Q0dzhDakdVTzFCQXJ6Zm84Vk5tNF93?oc=5",
       "clusterId": "16ktq7z",
       "title": "Anthropic Says Yemeni Cell Used Claude in Missile Development",
@@ -634,6 +633,38 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+      "clusterId": "1v7snzd",
+      "title": "Anthropic details distillation campaigns from Alibaba, Moonshot AI, and DeepSeek",
+      "desc": "A new report released Thursday by Anthropic alleges persistent distillation attacks by China-based AI companies, which have escalated in recent months as competition in the space has intensified.",
+      "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
+      "dateISO": "2026-09-10T20:57:30.000Z",
+      "date": "SEP 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude",
+        "deepseek",
+        "qwen"
+      ]
     },
     {
       "id": "https://www.wired.com/story/uncanny-valley-podcast-is-ai-actually-going-to-kill-us-all/",
@@ -765,11 +796,11 @@
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOd2RnUV85Y0hhcmhMT1p1MnVzSkU4elJudHlwZHpWQWc3cEVxNEJ5c00zbHNVcWI5c19ubWh0ZWFBMzl0eUszaXM0WHNVWE94N2xzNzZSSUthaklEWlhnTHpTSzAtQVBOZ2IyRHU5dXVOd2I3NTd5TzQxQ0dIamZQRF9Vd0I5eDlrSDd0eUVPVXk3cGdXUEEzX0ExRks2b1dneFR4clJjemtkdi05bURYNjlwSGhCVjF4VVpvTmVyQUU?oc=5"
         },
         {
-          "name": "nytimes.com",
+          "name": "The New York Times",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5"
         }
       ],
-      "sourceName": "nytimes.com",
+      "sourceName": "The New York Times",
       "entityIds": [
         "claude"
       ]
@@ -785,7 +816,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -801,29 +832,33 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
-      "clusterId": "l0ew3u",
-      "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
-      "desc": "Nvidia has its finger in every pie, and sees another year of plenty in its future, Jensen Huang says. But, he insists, its deals are not circular.",
-      "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
-      "dateISO": "2026-09-10T21:51:59.000Z",
-      "date": "SEP 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
+      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "clusterId": "gok17r",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "dateISO": "2026-09-01T18:01:25.000Z",
+      "date": "SEP 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
       "family": "product",
       "significance": 45,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "official",
+      "sourceCount": 2,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/"
+          "name": "Anthropic (YouTube)",
+          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "Anthropic",
       "entityIds": [
-        "nvidia"
+        "claude"
       ]
     },
     {
@@ -900,6 +935,32 @@
       "sourceName": "CNBC",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+      "clusterId": "l0ew3u",
+      "title": "Jensen Huang explains why Nvidia will grow an astounding 70% next year",
+      "desc": "Nvidia has its finger in every pie, and sees another year of plenty in its future, Jensen Huang says. But, he insists, its deals are not circular.",
+      "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/",
+      "dateISO": "2026-09-10T21:51:59.000Z",
+      "date": "SEP 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/10/jensen-huang-explains-why-nvidia-will-grow-an-astounding-70-next-year/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
       ]
     },
     {
@@ -1085,110 +1146,39 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "clusterId": "1vfj8jd",
-      "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-      "desc": "OpenAI and Hugging Face share early findings from a security incident during AI model evaluation, highlighting advanced cyber capabilities and lessons for defenders.",
-      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
-      "dateISO": "2026-07-21T07:00:00.000Z",
-      "date": "JUL 21 2026",
-      "category": "opensource",
-      "catConfidence": 0.44,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/nvidia-buys-hugging-face-the-github-of-ai-for-13-billion/"
-        },
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5",
-      "clusterId": "1uushee",
-      "title": "Anthropic sued over alleged theft of ‘tens of thousands’ of songs | Music industry",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5",
-      "dateISO": "2026-08-31T07:00:00.000Z",
-      "date": "AUG 31 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5"
-        }
-      ],
-      "sourceName": "The Guardian",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Introducing Gemini 3.5 Flash Cyber",
-      "summary": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
-      "significance": 57,
+      "title": "GPT-Live-1 is now in the API",
+      "summary": "GPT-Live-1 is now available in the API. Bring ChatGPT’s natural back-and-forth to your app, with voice agents that listen while they speak and work with the models and harness you…",
+      "significance": 69,
       "impact": "notable",
-      "verification": "official",
-      "date": "JUL 17 2026",
-      "dateISO": "2026-07-17T15:00:11.000Z",
-      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
-      "sourceCount": 4,
+      "verification": "single",
+      "date": "SEP 11 2026",
+      "dateISO": "2026-09-11T17:06:25.000Z",
+      "url": "https://www.youtube.com/watch?v=OSaP6bJoU44",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/"
-        },
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/"
-        },
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/"
-        },
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=OSaP6bJoU44"
         }
       ],
       "entityIds": [
-        "gemini"
+        "chatgpt",
+        "gpt"
       ],
-      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, a strategic investment ties the two companies’ roadmaps — models, compute or distribution — closer together."
     },
     {
       "family": "market",
       "category": "capital",
       "title": "An Anthropic researcher’s doomsday warning comes at a very interesting time",
       "summary": "An Anthropic researcher resigned this week, warning in a post on X that the company is “racing straight to self-improving superintelligence and gambling with our lives”. The compa…",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "uncertain",
       "date": "SEP 11 2026",
@@ -1231,12 +1221,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 33,
+    "chatgpt": 34,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 79,
+    "gpt": 81,
     "claude": 81,
-    "gemini": 29,
+    "gemini": 28,
     "grok": 2,
     "llama": 1,
     "deepseek": 1,
@@ -1262,11 +1252,11 @@
           "d": "SEP 01 2026",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
           "isVideo": false,
-          "videoUrl": null,
+          "videoUrl": "https://www.youtube.com/watch?v=ROF2Nv_KjOM",
           "sourceName": "Anthropic",
-          "sourceCount": 1,
+          "sourceCount": 2,
           "verification": "official",
-          "impact": "emerging"
+          "impact": "notable"
         },
         {
           "h": "Anthropic releases new model, Opus 5",
@@ -1285,7 +1275,7 @@
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOUlZYRGRMaDNOVzdLUG5BWS1MN3NubHg0d1d3MENPNkVTRzFjLWw0eHpuREpVaFUwdnpoTXgta2FCMjV2Sl9obWZoLWNaR3hpWld2NW50bjh5eDE3dGl0ajlIQ1pVNm5HeWFwNTB0M242T0UxbU9RZ0Z0LVZZUTg1bDVqY01ZbVFNRHoxYWVrWDlydXhPc3VYdHZJZmktSGh6TUwzWS1fY1VpTmJPWnlsRQ?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "edweek.org",
+          "sourceName": "Education Week",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1307,6 +1297,17 @@
       "lab": "OpenAI · ChatGPT",
       "logoKey": "openai",
       "items": [
+        {
+          "h": "GPT-Live-1 is now in the API",
+          "d": "SEP 11 2026",
+          "url": "https://www.youtube.com/watch?v=OSaP6bJoU44",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
         {
           "h": "Introducing ChatGPT Images 2.5",
           "d": "SEP 08 2026",
@@ -1348,17 +1349,6 @@
           "videoUrl": null,
           "sourceName": "OpenAI",
           "sourceCount": 2,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Supporting Thailand’s next generation of AI startups",
-          "d": "AUG 28 2026",
-          "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
         }
@@ -6212,7 +6202,7 @@
       "rate": "$1.99 – $5.75/hr",
       "trend": "↑ 44% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 15 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6220,7 +6210,7 @@
       "rate": "$3.59 – $5.00/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 16 rented offers across Vast.ai + RunPod"
+      "note": "Live from 14 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6233,10 +6223,10 @@
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.48/hr",
-      "trend": "↑ 11% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $8.75/hr",
+      "trend": "↓ 6% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6249,14 +6239,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.64 – $1.59/hr",
-      "trend": "↓ 14% vs 7d ago",
+      "rate": "$0.54 – $1.59/hr",
+      "trend": "↓ 18% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-12T06:30:25.102Z",
+    "updatedAt": "2026-09-12T06:45:21.130Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6359,22 +6349,22 @@
         "storyCoverage": 0.3500583430571762,
         "estimatedRelevantDiscussions": 73,
         "isEstimated": true,
-        "rawCommentHits": 6572,
+        "rawCommentHits": 6573,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 34,
-        "commentCoverage": 0.04564820450395618,
+        "validatedCommentCount": 33,
+        "commentCoverage": 0.045641259698767686,
         "limited": false,
         "points": 168,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 20
+            "count": 19
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 17
+            "count": 16
           },
           {
             "id": "price",
@@ -6442,10 +6432,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 1452,
+        "rawCommentHits": 1392,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.2066115702479339,
+        "commentCoverage": 0.21551724137931033,
         "limited": false,
         "points": 107,
         "themes": [
@@ -6540,10 +6530,10 @@
         "storyCoverage": 0.5660377358490566,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 10196,
+        "rawCommentHits": 10197,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 15,
-        "commentCoverage": 0.029423303256178895,
+        "commentCoverage": 0.029420417769932334,
         "limited": false,
         "points": 118,
         "themes": [
@@ -6705,16 +6695,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 144,
-        "fetchedStoryCount": 144,
+        "rawStoryHits": 143,
+        "fetchedStoryCount": 137,
         "validatedStoryCount": 21,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
-        "isEstimated": false,
-        "rawCommentHits": 1026,
+        "storyCoverage": 0.958041958041958,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": true,
+        "rawCommentHits": 1025,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 56,
-        "commentCoverage": 0.29239766081871343,
+        "commentCoverage": 0.2926829268292683,
         "limited": false,
         "points": 1279,
         "themes": [
@@ -6783,8 +6773,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": false
+            "discussions": 22,
+            "isEstimated": true
           }
         ]
       },
@@ -6794,15 +6784,15 @@
         "version": "Qwen 3.7 Max",
         "org": "Alibaba",
         "rawStoryHits": 244,
-        "fetchedStoryCount": 244,
+        "fetchedStoryCount": 243,
         "validatedStoryCount": 9,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9959016393442623,
         "estimatedRelevantDiscussions": 12,
-        "isEstimated": false,
-        "rawCommentHits": 4852,
+        "isEstimated": true,
+        "rawCommentHits": 4850,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 25,
-        "commentCoverage": 0.06183017312448475,
+        "commentCoverage": 0.061855670103092786,
         "limited": false,
         "points": 512,
         "themes": [
@@ -6867,7 +6857,7 @@
           {
             "name": "Hacker News",
             "discussions": 9,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Qwen GitHub",
@@ -6953,11 +6943,11 @@
           "coding",
           "reasoning"
         ],
-        "excerpt": "… to please tell me, how does stopping a researcher from using Claude to write a grant for a new anti-depressant stop \"bioweapons?\"- > In our fourth case study, a researcher used…",
+        "excerpt": "…over whether software engineers are going to use codex or claude. In that light $20M (or whatever it was) might be worth it to squash even the rumor that claude code is more…",
         "source": "Hacker News",
-        "author": "areoform",
-        "publishedAt": "2026-09-10T23:55:41.000Z",
-        "url": "https://news.ycombinator.com/item?id=49651727"
+        "author": "woopsn",
+        "publishedAt": "2026-09-11T22:18:11.000Z",
+        "url": "https://news.ycombinator.com/item?id=49666170"
       },
       {
         "modelId": "claude",
@@ -6970,18 +6960,6 @@
         "author": "akshaypimprikar",
         "publishedAt": "2026-08-19T18:11:47.000Z",
         "url": "https://github.com/anthropics/claude-code-action/discussions/1699"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding",
-          "reasoning"
-        ],
-        "excerpt": "…over whether software engineers are going to use codex or claude. In that light $20M (or whatever it was) might be worth it to squash even the rumor that claude code is more…",
-        "source": "Hacker News",
-        "author": "woopsn",
-        "publishedAt": "2026-09-11T22:18:11.000Z",
-        "url": "https://news.ycombinator.com/item?id=49666170"
       },
       {
         "modelId": "claude",
@@ -7005,6 +6983,17 @@
         "author": "yuchaoran2011",
         "publishedAt": "2026-09-11T17:59:52.000Z",
         "url": "https://news.ycombinator.com/item?id=49662581"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "safety"
+        ],
+        "excerpt": "…and disrupted an Iran-nexus threat actor that used Claude to collect and analyze publicly accessible data to develop targeting recommendations against US naval forces…",
+        "source": "Hacker News",
+        "author": "mzs",
+        "publishedAt": "2026-09-11T14:42:39.000Z",
+        "url": "https://news.ycombinator.com/item?id=49659324"
       },
       {
         "modelId": "gemini",
