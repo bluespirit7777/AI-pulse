@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-09-12T05:30:29.785Z",
+  "updatedAt": "2026-09-12T05:45:33.952Z",
   "build": {
-    "sha": "ce9a30cea1d22f82235db17e910c19bcbe9dbac9",
-    "shortSha": "ce9a30c",
+    "sha": "14712fb2729bec1bd8a5238a28ba397b20b7505c",
+    "shortSha": "14712fb",
     "ref": "main",
-    "builtAt": "2026-09-12T05:30:47.632Z"
+    "builtAt": "2026-09-12T05:45:51.456Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 12,
+    "feedsSucceeded": 11,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.2,
-    "estimatedDatasets": 5,
-    "buildSha": "ce9a30c",
-    "lastSuccessfulUpdate": "2026-09-12T05:30:29.785Z"
+    "estimatedDatasets": 4,
+    "buildSha": "14712fb",
+    "lastSuccessfulUpdate": "2026-09-12T05:45:33.952Z"
   },
   "ticker": [
     "AN ANTHROPIC RESEARCHER’S DOOMSDAY WARNING COMES AT A VERY INTERESTING TIME",
     "NSCALE ADDS FORMER OPENAI EXEC FIDJI SIMO TO ITS BOARD AHEAD OF POTENTIAL IPO",
-    "GPT-LIVE-1 IS NOW IN THE API",
     "OPENAI WANTS TO KNOW IF AN AI INDUSTRY SLOWDOWN WOULD EVEN BE LEGAL",
     "INTRODUCING GEMINI 3.5 FLASH CYBER",
-    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
     "MATHEMATICIANS WANT PROOF OPENAI DIDN’T USE THEIR WORK",
     "HOW ANTHROPIC SAYS CLAUDE WAS USED FOR WEAPONS, SPYING AND CYBER OPERATIONS",
     "REBELS USED ANTHROPIC’S AI BOT TO DEVELOP GUIDED WEAPONS, REPORT SAYS",
-    "OPENAI’S FEUD WITH MATHEMATICIANS IS ONLY ESCALATING"
+    "OPENAI’S FEUD WITH MATHEMATICIANS IS ONLY ESCALATING",
+    "CHATGPT-USING LAWYER PUNISHED FOR CITING FAKE TESTIMONY FROM MADE-UP WITNESSES",
+    "INTRODUCING CLAUDE FOR TEACHERS"
   ],
   "signals": [
     {
@@ -78,33 +78,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://www.youtube.com/watch?v=OSaP6bJoU44",
-      "clusterId": "1bzqkl6",
-      "title": "GPT-Live-1 is now in the API",
-      "desc": "GPT-Live-1 is now available in the API. Bring ChatGPT’s natural back-and-forth to your app, with voice agents that listen while they speak and work with the models and harness you choose. Learn more here: https://openai.com/index/introducing-gpt-live-1-in-the-api/",
-      "url": "https://www.youtube.com/watch?v=OSaP6bJoU44",
-      "dateISO": "2026-09-11T17:06:25.000Z",
-      "date": "SEP 11 2026",
-      "category": "product",
-      "catConfidence": 0.78,
-      "family": "product",
-      "significance": 70,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=OSaP6bJoU44"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt",
         "gpt"
       ]
     },
@@ -170,45 +143,6 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/nvidia/chatgpt-work",
-      "clusterId": "kw1uc",
-      "title": "How NVIDIA scales expertise with ChatGPT Work",
-      "desc": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
-      "url": "https://openai.com/index/nvidia/chatgpt-work",
-      "dateISO": "2026-08-18T00:00:00.000Z",
-      "date": "AUG 18 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=MSiAd36bGeQ"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-admin-plugin"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/stampli"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/nvidia/chatgpt-work"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
-        "nvidia"
       ]
     },
     {
@@ -477,6 +411,41 @@
       ]
     },
     {
+      "id": "https://openai.com/index/nvidia/chatgpt-work",
+      "clusterId": "kw1uc",
+      "title": "How NVIDIA scales expertise with ChatGPT Work",
+      "desc": "NVIDIA teams use ChatGPT Work to reduce manual tasks, connect fast-moving signals, and scale successful workflows globally.",
+      "url": "https://openai.com/index/nvidia/chatgpt-work",
+      "dateISO": "2026-08-18T00:00:00.000Z",
+      "date": "AUG 18 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-admin-plugin"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/stampli"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/nvidia/chatgpt-work"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
       "clusterId": "1mdqn4g",
       "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
@@ -529,32 +498,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
-      "clusterId": "3946ss",
-      "title": "The AI Researcher Who Just Quit Anthropic Says It’s ‘Crunch Time for Humanity’",
-      "desc": "Jacob Coxon talks to WIRED about the “mini Manhattan project” inside Anthropic, the problem with alignment, and why AI labs have just a few years left to make their systems safe.",
-      "url": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
-      "dateISO": "2026-09-09T22:11:55.000Z",
-      "date": "SEP 09 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/",
       "clusterId": "1qg7qme",
       "title": "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit",
@@ -583,30 +526,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-      "clusterId": "gdr45f",
-      "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
-      "desc": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set of open-weight options that aren’t Chinese.",
-      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-      "dateISO": "2026-09-11T20:59:47.000Z",
-      "date": "SEP 11 2026",
-      "category": "opensource",
-      "catConfidence": 0.71,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/10/anthropic-details-distillation-campaigns-from-alibaba-moonshot-ai-and-deepseek/",
@@ -667,6 +586,56 @@
       ]
     },
     {
+      "id": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
+      "clusterId": "3946ss",
+      "title": "The AI Researcher Who Just Quit Anthropic Says It’s ‘Crunch Time for Humanity’",
+      "desc": "Jacob Coxon talks to WIRED about the “mini Manhattan project” inside Anthropic, the problem with alignment, and why AI labs have just a few years left to make their systems safe.",
+      "url": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/",
+      "dateISO": "2026-09-09T22:11:55.000Z",
+      "date": "SEP 09 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/anthropic-researcher-quits-jacob-coxon-ai-fears-humanity/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+      "clusterId": "gdr45f",
+      "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
+      "desc": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set of open-weight options that aren’t Chinese.",
+      "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+      "dateISO": "2026-09-11T20:59:47.000Z",
+      "date": "SEP 11 2026",
+      "category": "opensource",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://www.wired.com/story/uncanny-valley-podcast-is-ai-actually-going-to-kill-us-all/",
       "clusterId": "1fpgj85",
       "title": "Is AI Actually Going to Kill Us All?",
@@ -677,7 +646,7 @@
       "category": "research",
       "catConfidence": 0.38,
       "family": "research",
-      "significance": 48,
+      "significance": 47,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -855,6 +824,36 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "clusterId": "gok17r",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "dateISO": "2026-09-01T18:01:25.000Z",
+      "date": "SEP 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic (YouTube)",
+          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -1144,26 +1143,37 @@
     {
       "family": "product",
       "category": "product",
-      "title": "GPT-Live-1 is now in the API",
-      "summary": "GPT-Live-1 is now available in the API. Bring ChatGPT’s natural back-and-forth to your app, with voice agents that listen while they speak and work with the models and harness you…",
-      "significance": 70,
-      "impact": "high",
-      "verification": "single",
-      "date": "SEP 11 2026",
-      "dateISO": "2026-09-11T17:06:25.000Z",
-      "url": "https://www.youtube.com/watch?v=OSaP6bJoU44",
-      "sourceCount": 1,
+      "title": "Introducing Gemini 3.5 Flash Cyber",
+      "summary": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
+      "significance": 57,
+      "impact": "notable",
+      "verification": "official",
+      "date": "JUL 17 2026",
+      "dateISO": "2026-07-17T15:00:11.000Z",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/",
+      "sourceCount": 4,
       "sources": [
         {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=OSaP6bJoU44"
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/"
+        },
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/"
+        },
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/"
+        },
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/"
         }
       ],
       "entityIds": [
-        "chatgpt",
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "If it holds up, a strategic investment ties the two companies’ roadmaps — models, compute or distribution — closer together."
+      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
     },
     {
       "family": "market",
@@ -1213,12 +1223,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 34,
+    "chatgpt": 33,
     "copilot": 0,
     "perplexity": 1,
     "gpt": 80,
-    "claude": 80,
-    "gemini": 29,
+    "claude": 81,
+    "gemini": 28,
     "grok": 2,
     "llama": 1,
     "deepseek": 1,
@@ -1244,11 +1254,11 @@
           "d": "SEP 01 2026",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
           "isVideo": false,
-          "videoUrl": null,
+          "videoUrl": "https://www.youtube.com/watch?v=ROF2Nv_KjOM",
           "sourceName": "Anthropic",
-          "sourceCount": 1,
+          "sourceCount": 2,
           "verification": "official",
-          "impact": "emerging"
+          "impact": "notable"
         },
         {
           "h": "Anthropic releases new model, Opus 5",
@@ -1290,17 +1300,6 @@
       "logoKey": "openai",
       "items": [
         {
-          "h": "GPT-Live-1 is now in the API",
-          "d": "SEP 11 2026",
-          "url": "https://www.youtube.com/watch?v=OSaP6bJoU44",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "high"
-        },
-        {
           "h": "Introducing ChatGPT Images 2.5",
           "d": "SEP 08 2026",
           "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
@@ -1341,6 +1340,17 @@
           "videoUrl": null,
           "sourceName": "OpenAI",
           "sourceCount": 2,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Supporting Thailand’s next generation of AI startups",
+          "d": "AUG 28 2026",
+          "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
         }
@@ -6191,10 +6201,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $5.87/hr",
-      "trend": "↑ 47% vs 7d ago",
+      "rate": "$1.99 – $7.77/hr",
+      "trend": "↑ 82% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 18 rented offers across Vast.ai + RunPod"
+      "note": "Live from 15 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6202,7 +6212,7 @@
       "rate": "$3.59 – $5.00/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 16 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6231,14 +6241,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.91 – $1.59/hr",
-      "trend": "↓ 3% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-12T05:30:29.785Z",
+    "updatedAt": "2026-09-12T05:45:33.952Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6253,10 +6263,10 @@
         "storyCoverage": 0.8955223880597015,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 2471,
+        "rawCommentHits": 2472,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.12140833670578713,
+        "commentCoverage": 0.12135922330097088,
         "limited": false,
         "points": 73,
         "themes": [
@@ -6341,10 +6351,10 @@
         "storyCoverage": 0.3500583430571762,
         "estimatedRelevantDiscussions": 73,
         "isEstimated": true,
-        "rawCommentHits": 6570,
+        "rawCommentHits": 6569,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.045662100456621,
+        "commentCoverage": 0.04566905160602831,
         "limited": false,
         "points": 168,
         "themes": [
@@ -6424,10 +6434,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 1453,
+        "rawCommentHits": 1452,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 40,
-        "commentCoverage": 0.20646937370956642,
+        "validatedCommentCount": 41,
+        "commentCoverage": 0.2066115702479339,
         "limited": false,
         "points": 107,
         "themes": [
@@ -6439,12 +6449,12 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 15
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 5
+            "count": 6
           },
           {
             "id": "price",
@@ -6522,10 +6532,10 @@
         "storyCoverage": 0.5649717514124294,
         "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
-        "rawCommentHits": 10192,
+        "rawCommentHits": 10191,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 15,
-        "commentCoverage": 0.02943485086342229,
+        "commentCoverage": 0.02943773918163085,
         "limited": false,
         "points": 118,
         "themes": [
@@ -6687,16 +6697,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V3.2",
         "org": "DeepSeek",
-        "rawStoryHits": 144,
-        "fetchedStoryCount": 136,
+        "rawStoryHits": 141,
+        "fetchedStoryCount": 141,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.9444444444444444,
-        "estimatedRelevantDiscussions": 22,
-        "isEstimated": true,
-        "rawCommentHits": 1027,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 21,
+        "isEstimated": false,
+        "rawCommentHits": 973,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 55,
-        "commentCoverage": 0.2921129503407984,
+        "validatedCommentCount": 56,
+        "commentCoverage": 0.30832476875642345,
         "limited": false,
         "points": 1279,
         "themes": [
@@ -6708,7 +6718,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 19
+            "count": 20
           },
           {
             "id": "price",
@@ -6736,6 +6746,11 @@
             "count": 2
           },
           {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 1
+          },
+          {
             "id": "safety",
             "label": "Safety",
             "count": 1
@@ -6760,8 +6775,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
-            "isEstimated": true
+            "discussions": 21,
+            "isEstimated": false
           }
         ]
       },
@@ -7172,18 +7187,6 @@
       {
         "modelId": "deepseek",
         "themes": [
-          "reasoning",
-          "reliability"
-        ],
-        "excerpt": "…a side note, we were surprised that Nemotron 3 outperforms DeepSeek V4 Pro across the board but found this to be consistent across domains and inference engines. This might…",
-        "source": "Hacker News",
-        "author": "KaushikR2",
-        "publishedAt": "2026-09-10T23:45:21.000Z",
-        "url": "https://news.ycombinator.com/item?id=49651652"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
           "speed",
           "price"
         ],
@@ -7192,6 +7195,18 @@
         "author": "84634E1A607A",
         "publishedAt": "2026-09-09T13:42:01.000Z",
         "url": "https://news.ycombinator.com/item?id=49626437"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "reasoning",
+          "reliability"
+        ],
+        "excerpt": "…a side note, we were surprised that Nemotron 3 outperforms DeepSeek V4 Pro across the board but found this to be consistent across domains and inference engines. This might…",
+        "source": "Hacker News",
+        "author": "KaushikR2",
+        "publishedAt": "2026-09-10T23:45:21.000Z",
+        "url": "https://news.ycombinator.com/item?id=49651652"
       },
       {
         "modelId": "deepseek",
