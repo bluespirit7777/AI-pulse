@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-// Unit tests for leaderboard honesty: 4 use-case-specific views instead of one
-// blended "objective" rank, every claim naming a benchmark + snapshot date,
-// and the "Overall balance" disclaimer. Run: node --test test/leaderboard.test.mjs
+// Unit tests for the four scoped curated leaderboard views.
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { LEADERBOARD_VIEWS, LEADERBOARD_OVERALL_DISCLAIMER, leaderboardOverall } from '../js/curated.js';
@@ -21,90 +19,63 @@ test('the disclaimer text itself matches the exact required wording', () => {
   assert.equal(LEADERBOARD_OVERALL_DISCLAIMER, 'Editorial synthesis—not a universal benchmark ranking.');
 });
 
-test('every row in every view has a non-empty note that names a benchmark or pricing source AND a snapshot date/period', () => {
-  // "named benchmark" = cites a recognizable source (Artificial Analysis /
-  // a named benchmark / pricing page / model card); "snapshot date" = a
-  // month+year or "as of" phrase, not an unqualified absolute claim.
-  // SWE-bench Verified and the public leaderboards that publish it were added
-  // when the agentic view moved onto real published figures.
-  const sourceRe = /(scale labs|artificial analysis|lmarena|swe-bench|public .*leaderboard|arena|pricing page|model card|public provider pricing)/i;
-  const dateRe = /(jul 2026|as of|snapshot)/i;
+test('every row names its source and current snapshot', () => {
+  const sourceRe = /(artificial analysis|lmarena|arena|terminal-bench|pricing|model card)/i;
+  const dateRe = /(sep 2026|as of|snapshot)/i;
   for (const view of LEADERBOARD_VIEWS) {
     for (const row of view.data) {
       assert.ok(row.note && row.note.length > 0, `${view.id}/${row.model} has an empty note`);
-      assert.ok(sourceRe.test(row.note), `${view.id}/${row.model} note doesn't name a source: "${row.note}"`);
-      assert.ok(dateRe.test(row.note), `${view.id}/${row.model} note doesn't name a snapshot period: "${row.note}"`);
+      assert.match(row.note, sourceRe, `${view.id}/${row.model} note doesn't name a source`);
+      assert.match(row.note, dateRe, `${view.id}/${row.model} note doesn't name a snapshot period`);
     }
   }
 });
 
-test('every model in every view carries a numeric score (no model left unscored)', () => {
+test('every model in every view carries a finite numeric score', () => {
   for (const view of LEADERBOARD_VIEWS) {
     for (const row of view.data) {
       assert.equal(typeof row.score, 'number', `${view.id}/${row.model} must carry a numeric score`);
-      assert.ok(Number.isFinite(row.score), `${view.id}/${row.model} score must be a real number`);
+      assert.ok(Number.isFinite(row.score), `${view.id}/${row.model} score must be finite`);
     }
   }
 });
 
-test('reasoning/agentic scores are either published figures or notes DISCLOSED as editorial estimates', () => {
+test('reasoning and agentic rows are all published current-source values', () => {
   const reasoning = LEADERBOARD_VIEWS.find((v) => v.id === 'reasoning').data;
   const agentic = LEADERBOARD_VIEWS.find((v) => v.id === 'agentic').data;
-  // Models with a real published HLE figure (Artificial Analysis' own run of
-  // the benchmark); every OTHER scored model must say in its note that its
-  // number is an editorial estimate.
-  const publishedReasoning = new Set(['Claude Opus 5', 'Claude Fable 5', 'ChatGPT Sol (GPT-5.6)', 'Claude Opus 4.8', 'Gemini 3.1 Pro']);
-  for (const row of reasoning) {
-    if (!publishedReasoning.has(row.model)) {
-      assert.match(row.note, /editorial estimate/i, `${row.model} unpublished reasoning score must be disclosed as an editorial estimate`);
-    }
-  }
-  // Models with a published SWE-bench Verified figure. Sol, Grok and Kimi K3
-  // have none, so their rows must disclose the cross-metric inference.
-  const publishedAgentic = new Set(['Claude Opus 5', 'Claude Fable 5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Qwen 3.7 Max']);
-  for (const row of agentic) {
-    if (!publishedAgentic.has(row.model)) {
-      assert.match(row.note, /editorial estimate/i, `${row.model} unpublished agentic score must be disclosed as an editorial estimate`);
-    }
-  }
+  for (const row of reasoning) assert.doesNotMatch(row.note, /editorial estimate/i, `${row.model} reasoning value is still estimated`);
+  for (const row of agentic) assert.doesNotMatch(row.note, /editorial estimate/i, `${row.model} agentic value is still estimated`);
+  assert.equal(agentic[0].model, 'GPT-6 Astra');
+    assert.equal(reasoning[0].model, 'Claude Fable 5.1');
+    assert.ok(reasoning.some((row) => row.model === 'Gemini 3.1 Pro Preview'));
+    assert.ok(agentic.some((row) => row.model === 'Qwen3.8 Max'));
 });
 
-test('ChatGPT Sol ranks at or above Gemini 3.1 Pro on Overall and Reasoning (no Gemini-over-Sol regression)', () => {
-  for (const id of ['overall', 'reasoning']) {
-    const rows = LEADERBOARD_VIEWS.find((v) => v.id === id).data;
-    const sol = rows.find((r) => r.model === 'ChatGPT Sol (GPT-5.6)');
-    const gemini = rows.find((r) => r.model === 'Gemini 3.1 Pro');
-    assert.ok(sol && gemini, `${id} must include both Sol and Gemini`);
-    assert.ok(sol.rank <= gemini.rank, `${id}: ChatGPT Sol (rank ${sol.rank}) must not rank below Gemini (rank ${gemini.rank})`);
-    assert.ok(sol.score >= gemini.score, `${id}: ChatGPT Sol (${sol.score}) must score at least as high as Gemini (${gemini.score})`);
-  }
-});
-
-test('cost efficiency view is qualitative (tier/directional), not fabricated precise $/token figures', () => {
+test('cost efficiency uses current cost-per-task values, not per-token claims', () => {
   const cost = LEADERBOARD_VIEWS.find((v) => v.id === 'cost').data;
-  const preciseDollarRe = /\$\d+(\.\d+)?\s*\/\s*(1?[mk]?\s*)?tokens?/i; // e.g. "$3.00/M tokens" — the fabrication this guards against
+  const preciseDollarRe = /\$\d+(\.\d+)?\s*\/\s*(1?[mk]?\s*)?tokens?/i;
   for (const row of cost) {
-    assert.doesNotMatch(row.note, preciseDollarRe, `${row.model} cost note should not invent a precise per-token rate: "${row.note}"`);
+    assert.doesNotMatch(row.note, preciseDollarRe, `${row.model} cost note should not invent a per-token rate`);
+    assert.match(row.note, /cost-per-task/i);
   }
 });
 
-test('avoids unqualified "stronger model overall" language — comparative claims are scoped to a named task/metric', () => {
+test('no row makes an unscoped stronger-overall claim', () => {
   const bannedRe = /\bstronger model overall\b/i;
   for (const view of LEADERBOARD_VIEWS) {
     for (const row of view.data) {
-      assert.doesNotMatch(row.note, bannedRe, `${view.id}/${row.model} uses unscoped "stronger overall" language`);
+      assert.doesNotMatch(row.note, bannedRe);
       assert.doesNotMatch(row.stat, bannedRe);
     }
   }
 });
 
-test('leaderboardOverall (back-compat alias) still points at the Overall balance view data', () => {
-  const overall = LEADERBOARD_VIEWS.find((v) => v.id === 'overall');
-  assert.equal(leaderboardOverall, overall.data);
+test('leaderboardOverall alias still points at the Overall view data', () => {
+  assert.equal(leaderboardOverall, LEADERBOARD_VIEWS.find((v) => v.id === 'overall').data);
 });
 
-test('every view ranks the same model roster (no model silently dropped from a view)', () => {
+test('every view uses the same refreshed model roster', () => {
   const rosters = LEADERBOARD_VIEWS.map((v) => new Set(v.data.map((r) => r.model)));
   const [first, ...rest] = rosters;
-  for (const r of rest) assert.deepEqual([...r].sort(), [...first].sort());
+  for (const roster of rest) assert.deepEqual([...roster].sort(), [...first].sort());
 });

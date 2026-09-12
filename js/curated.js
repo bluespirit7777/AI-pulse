@@ -1,146 +1,87 @@
-// Hand-maintained datasets that have no free live source. Every one renders
-// with a "Curated" provenance chip in the UI. Bar lengths are ORDINAL (rank
-// position), never implied to be linear scores — the panel notes say so.
-//
-// Update cadence: edit here, commit. `asOf` drives the date chip shown per panel.
+// Curated datasets with no single free live source. Every panel renders with a
+// Curated provenance chip; `asOf` is the retrieval/snapshot date shown in UI.
+// Sources used for this refresh:
+//   https://artificialanalysis.ai/leaderboards/models
+//   https://artificialanalysis.ai/evaluations/humanitys-last-exam
+//   https://artificialanalysis.ai/image/leaderboard/text-to-image
+//   https://artificialanalysis.ai/video/leaderboard/text-to-video
+//   https://gs.statcounter.com/ai-chatbot-market-share
+//   https://huggingface.co/ (official model cards and quantized artifacts)
 
-export const CURATED_ASOF = 'Jul 30 2026';
+export const CURATED_ASOF = 'Sep 12 2026';
 
-// Editorial reception summaries for the top models, keyed to data.community[].key.
-// A computed sentiment score has no free live source, so this qualitative read
-// is hand-written and clearly chip-labelled "Curated" — it sits alongside the
-// LIVE Hacker-News discussion volume/threads, which auto-update. Keep these to
-// one defensible sentence each; edit and commit to update.
-export const RECEPTION_ASOF = 'Jul 10 2026';
+// Editorial reception summaries keyed to data.community[].key. These are
+// qualitative context, not measured sentiment; live counts and threads sit
+// beside them and auto-update.
+export const RECEPTION_ASOF = 'Sep 12 2026';
 export const modelReception = {
-  claude: 'A developer favourite for agentic coding and long-context work; some report a higher cost per task.',
-  gpt: 'The broadest mainstream adoption and strong reasoning reviews, with mixed notes on verbosity in longer agentic runs.',
-  gemini: 'Reception is climbing as Gemini 3 rolls into Search and Workspace; praised for multimodal and very long context.',
-  grok: 'Polarising — fast-moving and competitive on some benchmarks, but reception is coloured by X-platform controversy.',
-  qwen: 'The open-weight darling of the local-LLM crowd; widely called the best self-hostable option for coders.',
+  claude: 'Claude has strong visible momentum in coding and agent workflows; broader developer evidence still says AI output needs careful human verification.',
+  gpt: 'ChatGPT retains broad workplace and consumer adoption, though usage alone is not evidence that developers prefer its answers.',
+  gemini: 'Gemini benefits from wide Google-product distribution and multimodal positioning; no current preference survey here establishes that overall reception is climbing.',
+  grok: 'Reception remains polarised, with product attention accompanied by safety controversy and regulatory scrutiny around generated imagery.',
+  llama: 'The current community sample is local-use and speed-led, with developers discussing open tooling, coding workflows and hardware fit.',
+  deepseek: 'The current community sample is unusually high-volume around V4.1 Flash, coding, price and speed; treat discussion volume as attention, not quality proof.',
+  qwen: 'Qwen is a prominent open-weight option for local and coding use; “best” or “community darling” claims are avoided without a dated comparative survey.',
 };
 
-// ---------- leaderboard: 4 use-case-specific views, not one "objective" rank ----------
-// A single blended ranking reads as more authoritative than the evidence
-// supports — different benchmarks disagree about which model is "best"
-// depending on the task. Rather than picking one synthesis and presenting it
-// as universal, the leaderboard offers 4 views, each citing its own
-// benchmark + snapshot date; "Overall balance" is explicitly labelled as
-// editorial synthesis, not a benchmark result. See docs/METHODOLOGY.md.
-export const LEADERBOARD_SNAPSHOT = 'Jul 2026';
+// ---------- leaderboard: four scoped views, never one universal rank ----------
+export const LEADERBOARD_SNAPSHOT = 'Sep 2026';
 export const LEADERBOARD_OVERALL_DISCLAIMER = 'Editorial synthesis—not a universal benchmark ranking.';
 
-// "Overall balance" — every model scored on Artificial Analysis' Intelligence
-// Index (AAII), a real 0–100 composite that weights agents, coding, general
-// capability and scientific reasoning in four equal 25% blocks.
-//
-// Refreshed Jul 30 2026 against the public AAII leaderboard, cross-checked
-// across two independent mirrors that agreed on both ordering and scores
-// (integers here match Artificial Analysis' own display; the mirrors' one
-// decimal place was 60.7/59.9/58.9/57.1/55.7/53.8/46.5/46.0). Two real
-// changes since the Jul 11 snapshot:
-//   • Claude Opus 5 is NEW and takes #1 — Fable 5 drops to #2.
-//   • Kimi K3 (Moonshot AI) is NEW at #4, the first non-US-lab model to
-//     break into the top five here.
-// Gemini 3.1 Pro and Qwen 3.7 Max genuinely TIE at 46; rankRows renders a
-// shared rank with a "T-" prefix rather than inventing a split.
-//
-// The blend is still an editorial framing (which index, which weighting),
-// which is why this view alone carries the disclaimer — but no model is left
-// unscored and every number here is a published measurement.
+// Overall balance uses the current Artificial Analysis Intelligence Index v4.3.
+// Rows preserve the eight tracked families in this site; ranks are within this
+// curated roster, and the underlying source values are named in each note.
 export const leaderboardOverall = [
-  { rank: 1, model: 'Claude Opus 5', org: 'Anthropic', score: 61, scoreUnit: ' AAII', stat: 'New #1 on the intelligence index', note: `Tops Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) at max reasoning effort — a 0–100 blend of agents, coding, general capability and science` },
-  { rank: 2, model: 'Claude Fable 5', org: 'Anthropic', score: 60, scoreUnit: ' AAII', stat: 'Second, ~1pt back', note: `Second on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot), displaced from the lead by Opus 5; still tops the Humanity's Last Exam reasoning eval` },
-  { rank: 3, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 59, scoreUnit: ' AAII', stat: 'Best-scoring non-Anthropic model', note: `Third on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) and the top non-Anthropic entry; broadest mainstream reach and distribution` },
-  { rank: 4, model: 'Kimi K3', org: 'Moonshot AI', score: 57, scoreUnit: ' AAII', stat: 'Highest-placed open-lab model', note: `New entrant at #4 on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) — the strongest showing yet for a non-US lab on this index` },
-  { rank: 5, model: 'Claude Opus 4.8', org: 'Anthropic', score: 56, scoreUnit: ' AAII', stat: 'Previous Anthropic flagship', note: `Fifth on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot), now behind both Opus 5 and Fable 5; still leads codebase-comprehension sub-scores` },
-  { rank: 6, model: 'Grok 4.5', org: 'xAI', score: 54, scoreUnit: ' AAII', stat: '2M-token context', note: `Sixth on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot); reception still coloured by X-platform controversy` },
-  { rank: 7, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 46, scoreUnit: ' AAII', stat: 'Frontier tier', note: `Mid-pack on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot) as newer entrants raised the bar; extended thinking on by default, huge reach via Search/Workspace/Android` },
-  { rank: 7, model: 'Qwen 3.7 Max', org: 'Alibaba', score: 46, scoreUnit: ' AAII', stat: 'Top open-weight model', note: `Ties Gemini 3.1 Pro on Artificial Analysis' Intelligence Index (${LEADERBOARD_SNAPSHOT} snapshot); still the top open-weight model on the index` },
+  { rank: 1, model: 'Claude Fable 5.1', org: 'Anthropic', score: 53.4, scoreUnit: ' AAII', stat: 'AAII 53 · #1', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 53.3738; max effort with default fallback` },
+  { rank: 2, model: 'GPT-6 Astra', org: 'OpenAI', score: 52.8, scoreUnit: ' AAII', stat: 'AAII 53 · #2', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 52.8141; max effort` },
+  { rank: 3, model: 'Claude Opus 5', org: 'Anthropic', score: 50.7, scoreUnit: ' AAII', stat: 'AAII 51 · #3', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 50.7002; max effort` },
+  { rank: 4, model: 'GPT-5.6 Sol', org: 'OpenAI', score: 47.1, scoreUnit: ' AAII', stat: 'AAII 47 · #4', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 47.0614; max effort` },
+  { rank: 5, model: 'Grok 4.6', org: 'xAI', score: 44.4, scoreUnit: ' AAII', stat: 'AAII 44 · #5', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 44.4050; high effort` },
+  { rank: 6, model: 'Kimi K3', org: 'Moonshot AI', score: 43.8, scoreUnit: ' AAII', stat: 'AAII 44 · #6', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 43.7842; max effort` },
+  { rank: 7, model: 'Qwen3.8 Max', org: 'Alibaba', score: 40.3, scoreUnit: ' AAII', stat: 'AAII 40 · #7', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 40.3049; max effort` },
+  { rank: 8, model: 'Gemini 3.1 Pro Preview', org: 'Google DeepMind', score: 30.4, scoreUnit: ' AAII', stat: 'AAII 30 · #8', note: `Artificial Analysis Intelligence Index v4.3 (${LEADERBOARD_SNAPSHOT} snapshot), underlying 30.3597; preview, thinking-high configuration` },
 ];
 
-// "Reasoning" — Humanity's Last Exam (HLE %), as run by ARTIFICIAL ANALYSIS.
-//
-// Source correction (Jul 30 2026): these figures were previously attributed to
-// "Scale Labs". HLE is Scale Labs'/CAIS' benchmark, but the numbers this view
-// shows are Artificial Analysis' own standardized run of it, and Scale Labs'
-// own board reports materially different values on a different harness (e.g.
-// it puts Gemini 3.1 Pro at 46.4, not 44.4) while not listing the newest
-// frontier models at all. The attribution now names the party that actually
-// produced these numbers.
-//
-// Methodology note worth keeping straight: aggregator boards that pool
-// VENDOR-SELF-REPORTED HLE results show a much higher spread (Opus 5 at 64.7,
-// Fable 5 at 64.5) because those runs are tool-assisted and best-effort. This
-// view deliberately stays on the independently-run, no-tools numbers — a
-// lower but comparable scale. Mixing the two would be the dishonest option.
-//
-// Published (Artificial Analysis): Opus 5, Fable 5, Sol, Opus 4.8, Gemini 3.1
-// Pro. Artificial Analysis has NOT published an HLE figure for Kimi K3, Grok
-// 4.5 or Qwen 3.7 Max, so those three carry an editorial estimate DISCLOSED
-// as such — every model gets a number, but an estimate is never dressed up as
-// a measurement.
-//
-// Note the genuine divergence from the Overall view: Fable 5 still leads HLE
-// even though Opus 5 leads the composite index.
+// Reasoning uses Artificial Analysis's standardized Humanity's Last Exam run.
+// All eight rows have a published value in the current model records.
 export const leaderboardReasoning = [
-  { rank: 1, model: 'Claude Fable 5', org: 'Anthropic', score: 53.3, scoreUnit: '% HLE', stat: "53.3% on Humanity's Last Exam", note: `Top score on Artificial Analysis' run of Humanity's Last Exam (${LEADERBOARD_SNAPSHOT} snapshot) — still ahead of Opus 5 on this eval` },
-  { rank: 2, model: 'Claude Opus 5', org: 'Anthropic', score: 52.6, scoreUnit: '% HLE', stat: "52.6% on Humanity's Last Exam", note: `Second on Artificial Analysis' run of Humanity's Last Exam (${LEADERBOARD_SNAPSHOT} snapshot) at max reasoning effort, just behind Fable 5` },
-  { rank: 3, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 47.2, scoreUnit: '% HLE', stat: "47.2% on Humanity's Last Exam", note: `Third on Artificial Analysis' run of Humanity's Last Exam (${LEADERBOARD_SNAPSHOT} snapshot) — clearly ahead of Gemini on this eval` },
-  { rank: 4, model: 'Kimi K3', org: 'Moonshot AI', score: 46.0, scoreUnit: '% HLE', stat: "~46% on Humanity's Last Exam", note: `Editorial estimate — Artificial Analysis hasn't published a Kimi K3 Humanity's Last Exam figure as of the ${LEADERBOARD_SNAPSHOT} snapshot; placed from its #4 standing on the same site's Intelligence Index` },
-  { rank: 5, model: 'Claude Opus 4.8', org: 'Anthropic', score: 45.7, scoreUnit: '% HLE', stat: "45.7% on Humanity's Last Exam", note: `Fifth on Artificial Analysis' run of Humanity's Last Exam (${LEADERBOARD_SNAPSHOT} snapshot)` },
-  { rank: 6, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 44.4, scoreUnit: '% HLE', stat: "44.4% on Humanity's Last Exam", note: `Sixth on Artificial Analysis' run of Humanity's Last Exam (${LEADERBOARD_SNAPSHOT} snapshot); Scale Labs' own harness scores it higher, at 46.4` },
-  { rank: 7, model: 'Grok 4.5', org: 'xAI', score: 41.0, scoreUnit: '% HLE', stat: "~41% on Humanity's Last Exam", note: `Editorial estimate — Artificial Analysis hasn't published a Grok 4.5 Humanity's Last Exam figure as of the ${LEADERBOARD_SNAPSHOT} snapshot; vendor-reported 4.5 figures remain unverified by third parties` },
-  { rank: 8, model: 'Qwen 3.7 Max', org: 'Alibaba', score: 39.5, scoreUnit: '% HLE', stat: "~40% on Humanity's Last Exam", note: `Editorial estimate — Artificial Analysis hasn't published a Qwen 3.7 Max Humanity's Last Exam figure as of the ${LEADERBOARD_SNAPSHOT} snapshot; strongest open-weight model but below the frontier tier` },
+  { rank: 1, model: 'Claude Fable 5.1', org: 'Anthropic', score: 59.1, scoreUnit: '% HLE', stat: "59.1% Humanity's Last Exam", note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), max effort with default fallback` },
+  { rank: 2, model: 'Claude Opus 5', org: 'Anthropic', score: 54.9, scoreUnit: '% HLE', stat: "54.9% Humanity's Last Exam", note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 3, model: 'GPT-6 Astra', org: 'OpenAI', score: 54.7, scoreUnit: '% HLE', stat: "54.7% Humanity's Last Exam", note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 4, model: 'GPT-5.6 Sol', org: 'OpenAI', score: 49.5, scoreUnit: '% HLE', stat: "49.5% Humanity's Last Exam", note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 5, model: 'Gemini 3.1 Pro Preview', org: 'Google DeepMind', score: 47.0, scoreUnit: '% HLE', stat: "47.0% Humanity's Last Exam", note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), preview thinking-high configuration` },
+  { rank: 6, model: 'Kimi K3', org: 'Moonshot AI', score: 46.9, scoreUnit: '% HLE', stat: `46.9% Humanity's Last Exam`, note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 7, model: 'Qwen3.8 Max', org: 'Alibaba', score: 43.0, scoreUnit: '% HLE', stat: `43.0% Humanity's Last Exam`, note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 8, model: 'Grok 4.6', org: 'xAI', score: 42.9, scoreUnit: '% HLE', stat: `42.9% Humanity's Last Exam`, note: `Artificial Analysis HLE result (${LEADERBOARD_SNAPSHOT} snapshot), high effort` },
 ];
 
-// "Agentic coding" — SWE-bench Verified (%).
-//
-// Substantially rebuilt Jul 30 2026. The previous numbers (82.5 / 79.0 down to
-// 66.5) were badly stale: the frontier has moved to the mid-90s and the
-// benchmark is now openly described by the boards that track it as "nearing
-// saturation for frontier models" — the top three sit within ~1 point. That
-// saturation is itself the story, so the caveat is carried in the notes rather
-// than hidden.
-//
-// PUBLISHED figures: Opus 5 (96.0), Fable 5 (95.0) and Opus 4.8 (88.6) are
-// corroborated across two independent leaderboards; Gemini 3.1 Pro (80.6) and
-// Qwen 3.7 Max (80.4) come from a board that flags its results as
-// vendor-self-reported, which their notes disclose.
-//
-// ESTIMATED: neither ChatGPT Sol nor Grok 4.5 nor Kimi K3 has a published
-// SWE-bench Verified score. Sol and Grok are instead anchored to Artificial
-// Analysis' Coding Agent Index — a DIFFERENT metric on a different scale,
-// where Sol actually ranks #1 (80.0) and Grok #3 (76.0) — so their placement
-// here is a cross-metric inference, not a measurement, and says so. Note the
-// tension this exposes and does not paper over: Claude leads SWE-bench while
-// OpenAI leads Artificial Analysis' agentic-coding index.
+// Agentic coding uses Artificial Analysis Terminal-Bench v4.0. This replaces
+// the old SWE-bench estimates: the current official SWE-bench board does not
+// publish comparable results for these eight current model configurations.
 export const leaderboardAgentic = [
-  { rank: 1, model: 'Claude Opus 5', org: 'Anthropic', score: 96.0, scoreUnit: '% SWE', stat: '96.0% SWE-bench Verified', note: `Leads SWE-bench Verified (${LEADERBOARD_SNAPSHOT} snapshot, independently verified); the top three are within ~1pt, so treat this benchmark as near-saturated` },
-  { rank: 2, model: 'Claude Fable 5', org: 'Anthropic', score: 95.0, scoreUnit: '% SWE', stat: '95.0% SWE-bench Verified', note: `Second on SWE-bench Verified (${LEADERBOARD_SNAPSHOT} snapshot), corroborated across two independent public leaderboards` },
-  { rank: 3, model: 'Claude Opus 4.8', org: 'Anthropic', score: 88.6, scoreUnit: '% SWE', stat: '88.6% SWE-bench Verified', note: `Third on SWE-bench Verified (${LEADERBOARD_SNAPSHOT} snapshot), corroborated across two independent public leaderboards` },
-  { rank: 4, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 82.0, scoreUnit: '% SWE', stat: '~82% SWE-bench Verified', note: `Editorial estimate — no published SWE-bench Verified score as of the ${LEADERBOARD_SNAPSHOT} snapshot; inferred from its #1 placement on Artificial Analysis' Coding Agent Index, a different metric` },
-  { rank: 5, model: 'Kimi K3', org: 'Moonshot AI', score: 81.0, scoreUnit: '% SWE', stat: '~81% SWE-bench Verified', note: `Editorial estimate — no published SWE-bench Verified score as of the ${LEADERBOARD_SNAPSHOT} snapshot; anchored to predecessor Kimi K2.6's published 80.2%` },
-  { rank: 6, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 80.6, scoreUnit: '% SWE', stat: '80.6% SWE-bench Verified', note: `Published on a public SWE-bench Verified leaderboard (${LEADERBOARD_SNAPSHOT} snapshot) that flags its entries as vendor-self-reported rather than independently re-run` },
-  { rank: 7, model: 'Qwen 3.7 Max', org: 'Alibaba', score: 80.4, scoreUnit: '% SWE', stat: '80.4% SWE-bench Verified', note: `Published on a public SWE-bench Verified leaderboard (${LEADERBOARD_SNAPSHOT} snapshot) that flags its entries as vendor-self-reported; strongest open-weight coder` },
-  { rank: 8, model: 'Grok 4.5', org: 'xAI', score: 79.0, scoreUnit: '% SWE', stat: '~79% SWE-bench Verified', note: `Editorial estimate — no published SWE-bench Verified score as of the ${LEADERBOARD_SNAPSHOT} snapshot; inferred from its #3 placement on Artificial Analysis' Coding Agent Index, a different metric` },
+  { rank: 1, model: 'GPT-6 Astra', org: 'OpenAI', score: 59.1, scoreUnit: '% TB4.0', stat: '59.1% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 2, model: 'Claude Fable 5.1', org: 'Anthropic', score: 52.0, scoreUnit: '% TB4.0', stat: '52.0% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), max effort with default fallback` },
+  { rank: 3, model: 'Claude Opus 5', org: 'Anthropic', score: 49.0, scoreUnit: '% TB4.0', stat: '49.0% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 4, model: 'GPT-5.6 Sol', org: 'OpenAI', score: 39.9, scoreUnit: '% TB4.0', stat: '39.9% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 5, model: 'Grok 4.6', org: 'xAI', score: 21.2, scoreUnit: '% TB4.0', stat: '21.2% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), high effort` },
+  { rank: 6, model: 'Qwen3.8 Max', org: 'Alibaba', score: 18.7, scoreUnit: '% TB4.0', stat: '18.7% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 7, model: 'Kimi K3', org: 'Moonshot AI', score: 12.6, scoreUnit: '% TB4.0', stat: '12.6% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), max effort` },
+  { rank: 8, model: 'Gemini 3.1 Pro Preview', org: 'Google DeepMind', score: 4.0, scoreUnit: '% TB4.0', stat: '4.0% Terminal-Bench 4.0', note: `Artificial Analysis Terminal-Bench 4.0 result (${LEADERBOARD_SNAPSHOT} snapshot), preview thinking-high configuration` },
 ];
 
-// "Cost efficiency" — a 0–100 editorial index (higher = more cost-efficient),
-// deliberately NOT precise $/token figures: exact provider pricing changes too
-// often and varies by tier/region for a hand-maintained rate to stay honest.
-// Ranked by public pricing-tier (budget/mid/premium) and whether the model is
-// self-hostable at zero marginal API cost — the number is a directional index,
-// which the note makes explicit, not a fabricated per-token rate.
+// Cost efficiency is normalized from Artificial Analysis cost-per-task values
+// for this eight-model roster: 100 × (max cost − model cost) / (max cost −
+// min cost). It is relative to this roster, not a provider quote or per-token
+// promise. The source estimates are retained in each note for auditability.
 export const leaderboardCost = [
-  { rank: 1, model: 'Qwen 3.7 Max', org: 'Alibaba', score: 95, scoreUnit: ' /100', stat: 'Open-weight, self-hostable', note: `Open weights — no per-token API cost when self-hosted (public model card, ${LEADERBOARD_SNAPSHOT} snapshot); most cost-efficient by a wide margin` },
-  { rank: 2, model: 'Kimi K3', org: 'Moonshot AI', score: 80, scoreUnit: ' /100', stat: 'Frontier capability, sub-frontier price', note: `Directional placement — Moonshot lists K3 below the US frontier labs' bracket (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot), which is what makes its #4 index placement notable` },
-  { rank: 3, model: 'Gemini 3.1 Pro', org: 'Google DeepMind', score: 72, scoreUnit: ' /100', stat: 'Cheap via Flash tiers', note: `Flash-tier pricing sits well below the frontier bracket (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot); the Pro tier is priced at the frontier bracket` },
-  { rank: 4, model: 'ChatGPT Sol (GPT-5.6)', org: 'OpenAI', score: 62, scoreUnit: ' /100', stat: 'Frontier tier', note: `Priced in the frontier bracket across providers (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot); mid cost-efficiency` },
-  { rank: 5, model: 'Grok 4.5', org: 'xAI', score: 58, scoreUnit: ' /100', stat: 'Frontier tier', note: `Priced in the frontier bracket across providers (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot)` },
-  { rank: 6, model: 'Claude Fable 5', org: 'Anthropic', score: 50, scoreUnit: ' /100', stat: 'Premium tier', note: `Priced at the premium end of the frontier bracket (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot)` },
-  { rank: 7, model: 'Claude Opus 4.8', org: 'Anthropic', score: 48, scoreUnit: ' /100', stat: 'Premium tier', note: `Priced at the premium end of the frontier bracket (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot); some report a higher cost per completed task` },
-  { rank: 8, model: 'Claude Opus 5', org: 'Anthropic', score: 45, scoreUnit: ' /100', stat: 'Premium tier, newest flagship', note: `Priced at the premium end of the frontier bracket (public provider pricing, ${LEADERBOARD_SNAPSHOT} snapshot); tops the capability views, so this is the explicit capability-vs-cost trade` },
+  { rank: 1, model: 'Gemini 3.1 Pro Preview', org: 'Google DeepMind', score: 100.0, scoreUnit: ' /100', stat: '$0.67/task · 100/100', note: `Artificial Analysis cost-per-task estimate ($0.67; ${LEADERBOARD_SNAPSHOT} snapshot), lowest in this roster` },
+  { rank: 2, model: 'Grok 4.6', org: 'xAI', score: 82.9, scoreUnit: ' /100', stat: '$1.86/task · 82.9/100', note: `Artificial Analysis cost-per-task estimate ($1.86; ${LEADERBOARD_SNAPSHOT} snapshot), normalized against this roster` },
+  { rank: 3, model: 'GPT-5.6 Sol', org: 'OpenAI', score: 81.1, scoreUnit: ' /100', stat: '$1.99/task · 81.1/100', note: `Artificial Analysis cost-per-task estimate ($1.99; ${LEADERBOARD_SNAPSHOT} snapshot), normalized against this roster` },
+  { rank: 4, model: 'Kimi K3', org: 'Moonshot AI', score: 80.9, scoreUnit: ' /100', stat: '$2.00/task · 80.9/100', note: `Artificial Analysis cost-per-task estimate ($2.00; ${LEADERBOARD_SNAPSHOT} snapshot), normalized against this roster` },
+  { rank: 5, model: 'Qwen3.8 Max', org: 'Alibaba', score: 71.3, scoreUnit: ' /100', stat: '$2.67/task · 71.3/100', note: `Artificial Analysis cost-per-task estimate ($2.67; ${LEADERBOARD_SNAPSHOT} snapshot), normalized against this roster` },
+  { rank: 6, model: 'GPT-6 Astra', org: 'OpenAI', score: 62.8, scoreUnit: ' /100', stat: '$3.26/task · 62.8/100', note: `Artificial Analysis cost-per-task estimate ($3.26; ${LEADERBOARD_SNAPSHOT} snapshot), normalized against this roster` },
+  { rank: 7, model: 'Claude Opus 5', org: 'Anthropic', score: 25.5, scoreUnit: ' /100', stat: '$5.86/task · 25.5/100', note: `Artificial Analysis cost-per-task estimate ($5.86; ${LEADERBOARD_SNAPSHOT} snapshot), normalized against this roster` },
+  { rank: 8, model: 'Claude Fable 5.1', org: 'Anthropic', score: 0.0, scoreUnit: ' /100', stat: '$7.63/task · 0/100', note: `Artificial Analysis cost-per-task estimate ($7.63; ${LEADERBOARD_SNAPSHOT} snapshot), highest in this roster` },
 ];
 
 export const LEADERBOARD_VIEWS = [
@@ -150,143 +91,76 @@ export const LEADERBOARD_VIEWS = [
   { id: 'cost', label: 'Cost efficiency', data: leaderboardCost, disclaimer: null },
 ];
 
-// Back-compat alias — some call sites may still reference the single default view.
 export const leaderboard = leaderboardOverall;
 
-// Elo scores from Artificial Analysis' real Image Arena Quality leaderboard
-// (artificialanalysis.ai/text-to-image) — the same source already cited below.
-// Elo is a real, published score (Artificial Analysis Image Arena), so every
-// row here gets `score` and the bar is scaled to it — not an ordinal ranking.
-// Refreshed Jul 30 2026 from Artificial Analysis' Image Arena quality board.
-// GPT Image 2 holds #1 and stretched its lead (1337 → 1340), but the whole
-// chasing pack turned over: Reve 2.1, MAI-Image-2.5 and HiDream are new
-// entrants, Google's Nano Banana line moved to the Gemini-3.1-based "2"
-// generation, Seedream stepped up a whole version, and FLUX.2 [max] and
-// Nano Banana Pro have both dropped out of the top five entirely.
+// Artificial Analysis Image Arena, current text-to-image board.
 export const imageAI = [
-  { rank: 1, model: 'GPT Image 2', org: 'OpenAI', score: 1340, scoreUnit: ' Elo', stat: 'Elo 1340', note: 'Elo 1340 on Artificial Analysis Image Arena — clear #1, ~41pts ahead of the field' },
-  { rank: 2, model: 'Reve 2.1', org: 'Reve', score: 1299, scoreUnit: ' Elo', stat: 'Elo 1299', note: 'Elo 1299 on Artificial Analysis Image Arena; new entrant, now the strongest non-OpenAI model' },
-  { rank: 3, model: 'MAI-Image-2.5', org: 'Microsoft AI', score: 1270, scoreUnit: ' Elo', stat: 'Elo 1270', note: "Elo 1270 on Artificial Analysis Image Arena; Microsoft's first in-house image model to reach the top tier" },
-  { rank: 4, model: 'Nano Banana 2', org: 'Google · Gemini 3.1 Flash', score: 1263, scoreUnit: ' Elo', stat: 'Elo 1263', note: 'Elo 1263 on Artificial Analysis Image Arena; Gemini-3.1-Flash-powered successor to Nano Banana Pro' },
-  { rank: 5, model: 'GPT Image 1.5', org: 'OpenAI', score: 1263, scoreUnit: ' Elo', stat: 'Elo 1263', note: 'Elo 1263 on Artificial Analysis Image Arena — ties Nano Banana 2; OpenAI holds two of the top five' },
+  { rank: 1, model: 'GPT Image 2.5 Flare (max)', org: 'OpenAI', score: 1187, scoreUnit: ' Elo', stat: 'Elo 1187 · 5,236 samples', note: `Artificial Analysis Image Arena text-to-image board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1175.87–1197.87; released Sep 2026` },
+  { rank: 2, model: 'GPT Image 2.5 Sunburst (max)', org: 'OpenAI', score: 1179, scoreUnit: ' Elo', stat: 'Elo 1179 · 5,159 samples', note: `Artificial Analysis Image Arena text-to-image board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1168.19–1190.19; released Sep 2026` },
+  { rank: 3, model: 'GPT Image 2 (high)', org: 'OpenAI', score: 1171, scoreUnit: ' Elo', stat: 'Elo 1171 · 15,419 samples', note: `Artificial Analysis Image Arena text-to-image board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1162.16–1180.16; released Apr 2026` },
+  { rank: 4, model: 'MAI-Image-2.6', org: 'Microsoft AI', score: 1144, scoreUnit: ' Elo', stat: 'Elo 1144 · 7,345 samples', note: `Artificial Analysis Image Arena text-to-image board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1133.31–1155.31; released Aug 2026` },
+  { rank: 5, model: 'Reve 2.1', org: 'Reve', score: 1127, scoreUnit: ' Elo', stat: 'Elo 1127 · 16,045 samples', note: `Artificial Analysis Image Arena text-to-image board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1117.59–1135.59; released Jul 2026` },
 ];
 
-// Local AI you can actually run on a PERSONAL PC — one solid open-weight pick
-// per realistic consumer RAM tier, from an 8GB laptop up to a 64GB desktop.
-// Deliberately NOT the "biggest/best open models" (those are 200B–670B and
-// need workstations/servers) — this list answers "what can I run on my own
-// machine". Ordered by tier (entry → high-end), ordinal, no fabricated score.
-// Refreshed Jul 30 2026. The previous ladder had gone badly stale — every rung
-// was a 2024-era model (Llama 3.x, Qwen 2.5, Gemma 2). Rebuilt from current
-// VRAM-tier guidance: the Gemma 4 and Qwen3.6 generations now occupy the
-// consumer tiers, and an 8B-class model (ZAYA1) fits where a 3B used to.
-// The 64GB "run a 70B at home" rung is deliberately gone: at this snapshot the
-// genuinely-better-than-27B open models (GLM-5.2, Kimi K2.6) are 700B–1T MoE
-// requiring 8× H100, which is not a personal PC — so the ladder honestly tops
-// out at a single 24GB consumer GPU rather than implying otherwise.
-// `specTier` (1-4, green→yellow→orange→red in rankRows' rendering) is a
-// separate axis from `rank`: it colors the "Runs on…" stat by how demanding
-// the hardware requirement actually is, low to high, so a reader can scan
-// for "what fits my machine" at a glance rather than reading every row's
-// RAM figure. Hand-assigned from each row's own requirement, not computed.
+// Local AI PC ladder. These are editorial hardware-fit recommendations, not
+// benchmark ranks. Q4 footprints below use retrieved artifacts where available.
 export const localAI = [
-  { rank: 1, model: 'Gemma 3 4B', org: 'Google', w: 100, stat: 'Runs on 8GB RAM', specTier: 1, note: 'Entry laptops · quick chat, summarizing, simple coding help — CPU-only is fine' },
-  { rank: 2, model: 'ZAYA1-8B', org: 'Zyphra', w: 88, stat: 'Runs on 16GB RAM', specTier: 2, note: 'Mainstream laptops · a capable general assistant with light coding' },
-  { rank: 3, model: 'Gemma 4 12B', org: 'Google', w: 76, stat: 'Runs on 16–24GB RAM', specTier: 3, note: 'Enthusiast laptops/desktops · noticeably stronger reasoning + coding' },
-  { rank: 4, model: 'Qwen3.6-27B', org: 'Alibaba', w: 66, stat: 'Runs on 32GB RAM or a 24GB GPU', specTier: 3, note: 'Enthusiast desktops · fits a single RTX 4090 at 4-bit with a very long context window' },
-  { rank: 5, model: 'Gemma 4 31B', org: 'Google', w: 58, stat: 'Runs on 32–48GB RAM or a 24GB GPU', specTier: 4, note: 'High-end desktops · the largest model that still fits one consumer GPU at 4-bit' },
+  { rank: 1, model: 'Gemma 4 E2B', org: 'Google', w: 100, stat: 'Runs on 8GB RAM', specTier: 1, note: 'Entry laptop · 2.3B effective / 5.1B total parameters; Q4_K_M is about 2.9 GiB' },
+  { rank: 2, model: 'ZAYA1-8B', org: 'Zyphra', w: 88, stat: 'Runs on 16GB RAM', specTier: 2, note: 'Small MoE with 8.4B total / 760M active parameters; vendor positions it for on-device deployment' },
+  { rank: 3, model: 'Gemma 4 12B', org: 'Google', w: 76, stat: 'Runs on 16–24GB RAM', specTier: 3, note: 'Multimodal local model with 11.95B parameters and 256K context; practical context depends on available memory' },
+  { rank: 4, model: 'Qwen3.6-27B', org: 'Alibaba', w: 66, stat: 'Runs on 32GB RAM or a 24GB GPU', specTier: 4, note: 'Dense 27B model; Q4_K_M is about 15.7 GiB, but full 262K context does not fit beside weights on a 24GB GPU' },
+  { rank: 5, model: 'Gemma 4 31B', org: 'Google', w: 58, stat: 'Runs on 32–48GB RAM or a 24GB GPU', specTier: 4, note: 'Dense 30.7B multimodal model; Q4_K_M is about 17.1 GiB, leaving limited 24GB-GPU headroom for cache and context' },
 ];
 
-// Hardware tiers for the 5 personal-PC models above, entry → high-end.
-// `approxSize` is CALCULATED — each model's published parameter count at a
-// standard 4-bit quantization (~0.6GB per billion parameters, the common
-// GGUF/AWQ ballpark) — not a benchmarked or vendor-published figure, so it's
-// labelled as an editorial estimate. These are all dense models that run on
-// ordinary consumer hardware: system RAM for CPU inference (slower) or a
-// consumer GPU's VRAM (faster) — no data-center cards required.
-export const LOCAL_AI_SPECS_ASOF = 'Jul 2026';
-export const LOCAL_AI_SPECS_METHODOLOGY = 'Sizes are the published 4-bit (Q4) footprint from each model card where one exists, otherwise estimated as parameters × ~0.6GB/billion. Runs on system RAM (CPU, slower) or a consumer GPU (faster). Not a benchmarked figure.';
+export const LOCAL_AI_SPECS_ASOF = 'Sep 12 2026';
+export const LOCAL_AI_SPECS_METHODOLOGY = 'Official model cards establish model identity, parameters and capabilities. Q4_K_M sizes are retrieved artifact sizes where cited, otherwise conservative estimates; actual runtime memory also depends on context, KV cache, runtime and offload. CPU inference is slower than GPU inference.';
 export const localAiPcSpecs = [
-  { model: 'Gemma 3 4B', params: '4B', approxSize: '~2.9GB', tier: 1, tierLabel: 'Entry laptop', setup: '8GB RAM · CPU is fine, any modern laptop' },
-  { model: 'ZAYA1-8B', params: '8B', approxSize: '~5GB', tier: 2, tierLabel: 'Mainstream laptop', setup: '16GB RAM, or an 8GB GPU' },
-  { model: 'Gemma 4 12B', params: '12B', approxSize: '~7GB', tier: 3, tierLabel: 'Enthusiast laptop/desktop', setup: '16–24GB RAM, or a 12GB GPU' },
-  { model: 'Qwen3.6-27B', params: '27B', approxSize: '~15GB', tier: 4, tierLabel: 'Enthusiast desktop', setup: '32GB RAM, or a 24GB GPU (RTX 4090)' },
-  { model: 'Gemma 4 31B', params: '31B', approxSize: '~18GB', tier: 5, tierLabel: 'High-end desktop', setup: '32–48GB RAM, or a 24GB GPU (RTX 4090)' },
+  { model: 'Gemma 4 E2B', params: '2.3B effective / 5.1B total', approxSize: '~2.9 GiB Q4_K_M', tier: 1, tierLabel: 'Entry laptop', setup: '8GB RAM · CPU inference, or a GPU with sufficient shared/VRAM headroom' },
+  { model: 'ZAYA1-8B', params: '8.4B total / 760M active', approxSize: '~5.2 GiB Q4_K_M', tier: 2, tierLabel: 'Mainstream laptop', setup: '16GB RAM, or an 8GB GPU at modest context' },
+  { model: 'Gemma 4 12B', params: '11.95B', approxSize: '~6.3 GiB Q4', tier: 3, tierLabel: 'Enthusiast laptop/desktop', setup: '16–24GB RAM, or a 12GB+ GPU at modest context' },
+  { model: 'Qwen3.6-27B', params: '27B', approxSize: '~15.7 GiB Q4_K_M', tier: 4, tierLabel: 'Enthusiast desktop', setup: '32GB RAM, or a 24GB GPU with context constrained to available cache' },
+  { model: 'Gemma 4 31B', params: '30.7B', approxSize: '~17.1 GiB Q4_K_M', tier: 5, tierLabel: 'High-end desktop', setup: '32–48GB RAM, or a 24GB GPU with constrained context' },
 ];
 
-// Top 5 self-hostable models actually sized for phones/tablets — a distinct
-// list from the PC-class table above, not a subset of it. Real, current
-// small open-weight model families, picked for on-device fit (not
-// benchmarked against the PC-class models above — different use case
-// entirely). Ordinal, same as localAI — no fabricated score.
-// Refreshed Jul 30 2026 — same staleness problem as the PC list: every entry
-// was a 2024-era model. Sizes below are published Q4_K_M footprints.
-// Stat text shows the RAM requirement (matching localAiPcSpecs' figures for
-// the same model) rather than a "best pick" blurb, so it can be colored by
-// specTier the same way as the PC list above — the "why this rank" framing
-// still lives in each row's note. specTier is hand-assigned from the actual
-// RAM figure, low to high; nothing here reaches specTier 4 (red) because
-// none of these five phone-class picks are the heaviest tier this site
-// tracks (localAiMobileSpecs tops out one rung lower than the PC list).
+// Local AI mobile/tablet ladder. This is a fit ladder, not a performance
+// leaderboard; entries are backed by maintained official model cards.
 export const localAiMobile = [
-  { rank: 1, model: 'Gemma 4 E2B', org: 'Google', w: 100, stat: 'Runs on 6GB+ RAM', specTier: 2, note: 'Multimodal at the 2B scale — unusual for a phone-class model, and the current default pick for on-device' },
-  { rank: 2, model: 'Gemma 3 4B', org: 'Google', w: 90, stat: 'Runs on 8GB+ RAM', specTier: 3, note: 'Fastest measured throughput on an iPhone 16 Pro (~27 tok/s via the Google AI Edge SDK) with best-in-class instruction following' },
-  { rank: 3, model: 'Phi-4 Mini', org: 'Microsoft', w: 80, stat: 'Runs on 8GB+ RAM', specTier: 3, note: 'Punches above its weight on reasoning benchmarks; the pick when answer quality matters more than latency' },
-  { rank: 4, model: 'Qwen 3 1.7B', org: 'Alibaba', w: 72, stat: 'Runs on 4GB+ RAM', specTier: 1, note: 'Around 1.1GB at 4-bit · the strongest non-English handling in the sub-2B class' },
-  { rank: 5, model: 'SmolLM 2 1.7B', org: 'Hugging Face', w: 64, stat: 'Runs on 4GB+ RAM', specTier: 1, note: 'Around 1.1GB at 4-bit · built for speed on constrained devices where the others may struggle' },
+  { rank: 1, model: 'Gemma 4 E2B', org: 'Google', w: 100, stat: 'Runs on 6GB+ RAM', specTier: 2, note: 'Designed for mobile and edge deployment; supports text, image, audio and video input' },
+  { rank: 2, model: 'Gemma 3 4B', org: 'Google', w: 90, stat: 'Runs on 8GB+ RAM', specTier: 3, note: 'Compact multimodal option; allow additional memory for the vision projector and context cache' },
+  { rank: 3, model: 'Phi-4 Mini', org: 'Microsoft', w: 80, stat: 'Runs on 8GB+ RAM', specTier: 3, note: '3.8B text model with 128K context, intended in part for memory- and compute-constrained environments' },
+  { rank: 4, model: 'Qwen3-1.7B', org: 'Alibaba', w: 72, stat: 'Runs on 4GB+ RAM', specTier: 1, note: 'About 1.2 GiB at Q4_K_M; model card documents support for more than 100 languages and dialects' },
+  { rank: 5, model: 'SmolLM2-1.7B', org: 'Hugging Face', w: 64, stat: 'Runs on 4GB+ RAM', specTier: 1, note: 'About 1.0 GiB at Q4_K_M; explicitly designed to be lightweight enough for on-device use' },
 ];
 
 export const localAiMobileSpecs = [
-  { model: 'Gemma 3 1B', params: '1B', approxSize: '~720MB', tier: 1, tierLabel: 'Older / entry phone', setup: '3GB+ RAM · the fallback rung below the five ranked above' },
-  { model: 'SmolLM 2 1.7B', params: '1.7B', approxSize: '~1.1GB', tier: 1, tierLabel: 'Entry-level phone', setup: '4GB+ RAM · most 2021+ Android/iOS devices' },
-  { model: 'Qwen 3 1.7B', params: '1.7B', approxSize: '~1.1GB', tier: 2, tierLabel: 'Entry–mid phone', setup: '4GB+ RAM · multilingual' },
-  { model: 'Gemma 4 E2B', params: '~2B effective', approxSize: '~1.4GB', tier: 2, tierLabel: 'Entry–mid phone', setup: '6GB+ RAM · multimodal (vision + text)' },
-  { model: 'Phi-4 Mini', params: '3.8B', approxSize: '~2.7GB', tier: 3, tierLabel: 'Mid-range phone', setup: '8GB+ RAM' },
-  { model: 'Gemma 3 4B', params: '4B', approxSize: '~2.9GB', tier: 3, tierLabel: 'Mid-range phone', setup: '8GB+ RAM' },
+  { model: 'SmolLM2-1.7B', params: '1.7B', approxSize: '~1.0 GiB Q4_K_M', tier: 1, tierLabel: 'Entry phone', setup: '4GB+ RAM · short context recommended' },
+  { model: 'Qwen3-1.7B', params: '1.7B published', approxSize: '~1.2 GiB Q4_K_M', tier: 1, tierLabel: 'Entry–mid phone', setup: '4GB+ RAM · short context recommended' },
+  { model: 'Gemma 4 E2B', params: '2.3B effective / 5.1B total', approxSize: '~2.9 GiB Q4_K_M', tier: 2, tierLabel: 'Mid-range phone/tablet', setup: '6GB+ RAM · memory rises with modalities and context' },
+  { model: 'Phi-4 Mini', params: '3.8B', approxSize: '~2.3 GiB Q4', tier: 3, tierLabel: 'Mid-range phone/tablet', setup: '8GB+ RAM' },
+  { model: 'Gemma 3 4B', params: '4B class', approxSize: '~2.3 GiB text Q4', tier: 3, tierLabel: 'Mid-range phone/tablet', setup: '8GB+ RAM · vision projector adds memory' },
 ];
 
-// Rebuilt Jul 30 2026 — the most-changed list on the site. Two structural
-// shifts since the Jul 11 snapshot:
-//   • SORA 2 IS GONE, not merely outranked: OpenAI deprecated it on Apr 26
-//     2026 with the API shutting down Sep 24 2026. Leaving a model a reader
-//     can no longer adopt on a "best of" list would be actively misleading,
-//     so it is removed rather than demoted.
-//   • The top of the arena is now entirely Chinese-lab models (Kuaishou,
-//     Alibaba, ByteDance). Veo 3.1 is the top Western option and still leads
-//     the with-audio board, which is why it keeps a place here.
-// The top three carry real TrueSkill arena scores from blind human votes;
-// Veo 3.1 and Pika 2.5's positions have no single comparable number on that
-// scale, so neither carries an invented arena score — both instead get the
-// same 0–100 editorial composite index used elsewhere on the site (`w`), and
-// this list now renders with showIndex on (js/sections.js renderCurated())
-// so that index still draws a bar instead of falling back to a bare
-// "Editorial ranking" tag. Caveat worth knowing: the arena had only ~1,380
-// blind votes at this snapshot, so treat the top-three gaps as provisional.
-//
-// Rank 5 restores the list to a genuine top FIVE (it briefly ran 4-deep after
-// Sora 2's removal, below). Pika Labs hasn't submitted Pika 2.5 to the blind
-// arena, so its placement is editorial, ranked below Veo on independent
-// quality review — same honesty treatment as Veo, not a fabricated score.
+// Artificial Analysis text-to-video arena, explicitly the page's With Audio
+// board. Do not mix these measured rows with an editorial no-audio ranking.
 export const videoAI = [
-  { rank: 1, model: 'Kling v3', org: 'Kuaishou', score: 1934, scoreUnit: ' arena', stat: 'Arena 1934', note: 'Tops the blind-vote text-to-video arena (Jul 2026 snapshot) on a TrueSkill rating from human comparisons' },
-  { rank: 2, model: 'Happy Horse 1.0', org: 'Alibaba', score: 1816, scoreUnit: ' arena', stat: 'Arena 1816', note: 'Second on the blind-vote text-to-video arena (Jul 2026 snapshot); limited availability at this snapshot' },
-  { rank: 3, model: 'Seedance 2.0 Fast', org: 'ByteDance', score: 1747, scoreUnit: ' arena', stat: 'Arena 1747', note: 'Third on the blind-vote text-to-video arena (Jul 2026 snapshot); the fast tier of ByteDance\'s Seedance 2 line' },
-  { rank: 4, model: 'Veo 3.1', org: 'Google DeepMind', w: 70, stat: 'Top Western model; leads with-audio', note: 'Highest-placed non-Chinese model and still first on the text-to-video-WITH-AUDIO board (Jul 2026 snapshot); no directly comparable score on the text-only arena scale, so no number is invented here' },
-  { rank: 5, model: 'Pika 2.5', org: 'Pika Labs', w: 55, stat: 'Independent studio, fast iteration', note: 'Not yet submitted to the blind-vote text-to-video arena as of the Jul 2026 snapshot; placed here on editorial quality review relative to the four ranked above, not a measured score' },
+  { rank: 1, model: 'Wan 3.0', org: 'Alibaba', score: 1242, scoreUnit: ' Elo', stat: 'Elo 1242 · 5,745 samples', note: `Artificial Analysis Video Arena text-to-video With Audio board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1232.87–1250.87; released Aug 2026` },
+  { rank: 2, model: 'Gemini Omni Flash', org: 'Google', score: 1238, scoreUnit: ' Elo', stat: 'Elo 1238 · 16,367 samples', note: `Artificial Analysis Video Arena text-to-video With Audio board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1232.18–1244.18; released May 2026` },
+  { rank: 3, model: 'Minimax H3 Max (post-trained by fal)', org: 'Fal', score: 1231, scoreUnit: ' Elo', stat: 'Elo 1231 · 5,479 samples', note: `Artificial Analysis Video Arena text-to-video With Audio board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1221.97–1239.97; released Aug 2026` },
+  { rank: 4, model: 'MiniMax H3', org: 'MiniMax', score: 1225, scoreUnit: ' Elo', stat: 'Elo 1225 · 8,852 samples', note: `Artificial Analysis Video Arena text-to-video With Audio board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1217.59–1231.59; released Jul 2026` },
+  { rank: 5, model: 'Dreamina Seedance 2.0 720p', org: 'ByteDance Seed', score: 1220, scoreUnit: ' Elo', stat: 'Elo 1220 · 22,625 samples', note: `Artificial Analysis Video Arena text-to-video With Audio board (${LEADERBOARD_SNAPSHOT} snapshot), 95% CI 1213.54–1225.54; released Mar 2026` },
 ];
 
-// Percentages must sum to ~100. The donut gradient is DERIVED from this array
-// (see donutGradient) so the wedges can never disagree with the legend.
+// StatCounter's current worldwide AI-chatbot table (August 2026). Values sum
+// to 99.99 because of source rounding; the donut uses this same array.
 export const marketShare = [
-  { name: 'ChatGPT', pct: 53.9, color: 'var(--deep)' },
-  { name: 'Gemini', pct: 27.9, color: 'var(--sea)' },
-  { name: 'Claude', pct: 9.2, color: 'var(--teal)' },
-  { name: 'Perplexity', pct: 4.0, color: 'var(--sand)' },
-  { name: 'DeepSeek', pct: 3.0, color: 'var(--coral)' },
-  { name: 'Other', pct: 2.0, color: 'var(--ink-dim)' },
+  { name: 'ChatGPT', pct: 79.4, color: 'var(--deep)' },
+  { name: 'Gemini', pct: 10.9, color: 'var(--sea)' },
+  { name: 'Perplexity', pct: 4.31, color: 'var(--sand)' },
+  { name: 'Microsoft Copilot', pct: 2.79, color: 'var(--ink-soft)' },
+  { name: 'Claude', pct: 2.57, color: 'var(--coral)' },
+  { name: 'DeepSeek', pct: 0.02, color: 'var(--teal)' },
 ];
 
-// Build the conic-gradient string from marketShare so wedges === legend.
 export function donutGradient(rows = marketShare) {
   let acc = 0;
   const stops = rows.map((r) => {
@@ -297,16 +171,12 @@ export function donutGradient(rows = marketShare) {
   return `conic-gradient(${stops.join(', ')})`;
 }
 
-// Compute pricing moved to a LIVE source (Vast.ai + RunPod public marketplace
-// APIs, no key required) — see scripts/lib/compute.mjs and data.compute in
-// latest.json. No curated fallback here on purpose: the panel shows an
-// honest "unavailable" empty state on a fetch failure rather than silently
-// falling back to a stale hand-typed number that looks live but isn't.
-
+// Compute pricing is live (Vast.ai + RunPod); there is intentionally no stale
+// curated fallback for that panel.
 export const stats = [
-  { num: '357+', lbl: 'Models tracked across public leaderboards' },
-  { num: '$47B', lbl: 'Anthropic annualized revenue, now ahead of OpenAI' },
-  { num: '+855%', lbl: 'Claude web-visit growth, year over year' },
-  { num: '1.6T', lbl: 'Param open model trained on domestic Chinese chips' },
-  { num: '$4.7T', lbl: 'Nvidia market cap — largest AI compute stack' },
+  { num: '147', lbl: 'Models ranked on Artificial Analysis LLM leaderboard · v4.3' },
+  { num: '$65B', lbl: 'Anthropic revenue run rate in July 2026 · Reuters reported Aug 17' },
+  { num: '79.4%', lbl: 'ChatGPT worldwide AI-chatbot share · StatCounter Aug 2026' },
+  { num: '1.6T', lbl: 'LongCat-2.0 total parameters · ~48B active per token' },
+  { num: '$5T', lbl: 'Nvidia valuation milestone reached Oct 29 2025 · Reuters' },
 ];

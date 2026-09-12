@@ -4,14 +4,9 @@
 // (scripts/update-data.mjs) and browser ES modules (js/*.js) exactly like
 // scripts/lib/signals.mjs already is — no bundler, no framework.
 //
-// Every section that names a model version — the Ocean Map (entities.json),
-// Community Pulse, Frontier Releases, the Leaderboard, and entity drawers —
-// reads from here so a version bump only has to happen in ONE place. Before
-// this existed, "Gemini 3.1" (entities.json) and "Gemini 3.5 Pro" (curated
-// leaderboard) disagreed about Google's current flagship — "Gemini 3.5 Pro"
-// turned out to be non-existent; the real flagship is "Gemini 3.1 Pro" — and
-// "Grok 4" (entities.json/community) disagreed with "Grok 4.5" (leaderboard)
-// — both real inconsistencies this fixes.
+// Before this existed, model versions in entities.json, the curated
+// leaderboard, and Community Pulse could drift apart; this registry keeps
+// those surfaces synchronized.
 //
 // `brand` is the consumer-facing PRODUCT name where it differs from the
 // model FAMILY name (the GPT family ships as the ChatGPT product) — Frontier
@@ -20,22 +15,22 @@
 export const MODEL_REGISTRY = {
   gpt: {
     key: 'gpt', name: 'GPT', brand: 'ChatGPT', org: 'OpenAI',
-    version: 'GPT-5.6', versionLabel: 'ChatGPT Sol (GPT-5.6)',
+    version: 'GPT-6 Astra', versionLabel: 'GPT-6 Astra',
     hnQuery: 'ChatGPT', ytQuery: 'ChatGPT', entityId: 'gpt',
   },
   claude: {
     key: 'claude', name: 'Claude', brand: 'Claude', org: 'Anthropic',
-    version: 'Claude Opus 4.8', versionLabel: 'Claude Opus 4.8',
+    version: 'Claude Fable 5.1', versionLabel: 'Claude Fable 5.1',
     hnQuery: 'Claude', ytQuery: 'Claude AI', entityId: 'claude',
   },
   gemini: {
     key: 'gemini', name: 'Gemini', brand: 'Gemini', org: 'Google DeepMind',
-    version: 'Gemini 3.1 Pro', versionLabel: 'Gemini 3.1 Pro',
+    version: 'Gemini 3.1 Pro Preview', versionLabel: 'Gemini 3.1 Pro Preview',
     hnQuery: 'Gemini', ytQuery: 'Gemini AI', entityId: 'gemini',
   },
   grok: {
     key: 'grok', name: 'Grok', brand: 'Grok', org: 'xAI',
-    version: 'Grok 4.5', versionLabel: 'Grok 4.5',
+    version: 'Grok 4.6', versionLabel: 'Grok 4.6',
     hnQuery: 'Grok', entityId: 'grok',
   },
   llama: {
@@ -45,12 +40,12 @@ export const MODEL_REGISTRY = {
   },
   deepseek: {
     key: 'deepseek', name: 'DeepSeek', brand: 'DeepSeek', org: 'DeepSeek',
-    version: 'DeepSeek V3.2', versionLabel: 'DeepSeek V3.2',
+    version: 'DeepSeek V4.1 Flash', versionLabel: 'DeepSeek V4.1 Flash',
     hnQuery: 'DeepSeek', entityId: 'deepseek',
   },
   qwen: {
     key: 'qwen', name: 'Qwen', brand: 'Qwen', org: 'Alibaba',
-    version: 'Qwen 3.7 Max', versionLabel: 'Qwen 3.7 Max',
+    version: 'Qwen3.8 Max', versionLabel: 'Qwen3.8 Max',
     hnQuery: 'Qwen', entityId: 'qwen',
   },
 };
