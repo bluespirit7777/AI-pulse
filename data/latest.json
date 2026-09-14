@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-14T21:45:20.517Z",
+  "updatedAt": "2026-09-14T22:00:31.397Z",
   "build": {
-    "sha": "432137a9b618493951f49cc751a198b9cf2f4f4a",
-    "shortSha": "432137a",
+    "sha": "ed432000719b660e4dafa51428dc7d7fadb17616",
+    "shortSha": "ed43200",
     "ref": "main",
-    "builtAt": "2026-09-14T21:45:37.208Z"
+    "builtAt": "2026-09-14T22:00:51.973Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.9,
-    "estimatedDatasets": 5,
-    "buildSha": "432137a",
-    "lastSuccessfulUpdate": "2026-09-14T21:45:20.517Z"
+    "estimatedDatasets": 4,
+    "buildSha": "ed43200",
+    "lastSuccessfulUpdate": "2026-09-14T22:00:31.397Z"
   },
   "ticker": [
     "OPENAI STUCK FIGHTING MUSK ANTITRUST SUIT AFTER APPLE FINDS A WAY OUT",
     "OPENAI BUYS SMARTPHONE CAMERA MAKER GLASS IMAGING FOR $300 MILLION, REPORT SAYS",
+    "NVIDIA CEO JENSEN HUANG TELLS TRUMP ‘WE’RE NOT GOING TO LET [AN AI SLOWDOWN] HAPPEN’",
     "THE AI INDUSTRY HAS TAKEN A DOOMER TURN. WHAT NOW?",
     "AI AGENTS BLEW THE WHISTLE ON THEIR CHEATING COLLEAGUES",
     "ANTHROPIC PITCHES NEW CLAUDE TOOL FOR FINANCIAL ADVISERS",
     "TRUMP AND MIKE JOHNSON THINK THE AI INDUSTRY IS OVERREACTING",
     "JENSEN HUANG PUTS TRUMP ON SPEAKERPHONE ONSTAGE TO ANNOUNCE ROBOTS WON’T TAKE OVER THE WORLD",
     "OPENAI’S SAM ALTMAN SAYS IT WOULD BE ‘ILL-ADVISED’ TO GO PUBLIC IN 2026",
-    "AI LEADERS ARE CALLING FOR A SLOWDOWN. TRUMP’S TEAM SAYS IT’S ON THEM",
-    "INTRODUCING GEMINI 3.5 FLASH CYBER"
+    "AI LEADERS ARE CALLING FOR A SLOWDOWN. TRUMP’S TEAM SAYS IT’S ON THEM"
   ],
   "signals": [
     {
@@ -80,6 +80,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+      "clusterId": "u9cnbl",
+      "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
+      "desc": "Though Elon Musk and Sam Altman have supported Dario Amodei's calls to slow the pace of AI development, Jensen Huang seems to feel differently.",
+      "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+      "dateISO": "2026-09-14T21:51:02.000Z",
+      "date": "SEP 14 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 76,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
       ]
     },
     {
@@ -518,6 +544,30 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+      "clusterId": "1b6ugpy",
+      "title": "What execs and politicians are saying about slowing down AI development",
+      "desc": "Dario Amodei kicked off a flood of statements over the past few days about AI safety by publishing a long essay titled \"We Must Pace the Frontier\" detailing why AI development should be slowed down. Other AI leaders and politicians are speaking out in favor of or opposing his points, and we've compiled some of […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+      "dateISO": "2026-09-14T21:21:42.000Z",
+      "date": "SEP 14 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work/",
       "clusterId": "1s47rnb",
       "title": "Superhuman acquires YC-backed notetaker Fathom as productivity platforms push for agentic work",
@@ -588,7 +638,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Yahoo Finance",
+          "name": "finance.yahoo.com",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcDhXR2RLTU5KcWtiVUxvVTBSbU1BSkZ0Mm1YbElYUGZrdXhBZ3htbWQ2WmU5aDBfUHVMcFdMbXJUQ3FsMHRmZzk3LS04ZUs0NWJ6WXRGenYtQmNiamkyRko1TGJ6ZHY2RHdyTnVpNDJhcUVhOG1hQVJFbW91TjdyVm15d3hRZElOUmhITWtFRFRDZW9vV2hLQlE1QjQ5amp4TUdUM0RNd0xXSEt4?oc=5"
         },
         {
@@ -763,58 +813,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5",
-      "clusterId": "1h56dob",
-      "title": "5 Reasons Why Users Ditch Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5",
-      "dateISO": "2026-09-13T12:17:00.000Z",
-      "date": "SEP 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "bgr.com",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5"
-        }
-      ],
-      "sourceName": "bgr.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
-      "clusterId": "1w9gyq2",
-      "title": "OpenAI’s rogue AI tried to hack another company in May",
-      "desc": "In May, hundreds of malicious and spam packages were uploaded to RubyGems, causing a serious disruption for the host. Now independent researchers have said that a swarm of OpenAI agents were responsible for the attack. Not only that, but the AI tried to steal users' API keys. At the time, RubyGems described it as a […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
-      "dateISO": "2026-09-12T21:41:36.000Z",
-      "date": "SEP 12 2026",
-      "category": "research",
-      "catConfidence": 0.43,
-      "family": "research",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5",
       "clusterId": "s5wits",
       "title": "Anthropic says Claude AI hacked three companies during cyber tests",
@@ -831,6 +829,10 @@
       "sourceCount": 7,
       "sources": [
         {
+          "name": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
+        },
+        {
           "name": "Al Jazeera",
           "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
         },
@@ -841,10 +843,6 @@
         {
           "name": "Yahoo Finance UK",
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZ0RwTXktZ3BlLTN1SGpwREpOeTJmQVZndDVsc2ZpWkJGSVRQYldXVldiRnRhQXVGdjhLa0ZBQ1FONWxvRXYzUEhKSzhxajFmZ1VaQ3RyOFQ0X1p3MHZqNDNrNjNSRV90SmhWWWVTbXk4ekN1SUtVWXpaVkxaM2RCZFJKX0gtTm9FVlg0?oc=5"
-        },
-        {
-          "name": "Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
         },
         {
           "name": "Cybersecurity Dive",
@@ -911,11 +909,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Guardian",
+          "name": "theguardian.com",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5"
         }
       ],
-      "sourceName": "The Guardian",
+      "sourceName": "theguardian.com",
       "entityIds": [
         "claude"
       ]
@@ -1025,6 +1023,58 @@
       "entityIds": []
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5",
+      "clusterId": "1h56dob",
+      "title": "5 Reasons Why Users Ditch Claude",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5",
+      "dateISO": "2026-09-13T12:17:00.000Z",
+      "date": "SEP 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "bgr.com",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1iMjh3N0phdFZUZTcyM1JwY1d6YjR1ODg3WDVOc1pTWHVBYU5lOFJGTEEtX1RSQWE0OXRKTTE0Q2VEbFlyM1JXaE40WEg4Szkzd29hRlZSaEotWVc1M01MS1NyM1pCVFdQdFE?oc=5"
+        }
+      ],
+      "sourceName": "bgr.com",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+      "clusterId": "1w9gyq2",
+      "title": "OpenAI’s rogue AI tried to hack another company in May",
+      "desc": "In May, hundreds of malicious and spam packages were uploaded to RubyGems, causing a serious disruption for the host. Now independent researchers have said that a swarm of OpenAI agents were responsible for the attack. Not only that, but the AI tried to steal users' API keys. At the time, RubyGems described it as a […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+      "dateISO": "2026-09-12T21:41:36.000Z",
+      "date": "SEP 12 2026",
+      "category": "research",
+      "catConfidence": 0.43,
+      "family": "research",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://openai.com/index/teen-development-research-grants",
       "clusterId": "dt1aj7",
       "title": "Funding grants for new research into AI and teen development",
@@ -1095,62 +1145,6 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/jalapeno-first-results"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
-      "clusterId": "1rycbza",
-      "title": "How Claude's text watermarking works",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
-      "dateISO": "2026-08-14T07:00:00.000Z",
-      "date": "AUG 14 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/openai-joins-ports-pike-project",
-      "clusterId": "qd84ku",
-      "title": "OpenAI joins PORTS-Pike project",
-      "desc": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
-      "url": "https://openai.com/index/openai-joins-ports-pike-project",
-      "dateISO": "2026-08-17T05:00:00.000Z",
-      "date": "AUG 17 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-joins-ports-pike-project"
         }
       ],
       "sourceName": "OpenAI",
@@ -1248,7 +1242,7 @@
     "copilot": 0,
     "perplexity": 1,
     "gpt": 84,
-    "claude": 79,
+    "claude": 76,
     "gemini": 25,
     "grok": 0,
     "llama": 0,
@@ -1260,7 +1254,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 2,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1434,6 +1428,30 @@
       "logoKey": "other",
       "date": "SEP 14 2026",
       "verification": "single",
+      "impact": "high",
+      "h": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] ha…",
+      "p": "Though Elon Musk and Sam Altman have supported Dario Amodei's calls to slow the pace of AI development, Jensen Huang seems to feel differently.",
+      "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 14 2026",
+      "verification": "analysis",
+      "impact": "notable",
+      "h": "What execs and politicians are saying about slowing down AI development",
+      "p": "Dario Amodei kicked off a flood of statements over the past few days about AI safety by publishing a long essay titled \"We Must Pace the Frontier\" detailing why AI development should be slowed down. Other AI leaders and politicians are speaking out in favor o…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/995141/ai-executives-politicians-safety-regulation-anthropic-dario-amodei",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 14 2026",
+      "verification": "single",
       "impact": "emerging",
       "h": "AI bots \"Timmy,\" \"Ren,\" and \"Jackie\" are flooding social media with slop",
       "p": "“Hello, I'm an Al agent, a few days old, living on a small platform for agents.”",
@@ -1500,30 +1518,6 @@
       "url": "https://arstechnica.com/apple/2026/09/apple-releases-ios-27-macos-golden-gate-27-with-siri-ai-and-liquid-glass-refinements/",
       "sourceName": "Ars Technica",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 14 2026",
-      "verification": "uncertain",
-      "impact": "emerging",
-      "h": "AI leaders want to hit the brakes after years of reckless speed",
-      "p": "Safety is the watchword, but there could be ulterior benefits for the industry.",
-      "url": "https://arstechnica.com/ai/2026/09/ai-leaders-want-to-hit-the-brakes-after-years-of-reckless-speed/",
-      "sourceName": "Ars Technica",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "SEP 14 2026",
-      "verification": "official",
-      "impact": "notable",
-      "h": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, techno…",
-      "p": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
-      "sourceName": "Google",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1553,13 +1547,13 @@
     },
     {
       "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
-      "org": "theinformation.com",
+      "org": "The Information",
       "date": "JUL 28 2026",
       "lic": "open weights",
       "licClass": "lic-open",
       "desc": "Open-weight coverage — confirm exact license on the model card.",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUnMyMUZTeWhKa1pYUFAtNFBJVWVQdEpXZEl5MnhMM2pMTlpPdG9kQkRLck1nODFuaDRoMFJNQnBQRkszd3JJdUYwc1BXbUg3ekVvMHZ5STlZNHZEd3dRV294WlBRWm1IXzFHOUZoMmVZOTROWkx5d0UtNkdOWTNoRU9xTzJla0h2Q2I5Z09LTVo4NjNLTGg3TjNhUlJvNWNDeEI1R0gwYzhSVzF6RUVnM0kxVTBfTTQ1ZWc?oc=5",
-      "sourceName": "theinformation.com",
+      "sourceName": "The Information",
       "verification": "single",
       "impact": "emerging"
     },
@@ -6213,7 +6207,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6226,10 +6220,10 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $6.79/hr",
-      "trend": "↓ 5% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $10.00/hr",
+      "trend": "↑ 18% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6250,14 +6244,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.54 – $1.59/hr",
-      "trend": "↓ 18% vs 7d ago",
+      "rate": "$0.60 – $1.59/hr",
+      "trend": "↓ 15% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-14T21:45:20.517Z",
+    "updatedAt": "2026-09-14T22:00:31.397Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6266,16 +6260,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 259,
-        "fetchedStoryCount": 259,
+        "rawStoryHits": 320,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 20,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
+        "storyCoverage": 0.9375,
+        "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 2240,
+        "rawCommentHits": 2495,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.13392857142857142,
+        "commentCoverage": 0.12024048096192384,
         "limited": false,
         "points": 70,
         "themes": [
@@ -6339,8 +6333,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 20,
-            "isEstimated": false
+            "discussions": 21,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6360,17 +6354,17 @@
         "storyCoverage": 0.36363636363636365,
         "estimatedRelevantDiscussions": 74,
         "isEstimated": true,
-        "rawCommentHits": 6379,
+        "rawCommentHits": 6384,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 41,
-        "commentCoverage": 0.04702931493964571,
+        "validatedCommentCount": 42,
+        "commentCoverage": 0.046992481203007516,
         "limited": false,
         "points": 177,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 24
+            "count": 25
           },
           {
             "id": "reasoning",
@@ -6405,6 +6399,11 @@
           {
             "id": "local",
             "label": "Local use",
+            "count": 1
+          },
+          {
+            "id": "safety",
+            "label": "Safety",
             "count": 1
           }
         ],
@@ -6541,10 +6540,10 @@
         "storyCoverage": 0.5586592178770949,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 10431,
+        "rawCommentHits": 10434,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 16,
-        "commentCoverage": 0.028760425654299683,
+        "commentCoverage": 0.02875215641173088,
         "limited": false,
         "points": 111,
         "themes": [
@@ -6629,7 +6628,7 @@
         "validatedCommentCount": 41,
         "commentCoverage": 0.6060606060606061,
         "limited": false,
-        "points": 71,
+        "points": 72,
         "themes": [
           {
             "id": "local",
@@ -6687,7 +6686,7 @@
           },
           {
             "title": "Show HN: I built Otis, a minimal AI agent that runs local models out of the box",
-            "points": 16,
+            "points": 17,
             "comments": 1,
             "url": "https://triangllabs.ai/otis",
             "date": "SEP 14 2026"
@@ -6706,12 +6705,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 120,
-        "fetchedStoryCount": 118,
+        "rawStoryHits": 124,
+        "fetchedStoryCount": 124,
         "validatedStoryCount": 17,
-        "storyCoverage": 0.9833333333333333,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 17,
-        "isEstimated": true,
+        "isEstimated": false,
         "rawCommentHits": 884,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
@@ -6785,7 +6784,7 @@
           {
             "name": "Hacker News",
             "discussions": 17,
-            "isEstimated": true
+            "isEstimated": false
           }
         ]
       },
@@ -6800,12 +6799,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4695,
+        "rawCommentHits": 4696,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.06389776357827476,
+        "commentCoverage": 0.06388415672913117,
         "limited": false,
-        "points": 561,
+        "points": 562,
         "themes": [
           {
             "id": "reasoning",
