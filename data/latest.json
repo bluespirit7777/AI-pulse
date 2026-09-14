@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-14T06:15:22.064Z",
+  "updatedAt": "2026-09-14T06:30:27.120Z",
   "build": {
-    "sha": "bc4370203ffb6a21b6d4cf019856983c71549e56",
-    "shortSha": "bc43702",
+    "sha": "62489d9dc90e720fb0ed18740230b6fc7cb44a15",
+    "shortSha": "62489d9",
     "ref": "main",
-    "builtAt": "2026-09-14T06:15:39.068Z"
+    "builtAt": "2026-09-14T06:30:43.771Z"
   },
   "dataHealth": {
     "feedsSucceeded": 9,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.3,
-    "estimatedDatasets": 5,
-    "buildSha": "bc43702",
-    "lastSuccessfulUpdate": "2026-09-14T06:15:22.064Z"
+    "estimatedDatasets": 4,
+    "buildSha": "62489d9",
+    "lastSuccessfulUpdate": "2026-09-14T06:30:27.120Z"
   },
   "ticker": [
     "TRUMP AND MIKE JOHNSON THINK THE AI INDUSTRY IS OVERREACTING",
@@ -24,9 +24,9 @@
     "‘THIS IS AI OUT OF CONTROL’: CLAUDE DISOBEYED ANTHROPIC CEO IN SIMULATIONS",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
     "5 REASONS WHY USERS DITCH CLAUDE",
-    "OPENAI’S ROGUE AI TRIED TO HACK ANOTHER COMPANY IN MAY",
     "“ZLIBRARY MY BELOVED”: ANTHROPIC STAFF CHATS EXTOLLING PIRACY CITED IN SONY SUIT",
-    "AN ANTHROPIC RESEARCHER’S DOOMSDAY WARNING COMES AT A VERY INTERESTING TIME"
+    "OPENAI’S ROGUE AI TRIED TO HACK ANOTHER COMPANY IN MAY",
+    "HOW CLAUDE'S TEXT WATERMARKING WORKS"
   ],
   "signals": [
     {
@@ -180,11 +180,11 @@
           "url": "https://www.theverge.com/ai-artificial-intelligence/994337/anthropic-ceo-slow-down-ai-development"
         },
         {
-          "name": "thebureauinvestigates.com",
+          "name": "TBIJ",
           "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMnJSbGZBUHBEa1E3Q0JsQThsQWFpUHZuSmpDMkg2RHpEYVNqMnVPWmhHa0N4VUVXVWlRQVpPVkdEbks5d19UTFVJZW5jazBVS0d5OXktaVFzMnd2SGFWUzM3Z3FGUWpnalpTTDZrcUlMTW41UUV4aXBlSDFNVVdMWmMwSkZsZ2xUV3ZKUDlWdVlmS19FbVZHWGV5dF9GRGNPRGpuVVJENDRKZw?oc=5"
         }
       ],
-      "sourceName": "thebureauinvestigates.com",
+      "sourceName": "TBIJ",
       "entityIds": [
         "claude"
       ]
@@ -251,32 +251,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
-      "clusterId": "1w9gyq2",
-      "title": "OpenAI’s rogue AI tried to hack another company in May",
-      "desc": "In May, hundreds of malicious and spam packages were uploaded to RubyGems, causing a serious disruption for the host. Now independent researchers have said that a swarm of OpenAI agents were responsible for the attack. Not only that, but the AI tried to steal users' API keys. At the time, RubyGems described it as a […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
-      "dateISO": "2026-09-12T21:41:36.000Z",
-      "date": "SEP 12 2026",
-      "category": "research",
-      "catConfidence": 0.43,
-      "family": "research",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/",
       "clusterId": "1qg7qme",
       "title": "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit",
@@ -302,6 +276,66 @@
         }
       ],
       "sourceName": "Ars Technica",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+      "clusterId": "1w9gyq2",
+      "title": "OpenAI’s rogue AI tried to hack another company in May",
+      "desc": "In May, hundreds of malicious and spam packages were uploaded to RubyGems, causing a serious disruption for the host. Now independent researchers have said that a swarm of OpenAI agents were responsible for the attack. Not only that, but the AI tried to steal users' API keys. At the time, RubyGems described it as a […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack",
+      "dateISO": "2026-09-12T21:41:36.000Z",
+      "date": "SEP 12 2026",
+      "category": "research",
+      "catConfidence": 0.43,
+      "family": "research",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/994383/openais-rogue-ai-rubygems-hack"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
+      "clusterId": "1rycbza",
+      "title": "How Claude's text watermarking works",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
+      "dateISO": "2026-08-14T07:00:00.000Z",
+      "date": "AUG 14 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbFBtTW5BMWtkTHNET0lvSEY2N3lsYWQ3SUtSdzJFeW02TVhFLUR0eGNqVkpQbHhINE1uNHhtaEtKdVJmcDJUUURKU0Z6SlRlZ292dUJoZEM4MlZTdzF0Rzg4Yl9aNHg3R1BRMXhOemlHUEJaeGV6bmtmZHJxaHlfLWFRSkdYcE0?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
@@ -546,7 +580,7 @@
           "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZ0RwTXktZ3BlLTN1SGpwREpOeTJmQVZndDVsc2ZpWkJGSVRQYldXVldiRnRhQXVGdjhLa0ZBQ1FONWxvRXYzUEhKSzhxajFmZ1VaQ3RyOFQ0X1p3MHZqNDNrNjNSRV90SmhWWWVTbXk4ekN1SUtVWXpaVkxaM2RCZFJKX0gtTm9FVlg0?oc=5"
         },
         {
-          "name": "Britannica",
+          "name": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
         },
         {
@@ -863,36 +897,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
-      "clusterId": "1rycbza",
-      "title": "How Claude's text watermarking works",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
-      "dateISO": "2026-08-14T07:00:00.000Z",
-      "date": "AUG 14 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -1221,7 +1225,7 @@
       "category": "research",
       "title": "OpenAI’s rogue AI tried to hack another company in May",
       "summary": "In May, hundreds of malicious and spam packages were uploaded to RubyGems, causing a serious disruption for the host. Now independent researchers have said that a swarm of OpenAI…",
-      "significance": 49,
+      "significance": 48,
       "impact": "notable",
       "verification": "single",
       "date": "SEP 12 2026",
@@ -1245,7 +1249,7 @@
     "copilot": 0,
     "perplexity": 1,
     "gpt": 84,
-    "claude": 85,
+    "claude": 84,
     "gemini": 29,
     "grok": 2,
     "llama": 1,
@@ -1519,7 +1523,7 @@
       "h": "‘This is AI out of control’: Claude disobeyed Anthropic CEO in simulations",
       "p": "‘This is AI out of control’: Claude disobeyed Anthropic CEO in simulations",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMnJSbGZBUHBEa1E3Q0JsQThsQWFpUHZuSmpDMkg2RHpEYVNqMnVPWmhHa0N4VUVXVWlRQVpPVkdEbks5d19UTFVJZW5jazBVS0d5OXktaVFzMnd2SGFWUzM3Z3FGUWpnalpTTDZrcUlMTW41UUV4aXBlSDFNVVdMWmMwSkZsZ2xUV3ZKUDlWdVlmS19FbVZHWGV5dF9GRGNPRGpuVVJENDRKZw?oc=5",
-      "sourceName": "thebureauinvestigates.com",
+      "sourceName": "TBIJ",
       "sourceCount": 3
     }
   ],
@@ -6210,7 +6214,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6218,23 +6222,23 @@
       "rate": "$3.59 – $5.00/hr",
       "trend": "↑ 5% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.63 – $8.14/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $8.14/hr",
+      "trend": "↑ 5% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $7.89/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $11.48/hr",
+      "trend": "↑ 24% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6247,14 +6251,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$0.60 – $1.59/hr",
+      "trend": "↓ 15% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-14T06:15:22.064Z",
+    "updatedAt": "2026-09-14T06:30:27.120Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6269,10 +6273,10 @@
         "storyCoverage": 0.9646302250803859,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 2452,
+        "rawCommentHits": 2453,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.12234910277324633,
+        "commentCoverage": 0.12229922543823889,
         "limited": false,
         "points": 75,
         "themes": [
@@ -6357,10 +6361,10 @@
         "storyCoverage": 0.36764705882352944,
         "estimatedRelevantDiscussions": 71,
         "isEstimated": true,
-        "rawCommentHits": 6260,
+        "rawCommentHits": 6261,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.04792332268370607,
+        "commentCoverage": 0.04791566842357451,
         "limited": false,
         "points": 176,
         "themes": [
@@ -6538,10 +6542,10 @@
         "storyCoverage": 0.5649717514124294,
         "estimatedRelevantDiscussions": 25,
         "isEstimated": true,
-        "rawCommentHits": 10192,
+        "rawCommentHits": 10197,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 16,
-        "commentCoverage": 0.02943485086342229,
+        "commentCoverage": 0.029420417769932334,
         "limited": false,
         "points": 113,
         "themes": [
@@ -6615,16 +6619,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 36,
-        "fetchedStoryCount": 36,
+        "rawStoryHits": 66,
+        "fetchedStoryCount": 66,
         "validatedStoryCount": 7,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 490,
+        "rawCommentHits": 487,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.6122448979591837,
+        "commentCoverage": 0.6160164271047228,
         "limited": true,
         "points": 55,
         "themes": [
@@ -6703,16 +6707,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 122,
-        "fetchedStoryCount": 122,
+        "rawStoryHits": 118,
+        "fetchedStoryCount": 118,
         "validatedStoryCount": 17,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": false,
-        "rawCommentHits": 882,
+        "rawCommentHits": 869,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.3401360544217687,
+        "commentCoverage": 0.34522439585730724,
         "limited": false,
         "points": 507,
         "themes": [
@@ -6792,15 +6796,15 @@
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
         "rawStoryHits": 229,
-        "fetchedStoryCount": 228,
+        "fetchedStoryCount": 229,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.9956331877729258,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
-        "isEstimated": true,
-        "rawCommentHits": 4661,
+        "isEstimated": false,
+        "rawCommentHits": 4660,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.06436387041407424,
+        "commentCoverage": 0.06437768240343347,
         "limited": false,
         "points": 515,
         "themes": [
@@ -6865,7 +6869,7 @@
           {
             "name": "Hacker News",
             "discussions": 10,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Qwen GitHub",
