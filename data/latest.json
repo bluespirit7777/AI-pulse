@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-09-13T23:45:21.665Z",
+  "updatedAt": "2026-09-14T00:00:32.931Z",
   "build": {
-    "sha": "5dd76e51a54fe5a4f0d30e2c490c5a355597839a",
-    "shortSha": "5dd76e5",
+    "sha": "0273b48029b3c50267a818d6fd7a1bd53d7b372e",
+    "shortSha": "0273b48",
     "ref": "main",
-    "builtAt": "2026-09-13T23:45:40.221Z"
+    "builtAt": "2026-09-14T00:01:35.939Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 60,
-    "estimatedDatasets": 4,
-    "buildSha": "5dd76e5",
-    "lastSuccessfulUpdate": "2026-09-13T23:45:21.665Z"
+    "historyDepthDays": 59,
+    "estimatedDatasets": 5,
+    "buildSha": "0273b48",
+    "lastSuccessfulUpdate": "2026-09-14T00:00:32.931Z"
   },
   "ticker": [
     "TRUMP AND MIKE JOHNSON THINK THE AI INDUSTRY IS OVERREACTING",
@@ -390,30 +390,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
-      "clusterId": "1cxo03r",
-      "title": "AI Agents Are Thirsty for Power",
-      "desc": "Silicon Valley is shifting away from chatbot queries toward a future filled with resource-intensive agentic AI—and it's driving the data center buildout.",
-      "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
-      "dateISO": "2026-09-13T10:00:00.000Z",
-      "date": "SEP 13 2026",
-      "category": "compute",
-      "catConfidence": 0.75,
-      "family": "market",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": []
-    },
-    {
       "id": "https://openai.com/index/chatgpt-for-teens",
       "clusterId": "1azzl9u",
       "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
@@ -442,6 +418,30 @@
       "entityIds": [
         "chatgpt"
       ]
+    },
+    {
+      "id": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
+      "clusterId": "1cxo03r",
+      "title": "AI Agents Are Thirsty for Power",
+      "desc": "Silicon Valley is shifting away from chatbot queries toward a future filled with resource-intensive agentic AI—and it's driving the data center buildout.",
+      "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
+      "dateISO": "2026-09-13T10:00:00.000Z",
+      "date": "SEP 13 2026",
+      "category": "compute",
+      "catConfidence": 0.75,
+      "family": "market",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
@@ -1253,8 +1253,8 @@
     "chatgpt": 33,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 86,
-    "claude": 84,
+    "gpt": 85,
+    "claude": 85,
     "gemini": 28,
     "grok": 2,
     "llama": 1,
@@ -6217,7 +6217,7 @@
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
       "rate": "$1.99 – $3.49/hr",
-      "trend": "→ 2% vs 7d ago",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
@@ -6225,24 +6225,24 @@
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
       "rate": "$3.59 – $4.61/hr",
-      "trend": "↑ 3% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.63 – $8.76/hr",
-      "trend": "↑ 7% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$5.63 – $8.13/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
       "rate": "$6.94 – $7.89/hr",
-      "trend": "↓ 19% vs 7d ago",
-      "trendClass": "trend-down",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6256,14 +6256,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.73 – $1.59/hr",
-      "trend": "→ 2% vs 7d ago",
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-13T23:45:21.665Z",
+    "updatedAt": "2026-09-14T00:00:32.931Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6278,10 +6278,10 @@
         "storyCoverage": 0.970873786407767,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 2441,
+        "rawCommentHits": 2440,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.12290045063498566,
+        "commentCoverage": 0.12295081967213115,
         "limited": false,
         "points": 75,
         "themes": [
@@ -6366,10 +6366,10 @@
         "storyCoverage": 0.36809815950920244,
         "estimatedRelevantDiscussions": 71,
         "isEstimated": true,
-        "rawCommentHits": 6253,
+        "rawCommentHits": 6250,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.04797697105389413,
+        "commentCoverage": 0.048,
         "limited": false,
         "points": 175,
         "themes": [
@@ -6717,16 +6717,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 121,
-        "fetchedStoryCount": 121,
+        "rawStoryHits": 119,
+        "fetchedStoryCount": 115,
         "validatedStoryCount": 17,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 17,
-        "isEstimated": false,
-        "rawCommentHits": 881,
+        "storyCoverage": 0.9663865546218487,
+        "estimatedRelevantDiscussions": 18,
+        "isEstimated": true,
+        "rawCommentHits": 880,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
-        "commentCoverage": 0.340522133938706,
+        "commentCoverage": 0.3409090909090909,
         "limited": false,
         "points": 506,
         "themes": [
@@ -6795,8 +6795,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 17,
-            "isEstimated": false
+            "discussions": 18,
+            "isEstimated": true
           }
         ]
       },
@@ -6811,10 +6811,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 4675,
+        "rawCommentHits": 4676,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.06417112299465241,
+        "commentCoverage": 0.0641573994867408,
         "limited": false,
         "points": 515,
         "themes": [
