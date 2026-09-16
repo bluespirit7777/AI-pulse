@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-09-16T14:00:33.998Z",
+  "updatedAt": "2026-09-16T14:15:25.021Z",
   "build": {
-    "sha": "40107095df5f48962e8b4ab47f3a40b29ff10cf8",
-    "shortSha": "4010709",
+    "sha": "ff6a491d963b91c5a2ae47badfca3fb968b7361e",
+    "shortSha": "ff6a491",
     "ref": "main",
-    "builtAt": "2026-09-16T14:01:12.970Z"
+    "builtAt": "2026-09-16T14:15:42.424Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 13,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
     "estimatedDatasets": 5,
-    "buildSha": "4010709",
-    "lastSuccessfulUpdate": "2026-09-16T14:00:33.998Z"
+    "buildSha": "ff6a491",
+    "lastSuccessfulUpdate": "2026-09-16T14:15:25.021Z"
   },
   "ticker": [
     "THE AI INDUSTRY HAS TAKEN A DOOMER TURN. WHAT NOW?",
     "EARLY ANTHROPIC HIRE, FORMER METR COO HAVE FOUND A WAY TO REIN IN ROGUE AI AGENTS",
     "SALESFORCE AND NVIDIA’S NEW REASONING MODEL IS EVERYTHING THE AI LABS SHOULD FEAR",
     "A BRIEF HISTORY OF AI EXECUTIVES CALLING FOR REGULATION",
+    "OPENAI STUCK FIGHTING MUSK ANTITRUST SUIT AFTER APPLE FINDS A WAY OUT",
     "INTRODUCING GEMINI 3.6 FLASH, 3.5 FLASH-LITE, AND 3.5 FLASH CYBER",
-    "OPENAI BUYS SMARTPHONE CAMERA MAKER GLASS IMAGING FOR $300 MILLION, REPORT SAYS",
     "REIMAGINING ADVERTISING WITH AI",
-    "NVIDIA CEO JENSEN HUANG TELLS TRUMP ‘WE’RE NOT GOING TO LET [AN AI SLOWDOWN] HAPPEN’",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
-    "JENSEN HUANG PUTS TRUMP ON SPEAKERPHONE ONSTAGE TO ANNOUNCE ROBOTS WON’T TAKE OVER THE WORLD"
+    "JENSEN HUANG PUTS TRUMP ON SPEAKERPHONE ONSTAGE TO ANNOUNCE ROBOTS WON’T TAKE OVER THE WORLD",
+    "ANTHROPIC PITCHES NEW CLAUDE TOOL FOR FINANCIAL ADVISERS"
   ],
   "signals": [
     {
@@ -144,6 +144,33 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/tech-policy/2026/09/musk-drops-apple-from-antitrust-suit-but-keeps-gunning-for-openai/",
+      "clusterId": "txn50a",
+      "title": "OpenAI stuck fighting Musk antitrust suit after Apple finds a way out",
+      "desc": "Musk stops attacking Apple over ChatGPT integration but not OpenAI.",
+      "url": "https://arstechnica.com/tech-policy/2026/09/musk-drops-apple-from-antitrust-suit-but-keeps-gunning-for-openai/",
+      "dateISO": "2026-09-14T19:45:13.000Z",
+      "date": "SEP 14 2026",
+      "category": "policy",
+      "catConfidence": 0.56,
+      "family": "market",
+      "significance": 59,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/09/musk-drops-apple-from-antitrust-suit-but-keeps-gunning-for-openai/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
       "id": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/",
       "clusterId": "x8oz8j",
       "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
@@ -182,32 +209,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
-      "clusterId": "1yzjn5v",
-      "title": "OpenAI buys smartphone camera maker Glass Imaging for $300 million, report says",
-      "desc": "Glass Imaging was founded by a pair of former Apple engineers who previously led the team that developed Apple's Portrait Mode.",
-      "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
-      "dateISO": "2026-09-14T20:44:14.000Z",
-      "date": "SEP 14 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/reimagining-advertising-with-ai",
       "clusterId": "swaues",
       "title": "Reimagining advertising with AI",
@@ -231,32 +232,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
-      "clusterId": "u9cnbl",
-      "title": "Nvidia CEO Jensen Huang tells Trump ‘we’re not going to let [an AI slowdown] happen’",
-      "desc": "Though Elon Musk and Sam Altman have supported Dario Amodei's calls to slow the pace of AI development, Jensen Huang seems to feel differently.",
-      "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/",
-      "dateISO": "2026-09-14T21:51:02.000Z",
-      "date": "SEP 14 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/14/nvidia-ceo-jensen-huang-tells-trump-were-not-going-to-let-an-ai-slowdown-happen/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "nvidia"
       ]
     },
     {
@@ -361,11 +336,11 @@
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBYTXJBMkg1SG1Hb294NXJlaHBvREtWXzlVVHg0MjJ6WUtmZzJobUQ1LV9ENWc5aXNOYllkN2ZnVzJSVG5JYVI5dWYxemF0NDZYRnlYTGdEUmN3VjJramdqalRyaHhXTkx6ay1jbVk0Wjd0SnpmNXUyOTBmQ0R3cTBhU2pxZTl2YmJzZGFZUUpObDFOOHkwcm5CeGVKWUpuZDNMNXdOVTM?oc=5"
         },
         {
-          "name": "Bloomberg",
+          "name": "Bloomberg.com",
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRmhuRXViUDlfZnRwMkNKVmtMZGpkeXF5bkppVGV4ejlIdUNnZkpXNHpHeTBXcF9tRkx2d1h2UVkzUU5OanAyVXVZcFhnaTRscTJxa0M3eVBiemZpMTdCZU5UeVVtZ0NQd1dKZ1JVMDhzNkVobVJGNDdWT2tkQlVYRjZ1ckpKRVVTdWZKSHhOTFBqMV9QN1JoZUYzcDloVXZremVEMW13SHFnUms?oc=5"
         }
       ],
-      "sourceName": "Bloomberg",
+      "sourceName": "Bloomberg.com",
       "entityIds": [
         "claude"
       ]
@@ -566,6 +541,33 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/",
+      "clusterId": "1lqzd8e",
+      "title": "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus.",
+      "desc": "Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt.",
+      "url": "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/",
+      "dateISO": "2026-09-09T11:00:10.000Z",
+      "date": "SEP 09 2026",
+      "category": "policy",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
       "clusterId": "gok17r",
       "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
@@ -591,32 +593,6 @@
         }
       ],
       "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5",
-      "clusterId": "1vu7f0n",
-      "title": "How Anthropic says Claude was used for weapons, spying and cyber operations",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5",
-      "dateISO": "2026-09-14T07:00:00.000Z",
-      "date": "SEP 14 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
       "entityIds": [
         "claude"
       ]
@@ -700,6 +676,42 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/15/4-days-left-to-exhibit-at-techcrunch-disrupt-2026/",
+      "clusterId": "9dvtrp",
+      "title": "4 days left to exhibit at TechCrunch Disrupt 2026",
+      "desc": "Last day to exhibit at Disrupt is Sept 18. 4 days left. Get your startup in front of 10,000+ founders, investors, operators and tech leaders October 13–15.",
+      "url": "https://techcrunch.com/2026/09/15/4-days-left-to-exhibit-at-techcrunch-disrupt-2026/",
+      "dateISO": "2026-09-15T14:00:00.000Z",
+      "date": "SEP 15 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/16/next-wave-of-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026-revealed/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/16/3-days-left-to-exhibit-at-techcrunch-disrupt-2026/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/15/discover-how-to-take-your-startup-from-prototype-to-production-at-techcrunch-disrupt-2026/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/15/4-days-left-to-exhibit-at-techcrunch-disrupt-2026/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5",
       "clusterId": "1v1ln18",
       "title": "Anthropic says human error let Claude AI models escape test environment and hack third parties",
@@ -713,10 +725,10 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         {
-          "name": "Britannica",
+          "name": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
         },
         {
@@ -728,6 +740,10 @@
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5"
         },
         {
+          "name": "Yahoo Finance UK",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZ0RwTXktZ3BlLTN1SGpwREpOeTJmQVZndDVsc2ZpWkJGSVRQYldXVldiRnRhQXVGdjhLa0ZBQ1FONWxvRXYzUEhKSzhxajFmZ1VaQ3RyOFQ0X1p3MHZqNDNrNjNSRV90SmhWWWVTbXk4ekN1SUtVWXpaVkxaM2RCZFJKX0gtTm9FVlg0?oc=5"
+        },
+        {
           "name": "Cybersecurity Dive",
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
         },
@@ -737,6 +753,32 @@
         }
       ],
       "sourceName": "Cybersecurity Dive",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5",
+      "clusterId": "1vu7f0n",
+      "title": "How Anthropic says Claude was used for weapons, spying and cyber operations",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5",
+      "dateISO": "2026-09-14T07:00:00.000Z",
+      "date": "SEP 14 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
       "entityIds": [
         "claude"
       ]
@@ -1138,32 +1180,6 @@
         "chatgpt",
         "gpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/introducing-chatgpt-images-2-5",
-      "clusterId": "dp8kll",
-      "title": "Introducing ChatGPT Images 2.5",
-      "desc": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
-      "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
-      "dateISO": "2026-09-08T11:30:00.000Z",
-      "date": "SEP 08 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-chatgpt-images-2-5"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
     }
   ],
   "waves": [
@@ -1246,12 +1262,12 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 30,
+    "chatgpt": 33,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 79,
-    "claude": 79,
-    "gemini": 25,
+    "gpt": 81,
+    "claude": 80,
+    "gemini": 28,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1262,7 +1278,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 4,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1412,6 +1428,18 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
+      "date": "SEP 15 2026",
+      "verification": "corroborated",
+      "impact": "emerging",
+      "h": "4 days left to exhibit at TechCrunch Disrupt 2026",
+      "p": "Last day to exhibit at Disrupt is Sept 18. 4 days left. Get your startup in front of 10,000+ founders, investors, operators and tech leaders October 13–15.",
+      "url": "https://techcrunch.com/2026/09/15/4-days-left-to-exhibit-at-techcrunch-disrupt-2026/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 4
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "SEP 16 2026",
       "verification": "uncertain",
       "impact": "emerging",
@@ -1492,18 +1520,6 @@
       "url": "https://www.wired.com/story/china-isnt-buying-silicon-valley-call-for-ai-slowdown/",
       "sourceName": "Wired",
       "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "JUL 31 2026",
-      "verification": "corroborated",
-      "impact": "emerging",
-      "h": "Anthropic says human error let Claude AI models escape test environment and hac…",
-      "p": "Anthropic says human error let Claude AI models escape test environment and hack third parties",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5",
-      "sourceName": "Cybersecurity Dive",
-      "sourceCount": 5
     }
   ],
   "feed": [
@@ -1579,6 +1595,17 @@
       "sourceCount": 1
     },
     {
+      "field": "Research",
+      "date": "SEP 09 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Anthropic researcher quits with a warning: Self-improving AI could \"kill us all\"",
+      "p": "\"We really do earnestly believe AI could kill all humans!\"",
+      "url": "https://arstechnica.com/ai/2026/09/anthropic-researcher-quits-with-a-warning-self-improving-ai-could-kill-us-all/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
       "field": "Safety",
       "date": "AUG 28 2026",
       "verification": "official",
@@ -1599,17 +1626,6 @@
       "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
       "sourceName": "OpenAI",
       "sourceCount": 1
-    },
-    {
-      "field": "Research",
-      "date": "AUG 21 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "From Atari to EVE Online: Building on 15 Years of AI Research in Games",
-      "p": "Google DeepMind partners with game studios to prototype breakthrough AI gameplay.",
-      "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/",
-      "sourceName": "Google DeepMind",
-      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1618,11 +1634,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 214.85,
-      "changePct": 0.00023152789161559717,
+      "price": 214.83,
+      "changePct": 1.2537133831670606,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 15287811,
+      "volume": 18584398,
       "ohlc": [
         {
           "d": "06-16",
@@ -2068,24 +2084,24 @@
         {
           "d": "09-16",
           "o": 214.13999938964844,
-          "h": 215.14999389648438,
+          "h": 215.25,
           "l": 213.30999755859375,
-          "c": 214.84950256347656
+          "c": 214.8300018310547
         }
       ],
-      "relVolume": 0.1173721758554511,
-      "marketCap": 5242340000000
+      "relVolume": 0.1426817240364689,
+      "marketCap": 5241852000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 495.425,
-      "changePct": -0.3409224569155293,
+      "price": 492.585,
+      "changePct": -0.9122553320431872,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 2373365,
+      "volume": 2799334,
       "ohlc": [
         {
           "d": "06-16",
@@ -2533,22 +2549,22 @@
           "o": 493.1700134277344,
           "h": 495.9200134277344,
           "l": 491.1300048828125,
-          "c": 495.4252014160156
+          "c": 492.5849914550781
         }
       ],
-      "relVolume": 0.11549429357122246,
-      "marketCap": 3681007750000
+      "relVolume": 0.13622308528182747,
+      "marketCap": 3659906550000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 342.62,
-      "changePct": 0.9874159849077092,
+      "price": 342.27,
+      "changePct": 0.88425150975529,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 3257168,
+      "volume": 4030599,
       "ohlc": [
         {
           "d": "06-16",
@@ -2996,22 +3012,22 @@
           "o": 342.7200012207031,
           "h": 343.25,
           "l": 339.25,
-          "c": 342.6199951171875
+          "c": 342.2699890136719
         }
       ],
-      "relVolume": 0.1246160897587462,
-      "marketCap": 1685690400000
+      "relVolume": 0.1542068099543876,
+      "marketCap": 1683968400000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 346.785,
-      "changePct": 0.5232165975705716,
+      "price": 344.39,
+      "changePct": -0.17102334022303892,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 2651021,
+      "volume": 3325082,
       "ohlc": [
         {
           "d": "06-16",
@@ -3459,22 +3475,22 @@
           "o": 346.9800109863281,
           "h": 348.3999938964844,
           "l": 343.75,
-          "c": 346.7850036621094
+          "c": 344.3900146484375
         }
       ],
-      "relVolume": 0.11045483616273523,
-      "marketCap": 4230777000000.0005
+      "relVolume": 0.13853959947418748,
+      "marketCap": 4201558000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 248.35,
-      "changePct": -0.028174891693738498,
+      "price": 247.46,
+      "changePct": -0.38643887857420184,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 4603406,
+      "volume": 5471319,
       "ohlc": [
         {
           "d": "06-16",
@@ -3922,22 +3938,22 @@
           "o": 248.1999969482422,
           "h": 249.25999450683594,
           "l": 246.69000244140625,
-          "c": 248.35000610351562
+          "c": 247.4600067138672
         }
       ],
-      "relVolume": 0.1442364102933666,
-      "marketCap": 2657345000000
+      "relVolume": 0.171430330526982,
+      "marketCap": 2647822000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 680.72,
-      "changePct": 1.5636161108628082,
+      "price": 680.41,
+      "changePct": 1.517364385643406,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 3477328,
+      "volume": 4073875,
       "ohlc": [
         {
           "d": "06-16",
@@ -4385,22 +4401,22 @@
           "o": 679.75,
           "h": 685.3099975585938,
           "l": 674.2901000976562,
-          "c": 680.719970703125
+          "c": 680.4099731445312
         }
       ],
-      "relVolume": 0.18758414731707684,
-      "marketCap": 1715414400000
+      "relVolume": 0.21976482176871334,
+      "marketCap": 1714633200000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 417.97,
-      "changePct": 1.0199398720732629,
+      "price": 418.21,
+      "changePct": 1.077943554097432,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 1622581,
+      "volume": 1925549,
       "ohlc": [
         {
           "d": "06-16",
@@ -4848,22 +4864,22 @@
           "o": 418.20001220703125,
           "h": 419.54998779296875,
           "l": 416.7699890136719,
-          "c": 417.9700012207031
+          "c": 418.2099914550781
         }
       ],
-      "relVolume": 0.16809938554842213,
-      "marketCap": 2169264300000.0002
+      "relVolume": 0.1994868692184727,
+      "marketCap": 2170509900000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 525.2,
-      "changePct": 4.165013782541743,
+      "price": 524.246,
+      "changePct": 3.9757951184707845,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 4584411,
+      "volume": 5636798,
       "ohlc": [
         {
           "d": "06-16",
@@ -5309,24 +5325,24 @@
         {
           "d": "09-16",
           "o": 517.25,
-          "h": 525.4500122070312,
+          "h": 525.4799194335938,
           "l": 514.1599731445312,
-          "c": 525.2000122070312
+          "c": 524.2459716796875
         }
       ],
-      "relVolume": 0.2570923854144556,
-      "marketCap": 850824000000.0001
+      "relVolume": 0.31610993078924043,
+      "marketCap": 849278520000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 170.945,
-      "changePct": -0.935900705391828,
+      "price": 169.68,
+      "changePct": -1.6689875542183974,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 2925485,
+      "volume": 4068058,
       "ohlc": [
         {
           "d": "06-16",
@@ -5773,23 +5789,23 @@
           "d": "09-16",
           "o": 170.38999938964844,
           "h": 172.22999572753906,
-          "l": 169.3000030517578,
-          "c": 170.94500732421875
+          "l": 168.9600067138672,
+          "c": 169.67999267578125
         }
       ],
-      "relVolume": 0.10015452050798852,
-      "marketCap": 410268000000
+      "relVolume": 0.13927071866329405,
+      "marketCap": 407232000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 145.735,
-      "changePct": 3.836908503151454,
+      "price": 144.8,
+      "changePct": 3.1706425042547393,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 7461758,
+      "volume": 10168076,
       "ohlc": [
         {
           "d": "06-16",
@@ -6235,13 +6251,13 @@
         {
           "d": "09-16",
           "o": 140.02999877929688,
-          "h": 146.17999267578125,
+          "h": 146.5,
           "l": 139,
-          "c": 145.735107421875
+          "c": 144.8000030517578
         }
       ],
-      "relVolume": 0.2639174550345161,
-      "marketCap": 409515350000.00006
+      "relVolume": 0.3596381362833721,
+      "marketCap": 406888000000.00006
     }
   ],
   "compute": [
@@ -6251,31 +6267,31 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $6.29/hr",
-      "trend": "↑ 11% vs 7d ago",
+      "rate": "$3.30 – $6.29/hr",
+      "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.63 – $8.76/hr",
-      "trend": "↑ 12% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$5.63 – $7.38/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $7.89/hr",
-      "trend": "↓ 19% vs 7d ago",
+      "rate": "$6.94 – $9.38/hr",
+      "trend": "↓ 11% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6288,14 +6304,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.40 – $1.59/hr",
-      "trend": "↓ 23% vs 7d ago",
+      "rate": "$0.71 – $1.59/hr",
+      "trend": "↓ 11% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-16T14:00:33.998Z",
+    "updatedAt": "2026-09-16T14:15:25.021Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6305,15 +6321,15 @@
         "version": "GPT-6 Astra",
         "org": "OpenAI",
         "rawStoryHits": 329,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 265,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.9118541033434651,
-        "estimatedRelevantDiscussions": 22,
+        "storyCoverage": 0.8054711246200608,
+        "estimatedRelevantDiscussions": 26,
         "isEstimated": true,
-        "rawCommentHits": 2462,
+        "rawCommentHits": 2458,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.12185215272136475,
+        "commentCoverage": 0.12205044751830757,
         "limited": false,
         "points": 70,
         "themes": [
@@ -6377,7 +6393,12 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
+            "discussions": 25,
+            "isEstimated": true
+          },
+          {
+            "name": "OpenAI forum",
+            "discussions": 1,
             "isEstimated": true
           }
         ]
@@ -6387,23 +6408,23 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 834,
+        "rawStoryHits": 836,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 24,
-        "storyCoverage": 0.3597122302158273,
+        "storyCoverage": 0.3588516746411483,
         "estimatedRelevantDiscussions": 71,
         "isEstimated": true,
-        "rawCommentHits": 6306,
+        "rawCommentHits": 6303,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 38,
-        "commentCoverage": 0.047573739295908656,
+        "validatedCommentCount": 39,
+        "commentCoverage": 0.047596382674916705,
         "limited": false,
         "points": 174,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 29
+            "count": 30
           },
           {
             "id": "reasoning",
@@ -6470,16 +6491,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 115,
-        "fetchedStoryCount": 115,
+        "rawStoryHits": 114,
+        "fetchedStoryCount": 114,
         "validatedStoryCount": 16,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
+        "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 1420,
+        "rawCommentHits": 1419,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.2112676056338028,
+        "commentCoverage": 0.21141649048625794,
         "limited": false,
         "points": 161,
         "themes": [
@@ -6548,7 +6569,7 @@
           },
           {
             "name": "Google AI forum",
-            "discussions": 0,
+            "discussions": 1,
             "isEstimated": true
           },
           {
@@ -6569,10 +6590,10 @@
         "storyCoverage": 0.5504587155963303,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 10528,
+        "rawCommentHits": 10532,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 16,
-        "commentCoverage": 0.028495440729483283,
+        "commentCoverage": 0.0284846183061147,
         "limited": false,
         "points": 111,
         "themes": [
@@ -6734,10 +6755,10 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 122,
-        "fetchedStoryCount": 120,
+        "rawStoryHits": 120,
+        "fetchedStoryCount": 118,
         "validatedStoryCount": 17,
-        "storyCoverage": 0.9836065573770492,
+        "storyCoverage": 0.9833333333333333,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
         "rawCommentHits": 877,
