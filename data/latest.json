@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-09-18T20:15:27.707Z",
+  "updatedAt": "2026-09-18T20:30:28.238Z",
   "build": {
-    "sha": "39bca6c5df70dfb37acbdb2a692dbf63fb190677",
-    "shortSha": "39bca6c",
+    "sha": "c471c24691a5736c1391095f5752c58c61797d42",
+    "shortSha": "c471c24",
     "ref": "main",
-    "builtAt": "2026-09-18T20:15:45.617Z"
+    "builtAt": "2026-09-18T20:30:55.788Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.8,
+    "historyDepthDays": 59.9,
     "estimatedDatasets": 4,
-    "buildSha": "39bca6c",
-    "lastSuccessfulUpdate": "2026-09-18T20:15:27.707Z"
+    "buildSha": "c471c24",
+    "lastSuccessfulUpdate": "2026-09-18T20:30:28.238Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
     "NEW EXPERTS JOIN GOOGLE’S AI & ECONOMY TEAM",
     "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
     "SECURITY RESEARCHERS HACKED INTO OPENAI USING ANTHROPIC’S CLAUDE",
-    "MICROSOFT EXEC CALLED AI SCRAPING ‘THE LARGEST THEFT OF LABOR IN HUMAN HISTORY,’ NEW UNREDACTED FILINGS REVEAL",
-    "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?",
     "ANTHROPIC SAYS CLAUDE NOW LEADS A QUARTER OF WORK BUILDING ITS NEXT AI MODELS",
+    "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?",
     "GOOGLE DEEPMIND LAUNCHES INSTITUTE TO WIDEN THE AGI DEBATE",
+    "MAKING GLOBAL DATA EASIER TO EXPLORE",
     "HOW COOLEY IS ACCELERATING IPO WORK WITH CHATGPT",
-    "MAKING GLOBAL DATA EASIER TO EXPLORE"
+    "ANTHROPIC LAUNCHES CLAUDE CODE PROJECTS, AN ‘ALWAYS-ON’ CONVERSATION THAT REMEMBERS AND DELEGATES YOUR LONG-R…"
   ],
   "signals": [
     {
@@ -40,17 +40,21 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 86,
+      "significance": 92,
       "impact": "high",
       "verification": "corroborated",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/"
         },
         {
-          "name": "TechCrunch",
+          "name": "techcrunch.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         },
         {
@@ -144,63 +148,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
-      "clusterId": "nlpksu",
-      "title": "Microsoft exec called AI scraping ‘the largest theft of labor in human history,’ new unredacted filings reveal",
-      "desc": "Newly unsealed court filings show Microsoft privately called OpenAI's data practices \"theft\" while both companies scraped paywalled Times content, built datasets from it, and warned internally it would gut publishers.",
-      "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
-      "dateISO": "2026-09-17T19:46:08.000Z",
-      "date": "SEP 17 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 67,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
-      "clusterId": "t9li44",
-      "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
-      "desc": "A week after an Anthropic researcher’s doomsday warning rattled the AI world, the company’s CEO Dario Amodei has outlined his plan to “pace the frontier” of AI development. The proposal leans on independent safety evaluators and coordination between AI labs in democratic countries, and it’s already picked up some industry support, along with some pointed pushback from Nvidia’s Jensen Huang. On […]",
-      "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
-      "dateISO": "2026-09-18T17:06:32.000Z",
-      "date": "SEP 18 2026",
-      "category": "orggov",
-      "catConfidence": 0.44,
-      "family": "market",
-      "significance": 65,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude",
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOTlkTk8zR3FVNjBtYTRfeEZQWU9zWHhWUE00dUhyMDhMUHZDRF90dlhuUDhYS3QweW9ZejB1U0tNQ0dFQjIxZ1lFLXhfdEliaHN3MzJZV0JYRnJMc0pyU2k4dmdyX2tPR1VOX0RRdmVJUkZ1bWZCcVJ5czg4XzlXQmRXaXpVYzB1a0QwRGdzUkFVbGtVY3ZJVEpKSEwzUXdMT0NaV0F1cTVQOEFhSzRTR0ZURUlzM3NL?oc=5",
       "clusterId": "1ois6ag",
       "title": "Anthropic says Claude now leads a quarter of work building its next AI models",
@@ -224,6 +171,37 @@
       "sourceName": "Reuters",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
+      "clusterId": "t9li44",
+      "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
+      "desc": "A week after an Anthropic researcher’s doomsday warning rattled the AI world, the company’s CEO Dario Amodei has outlined his plan to “pace the frontier” of AI development. The proposal leans on independent safety evaluators and coordination between AI labs in democratic countries, and it’s already picked up some industry support, along with some pointed pushback from Nvidia’s Jensen Huang. On […]",
+      "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
+      "dateISO": "2026-09-18T17:06:32.000Z",
+      "date": "SEP 18 2026",
+      "category": "orggov",
+      "catConfidence": 0.44,
+      "family": "market",
+      "significance": 64,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude",
+        "nvidia"
       ]
     },
     {
@@ -253,32 +231,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/cooley-gopublic",
-      "clusterId": "c9xyz2",
-      "title": "How Cooley is accelerating IPO work with ChatGPT",
-      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
-      "url": "https://openai.com/index/cooley-gopublic",
-      "dateISO": "2026-09-17T12:00:00.000Z",
-      "date": "SEP 17 2026",
-      "category": "capital",
-      "catConfidence": 0.55,
-      "family": "market",
-      "significance": 63,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/cooley-gopublic"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
       "clusterId": "91xz1l",
       "title": "Making global data easier to explore",
@@ -305,6 +257,32 @@
       ]
     },
     {
+      "id": "https://openai.com/index/cooley-gopublic",
+      "clusterId": "c9xyz2",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "dateISO": "2026-09-17T12:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 62,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/cooley-gopublic"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
       "clusterId": "7t6jvw",
       "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work",
@@ -315,7 +293,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 62,
+      "significance": 61,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -341,7 +319,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 61,
+      "significance": 60,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -437,15 +415,39 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "cbsnews.com",
+          "name": "CBS News",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNeUo4TFlnSHFTVTg5MlhVZC1lM2FkZER1MHZDWEJQaHp1YVdCVExBTE5EdUF6Tk1ZTmpzQjc3c3JWU3RDV04zWTN0VFNZN0MyUndHcTFZNFh0cFVQMndIMkRlaE8yTWY3WHBIYUk3RjFSWWxv?oc=5"
         }
       ],
-      "sourceName": "cbsnews.com",
+      "sourceName": "CBS News",
       "entityIds": [
         "chatgpt",
         "claude"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
+      "clusterId": "sd93sd",
+      "title": "Virginia governor creates an AI task force and moves to restrain data centers",
+      "desc": "Virginia Gov. Abigail Spanberger ordered the state government to take steps that could empower local communities to have a larger say in data center development and slow down approvals in a state that is already home to the data center capital of the world. Executive Order 22 bans executive branch officials from signing nondisclosure agreements […]",
+      "url": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
+      "dateISO": "2026-09-18T18:29:17.000Z",
+      "date": "SEP 18 2026",
+      "category": "policy",
+      "catConfidence": 0.57,
+      "family": "market",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/",
@@ -490,11 +492,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Guardian",
+          "name": "theguardian.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORGtkcDVTUGdMQW5OWHpxVmFVLXlyel9IRVJhNVVmTWF6NFk2enhmOFNVdnJyY3RkMzRhbWpXaXBjVWk4YzJxekdLSzM4SHJWRW56QzFWZDlncUtPdUlZb1Zva1VtdWF0anZSejVWanJnWlNhb0xXSUU3R0VRRmlneWVqMmRoUWdwMGNSd3p3TUJObUU?oc=5"
         }
       ],
-      "sourceName": "The Guardian",
+      "sourceName": "theguardian.com",
       "entityIds": [
         "gpt",
         "claude"
@@ -530,7 +532,7 @@
       "title": "Anthropic says its model Claude is helping to build the next version of itself",
       "desc": "",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQTGVRMWttSER2aTljc2w3RjQ4WVNSQno4Z3FmaUVGSmllOXFKRzkzUmJXT2R6MHhZSzhaTVp2RTBXSzNJNzQ3YThfNmdWNUdEN0dNUXhwRWdxa0p0V2FFaGtlRHVHLUpmdDctWDg1N2ZnM2FWeVFZXzJOS2g5T05yYnZPYmJOMzdqeDAwUlNvMFV1TDc0MDhoVjVvVXhyRmRwQUVGdg?oc=5",
-      "dateISO": "2026-09-18T01:55:00.000Z",
+      "dateISO": "2026-09-18T01:55:41.000Z",
       "date": "SEP 18 2026",
       "category": "general",
       "catConfidence": 0.3,
@@ -553,6 +555,30 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/policy/997516/california-governor-newsom-ai-kill-switch",
+      "clusterId": "1ajn8tc",
+      "title": "Gavin Newsom is pushing for an AI kill switch",
+      "desc": "California Gov. Gavin Newsom (D) is positioning the state to take the lead on AI oversight, including the potential to mandate a \"kill switch\" for frontier models, with a new executive order issued Friday. Newsom's order directs the state to convene a group of experts that will deliver recommendations within two months on how to […]",
+      "url": "https://www.theverge.com/policy/997516/california-governor-newsom-ai-kill-switch",
+      "dateISO": "2026-09-18T17:04:51.000Z",
+      "date": "SEP 18 2026",
+      "category": "policy",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/policy/997516/california-governor-newsom-ai-kill-switch"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://openai.com/index/astra-for-law",
@@ -650,40 +676,38 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "axios.com",
+          "name": "Axios",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5"
         }
       ],
-      "sourceName": "axios.com",
+      "sourceName": "Axios",
       "entityIds": [
         "claude"
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
-      "clusterId": "vffdu6",
-      "title": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
-      "desc": "Snap is introducing \"Specs Intelligence,\" a new AI assistant that can connect other digital accounts to help you with things like work tasks and keeping track of travel information. It seems similar to AI assistants like Meta's Muse and Gemini's Spark, though Snap is pitching Specs Intelligence as an \"anticipatory AI service\" that \"helps you […]",
-      "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
-      "dateISO": "2026-09-16T23:40:00.000Z",
-      "date": "SEP 16 2026",
+      "id": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/",
+      "clusterId": "njfzin",
+      "title": "Report: US almost boarded Chinese ship over hallucinated AI arms report",
+      "desc": "But the military's overall use of AI seems to be accelerating.",
+      "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/",
+      "dateISO": "2026-09-18T20:26:33.000Z",
+      "date": "SEP 18 2026",
       "category": "product",
-      "catConfidence": 0.75,
+      "catConfidence": 0.6,
       "family": "product",
-      "significance": 52,
+      "significance": 51,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/"
         }
       ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
+      "sourceName": "Ars Technica",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
@@ -974,7 +998,7 @@
       "title": "Exclusive | Hackers Used Anthropic’s Claude to Break Into OpenAI",
       "desc": "",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQmNxc081M1NZa0l1MDZtRG16czdBY2M3X09PVUNCcFUzdS14ZEk1dEdDS0diT2toWlY4VmtMMkNaU1pVVDRaOEpDY0tMRi0zc3dweFpEMWZQOFpPQklqTUcwelZXelBDVXJQWE1GM25BYXgxbHc3ZHBBTk1xV3ViUzloX2s2d0tCd0RLS3lKZmFNdw?oc=5",
-      "dateISO": "2026-09-18T01:00:00.000Z",
+      "dateISO": "2026-09-18T01:00:16.000Z",
       "date": "SEP 18 2026",
       "category": "general",
       "catConfidence": 0.3,
@@ -1084,32 +1108,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
-      "clusterId": "19538g8",
-      "title": "OpenAI caught its models leaving notes to successors to hide bad behavior",
-      "desc": "OpenAI disclosed instances of GPT-5.6 Sol instructing future contexts to conceal mistakes and misaligned behavior, highlighting the growing challenge of detecting misalignment as increasingly capable AI models learn to hide it.",
-      "url": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/",
-      "dateISO": "2026-09-17T20:34:24.000Z",
-      "date": "SEP 17 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1164,20 +1162,24 @@
       "category": "research",
       "title": "Researchers used Claude to hack OpenAI",
       "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
-      "significance": 86,
+      "significance": 92,
       "impact": "high",
       "verification": "corroborated",
       "date": "SEP 18 2026",
       "dateISO": "2026-09-18T13:30:12.000Z",
       "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/"
         },
         {
-          "name": "TechCrunch",
+          "name": "techcrunch.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         },
         {
@@ -1196,9 +1198,9 @@
     "chatgpt": 36,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 87,
-    "claude": 77,
-    "gemini": 30,
+    "gpt": 86,
+    "claude": 76,
+    "gemini": 27,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1209,7 +1211,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 4,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1236,7 +1238,7 @@
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "axios.com",
+          "sourceName": "Axios",
           "sourceCount": 1,
           "verification": "single",
           "impact": "notable"
@@ -1364,17 +1366,6 @@
           "impact": "notable"
         },
         {
-          "h": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
-          "d": "SEP 16 2026",
-          "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing agentic video understanding with Gemini",
           "d": "SEP 01 2026",
           "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
@@ -1395,11 +1386,46 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
+        },
+        {
+          "h": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+          "d": "JUL 21 2026",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber/",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Google DeepMind",
+          "sourceCount": 4,
+          "verification": "official",
+          "impact": "notable"
         }
       ]
     }
   ],
   "wire": [
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 18 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Report: US almost boarded Chinese ship over hallucinated AI arms report",
+      "p": "But the military's overall use of AI seems to be accelerating.",
+      "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 18 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "World model companies are keeping a lot of secrets",
+      "p": "Everyone in the world-models space is sitting on a pile of cash and a ton of buzz, but good luck getting anyone — from the founders to their own data suppliers — to tell you what they're actually building.",
+      "url": "https://techcrunch.com/2026/09/18/world-model-companies-are-keeping-a-lot-of-secrets/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
     {
       "org": "AI WIRE",
       "logoKey": "other",
@@ -1437,6 +1463,18 @@
       "sourceCount": 1
     },
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 18 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Virginia governor creates an AI task force and moves to restrain data centers",
+      "p": "Virginia Gov. Abigail Spanberger ordered the state government to take steps that could empower local communities to have a larger say in data center development and slow down approvals in a state that is already home to the data center capital of the world. E…",
+      "url": "https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "SEP 18 2026",
@@ -1457,42 +1495,6 @@
       "h": "Disney’s first CTO led an AI startup it once accused of copying its characters",
       "p": "The former CEO of Character.AI, which Disney previously sent a cease-and-desist letter to, will serve as the company's first-ever chief technology officer.",
       "url": "https://techcrunch.com/2026/09/18/disneys-first-cto-led-an-ai-startup-it-once-accused-of-copying-its-characters/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "SEP 18 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Google’s new ‘CC’ is an AI agent that helps families run their households",
-      "p": "Google is refocusing its CC AI agent on household coordination, letting families share emails, schedules, and tasks so the AI can manage calendars, fill out forms, make shopping lists, plan meals, and more.",
-      "url": "https://techcrunch.com/2026/09/18/googles-new-cc-is-an-ai-agent-that-helps-families-run-their-households/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "SEP 18 2026",
-      "verification": "corroborated",
-      "impact": "notable",
-      "h": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
-      "p": "A week after an Anthropic researcher’s doomsday warning rattled the AI world, the company’s CEO Dario Amodei has outlined his plan to “pace the frontier” of AI development. The proposal leans on independent safety evaluators and coordination between AI labs i…",
-      "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 18 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Manus seeks $4B valuation in new $500M fundraise as it resumes independent ops",
-      "p": "Manus, which earlier this year had to break off a merger with Meta, is in discussions to raise $500M at a $4B valuation.",
-      "url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1568,7 +1570,7 @@
       "p": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
       "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
       "sourceName": "Ars Technica",
-      "sourceCount": 3
+      "sourceCount": 4
     },
     {
       "field": "Research",
@@ -2063,7 +2065,7 @@
         },
         {
           "d": "09-18",
-          "o": 219.35000610351562,
+          "o": 219.36000061035156,
           "h": 222.72999572753906,
           "l": 218.0399932861328,
           "c": 222.27000427246094
@@ -2519,7 +2521,7 @@
         },
         {
           "d": "09-18",
-          "o": 497.9649963378906,
+          "o": 497.4700012207031,
           "h": 498.6499938964844,
           "l": 491.1000061035156,
           "c": 493.7799987792969
@@ -3431,7 +3433,7 @@
         },
         {
           "d": "09-18",
-          "o": 357.30499267578125,
+          "o": 356.9200134277344,
           "h": 359.44000244140625,
           "l": 348.45001220703125,
           "c": 349.5400085449219
@@ -4361,7 +4363,7 @@
       "changePct": 1.0249624789697818,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 11778914,
+      "volume": 12786646,
       "ohlc": [
         {
           "d": "06-22",
@@ -4805,7 +4807,7 @@
           "c": 434.6700134277344
         }
       ],
-      "relVolume": 1.217244928539688,
+      "relVolume": 1.321384976283237,
       "marketCap": 2255937300000
     },
     {
@@ -5725,11 +5727,11 @@
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 147.6,
-      "changePct": -1.985517170520493,
+      "price": 147.61,
+      "changePct": -1.9788802709395197,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 24589329,
+      "volume": 38141748,
       "ohlc": [
         {
           "d": "06-22",
@@ -6170,11 +6172,11 @@
           "o": 150.47000122070312,
           "h": 150.89999389648438,
           "l": 144.39999389648438,
-          "c": 147.60000610351562
+          "c": 147.61000061035156
         }
       ],
-      "relVolume": 0.8448798762091793,
-      "marketCap": 414756000000
+      "relVolume": 1.310535774629788,
+      "marketCap": 414784100000.00006
     }
   ],
   "compute": [
@@ -6184,13 +6186,13 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.04/hr",
-      "trend": "↓ 10% vs 7d ago",
+      "rate": "$3.59 – $4.94/hr",
+      "trend": "↓ 11% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
@@ -6200,7 +6202,7 @@
       "rate": "$5.98 – $8.76/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6224,11 +6226,11 @@
       "rate": "$0.60 – $1.59/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-18T20:15:27.707Z",
+    "updatedAt": "2026-09-18T20:30:28.238Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6237,33 +6239,33 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 338,
+        "rawStoryHits": 337,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.8875739644970414,
-        "estimatedRelevantDiscussions": 24,
+        "storyCoverage": 0.8902077151335311,
+        "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 2448,
+        "rawCommentHits": 2449,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 50,
-        "commentCoverage": 0.12254901960784313,
+        "validatedCommentCount": 51,
+        "commentCoverage": 0.12249897917517354,
         "limited": false,
         "points": 73,
         "themes": [
+          {
+            "id": "coding",
+            "label": "Coding",
+            "count": 18
+          },
           {
             "id": "reasoning",
             "label": "Reasoning",
             "count": 18
           },
           {
-            "id": "coding",
-            "label": "Coding",
-            "count": 17
-          },
-          {
             "id": "writing",
             "label": "Writing",
-            "count": 3
+            "count": 4
           },
           {
             "id": "speed",
@@ -6315,7 +6317,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 23,
+            "discussions": 22,
             "isEstimated": true
           },
           {
@@ -6330,16 +6332,16 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 837,
+        "rawStoryHits": 835,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 28,
-        "storyCoverage": 0.35842293906810035,
+        "storyCoverage": 0.3592814371257485,
         "estimatedRelevantDiscussions": 81,
         "isEstimated": true,
-        "rawCommentHits": 6246,
+        "rawCommentHits": 6245,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.04803073967339097,
+        "commentCoverage": 0.04803843074459568,
         "limited": false,
         "points": 186,
         "themes": [
@@ -6419,15 +6421,15 @@
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
         "rawStoryHits": 115,
-        "fetchedStoryCount": 115,
+        "fetchedStoryCount": 111,
         "validatedStoryCount": 18,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 23,
+        "storyCoverage": 0.9652173913043478,
+        "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 1383,
+        "rawCommentHits": 1279,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.21691973969631237,
+        "commentCoverage": 0.23455824863174354,
         "limited": false,
         "points": 172,
         "themes": [
@@ -6501,8 +6503,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 18,
-            "isEstimated": false
+            "discussions": 19,
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6521,16 +6523,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 527,
+        "rawStoryHits": 526,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.5692599620493358,
+        "storyCoverage": 0.5703422053231939,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 10366,
+        "rawCommentHits": 10363,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 19,
-        "commentCoverage": 0.02894076789504148,
+        "commentCoverage": 0.028949146000192993,
         "limited": false,
         "points": 100,
         "themes": [
@@ -6615,10 +6617,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 481,
+        "rawCommentHits": 480,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.6237006237006237,
+        "commentCoverage": 0.625,
         "limited": false,
         "points": 41,
         "themes": [
@@ -6708,7 +6710,7 @@
         "validatedCommentCount": 58,
         "commentCoverage": 0.34522439585730724,
         "limited": false,
-        "points": 616,
+        "points": 620,
         "themes": [
           {
             "id": "reasoning",
@@ -6771,8 +6773,8 @@
           },
           {
             "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-            "points": 108,
-            "comments": 56,
+            "points": 112,
+            "comments": 57,
             "url": "https://cactuscompute.com/needle",
             "date": "SEP 18 2026"
           }
@@ -6883,6 +6885,17 @@
       {
         "modelId": "gpt",
         "themes": [
+          "speed"
+        ],
+        "excerpt": "Look, these ai ceos have been telling everyone to slow down ai development even before chatgpt 4 released, they have been saying this for years. All of this, while ignoring the…",
+        "source": "Hacker News",
+        "author": "peacefullmind",
+        "publishedAt": "2026-09-12T17:28:11.000Z",
+        "url": "https://news.ycombinator.com/item?id=49674757"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
           "coding",
           "local"
         ],
@@ -6891,17 +6904,6 @@
         "author": "djwide",
         "publishedAt": "2026-09-18T17:49:43.000Z",
         "url": "https://news.ycombinator.com/item?id=49757806"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
-          "speed"
-        ],
-        "excerpt": "Look, these ai ceos have been telling everyone to slow down ai development even before chatgpt 4 released, they have been saying this for years. All of this, while ignoring the…",
-        "source": "Hacker News",
-        "author": "peacefullmind",
-        "publishedAt": "2026-09-12T17:28:11.000Z",
-        "url": "https://news.ycombinator.com/item?id=49674757"
       },
       {
         "modelId": "gpt",
