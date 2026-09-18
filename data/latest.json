@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-18T14:00:36.094Z",
+  "updatedAt": "2026-09-18T14:15:25.187Z",
   "build": {
-    "sha": "9eee840ddc3db9e08959a3384ca7e713c8c5d1d0",
-    "shortSha": "9eee840",
+    "sha": "d401baf35e2898245142545b325f78298b926572",
+    "shortSha": "d401baf",
     "ref": "main",
-    "builtAt": "2026-09-18T14:00:56.429Z"
+    "builtAt": "2026-09-18T14:15:44.174Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
     "estimatedDatasets": 4,
-    "buildSha": "9eee840",
-    "lastSuccessfulUpdate": "2026-09-18T14:00:36.094Z"
+    "buildSha": "d401baf",
+    "lastSuccessfulUpdate": "2026-09-18T14:15:25.187Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
+    "NEW EXPERTS JOIN GOOGLE’S AI & ECONOMY TEAM",
     "SECURITY RESEARCHERS HACKED INTO OPENAI USING ANTHROPIC’S CLAUDE",
     "MICROSOFT EXEC CALLED AI SCRAPING ‘THE LARGEST THEFT OF LABOR IN HUMAN HISTORY,’ NEW UNREDACTED FILINGS REVEAL",
     "ANTHROPIC SAYS CLAUDE NOW LEADS A QUARTER OF WORK BUILDING ITS NEXT AI MODELS",
     "GOOGLE DEEPMIND LAUNCHES INSTITUTE TO WIDEN THE AGI DEBATE",
-    "HOW COOLEY IS ACCELERATING IPO WORK WITH CHATGPT",
     "MAKING GLOBAL DATA EASIER TO EXPLORE",
+    "HOW COOLEY IS ACCELERATING IPO WORK WITH CHATGPT",
     "ANTHROPIC LAUNCHES CLAUDE CODE PROJECTS, AN ‘ALWAYS-ON’ CONVERSATION THAT REMEMBERS AND DELEGATES YOUR LONG-R…",
-    "INSIDE THE SUDDENLY EXPLOSIVE WORLD OF AI SAFETY",
-    "INTRODUCING ASTRA FOR LAW"
+    "INSIDE THE SUDDENLY EXPLOSIVE WORLD OF AI SAFETY"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 83,
+      "significance": 82,
       "impact": "high",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -58,6 +58,32 @@
       "entityIds": [
         "gpt",
         "claude"
+      ]
+    },
+    {
+      "id": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "clusterId": "2gkb71",
+      "title": "New experts join Google’s AI & Economy team",
+      "desc": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "dateISO": "2026-09-18T14:00:00.000Z",
+      "date": "SEP 18 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 75,
+      "impact": "high",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/"
+        }
+      ],
+      "sourceName": "Google",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -166,32 +192,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/cooley-gopublic",
-      "clusterId": "c9xyz2",
-      "title": "How Cooley is accelerating IPO work with ChatGPT",
-      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
-      "url": "https://openai.com/index/cooley-gopublic",
-      "dateISO": "2026-09-17T12:00:00.000Z",
-      "date": "SEP 17 2026",
-      "category": "capital",
-      "catConfidence": 0.55,
-      "family": "market",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/cooley-gopublic"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
       "clusterId": "91xz1l",
       "title": "Making global data easier to explore",
@@ -218,6 +218,32 @@
       ]
     },
     {
+      "id": "https://openai.com/index/cooley-gopublic",
+      "clusterId": "c9xyz2",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "dateISO": "2026-09-17T12:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 65,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/cooley-gopublic"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
       "clusterId": "7t6jvw",
       "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work",
@@ -228,7 +254,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 65,
+      "significance": 64,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -254,7 +280,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 64,
+      "significance": 63,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -265,32 +291,6 @@
         }
       ],
       "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/astra-for-law",
-      "clusterId": "sit0th",
-      "title": "Introducing Astra for Law",
-      "desc": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
-      "url": "https://openai.com/index/astra-for-law",
-      "dateISO": "2026-09-17T00:00:00.000Z",
-      "date": "SEP 17 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/astra-for-law"
-        }
-      ],
-      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -331,6 +331,32 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/astra-for-law",
+      "clusterId": "sit0th",
+      "title": "Introducing Astra for Law",
+      "desc": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
+      "url": "https://openai.com/index/astra-for-law",
+      "dateISO": "2026-09-17T00:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 56,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/astra-for-law"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -1083,32 +1109,6 @@
       ],
       "sourceName": "Wired",
       "entityIds": []
-    },
-    {
-      "id": "https://openai.com/index/unlocking-new-ways-of-working",
-      "clusterId": "1492u19",
-      "title": "How workers are unlocking new ways of working",
-      "desc": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
-      "url": "https://openai.com/index/unlocking-new-ways-of-working",
-      "dateISO": "2026-09-16T09:00:00.000Z",
-      "date": "SEP 16 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/unlocking-new-ways-of-working"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1163,7 +1163,7 @@
       "category": "research",
       "title": "Researchers used Claude to hack OpenAI",
       "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
-      "significance": 83,
+      "significance": 82,
       "impact": "high",
       "verification": "corroborated",
       "date": "SEP 18 2026",
@@ -1398,6 +1398,18 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
+      "date": "SEP 18 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Trump’s Anti-Bias AI Order Is Just More Bias",
+      "p": "The Trump administration says it wants AI models free from ideological bias, as it pressures their developers to reflect the president’s worldview.",
+      "url": "https://www.wired.com/story/trump-ai-order-bias-openai-google/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "SEP 17 2026",
       "verification": "analysis",
       "impact": "emerging",
@@ -1478,18 +1490,6 @@
       "url": "https://www.wired.com/story/inside-the-surprising-leftist-split-over-ai-doom/",
       "sourceName": "Wired",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 18 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Napster Is Back, and It Wants to Digitally Clone Teachers",
-      "p": "Once the music industry’s biggest headache, Napster’s next act is bringing AI to the classroom.",
-      "url": "https://www.wired.com/story/napster-is-back-and-it-wants-to-digitally-clone-teachers/",
-      "sourceName": "Wired",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1506,18 +1506,6 @@
       "impact": "emerging"
     },
     {
-      "name": "I Trained a Fly’s Brain to Generate WIRED Story Ideas",
-      "org": "Wired",
-      "date": "SEP 16 2026",
-      "lic": "open weights",
-      "licClass": "lic-open",
-      "desc": "I used an open-source map of a fruit fly’s brain to vibe code a website called PitchFly. Its headline suggestions were delightfully bananas.",
-      "url": "https://www.wired.com/story/i-trained-a-fly-on-wired-story-ideas/",
-      "sourceName": "Wired",
-      "verification": "single",
-      "impact": "emerging"
-    },
-    {
       "name": "The Hugging Face incident and the road ahead",
       "org": "OpenAI",
       "date": "AUG 26 2026",
@@ -1531,18 +1519,29 @@
     },
     {
       "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
-      "org": "The Information",
+      "org": "theinformation.com",
       "date": "JUL 28 2026",
       "lic": "open weights",
       "licClass": "lic-open",
       "desc": "Open-weight coverage — confirm exact license on the model card.",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUnMyMUZTeWhKa1pYUFAtNFBJVWVQdEpXZEl5MnhMM2pMTlpPdG9kQkRLck1nODFuaDRoMFJNQnBQRkszd3JJdUYwc1BXbUg3ekVvMHZ5STlZNHZEd3dRV294WlBRWm1IXzFHOUZoMmVZOTROWkx5d0UtNkdOWTNoRU9xTzJla0h2Q2I5Z09LTVo4NjNLTGg3TjNhUlJvNWNDeEI1R0gwYzhSVzF6RUVnM0kxVTBfTTQ1ZWc?oc=5",
-      "sourceName": "The Information",
+      "sourceName": "theinformation.com",
       "verification": "single",
       "impact": "emerging"
     }
   ],
   "breakthroughs": [
+    {
+      "field": "Research",
+      "date": "SEP 18 2026",
+      "verification": "official",
+      "impact": "high",
+      "h": "New experts join Google’s AI & Economy team",
+      "p": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "sourceName": "Google",
+      "sourceCount": 1
+    },
     {
       "field": "Research",
       "date": "SEP 18 2026",
@@ -1597,17 +1596,6 @@
       "url": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
       "sourceName": "MIT Technology Review",
       "sourceCount": 1
-    },
-    {
-      "field": "Biology",
-      "date": "SEP 10 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecul…",
-      "p": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
-      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1616,11 +1604,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 219.49,
-      "changePct": 0.06839115427099315,
+      "price": 220.755,
+      "changePct": 0.6451210762044837,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 27621306,
+      "volume": 32914844,
       "ohlc": [
         {
           "d": "06-18",
@@ -2066,24 +2054,24 @@
         {
           "d": "09-18",
           "o": 219.36000061035156,
-          "h": 220.07000732421875,
+          "h": 220.88999938964844,
           "l": 218.0399932861328,
-          "c": 219.49000549316406
+          "c": 220.7550048828125
         }
       ],
-      "relVolume": 0.21280334503028683,
-      "marketCap": 5355556000000
+      "relVolume": 0.25358644896624605,
+      "marketCap": 5386422000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 493.89,
-      "changePct": -0.7754867607358111,
+      "price": 492.165,
+      "changePct": -1.1220475047871672,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 5886443,
+      "volume": 6645211,
       "ohlc": [
         {
           "d": "06-18",
@@ -2530,23 +2518,23 @@
           "d": "09-18",
           "o": 497.4700012207031,
           "h": 498.6499938964844,
-          "l": 492.8800048828125,
-          "c": 493.8900146484375
+          "l": 492.05999755859375,
+          "c": 492.1650085449219
         }
       ],
-      "relVolume": 0.2932567482336671,
-      "marketCap": 3669602700000
+      "relVolume": 0.33105781695101694,
+      "marketCap": 3656785950000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 359.305,
-      "changePct": 3.456667234312971,
+      "price": 360.815,
+      "changePct": 3.8914526701607675,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 8396123,
+      "volume": 9807897,
       "ohlc": [
         {
           "d": "06-18",
@@ -2994,22 +2982,22 @@
           "o": 352.0799865722656,
           "h": 363.2817077636719,
           "l": 351.3500061035156,
-          "c": 359.30499267578125
+          "c": 360.81500244140625
         }
       ],
-      "relVolume": 0.3277600625373902,
-      "marketCap": 1767780600000
+      "relVolume": 0.3828715865739796,
+      "marketCap": 1775209800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 354.735,
-      "changePct": 2.1319779649247725,
+      "price": 351.76,
+      "changePct": 1.2754508290742306,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 12464840,
+      "volume": 13946744,
       "ohlc": [
         {
           "d": "06-18",
@@ -3456,23 +3444,23 @@
           "d": "09-18",
           "o": 356.9200134277344,
           "h": 359.44000244140625,
-          "l": 354.6199951171875,
-          "c": 354.7349853515625
+          "l": 351.7200012207031,
+          "c": 351.760009765625
         }
       ],
-      "relVolume": 0.5202341981268407,
-      "marketCap": 4327767000000
+      "relVolume": 0.5820831379560689,
+      "marketCap": 4291472000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 252.395,
-      "changePct": 0.4797172735152036,
+      "price": 251.909,
+      "changePct": 0.286314143832446,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 13401087,
+      "volume": 14506285,
       "ohlc": [
         {
           "d": "06-18",
@@ -3919,23 +3907,23 @@
           "d": "09-18",
           "o": 252.86000061035156,
           "h": 254.49000549316406,
-          "l": 252.00999450683594,
-          "c": 252.39500427246094
+          "l": 251.8800048828125,
+          "c": 251.90919494628906
         }
       ],
-      "relVolume": 0.42322692566053577,
-      "marketCap": 2700626500000
+      "relVolume": 0.4581307772500503,
+      "marketCap": 2695426300000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 674.4,
-      "changePct": -1.1592931618815943,
+      "price": 670.73,
+      "changePct": -1.6971782813206264,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 5786496,
+      "volume": 6580889,
       "ohlc": [
         {
           "d": "06-18",
@@ -4383,22 +4371,22 @@
           "o": 686.8200073242188,
           "h": 690.1500244140625,
           "l": 668.4906005859375,
-          "c": 674.4000244140625
+          "c": 670.72998046875
         }
       ],
-      "relVolume": 0.3216459568549991,
-      "marketCap": 1699488000000
+      "relVolume": 0.3658027827827995,
+      "marketCap": 1690239600000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 432.21,
-      "changePct": 0.4532100695380303,
+      "price": 432.05,
+      "changePct": 0.4160224019701024,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 1424479,
+      "volume": 1768023,
       "ohlc": [
         {
           "d": "06-18",
@@ -4846,22 +4834,22 @@
           "o": 429.0400085449219,
           "h": 434.8164978027344,
           "l": 429.1099853515625,
-          "c": 432.2099914550781
+          "c": 432.04998779296875
         }
       ],
-      "relVolume": 0.14721623381320986,
-      "marketCap": 2243169900000
+      "relVolume": 0.18272062091131758,
+      "marketCap": 2242339500000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 551.925,
-      "changePct": 1.253846959187661,
+      "price": 549.19,
+      "changePct": 0.7521648505641461,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 5556012,
+      "volume": 6714950,
       "ohlc": [
         {
           "d": "06-18",
@@ -5309,22 +5297,22 @@
           "o": 547.5599975585938,
           "h": 552.9500122070312,
           "l": 544,
-          "c": 551.9246215820312
+          "c": 549.1900024414062
         }
       ],
-      "relVolume": 0.3049028000948292,
-      "marketCap": 894118499999.9999
+      "relVolume": 0.36850299414342036,
+      "marketCap": 889687800000.0001
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 174.551,
-      "changePct": 0.00011657993833043067,
+      "price": 173.655,
+      "changePct": -1.4667536503041325,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 7594876,
+      "volume": 8293345,
       "ohlc": [
         {
           "d": "06-18",
@@ -5772,22 +5760,22 @@
           "o": 177.0399932861328,
           "h": 177.75,
           "l": 172,
-          "c": 174.55079650878906
+          "c": 173.65499877929688
         }
       ],
-      "relVolume": 0.2689835637557235,
-      "marketCap": 418922400000
+      "relVolume": 0.29372085779355855,
+      "marketCap": 416772000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 145.18,
-      "changePct": -3.59246761547648,
+      "price": 145.075,
+      "changePct": -3.6622614541234193,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 6137863,
+      "volume": 7819972,
       "ohlc": [
         {
           "d": "06-18",
@@ -6234,12 +6222,12 @@
           "d": "09-18",
           "o": 150.47000122070312,
           "h": 150.89999389648438,
-          "l": 145.0500030517578,
-          "c": 145.1800994873047
+          "l": 144.39999389648438,
+          "c": 145.0749969482422
         }
       ],
-      "relVolume": 0.2109212788685185,
-      "marketCap": 407955800000
+      "relVolume": 0.2687252053289567,
+      "marketCap": 407660749999.99994
     }
   ],
   "compute": [
@@ -6257,7 +6245,7 @@
       "rate": "$3.59 – $4.74/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6265,7 +6253,7 @@
       "rate": "$5.63 – $8.76/hr",
       "trend": "↑ 5% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6286,14 +6274,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.40 – $1.59/hr",
-      "trend": "↓ 21% vs 7d ago",
+      "rate": "$0.43 – $1.59/hr",
+      "trend": "↓ 20% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-18T14:00:36.094Z",
+    "updatedAt": "2026-09-18T14:15:25.187Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6302,16 +6290,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 291,
-        "fetchedStoryCount": 291,
+        "rawStoryHits": 333,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 21,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 22,
+        "storyCoverage": 0.9009009009009009,
+        "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 2443,
+        "rawCommentHits": 2444,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
-        "commentCoverage": 0.12279983626688498,
+        "commentCoverage": 0.12274959083469722,
         "limited": false,
         "points": 78,
         "themes": [
@@ -6370,8 +6358,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": false
+            "discussions": 23,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6385,16 +6373,16 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 841,
+        "rawStoryHits": 840,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 29,
-        "storyCoverage": 0.356718192627824,
+        "storyCoverage": 0.35714285714285715,
         "estimatedRelevantDiscussions": 85,
         "isEstimated": true,
-        "rawCommentHits": 6228,
+        "rawCommentHits": 6229,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 34,
-        "commentCoverage": 0.04816955684007707,
+        "commentCoverage": 0.04816182372772516,
         "limited": false,
         "points": 188,
         "themes": [
@@ -6571,16 +6559,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 528,
+        "rawStoryHits": 770,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 14,
-        "storyCoverage": 0.5681818181818182,
-        "estimatedRelevantDiscussions": 25,
+        "storyCoverage": 0.38961038961038963,
+        "estimatedRelevantDiscussions": 36,
         "isEstimated": true,
-        "rawCommentHits": 10338,
+        "rawCommentHits": 10343,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 19,
-        "commentCoverage": 0.02901915264074289,
+        "commentCoverage": 0.02900512423861549,
         "limited": false,
         "points": 112,
         "themes": [
@@ -6644,7 +6632,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 25,
+            "discussions": 36,
             "isEstimated": true
           },
           {
@@ -6659,8 +6647,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 70,
-        "fetchedStoryCount": 70,
+        "rawStoryHits": 51,
+        "fetchedStoryCount": 51,
         "validatedStoryCount": 8,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
@@ -6753,10 +6741,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": false,
-        "rawCommentHits": 868,
+        "rawCommentHits": 866,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 55,
-        "commentCoverage": 0.3456221198156682,
+        "commentCoverage": 0.3464203233256351,
         "limited": false,
         "points": 513,
         "themes": [
@@ -6846,10 +6834,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4603,
+        "rawCommentHits": 4602,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.0651748859439496,
+        "commentCoverage": 0.0651890482398957,
         "limited": false,
         "points": 631,
         "themes": [
