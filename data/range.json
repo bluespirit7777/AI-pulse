@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T17:00:35.272Z",
+  "generatedAt": "2026-09-18T17:15:23.674Z",
   "historyDepthDays": 59.7,
   "ranges": {
     "24H": {
@@ -8,9 +8,9 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": 12,
-        "claude": 13,
+        "claude": 15,
         "gemini": 10,
-        "grok": 0,
+        "grok": 1,
         "llama": 0,
         "deepseek": 0,
         "qwen": 0,
@@ -20,7 +20,7 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 2,
+        "nvidia": 3,
         "amd": 0,
         "tsmc": 0,
         "broadcom": 0
@@ -30,9 +30,9 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": 1,
-        "claude": 3,
+        "claude": 5,
         "gemini": 5,
-        "grok": 0,
+        "grok": 1,
         "llama": 0,
         "deepseek": 0,
         "qwen": 0,
@@ -42,7 +42,7 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": -5,
+        "nvidia": -4,
         "amd": -2,
         "tsmc": 0,
         "broadcom": 0
@@ -51,18 +51,18 @@
         "general": 35,
         "product": 11,
         "research": 5,
-        "policy": 6,
+        "policy": 7,
         "analysis": 4,
         "capital": 3,
         "compute": 3,
         "market": 1,
-        "orggov": 1
+        "orggov": 2
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 13,
-          "delta": 3
+          "count": 15,
+          "delta": 5
         },
         {
           "id": "gpt",
@@ -75,28 +75,33 @@
           "delta": 5
         },
         {
+          "id": "nvidia",
+          "count": 3,
+          "delta": -4
+        },
+        {
           "id": "chatgpt",
           "count": 2,
           "delta": 1
         },
         {
-          "id": "nvidia",
-          "count": 2,
-          "delta": -5
+          "id": "grok",
+          "count": 1,
+          "delta": 1
         }
       ],
-      "eventCount": 69,
+      "eventCount": 71,
       "previousWindowComplete": true
     },
     "7D": {
       "entityActivity": {
-        "chatgpt": 35,
+        "chatgpt": 28,
         "copilot": 0,
         "perplexity": 7,
-        "gpt": 95,
-        "claude": 132,
+        "gpt": 88,
+        "claude": 134,
         "gemini": 48,
-        "grok": 0,
+        "grok": 1,
         "llama": 0,
         "deepseek": 0,
         "qwen": 0,
@@ -106,19 +111,19 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 20,
+        "nvidia": 21,
         "amd": 2,
         "tsmc": 0,
         "broadcom": 0
       },
       "entityDelta": {
-        "chatgpt": -14,
+        "chatgpt": -28,
         "copilot": 0,
         "perplexity": 7,
-        "gpt": -92,
-        "claude": -111,
+        "gpt": -106,
+        "claude": -109,
         "gemini": -8,
-        "grok": -6,
+        "grok": -5,
         "llama": -5,
         "deepseek": -5,
         "qwen": -5,
@@ -128,34 +133,34 @@
         "gcp": -2,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": 15,
+        "nvidia": 16,
         "amd": -4,
         "tsmc": 0,
         "broadcom": 0
       },
       "categoryCounts": {
-        "product": 43,
         "capital": 28,
-        "general": 278,
-        "policy": 42,
+        "general": 280,
+        "policy": 43,
         "opensource": 10,
         "analysis": 39,
-        "orggov": 27,
+        "orggov": 28,
         "research": 20,
         "compute": 14,
         "adoption": 10,
+        "product": 36,
         "market": 4
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 132,
-          "delta": -111
+          "count": 134,
+          "delta": -109
         },
         {
           "id": "gpt",
-          "count": 95,
-          "delta": -92
+          "count": 88,
+          "delta": -106
         },
         {
           "id": "gemini",
@@ -164,13 +169,13 @@
         },
         {
           "id": "chatgpt",
-          "count": 35,
-          "delta": -14
+          "count": 28,
+          "delta": -28
         },
         {
           "id": "nvidia",
-          "count": 20,
-          "delta": 15
+          "count": 21,
+          "delta": 16
         },
         {
           "id": "perplexity",
@@ -183,12 +188,12 @@
           "delta": -4
         },
         {
-          "id": "aws",
+          "id": "grok",
           "count": 1,
-          "delta": 1
+          "delta": -5
         }
       ],
-      "eventCount": 515,
+      "eventCount": 512,
       "previousWindowComplete": true
     },
     "30D": {
@@ -196,10 +201,10 @@
         "chatgpt": 309,
         "copilot": 1,
         "perplexity": 7,
-        "gpt": 852,
-        "claude": 1514,
+        "gpt": 846,
+        "claude": 1509,
         "gemini": 439,
-        "grok": 67,
+        "grok": 68,
         "llama": 12,
         "deepseek": 5,
         "qwen": 5,
@@ -209,7 +214,7 @@
         "gcp": 2,
         "oracle": 0,
         "coreweave": 5,
-        "nvidia": 96,
+        "nvidia": 97,
         "amd": 15,
         "tsmc": 0,
         "broadcom": 0
@@ -217,26 +222,26 @@
       "entityDelta": {},
       "categoryCounts": {
         "adoption": 233,
-        "general": 2641,
-        "capital": 337,
+        "general": 2644,
         "research": 272,
+        "capital": 329,
         "market": 69,
-        "product": 371,
+        "product": 373,
         "analysis": 215,
-        "policy": 245,
+        "policy": 246,
         "compute": 127,
-        "orggov": 98,
+        "orggov": 99,
         "opensource": 64
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 1514,
+          "count": 1509,
           "delta": null
         },
         {
           "id": "gpt",
-          "count": 852,
+          "count": 846,
           "delta": null
         },
         {
@@ -251,12 +256,12 @@
         },
         {
           "id": "nvidia",
-          "count": 96,
+          "count": 97,
           "delta": null
         },
         {
           "id": "grok",
-          "count": 67,
+          "count": 68,
           "delta": null
         },
         {
@@ -270,7 +275,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4672,
+      "eventCount": 4671,
       "previousWindowComplete": false
     }
   },
@@ -1222,17 +1227,17 @@
     {
       "date": "2026-09-18",
       "counts": {
-        "policy": 12,
-        "product": 32,
+        "policy": 13,
+        "product": 34,
         "capital": 12,
         "research": 19,
         "market": 8,
         "compute": 9,
         "adoption": 17,
-        "general": 185,
+        "general": 188,
         "analysis": 20,
         "opensource": 4,
-        "orggov": 4
+        "orggov": 5
       }
     }
   ]
