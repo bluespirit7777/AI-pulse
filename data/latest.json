@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-19T14:45:24.799Z",
+  "updatedAt": "2026-09-19T15:00:43.263Z",
   "build": {
-    "sha": "d0bf24aaa617d28d82de7a84c244924d21c58bab",
-    "shortSha": "d0bf24a",
+    "sha": "cca3d68f408738ae338fa7f4f3d242f552582dce",
+    "shortSha": "cca3d68",
     "ref": "main",
-    "builtAt": "2026-09-19T14:45:41.872Z"
+    "builtAt": "2026-09-19T15:01:03.832Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
-    "estimatedDatasets": 4,
-    "buildSha": "d0bf24a",
-    "lastSuccessfulUpdate": "2026-09-19T14:45:24.799Z"
+    "estimatedDatasets": 5,
+    "buildSha": "cca3d68",
+    "lastSuccessfulUpdate": "2026-09-19T15:00:43.263Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
@@ -311,12 +311,39 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPOTlkTk8zR3FVNjBtYTRfeEZQWU9zWHhWUE00dUhyMDhMUHZDRF90dlhuUDhYS3QweW9ZejB1U0tNQ0dFQjIxZ1lFLXhfdEliaHN3MzJZV0JYRnJMc0pyU2k4dmdyX2tPR1VOX0RRdmVJUkZ1bWZCcVJ5czg4XzlXQmRXaXpVYzB1a0QwRGdzUkFVbGtVY3ZJVEpKSEwzUXdMT0NaV0F1cTVQOEFhSzRTR0ZURUlzM3NL?oc=5"
         }
       ],
-      "sourceName": "reuters.com",
+      "sourceName": "Reuters",
       "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQmNxc081M1NZa0l1MDZtRG16czdBY2M3X09PVUNCcFUzdS14ZEk1dEdDS0diT2toWlY4VmtMMkNaU1pVVDRaOEpDY0tMRi0zc3dweFpEMWZQOFpPQklqTUcwelZXelBDVXJQWE1GM25BYXgxbHc3ZHBBTk1xV3ViUzloX2s2d0tCd0RLS3lKZmFNdw?oc=5",
+      "clusterId": "92hks0",
+      "title": "Exclusive | Hackers Used Anthropic’s Claude to Break Into OpenAI",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQmNxc081M1NZa0l1MDZtRG16czdBY2M3X09PVUNCcFUzdS14ZEk1dEdDS0diT2toWlY4VmtMMkNaU1pVVDRaOEpDY0tMRi0zc3dweFpEMWZQOFpPQklqTUcwelZXelBDVXJQWE1GM25BYXgxbHc3ZHBBTk1xV3ViUzloX2s2d0tCd0RLS3lKZmFNdw?oc=5",
+      "dateISO": "2026-09-19T14:58:13.000Z",
+      "date": "SEP 19 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "WSJ",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQmNxc081M1NZa0l1MDZtRG16czdBY2M3X09PVUNCcFUzdS14ZEk1dEdDS0diT2toWlY4VmtMMkNaU1pVVDRaOEpDY0tMRi0zc3dweFpEMWZQOFpPQklqTUcwelZXelBDVXJQWE1GM25BYXgxbHc3ZHBBTk1xV3ViUzloX2s2d0tCd0RLS3lKZmFNdw?oc=5"
+        }
+      ],
+      "sourceName": "WSJ",
+      "entityIds": [
+        "gpt",
         "claude"
       ]
     },
@@ -345,32 +372,6 @@
       "entityIds": []
     },
     {
-      "id": "https://openai.com/index/cooley-gopublic",
-      "clusterId": "c9xyz2",
-      "title": "How Cooley is accelerating IPO work with ChatGPT",
-      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
-      "url": "https://openai.com/index/cooley-gopublic",
-      "dateISO": "2026-09-17T12:00:00.000Z",
-      "date": "SEP 17 2026",
-      "category": "capital",
-      "catConfidence": 0.55,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/cooley-gopublic"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
       "clusterId": "91xz1l",
       "title": "Making global data easier to explore",
@@ -397,6 +398,32 @@
       ]
     },
     {
+      "id": "https://openai.com/index/cooley-gopublic",
+      "clusterId": "c9xyz2",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "dateISO": "2026-09-17T12:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/cooley-gopublic"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
       "clusterId": "7t6jvw",
       "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work",
@@ -407,7 +434,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 53,
+      "significance": 52,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -882,7 +909,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "reuters.com",
+          "name": "Reuters",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOako0N2w1bExjVVA0azZSLUI0QXdveUdDUWFnM0RKeVJVTEN4TlFlX0t5UHR6Z1FROWp2LVJUSjY4anRUakt0OTBUWkdFdjNKLTFDNmhPZ0RVY3BZSEZzLVFFUjZVdmtLSHk1bVZQRm1ObVJ6SGVSWGpJbXBBdS1EQ3lSMk4xNzNfVTJQT2NYaW1aUkV5c1plNDJNRXk2S3ZPMzA5Yw?oc=5"
         },
         {
@@ -1102,32 +1129,6 @@
       "entityIds": [
         "gpt"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM2lTT1pubVg3a2k2VUUzWmJEUUd4STN4UkZCLXRjb1hwcmNEUlRQYWdFQmkxeWkyR25FUEFwWXBWQWlwSUt1TldyVW1ncHhhNGpfRXhRVk9hZkk4YTBmV0RJcUpHb0dTLUZYRlF2TDRIUmd6OFpZdUpyMXlna2FGai1nNl83RDBxR1RIdjNGNnk1ZU5QSWNyUmgzREpLTTU4aU9KMkpQTXZpa3E0RjE1SEhsSk5oQmd3bEFNMkx3eVA4dXI1VDZkc3B5ZjhsbkU?oc=5",
-      "clusterId": "1w1h2xq",
-      "title": "Anthropic says its chatbot Claude is taking over the work of building its own successor",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM2lTT1pubVg3a2k2VUUzWmJEUUd4STN4UkZCLXRjb1hwcmNEUlRQYWdFQmkxeWkyR25FUEFwWXBWQWlwSUt1TldyVW1ncHhhNGpfRXhRVk9hZkk4YTBmV0RJcUpHb0dTLUZYRlF2TDRIUmd6OFpZdUpyMXlna2FGai1nNl83RDBxR1RIdjNGNnk1ZU5QSWNyUmgzREpLTTU4aU9KMkpQTXZpa3E0RjE1SEhsSk5oQmd3bEFNMkx3eVA4dXI1VDZkc3B5ZjhsbkU?oc=5",
-      "dateISO": "2026-09-18T06:28:57.000Z",
-      "date": "SEP 18 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Washington Post",
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOM2lTT1pubVg3a2k2VUUzWmJEUUd4STN4UkZCLXRjb1hwcmNEUlRQYWdFQmkxeWkyR25FUEFwWXBWQWlwSUt1TldyVW1ncHhhNGpfRXhRVk9hZkk4YTBmV0RJcUpHb0dTLUZYRlF2TDRIUmd6OFpZdUpyMXlna2FGai1nNl83RDBxR1RIdjNGNnk1ZU5QSWNyUmgzREpLTTU4aU9KMkpQTXZpa3E0RjE1SEhsSk5oQmd3bEFNMkx3eVA4dXI1VDZkc3B5ZjhsbkU?oc=5"
-        }
-      ],
-      "sourceName": "The Washington Post",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1219,7 +1220,7 @@
     "copilot": 0,
     "perplexity": 1,
     "gpt": 84,
-    "claude": 77,
+    "claude": 76,
     "gemini": 25,
     "grok": 0,
     "llama": 0,
@@ -1415,6 +1416,30 @@
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 19 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "AI safety conversations have gotten unbelievable",
+      "p": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
+      "url": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "SEP 19 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Exclusive | Hackers Used Anthropic’s Claude to Break Into OpenAI",
+      "p": "Exclusive | Hackers Used Anthropic’s Claude to Break Into OpenAI",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPQmNxc081M1NZa0l1MDZtRG16czdBY2M3X09PVUNCcFUzdS14ZEk1dEdDS0diT2toWlY4VmtMMkNaU1pVVDRaOEpDY0tMRi0zc3dweFpEMWZQOFpPQklqTUcwelZXelBDVXJQWE1GM25BYXgxbHc3ZHBBTk1xV3ViUzloX2s2d0tCd0RLS3lKZmFNdw?oc=5",
+      "sourceName": "WSJ",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 19 2026",
       "verification": "official",
       "impact": "emerging",
       "h": "Measurements for understanding the pace of AI development inside frontier labs",
@@ -1481,30 +1506,6 @@
       "p": "For one day only, WIRED is bringing the technologies, people, and cultural forces transforming our world off the page and into real life.",
       "url": "https://www.wired.com/story/join-the-wired-world-fair-in-miami-on-november-4/",
       "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 19 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "India forces caller-ID apps to feed spam reports to telcos",
-      "p": "Truecaller says the one-way sharing requirement would hand a commercially valuable proprietary asset to telecom operators.",
-      "url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 19 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Tilly Norwood’s press tour is going about as well as you’d expect for an AI",
-      "p": "In one particularly odd interview, Norwood seems to malfunction and begin speaking Chinese.",
-      "url": "https://techcrunch.com/2026/09/18/tilly-norwoods-press-tour-is-going-about-as-well-as-youd-expect-for-an-ai/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -6180,18 +6181,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.90/hr",
-      "trend": "↓ 20% vs 7d ago",
+      "rate": "$1.99 – $3.49/hr",
+      "trend": "↓ 26% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.92/hr",
-      "trend": "↑ 11% vs 7d ago",
+      "rate": "$3.59 – $5.80/hr",
+      "trend": "↑ 9% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6199,7 +6200,7 @@
       "rate": "$5.98 – $8.76/hr",
       "trend": "↑ 15% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6220,14 +6221,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.43 – $1.59/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$0.57 – $1.59/hr",
+      "trend": "↑ 6% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-19T14:45:24.799Z",
+    "updatedAt": "2026-09-19T15:00:43.263Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6237,10 +6238,10 @@
         "version": "GPT-6 Astra",
         "org": "OpenAI",
         "rawStoryHits": 339,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 270,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.8849557522123894,
-        "estimatedRelevantDiscussions": 25,
+        "storyCoverage": 0.7964601769911505,
+        "estimatedRelevantDiscussions": 27,
         "isEstimated": true,
         "rawCommentHits": 2443,
         "fetchedCommentCount": 300,
@@ -6309,7 +6310,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 24,
+            "discussions": 26,
             "isEstimated": true
           },
           {
@@ -6330,10 +6331,10 @@
         "storyCoverage": 0.3640776699029126,
         "estimatedRelevantDiscussions": 85,
         "isEstimated": true,
-        "rawCommentHits": 6186,
+        "rawCommentHits": 6184,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.04849660523763336,
+        "commentCoverage": 0.04851228978007762,
         "limited": false,
         "points": 200,
         "themes": [
@@ -6418,10 +6419,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 24,
         "isEstimated": true,
-        "rawCommentHits": 1391,
+        "rawCommentHits": 1390,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.21567217828900073,
+        "commentCoverage": 0.2158273381294964,
         "limited": false,
         "points": 172,
         "themes": [
@@ -6521,10 +6522,10 @@
         "storyCoverage": 0.5736137667304015,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 10427,
+        "rawCommentHits": 10423,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 21,
-        "commentCoverage": 0.028771458712956745,
+        "commentCoverage": 0.02878250023985417,
         "limited": false,
         "points": 100,
         "themes": [
@@ -6691,18 +6692,18 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 113,
+        "rawStoryHits": 118,
         "fetchedStoryCount": 113,
         "validatedStoryCount": 18,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 18,
-        "isEstimated": false,
+        "storyCoverage": 0.9576271186440678,
+        "estimatedRelevantDiscussions": 19,
+        "isEstimated": true,
         "rawCommentHits": 860,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 59,
         "commentCoverage": 0.3488372093023256,
         "limited": false,
-        "points": 718,
+        "points": 719,
         "themes": [
           {
             "id": "reasoning",
@@ -6765,7 +6766,7 @@
           },
           {
             "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-            "points": 210,
+            "points": 211,
             "comments": 89,
             "url": "https://cactuscompute.com/needle",
             "date": "SEP 18 2026"
@@ -6774,8 +6775,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 18,
-            "isEstimated": false
+            "discussions": 19,
+            "isEstimated": true
           }
         ]
       },
