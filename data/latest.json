@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-20T11:30:27.617Z",
+  "updatedAt": "2026-09-20T11:45:28.995Z",
   "build": {
-    "sha": "188642f65aa700feaf8de754eea70be75fd902a8",
-    "shortSha": "188642f",
+    "sha": "c15f3834556cbc894dd705627c987eaa28585f4a",
+    "shortSha": "c15f383",
     "ref": "main",
-    "builtAt": "2026-09-20T11:30:45.114Z"
+    "builtAt": "2026-09-20T11:45:45.424Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.5,
     "estimatedDatasets": 4,
-    "buildSha": "188642f",
-    "lastSuccessfulUpdate": "2026-09-20T11:30:27.617Z"
+    "buildSha": "c15f383",
+    "lastSuccessfulUpdate": "2026-09-20T11:45:28.995Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
@@ -26,7 +26,7 @@
     "INTRODUCING GEMINI 3.7 FLASH",
     "SECURITY RESEARCHERS HACKED INTO OPENAI USING ANTHROPIC’S CLAUDE",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
-    "GEMINI WENT ROGUE, HACKED THREE COMPANIES, AND GOOGLE HID IT"
+    "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?"
   ],
   "signals": [
     {
@@ -245,11 +245,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "forbes.com",
+          "name": "Forbes",
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5"
         }
       ],
-      "sourceName": "forbes.com",
+      "sourceName": "Forbes",
       "entityIds": [
         "gpt",
         "claude"
@@ -288,33 +288,6 @@
       "entityIds": [
         "chatgpt",
         "nvidia"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
-      "clusterId": "2guqpr",
-      "title": "Gemini went rogue, hacked three companies, and Google hid it",
-      "desc": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party Irregular, which was also involved in similar incidents involving Meta and OpenAI. According to WSJ, Google didn't […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
-      "dateISO": "2026-09-19T15:25:03.000Z",
-      "date": "SEP 19 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt",
-        "gemini"
       ]
     },
     {
@@ -405,6 +378,33 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "clusterId": "2guqpr",
+      "title": "Gemini went rogue, hacked three companies, and Google hid it",
+      "desc": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party Irregular, which was also involved in similar incidents involving Meta and OpenAI. According to WSJ, Google didn't […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "dateISO": "2026-09-19T15:25:03.000Z",
+      "date": "SEP 19 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "gemini"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
       "clusterId": "1rycbza",
       "title": "How Claude's text watermarking works",
@@ -421,19 +421,19 @@
       "sourceCount": 3,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PbzNJUlpWVXZ6VzVsNU13YVBoQUNmTDNEUG83cTFoZk1oU0ZQMFJCWFhqNTFZSGVZWkg3RjBRNktiaXZjd1ZoNTRLM3NpS2V4a3lVUXRJVXFDbXVwRmhfdDlPSy04ZVBzUHB3aHFEUjRtcHVzd0dvN0NYMA?oc=5"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -594,7 +594,7 @@
       "family": "product",
       "significance": 45,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
         {
@@ -602,11 +602,11 @@
           "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -1312,9 +1312,9 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
           "isVideo": false,
           "videoUrl": "https://www.youtube.com/watch?v=ROF2Nv_KjOM",
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 2,
-          "verification": "official",
+          "verification": "corroborated",
           "impact": "notable"
         },
         {
@@ -1323,9 +1323,9 @@
           "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9iczRhdUZaZWkyQ2RXakhsM1ViSF8wclZFX25KdEF6WU1UTEtMQXJhYnpiZnJRUWd2LXNoSkF0TnFQWEpBZzN2b0Z5TmhNZExyTVJUZDR3cw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 1,
-          "verification": "official",
+          "verification": "single",
           "impact": "emerging"
         }
       ]
@@ -1447,12 +1447,12 @@
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 20 2026",
-      "verification": "official",
+      "verification": "single",
       "impact": "emerging",
       "h": "Measurements for understanding the pace of AI development inside frontier labs",
       "p": "Measurements for understanding the pace of AI development inside frontier labs",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "sourceCount": 1
     },
     {
@@ -1631,7 +1631,7 @@
       "h": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
       "p": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5",
-      "sourceName": "forbes.com",
+      "sourceName": "Forbes",
       "sourceCount": 1
     },
     {
@@ -6215,7 +6215,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6223,7 +6223,7 @@
       "rate": "$3.59 – $4.74/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6231,7 +6231,7 @@
       "rate": "$5.98 – $9.39/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6252,14 +6252,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.27 – $1.59/hr",
-      "trend": "↓ 20% vs 7d ago",
+      "rate": "$0.44 – $1.59/hr",
+      "trend": "↓ 12% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-20T11:30:27.617Z",
+    "updatedAt": "2026-09-20T11:45:28.995Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6362,10 +6362,10 @@
         "storyCoverage": 0.37267080745341613,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
-        "rawCommentHits": 6030,
+        "rawCommentHits": 6033,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.04975124378109453,
+        "commentCoverage": 0.04972650422675286,
         "limited": false,
         "points": 202,
         "themes": [
@@ -6458,7 +6458,7 @@
         "fetchedStoryCount": 124,
         "validatedStoryCount": 18,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 27,
+        "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
         "rawCommentHits": 1394,
         "fetchedCommentCount": 300,
@@ -6470,7 +6470,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
+            "count": 20
           },
           {
             "id": "reasoning",
@@ -6500,7 +6500,7 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 1
+            "count": 2
           },
           {
             "id": "context",
@@ -6537,7 +6537,7 @@
           },
           {
             "name": "Google AI forum",
-            "discussions": 3,
+            "discussions": 4,
             "isEstimated": true
           },
           {
@@ -6552,16 +6552,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 509,
+        "rawStoryHits": 508,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.5893909626719057,
+        "storyCoverage": 0.5905511811023622,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 10188,
+        "rawCommentHits": 10189,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 21,
-        "commentCoverage": 0.02944640753828033,
+        "commentCoverage": 0.029443517518892924,
         "limited": false,
         "points": 100,
         "themes": [
@@ -6734,10 +6734,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": false,
-        "rawCommentHits": 819,
+        "rawCommentHits": 850,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 60,
-        "commentCoverage": 0.3663003663003663,
+        "commentCoverage": 0.35294117647058826,
         "limited": false,
         "points": 742,
         "themes": [
@@ -7031,13 +7031,14 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding"
+          "coding",
+          "reliability"
         ],
-        "excerpt": "When choosing which Gemini model, such as latest; 3.8; 3.7; 3.6; 3.5; 3.1 pro or light; or 3 Flash preview… each model is different, and you should choose a model wisely. If you…",
+        "excerpt": "Kindly restore to allow use of gemini 3.1 pro preview model into AI studio to build apps , Flash do mistake in code changes in multiple files under Gemini Pro plan Gemini 3.1 Pro…",
         "source": "Google AI forum",
-        "author": "Fairy-Rider",
-        "publishedAt": "2026-09-20T09:59:58.756Z",
-        "url": "https://discuss.ai.google.dev/t/best-practices-for-building-production-ai-apps-with-google-ai-studio/183680"
+        "author": "Anshul_Jain",
+        "publishedAt": "2026-09-20T11:41:45.183Z",
+        "url": "https://discuss.ai.google.dev/t/gemini-3-1-pro-preview-model-not-available-in-ai-studio-to-build-app/183823"
       },
       {
         "modelId": "gemini",
@@ -7065,13 +7066,13 @@
       {
         "modelId": "gemini",
         "themes": [
-          "multimodal"
+          "coding"
         ],
-        "excerpt": "… series, I find the 3.6 as the best and balanced model. image Gemini 3.7 When it comes to 3.7, how I felt it in google antigravity is it's not accurate and make mistakes more than…",
+        "excerpt": "When choosing which Gemini model, such as latest; 3.8; 3.7; 3.6; 3.5; 3.1 pro or light; or 3 Flash preview… each model is different, and you should choose a model wisely. If you…",
         "source": "Google AI forum",
-        "author": "SuneraX",
-        "publishedAt": "2026-09-20T08:34:13.988Z",
-        "url": "https://discuss.ai.google.dev/t/gemini-3-6-flash-is-better-than-3-7-and-3-8/183802"
+        "author": "Fairy-Rider",
+        "publishedAt": "2026-09-20T09:59:58.756Z",
+        "url": "https://discuss.ai.google.dev/t/best-practices-for-building-production-ai-apps-with-google-ai-studio/183680"
       },
       {
         "modelId": "gemini",
