@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-20T13:30:27.087Z",
+  "updatedAt": "2026-09-20T13:45:21.948Z",
   "build": {
-    "sha": "019f561c8503bbb1435d02ac0bbb24b5d7207d80",
-    "shortSha": "019f561",
+    "sha": "e472268ffe28c533f9e18945e5d4666a11bac838",
+    "shortSha": "e472268",
     "ref": "main",
-    "builtAt": "2026-09-20T13:30:44.662Z"
+    "builtAt": "2026-09-20T13:45:37.637Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
     "estimatedDatasets": 5,
-    "buildSha": "019f561",
-    "lastSuccessfulUpdate": "2026-09-20T13:30:27.087Z"
+    "buildSha": "e472268",
+    "lastSuccessfulUpdate": "2026-09-20T13:45:21.948Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
     "OPENAI AND MICROSOFT KNEW THEY WERE STARTING A ‘DOOM LOOP’ FOR THE WEB",
     "ANTHROPIC IS OPERATING A LAB THAT CONDUCTS BIOLOGY EXPERIMENTS",
-    "HUMANS, NOT ROGUE AI, ARE STILL THE BIGGEST CYBERSECURITY RISK TO ENERGY SYSTEMS",
     "NEW EXPERTS JOIN GOOGLE’S AI & ECONOMY TEAM",
     "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
     "INTRODUCING THE AUSTRALIAN YOUTH SAFETY BLUEPRINT",
     "INTRODUCING GEMINI 3.7 FLASH",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
-    "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?"
+    "SECURITY RESEARCHERS HACKED INTO OPENAI USING ANTHROPIC’S CLAUDE",
+    "GEMINI WENT ROGUE, HACKED THREE COMPANIES, AND GOOGLE HID IT"
   ],
   "signals": [
     {
@@ -115,30 +115,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
-      "clusterId": "1v0v7bi",
-      "title": "Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems",
-      "desc": "Before recent high-profile hacks raised the specter of AI possibly \"killing all humans,\" our energy systems were already disturbingly vulnerable to cyberattack - and the risk is growing. \"We were always prey. We were just kind of surviving at the appetite of our predators,\" Joshua Corman, executive in residence for public safety and resilience at […]",
-      "url": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
-      "dateISO": "2026-09-20T12:00:00.000Z",
-      "date": "SEP 20 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
     },
     {
       "id": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
@@ -288,37 +264,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
-      "clusterId": "t9li44",
-      "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
-      "desc": "A week after an Anthropic researcher’s doomsday warning rattled the AI world, the company’s CEO Dario Amodei has outlined his plan to “pace the frontier” of AI development. The proposal leans on independent safety evaluators and coordination between AI labs in democratic countries, and it’s already picked up some industry support, along with some pointed pushback from Nvidia’s Jensen Huang. On […]",
-      "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
-      "dateISO": "2026-09-18T17:06:32.000Z",
-      "date": "SEP 18 2026",
-      "category": "orggov",
-      "catConfidence": 0.44,
-      "family": "market",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude",
-        "nvidia"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5",
       "clusterId": "161jsfd",
       "title": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
@@ -370,6 +315,37 @@
       "entityIds": [
         "gpt",
         "gemini"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
+      "clusterId": "t9li44",
+      "title": "Automattic’s 33-Hour Coup, and can AI labs police themselves?",
+      "desc": "A week after an Anthropic researcher’s doomsday warning rattled the AI world, the company’s CEO Dario Amodei has outlined his plan to “pace the frontier” of AI development. The proposal leans on independent safety evaluators and coordination between AI labs in democratic countries, and it’s already picked up some industry support, along with some pointed pushback from Nvidia’s Jensen Huang. On […]",
+      "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
+      "dateISO": "2026-09-18T17:06:32.000Z",
+      "date": "SEP 18 2026",
+      "category": "orggov",
+      "catConfidence": 0.44,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/dario-amodei-and-other-ai-leaders-want-to-pace-the-frontier-buthow/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude",
+        "nvidia"
       ]
     },
     {
@@ -848,6 +824,44 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5",
+      "clusterId": "1ycba4o",
+      "title": "Anthropic says three Claude models reached real-world systems during cyber tests",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5",
+      "dateISO": "2026-07-30T07:00:00.000Z",
+      "date": "JUL 30 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
+        },
+        {
+          "name": "DW.com",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNzM5WTF2azBoUmMtVHJaTzR2Z0pibmdjLVhiSTBzYzYtN245VjdlZWVCRmtoZERWTURCRDFmSWVXWGwwNU1NZmc1cFdaVmx5RVNWdlFMd2ZZYjRVRl9Zamo5eThfRGxqUUl4bnFTbi0tdGU4VkhNMWlrdFJKaW1Gb0gyMV9yT0dReHIzVjJ1cjY3ZWtUb1JOOFhobTdOc0QtenZVbGtoYzd1SWlzUFBuUzZoTE5rQQ?oc=5"
+        },
+        {
+          "name": "Axios",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5"
+        }
+      ],
+      "sourceName": "Axios",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
       "clusterId": "q59awe",
       "title": "Disrupting a Cambodia-based criminal scam operation",
@@ -1245,8 +1259,8 @@
     "copilot": 0,
     "perplexity": 1,
     "gpt": 80,
-    "claude": 77,
-    "gemini": 27,
+    "claude": 76,
+    "gemini": 26,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1450,18 +1464,6 @@
       "sourceCount": 1
     },
     {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 20 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems",
-      "p": "Before recent high-profile hacks raised the specter of AI possibly \"killing all humans,\" our energy systems were already disturbingly vulnerable to cyberattack - and the risk is growing. \"We were always prey. We were just kind of surviving at the appetite of…",
-      "url": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
       "org": "META",
       "logoKey": "meta",
       "date": "SEP 20 2026",
@@ -1531,6 +1533,18 @@
       "p": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
       "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
       "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "SEP 19 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Gemini went rogue, hacked three companies, and Google hid it",
+      "p": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -6214,10 +6228,10 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.04/hr",
-      "trend": "↑ 5% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.74/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6225,7 +6239,7 @@
       "rate": "$5.98 – $9.39/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6246,14 +6260,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.67 – $1.59/hr",
-      "trend": "→ 3% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$0.44 – $1.59/hr",
+      "trend": "↓ 12% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-20T13:30:27.087Z",
+    "updatedAt": "2026-09-20T13:45:21.948Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6268,10 +6282,10 @@
         "storyCoverage": 0.8875739644970414,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 2430,
+        "rawCommentHits": 2431,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.12345679012345678,
+        "commentCoverage": 0.12340600575894693,
         "limited": false,
         "points": 73,
         "themes": [
@@ -6356,22 +6370,22 @@
         "storyCoverage": 0.37267080745341613,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
-        "rawCommentHits": 6032,
+        "rawCommentHits": 6029,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 31,
-        "commentCoverage": 0.04973474801061008,
+        "validatedCommentCount": 32,
+        "commentCoverage": 0.049759495770442856,
         "limited": false,
         "points": 202,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
+            "count": 20
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 12
+            "count": 13
           },
           {
             "id": "writing",
@@ -6552,10 +6566,10 @@
         "storyCoverage": 0.5870841487279843,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 10203,
+        "rawCommentHits": 10206,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 21,
-        "commentCoverage": 0.029403116730373418,
+        "commentCoverage": 0.029394473838918283,
         "limited": false,
         "points": 100,
         "themes": [
@@ -6640,10 +6654,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 463,
+        "rawCommentHits": 464,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.6479481641468683,
+        "commentCoverage": 0.646551724137931,
         "limited": false,
         "points": 41,
         "themes": [
@@ -6723,15 +6737,15 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 112,
-        "fetchedStoryCount": 112,
+        "fetchedStoryCount": 107,
         "validatedStoryCount": 19,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 19,
-        "isEstimated": false,
-        "rawCommentHits": 845,
+        "storyCoverage": 0.9553571428571429,
+        "estimatedRelevantDiscussions": 20,
+        "isEstimated": true,
+        "rawCommentHits": 843,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 60,
-        "commentCoverage": 0.35502958579881655,
+        "commentCoverage": 0.35587188612099646,
         "limited": false,
         "points": 742,
         "themes": [
@@ -6805,8 +6819,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 19,
-            "isEstimated": false
+            "discussions": 20,
+            "isEstimated": true
           }
         ]
       },
@@ -6816,15 +6830,15 @@
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
         "rawStoryHits": 225,
-        "fetchedStoryCount": 224,
+        "fetchedStoryCount": 225,
         "validatedStoryCount": 12,
-        "storyCoverage": 0.9955555555555555,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
-        "isEstimated": true,
-        "rawCommentHits": 4511,
+        "isEstimated": false,
+        "rawCommentHits": 4512,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.06650410108623366,
+        "commentCoverage": 0.06648936170212766,
         "limited": false,
         "points": 633,
         "themes": [
@@ -6894,7 +6908,7 @@
           {
             "name": "Hacker News",
             "discussions": 12,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Qwen GitHub",
@@ -6990,6 +7004,17 @@
       {
         "modelId": "claude",
         "themes": [
+          "price"
+        ],
+        "excerpt": "…for whatever it's worth.I went so far as to cancel my $200 Claude Max account (after having it since launch) in favor of the equivalent OpenAI subscription, primarily because I…",
+        "source": "Hacker News",
+        "author": "redhale",
+        "publishedAt": "2026-09-19T08:33:07.000Z",
+        "url": "https://news.ycombinator.com/item?id=49764553"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "coding",
           "reasoning"
         ],
@@ -6998,17 +7023,6 @@
         "author": "gtadesktop1",
         "publishedAt": "2026-09-18T17:14:53.000Z",
         "url": "https://news.ycombinator.com/item?id=49757329"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "price"
-        ],
-        "excerpt": "…for whatever it's worth.I went so far as to cancel my $200 Claude Max account (after having it since launch) in favor of the equivalent OpenAI subscription, primarily because I…",
-        "source": "Hacker News",
-        "author": "redhale",
-        "publishedAt": "2026-09-19T08:33:07.000Z",
-        "url": "https://news.ycombinator.com/item?id=49764553"
       },
       {
         "modelId": "claude",
