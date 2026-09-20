@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-20T13:15:20.433Z",
+  "updatedAt": "2026-09-20T13:30:27.087Z",
   "build": {
-    "sha": "2c9405e5bfd387c05aeff4f1b7169699353904f7",
-    "shortSha": "2c9405e",
+    "sha": "019f561c8503bbb1435d02ac0bbb24b5d7207d80",
+    "shortSha": "019f561",
     "ref": "main",
-    "builtAt": "2026-09-20T13:15:34.939Z"
+    "builtAt": "2026-09-20T13:30:44.662Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
     "estimatedDatasets": 5,
-    "buildSha": "2c9405e",
-    "lastSuccessfulUpdate": "2026-09-20T13:15:20.433Z"
+    "buildSha": "019f561",
+    "lastSuccessfulUpdate": "2026-09-20T13:30:27.087Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
     "OPENAI AND MICROSOFT KNEW THEY WERE STARTING A ‘DOOM LOOP’ FOR THE WEB",
     "ANTHROPIC IS OPERATING A LAB THAT CONDUCTS BIOLOGY EXPERIMENTS",
-    "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
+    "HUMANS, NOT ROGUE AI, ARE STILL THE BIGGEST CYBERSECURITY RISK TO ENERGY SYSTEMS",
     "NEW EXPERTS JOIN GOOGLE’S AI & ECONOMY TEAM",
+    "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
     "INTRODUCING THE AUSTRALIAN YOUTH SAFETY BLUEPRINT",
     "INTRODUCING GEMINI 3.7 FLASH",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
-    "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?",
-    "SECURITY RESEARCHERS HACKED INTO OPENAI USING ANTHROPIC’S CLAUDE"
+    "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?"
   ],
   "signals": [
     {
@@ -117,30 +117,28 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
-      "clusterId": "1izvyyw",
-      "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
-      "desc": "Anthropic’s CEO says that safety hinges on understanding how AI “thinks.” So far the evidence is disturbing.",
-      "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
-      "dateISO": "2026-09-18T15:00:00.000Z",
-      "date": "SEP 18 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
+      "id": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
+      "clusterId": "1v0v7bi",
+      "title": "Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems",
+      "desc": "Before recent high-profile hacks raised the specter of AI possibly \"killing all humans,\" our energy systems were already disturbingly vulnerable to cyberattack - and the risk is growing. \"We were always prey. We were just kind of surviving at the appetite of our predators,\" Joshua Corman, executive in residence for public safety and resilience at […]",
+      "url": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
+      "dateISO": "2026-09-20T12:00:00.000Z",
+      "date": "SEP 20 2026",
+      "category": "capital",
+      "catConfidence": 0.6,
       "family": "market",
-      "significance": 52,
+      "significance": 53,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure"
         }
       ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "claude"
-      ]
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
@@ -166,6 +164,32 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
+      "clusterId": "1izvyyw",
+      "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
+      "desc": "Anthropic’s CEO says that safety hinges on understanding how AI “thinks.” So far the evidence is disturbing.",
+      "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
+      "dateISO": "2026-09-18T15:00:00.000Z",
+      "date": "SEP 18 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -322,32 +346,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-      "clusterId": "ivh1r5",
-      "title": "Google’s Gemini is the latest AI model to hack other companies",
-      "desc": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
-      "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
-      "dateISO": "2026-09-19T17:30:00.000Z",
-      "date": "SEP 19 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
       "clusterId": "2guqpr",
       "title": "Gemini went rogue, hacked three companies, and Google hid it",
@@ -406,6 +404,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+      "clusterId": "ivh1r5",
+      "title": "Google’s Gemini is the latest AI model to hack other companies",
+      "desc": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
+      "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+      "dateISO": "2026-09-19T17:30:00.000Z",
+      "date": "SEP 19 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -660,30 +684,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
-      "clusterId": "ta90k1",
-      "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
-      "desc": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
-      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
-      "dateISO": "2026-09-19T19:57:47.000Z",
-      "date": "SEP 19 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
       "clusterId": "1p0j2uu",
       "title": "Does AI need an antitrust exemption so it doesn’t kill everyone????",
@@ -758,7 +758,7 @@
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZy04cUpKZ1lLWHB3Zmp5N19XeEEwdi13bjBZYllISzltVk5HaDdlUnJqOEJFZUlYVjBxNzhZbUc5NDhDeWdISkUzLWw3b25ZZTYxZG4tZUFjLXU5T3F2YlZ2M1QtNDdZcDZ1anZlTVFGZzlmY2dYNGRLelY5TjRTMDU4d1QxaDRYY0JvNXBIZ0FQUWxiMVJzQlc3V0plQTd2M19oWWRVUjV3aXdvOHhXREJ0STBfdW9LZkw1QnV0Mk5MQkhRaldlQ1NsSDJHcTkt?oc=5"
         },
         {
-          "name": "aljazeera.com",
+          "name": "Al Jazeera",
           "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
         },
         {
@@ -902,6 +902,30 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "clusterId": "ta90k1",
+      "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+      "desc": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "dateISO": "2026-09-19T19:57:47.000Z",
+      "date": "SEP 19 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
       "clusterId": "91xz1l",
       "title": "Making global data easier to explore",
@@ -925,32 +949,6 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
-      "clusterId": "7t6jvw",
-      "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
-      "dateISO": "2026-09-17T18:33:58.000Z",
-      "date": "SEP 17 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "VentureBeat",
-          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5"
-        }
-      ],
-      "sourceName": "VentureBeat",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -1084,6 +1082,32 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
+      "clusterId": "7t6jvw",
+      "title": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and delegates your long-running dev work",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
+      "dateISO": "2026-09-17T18:33:58.000Z",
+      "date": "SEP 17 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "VentureBeat",
+          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5"
+        }
+      ],
+      "sourceName": "VentureBeat",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/model-misalignment-reporting-framework",
       "clusterId": "i5vctn",
       "title": "Our framework for reporting model misalignment",
@@ -1128,32 +1152,6 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/introducing-chatgpt-images-2-5"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/premium-seats-chatgpt-business",
-      "clusterId": "7tc6q8",
-      "title": "Premium seats are coming to ChatGPT Business",
-      "desc": "Premium seats are now available on ChatGPT Business, with 5x more usage, no five-hour usage limit, and flexible seat options for every teammate.",
-      "url": "https://openai.com/index/premium-seats-chatgpt-business",
-      "dateISO": "2026-08-10T00:00:00.000Z",
-      "date": "AUG 10 2026",
-      "category": "product",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/premium-seats-chatgpt-business"
         }
       ],
       "sourceName": "OpenAI",
@@ -1452,6 +1450,18 @@
       "sourceCount": 1
     },
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 20 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Humans, not rogue AI, are still the biggest cybersecurity risk to energy systems",
+      "p": "Before recent high-profile hacks raised the specter of AI possibly \"killing all humans,\" our energy systems were already disturbingly vulnerable to cyberattack - and the risk is growing. \"We were always prey. We were just kind of surviving at the appetite of…",
+      "url": "https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "META",
       "logoKey": "meta",
       "date": "SEP 20 2026",
@@ -1521,18 +1531,6 @@
       "p": "Google said Gemini had \"acted appropriately\" by ending each hack immediately.",
       "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "SEP 19 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Gemini went rogue, hacked three companies, and Google hid it",
-      "p": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
-      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -6211,15 +6209,15 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.74/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $5.04/hr",
+      "trend": "↑ 5% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6227,7 +6225,7 @@
       "rate": "$5.98 – $9.39/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6248,14 +6246,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.53 – $1.59/hr",
-      "trend": "↓ 9% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$0.67 – $1.59/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-20T13:15:20.433Z",
+    "updatedAt": "2026-09-20T13:30:27.087Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6265,15 +6263,15 @@
         "version": "GPT-6 Astra",
         "org": "OpenAI",
         "rawStoryHits": 338,
-        "fetchedStoryCount": 299,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 19,
-        "storyCoverage": 0.8846153846153846,
+        "storyCoverage": 0.8875739644970414,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 2433,
+        "rawCommentHits": 2430,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.12330456226880394,
+        "commentCoverage": 0.12345679012345678,
         "limited": false,
         "points": 73,
         "themes": [
@@ -6358,10 +6356,10 @@
         "storyCoverage": 0.37267080745341613,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
-        "rawCommentHits": 6034,
+        "rawCommentHits": 6032,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.04971826317533974,
+        "commentCoverage": 0.04973474801061008,
         "limited": false,
         "points": 202,
         "themes": [
@@ -6450,16 +6448,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 120,
-        "fetchedStoryCount": 120,
+        "rawStoryHits": 124,
+        "fetchedStoryCount": 124,
         "validatedStoryCount": 18,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1396,
+        "rawCommentHits": 1397,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.2148997134670487,
+        "commentCoverage": 0.2147458840372226,
         "limited": false,
         "points": 175,
         "themes": [
@@ -6548,16 +6546,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 510,
+        "rawStoryHits": 511,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.5882352941176471,
+        "storyCoverage": 0.5870841487279843,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 10200,
+        "rawCommentHits": 10203,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 21,
-        "commentCoverage": 0.029411764705882353,
+        "commentCoverage": 0.029403116730373418,
         "limited": false,
         "points": 100,
         "themes": [
@@ -6725,11 +6723,11 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 112,
-        "fetchedStoryCount": 107,
+        "fetchedStoryCount": 112,
         "validatedStoryCount": 19,
-        "storyCoverage": 0.9553571428571429,
-        "estimatedRelevantDiscussions": 20,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 19,
+        "isEstimated": false,
         "rawCommentHits": 845,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 60,
@@ -6807,8 +6805,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 20,
-            "isEstimated": true
+            "discussions": 19,
+            "isEstimated": false
           }
         ]
       },
@@ -6817,16 +6815,16 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 226,
-        "fetchedStoryCount": 226,
+        "rawStoryHits": 225,
+        "fetchedStoryCount": 224,
         "validatedStoryCount": 12,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9955555555555555,
         "estimatedRelevantDiscussions": 14,
-        "isEstimated": false,
-        "rawCommentHits": 4509,
+        "isEstimated": true,
+        "rawCommentHits": 4511,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.0665335994677312,
+        "commentCoverage": 0.06650410108623366,
         "limited": false,
         "points": 633,
         "themes": [
@@ -6838,7 +6836,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 15
+            "count": 14
           },
           {
             "id": "local",
@@ -6896,7 +6894,7 @@
           {
             "name": "Hacker News",
             "discussions": 12,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Qwen GitHub",
