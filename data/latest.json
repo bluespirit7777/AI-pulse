@@ -1,23 +1,24 @@
 {
-  "updatedAt": "2026-09-20T04:30:27.876Z",
+  "updatedAt": "2026-09-20T04:43:57.307Z",
   "build": {
-    "sha": "a58039c8bd075bf64c287113280a1a90f3f55282",
-    "shortSha": "a58039c",
+    "sha": "e1808af4950d83bdf7062e5dd596b9f627f55327",
+    "shortSha": "e1808af",
     "ref": "main",
-    "builtAt": "2026-09-20T04:30:45.016Z"
+    "builtAt": "2026-09-20T04:44:14.863Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 9,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.2,
     "estimatedDatasets": 4,
-    "buildSha": "a58039c",
-    "lastSuccessfulUpdate": "2026-09-20T04:30:27.876Z"
+    "buildSha": "e1808af",
+    "lastSuccessfulUpdate": "2026-09-20T04:43:57.307Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
+    "OPENAI AND MICROSOFT KNEW THEY WERE STARTING A ‘DOOM LOOP’ FOR THE WEB",
     "ANTHROPIC IS OPERATING A LAB THAT CONDUCTS BIOLOGY EXPERIMENTS",
     "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
     "NEW EXPERTS JOIN GOOGLE’S AI & ECONOMY TEAM",
@@ -25,8 +26,7 @@
     "SECURITY RESEARCHERS HACKED INTO OPENAI USING ANTHROPIC’S CLAUDE",
     "AUTOMATTIC’S 33-HOUR COUP, AND CAN AI LABS POLICE THEMSELVES?",
     "GOOGLE’S GEMINI IS THE LATEST AI MODEL TO HACK OTHER COMPANIES",
-    "INTRODUCING GEMINI 3.7 FLASH",
-    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK"
+    "GEMINI WENT ROGUE, HACKED THREE COMPANIES, AND GOOGLE HID IT"
   ],
   "signals": [
     {
@@ -40,11 +40,15 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 64,
-      "impact": "notable",
+      "significance": 70,
+      "impact": "high",
       "verification": "corroborated",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist"
+        },
         {
           "name": "TechCrunch",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
@@ -58,6 +62,32 @@
       "entityIds": [
         "gpt",
         "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+      "clusterId": "1r64y5r",
+      "title": "OpenAI and Microsoft knew they were starting a ‘doom loop’ for the web",
+      "desc": "Recently unsealed court documents in the New York Times' case against OpenAI and Microsoft are pretty damning. The companies' own documentation warned that it was starting a \"doom loop\" that would damage the web, characterized its scraping of data to train its models as the \"largest theft of labor in human history,\" and that it […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
+      "dateISO": "2026-09-18T21:07:24.000Z",
+      "date": "SEP 18 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 63,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -249,6 +279,33 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "clusterId": "2guqpr",
+      "title": "Gemini went rogue, hacked three companies, and Google hid it",
+      "desc": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party Irregular, which was also involved in similar incidents involving Meta and OpenAI. According to WSJ, Google didn't […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "dateISO": "2026-09-19T15:25:03.000Z",
+      "date": "SEP 19 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt",
+        "gemini"
+      ]
+    },
+    {
       "id": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
       "clusterId": "1a8ual3",
       "title": "Introducing Gemini 3.7 Flash",
@@ -372,6 +429,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+      "clusterId": "1p0j2uu",
+      "title": "Does AI need an antitrust exemption so it doesn’t kill everyone????",
+      "desc": "Today on Decoder, we’ve got the first of a two-part series on the future of business, and I’m talking with Jonathan Kanter, the former antitrust chief for the US Department of Justice in the Biden administration. These days, he’s both a professor of law at WashU and professor of technology policy at Carnegie Mellon. The […]",
+      "url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+      "dateISO": "2026-09-19T14:00:00.000Z",
+      "date": "SEP 19 2026",
+      "category": "policy",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xMjZ5Ynd3TkptcUFtRGZxalN0VUxKTWRxSktRTkhsa1llV0w0OUphLXRYWDkyaGJvendtY0drMTRCTWV1QjJxeVc5MzFxb2NXQVpXRWhRZDY3eC1Zak5QZWV3?oc=5",
@@ -540,29 +621,33 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic",
-      "clusterId": "1r1hkmd",
-      "title": "Inside the suddenly explosive world of AI safety",
-      "desc": "On a sunny July day in Berkeley, California, the country's top AI safety researchers gathered on an unmarked floor of an unmarked building. They had come together for a \"war room\" to dissect the high-profile cybersecurity incident that had rocked the AI industry hours earlier. An unreleased OpenAI model had gone rogue, executing a stunningly […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic",
-      "dateISO": "2026-09-17T11:30:00.000Z",
-      "date": "SEP 17 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
+      "id": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
+      "clusterId": "129ypah",
+      "title": "The AI industry has taken a doomer turn. What now?",
+      "desc": "This story appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. This weekend, Dario Amodei, CEO of Anthropic, posted an essay calling for a brake on the pace of development of LLMs. Amodei cites the looming dangers he sees from the technology, from its…",
+      "url": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
+      "dateISO": "2026-09-14T17:54:22.000Z",
+      "date": "SEP 14 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
       "significance": 45,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
         {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/996563/ai-safety-research-metr-redwood-openai-anthropic"
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/"
         }
       ],
-      "sourceName": "The Verge",
+      "sourceName": "MIT Technology Review",
       "entityIds": [
-        "gpt"
+        "claude"
       ]
     },
     {
@@ -621,30 +706,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://www.wired.com/story/mathematicians-cant-quit-ai/",
-      "clusterId": "keuz5n",
-      "title": "Mathematicians Hate AI. They Can’t Quit It",
-      "desc": "Powerful AI models have created an existential risk to the field, but researchers can’t stop relying on them because they’re too useful.",
-      "url": "https://www.wired.com/story/mathematicians-cant-quit-ai/",
-      "dateISO": "2026-09-19T10:00:00.000Z",
-      "date": "SEP 19 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/mathematicians-cant-quit-ai/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture/",
@@ -777,6 +838,30 @@
       ]
     },
     {
+      "id": "https://www.wired.com/story/mathematicians-cant-quit-ai/",
+      "clusterId": "keuz5n",
+      "title": "Mathematicians Hate AI. They Can’t Quit It",
+      "desc": "Powerful AI models have created an existential risk to the field, but researchers can’t stop relying on them because they’re too useful.",
+      "url": "https://www.wired.com/story/mathematicians-cant-quit-ai/",
+      "dateISO": "2026-09-19T10:00:00.000Z",
+      "date": "SEP 19 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/mathematicians-cant-quit-ai/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": []
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNeUo4TFlnSHFTVTg5MlhVZC1lM2FkZER1MHZDWEJQaHp1YVdCVExBTE5EdUF6Tk1ZTmpzQjc3c3JWU3RDV04zWTN0VFNZN0MyUndHcTFZNFh0cFVQMndIMkRlaE8yTWY3WHBIYUk3RjFSWWxv?oc=5",
       "clusterId": "17kmgou",
       "title": "AI security experts say they used Claude to hack ChatGPT",
@@ -804,20 +889,20 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5",
-      "clusterId": "s5wits",
-      "title": "Anthropic says Claude AI hacked three companies during cyber tests",
+      "id": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5",
+      "clusterId": "1v1ln18",
+      "title": "Anthropic says human error let Claude AI models escape test environment and hack third parties",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5",
-      "dateISO": "2026-07-30T07:00:00.000Z",
-      "date": "JUL 30 2026",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5",
+      "dateISO": "2026-07-31T07:00:00.000Z",
+      "date": "JUL 31 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 9,
+      "sourceCount": 6,
       "sources": [
         {
           "name": "Britannica",
@@ -840,23 +925,11 @@
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
         },
         {
-          "name": "BBC",
+          "name": "bbc.com",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
-        },
-        {
-          "name": "NBC News",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5"
-        },
-        {
-          "name": "CyberScoop",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ0FyTjVjNWQzY2dYblVWRlNJdGJwYkVuVVlXbkhBNURXR2VYenltaUVUR2I0emloLVB5S0dBTnpwUDJ0Q013dU1DQmZrLVhPeXcxY09pb0hyS3R4Q0ZFa2x4Y3Y5bzNJMGdtOVZZWE5iMFpjNmNLNjNOZlNKRnlBcmdRVW1NTUdrX1VYRk1nYjBKM3JCa3IwUENVbHRQNW44b25HRk91MUxNVVlDNXNxYTJWNjhLMHo0SzVqY203Yw?oc=5"
         }
       ],
-      "sourceName": "NBC News",
+      "sourceName": "Cybersecurity Dive",
       "entityIds": [
         "claude"
       ]
@@ -931,7 +1004,7 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 4,
+      "sourceCount": 6,
       "sources": [
         {
           "name": "Fortune",
@@ -948,6 +1021,14 @@
         {
           "name": "Axios",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1SRkdEYU9lcWFmZTJ3aWVzNWYtVkxLQXVBSTEwRWp0UnNCOVJBSHpRZ3FlR3ktOEozZkVVVEtnc2Nhb0I3Vnp2MUtNT2lTSEpWam1RMWw3V1M3MjBQVUxNdFZCXzh0ODhEOW96QW9UbzB4bzNr?oc=5"
+        },
+        {
+          "name": "NBC News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5"
+        },
+        {
+          "name": "cyberscoop.com",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
         }
       ],
       "sourceName": "Axios",
@@ -1052,11 +1133,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Guardian",
+          "name": "theguardian.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxORGtkcDVTUGdMQW5OWHpxVmFVLXlyel9IRVJhNVVmTWF6NFk2enhmOFNVdnJyY3RkMzRhbWpXaXBjVWk4YzJxekdLSzM4SHJWRW56QzFWZDlncUtPdUlZb1Zva1VtdWF0anZSejVWanJnWlNhb0xXSUU3R0VRRmlneWVqMmRoUWdwMGNSd3p3TUJObUU?oc=5"
         }
       ],
-      "sourceName": "The Guardian",
+      "sourceName": "theguardian.com",
       "entityIds": [
         "gpt",
         "claude"
@@ -1081,84 +1162,6 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/teen-development-research-grants"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "clusterId": "nxip51",
-      "title": "Our decision on Cursor following its acquisition by SpaceX",
-      "desc": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
-      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "dateISO": "2026-08-28T06:00:00.000Z",
-      "date": "AUG 28 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/jalapeno-first-results",
-      "clusterId": "16lzk97",
-      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
-      "desc": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
-      "url": "https://openai.com/index/jalapeno-first-results",
-      "dateISO": "2026-08-25T07:00:00.000Z",
-      "date": "AUG 25 2026",
-      "category": "compute",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/jalapeno-first-results"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/openai-joins-ports-pike-project",
-      "clusterId": "qd84ku",
-      "title": "OpenAI joins PORTS-Pike project",
-      "desc": "OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs",
-      "url": "https://openai.com/index/openai-joins-ports-pike-project",
-      "dateISO": "2026-08-17T05:00:00.000Z",
-      "date": "AUG 17 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-joins-ports-pike-project"
         }
       ],
       "sourceName": "OpenAI",
@@ -1193,40 +1196,44 @@
     },
     {
       "family": "market",
-      "category": "orggov",
-      "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
-      "summary": "Anthropic’s CEO says that safety hinges on understanding how AI “thinks.” So far the evidence is disturbing.",
-      "significance": 56,
+      "category": "policy",
+      "title": "OpenAI and Microsoft knew they were starting a ‘doom loop’ for the web",
+      "summary": "Recently unsealed court documents in the New York Times' case against OpenAI and Microsoft are pretty damning. The companies' own documentation warned that it was starting a \"doom…",
+      "significance": 63,
       "impact": "notable",
       "verification": "single",
       "date": "SEP 18 2026",
-      "dateISO": "2026-09-18T15:00:00.000Z",
-      "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
+      "dateISO": "2026-09-18T21:07:24.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997633/openai-microsoft-chatgpt-ai-new-york-times-doom-loop-theft-google-zero"
         }
       ],
       "entityIds": [
-        "claude"
+        "gpt"
       ],
-      "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
+      "whyItMatters": "However it resolves, the case could set a precedent for how models may be built, trained or licensed."
     },
     {
       "family": "research",
       "category": "research",
       "title": "Researchers used Claude to hack OpenAI",
       "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
-      "significance": 64,
-      "impact": "notable",
+      "significance": 70,
+      "impact": "high",
       "verification": "corroborated",
       "date": "SEP 18 2026",
       "dateISO": "2026-09-18T13:30:12.000Z",
       "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist"
+        },
         {
           "name": "TechCrunch",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
@@ -1248,8 +1255,8 @@
     "copilot": 0,
     "perplexity": 1,
     "gpt": 84,
-    "claude": 78,
-    "gemini": 29,
+    "claude": 77,
+    "gemini": 28,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1260,7 +1267,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 3,
+    "nvidia": 2,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1404,17 +1411,6 @@
           "impact": "notable"
         },
         {
-          "h": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
-          "d": "SEP 16 2026",
-          "url": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
           "h": "Introducing agentic video understanding with Gemini",
           "d": "SEP 01 2026",
           "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
@@ -1464,6 +1460,18 @@
       "sourceCount": 1
     },
     {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "SEP 19 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Meta’s Muse is creepy, but maybe not for the reasons you think",
+      "p": "Meta's Muse is apparently an effective AI assistant, but one that's a little creepy. Part of that is because of its new Mac app, which can access Messages, Calendar, and Notes. But for all its smarts, Muse doesn't actually know how to describe itself. Jason A…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997833/meta-muse-creepy",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 19 2026",
@@ -1500,6 +1508,18 @@
       "sourceCount": 1
     },
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "SEP 19 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Gemini went rogue, hacked three companies, and Google hid it",
+      "p": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the model's cybersecurity capabilities run by third-party…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 19 2026",
@@ -1520,30 +1540,6 @@
       "h": "AI safety conversations have gotten unbelievable",
       "p": "This week two conversations about AI safety went viral that demonstrate just how hard it is to discern AI fact from fiction.",
       "url": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 19 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Prices go up in 7 days. Get your Disrupt ticket now.",
-      "p": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then..",
-      "url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 19 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Vals, backed by Andreessen Horowitz, is looking to become the gold standard for…",
-      "p": "Vals AI is hoping to make AI benchmarking a more neutral and trustworthy resource in a world increasingly inundated by AI models.",
-      "url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1575,13 +1571,13 @@
     },
     {
       "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
-      "org": "The Information",
+      "org": "theinformation.com",
       "date": "JUL 28 2026",
       "lic": "open weights",
       "licClass": "lic-open",
       "desc": "Open-weight coverage — confirm exact license on the model card.",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUnMyMUZTeWhKa1pYUFAtNFBJVWVQdEpXZEl5MnhMM2pMTlpPdG9kQkRLck1nODFuaDRoMFJNQnBQRkszd3JJdUYwc1BXbUg3ekVvMHZ5STlZNHZEd3dRV294WlBRWm1IXzFHOUZoMmVZOTROWkx5d0UtNkdOWTNoRU9xTzJla0h2Q2I5Z09LTVo4NjNLTGg3TjNhUlJvNWNDeEI1R0gwYzhSVzF6RUVnM0kxVTBfTTQ1ZWc?oc=5",
-      "sourceName": "The Information",
+      "sourceName": "theinformation.com",
       "verification": "single",
       "impact": "emerging"
     }
@@ -1624,12 +1620,12 @@
       "field": "Research",
       "date": "SEP 18 2026",
       "verification": "corroborated",
-      "impact": "notable",
+      "impact": "high",
       "h": "Researchers used Claude to hack OpenAI",
       "p": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
       "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
       "sourceName": "Ars Technica",
-      "sourceCount": 2
+      "sourceCount": 3
     },
     {
       "field": "Research",
@@ -1643,14 +1639,14 @@
       "sourceCount": 1
     },
     {
-      "field": "Reasoning",
-      "date": "SEP 17 2026",
+      "field": "Safety",
+      "date": "SEP 14 2026",
       "verification": "single",
       "impact": "emerging",
-      "h": "The AI Superintelligence Slowdown",
-      "p": "Remember when tech leaders would tell their employees to “move fast and break things”? It seemed that would be the way of AI too. But after a summer where rogue AI agents became reality, and researchers warned that AI could kill us all, a number of leading US…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/996923/ai-safety-slow-openai-anthropic",
-      "sourceName": "The Verge",
+      "h": "AI agents blew the whistle on their cheating colleagues",
+      "p": "A group of AI agents asked to solve a series of math problems split into rival factions—when some cheated, others tried to stop them. That whistleblowing behavior, seen for the first time in a recent experiment run by Google DeepMind, could have implications…",
+      "url": "https://www.technologyreview.com/2026/09/14/1144037/ai-agents-blew-whistle-o-cheating-colleagues/",
+      "sourceName": "MIT Technology Review",
       "sourceCount": 1
     }
   ],
@@ -6223,15 +6219,15 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.45 – $4.74/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$3.30 – $5.26/hr",
+      "trend": "↑ 4% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6260,14 +6256,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.67 – $1.59/hr",
-      "trend": "→ 3% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$0.43 – $1.59/hr",
+      "trend": "↓ 13% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-20T04:30:27.876Z",
+    "updatedAt": "2026-09-20T04:43:57.307Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6277,15 +6273,15 @@
         "version": "GPT-6 Astra",
         "org": "OpenAI",
         "rawStoryHits": 337,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 259,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.8902077151335311,
-        "estimatedRelevantDiscussions": 22,
+        "storyCoverage": 0.7685459940652819,
+        "estimatedRelevantDiscussions": 26,
         "isEstimated": true,
-        "rawCommentHits": 2440,
+        "rawCommentHits": 2441,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.12295081967213115,
+        "commentCoverage": 0.12290045063498566,
         "limited": false,
         "points": 76,
         "themes": [
@@ -6349,7 +6345,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
+            "discussions": 26,
             "isEstimated": true
           },
           {
@@ -6370,10 +6366,10 @@
         "storyCoverage": 0.37174721189591076,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
-        "rawCommentHits": 6066,
+        "rawCommentHits": 6063,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 33,
-        "commentCoverage": 0.04945598417408507,
+        "validatedCommentCount": 32,
+        "commentCoverage": 0.04948045522018803,
         "limited": false,
         "points": 198,
         "themes": [
@@ -6385,12 +6381,12 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 13
+            "count": 12
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 6
+            "count": 5
           },
           {
             "id": "price",
@@ -6555,16 +6551,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 503,
+        "rawStoryHits": 505,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.5964214711729622,
+        "storyCoverage": 0.594059405940594,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 10191,
+        "rawCommentHits": 10189,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 21,
-        "commentCoverage": 0.02943773918163085,
+        "commentCoverage": 0.029443517518892924,
         "limited": false,
         "points": 100,
         "themes": [
@@ -6643,16 +6639,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 70,
-        "fetchedStoryCount": 70,
+        "rawStoryHits": 71,
+        "fetchedStoryCount": 71,
         "validatedStoryCount": 8,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 464,
+        "rawCommentHits": 463,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.646551724137931,
+        "commentCoverage": 0.6479481641468683,
         "limited": false,
         "points": 41,
         "themes": [
@@ -6731,8 +6727,8 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 117,
-        "fetchedStoryCount": 117,
+        "rawStoryHits": 111,
+        "fetchedStoryCount": 111,
         "validatedStoryCount": 19,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 19,
@@ -6742,7 +6738,7 @@
         "validatedCommentCount": 59,
         "commentCoverage": 0.35046728971962615,
         "limited": false,
-        "points": 736,
+        "points": 737,
         "themes": [
           {
             "id": "reasoning",
@@ -6830,10 +6826,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4531,
+        "rawCommentHits": 4527,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.06621054954756124,
+        "commentCoverage": 0.06626905235255136,
         "limited": false,
         "points": 631,
         "themes": [
