@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-20T17:15:26.416Z",
+  "updatedAt": "2026-09-20T17:24:50.915Z",
   "build": {
-    "sha": "5f839796abadbe2f8f7c7794203b4e6747ae168e",
-    "shortSha": "5f83979",
+    "sha": "9705f766fc996ff125238a3009538e36c5bbf602",
+    "shortSha": "9705f76",
     "ref": "main",
-    "builtAt": "2026-09-20T17:15:43.295Z"
+    "builtAt": "2026-09-20T17:25:06.466Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.7,
-    "estimatedDatasets": 5,
-    "buildSha": "5f83979",
-    "lastSuccessfulUpdate": "2026-09-20T17:15:26.416Z"
+    "estimatedDatasets": 4,
+    "buildSha": "9705f76",
+    "lastSuccessfulUpdate": "2026-09-20T17:24:50.915Z"
   },
   "ticker": [
     "RESEARCHERS USED CLAUDE TO HACK OPENAI",
@@ -22,9 +22,9 @@
     "ANTHROPIC IS OPERATING A LAB THAT CONDUCTS BIOLOGY EXPERIMENTS",
     "HUMANS, NOT ROGUE AI, ARE STILL THE BIGGEST CYBERSECURITY RISK TO ENERGY SYSTEMS",
     "INTRODUCING GEMINI 3.7 FLASH",
-    "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
     "NEW EXPERTS JOIN GOOGLE’S AI & ECONOMY TEAM",
     "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK",
+    "IF THE AI INDUSTRY FOLLOWED ITS OWN RESEARCH, IT MIGHT HAVE PAUSED ALREADY",
     "INTRODUCING THE AUSTRALIAN YOUTH SAFETY BLUEPRINT",
     "HOW CLAUDE'S TEXT WATERMARKING WORKS"
   ],
@@ -40,11 +40,15 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 58,
+      "significance": 64,
       "impact": "notable",
       "verification": "corroborated",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist"
+        },
         {
           "name": "TechCrunch",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
@@ -171,32 +175,6 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
-      "clusterId": "1izvyyw",
-      "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
-      "desc": "Anthropic’s CEO says that safety hinges on understanding how AI “thinks.” So far the evidence is disturbing.",
-      "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
-      "dateISO": "2026-09-18T15:00:00.000Z",
-      "date": "SEP 18 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
       "clusterId": "2gkb71",
       "title": "New experts join Google’s AI & Economy team",
@@ -258,6 +236,32 @@
       ]
     },
     {
+      "id": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
+      "clusterId": "1izvyyw",
+      "title": "If the AI Industry Followed Its Own Research, It Might Have Paused Already",
+      "desc": "Anthropic’s CEO says that safety hinges on understanding how AI “thinks.” So far the evidence is disturbing.",
+      "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/",
+      "dateISO": "2026-09-18T15:00:00.000Z",
+      "date": "SEP 18 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/if-the-ai-industry-followed-its-own-research-it-might-have-paused-already/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/australian-youth-safety-blueprint",
       "clusterId": "1g31aoy",
       "title": "Introducing the Australian Youth Safety Blueprint",
@@ -316,34 +320,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
-      "clusterId": "ta90k1",
-      "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
-      "desc": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
-      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
-      "dateISO": "2026-09-19T19:57:47.000Z",
-      "date": "SEP 19 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/podcast/automattics-33-hour-coup-and-can-ai-labs-police-themselves/",
@@ -774,7 +750,7 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 9,
+      "sourceCount": 8,
       "sources": [
         {
           "name": "Britannica",
@@ -807,10 +783,6 @@
         {
           "name": "CyberScoop",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9TNjlRdDJocTR5MzJkakpfYm1VWUMtYzR1VzZGY2JBZ1hLdi1QdnlydVNWbGtwby1RQ0JyWWpPdnR4OURwbl9tTlN0dmRnS0oybVZ0cVdjcEU1bTBXd1N4bEVNd3JBamNtNDdHVzhmTlJBUQ?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ0FyTjVjNWQzY2dYblVWRlNJdGJwYkVuVVlXbkhBNURXR2VYenltaUVUR2I0emloLVB5S0dBTnpwUDJ0Q013dU1DQmZrLVhPeXcxY09pb0hyS3R4Q0ZFa2x4Y3Y5bzNJMGdtOVZZWE5iMFpjNmNLNjNOZlNKRnlBcmdRVW1NTUdrX1VYRk1nYjBKM3JCa3IwUENVbHRQNW44b25HRk91MUxNVVlDNXNxYTJWNjhLMHo0SzVqY203Yw?oc=5"
         }
       ],
       "sourceName": "NBC News",
@@ -1033,6 +1005,30 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "clusterId": "ta90k1",
+      "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+      "desc": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+      "dateISO": "2026-09-19T19:57:47.000Z",
+      "date": "SEP 19 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 41,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
       "clusterId": "1p0j2uu",
       "title": "Does AI need an antitrust exemption so it doesn’t kill everyone????",
@@ -1221,14 +1217,18 @@
       "category": "research",
       "title": "Researchers used Claude to hack OpenAI",
       "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
-      "significance": 58,
+      "significance": 64,
       "impact": "notable",
       "verification": "corroborated",
       "date": "SEP 18 2026",
       "dateISO": "2026-09-18T13:30:12.000Z",
       "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
-      "sourceCount": 2,
+      "sourceCount": 3,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997444/openai-hack-claude-heif-heist"
+        },
         {
           "name": "TechCrunch",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
@@ -1250,7 +1250,7 @@
     "copilot": 0,
     "perplexity": 1,
     "gpt": 80,
-    "claude": 77,
+    "claude": 78,
     "gemini": 26,
     "grok": 0,
     "llama": 0,
@@ -1459,18 +1459,6 @@
       "logoKey": "other",
       "date": "SEP 19 2026",
       "verification": "corroborated",
-      "impact": "notable",
-      "h": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an…",
-      "p": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
-      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 19 2026",
-      "verification": "corroborated",
       "impact": "emerging",
       "h": "Prices go up in 7 days. Get your Disrupt ticket now.",
       "p": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
@@ -1535,6 +1523,18 @@
       "h": "Flock reportedly tries to shrink workforce with employee buyouts",
       "p": "Without buyouts, Flock would \"almost certainly\" need to lay off staff.",
       "url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 19 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an…",
+      "p": "Trump claimed, without evidence, that the AI backlash is a Democratic hoax.",
+      "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
       "sourceName": "TechCrunch",
       "sourceCount": 1
     }
@@ -1620,7 +1620,7 @@
       "p": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
       "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
       "sourceName": "Ars Technica",
-      "sourceCount": 2
+      "sourceCount": 3
     },
     {
       "field": "Research",
@@ -6214,7 +6214,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6222,7 +6222,7 @@
       "rate": "$3.59 – $5.92/hr",
       "trend": "↑ 16% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6254,11 +6254,11 @@
       "rate": "$0.80 – $1.59/hr",
       "trend": "→ 3% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-20T17:15:26.416Z",
+    "updatedAt": "2026-09-20T17:24:50.915Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6273,10 +6273,10 @@
         "storyCoverage": 0.8875739644970414,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 2445,
+        "rawCommentHits": 2448,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 48,
-        "commentCoverage": 0.12269938650306748,
+        "validatedCommentCount": 47,
+        "commentCoverage": 0.12254901960784313,
         "limited": false,
         "points": 69,
         "themes": [
@@ -6288,7 +6288,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 14
+            "count": 13
           },
           {
             "id": "writing",
@@ -6303,7 +6303,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 3
+            "count": 2
           },
           {
             "id": "price",
@@ -6361,10 +6361,10 @@
         "storyCoverage": 0.37359900373599003,
         "estimatedRelevantDiscussions": 83,
         "isEstimated": true,
-        "rawCommentHits": 5970,
+        "rawCommentHits": 5969,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.05025125628140704,
+        "commentCoverage": 0.05025967498743508,
         "limited": false,
         "points": 202,
         "themes": [
@@ -6454,10 +6454,10 @@
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
         "rawStoryHits": 123,
-        "fetchedStoryCount": 123,
+        "fetchedStoryCount": 119,
         "validatedStoryCount": 18,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 29,
+        "storyCoverage": 0.967479674796748,
+        "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
         "rawCommentHits": 1389,
         "fetchedCommentCount": 300,
@@ -6531,8 +6531,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 18,
-            "isEstimated": false
+            "discussions": 19,
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6645,12 +6645,12 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 472,
+        "rawCommentHits": 471,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.635593220338983,
+        "commentCoverage": 0.6369426751592356,
         "limited": false,
-        "points": 41,
+        "points": 42,
         "themes": [
           {
             "id": "local",
@@ -6727,16 +6727,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 110,
+        "rawStoryHits": 105,
         "fetchedStoryCount": 105,
         "validatedStoryCount": 19,
-        "storyCoverage": 0.9545454545454546,
-        "estimatedRelevantDiscussions": 20,
-        "isEstimated": true,
-        "rawCommentHits": 830,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 19,
+        "isEstimated": false,
+        "rawCommentHits": 829,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 60,
-        "commentCoverage": 0.3614457831325301,
+        "commentCoverage": 0.3618817852834741,
         "limited": false,
         "points": 743,
         "themes": [
@@ -6810,8 +6810,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 20,
-            "isEstimated": true
+            "discussions": 19,
+            "isEstimated": false
           }
         ]
       },
@@ -6826,10 +6826,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4517,
+        "rawCommentHits": 4513,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.06641576267434138,
+        "commentCoverage": 0.06647462884998892,
         "limited": false,
         "points": 633,
         "themes": [
