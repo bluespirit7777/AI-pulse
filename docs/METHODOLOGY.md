@@ -138,25 +138,25 @@ preview. The dashboard no longer renders it: its News Wave section leads with
 the AI Summary Wave instead (below), which summarises each family's whole day
 rather than picking one winner from it.
 
-## AI Summary Wave
+## Daily brief and source headlines
 
-Three short syntheses — one each for Product, Market and Research — covering
-the last 24 hours. They are **written by an AI agent on a daily routine and
-committed as data**, not generated during the build: there is no model call in
-the pipeline and no API key in CI. The families are the same ones the waves use,
-and the same exclusions apply (Analysis and General are commentary about events,
-so they are left out).
+Both Today and the landing use `js/briefing.js`. A valid AI-written summary is
+shown for at most 36 hours, with its coverage window and links to every cited
+source. Future timestamps, malformed dates, missing families and unresolved
+citations trigger a fallback to the three newest source headlines. Empty
+families get a coverage note, not a large empty card. New briefs embed source
+records so citations survive the rolling feed. The preparation helper emits
+these records with `--json`; see `AI_SUMMARY_PROCEDURE.md`.
 
-Three things are deliberate. The **"AI-written" label is enforced in code**, not
-read from the data file, so the summary cannot present itself as human editorial.
-**Sources are resolved against the live feed** — the summary cites signal ids,
-and the page links only the ones still present, so it can never link somewhere
-that no longer exists. And the section **disappears entirely once the summary is
-more than 36 hours old**: the stream below it refreshes every 30 minutes, and a
-day-old reading sitting above fresh headlines would be worse than none. A missed
-routine day shows nothing rather than something stale.
+News search combines text/organization aliases, category, entity and time
+filters. It sorts by publication time and searches only the loaded feed, whose
+coverage dates and result count stay visible. These are source reports, not
+independently verified facts. The feed includes commentary with category labels.
 
-See `docs/AI_SUMMARY_PROCEDURE.md` for how it is produced.
+Release lists apply `scripts/lib/releases.mjs` after classification. Unrelated
+organizational announcements are excluded; same-date bare model announcements
+are deduplicated, while qualifiers for different features remain distinct.
+This is a conservative heuristic and still requires editorial review.
 
 ## Visual encodings
 
@@ -479,86 +479,30 @@ same calendar day (`test/dates.test.mjs`) — the same class of bug that (before
 this pass) made `fmtSnapshot()` label local time "UTC" without actually
 formatting in UTC.
 
-## Leaderboard: 4 use-case-specific views
+## Model evaluations and comparison
 
-One blended ranking reads as more objective than the evidence supports —
-different benchmarks disagree about which model is "best" depending on the
-task. `js/curated.js`'s `LEADERBOARD_VIEWS` offers 4 views instead:
-**Overall balance**, **Reasoning**, **Agentic coding**, **Cost efficiency**.
-Only Overall balance carries a disclaimer — *"Editorial synthesis—not a
-universal benchmark ranking."* — because *which* index and weighting is an
-editorial call; the other three are direct benchmark or pricing-tier readouts.
-**Every model is scored in every view** — the roster is the same eight frontier
-models throughout (Jul 30 2026 snapshot), and none is left blank:
+`js/curated.js` is the dated source for the model roster, values, units and
+configuration notes. The four text views are Artificial Analysis Intelligence
+Index, Humanity's Last Exam, Terminal-Bench 4.0, and a relative cost-efficiency
+index derived from estimated cost per task. Every evaluation has an explanation;
+model Details preserves configuration and limitations. The cost index is not a
+provider price or a quality score. Image and video use their separate Artificial
+Analysis preference arenas; Elo is neither a percentage nor comparable across
+arenas. Links and the curation date stay visible in each view.
 
-- **Overall balance** — Artificial Analysis' Intelligence Index (AAII), a real
-  0–100 composite (agents/coding/general/science, 25% each). Every row is a
-  published measurement, cross-checked across two independent mirrors that
-  agreed on ordering and score: Claude Opus 5 61 leads, Fable 5 60, GPT-5.6 Sol
-  59, Kimi K3 57, Opus 4.8 56, Grok 4.5 54, then Gemini 3.1 Pro and Qwen 3.7
-  Max **genuinely tied** at 46 (rendered with a shared `T-` rank, not a
-  fabricated split).
-- **Reasoning** — Humanity's Last Exam (HLE %), **as run by Artificial
-  Analysis**. This attribution was corrected on Jul 30 2026: HLE is Scale
-  Labs'/CAIS' benchmark, but these numbers are AA's own standardized run of it.
-  Scale Labs' own harness reports materially different values (it puts Gemini
-  3.1 Pro at 46.4, not 44.4) and doesn't list the newest frontier models at
-  all. Separately, aggregator boards pooling **vendor-self-reported**,
-  tool-assisted HLE runs show a far higher spread (Opus 5 64.7, Fable 5 64.5);
-  this view deliberately stays on the independently-run, no-tools scale rather
-  than mixing the two. Published for Opus 5, Fable 5, Sol, Opus 4.8 and Gemini
-  3.1 Pro; Kimi K3, Grok 4.5 and Qwen 3.7 Max carry an **editorial estimate
-  that says so in its note** — a number, never dressed up as a measurement.
-- **Agentic coding** — SWE-bench Verified (%). Rebuilt Jul 30 2026: the old
-  82.5→66.5 range was badly stale, and the benchmark is now **near-saturated**
-  (top three within ~1pt), a caveat the notes carry rather than hide. Opus 5
-  (96.0), Fable 5 (95.0) and Opus 4.8 (88.6) are corroborated across two
-  independent leaderboards; Gemini 3.1 Pro (80.6) and Qwen 3.7 Max (80.4) come
-  from a board that flags its entries as vendor-self-reported, which their
-  notes disclose. Sol, Kimi K3 and Grok 4.5 have **no** published SWE-bench
-  figure — Sol and Grok are anchored instead to Artificial Analysis' Coding
-  Agent Index (a *different* metric, where Sol actually ranks #1 and Grok #3),
-  and their notes state that this is a cross-metric inference. That tension is
-  deliberately surfaced, not resolved: Claude leads SWE-bench while OpenAI
-  leads AA's agentic-coding index.
-- **Cost efficiency** — a 0–100 directional index (higher = cheaper), the note
-  making explicit it's a tier/self-hostability judgment, **not** a fabricated
-  $/token rate.
+Comparisons accept two or three models in the same category and evaluation.
+Changing either clears selection rather than mixing units. The comparison shows
+provider, measured result, context and source. Missing values remain explicit.
+No score or new recommendation is generated by the frontend.
 
-**Rating rendering**: `js/sections.js`'s `rankRows()` shows each row's real
-`score` with its unit (`% HLE`, ` AAII`, `% SWE`, ` /100`), and its bar is a
-linear scale against the strongest score in that view. A model whose figure is
-an editorial estimate rather than a published benchmark discloses that in its
-`note` (the honesty guard — the number is shown, but its provenance is never
-misrepresented). The other ranked lists (Local/Video AI) leave the frontier
-`showIndex` flag off, so their `stat` column (hardware needs, arena position)
-stays the prominent right-hand figure instead of a bare index.
+## Local AI hardware guidance
 
-## Local AI hardware specs
-
-Both Local AI cards (PC and Mobile) flip to a specs table via a deliberately
-prominent button (solid fill, icon, gentle pulse — distinct from the quieter
-"Top videos this week" flip on Frontier Releases, since this one is easy to
-miss otherwise). The **size and hardware tier are calculated, not measured**:
-each model's published parameter count × ~0.6GB per billion (the typical
-4-bit GGUF/AWQ quantization ballpark), stated in the panel's note and in
-`curated.js`'s `LOCAL_AI_SPECS_METHODOLOGY`.
-
-The **PC list is scoped to real personal computers**, one solid open-weight
-pick per consumer RAM tier from an 8GB laptop (Llama 3.2 3B) up to a 64GB
-desktop (Llama 3.3 70B), via Llama 3.1 8B / Qwen 2.5 14B / Gemma 2 27B in
-between. These are all dense models that run on ordinary hardware — system
-RAM for CPU inference, or a consumer GPU's VRAM. It deliberately does NOT list
-the genuinely "biggest/best" open models (Qwen 235B, DeepSeek 671B, etc.);
-those need workstations or servers, which isn't what "run it on my PC" means.
-The Mobile table is a separate curated list (Gemma 3n, MiniCPM-V, Phi-3.5-mini,
-Llama 3.2 3B, Qwen 2.5 1.5B) picked for on-device (phone/tablet) fit.
-
-Both flip-card backs (and Frontier Releases') share the same auto-sizing
-mechanism: `js/sections.js`'s `sizeFlipCards()` measures each face's real
-`scrollHeight` (still accurate even while `overflow-y:auto` is actively
-clipping it) and sets the shared container to the tallest, so neither face
-needs its own internal scrollbar.
+PC/laptop and phone/tablet have separate curated rosters. Memory filters use
+conservative thresholds for the listed quantized configurations. The expandable
+specifications expose parameter count, approximate model size, setup and the
+shared `LOCAL_AI_SPECS_METHODOLOGY`. RAM alone does not guarantee speed or
+compatibility; runtime, context cache, modalities, and device support matter.
+These are editorial fit estimates, not benchmark rankings.
 
 ## Data Health
 
@@ -582,7 +526,13 @@ live GitHub Pages deployment can be verified against the repo at a glance.
 
 ## Curated datasets
 
-The leaderboard, image/video rankings, market-share donut, and compute pricing
-have no free live source. They live in [`js/curated.js`](../js/curated.js),
-render with a "Curated" chip, and are updated by hand. The donut's wedges are
-computed from the legend so the two can't disagree.
+Model evaluations, local hardware guidance and referral share live in
+`js/curated.js` with a visible curation date. Ecosystem importance and
+relationships are editorial data in `data/entities.json`. GPU prices are
+collected automatically from marketplaces, not curated numbers.
+
+The Adoption view measures **AI chatbot outgoing referral share** in the
+Statcounter sample, August 2026 worldwide. It does not measure chatbot users,
+visits, conversation volume, or answer quality. The chart, definition, source
+and narrative share `js/metric-meta.js`; small positive values display as
+`<0.1%` rather than zero. Source: [Statcounter monthly snapshot](https://gs.statcounter.com/ai-chatbot-market-share#monthly-202608-202608-bar).

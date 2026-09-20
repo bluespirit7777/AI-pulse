@@ -6,6 +6,7 @@
 // without digging through build logs. Mirrors the stocknetwork.js drawer
 // pattern (focus trap, Escape to close, restore focus on close).
 import { esc, timeAgo, fmtSnapshot } from './util.js';
+import { setDrawerBackground } from './ui.js';
 
 const fmt = (n) => (n == null ? '—' : Number(n).toLocaleString());
 
@@ -50,6 +51,7 @@ export function renderDataHealth(chipEl, drawerEl, health, build) {
         </p>
       </div>`;
     drawerEl.hidden = false;
+    setDrawerBackground(true);
     document.body.classList.add('drawer-open');
     // preventScroll — see the same call in js/oceanmap.js.
     drawerEl.querySelector('.drawer-close').focus({ preventScroll: true });
@@ -74,6 +76,7 @@ export function renderDataHealth(chipEl, drawerEl, health, build) {
 
   function closeDrawer() {
     drawerEl.hidden = true;
+    setDrawerBackground(false);
     document.body.classList.remove('drawer-open');
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }

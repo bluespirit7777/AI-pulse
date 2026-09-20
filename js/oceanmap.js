@@ -1,3 +1,4 @@
+import { setDrawerBackground } from './ui.js';
 // AI Ocean Map — the hero. A 5-layer depth map of the AI ecosystem rendered as
 // SVG. Node SIZE = curated importance (an estimate). Node GLOW = live activity
 // (real: how many recent signals mention it). Connections = dependency /
@@ -49,7 +50,7 @@ export function createOceanMap(root, entities) {
   // ---- build static scaffolding once ----
   root.innerHTML = `
     <div class="map-frame">
-      <svg class="ocean-map-svg" viewBox="0 0 ${VW} ${VH}" role="img"
+      <svg class="ocean-map-svg" viewBox="0 0 ${VW} ${VH}" role="group"
            aria-label="AI ecosystem depth map. A text summary follows below.">
         <g class="map-bands"></g>
         <g class="map-conns"></g>
@@ -152,8 +153,8 @@ export function createOceanMap(root, entities) {
   }
 
   function actLevel(id) {
-    const a = state.activity[id] || 0;
-    return { count: a, norm: state.maxAct ? a / state.maxAct : 0 };
+    const a = state.activity[id];
+    return { count: Number.isFinite(a) ? a : 'Unavailable', norm: state.maxAct && Number.isFinite(a) ? a / state.maxAct : 0 };
   }
 
   function orgLabel(n) { return n.org && n.org !== n.name ? n.org : ''; }
@@ -196,7 +197,7 @@ export function createOceanMap(root, entities) {
     const { count } = actLevel(n.id);
     const d = state.delta[n.id];
     const deltaTxt = !state.historyAvailable
-      ? `<span class="drawer-note">${esc(state.rangeLabel)} comparison is still accumulating — showing current activity.</span>`
+      ? `<span class="drawer-note">A prior-window comparison is unavailable. Counts show available observations only.</span>`
       : `<span class="drawer-delta ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">${d > 0 ? '▲ +' + d : d < 0 ? '▼ ' + d : '– no change'} vs ${esc(state.rangeLabel)} ago</span>`;
     const rel = relatedOf(n.id);
     const sigs = signalsFor(n.id);
@@ -233,12 +234,13 @@ export function createOceanMap(root, entities) {
           <ul>${rel.map((r) => `<li><span class="rel-type">${esc((REL_PHRASE[r.type] || {})[r.dir] || r.type)}</span> <button class="rel-link" data-id="${esc(r.node.id)}">${esc(r.node.name)}</button></li>`).join('')}</ul>
         </div>` : ''}
         <div class="drawer-meta">
-          <span class="fr-chip fr-live" title="Signal counts come from live feeds"><span class="fr-mark" aria-hidden="true">●</span>Activity: live</span>
+          <span class="fr-chip fr-live" title="Signal counts come from the latest collected feeds"><span class="fr-mark" aria-hidden="true">●</span>Activity: collected snapshot</span>
           <span class="fr-chip fr-curated" title="Importance/size is a hand-set editorial estimate"><span class="fr-mark" aria-hidden="true">✎</span>Size: curated estimate</span>
         </div>
         ${(n.links || []).length ? `<div class="drawer-links">${n.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener" class="src-link">${esc(l.label)}</a>`).join(' · ')}</div>` : ''}
       </div>`;
     drawer.hidden = false;
+    setDrawerBackground(true);
     document.body.classList.add('drawer-open');
     // preventScroll: the drawer is overflow-y:auto, and focusing a child asks the
     // browser to scroll it into view -- which could nudge the panel's own top out
@@ -272,6 +274,7 @@ export function createOceanMap(root, entities) {
   }
   function closeDrawer() {
     drawer.hidden = true;
+    setDrawerBackground(false);
     document.body.classList.remove('drawer-open');
     drawerOpenFor = null;
     highlightNode(null);
@@ -303,7 +306,7 @@ export function createOceanMap(root, entities) {
       const ring = g.querySelector('.node-ring');
       const trend = g.querySelector('.node-trend');
       const core = g.querySelector('.node-core');
-      const quiet = count === 0;
+      const quiet = !Number.isFinite(count) || count === 0;
       const d = state.historyAvailable ? state.delta[n.id] : null;
 
       // inner brightness = activity in the SELECTED range (real, live)
@@ -357,7 +360,7 @@ export function createOceanMap(root, entities) {
           return `${esc(n.name)} <b>${state.activity[n.id]}</b>${trendTxt}`;
         }).join(' · ') +
         (state.historyAvailable ? '' : ` <span class="ms-note">· ${esc(state.rangeLabel)} trend accumulating</span>`)
-      : `<span class="ms-note">No live signals matched tracked entities in this window.</span>`;
+      : `<span class="ms-note">${Object.keys(state.activity).length?'No signals matched tracked entities in this window.':'Activity is unavailable for this window.'}</span>`;
   }
 
   return {

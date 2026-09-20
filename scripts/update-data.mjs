@@ -43,6 +43,7 @@ import { GPU_CATALOG, mergeGpuPricing, formatRate, computeTrend } from './lib/co
 import { buildCandleSeries } from './lib/chart.mjs';
 import { MODEL_REGISTRY, MODEL_KEYS } from './lib/models.mjs';
 import { shortDateUTC } from './lib/dates.mjs';
+import { cleanReleases } from './lib/releases.mjs';
 import { buildDiscourseSearchUrl, discourseAfterDate, parseDiscourseSearch } from './lib/discourse.mjs';
 import { buildDiscussionsQueryBody, buildAuthHeaders, parseDiscussionsResponse, windowedDiscussions } from './lib/github-discussions.mjs';
 
@@ -854,7 +855,7 @@ async function main() {
   }
 
   const releases = RELEASE_LABS.map((lab) => {
-    const list = releasesByLab[lab].slice().sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
+    const list = cleanReleases(releasesByLab[lab].slice().sort((a, b) => new Date(b.date) - new Date(a.date)), 'title', 'date').slice(0, 5);
     return {
       lab: LAB_NAMES[lab] || lab, logoKey: lab,
       items: list.map((it) => {

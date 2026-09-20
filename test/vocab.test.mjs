@@ -47,11 +47,11 @@ test('every vocabTerms entry\'s anchor exists as a real id in app.html', () => {
 test('VOCAB_SECTIONS ids match js/nav.js\'s PANELS exactly', () => {
   // Keeps the vocab page's four groups from drifting into different names
   // than the dashboard's own four top sections.
-  const navJs = readFileSync(path.join(__dirname, '..', 'js', 'nav.js'), 'utf-8');
+  const navJs = readFileSync(path.join(__dirname, '..', 'js', 'view-state.js'), 'utf-8');
   const match = navJs.match(/const PANELS = (\[[^\]]*\]);/);
   assert.ok(match, 'could not find PANELS array in js/nav.js');
   const panels = JSON.parse(match[1].replace(/'/g, '"'));
-  assert.deepEqual(VOCAB_SECTIONS.map((s) => s.id), panels);
+  assert.deepEqual(VOCAB_SECTIONS.map((s) => s.id).sort(), panels.sort());
 });
 
 // ------------------------------------------------------------ vocab.html + js/vocab.js

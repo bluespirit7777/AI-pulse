@@ -4,13 +4,13 @@
 const BUST = () => '?_=' + Date.now();
 
 export async function loadLatest() {
-  const res = await fetch('data/latest.json' + BUST(), { cache: 'no-store' });
+  const res = await fetch('data/latest.json' + BUST(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error('HTTP ' + res.status);
   return res.json();
 }
 
 export async function loadEntities() {
-  const res = await fetch('data/entities.json' + BUST(), { cache: 'no-store' });
+  const res = await fetch('data/entities.json' + BUST(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error('HTTP ' + res.status);
   return res.json();
 }
@@ -21,7 +21,7 @@ export async function loadEntities() {
 // range rather than failing.
 export async function loadRanges() {
   try {
-    const res = await fetch('data/range.json' + BUST(), { cache: 'no-store' });
+    const res = await fetch('data/range.json' + BUST(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     return await res.json();
   } catch {
@@ -34,7 +34,7 @@ export async function loadRanges() {
 // fallback (from latest.json) still works.
 export async function loadStockNetwork() {
   try {
-    const res = await fetch('data/stock-network.json' + BUST(), { cache: 'no-store' });
+    const res = await fetch('data/stock-network.json' + BUST(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     return await res.json();
   } catch {
@@ -45,12 +45,12 @@ export async function loadStockNetwork() {
 // data/youtube-trending.json — top-5-by-view-count-in-7-days videos per
 // model, refreshed twice daily by its own workflow (see
 // scripts/update-youtube.mjs). Absent/malformed is not an error: the release
-// cards' flip side just shows an honest "unavailable" state instead of a
+// list shows an honest "unavailable" state instead of a
 // stale or fabricated list — this is genuinely likely on a fresh checkout
 // before the YOUTUBE_API_KEY secret is configured.
 export async function loadYouTubeTrending() {
   try {
-    const res = await fetch('data/youtube-trending.json' + BUST(), { cache: 'no-store' });
+    const res = await fetch('data/youtube-trending.json' + BUST(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     return await res.json();
   } catch {
@@ -62,11 +62,11 @@ export async function loadYouTubeTrending() {
 // 24h. Hand-produced by an agent following docs/AI_SUMMARY_PROCEDURE.md and
 // committed as data; the build never writes it. Absent is the NORMAL state on
 // any day the routine hasn't run yet, so a null here is not an error —
-// renderAiSummary() hides the whole section rather than let the stream be
-// topped by a stale take.
+// renderBrief() displays recent source headlines when a fully cited current
+// brief is unavailable.
 export async function loadAiSummary() {
   try {
-    const res = await fetch('data/ai-summary.json' + BUST(), { cache: 'no-store' });
+    const res = await fetch('data/ai-summary.json' + BUST(), { cache: 'no-store', signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     return await res.json();
   } catch {

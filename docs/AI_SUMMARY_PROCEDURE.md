@@ -1,6 +1,6 @@
 # AI Summary Wave — daily procedure
 
-The News Wave section leads with three short bullet lists summarising the day
+Today and the landing preview lead with three short bullet lists summarising the day
 in **Product**, **Market** and **Research**. They are written by an AI agent
 and committed as data. There is no API call in the build: the site has zero
 npm dependencies and no LLM key in CI, and this keeps it that way.
@@ -60,13 +60,16 @@ Two to four short bullet points per family.
   the UI can state the period covered instead of vaguely implying "today".
 - `method` — must be exactly `"ai-written"`. The disclosure label the UI shows
   readers is keyed on this string; the label text itself is hardcoded in
-  `js/aisummary.js` so a bad data file can't spoof it.
+  `js/briefing.js` so a bad data file can't spoof it.
 - `signalCount` — how many signals fed that family's summary (the helper's
   per-family count). Lets a reader judge "synthesized from 14" vs "from 1".
-- `sourceIds` — signal `id`s, copied from the helper output. The frontend
-  resolves these against the *currently loaded* `latest.json` and links the ones
-  that still resolve; ids that have aged out simply don't render. Never put raw
-  URLs of your own here.
+- `sourceIds` — signal IDs copied from the helper, covering only evidence used.
+- `sources` — add an array of `{id, title, url, dateISO}` records, copied exactly
+  from `node scripts/prep-ai-summary.mjs --json`, covering every cited ID. This
+  preserves the original evidence when the rolling news feed drops those stories.
+  Do not invent or reconstruct missing sources. New summaries must embed them.
+  Legacy files without this array can display only while all citations still
+  resolve in the loaded feed.
 
 ## 4. Validate, then commit
 
@@ -82,13 +85,12 @@ exactly right. Commit `data/ai-summary.json` on its own.
 
 ## The 36-hour deadline
 
-`js/aisummary.js` hides the entire section when the file is missing, malformed,
-or when `generatedAt` is more than **36 hours** old (`STALE_HOURS`). That is
-deliberate: the stream underneath refreshes every 30 minutes, and a day-old take
-sitting above fresh headlines would be worse than no take at all.
-
-So: if you skip a day, the section quietly disappears until the next run. It
-never shows a stale summary. If you change `STALE_HOURS`, change it here too.
+`js/briefing.js` displays the AI brief only when it is at most **36 hours** old,
+its dates and method are valid, and all nonempty families have resolvable citations.
+A timestamp more than five minutes in the future is rejected. Empty families show
+an explicit coverage note. Missing, expired or uncited summaries fall back to the
+three newest source headlines; the application does not generate a replacement
+synthesis. Both pages use this same renderer.
 
 ## Things worth knowing
 

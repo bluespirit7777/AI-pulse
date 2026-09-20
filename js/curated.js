@@ -176,7 +176,7 @@ export function donutGradient(rows = marketShare) {
 export const stats = [
   { num: '147', lbl: 'Models ranked on Artificial Analysis LLM leaderboard · v4.3' },
   { num: '$65B', lbl: 'Anthropic revenue run rate in July 2026 · Reuters reported Aug 17' },
-  { num: '79.4%', lbl: 'ChatGPT worldwide AI-chatbot share · StatCounter Aug 2026' },
+  { num: '79.4%', lbl: 'ChatGPT worldwide AI-chatbot referral share · StatCounter Aug 2026' },
   { num: '1.6T', lbl: 'LongCat-2.0 total parameters · ~48B active per token' },
   { num: '$5T', lbl: 'Nvidia valuation milestone reached Oct 29 2025 · Reuters' },
 ];

@@ -42,7 +42,7 @@ export function renderCommunity(root, community) {
   const state = { modelId: remembered, showAll: false };
 
   root.innerHTML = `
-    <div class="cc">
+    <div class="cc rank-dashboard"><div class="rank-toolbar"><div><h2>Community currents</h2><span class="rank-count">Developer conversations</span></div><span class="rank-count">${ranked.length} model families · ${esc(community.window || '30D')} sample</span></div><div class="community-intro"><div><p class="eyebrow">LISTEN TO THE BUILDERS</p><h3>What’s getting people talking?</h3></div><p>Explore themes and voices from sampled release discussions.<br>Discussion volume is not a quality or sentiment score.</p></div>
       <div class="cc-selector" role="tablist" aria-label="Select a model to see its community discussion">
         ${ranked.map((m, i) => {
           const disc = discussionCount(m);
@@ -147,7 +147,7 @@ export function renderCommunity(root, community) {
                   const theme = (m.themes || []).find((t) => t.id === tid);
                   return theme ? `<span class="cc-theme-tag">${esc(theme.label)}</span>` : '';
                 }).join('')}</div>
-                <p class="cc-comment-excerpt">${esc(c.excerpt)}</p>
+                <p class="cc-comment-excerpt" translate="no">${esc(c.excerpt)}</p>
                 <div class="cc-comment-meta">
                   <span>${esc(c.author || 'anon')} · ${esc(timeAgo(c.publishedAt))}</span>
                   <a href="${esc(c.url)}" target="_blank" rel="noopener">Read on ${esc(c.source || 'source')}</a>

@@ -433,6 +433,9 @@ const ANALYSIS_HEADLINE_RE = /^\s*(how|why|what|when|who|is|are|does|did|should|
 
 export function isProductRelease(title, desc) {
   if (ANALYSIS_HEADLINE_RE.test(String(title || '').trim())) return false;
+  // Organizational announcements sometimes mention a launch in their body.
+  // The headline must not promise grants, appointments, or philanthropy.
+  if (/\b(journalism|journalists|board|appoints?|fundrais\w*|funding round|frontline defenders|protect essential services|grant program|donat\w*|lawsuit)\b/i.test(String(title || ''))) return false;
   return RELEASE_SHIP_RE.test(`${title} ${desc || ''}`);
 }
 

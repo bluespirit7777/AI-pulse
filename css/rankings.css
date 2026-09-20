@@ -1,0 +1,72 @@
+/* A compact analytical workspace, scoped to Models. */
+.dashboard:has(#panel-models:not([hidden])) main{padding-top:22px}
+#panel-models .view-head{min-height:0;padding:0;margin-bottom:18px;align-items:center}
+#panel-models .view-head .eyebrow{font-size:10px;margin-bottom:8px;letter-spacing:.15em}
+#panel-models .view-head h1{font:650 34px/1.15 var(--font-body);letter-spacing:-.035em;margin-bottom:7px}
+#panel-models .view-head .lede{font-size:14px;line-height:1.4}
+#panel-models .subnav{margin-bottom:16px;padding:4px;gap:4px}
+#panel-models .subnav a{padding:8px 18px;font-size:13px;min-height:38px}
+.rank-dashboard{background:#fbfdfb;border:1px solid #d7e3e1;border-radius:16px;box-shadow:0 18px 48px #082b3b15;overflow:hidden}
+.rank-toolbar{display:flex;align-items:center;gap:20px;padding:15px 20px;border-bottom:1px solid #dbe6e2;background:#f9fcfa}
+.rank-toolbar>div:first-child{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.rank-toolbar h2{font:700 17px var(--font-body);letter-spacing:-.02em;margin:0;color:#173d47}
+.rank-count{font-size:12px;color:#526f77}
+.rank-sort{margin-left:auto;display:flex;flex-direction:row;align-items:center;gap:10px;font-size:12px;color:#526f77;white-space:nowrap}
+.rank-sort select{font-size:13px;min-height:36px;padding:7px 32px 7px 10px;border-radius:7px;max-width:190px;color:#214b54}
+.rank-help.button{font-size:12px;min-height:36px;padding:7px 10px;white-space:nowrap}
+.rank-layout{display:grid;grid-template-columns:minmax(0,1fr) 235px}
+.ranking-scroll{overflow-x:auto}
+.ranking-table{font-size:13px;width:100%;table-layout:fixed}
+.ranking-table thead th{background:#f0f5f3;padding:10px 16px;font-size:11px;color:#58737a;font-weight:500;border-bottom:1px solid #dbe6e2}
+.ranking-table thead th:first-child{width:48px;text-align:center;padding-inline:8px}
+.ranking-table thead th:nth-child(2){width:46%}
+.ranking-table thead th:nth-child(3){width:auto}
+.ranking-table thead th:last-child{width:78px;text-align:center;padding-inline:8px}
+.column-note{font-size:10px;color:#6d858a;margin-left:4px}
+.ranking-table tbody td,.ranking-table tbody th{padding:0 16px;border-bottom:1px solid #e3ece7;background:transparent;vertical-align:middle;height:52px}
+.ranking-table tbody tr{transition:background .15s;animation:rank-row-in .25s ease-out both;animation-delay:calc(var(--row)*25ms)}
+.ranking-table tbody tr:hover{background:#eaf4ef}
+.ranking-table tbody tr:has(input:checked){background:#e1f1eb;box-shadow:inset 3px 0 #318577}
+.ranking-table .rank-leader{background:linear-gradient(90deg,#f4f0e4,#f9fcf8)}
+.ranking-table .rank-number{font:12px var(--font-mono);text-align:center;padding:0 8px;color:#729092}
+.rank-leader .rank-number{color:#a37440;font-weight:700}
+.rank-model{display:flex;gap:10px;align-items:center;text-align:left;border:0;background:none;padding:6px 0;min-height:48px;width:100%;color:#1d424b}
+.rank-model strong{display:block;font-size:13px;font-weight:650;line-height:1.3}.rank-model small{display:block;font-size:11px;line-height:1.4;color:#638086}
+.provider-avatar{display:grid;place-items:center;flex:none;width:29px;height:29px;background:#e2eee9;border:1px solid #cbded6;border-radius:8px;font:10px var(--font-mono);color:#34645f}
+tr:nth-child(3n+2) .provider-avatar{background:#e7edf4;border-color:#d5dfe9;color:#4c6685}
+tr:nth-child(3n) .provider-avatar{background:#f2eae3;border-color:#e7d8ca;color:#8c6650}
+.rank-open{margin-left:auto;color:#587d80;opacity:0;transition:opacity .15s}.rank-model:hover .rank-open,.rank-model:focus-visible .rank-open{opacity:1}
+.rank-score{display:flex;gap:14px;align-items:center}.rank-score>strong{font:500 14px var(--font-mono);min-width:42px;text-align:right;color:#24535a}
+.rank-track{display:block;flex:1;min-width:30px;height:6px;border-radius:4px;background:#e0eae6;overflow:hidden}
+.rank-track>span{display:block;width:var(--score);height:100%;background:linear-gradient(90deg,#31746f,#86c6ae);border-radius:4px;transform-origin:left;animation:rank-reveal .5s cubic-bezier(.2,.8,.2,1) both}
+.rank-leader .rank-track>span{background:linear-gradient(90deg,#b67a4d,#ddbb7e)}
+.rank-select{min-height:48px;display:flex;align-items:center;justify-content:center;cursor:pointer}.rank-select input{width:16px;height:16px;accent-color:#266d64}
+.rank-table-foot{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;color:#617d83;font-size:10px}
+.rank-guide{border-left:1px solid #dbe6e2;padding:20px;background:linear-gradient(160deg,#ecf4ef,#f8fbf7);display:flex;flex-direction:column}
+.rank-guide-label{font:9px var(--font-mono);letter-spacing:.15em;color:#577d79;margin-bottom:10px}
+.rank-guide h3{font-size:17px;margin:0 0 10px}.rank-guide>p:not(.rank-guide-label){font-size:12px;line-height:1.6;color:#496b72}
+.rank-top{margin:8px 0 16px;padding:15px;border:1px solid #ccdfd4;background:#ffffff9c;border-radius:10px}
+.rank-top>span{font-size:10px;color:#668179;display:block;margin-bottom:6px}.rank-top>strong{display:block;font-size:13px;line-height:1.4;color:#234b4e}
+.rank-top>b{display:block;font:500 27px var(--font-mono);margin-top:10px;color:#286b60}.rank-top small{font:11px var(--font-body);color:#5c7d78}
+.rank-provenance{margin-top:auto;border-top:1px solid #d3e2da;padding-top:14px;font-size:11px}.rank-provenance span{display:block;margin-top:5px;color:#66817d}
+#panel-models .compare-tray{margin-top:12px;padding:10px 14px;gap:8px;border-radius:10px;font-size:12px;background:#143e49}
+#panel-models .compare-tray .button{font-size:11px;min-height:36px;padding:7px 10px}
+.dashboard:has(#panel-models:not([hidden])) .data-footer{margin-top:20px;padding-top:16px}
+@keyframes rank-row-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1023px){.rank-layout{grid-template-columns:minmax(0,1fr) 200px}.rank-guide{padding:16px}.column-note{display:none}.rank-toolbar{gap:12px}.rank-toolbar>div:first-child{gap:4px;flex-direction:column}.rank-model{gap:7px}.ranking-table tbody td,.ranking-table tbody th{padding-inline:10px}}
+@media(max-width:767px){#panel-models .view-head h1{font-size:30px}#panel-models .view-head .lede{font-size:13px}#panel-models .view-head{margin-bottom:16px}#panel-models .subnav a{padding:7px 10px;min-height:38px;font-size:12px}.rank-layout{display:block}.rank-guide{border-left:0;border-top:1px solid #dbe6e2;display:block;padding:16px}.rank-guide .rank-top{display:none}.rank-guide h3,.rank-guide>p{margin-bottom:8px}.rank-provenance{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px}.rank-provenance span{margin:0}.rank-toolbar{padding:12px;flex-wrap:wrap;gap:10px}.rank-toolbar>div:first-child{flex:1;flex-direction:row;align-items:baseline;gap:10px}.rank-sort{order:2;width:100%;margin:0;justify-content:space-between}.rank-sort select{max-width:none;flex:1}.rank-help.button{font-size:11px}.ranking-table thead th:first-child{width:32px}.ranking-table thead th:nth-child(2){width:auto}.ranking-table thead th:nth-child(3){width:70px}.ranking-table thead th:last-child{width:62px;font-size:10px}.ranking-table thead th{padding:9px 6px}.ranking-table tbody td,.ranking-table tbody th{padding-inline:6px;height:54px}.rank-model strong{font-size:12px}.rank-model small{font-size:10px}.provider-avatar,.rank-open{display:none}.rank-score{gap:0}.rank-score>strong{font-size:13px;min-width:0}.rank-track{display:none}.rank-select{min-height:52px}.rank-table-foot{font-size:10px;padding:10px 12px}.rank-table-foot>span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){.ranking-table tbody tr,.rank-track>span{animation:none}.rank-open{transition:none}}
+
+.rank-model small{font-weight:400}
+@media(min-width:900px) and (max-height:820px){
+ .dashboard:has(#panel-models:not([hidden])) .site-header .wrap{height:64px}
+ .dashboard:has(#panel-models:not([hidden])) main{padding-top:16px}
+ #panel-models .view-head .eyebrow{display:none}
+ #panel-models .view-head{margin-bottom:12px}
+ #panel-models .view-head h1{font-size:28px}
+ #panel-models .subnav{margin-bottom:12px}
+ .rank-toolbar{padding-block:10px}
+ .ranking-table tbody td,.ranking-table tbody th{height:44px}
+ .rank-model,.rank-select{min-height:44px;padding-block:3px}
+ .rank-guide{padding:16px}
+}

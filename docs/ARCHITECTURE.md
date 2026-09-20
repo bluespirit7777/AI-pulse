@@ -42,77 +42,60 @@ scripts/update-youtube.mjs ──uses──> scripts/lib/youtube.mjs (search/vid
         ▼
    git commit + push  ──►  GitHub Pages redeploys
 
-index.html (landing) ──module──> js/landing.js  (previews the dashboard from the same
-        │                                        sources: curated.js + data/latest.json)
-        ├─ js/deeplink.js      forwards legacy root deep links (#panel-*/#tab-*/#sec-*/#full) to app.html
-        │
-        ▼  "Enter the dashboard"
-app.html ──module──> js/main.js
-        ├─ js/data.js          load latest + entities + range + stock-network + youtube-trending
-        ├─ js/nav.js           one-page scroll navigation: hash/jump-bar scroll targets, scroll-spy depth rail + current pill, anchor correction
-        ├─ js/oceanmap.js      Ecosystem: SVG current-field map + drawer (real per-range data; drawer lists the live signals that mention the node)
-        ├─ js/aisummary.js     AI Summary Wave: the daily agent-written synthesis per family, with a 36h staleness gate that hides the section entirely
-        ├─ js/river.js         signal river (chronological, minimal rows, expand/archive) -- sits under aisummary.js in the "News Wave" section
-        ├─ js/stocknetwork.js  AI stock network: ecosystem + market-motion modes, drawer
-        ├─ js/community.js     "Community Current": model tablist + themes + representative comments
-        ├─ js/sections.js      live + curated detail sections (+ leaderboard view tabs, release-card YouTube flip)
-        ├─ js/curated.js       hand-maintained datasets (incl. 4 leaderboard views)
-        ├─ js/datahealth.js    Data Health footer chip + drawer
-        └─ js/freshness.js     provenance / verification / impact / freshness chips
+index.html ──> js/landing.js ──> shared briefing + curated model previews
+app.html   ──> js/main.js
+  ├─ data.js             independently loads each JSON snapshot
+  ├─ nav.js/view-state.js query routes, focused views, legacy aliases, history
+  ├─ ui.js               shared menu, glossary help, native detail dialog
+  ├─ briefing.js         fully cited current AI brief or source headlines
+  ├─ river.js/news-state.js searchable chronological news and URL filters
+  ├─ models-ui.js        evaluation choice, details, comparison, hardware fit
+  ├─ ecosystem-ui.js     searchable list, ranges, lazy SVG map
+  ├─ data-ui.js          adoption, releases, stocks table, compute, videos
+  ├─ oceanmap.js         ecosystem visualization and entity drawer
+  ├─ stocknetwork.js     business ties vs. price correlations and stock drawer
+  ├─ community.js        existing sampled discussion explorer
+  ├─ metric-meta.js      shared metric definitions and snapshot labels
+  └─ datahealth.js       pipeline completeness and provenance drawer
 ```
-The dashboard is a single continuous page. All four top sections — **Models /
-Ecosystem / News Wave / Markets** — are `.topsection`s that are always in the
-DOM and always visible, in that order; the top nav's pills (**Top, Models,
-Ecosystem, News Wave, Markets**) are scroll anchors, not view switches, and
-`js/nav.js` never sets `hidden`. Each long section keeps a `.local-tabs` bar,
-which is a jump-to-subsection shortcut rather than a tablist. Because every
-panel is always active, the depth rail and the nav's current-pill highlight
-are driven by a scroll-spy that picks the last section whose top has passed
-under the fixed chrome.
 
-`js/nav.js` keeps old deep links working even though the page they pointed at
-is gone. A hash naming a section that still exists resolves to that element
-and scrolls to it; a hash for a section that no longer exists (`#tab-tide`,
-`#panel-research`, `#sec-river`, ...) falls back harmlessly, leaving the page
-where it was rather than erroring. That's also why the landing page can keep
-linking `app.html#panel-*`, `#tab-*`, and `#full` without needing to be
-rewritten.
+The data page shows one top-level destination at a time: Today (default),
+Models, Ecosystem or Markets. Learn AI opens the glossary. The route is
+`app.html?view=today|models|ecosystem|markets`; Models accepts `category`,
+Ecosystem and Markets accept `mode`. `view-state.js` normalizes invalid values
+and maps old hashes to the appropriate visible view. Hidden views are removed
+from layout and keyboard navigation. Back/Forward restore the URL state.
+Mobile Ecosystem defaults to List; desktop defaults to Map. Maps initialize
+when their view is opened, with scrollable SVG canvases on small screens.
 
-The anchor-correction fallback (`armAnchorCorrection()`, a `ResizeObserver`
-that re-snaps to the target for a few seconds after navigating) matters more
-now than it did under the old tabbed layout, not less. The old layout could
-argue the deep-link-lands-in-the-wrong-place bug -- async content above a
-target pushing it further down the page after the initial scroll -- was
-contained because only the active panel contributed to layout. That reasoning
-no longer holds: with every section always in the DOM, there is a tall stack
-of other sections' async content above any given anchor, so the correction
-pass has more to compensate for than before.
+News uses `q`, `filter`, `entity`, and `days` URL parameters, combined with AND.
+It renders twelve stories initially and reveals twelve more per action. The
+controller preserves the search input and filter disclosure while data refreshes.
+Every ten minutes the app checks for updates; changed news is staged behind
+an explicit Apply update action so a reader is not interrupted. Optional
+requests fail independently with section-specific empty states and retries.
 
-The headline ticker pauses on hover or focus and exposes an explicit
-play/pause control for keyboard and touch users; under reduced motion it
-drops the auto-scroll in favor of manual scrolling. It is always on screen
-now that the page is one continuous scroll, not gated to a single section.
+The landing and Today brief share `briefing.js`. A brief requires valid dates,
+a generation time no more than 36 hours old, and resolvable citations for each
+nonempty family. Embedded citation records survive feed rollover. Otherwise,
+the three newest source headlines are shown. No synthesis is invented in-browser.
 
-Each of the 3 Frontier Releases cards is a CSS 3D flip container
-(`.release-card` → `.release-card-inner` → front/back `.release-card-face`):
-the front is the existing release list, unchanged; a "Top videos this week"
-button flips to a back face listing that model's `data/youtube-trending.json`
-entry. The inactive face is marked `inert` (removed from focus/AT) rather than
-just visually hidden, and focus moves with the flip — the same pattern this
-codebase's drawers already use. Reduced-motion drops the rotation transition
-so the flip is an instant swap, not a spin.
+Native dialogs handle model details, comparisons, definitions and list entities.
+The existing map, stock and Data Health drawers use synchronous background
+inertness, focus traps, Escape close and focus return. The shared stylesheet
+respects reduced motion. Photos are confined to the landing hero.
 
 ## Files
 
 | Path | Role |
 |------|------|
-| `index.html` | Landing page (site root) — self-contained styles; previews the dashboard from the same data sources. |
-| `app.html` | The dashboard. Page shell + base styles (design tokens in `:root`). |
+| `index.html` | Landing page; shared shell/components and a dedicated landing stylesheet. |
+| `app.html` | Focused data views; shared design tokens are in `css/tokens.css`. |
 | `js/landing.js` | Landing controller — renders every landing figure from `curated.js` + `data/latest.json`. |
 | `js/deeplink.js` | Forwards legacy root deep links to `app.html` (blocking, runs pre-paint). |
-| `css/app.css` | Component styles (dashboard). |
+| `css/app.css` | Data-view styles, importing preserved chart styles from `css/visualizations.css`. |
 | `js/*.js` | ES modules (no bundler, no framework — served as-is). |
-| `data/latest.json` | Current data. The site is fully functional with only this. |
+| `data/latest.json` | News, releases, community, compute and fallback stock data. Models remain available without it. |
 | `data/range.json` | Real per-range stats + daily category history. Optional — absence falls back to "accumulating". |
 | `data/stock-network.json` | Ecosystem nodes + 30-day return correlations. Optional — absence keeps the table fallback. |
 | `data/entities.json` | Curated ecosystem map config (nodes + relationships). |

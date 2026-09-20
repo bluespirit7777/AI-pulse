@@ -330,6 +330,25 @@ async function main() {
     // The disclosure chip the UI renders is keyed on this exact value, so a
     // typo here would silently drop the "written by an AI" label.
     if (aiSummary.method !== 'ai-written') fail('ai-summary.json: method must be exactly "ai-written"');
+    // Embedded citations are optional for legacy files. New briefs preserve them
+    // so the daily feed rolling over cannot remove the brief's evidence.
+    if (aiSummary.sources !== undefined) {
+      if (!isArr(aiSummary.sources)) fail('ai-summary.json: sources must be an array');
+      else {
+        const ids = new Set();
+        for (const source of aiSummary.sources) {
+          if (!source || !isStr(source.id) || !isStr(source.title) || !/^https?:\/\//i.test(source.url || '') || !Number.isFinite(Date.parse(source.dateISO))) {
+            fail('ai-summary.json: each source needs id, title, http(s) URL and dateISO');
+          } else {
+            if (ids.has(source.id)) fail('ai-summary.json: duplicate embedded source id');
+            ids.add(source.id);
+          }
+        }
+        for (const family of Object.values(aiSummary.families || {})) {
+          if ((isArr(family?.sourceIds) ? family.sourceIds : []).some(id => !ids.has(id))) fail('ai-summary.json: embedded sources must cover every cited id');
+        }
+      }
+    }
     if (!aiSummary.families || typeof aiSummary.families !== 'object') {
       fail('ai-summary.json: families missing');
     } else {

@@ -220,3 +220,12 @@ Curated ecosystem map (hand-maintained). See the file's own `_doc`.
 
 `name` is the stable family label shown on the map; `version` is the specific
 current release shown in the detail drawer.
+
+## AI-written brief: preserved citations
+
+`data/ai-summary.json` remains optional. Alongside its existing dates, method and
+families, new briefs include `sources: [{id, title, url, dateISO}]` covering every
+family's `sourceIds`. Copy these records from the summary preparation helper.
+Validation checks the archive shape and reference coverage. The UI accepts legacy
+briefs only if every citation resolves in the current feed; otherwise it displays
+source headlines. See `AI_SUMMARY_PROCEDURE.md` for the freshness contract.

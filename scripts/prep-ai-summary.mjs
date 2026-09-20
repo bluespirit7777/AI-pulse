@@ -43,6 +43,7 @@ async function main() {
     console.log(JSON.stringify({
       windowStart,
       windowEnd,
+      sources: Object.values(groups).flat().map(s => ({ id: s.id, title: s.title, url: s.url, dateISO: s.dateISO })),
       families: Object.fromEntries(SUMMARY_FAMILIES.map((f) => [f, {
         label: LABEL[f],
         signalCount: groups[f].length,
@@ -65,7 +66,7 @@ async function main() {
     const rows = groups[fam];
     console.log(`\n## ${LABEL[fam].toUpperCase()} (${rows.length} signal${rows.length === 1 ? '' : 's'})`);
     if (!rows.length) {
-      console.log('  (nothing eligible in this window — say so honestly, or omit the family)');
+      console.log('  (nothing eligible in this window — say so honestly with signalCount 0 and sourceIds [])');
       continue;
     }
     for (const s of rows) {
@@ -79,6 +80,7 @@ async function main() {
   console.log('\n---');
   console.log('Write 2–4 short bullet points per family. Synthesize — do not recap');
   console.log('headline by headline. Cite in sourceIds only the ids you actually drew on.');
+  console.log('Use --json to copy the matching source records into the summary sources archive.');
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

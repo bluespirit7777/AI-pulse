@@ -1,3 +1,4 @@
+import { setDrawerBackground } from './ui.js';
 // AI Stock Network — a deterministic SVG ecosystem depth map of the 10 AI
 // stocks (no force simulation). Two clearly-separated modes:
 //   • Ecosystem   — curated business ties (depends/partner/competes)
@@ -68,7 +69,7 @@ export function createStockNetwork(root, net) {
 
   root.innerHTML = `
     <div class="snet-frame">
-      <svg class="snet-svg" viewBox="0 0 ${VW} ${VH}" role="img" aria-label="AI stock ecosystem depth map. A text summary and an accessible table follow.">
+      <svg class="snet-svg" viewBox="0 0 ${VW} ${VH}" role="group" aria-label="AI stock ecosystem depth map. A text summary follows; select Stocks for the price table.">
         <g class="snet-bands"></g>
         <g class="snet-conns"></g>
         <g class="snet-nodes"></g>
@@ -260,6 +261,7 @@ export function createStockNetwork(root, net) {
         <p class="snet-nia">Not investment advice.</p>
       </div>`;
     drawer.hidden = false;
+    setDrawerBackground(true);
     document.body.classList.add('drawer-open');
     // preventScroll — see the same call in js/oceanmap.js: the drawer scrolls its
     // own content, and focus() would otherwise be free to move it.
@@ -326,7 +328,7 @@ export function createStockNetwork(root, net) {
     });
 
     const first = candles[0].d, last = candles[n - 1].d;
-    return `<svg class="snc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="${esc(node.t)} daily price candlestick chart, ${n} trading days from ${esc(first)} to ${esc(last)}.">
+    return `<svg class="snc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="group" aria-label="${esc(node.t)} daily price candlestick chart, ${n} trading days from ${esc(first)} to ${esc(last)}.">
       <g class="snc-grid-g">${grid}</g>
       <g class="snc-bars">${bars}</g>
       <text x="${plotL}" y="${H - 7}" class="snc-xlabel" text-anchor="start">${esc(first)}</text>
@@ -346,6 +348,7 @@ export function createStockNetwork(root, net) {
   }
   function closeDrawer() {
     drawer.hidden = true;
+    setDrawerBackground(false);
     document.body.classList.remove('drawer-open');
     selected = null; highlight(null);
     if (lastFocused && lastFocused.focus) lastFocused.focus();
@@ -380,7 +383,7 @@ export function createStockNetwork(root, net) {
 
   // wire external controls
   document.querySelectorAll('.mode-btn').forEach((b) => b.addEventListener('click', () => {
-    document.querySelectorAll('.mode-btn').forEach((x) => { const on = x === b; x.classList.toggle('active', on); x.setAttribute('aria-selected', String(on)); });
+    document.querySelectorAll('.mode-btn').forEach((x) => { const on = x === b; x.classList.toggle('active', on); x.setAttribute('aria-pressed', String(on)); });
     setMode(b.dataset.mode);
   }));
 

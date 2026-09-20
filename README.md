@@ -9,62 +9,25 @@ Live at **https://bluespirit7777.github.io/AI-pulse/**
 
 ## What it shows
 
-1. **The AI Ocean Map** — a depth map of ~20 entities across five layers
-   (applications → frontier models → open source → cloud/compute → chips). Node
-   **size** is curated importance; node **glow** is *live* activity computed from
-   the signal feed; lines show dependency/partnership/competition. Click any node
-   for detail. A 24H/7D/30D toggle shows change over time (and says so honestly
-   while history is still accumulating).
-2. **News Wave** — an **AI Summary Wave** of three short syntheses covering the
-   last 24 hours in Product, Market and Research, each linking the signals it
-   drew on, above the full chronological (newest-first) stream of everything
-   crossing the wire with duplicate reports merged into one row. The summaries
-   are written by an AI agent on a daily routine and committed as data — there
-   is no model call in the build and no API key in CI — and the section hides
-   itself entirely rather than show a summary more than 36 hours old. See
-   [docs/AI_SUMMARY_PROCEDURE.md](docs/AI_SUMMARY_PROCEDURE.md).
-3. **AI Stock Network** — 10 AI stocks as an ecosystem depth map: node size =
-   market cap, glow = relative volume, ring = day change (computed from the last
-   two valid trading bars); toggle between curated **business ties** and 30-day
-   **price-return correlation** (kept separate). Accessible table fallback.
-4. **Community Pulse** ("Community Current") — a horizontal model selector sized
-   by **new model / feature / discovery** discussion volume specifically (not
-   general support, pricing, or comparison chatter), blended from **Hacker
-   News** (all models), each lab's **official developer forum** where one
-   exists (OpenAI &amp; Google), and each lab's **official GitHub Discussions
-   board** for the labs with no public forum (Claude, Grok, Qwen — plus
-   Gemini's, added alongside its forum). The per-model *Sources* row shows the
-   split, e.g. "Hacker News ≈190 · OpenAI forum ≈43". Contextually matched
-   (with ambiguous "grok"/"llama" noise rejected on HN; forum/GitHub relevance
-   is by scope) AND matched to release/discovery language, a
-   two-column panel of stats + theme wave bars, and relevance-ranked
-   representative comments interleaving first-party + HN voices. Discussion
-   counts are exact when the full result set was captured, and clearly marked
-   "≈ estimated" otherwise — never presented as an exact count they aren't.
-5. **Explore the depths** — frontier releases (incl. official-lab YouTube launch
-   videos), a 4-view leaderboard (Overall balance / Reasoning / Agentic coding /
-   Cost efficiency — Overall labelled as editorial synthesis, the rest citing a
-   named benchmark + snapshot date), image/video rankings, market share, compute
-   pricing, and open-weight feed.
-6. **Data Health** — a compact footer control showing feed success rate, stock/
-   community coverage, history depth, how many datasets are estimates, the
-   build SHA, and when data last updated successfully. Full detail in a drawer.
+- **Today:** a cited daily brief when available, recent releases and searchable news.
+- **Models:** explained evaluations, two-to-three-model comparisons, local hardware
+  filters, releases and community discussion.
+- **Ecosystem:** searchable entity list or map, real activity ranges, and precisely
+  defined chatbot referral share.
+- **Markets:** an accessible stock table, separate business/correlation networks,
+  and GPU rental offers.
+- **Learn AI:** searchable plain-language definitions.
 
-Every item carries a **freshness / confidence / provenance** chip
-(Live · Auto · Curated · Estimated, plus corroboration strength).
+The landing gives a compact preview using the same data and shared visual system.
+Direct query links, old section links, keyboard navigation and mobile views work.
 
-## Live vs. curated
+## Automatic vs. curated data
 
-- **Live (auto, ~every 30 min):** signals, waves, river, releases,
-  open-weight feed, community pulse, stock prices, compute pricing (real
-  $/hr from Vast.ai + RunPod), and the map's activity/glow — from
-  publisher RSS feeds, official frontier-lab YouTube channels, Hacker
-  News, Yahoo Finance, and public GPU marketplace APIs. Every card links to
-  its source, and the footer shows the build commit the live data came from.
-- **Curated (by hand):** the leaderboard, image/video rankings, market-share
-  donut, and the map's node *importance/size* and relationships. No reliable
-  free live API exists for these yet. Edit [`js/curated.js`](js/curated.js)
-  and [`data/entities.json`](data/entities.json).
+Automatic snapshots include news, releases, community, stock prices, GPU offers
+and entity activity. Collection dates are visible; older data is labeled.
+Models, referral share and ecosystem relationships remain dated editorial
+snapshots. A current AI-written brief requires complete citations; otherwise
+recent source headlines appear. See the methodology for precise limitations.
 
 ## Documentation
 
@@ -78,7 +41,7 @@ Every item carries a **freshness / confidence / provenance** chip
 ```
 npm run build      # fetch feeds + quotes → data/latest.json + daily snapshot
 npm run check      # validate schema + run unit tests
-npx serve .        # any static server; open the printed URL
+python -m http.server 8765 --bind 127.0.0.1  # open http://127.0.0.1:8765
 ```
 
 No API keys or secrets. The page is fully functional with only `data/latest.json`.
@@ -117,3 +80,11 @@ GitHub Pages + Actions are free for public repos — no server, no bill.
 Visitor lenses (Builder/Investor/Researcher/Creator over the same data), spike
 detection surfaced as "storms," per-entity history sparklines once enough
 snapshots exist, and richer connection provenance.
+
+## Language, motion, and video browsing
+
+The header language selector switches between English and Thai and saves the choice locally. Navigation, controls, guidance, and all glossary definitions are translated; publisher headlines, model names, and source excerpts retain their original language. Translation catalogs live in `js/locales/`.
+
+The motion control pauses ocean footage and decorative animations. Its preference is saved locally, and reduced-motion preferences are respected. Interactive cards remain usable with motion off.
+
+`app.html?view=models&category=watch` opens the video collection for Claude, ChatGPT, and Gemini. It shows up to five valid videos from each collected snapshot, real thumbnails, selectable previews, and click-to-play YouTube embeds. Dates and short collections stay explicit. When a collection has fewer than five results, explicitly model-matching videos already collected in the same publication window can fill the remaining slots; those cards are labeled as related collections. Player frames are removed when their dialog closes. The existing YouTube updater requires `YOUTUBE_API_KEY`; a missing key leaves the last snapshot intact.

@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { filterNews,readNews } from '../js/news-state.js';
+import { usableSummary } from '../js/briefing.js';
+import { cleanReleases,releaseIdentity } from '../scripts/lib/releases.mjs';
+const now=Date.parse('2026-09-15T12:00:00Z');
+const stories=[{id:'1',title:'New tool',desc:'coding',category:'product',sourceName:'Official',entityIds:['gpt'],dateISO:'2026-09-15T10:00:00Z'},{id:'2',title:'Research',desc:'reasoning',category:'research',entityIds:['claude'],dateISO:'2026-09-12T10:00:00Z'},{id:'3',title:'Older tool',category:'product',entityIds:['gpt'],dateISO:'2026-07-01T10:00:00Z'}];
+test('news search matches aliases, intersects filters and sorts newest first',()=>{const state=readNews('?q=openai&filter=product&entity=gpt&days=7');assert.deepEqual(filterNews(stories,state,[{id:'gpt',name:'GPT',org:'OpenAI',match:['ChatGPT']}],now).map(s=>s.id),['1']);assert.deepEqual(filterNews(stories,readNews(),[],now).map(s=>s.id),['1','2','3']);assert.equal(filterNews(stories,readNews('?q=nothing'),[],now).length,0);});
+test('news malformed date and invalid controls do not break filtering',()=>{assert.equal(readNews('?filter=bad&days=-1').days,'');assert.equal(readNews('?filter=bad').category,'');assert.equal(filterNews([{dateISO:'bad'}],{days:'1'},[],now).length,0);});
+const source={id:'s1',url:'https://example.com/story',title:'A source'};
+function summary(){return {method:'ai-written',generatedAt:new Date(now).toISOString(),windowStart:new Date(now-864e5).toISOString(),windowEnd:new Date(now).toISOString(),sources:[source],families:Object.fromEntries(['product','market','research'].map(k=>[k,{bullets:['A supported statement'],signalCount:1,sourceIds:['s1']}]))};}
+test('brief citations survive rolling out of the live feed',()=>{assert.equal(usableSummary(summary(),[],now),true);});
+test('brief falls back on expired, future, malformed, or unresolved sources',()=>{for(const edit of [s=>s.generatedAt='invalid',s=>s.generatedAt=new Date(now-37*36e5).toISOString(),s=>s.generatedAt=new Date(now+36e5).toISOString(),s=>s.sources=[],s=>s.windowEnd='bad',s=>s.sources=[{...source,url:'javascript:alert(1)'}]]){const s=summary();edit(s);assert.equal(usableSummary(s,[],now),false);}});
+test('release cleanup rejects organizational updates and merges duplicate model launches',()=>{const items=[{h:'Introducing Claude Opus 5',d:'JUL 24 2026'},{h:'Anthropic releases new model, Opus 5',d:'JUL 24 2026'},{h:'Supporting independent journalism in Ukraine',desc:'We are introducing a program',d:'SEP 07 2026'},{h:'Daybreak for Frontline Defenders: $1B to protect essential services',desc:'We are launching a program',d:'SEP 03 2026'}];assert.equal(cleanReleases(items).length,1);});
+test('release identity preserves distinct features and different dates',()=>{assert.notEqual(releaseIdentity('Introducing GPT 6 voice','2026-09-01'),releaseIdentity('Introducing GPT 6 images','2026-09-01'));assert.notEqual(releaseIdentity('Introducing Claude Opus 5','2026-07-24'),releaseIdentity('Introducing Claude Opus 5','2026-07-25'));});

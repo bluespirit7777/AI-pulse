@@ -1,3 +1,5 @@
+import { initShell } from './ui.js';
+initShell();
 // Entry-point script for vocab.html — the same role js/main.js plays for
 // app.html and js/landing.js plays for index.html. Pure synchronous render
 // from the hand-maintained js/vocab-data.js; no fetch, no async data.

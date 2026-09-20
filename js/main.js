@@ -1,187 +1,33 @@
-// Orchestrator: loads data, renders every section, wires the time-range toggle
-// and a silent periodic refresh. The site is fully functional with only
-// latest.json; entities.json and range.json enrich it when present.
-import { loadLatest, loadEntities, loadRanges, loadStockNetwork, loadYouTubeTrending, loadAiSummary } from './data.js';
-import { createOceanMap } from './oceanmap.js';
-import { renderAiSummary } from './aisummary.js';
+import { loadLatest,loadEntities,loadRanges,loadStockNetwork,loadYouTubeTrending,loadAiSummary } from './data.js';
+import { initNav,getView,notifyDataReady } from './nav.js';
+import { initShell } from './ui.js';
+import { initModels } from './models-ui.js';
+import { renderLive,renderAdoption,renderStocks,renderVideos } from './data-ui.js';
+import { renderBrief } from './briefing.js';
 import { renderRiver } from './river.js';
 import { renderCommunity } from './community.js';
-import { createStockNetwork } from './stocknetwork.js';
-import { renderCurated, renderLive, animateBars, renderYouTubeTrending, wireRankRowTooltips } from './sections.js';
 import { renderDataHealth } from './datahealth.js';
-import { initNav, notifyDataReady } from './nav.js';
-import { timeAgo, fmtSnapshot, $ } from './util.js';
-
-const REFRESH_MS = 10 * 60 * 1000; // silent re-fetch cadence
-let data = null;
-let ranges = null;
-let aiSummary = null; // daily AI-written synthesis; null is normal (see js/aisummary.js)
-let map = null;
-let range = '24H';
-
-function tickClock() {
-  const el = $('#clock');
-  if (el) el.textContent = new Date().toLocaleTimeString('en-US', { hour12: false });
-}
-
-// Ticker pause/play toggle for keyboard + touch users. Hover/focus pausing is
-// pure CSS; this button gives an explicit control. Toggling .is-paused only
-// pauses animation-play-state, so position is preserved (never restarts).
-function wireTickerToggle() {
-  const wrap = $('.ticker-wrap');
-  const btn = $('#ticker-toggle');
-  if (!wrap || !btn) return;
-  btn.addEventListener('click', () => {
-    const paused = wrap.classList.toggle('is-paused');
-    btn.textContent = paused ? '▶' : '❚❚';
-    btn.setAttribute('aria-pressed', String(paused));
-    btn.setAttribute('aria-label', paused ? 'Play the headline ticker' : 'Pause the headline ticker');
-  });
-}
-
-function paintUpdated() {
-  if (!data) return;
-  const pill = $('#snapshot-pill');
-  if (pill) pill.textContent = 'Updated ' + timeAgo(data.updatedAt);
-  // NOTE: #stocks-asof is deliberately NOT painted here. It belongs to
-  // data/stock-network.json, which has its own updatedAt from its own fetch —
-  // painting latest.json's timestamp into it (on this 30s interval) silently
-  // relabelled the stock section with the wrong dataset's time. js/stocknetwork.js
-  // owns that element, in both its success and its unavailable path.
-  // build provenance (R10): which commit produced the live data
-  const build = $('#footer-build');
-  if (build && data.build) {
-    const b = data.build;
-    const repo = 'https://github.com/bluespirit7777/AI-pulse';
-    build.innerHTML = b.sha
-      ? `Build <a class="src-link" href="${repo}/commit/${b.sha}" target="_blank" rel="noopener">${b.shortSha}</a> · data generated ${fmtSnapshot(b.builtAt)}`
-      : `Build ${b.shortSha} · data generated ${fmtSnapshot(b.builtAt)}`;
-  }
-  renderDataHealth($('#dh-chip'), $('#dh-drawer'), data.dataHealth, data.build);
-}
-
-function paintHistoryNote() {
-  const el = $('#history-note');
-  if (!el) return;
-  if (!ranges) { el.textContent = ''; return; }
-  const days = ranges.historyDepthDays;
-  el.textContent = days < 1
-    ? 'Range history just started collecting — comparisons will appear as data accumulates.'
-    : `${days} day${days === 1 ? '' : 's'} of range history collected so far.`;
-}
-
-function applyRange(next) {
-  range = next;
-  document.querySelectorAll('.range-btn').forEach((b) => {
-    const on = b.dataset.range === range;
-    b.classList.toggle('active', on);
-    b.setAttribute('aria-selected', String(on));
-  });
-  if (!map) return;
-  const r = ranges?.ranges?.[range];
-  map.update({
-    activity: r?.entityActivity || data.entityActivity || {},
-    delta: r?.entityDelta || {},
-    rangeLabel: range,
-    historyAvailable: !!r?.previousWindowComplete,
-    signals: data.signals || [],
-  });
-}
-
-function renderDynamic() {
-  renderLive(data);
-  renderAiSummary($('#ai-summary'), aiSummary, data.signals || []);
-  renderRiver($('#river'), data.signals || [], Date.now());
-  renderCommunity($('#community'), data.community || {});
-  animateBars();
-  paintUpdated();
-}
-
-async function boot() {
-  tickClock();
-  setInterval(tickClock, 1000);
-  wireTickerToggle();
-  wireRankRowTooltips();
-  initNav();
-  setInterval(paintUpdated, 30000);
-
-  renderCurated(); // curated sections never change between loads
-
-  let entities = null;
-  try {
-    [data, entities, ranges, aiSummary] = await Promise.all([loadLatest(), loadEntities(), loadRanges(), loadAiSummary()]);
-  } catch (err) {
-    console.error('[data] load failed', err);
-    const banner = $('#data-note');
-    if (banner) {
-      banner.textContent = 'Live data failed to load (' + err.message + '). Run "npm run build" to generate data/latest.json, then reload.';
-      banner.classList.add('show');
-    }
-    notifyDataReady(); // don't leave a pending deep-link scroll waiting forever
-    return;
-  }
-
-  renderDynamic();
-  paintHistoryNote();
-
-  if (entities && $('#ocean-map')) {
-    map = createOceanMap($('#ocean-map'), entities);
-    document.querySelectorAll('.range-btn').forEach((b) =>
-      b.addEventListener('click', () => applyRange(b.dataset.range))
-    );
-    applyRange('24H');
-  }
-
-  notifyDataReady(); // finishes any deep-link scroll that was waiting on real content
-
-  // AI stock network (independent load — a failure here doesn't block the rest
-  // of the page). Both paths go through createStockNetwork: passing null makes
-  // it render its own honest unavailable state and disable the mode toggle,
-  // rather than leaving the section blank and the toggle looking live.
-  loadStockNetwork().then((net) => {
-    if ($('#stock-network')) createStockNetwork($('#stock-network'), net);
-  }).catch((err) => {
-    console.warn('[stocknet] load skipped', err.message);
-    if ($('#stock-network')) createStockNetwork($('#stock-network'), null);
-  });
-
-  // YouTube trending videos for the release-card flip side (independent load,
-  // refreshed twice daily). renderYouTubeTrending handles a null/missing
-  // result itself — swaps the initial "Loading…" state for an honest
-  // "unavailable" one rather than leaving it stuck on "Loading" forever.
-  loadYouTubeTrending().then(renderYouTubeTrending)
-    .catch((err) => { console.warn('[youtube] load skipped', err.message); renderYouTubeTrending(null); });
-
-  // Silent refresh — keeps an open tab from going stale without a reload.
-  //
-  // Re-rendering replaces each section's innerHTML, which throws away
-  // everything the reader has set up (the selected Community model, how far
-  // they expanded the stream). This polls every 10 min but the pipeline only
-  // publishes every ~30, so most cycles fetch a byte-identical snapshot —
-  // gating on updatedAt means the common case costs the reader nothing. When
-  // the data genuinely IS new, the components restore their own filter state
-  // themselves (see river.js / community.js).
-  setInterval(async () => {
-    try {
-      const [fresh, freshRanges, freshSummary] = await Promise.all([loadLatest(), loadRanges(), loadAiSummary()]);
-      // The summary is committed on its own daily cadence, so it can change on
-      // a cycle where latest.json hasn't -- and it can also go stale in place,
-      // with no fetch involved at all, once generatedAt passes STALE_HOURS.
-      // Either has to force a re-render, or the section would sit there
-      // unchanged past its own deadline.
-      const summaryChanged = (freshSummary?.generatedAt || null) !== (aiSummary?.generatedAt || null);
-      const unchanged = fresh?.updatedAt && fresh.updatedAt === data?.updatedAt && !summaryChanged;
-      data = fresh;
-      ranges = freshRanges;
-      aiSummary = freshSummary;
-      if (unchanged) { paintUpdated(); renderAiSummary($('#ai-summary'), aiSummary, data.signals || []); return; }
-      renderDynamic();
-      paintHistoryNote();
-      applyRange(range);
-    } catch (err) {
-      console.warn('[data] refresh skipped', err.message);
-    }
-  }, REFRESH_MS);
-}
-
-boot();
+import { createStockNetwork } from './stocknetwork.js';
+import { initEcosystem,updateEcosystem } from './ecosystem-ui.js';
+import { snapshotLabel } from './metric-meta.js';
+let data=null,entities=null,ranges=null,summary=null,net=null,stockMapCreated=false,pending=null;
+const el=id=>document.getElementById(id);
+initShell();initModels();initEcosystem();initNav();renderAdoption();
+function notice(message){el('data-note').hidden=false;el('data-note').textContent=message;}
+function paint(){if(!data)return;
+ renderLive(data);renderBrief(el('ai-summary'),summary,data.signals||[]);renderRiver(el('river'),data.signals||[],Date.now(),entities?.nodes||[]);renderCommunity(el('community'),data.community||{});
+ el('snapshot-pill').textContent=snapshotLabel(data.updatedAt);renderDataHealth(el('dh-chip'),el('dh-drawer'),data.dataHealth,data.build);
+ el('footer-build').textContent=snapshotLabel(data.updatedAt);updateEcosystem(entities,data,ranges);renderStocks(net,data);notifyDataReady();}
+function stockMap(){if(net&&!stockMapCreated&&getView()?.view==='markets'&&getView()?.mode==='network'){createStockNetwork(el('stock-network'),net);stockMapCreated=true;}}
+addEventListener('app:view',stockMap);
+async function latest(){try{data=await loadLatest();el('data-note').hidden=true;paint();}catch(e){console.warn('News unavailable',e);notice(data?'Refresh failed. Showing the last successful snapshot.':'News is temporarily unavailable. Curated model snapshots remain available.');if(!data){el('river').innerHTML='<p class="empty-state">Unable to load news. <button class="button" data-retry="latest">Retry news</button></p>';el('ai-summary').innerHTML='<p class="empty-state">The latest brief is unavailable.</p>';['releases','recent-releases','community'].forEach(id=>el(id).innerHTML='<p class="empty-state">This feed is unavailable. <button class="button" data-retry="latest">Retry</button></p>');el('compute-rows').innerHTML='<tr><td colspan="5">Listings are unavailable. <button class="button" data-retry="latest">Retry listings</button></td></tr>';}}}
+async function entityLoad(){try{entities=await loadEntities();}catch(e){console.warn('Entities unavailable',e);}updateEcosystem(entities,data,ranges);if(data)renderRiver(el('river'),data.signals||[],Date.now(),entities?.nodes||[]);}
+async function stockLoad(){net=await loadStockNetwork();renderStocks(net,data);if(!net)el('stock-network').innerHTML='<p class="empty-state">Stock connections are unavailable. <button class="button" data-retry="stocks">Retry stock connections</button></p>';else stockMap();}
+async function videos(){renderVideos(await loadYouTubeTrending());}
+const retries={latest,entities:entityLoad,stocks:stockLoad,videos};document.addEventListener('click',e=>{const b=e.target.closest('[data-retry]');if(b)retries[b.dataset.retry]?.();});
+// Optional requests never block the main feed or curated views.
+latest();entityLoad();stockLoad();videos();
+loadRanges().then(r=>{ranges=r;updateEcosystem(entities,data,ranges);});
+loadAiSummary().then(s=>{summary=s;if(data)renderBrief(el('ai-summary'),summary,data.signals||[]);});
+el('apply-update').onclick=()=>{if(!pending)return;data=pending.data;summary=pending.summary;ranges=pending.ranges;pending=null;el('update-notice').hidden=true;paint();document.querySelector('.topsection:not([hidden]) .view-title')?.focus({preventScroll:true});};
+setInterval(async()=>{try{const [fresh,newSummary,newRanges]=await Promise.all([loadLatest(),loadAiSummary(),loadRanges()]);if(fresh.updatedAt!==data?.updatedAt||newSummary?.generatedAt!==summary?.generatedAt){pending={data:fresh,summary:newSummary,ranges:newRanges};el('update-notice').hidden=false;}else{if(data){el('snapshot-pill').textContent=snapshotLabel(data.updatedAt);renderBrief(el('ai-summary'),summary,data.signals||[]);}}}catch(e){notice('Refresh failed. Showing the last successful snapshot.');}},10*60*1000);

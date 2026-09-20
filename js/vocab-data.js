@@ -17,15 +17,17 @@ export const VOCAB_ASOF = 'Aug 2026';
 export const VOCAB_SECTIONS = [
   { id: 'models', label: 'Models & Leaderboards' },
   { id: 'ecosystem', label: 'Ecosystem' },
-  { id: 'today', label: 'News Wave' },
+  { id: 'today', label: 'Today & News' },
   { id: 'markets', label: 'Markets' },
 ];
 
 export const vocabTerms = [
+  { term: 'Elo', definition: 'A relative rating based on head-to-head comparisons. Higher ratings indicate stronger preference within the same arena, not a percentage of correct answers. Different arenas are not directly comparable.', section: 'models', anchor: 'sec-media-image' },
+  { term: 'Terminal-Bench', definition: 'An evaluation of completing tasks in a terminal environment. AI Pulse uses the named version and configuration in the model details; it is a different task set from SWE-bench.', section: 'models', anchor: 'sec-leaderboard' },
   // ---------- Models & Leaderboards ----------
   {
     term: 'AAII',
-    definition: "Artificial Analysis Intelligence Index — a published 0–100 score blending agentic, coding, general-capability and science results into one composite. Used for the Leaderboard's \"Overall balance\" view, which is labelled editorial synthesis rather than a single objective ranking.",
+    definition: "Artificial Analysis Intelligence Index combines several evaluations of model capability. The Overall view uses the published index for the dated configuration in model details. Higher scores indicate stronger results on those tests, not a guarantee for every task.",
     section: 'models',
     anchor: 'sec-leaderboard',
   },
@@ -37,7 +39,7 @@ export const vocabTerms = [
   },
   {
     term: 'SWE-bench Verified',
-    definition: 'A benchmark measuring whether a model can fix real, verified software issues end to end. Powers the Leaderboard\'s "Agentic coding" view — the site flags it as the top models close in, calling the benchmark near-saturated rather than treating a 1-point lead as a real difference.',
+    definition: 'A benchmark measuring whether a model can fix real, verified software issues end to end. This is distinct from Terminal-Bench, which measures tasks in a terminal environment.',
     section: 'models',
     anchor: 'sec-leaderboard',
   },
