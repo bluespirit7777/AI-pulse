@@ -377,5 +377,6 @@ export const CONTENT_TH = {
   "iPhone owners can now submit claims in Apple’s $250 million Siri AI settlement": "ตอนนี้ผู้ใช้ iPhone สามารถยื่นคำร้องเพื่อรับเงินชดเชยจากคดีความเกี่ยวกับ AI Siri ของ Apple ที่มีมูลค่าสูงถึง 250 ล้านดอลลาร์ได้แล้ว",
   "Can John Ternus find Apple’s next big thing?": "John Ternus จะสามารถค้นหาสิ่งใหม่ที่ยิ่งใหญ่ต่อไปของ Apple ได้หรือไม่?",
   "Today, I’m talking with Mark Gurman, who is the world’s best-sourced Apple reporter — both as Bloomberg’s chief Apple correspondent and the host of the upcoming podcast Power On. Earlier this month, Apple hosted its annual iPhone hardware event, virtually every detail of which was reported ahead of time by Mark. But this event was […]": "วันนี้ผมได้พูดคุยกับ Mark Gurman ซึ่งเป็นนักข่าวสาย Apple ที่มีแหล่งข่าวดีที่สุดในโลก ทั้งในฐานะหัวหน้านักข่าวสาย Apple ของ Bloomberg และพิธีกรรายการพอดแคสต์ที่กำลังจะมาถึงอย่าง Power On เมื่อช่วงต้นเดือนที่ผ่านมา Apple ได้จัดงานเปิดตัวฮาร์ดแวร์ iPhone ประจำปี ซึ่ง Mark ได้รายงานรายละเอียดเกือบทั้งหมดไว้ล่วงหน้าเรียบร้อยแล้ว แต่ทว่างานนี้…",
-  "Live from 5 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากเซิร์ฟเวอร์เช่า 5 เครื่องบน Vast.ai และ RunPod"
+  "Live from 5 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากเซิร์ฟเวอร์เช่า 5 เครื่องบน Vast.ai และ RunPod",
+  "Live from 12 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่า 12 รายการผ่าน Vast.ai และ RunPod"
 };
