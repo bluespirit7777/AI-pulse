@@ -367,5 +367,7 @@ export const CONTENT_TH = {
   "Live from 6 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่า 6 รายการผ่าน Vast.ai และ RunPod",
   "Live from 3 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากบริการเช่าคอมพิวเตอร์ 3 เครื่องผ่าน Vast.ai และ RunPod",
   "Got an Android Phone? Google Thinks You’ll Probably Want a Googlebook Laptop": "ใช้มือถือ Android อยู่ใช่ไหม? Google คิดว่าคุณอาจจะอยากได้แล็ปท็อป Googlebook",
-  "Apple lovers have long enjoyed seamless connectivity between their iPhones and Macs. Now, Google’s bringing that experience to Android.": "แฟนคลับ Apple เพลิดเพลินกับการเชื่อมต่อที่ไร้รอยต่อระหว่าง iPhone และ Mac มานานแล้ว ตอนนี้ Google กำลังนำประสบการณ์แบบนั้นมาสู่ Android บ้าง"
+  "Apple lovers have long enjoyed seamless connectivity between their iPhones and Macs. Now, Google’s bringing that experience to Android.": "แฟนคลับ Apple เพลิดเพลินกับการเชื่อมต่อที่ไร้รอยต่อระหว่าง iPhone และ Mac มานานแล้ว ตอนนี้ Google กำลังนำประสบการณ์แบบนั้นมาสู่ Android บ้าง",
+  "How V7 gives AI agents institutional memory": "V7 สร้าง \"หน่วยความจำองค์กร\" ให้กับ AI เอเจนท์ได้อย่างไร",
+  "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.": "V7 ใช้ GPT-5.6 ในการเปลี่ยนไฟล์งานต่างๆ ที่กระจัดกระจายอยู่ภายในบริษัทให้กลายเป็นบริบทที่ AI เอเจนท์สามารถนำไปใช้ทำงานที่มีความซับซ้อนและอ้างอิงแหล่งที่มาได้อย่างครบถ้วน"
 };
