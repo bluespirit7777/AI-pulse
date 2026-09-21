@@ -380,5 +380,6 @@ export const CONTENT_TH = {
   "Live from 5 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากเซิร์ฟเวอร์เช่า 5 เครื่องบน Vast.ai และ RunPod",
   "Live from 12 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่า 12 รายการผ่าน Vast.ai และ RunPod",
   "Google’s $899 Googlebook is a bet that you’ll buy a new laptop for Gemini": "Googlebook ราคา 899 ดอลลาร์ของ Google คือเดิมพันว่าคุณจะยอมซื้อแล็ปท็อปเครื่องใหม่เพื่อใช้งาน Gemini",
-  "Google’s AI-native Googlebook ties Gemini to the cursor, dictation, widgets and other parts of the desktop experience.": "Googlebook ที่มาพร้อม AI ในตัวของ Google เชื่อมต่อ Gemini เข้ากับเคอร์เซอร์ การพิมพ์ตามคำบอก วิดเจ็ต และส่วนอื่นๆ ของประสบการณ์การใช้งานบนเดสก์ท็อป"
+  "Google’s AI-native Googlebook ties Gemini to the cursor, dictation, widgets and other parts of the desktop experience.": "Googlebook ที่มาพร้อม AI ในตัวของ Google เชื่อมต่อ Gemini เข้ากับเคอร์เซอร์ การพิมพ์ตามคำบอก วิดเจ็ต และส่วนอื่นๆ ของประสบการณ์การใช้งานบนเดสก์ท็อป",
+  "…how to fetch a specific work item field, I had Claude recursively run --help on the CLIs and save all possible actions into separate Markdown files. This approach…": "…วิธีดึงข้อมูลฟิลด์ของเวิร์กไอเทมที่ต้องการ ผมให้ Claude รันคำสั่ง --help บน CLI แบบวนซ้ำ แล้วบันทึกการทำงานที่เป็นไปได้ทั้งหมดลงในไฟล์ Markdown แยกต่างหาก วิธีนี้…"
 };
