@@ -18,13 +18,14 @@ translate new prose. The collector in `scripts/lib/localization.mjs` selects
 reader-facing fields from all currently served datasets and curated model data;
 it excludes historical event files, machine identifiers, links and prices.
 
-The data and YouTube workflows translate before publishing. Configure the
-repository Actions secret `OPENAI_API_KEY`; optionally set the Actions variable
-`TRANSLATION_MODEL` (default `gpt-5.5`). The key is used only during the build,
-never in the browser. The translator uses the
-[OpenAI Responses API](https://developers.openai.com/api/reference/typescript/resources/beta/subresources/responses/methods/create)
-with structured output and `store: false`. Only new source text is submitted.
-No API requests are needed for already translated content.
+The data and YouTube workflows translate before publishing. Configure either the
+repository Actions secret `OPENAI_API_KEY` or `GEMINI_API_KEY`. Optional model
+overrides are provider-specific: `OPENAI_TRANSLATION_MODEL` and
+`GEMINI_TRANSLATION_MODEL`. OpenAI defaults to `gpt-5.5`, while Gemini defaults
+to `gemini-3.1-flash-lite`. If both secrets are present, OpenAI takes precedence.
+The key is used only during the build and never in the browser. The translator uses
+structured output with storage disabled where supported, and only new source text is
+submitted. No API requests are needed for already translated content.
 
 Missing credentials or failed translations stop a refresh before it is committed,
 keeping the last complete bilingual snapshot published. Both workflows share a

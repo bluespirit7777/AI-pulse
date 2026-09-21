@@ -35,7 +35,9 @@ jobs:
       - name: Translate new reader-facing content
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_TRANSLATION_MODEL: ${{ vars.OPENAI_TRANSLATION_MODEL }}
+          GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}
         run: npm run translate
 
       - name: Validate data + run unit tests
