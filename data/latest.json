@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-09-21T17:45:21.392Z",
+  "updatedAt": "2026-09-21T18:00:33.444Z",
   "build": {
-    "sha": "f701c8ee33c002b638d853bf9271b265ca1697b6",
-    "shortSha": "f701c8e",
+    "sha": "99c0f366cce8cb5f0f952dad1a2f677dae88789b",
+    "shortSha": "99c0f36",
     "ref": "main",
-    "builtAt": "2026-09-21T17:45:38.202Z"
+    "builtAt": "2026-09-21T18:01:09.870Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.7,
+    "historyDepthDays": 59.8,
     "estimatedDatasets": 4,
-    "buildSha": "f701c8e",
-    "lastSuccessfulUpdate": "2026-09-21T17:45:21.392Z"
+    "buildSha": "99c0f36",
+    "lastSuccessfulUpdate": "2026-09-21T18:00:33.444Z"
   },
   "ticker": [
     "UN SAYS AI SAFEGUARDS CAN’T WAIT FOR CERTAINTY",
@@ -22,11 +22,11 @@
     "GOOGLE CONFIRMS GEMINI MODELS HACKED THREE COMPANIES IN MAY 2026",
     "HOW V7 GIVES AI AGENTS INSTITUTIONAL MEMORY",
     "GOOGLE’S $899 GOOGLEBOOK IS A BET THAT YOU’LL BUY A NEW LAPTOP FOR GEMINI",
+    "ADVISORY GROUP ON MATHEMATICS AND ARTIFICIAL INTELLIGENCE",
     "GOT AN ANDROID PHONE? GOOGLE THINKS YOU’LL PROBABLY WANT A GOOGLEBOOK LAPTOP",
     "BUILDING STANDARDS FOR THE NEXT PHASE OF AI",
     "EXPANDING OPENAI ACADEMY WITH NEW LEARNING PATHS",
-    "WITH TABBY, A FORMER ACCOUNTANT IS USING AI TO MAKE ACCOUNTANTS OBSOLETE",
-    "IPHONE OWNERS CAN NOW SUBMIT CLAIMS IN APPLE’S $250 MILLION SIRI AI SETTLEMENT"
+    "WITH TABBY, A FORMER ACCOUNTANT IS USING AI TO MAKE ACCOUNTANTS OBSOLETE"
   ],
   "signals": [
     {
@@ -157,6 +157,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+      "clusterId": "10ek50u",
+      "title": "Advisory Group on Mathematics and Artificial Intelligence",
+      "desc": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
+      "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
+      "dateISO": "2026-09-21T12:00:00.000Z",
+      "date": "SEP 21 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -1120,32 +1146,6 @@
       "entityIds": [
         "chatgpt"
       ]
-    },
-    {
-      "id": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
-      "clusterId": "jl7n28",
-      "title": "Working with the American Psychological Association on youth mental health and AI",
-      "desc": "OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.",
-      "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai",
-      "dateISO": "2026-08-06T06:00:00.000Z",
-      "date": "AUG 06 2026",
-      "category": "market",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 41,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1415,6 +1415,18 @@
   ],
   "wire": [
     {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "SEP 21 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Meta’s AI agent has been blocked from using Amazon.com",
+      "p": "Muse isn't welcome as a shopper anymore.",
+      "url": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "GOOGLE",
       "logoKey": "google",
       "date": "SEP 21 2026",
@@ -1468,8 +1480,8 @@
       "date": "SEP 19 2026",
       "verification": "corroborated",
       "impact": "emerging",
-      "h": "Prices go up in 7 days. Get your Disrupt ticket now.",
-      "p": "Current ticket pricing ends Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+      "h": "Prices go up in 7 days — get your Disrupt ticket now",
+      "p": "Current ticket pricing ends September 25 at 11:59 p.m. PT. Join 10,000+ founders, investors, and tech leaders at Disrupt and save up to $200 on your ticket.",
       "url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
       "sourceName": "TechCrunch",
       "sourceCount": 5
@@ -1495,18 +1507,6 @@
       "h": "Can John Ternus find Apple’s next big thing?",
       "p": "Today, I’m talking with Mark Gurman, who is the world’s best-sourced Apple reporter — both as Bloomberg’s chief Apple correspondent and the host of the upcoming podcast Power On. Earlier this month, Apple hosted its annual iPhone hardware event, virtually eve…",
       "url": "https://www.theverge.com/podcast/996874/apple-john-ternus-tim-cook-mark-gurman-future-ai-siri-iphone",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 21 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "iPhone owners can now submit claims in Apple’s $250 million Siri AI settlement",
-      "p": "Apple is paying $250 million to settle claims that it failed to deliver an AI-upgraded Siri - and now, eligible iPhone owners can submit a claim for a payout. If you live in the US and purchased an iPhone 15 Pro, iPhone 15 Pro Max, or any iPhone 16 model betw…",
-      "url": "https://www.theverge.com/tech/998191/apple-siri-ai-iphone-16-class-action-lawsuit-settlement",
       "sourceName": "The Verge",
       "sourceCount": 1
     }
@@ -1635,11 +1635,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 227.28,
-      "changePct": 2.254012871972879,
+      "price": 227.181,
+      "changePct": 2.209472888378806,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 61662229,
+      "volume": 64073353,
       "ohlc": [
         {
           "d": "06-22",
@@ -2085,24 +2085,24 @@
         {
           "d": "09-21",
           "o": 222.93499755859375,
-          "h": 227.3699951171875,
+          "h": 227.6699981689453,
           "l": 221.55999755859375,
-          "c": 227.27999877929688
+          "c": 227.18099975585938
         }
       ],
-      "relVolume": 0.4578758425351653,
-      "marketCap": 5545632000000
+      "relVolume": 0.4757797595822892,
+      "marketCap": 5543216400000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 498.145,
-      "changePct": 0.8839949461634643,
+      "price": 498.8,
+      "changePct": 1.0166448673664568,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 11220123,
+      "volume": 11644829,
       "ohlc": [
         {
           "d": "06-22",
@@ -2548,24 +2548,24 @@
         {
           "d": "09-21",
           "o": 495.5799865722656,
-          "h": 498.2226867675781,
+          "h": 499,
           "l": 491.3299865722656,
-          "c": 498.1449890136719
+          "c": 498.79998779296875
         }
       ],
-      "relVolume": 0.5330238630077181,
-      "marketCap": 3701217350000
+      "relVolume": 0.5531999727315202,
+      "marketCap": 3706084000000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 359.875,
-      "changePct": 0.6333756721616117,
+      "price": 360.89,
+      "changePct": 0.9172085319850448,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 12906527,
+      "volume": 13319447,
       "ohlc": [
         {
           "d": "06-22",
@@ -3011,24 +3011,24 @@
         {
           "d": "09-21",
           "o": 358.8599853515625,
-          "h": 361.29998779296875,
+          "h": 361.42999267578125,
           "l": 353.5,
-          "c": 359.875
+          "c": 360.8900146484375
         }
       ],
-      "relVolume": 0.481056858069608,
-      "marketCap": 1770585000000
+      "relVolume": 0.49644736535589057,
+      "marketCap": 1775578800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 356.465,
-      "changePct": 1.9811717181664972,
+      "price": 356.03,
+      "changePct": 1.8567231434798472,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 14719369,
+      "volume": 15154180,
       "ohlc": [
         {
           "d": "06-22",
@@ -3476,22 +3476,22 @@
           "o": 350.6700134277344,
           "h": 357.5799865722656,
           "l": 349.1000061035156,
-          "c": 356.4649963378906
+          "c": 356.0299987792969
         }
       ],
-      "relVolume": 0.5792836606472238,
-      "marketCap": 4348872999999.9995
+      "relVolume": 0.5963957330308756,
+      "marketCap": 4343565999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 258.96,
-      "changePct": 2.069285641985672,
+      "price": 257.945,
+      "changePct": 1.66922884327845,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 21880755,
+      "volume": 22838861,
       "ohlc": [
         {
           "d": "06-22",
@@ -3937,24 +3937,24 @@
         {
           "d": "09-21",
           "o": 256.5199890136719,
-          "h": 258.989990234375,
+          "h": 259.05999755859375,
           "l": 253.60000610351562,
-          "c": 258.9599914550781
+          "c": 257.94500732421875
         }
       ],
-      "relVolume": 0.6659203726103741,
-      "marketCap": 2770872000000
+      "relVolume": 0.6950794351984902,
+      "marketCap": 2760011500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 743.5,
-      "changePct": 11.678558017273751,
+      "price": 743.87,
+      "changePct": 11.734133701417575,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 28995744,
+      "volume": 30830893,
       "ohlc": [
         {
           "d": "06-22",
@@ -4402,22 +4402,22 @@
           "o": 680.3800048828125,
           "h": 744.489990234375,
           "l": 679.5999755859375,
-          "c": 743.5
+          "c": 743.8699951171875
         }
       ],
-      "relVolume": 1.5525642353957894,
-      "marketCap": 1873620000000
+      "relVolume": 1.650826473606416,
+      "marketCap": 1874552400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 442.635,
-      "changePct": 1.8324236988606617,
+      "price": 442.725,
+      "changePct": 1.8531282184066338,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 5503756,
+      "volume": 5622699,
       "ohlc": [
         {
           "d": "06-22",
@@ -4865,22 +4865,22 @@
           "o": 440.79998779296875,
           "h": 443.3800048828125,
           "l": 437.07000732421875,
-          "c": 442.635009765625
+          "c": 442.7250061035156
         }
       ],
-      "relVolume": 0.5616925821450587,
-      "marketCap": 2297275650000
+      "relVolume": 0.5738314561790965,
+      "marketCap": 2297742750000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 607.365,
-      "changePct": 8.49290527100091,
+      "price": 608.74,
+      "changePct": 8.738519929643088,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 30469046,
+      "volume": 31087517,
       "ohlc": [
         {
           "d": "06-22",
@@ -5328,22 +5328,22 @@
           "o": 583.9400024414062,
           "h": 615.989990234375,
           "l": 582.27001953125,
-          "c": 607.364990234375
+          "c": 608.739990234375
         }
       ],
-      "relVolume": 1.5988563647311782,
-      "marketCap": 983931300000
+      "relVolume": 1.6313104919379067,
+      "marketCap": 986158800000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 181.84,
-      "changePct": 2.3642791094000377,
+      "price": 181.74,
+      "changePct": 2.308042173836296,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 12453717,
+      "volume": 12778562,
       "ohlc": [
         {
           "d": "06-22",
@@ -5791,22 +5791,22 @@
           "o": 178.72500610351562,
           "h": 183.3800048828125,
           "l": 176.75999450683594,
-          "c": 181.83990478515625
+          "c": 181.74000549316406
         }
       ],
-      "relVolume": 0.4316833450638744,
-      "marketCap": 436416000000
+      "relVolume": 0.4429434512817429,
+      "marketCap": 436176000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 148.78,
-      "changePct": 0.7926279819168723,
+      "price": 149.26,
+      "changePct": 1.1178063069316624,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 13837663,
+      "volume": 14137348,
       "ohlc": [
         {
           "d": "06-22",
@@ -6254,29 +6254,29 @@
           "o": 148.92999267578125,
           "h": 149.97000122070312,
           "l": 146.1699981689453,
-          "c": 148.77999877929688
+          "c": 149.25999450683594
         }
       ],
-      "relVolume": 0.45660589163974774,
-      "marketCap": 418071800000
+      "relVolume": 0.46649469559718315,
+      "marketCap": 419420600000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.71/hr",
-      "trend": "↑ 4% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$1.94 – $3.49/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.84/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $4.94/hr",
+      "trend": "↓ 11% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6284,7 +6284,7 @@
       "rate": "$5.98 – $9.39/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6305,14 +6305,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.71 – $1.59/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$0.67 – $1.59/hr",
+      "trend": "→ 3% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-21T17:45:21.392Z",
+    "updatedAt": "2026-09-21T18:00:33.444Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6327,10 +6327,10 @@
         "storyCoverage": 0.8670520231213873,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 2460,
+        "rawCommentHits": 2459,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 41,
-        "commentCoverage": 0.12195121951219512,
+        "validatedCommentCount": 40,
+        "commentCoverage": 0.12200081333875559,
         "limited": false,
         "points": 70,
         "themes": [
@@ -6420,17 +6420,17 @@
         "storyCoverage": 0.37174721189591076,
         "estimatedRelevantDiscussions": 81,
         "isEstimated": true,
-        "rawCommentHits": 5925,
+        "rawCommentHits": 5930,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 28,
-        "commentCoverage": 0.05063291139240506,
+        "validatedCommentCount": 27,
+        "commentCoverage": 0.050590219224283306,
         "limited": false,
         "points": 199,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 17
+            "count": 16
           },
           {
             "id": "reasoning",
@@ -6440,7 +6440,7 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 8
+            "count": 7
           },
           {
             "id": "price",
@@ -6601,10 +6601,10 @@
         "storyCoverage": 0.5791505791505791,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 10300,
+        "rawCommentHits": 10312,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 26,
-        "commentCoverage": 0.02912621359223301,
+        "validatedCommentCount": 25,
+        "commentCoverage": 0.02909231962761831,
         "limited": false,
         "points": 54,
         "themes": [
@@ -6616,7 +6616,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 7
+            "count": 6
           },
           {
             "id": "coding",
@@ -6683,16 +6683,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 66,
-        "fetchedStoryCount": 66,
+        "rawStoryHits": 69,
+        "fetchedStoryCount": 69,
         "validatedStoryCount": 7,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 481,
+        "rawCommentHits": 482,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.6237006237006237,
+        "commentCoverage": 0.6224066390041494,
         "limited": true,
         "points": 41,
         "themes": [
@@ -6771,28 +6771,28 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 107,
-        "fetchedStoryCount": 107,
+        "rawStoryHits": 112,
+        "fetchedStoryCount": 112,
         "validatedStoryCount": 19,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": false,
-        "rawCommentHits": 823,
+        "rawCommentHits": 825,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 58,
-        "commentCoverage": 0.3645200486026732,
+        "validatedCommentCount": 57,
+        "commentCoverage": 0.36363636363636365,
         "limited": false,
         "points": 745,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 24
+            "count": 23
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 21
+            "count": 20
           },
           {
             "id": "price",
@@ -6841,7 +6841,7 @@
           {
             "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
             "points": 232,
-            "comments": 91,
+            "comments": 92,
             "url": "https://cactuscompute.com/needle",
             "date": "SEP 18 2026"
           }
@@ -6865,10 +6865,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": false,
-        "rawCommentHits": 4538,
+        "rawCommentHits": 4541,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.06610841780520053,
+        "commentCoverage": 0.06606474344857961,
         "limited": false,
         "points": 639,
         "themes": [
@@ -7051,14 +7051,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding",
-          "writing"
+          "price",
+          "context"
         ],
-        "excerpt": "…Let’s say Anthropic needs a new research result to improve Claude. Are we really already at the point where we burn tokens ad infinitum and arrive at the end of scientific…",
+        "excerpt": "…to be on the similar iteration with leading companies (claude opus 5). I wonder if other Chinese labs like Kimi/Moonshot will follow…",
         "source": "Hacker News",
-        "author": "ipnon",
-        "publishedAt": "2026-09-19T14:04:17.000Z",
-        "url": "https://news.ycombinator.com/item?id=49766688"
+        "author": "nh43215rgb",
+        "publishedAt": "2026-09-20T06:26:07.000Z",
+        "url": "https://news.ycombinator.com/item?id=49773017"
       },
       {
         "modelId": "gemini",
@@ -7188,13 +7188,14 @@
       {
         "modelId": "grok",
         "themes": [
+          "speed",
           "price"
         ],
-        "excerpt": "What is this opinion even based on? Grok 4.6 is the best model in terms of intelligence per token. And 4.6 heavy is almost on par with the SOTA models.4.7 in two weeks might be…",
+        "excerpt": "… even get in to discussing Google agents for obvious reasons, grok I never used though Grok bot looks interesting.For skills I make my own, but most important is the custom setup…",
         "source": "Hacker News",
-        "author": "Rover222",
-        "publishedAt": "2026-09-03T15:48:51.000Z",
-        "url": "https://news.ycombinator.com/item?id=49551997"
+        "author": "nowittyusername",
+        "publishedAt": "2026-09-17T16:04:12.000Z",
+        "url": "https://news.ycombinator.com/item?id=49742775"
       },
       {
         "modelId": "llama",
@@ -7258,18 +7259,6 @@
       {
         "modelId": "deepseek",
         "themes": [
-          "speed",
-          "price"
-        ],
-        "excerpt": "…so I am now experimenting with cheaper alternatives like Deepseek 4.1 flash and so on. I don't trust Anthropic as the downgrade my models consistently and its rare i get to…",
-        "source": "Hacker News",
-        "author": "nowittyusername",
-        "publishedAt": "2026-09-17T16:04:12.000Z",
-        "url": "https://news.ycombinator.com/item?id=49742775"
-      },
-      {
-        "modelId": "deepseek",
-        "themes": [
           "local"
         ],
         "excerpt": "Check out DeepSeek v4.1 Flash, just released, and I am enjoying it more than Claude. No one can run it locally.. Yet.. But give it a few years and I wouldn't be surprised if…",
@@ -7288,6 +7277,17 @@
         "author": "irthomasthomas",
         "publishedAt": "2026-09-16T11:42:49.000Z",
         "url": "https://news.ycombinator.com/item?id=49725259"
+      },
+      {
+        "modelId": "deepseek",
+        "themes": [
+          "price"
+        ],
+        "excerpt": "… 5th overall. Extremely cheap and easy to set up and run with Deepseek v4 flash and Exa.Made to be configurable for provider, search engine and effort. Additionally, it has…",
+        "source": "Hacker News",
+        "author": "beneadie01",
+        "publishedAt": "2026-09-13T17:14:23.000Z",
+        "url": "https://news.ycombinator.com/item?id=49686187"
       },
       {
         "modelId": "qwen",
