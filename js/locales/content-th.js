@@ -359,5 +359,6 @@ export const CONTENT_TH = {
   "CHATGPT DECIDE TODO LO QUE HAGO EN EL TECLADO SATISFACTORIO": "CHATGPT ตัดสินใจทุกอย่างที่ผมทำบนคีย์บอร์ดอย่างน่าพอใจ",
   "HOY LA INTELIGENCIA ARTIFICIAL CONTROLA EL JUEGO. Chatgpt pondrá varios retos para pasar cada etapa del teclado y así ...": "วันนี้ปัญญาประดิษฐ์เป็นผู้ควบคุมเกม Chatgpt จะตั้งโจทย์หลายข้อให้ผ่านด่านคีย์บอร์ดแต่ละด่าน และดังนั้น...",
   "OpenAI hacked, Jev, Google’s RSI, Qwen 3.8 Omni, Bonsai 2, new Gemini Live: AI NEWS": "OpenAI ถูกแฮ็ก, Jev, RSI ของ Google, Qwen 3.8 Omni, Bonsai 2, Gemini Live รุ่นใหม่: ข่าว AI",
-  "HUGE AI NEWS: Jev, Laya, Bonsai 2 27B, Dream RSI, Gemini 3.8 Live, Qwen 3.8 Live & more #ai #ainews #aitools #aivideo #agi ...": "ข่าวใหญ่ในวงการ AI: Jev, Laya, Bonsai 2 27B, Dream RSI, Gemini 3.8 Live, Qwen 3.8 Live และอื่นๆ อีกมากมาย #ai #ainews #aitools #aivideo #agi ..."
+  "HUGE AI NEWS: Jev, Laya, Bonsai 2 27B, Dream RSI, Gemini 3.8 Live, Qwen 3.8 Live & more #ai #ainews #aitools #aivideo #agi ...": "ข่าวใหญ่ในวงการ AI: Jev, Laya, Bonsai 2 27B, Dream RSI, Gemini 3.8 Live, Qwen 3.8 Live และอื่นๆ อีกมากมาย #ai #ainews #aitools #aivideo #agi ...",
+  "Live from 10 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่าใช้งาน 10 รายการบน Vast.ai และ RunPod"
 };
