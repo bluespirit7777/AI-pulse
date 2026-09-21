@@ -417,5 +417,11 @@ export const CONTENT_TH = {
   "…Here's a test comparing Astra (currently SOTA at this) vs Grok 4.7:Designs: https://image.non.io/78795662-8bfc-4e14-8d72-3738392aa6b3.we...Astra's build:…": "…นี่คือการทดสอบเปรียบเทียบระหว่าง Astra (ซึ่งปัจจุบันเป็น SOTA ในเรื่องนี้) กับ Grok 4.7: การออกแบบ: https://image.non.io/78795662-8bfc-4e14-8d72-3738392aa6b3.we... การสร้างของ Astra:…",
   "…to no incentive beyond the next great coding agent like Qwen 3.8.…": "…โดยไม่มีแรงจูงใจอื่นใดนอกเหนือไปจาก Coding Agent ตัวถัดไปที่ยอดเยี่ยมอย่าง Qwen 3.8.…",
   "Higgsfield AI ships new video features in a day with GPT-6 Astra": "Higgsfield AI เปิดตัวฟีเจอร์วิดีโอใหม่ภายในวันเดียวด้วย GPT-6 Astra",
-  "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.": "ด้วย GPT-6 Astra ทำให้ Higgsfield AI ช่วยให้ธุรกิจขนาดเล็กสร้างโฆษณาวิดีโอได้ง่ายขึ้น และนำเครื่องมือสร้างสรรค์ใหม่ๆ ออกสู่ตลาดได้รวดเร็วยิ่งขึ้น"
+  "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.": "ด้วย GPT-6 Astra ทำให้ Higgsfield AI ช่วยให้ธุรกิจขนาดเล็กสร้างโฆษณาวิดีโอได้ง่ายขึ้น และนำเครื่องมือสร้างสรรค์ใหม่ๆ ออกสู่ตลาดได้รวดเร็วยิ่งขึ้น",
+  "Anthropic’s CEO: How to Build a 1 Person Business with Claude": "ซีอีโอของ Anthropic เผยวิธีสร้างธุรกิจแบบคนเดียวด้วย Claude",
+  "Get qualified and enriched leads with Clay: ...": "หาลูกค้ากลุ่มเป้าหมายที่มีคุณภาพและข้อมูลครบถ้วนด้วย Clay: ...",
+  "Can ChatGPT 6 Astra Edit better than a Real Video Editor ?": "ChatGPT 6 Astra ตัดต่อวิดีโอได้ดีกว่านักตัดต่อมืออาชีพจริงหรือ?",
+  "Get Music From Epidemic Sound : https://share.epidemicsound.com/abhaySEP26 Everyone is talking about ChatGPT 6 Astra and ...": "รับเพลงจาก Epidemic Sound ได้ที่ : https://share.epidemicsound.com/abhaySEP26 ตอนนี้ทุกคนกำลังพูดถึง ChatGPT 6 Astra และ ...",
+  "【最強AI】Gemini Notebookを徹底解説しました【NotebookLM】【神アップデート】": "【สุดยอด AI】เจาะลึก Gemini Notebook แบบละเอียด【NotebookLM】【อัปเดตขั้นเทพ】",
+  "期間限定の『AI副業シークレットコンテンツ』】 ここなのAI副業シークレットコンテンツはこちらから受け取れます ...": "【คอนเทนต์ลับสร้างรายได้เสริมด้วย AI สำหรับช่วงเวลาจำกัด】 รับคอนเทนต์ลับสร้างรายได้เสริมด้วย AI ของ Cocona ได้ที่นี่ ..."
 };
