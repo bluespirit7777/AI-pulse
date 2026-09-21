@@ -1,4 +1,4 @@
-// Interface translations. Publisher headlines and model names remain original.
+// Base interface translations; editorial refinements and content live alongside this file.
 export const TH = {
  'Includes a related video from another model’s collection in the same publication window.':'มีวิดีโอที่เกี่ยวข้องจากชุดของโมเดลอื่น ซึ่งเผยแพร่ในช่วงเวลาเดียวกัน','Related collection':'จากชุดวิดีโอที่เกี่ยวข้อง',
  'Quick look':'ดูแบบย่อ','Story preview':'อ่านข่าวแบบย่อ','FROM THE ORIGINAL SOURCE':'จากแหล่งข่าวต้นฉบับ','This is the publisher’s excerpt. Open the source for the complete story.':'นี่คือข้อความย่อจากผู้เผยแพร่ เปิดต้นฉบับเพื่ออ่านข่าวฉบับเต็ม','Read the full story':'อ่านข่าวฉบับเต็ม','AI Pulse — Understand what’s happening in AI':'AI Pulse — เข้าใจความเปลี่ยนแปลงในโลก AI',

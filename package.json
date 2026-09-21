@@ -5,10 +5,12 @@
   "description": "AI Pulse â€” a living visual map of where AI energy is moving. Static site, no backend.",
   "type": "module",
   "scripts": {
-    "build": "node scripts/update-data.mjs",
+    "build": "node scripts/update-data.mjs && npm run translate",
     "validate": "node scripts/validate.mjs",
-    "test": "node --test test/signals.test.mjs test/history.test.mjs test/stocks.test.mjs test/dates.test.mjs test/models.test.mjs test/community.test.mjs test/leaderboard.test.mjs test/text.test.mjs test/compute.test.mjs test/chart.test.mjs test/youtube.test.mjs test/discourse.test.mjs test/github-discussions.test.mjs test/landing.test.mjs test/render-state.test.mjs test/continuity.test.mjs test/summary-input.test.mjs test/vocab.test.mjs test/experience.test.mjs test/presentation.test.mjs",
-    "check": "npm run validate && npm test"
+    "test": "node --test test/signals.test.mjs test/history.test.mjs test/stocks.test.mjs test/dates.test.mjs test/models.test.mjs test/community.test.mjs test/leaderboard.test.mjs test/text.test.mjs test/compute.test.mjs test/chart.test.mjs test/youtube.test.mjs test/discourse.test.mjs test/github-discussions.test.mjs test/landing.test.mjs test/render-state.test.mjs test/continuity.test.mjs test/summary-input.test.mjs test/vocab.test.mjs test/experience.test.mjs test/presentation.test.mjs test/localization.test.mjs",
+    "check": "npm run validate && npm run check:translations && npm test",
+    "translate": "node scripts/update-translations.mjs",
+    "check:translations": "node scripts/update-translations.mjs --check"
   },
   "engines": {
     "node": ">=20"

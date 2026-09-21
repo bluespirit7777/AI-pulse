@@ -32,6 +32,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # Community Pulse's GitHub Discussions source (GraphQL needs auth even for public repos); absent locally is a graceful per-model skip, never an error
         run: node scripts/update-data.mjs
 
+      - name: Translate new reader-facing content
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL }}
+        run: npm run translate
+
       - name: Validate data + run unit tests
         run: npm run check
 
@@ -39,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ js/locales/content-th.js
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
@@ -49,7 +55,7 @@ jobs:
           # workflow) landing on main between checkout and push. A bare `git
           # push` then gets rejected as non-fast-forward. Retry: fetch + rebase
           # our one generated-data commit onto the new tip and push again.
-          # `git add data/` (not a fixed file list) so every file the build
+          # `git add data/ js/locales/content-th.js` (not a fixed file list) so every file the build
           # script writes is always included — a previously-missed one
           # (data/compute-history.json) sat unstaged forever, which is
           # harmless for a plain push but made `git rebase` refuse to run at
@@ -74,7 +80,7 @@ jobs:
             if ! git rebase origin/main; then
               git rebase --abort 2>/dev/null || true
               git reset --soft origin/main
-              git add data/
+              git add data/ js/locales/content-th.js
               git commit -m "chore: refresh data snapshot [skip ci]" || echo "Nothing to commit — remote already matches."
             fi
             sleep $((RANDOM % 5 + 1))

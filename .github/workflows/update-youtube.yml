@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-youtube
+  group: update-data
   cancel-in-progress: false
 
 jobs:
@@ -31,6 +31,12 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: node scripts/update-youtube.mjs
 
+      - name: Translate new reader-facing content
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TRANSLATION_MODEL: ${{ vars.TRANSLATION_MODEL }}
+        run: npm run translate
+
       - name: Validate data
         run: npm run validate
 
@@ -38,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/youtube-trending.json
+          git add data/youtube-trending.json js/locales/content-th.js
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
@@ -67,7 +73,7 @@ jobs:
             if ! git rebase origin/main; then
               git rebase --abort 2>/dev/null || true
               git reset --soft origin/main
-              git add data/youtube-trending.json
+              git add data/youtube-trending.json js/locales/content-th.js
               git commit -m "chore: refresh YouTube trending videos [skip ci]" || echo "Nothing to commit — remote already matches."
             fi
             sleep $((RANDOM % 5 + 1))

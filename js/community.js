@@ -147,7 +147,7 @@ export function renderCommunity(root, community) {
                   const theme = (m.themes || []).find((t) => t.id === tid);
                   return theme ? `<span class="cc-theme-tag">${esc(theme.label)}</span>` : '';
                 }).join('')}</div>
-                <p class="cc-comment-excerpt" translate="no">${esc(c.excerpt)}</p>
+                <p class="cc-comment-excerpt">${esc(c.excerpt)}</p>
                 <div class="cc-comment-meta">
                   <span>${esc(c.author || 'anon')} · ${esc(timeAgo(c.publishedAt))}</span>
                   <a href="${esc(c.url)}" target="_blank" rel="noopener">Read on ${esc(c.source || 'source')}</a>
