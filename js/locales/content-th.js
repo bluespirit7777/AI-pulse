@@ -423,5 +423,6 @@ export const CONTENT_TH = {
   "Can ChatGPT 6 Astra Edit better than a Real Video Editor ?": "ChatGPT 6 Astra ตัดต่อวิดีโอได้ดีกว่านักตัดต่อมืออาชีพจริงหรือ?",
   "Get Music From Epidemic Sound : https://share.epidemicsound.com/abhaySEP26 Everyone is talking about ChatGPT 6 Astra and ...": "รับเพลงจาก Epidemic Sound ได้ที่ : https://share.epidemicsound.com/abhaySEP26 ตอนนี้ทุกคนกำลังพูดถึง ChatGPT 6 Astra และ ...",
   "【最強AI】Gemini Notebookを徹底解説しました【NotebookLM】【神アップデート】": "【สุดยอด AI】เจาะลึก Gemini Notebook แบบละเอียด【NotebookLM】【อัปเดตขั้นเทพ】",
-  "期間限定の『AI副業シークレットコンテンツ』】 ここなのAI副業シークレットコンテンツはこちらから受け取れます ...": "【คอนเทนต์ลับสร้างรายได้เสริมด้วย AI สำหรับช่วงเวลาจำกัด】 รับคอนเทนต์ลับสร้างรายได้เสริมด้วย AI ของ Cocona ได้ที่นี่ ..."
+  "期間限定の『AI副業シークレットコンテンツ』】 ここなのAI副業シークレットコンテンツはこちらから受け取れます ...": "【คอนเทนต์ลับสร้างรายได้เสริมด้วย AI สำหรับช่วงเวลาจำกัด】 รับคอนเทนต์ลับสร้างรายได้เสริมด้วย AI ของ Cocona ได้ที่นี่ ...",
+  "The page says> We always use the latest available Claude Code release and the SOTA modelThey've stepped up the benchmark for each new model. Presumably they're gathering Fable…": "ในหน้าเว็บระบุว่า เราใช้งาน Claude Code เวอร์ชันล่าสุดที่เปิดให้ใช้งานอยู่เสมอ รวมถึงใช้โมเดลระดับ SOTA ด้วย พวกเขาได้ยกระดับเกณฑ์มาตรฐานสำหรับโมเดลรุ่นใหม่แต่ละรุ่นขึ้นไปอีก คาดว่าพวกเขากำลังรวบรวม Fable…"
 };
