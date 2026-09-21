@@ -44,7 +44,7 @@ test('translation provider keeps model overrides scoped to the selected provider
   assert.deepEqual(selectTranslationProvider({GEMINI_API_KEY:'gemini-test',TRANSLATION_MODEL:'gpt-5.5'}),{name:'gemini',apiKey:'gemini-test',model:'gemini-3.1-flash-lite'});
   assert.deepEqual(selectTranslationProvider({GEMINI_API_KEY:'gemini-test',GEMINI_TRANSLATION_MODEL:'gemini-custom'}),{name:'gemini',apiKey:'gemini-test',model:'gemini-custom'});
   assert.deepEqual(selectTranslationProvider({OPENAI_API_KEY:'openai-test',GEMINI_API_KEY:'gemini-test',OPENAI_TRANSLATION_MODEL:'openai-custom',GEMINI_TRANSLATION_MODEL:'gemini-custom'}),{name:'openai',apiKey:'openai-test',model:'openai-custom'});
-  assert.deepEqual(selectTranslationProvider({OPENAI_API_KEY:'openai-test',TRANSLATION_MODEL:'legacy-openai'}),{name:'openai',apiKey:'openai-test',model:'legacy-openai'});
+  assert.deepEqual(selectTranslationProvider({OPENAI_API_KEY:'openai-test',TRANSLATION_MODEL:'gemini-3.1-flash-lite'}),{name:'openai',apiKey:'openai-test',model:'gpt-5.5'});
   assert.throws(()=>selectTranslationProvider({}),/OPENAI_API_KEY or GEMINI_API_KEY/);
 });
 test('translation workflows expose provider-specific model variables',async()=>{

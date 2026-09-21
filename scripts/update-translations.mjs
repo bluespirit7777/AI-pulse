@@ -23,7 +23,7 @@ export function parseGeminiTranslations(response, count) {
 }
 
 export function selectTranslationProvider(env=process.env) {
-  if(env.OPENAI_API_KEY)return {name:'openai',apiKey:env.OPENAI_API_KEY,model:env.OPENAI_TRANSLATION_MODEL||env.TRANSLATION_MODEL||'gpt-5.5'};
+  if(env.OPENAI_API_KEY)return {name:'openai',apiKey:env.OPENAI_API_KEY,model:env.OPENAI_TRANSLATION_MODEL||'gpt-5.5'};
   if(env.GEMINI_API_KEY)return {name:'gemini',apiKey:env.GEMINI_API_KEY,model:env.GEMINI_TRANSLATION_MODEL||'gemini-3.1-flash-lite'};
   throw new Error('Set OPENAI_API_KEY or GEMINI_API_KEY to translate new strings before publishing.');
 }
