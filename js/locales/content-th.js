@@ -364,5 +364,6 @@ export const CONTENT_TH = {
   "How to connect AI usage to business value": "วิธีการเชื่อมโยงการใช้งาน AI เข้ากับมูลค่าทางธุรกิจ",
   "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.": "เรียนรู้วิธีที่ระบบวิเคราะห์ของ ChatGPT Work และ Codex จะช่วยให้ทีมเข้าใจการใช้งานและค่าใช้จ่ายด้าน AI ระบุความต้องการในการฝึกอบรม และเชื่อมโยงการนำไปใช้งานให้เข้ากับผลลัพธ์ทางธุรกิจ",
   "A group of AI agents asked to solve a series of math problems split into rival factions—when some cheated, others tried to stop them. That whistleblowing behavior, seen for the first time in a recent experiment run by Google DeepMind, could have implications for alignment researchers trying to keep swarms of autonomous AI agents in…": "กลุ่มของ AI agent ที่ได้รับมอบหมายให้แก้โจทย์ปัญหาคณิตศาสตร์ชุดหนึ่งได้แตกออกเป็นฝ่ายคู่แข่งกัน เมื่อมีบางตัวโกง ตัวอื่นๆ ก็พยายามหยุดพวกมัน พฤติกรรมการเปิดโปงความไม่ชอบมาพากลนี้ ซึ่งถูกพบเป็นครั้งแรกในการทดลองล่าสุดโดย Google DeepMind อาจส่งผลกระทบต่อนักวิจัยด้านการปรับจูน AI ที่พยายามควบคุมกลุ่ม AI agent อิสระให้ทำงานอยู่ภายใน...",
-  "Live from 6 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่า 6 รายการผ่าน Vast.ai และ RunPod"
+  "Live from 6 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่า 6 รายการผ่าน Vast.ai และ RunPod",
+  "Live from 3 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากบริการเช่าคอมพิวเตอร์ 3 เครื่องผ่าน Vast.ai และ RunPod"
 };
