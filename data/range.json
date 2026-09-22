@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-22T13:00:34.749Z",
-  "historyDepthDays": 59.5,
+  "generatedAt": "2026-09-22T13:15:24.214Z",
+  "historyDepthDays": 59.6,
   "ranges": {
     "24H": {
       "entityActivity": {
@@ -16,7 +16,7 @@
         "qwen": 0,
         "mistral": 0,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
@@ -38,7 +38,7 @@
         "qwen": 0,
         "mistral": 0,
         "azure": 0,
-        "aws": 0,
+        "aws": 1,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
@@ -48,7 +48,7 @@
         "broadcom": 0
       },
       "categoryCounts": {
-        "general": 18,
+        "general": 20,
         "capital": 3,
         "analysis": 3,
         "market": 2,
@@ -77,9 +77,14 @@
           "id": "claude",
           "count": 2,
           "delta": 2
+        },
+        {
+          "id": "aws",
+          "count": 1,
+          "delta": 1
         }
       ],
-      "eventCount": 34,
+      "eventCount": 36,
       "previousWindowComplete": true
     },
     "7D": {
@@ -96,7 +101,7 @@
         "qwen": 0,
         "mistral": 0,
         "azure": 0,
-        "aws": 1,
+        "aws": 2,
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
@@ -118,7 +123,7 @@
         "qwen": -5,
         "mistral": -2,
         "azure": 0,
-        "aws": 1,
+        "aws": 2,
         "gcp": -2,
         "oracle": 0,
         "coreweave": 0,
@@ -130,7 +135,7 @@
       "categoryCounts": {
         "analysis": 35,
         "product": 74,
-        "general": 388,
+        "general": 390,
         "capital": 32,
         "adoption": 15,
         "policy": 44,
@@ -172,17 +177,17 @@
           "delta": -3
         },
         {
+          "id": "aws",
+          "count": 2,
+          "delta": 2
+        },
+        {
           "id": "amd",
           "count": 2,
           "delta": -4
-        },
-        {
-          "id": "aws",
-          "count": 1,
-          "delta": 1
         }
       ],
-      "eventCount": 684,
+      "eventCount": 686,
       "previousWindowComplete": true
     },
     "30D": {
@@ -199,7 +204,7 @@
         "qwen": 5,
         "mistral": 2,
         "azure": 0,
-        "aws": 2,
+        "aws": 3,
         "gcp": 2,
         "oracle": 0,
         "coreweave": 5,
@@ -212,7 +217,7 @@
       "categoryCounts": {
         "analysis": 248,
         "orggov": 117,
-        "general": 2935,
+        "general": 2937,
         "policy": 256,
         "capital": 344,
         "product": 407,
@@ -264,7 +269,7 @@
           "delta": null
         }
       ],
-      "eventCount": 5018,
+      "eventCount": 5020,
       "previousWindowComplete": false
     }
   },
@@ -1219,7 +1224,7 @@
         "product": 31,
         "opensource": 5,
         "research": 20,
-        "general": 189,
+        "general": 191,
         "analysis": 20,
         "market": 8,
         "capital": 11,

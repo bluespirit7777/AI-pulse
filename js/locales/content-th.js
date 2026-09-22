@@ -465,5 +465,9 @@ export const CONTENT_TH = {
   "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once again": "การเข้าจดทะเบียนในตลาดหลักทรัพย์ (IPO) ของ Nscale จะเป็นบทพิสูจน์ความต้องการของ Wall Street ที่มีต่อการลงทุนใน AI แบบกระจุกตัวอีกครั้ง",
   "The British AI data center developer depends on tech giants Microsoft and Anthropic for most of its revenue.": "บริษัทผู้พัฒนาศูนย์ข้อมูล AI จากอังกฤษรายนี้ต้องพึ่งพายักษ์ใหญ่ด้านเทคโนโลยีอย่าง Microsoft และ Anthropic สำหรับรายได้ส่วนใหญ่ของบริษัท",
   "Nscale’s IPO will test Wall Street’s appetite for concentrated AI bets once aga…": "การเข้าจดทะเบียนในตลาดหลักทรัพย์ (IPO) ของ Nscale จะเป็นบทพิสูจน์ความต้องการของ Wall Street ที่มีต่อการลงทุนใน AI แบบกระจุกตัวอีกคร…",
-  "Anthropic says human error let Claude AI models escape test environment and hac…": "Anthropic เผยว่าความผิดพลาดจากฝีมือมนุษย์ทำให้โมเดล AI อย่าง Claude หลุดออกไปจากสภาพแวดล้อมที่ใช้ทดสอบและ..."
+  "Anthropic says human error let Claude AI models escape test environment and hac…": "Anthropic เผยว่าความผิดพลาดจากฝีมือมนุษย์ทำให้โมเดล AI อย่าง Claude หลุดออกไปจากสภาพแวดล้อมที่ใช้ทดสอบและ...",
+  "AI Models Built From Rat Brains Just Got Closer to Reality": "โมเดล AI ที่สร้างจากสมองหนูกำลังเข้าใกล้ความจริงไปอีกขั้น",
+  "The Biological Computing Company is bringing its AI tools to Amazon Web Services in a major boost for a once-fringe field that aims to marry nature with code.": "The Biological Computing Company กำลังนำเครื่องมือ AI ของพวกเขาขึ้นสู่ Amazon Web Services ซึ่งถือเป็นการยกระดับครั้งใหญ่ให้กับสาขาที่เคยถูกมองว่าเป็นเรื่องเฉพาะกลุ่ม ซึ่งมีเป้าหมายเพื่อผสานธรรมชาติเข้ากับรหัสคอมพิวเตอร์",
+  "Viture’s Vonder Glasses Are Meant to Map Your Mind": "แว่นตา Vonder ของ Viture ออกแบบมาเพื่อทำแผนที่ความคิดของคุณ",
+  "…W26), we help marketing teams get recommended by AI Search (ChatGPT, Google AI Overviews, AI Mode, Claude, etc.). Our software monitors prompts, sees which web pages get cited,…": "…W26) เราช่วยให้ทีมการตลาดได้รับการแนะนำโดย AI Search (ไม่ว่าจะเป็น ChatGPT, Google AI Overviews, AI Mode, Claude ฯลฯ) ซอฟต์แวร์ของเราจะคอยติดตามคำสั่ง (prompts) และตรวจสอบว่าหน้าเว็บใดบ้างที่ถูกนำไปอ้างอิง…"
 };
