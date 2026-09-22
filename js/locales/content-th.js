@@ -515,5 +515,11 @@ export const CONTENT_TH = {
   "Meta admits Muse’s likeness to OpenClaw isn’t a coincidence": "Meta ยอมรับว่าความคล้ายคลึงกันระหว่าง Muse กับ OpenClaw นั้นไม่ใช่เรื่องบังเอิญ",
   "Microsoft disrupts AI-assisted platform that compromised 12,000": "Microsoft จัดการปิดแพลตฟอร์มที่ใช้ AI ช่วยโจมตีซึ่งส่งผลกระทบต่อผู้ใช้กว่า 12,000 ราย",
   "Training a model to identify AI-generated web content from structure alone": "การฝึกสอนโมเดลเพื่อระบุเนื้อหาบนเว็บที่สร้างโดย AI จากโครงสร้างเพียงอย่างเดียว",
-  "…canceled all my Claude subscriptions.With Qwen 3.8, DeepSeek 4.1 Flash, GLM 5.3 I’ve been getting Opus 5-level performance, with less blah blah and no overengineered…": "…ยกเลิกการสมัครสมาชิก Claude ทั้งหมดของฉันแล้ว ด้วย Qwen 3.8, DeepSeek 4.1 Flash, GLM 5.3 ฉันได้รับประสิทธิภาพในระดับเดียวกับ Opus 5 โดยมีการเกริ่นที่น้อยกว่าและไม่มีอะไรที่ซับซ้อนเกินจำเป็น…"
+  "…canceled all my Claude subscriptions.With Qwen 3.8, DeepSeek 4.1 Flash, GLM 5.3 I’ve been getting Opus 5-level performance, with less blah blah and no overengineered…": "…ยกเลิกการสมัครสมาชิก Claude ทั้งหมดของฉันแล้ว ด้วย Qwen 3.8, DeepSeek 4.1 Flash, GLM 5.3 ฉันได้รับประสิทธิภาพในระดับเดียวกับ Opus 5 โดยมีการเกริ่นที่น้อยกว่าและไม่มีอะไรที่ซับซ้อนเกินจำเป็น…",
+  "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026": "จากผู้ใช้กลุ่มแรกสู่หลักพันล้าน: Robby Stein จาก Google เตรียมขึ้นเวที TechCrunch Disrupt 2026",
+  "From first users to billions: Google’s Robby Stein joins TechCrunch Disrupt 2026. Lean in on this Builders Stage session. Save up to $200 before September 25.": "จากผู้ใช้กลุ่มแรกสู่หลักพันล้าน: Robby Stein จาก Google เตรียมขึ้นเวที TechCrunch Disrupt 2026 ห้ามพลาดช่วง Builders Stage นี้ ประหยัดสูงสุด $200 หากจองก่อนวันที่ 25 กันยายน",
+  "Better prompt caching for GPT-6": "การแคชพรอมต์ที่ดีขึ้นสำหรับ GPT-6",
+  "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.": "เรียนรู้วิธีที่ GPT-6 ปรับปรุงการแคชพรอมต์ให้ดียิ่งขึ้น ด้วยอัตรา Cache Hit ที่สูงขึ้น ระบบวินิจฉัยใหม่ จุดพัก (Breakpoints) ที่ชัดเจน และการควบคุมที่ช่วยลดความหน่วงและค่าใช้จ่าย",
+  "Qualcomm launches two new smartphone chips with emphasis on AI": "Qualcomm เปิดตัวชิปสมาร์ตโฟนรุ่นใหม่ 2 รุ่น เน้นศักยภาพด้าน AI",
+  "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts": "Microsoft จัดการแพลตฟอร์มช่วย AI ที่ก่อเหตุโจมตีและส่งผลกระทบต่อบัญชีผู้ใช้กว่า 12,000 บัญชี"
 };
