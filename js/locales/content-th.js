@@ -449,5 +449,7 @@ export const CONTENT_TH = {
   "Gemini 4 RSI Leak Destroys Astra and Fable in Benchmarks": "Gemini 4 รุ่นใหม่ที่หลุดออกมาทำคะแนนนำโด่งเหนือ Astra และ Fable ในการทดสอบประสิทธิภาพ",
   "Google's Gemini 4 may have leaked through Arena, with benchmark claims putting it ahead of OpenAI's GPT-6 Astra and ...": "เป็นไปได้ว่า Gemini 4 จาก Google อาจหลุดออกมาให้เห็นบน Arena แล้ว โดยผลการทดสอบอ้างว่าโมเดลรุ่นนี้มีประสิทธิภาพเหนือกว่า GPT-6 Astra ของ OpenAI และ...",
   "How to Use AI With Your Privacy Intact": "วิธีใช้งาน AI โดยที่ความเป็นส่วนตัวของคุณยังคงปลอดภัย",
-  "Your conversations with AI chatbots are both highly personal and deeply vulnerable to surveillance. Here’s how you can protect yourself.": "บทสนทนาระหว่างคุณกับแชทบอท AI นั้นมีความเป็นส่วนตัวสูงมากและเสี่ยงต่อการถูกสอดแนม นี่คือวิธีที่คุณสามารถปกป้องตัวเองได้"
+  "Your conversations with AI chatbots are both highly personal and deeply vulnerable to surveillance. Here’s how you can protect yourself.": "บทสนทนาระหว่างคุณกับแชทบอท AI นั้นมีความเป็นส่วนตัวสูงมากและเสี่ยงต่อการถูกสอดแนม นี่คือวิธีที่คุณสามารถปกป้องตัวเองได้",
+  "A New Chatbot Wants to Unlock the Secrets in Tattered Ancient Greek Records": "แชทบอตตัวใหม่ที่หวังจะไขความลับจากบันทึกกรีกโบราณที่ขาดวิ่น",
+  "In the hope of uncovering new details about ancient life, researchers have developed a large language model that fills in the gaps in papyrus fragments.": "นักวิจัยได้พัฒนาโมเดลภาษาขนาดใหญ่เพื่อเติมเต็มช่องว่างในเศษกระดาษปาปิรุส โดยหวังว่าจะช่วยเปิดเผยรายละเอียดใหม่ๆ เกี่ยวกับวิถีชีวิตในสมัยโบราณ"
 };
