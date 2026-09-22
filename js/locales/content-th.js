@@ -523,5 +523,8 @@ export const CONTENT_TH = {
   "Qualcomm launches two new smartphone chips with emphasis on AI": "Qualcomm เปิดตัวชิปสมาร์ตโฟนรุ่นใหม่ 2 รุ่น เน้นศักยภาพด้าน AI",
   "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts": "Microsoft จัดการแพลตฟอร์มช่วย AI ที่ก่อเหตุโจมตีและส่งผลกระทบต่อบัญชีผู้ใช้กว่า 12,000 บัญชี",
   "Show HN: Training a model to identify AI web content from structure alone": "Show HN: ฝึกโมเดลเพื่อระบุเนื้อหาบนเว็บที่สร้างโดย AI จากโครงสร้างเพียงอย่างเดียว",
-  "…yes, can be triggering for people who have to deal with Claude doing this as well.Claude seems overly apt to reach for \"coinages\", or neologism (yes, aha, I learnt that…": "…ใช่ครับ เรื่องนี้อาจจะไปกระตุ้นความรู้สึกคนกลุ่มที่ต้องเจอปัญหาแบบเดียวกันกับ Claude ได้เหมือนกัน ดูเหมือนว่า Claude จะชอบใช้คำที่ \"บัญญัติขึ้นใหม่\" หรือคำศัพท์แปลกๆ มากเกินไป (ใช่ครับ อ๋อ ผมเพิ่งเรียนรู้คำนี้มา…)"
+  "…yes, can be triggering for people who have to deal with Claude doing this as well.Claude seems overly apt to reach for \"coinages\", or neologism (yes, aha, I learnt that…": "…ใช่ครับ เรื่องนี้อาจจะไปกระตุ้นความรู้สึกคนกลุ่มที่ต้องเจอปัญหาแบบเดียวกันกับ Claude ได้เหมือนกัน ดูเหมือนว่า Claude จะชอบใช้คำที่ \"บัญญัติขึ้นใหม่\" หรือคำศัพท์แปลกๆ มากเกินไป (ใช่ครับ อ๋อ ผมเพิ่งเรียนรู้คำนี้มา…)",
+  "Some people's chats with Claude AI found to be publicly available online": "พบการสนทนาของบางคนกับ Claude AI ถูกเผยแพร่เป็นสาธารณะบนโลกออนไลน์",
+  "Meta has issued a patch for its Muse macOS app following the discovery of a zero-day vulnerability that could allow someone to take control of the AI agent. The bug found by secur…": "Meta ได้ออกแพตช์สำหรับแอป Muse บน macOS หลังจากมีการค้นพบช่องโหว่ Zero-day ที่อาจเปิดช่องให้ผู้ไม่หวังดีเข้ามาควบคุม AI agent ได้ โดยข้อผิดพลาดที่พบโดยนักวิจัยด้านความปลอดภัย...",
+  "Rabbit’s new AI agent doesn’t need an R1 to run": "AI agent ตัวใหม่ของ Rabbit ไม่จำเป็นต้องใช้เครื่อง R1 ในการรัน"
 };
