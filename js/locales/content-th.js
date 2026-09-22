@@ -447,5 +447,7 @@ export const CONTENT_TH = {
   "…talk or output. This is high/xhigh, via Cursor, not via X Grok/UltraGrok if that make different.Grok 4.6/4.7 feel like you are less tokens because Cursor gives you double the…": "…พูดหรือแสดงผล นี่คือระดับ high/xhigh ผ่านทาง Cursor ไม่ใช่ผ่านทาง X Grok/UltraGrok หากนั่นสร้างความแตกต่างนะ Grok 4.6/4.7 ให้ความรู้สึกเหมือนว่าคุณได้รับโทเค็นน้อยลง เพราะ Cursor ให้คุณเป็นสองเท่าของ…",
   "…for search, took me maybe an evening to build it with Claude.…": "…สำหรับงานค้นหา ผมใช้เวลาแค่เย็นวันเดียวก็สร้างมันขึ้นมาได้ด้วย Claude…",
   "Gemini 4 RSI Leak Destroys Astra and Fable in Benchmarks": "Gemini 4 รุ่นใหม่ที่หลุดออกมาทำคะแนนนำโด่งเหนือ Astra และ Fable ในการทดสอบประสิทธิภาพ",
-  "Google's Gemini 4 may have leaked through Arena, with benchmark claims putting it ahead of OpenAI's GPT-6 Astra and ...": "เป็นไปได้ว่า Gemini 4 จาก Google อาจหลุดออกมาให้เห็นบน Arena แล้ว โดยผลการทดสอบอ้างว่าโมเดลรุ่นนี้มีประสิทธิภาพเหนือกว่า GPT-6 Astra ของ OpenAI และ..."
+  "Google's Gemini 4 may have leaked through Arena, with benchmark claims putting it ahead of OpenAI's GPT-6 Astra and ...": "เป็นไปได้ว่า Gemini 4 จาก Google อาจหลุดออกมาให้เห็นบน Arena แล้ว โดยผลการทดสอบอ้างว่าโมเดลรุ่นนี้มีประสิทธิภาพเหนือกว่า GPT-6 Astra ของ OpenAI และ...",
+  "How to Use AI With Your Privacy Intact": "วิธีใช้งาน AI โดยที่ความเป็นส่วนตัวของคุณยังคงปลอดภัย",
+  "Your conversations with AI chatbots are both highly personal and deeply vulnerable to surveillance. Here’s how you can protect yourself.": "บทสนทนาระหว่างคุณกับแชทบอท AI นั้นมีความเป็นส่วนตัวสูงมากและเสี่ยงต่อการถูกสอดแนม นี่คือวิธีที่คุณสามารถปกป้องตัวเองได้"
 };
