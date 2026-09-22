@@ -521,5 +521,7 @@ export const CONTENT_TH = {
   "Better prompt caching for GPT-6": "การแคชพรอมต์ที่ดีขึ้นสำหรับ GPT-6",
   "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.": "เรียนรู้วิธีที่ GPT-6 ปรับปรุงการแคชพรอมต์ให้ดียิ่งขึ้น ด้วยอัตรา Cache Hit ที่สูงขึ้น ระบบวินิจฉัยใหม่ จุดพัก (Breakpoints) ที่ชัดเจน และการควบคุมที่ช่วยลดความหน่วงและค่าใช้จ่าย",
   "Qualcomm launches two new smartphone chips with emphasis on AI": "Qualcomm เปิดตัวชิปสมาร์ตโฟนรุ่นใหม่ 2 รุ่น เน้นศักยภาพด้าน AI",
-  "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts": "Microsoft จัดการแพลตฟอร์มช่วย AI ที่ก่อเหตุโจมตีและส่งผลกระทบต่อบัญชีผู้ใช้กว่า 12,000 บัญชี"
+  "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts": "Microsoft จัดการแพลตฟอร์มช่วย AI ที่ก่อเหตุโจมตีและส่งผลกระทบต่อบัญชีผู้ใช้กว่า 12,000 บัญชี",
+  "Show HN: Training a model to identify AI web content from structure alone": "Show HN: ฝึกโมเดลเพื่อระบุเนื้อหาบนเว็บที่สร้างโดย AI จากโครงสร้างเพียงอย่างเดียว",
+  "…yes, can be triggering for people who have to deal with Claude doing this as well.Claude seems overly apt to reach for \"coinages\", or neologism (yes, aha, I learnt that…": "…ใช่ครับ เรื่องนี้อาจจะไปกระตุ้นความรู้สึกคนกลุ่มที่ต้องเจอปัญหาแบบเดียวกันกับ Claude ได้เหมือนกัน ดูเหมือนว่า Claude จะชอบใช้คำที่ \"บัญญัติขึ้นใหม่\" หรือคำศัพท์แปลกๆ มากเกินไป (ใช่ครับ อ๋อ ผมเพิ่งเรียนรู้คำนี้มา…)"
 };
