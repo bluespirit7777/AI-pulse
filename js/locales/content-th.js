@@ -473,5 +473,8 @@ export const CONTENT_TH = {
   "Everyone can find a reason to dislike data center construction": "ทุกคนสามารถหาเหตุผลที่จะไม่ชอบการสร้างศูนย์ข้อมูลได้",
   "Inside two years of fraught AI data center debates in Pennsylvania.": "บทสรุป 2 ปีแห่งการถกเถียงอันดุเดือดเกี่ยวกับศูนย์ข้อมูล AI ในรัฐเพนซิลเวเนีย",
   "Roundtables: The Deadly Failures of The Virtual Border Wall": "วงเสวนา: ความล้มเหลวร้ายแรงของกำแพงเสมือนจริงตามแนวชายแดน",
-  "Dyson’s most overengineered gadget may have a waterproofing problem": "อุปกรณ์ที่ออกแบบมาซับซ้อนเกินจำเป็นที่สุดของ Dyson อาจกำลังเจอปัญหาเรื่องการกันน้ำ"
+  "Dyson’s most overengineered gadget may have a waterproofing problem": "อุปกรณ์ที่ออกแบบมาซับซ้อนเกินจำเป็นที่สุดของ Dyson อาจกำลังเจอปัญหาเรื่องการกันน้ำ",
+  "AstroForge is putting AI in command of its next spacecraft": "AstroForge กำลังนำ AI มาใช้ควบคุมยานอวกาศลำต่อไปของบริษัท",
+  "…of today’s high school and college kids are reaching for chatGPT before Google (which is incidentally OpenAI’s goal), and that many of them would rather talk to chatGPT than…": "…ของเด็กนักเรียนและนักศึกษาสมัยนี้ที่หันไปพึ่งพา ChatGPT ก่อน Google (ซึ่งนับว่าเป็นเป้าหมายของ OpenAI อยู่แล้ว) และหลายคนยอมที่จะคุยกับ ChatGPT มากกว่า…",
+  "…each blog post, five AI models (GPT-5.4, Claude Sonnet 4.6, Gemini 3 Flash, DeepSeek V3.2, Kimi K2.5) wrote their own version.Instead of looking at the words, we looked at how…": "…ในบล็อกโพสต์แต่ละชิ้น โมเดล AI จำนวน 5 ตัว (GPT-5.4, Claude Sonnet 4.6, Gemini 3 Flash, DeepSeek V3.2, Kimi K2.5) ได้เขียนเนื้อหาในเวอร์ชันของตัวเองขึ้นมา แทนที่จะดูที่ตัวคำศัพท์ เรากลับดูที่วิธีที่…"
 };
