@@ -512,5 +512,8 @@ export const CONTENT_TH = {
   "Just providing a quick update on the Gemini 3.1 Flash Live Preview issues. Google appears to have mostly fixed the performance issues with users paying for their AI usage (prepay…": "ขออัปเดตสั้นๆ เกี่ยวกับปัญหาของ Gemini 3.1 Flash Live Preview ดูเหมือนว่า Google จะแก้ไขปัญหาด้านประสิทธิภาพสำหรับผู้ใช้งานที่ชำระค่าบริการ AI ไปแล้วเป็นส่วนใหญ่ (แบบจ่ายล่วงหน้า...",
   "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting": "ยื่นฟ้องเรียกค่าเสียหายจาก OpenAI เพื่อสร้างโรงเรียนใหม่ หลังพบมีการใช้ ChatGPT ในเหตุการณ์กราดยิง",
   "British Columbia sues OpenAI, demands Tumbler Ridge shooter’s ChatGPT logs.": "รัฐบริติชโคลัมเบียฟ้อง OpenAI เรียกร้องขอข้อมูลการใช้งาน ChatGPT ของมือปืนเหตุการณ์ Tumbler Ridge",
-  "Meta admits Muse’s likeness to OpenClaw isn’t a coincidence": "Meta ยอมรับว่าความคล้ายคลึงกันระหว่าง Muse กับ OpenClaw นั้นไม่ใช่เรื่องบังเอิญ"
+  "Meta admits Muse’s likeness to OpenClaw isn’t a coincidence": "Meta ยอมรับว่าความคล้ายคลึงกันระหว่าง Muse กับ OpenClaw นั้นไม่ใช่เรื่องบังเอิญ",
+  "Microsoft disrupts AI-assisted platform that compromised 12,000": "Microsoft จัดการปิดแพลตฟอร์มที่ใช้ AI ช่วยโจมตีซึ่งส่งผลกระทบต่อผู้ใช้กว่า 12,000 ราย",
+  "Training a model to identify AI-generated web content from structure alone": "การฝึกสอนโมเดลเพื่อระบุเนื้อหาบนเว็บที่สร้างโดย AI จากโครงสร้างเพียงอย่างเดียว",
+  "…canceled all my Claude subscriptions.With Qwen 3.8, DeepSeek 4.1 Flash, GLM 5.3 I’ve been getting Opus 5-level performance, with less blah blah and no overengineered…": "…ยกเลิกการสมัครสมาชิก Claude ทั้งหมดของฉันแล้ว ด้วย Qwen 3.8, DeepSeek 4.1 Flash, GLM 5.3 ฉันได้รับประสิทธิภาพในระดับเดียวกับ Opus 5 โดยมีการเกริ่นที่น้อยกว่าและไม่มีอะไรที่ซับซ้อนเกินจำเป็น…"
 };
