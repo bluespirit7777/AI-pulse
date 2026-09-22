@@ -445,5 +445,7 @@ export const CONTENT_TH = {
   "Hello Google AI Studio Team, I would like to report an issue with the Gemini 2.5 Pro Preview TTS, specifically when using the Kore voice. For the past four days, I have been…": "สวัสดีทีม Google AI Studio ผมต้องการรายงานปัญหาเกี่ยวกับฟีเจอร์ TTS ของ Gemini 2.5 Pro Preview โดยเฉพาะเวลาที่ใช้เสียง Kore ครับ คือตลอด 4 วันที่ผ่านมาผม…",
   "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecul…": "วิธีที่นักวิจัยใช้ Codex และ ChatGPT ในการค้นหาโมเลกุลต้านจุลชีพชนิดใหม่…",
   "…talk or output. This is high/xhigh, via Cursor, not via X Grok/UltraGrok if that make different.Grok 4.6/4.7 feel like you are less tokens because Cursor gives you double the…": "…พูดหรือแสดงผล นี่คือระดับ high/xhigh ผ่านทาง Cursor ไม่ใช่ผ่านทาง X Grok/UltraGrok หากนั่นสร้างความแตกต่างนะ Grok 4.6/4.7 ให้ความรู้สึกเหมือนว่าคุณได้รับโทเค็นน้อยลง เพราะ Cursor ให้คุณเป็นสองเท่าของ…",
-  "…for search, took me maybe an evening to build it with Claude.…": "…สำหรับงานค้นหา ผมใช้เวลาแค่เย็นวันเดียวก็สร้างมันขึ้นมาได้ด้วย Claude…"
+  "…for search, took me maybe an evening to build it with Claude.…": "…สำหรับงานค้นหา ผมใช้เวลาแค่เย็นวันเดียวก็สร้างมันขึ้นมาได้ด้วย Claude…",
+  "Gemini 4 RSI Leak Destroys Astra and Fable in Benchmarks": "Gemini 4 รุ่นใหม่ที่หลุดออกมาทำคะแนนนำโด่งเหนือ Astra และ Fable ในการทดสอบประสิทธิภาพ",
+  "Google's Gemini 4 may have leaked through Arena, with benchmark claims putting it ahead of OpenAI's GPT-6 Astra and ...": "เป็นไปได้ว่า Gemini 4 จาก Google อาจหลุดออกมาให้เห็นบน Arena แล้ว โดยผลการทดสอบอ้างว่าโมเดลรุ่นนี้มีประสิทธิภาพเหนือกว่า GPT-6 Astra ของ OpenAI และ..."
 };
