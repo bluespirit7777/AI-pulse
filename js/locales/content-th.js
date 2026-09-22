@@ -469,5 +469,9 @@ export const CONTENT_TH = {
   "AI Models Built From Rat Brains Just Got Closer to Reality": "โมเดล AI ที่สร้างจากสมองหนูกำลังเข้าใกล้ความจริงไปอีกขั้น",
   "The Biological Computing Company is bringing its AI tools to Amazon Web Services in a major boost for a once-fringe field that aims to marry nature with code.": "The Biological Computing Company กำลังนำเครื่องมือ AI ของพวกเขาขึ้นสู่ Amazon Web Services ซึ่งถือเป็นการยกระดับครั้งใหญ่ให้กับสาขาที่เคยถูกมองว่าเป็นเรื่องเฉพาะกลุ่ม ซึ่งมีเป้าหมายเพื่อผสานธรรมชาติเข้ากับรหัสคอมพิวเตอร์",
   "Viture’s Vonder Glasses Are Meant to Map Your Mind": "แว่นตา Vonder ของ Viture ออกแบบมาเพื่อทำแผนที่ความคิดของคุณ",
-  "…W26), we help marketing teams get recommended by AI Search (ChatGPT, Google AI Overviews, AI Mode, Claude, etc.). Our software monitors prompts, sees which web pages get cited,…": "…W26) เราช่วยให้ทีมการตลาดได้รับการแนะนำโดย AI Search (ไม่ว่าจะเป็น ChatGPT, Google AI Overviews, AI Mode, Claude ฯลฯ) ซอฟต์แวร์ของเราจะคอยติดตามคำสั่ง (prompts) และตรวจสอบว่าหน้าเว็บใดบ้างที่ถูกนำไปอ้างอิง…"
+  "…W26), we help marketing teams get recommended by AI Search (ChatGPT, Google AI Overviews, AI Mode, Claude, etc.). Our software monitors prompts, sees which web pages get cited,…": "…W26) เราช่วยให้ทีมการตลาดได้รับการแนะนำโดย AI Search (ไม่ว่าจะเป็น ChatGPT, Google AI Overviews, AI Mode, Claude ฯลฯ) ซอฟต์แวร์ของเราจะคอยติดตามคำสั่ง (prompts) และตรวจสอบว่าหน้าเว็บใดบ้างที่ถูกนำไปอ้างอิง…",
+  "Everyone can find a reason to dislike data center construction": "ทุกคนสามารถหาเหตุผลที่จะไม่ชอบการสร้างศูนย์ข้อมูลได้",
+  "Inside two years of fraught AI data center debates in Pennsylvania.": "บทสรุป 2 ปีแห่งการถกเถียงอันดุเดือดเกี่ยวกับศูนย์ข้อมูล AI ในรัฐเพนซิลเวเนีย",
+  "Roundtables: The Deadly Failures of The Virtual Border Wall": "วงเสวนา: ความล้มเหลวร้ายแรงของกำแพงเสมือนจริงตามแนวชายแดน",
+  "Dyson’s most overengineered gadget may have a waterproofing problem": "อุปกรณ์ที่ออกแบบมาซับซ้อนเกินจำเป็นที่สุดของ Dyson อาจกำลังเจอปัญหาเรื่องการกันน้ำ"
 };
