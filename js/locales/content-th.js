@@ -509,5 +509,7 @@ export const CONTENT_TH = {
   "Check out the rankings of the world's leading creative AI models https://youricreates.com/openart-arena Prompts: ...": "เข้าไปดูอันดับโมเดล AI สายสร้างสรรค์ชั้นนำของโลกได้ที่ https://youricreates.com/openart-arena พร้อมคำสั่ง (Prompts): ...",
   "Introducing GPT-6 Sol and Luna": "ขอแนะนำ GPT-6 รุ่น Sol และ Luna",
   "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.": "พบกับ GPT-6 รุ่น Sol และ Luna สองโมเดลใหม่ที่นำความฉลาดระดับแนวหน้ามาสู่การทำงานในทุกๆ วัน โดยมาพร้อมกับความสมดุลระหว่างประสิทธิภาพและต้นทุนที่แตกต่างกัน",
-  "Just providing a quick update on the Gemini 3.1 Flash Live Preview issues. Google appears to have mostly fixed the performance issues with users paying for their AI usage (prepay…": "ขออัปเดตสั้นๆ เกี่ยวกับปัญหาของ Gemini 3.1 Flash Live Preview ดูเหมือนว่า Google จะแก้ไขปัญหาด้านประสิทธิภาพสำหรับผู้ใช้งานที่ชำระค่าบริการ AI ไปแล้วเป็นส่วนใหญ่ (แบบจ่ายล่วงหน้า..."
+  "Just providing a quick update on the Gemini 3.1 Flash Live Preview issues. Google appears to have mostly fixed the performance issues with users paying for their AI usage (prepay…": "ขออัปเดตสั้นๆ เกี่ยวกับปัญหาของ Gemini 3.1 Flash Live Preview ดูเหมือนว่า Google จะแก้ไขปัญหาด้านประสิทธิภาพสำหรับผู้ใช้งานที่ชำระค่าบริการ AI ไปแล้วเป็นส่วนใหญ่ (แบบจ่ายล่วงหน้า...",
+  "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting": "ยื่นฟ้องเรียกค่าเสียหายจาก OpenAI เพื่อสร้างโรงเรียนใหม่ หลังพบมีการใช้ ChatGPT ในเหตุการณ์กราดยิง",
+  "British Columbia sues OpenAI, demands Tumbler Ridge shooter’s ChatGPT logs.": "รัฐบริติชโคลัมเบียฟ้อง OpenAI เรียกร้องขอข้อมูลการใช้งาน ChatGPT ของมือปืนเหตุการณ์ Tumbler Ridge"
 };
