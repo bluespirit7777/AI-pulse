@@ -494,5 +494,7 @@ export const CONTENT_TH = {
   "Andreessen Horowitz is launching an ‘academy’ with no homework and partnerships with Pala…": "Andreessen Horowitz กำลังเปิดตัว 'สถาบัน' ที่ไม่มีการบ้าน พร้อมจับมือเป็นพันธมิตรกับ Pala…",
   "Astra is just so good. And the ChatGPT subscription lets me use my own harness, so I can hook it up to exe.dev.I’ll be going about my day, have a random idea, launch a microvm on…": "Astra นี่มันดีจริงๆ แถมการสมัครสมาชิก ChatGPT ยังทำให้ฉันใช้ harness ของตัวเองได้ด้วย เลยเชื่อมต่อกับ exe.dev ได้เลย ตอนที่ฉันใช้ชีวิตไปเรื่อยๆ แล้วเกิดไอเดียสุ่มๆ ขึ้นมา ก็สามารถเปิด microvm บน…",
   "Toyota claims plan for 400,000 factory robots won’t replace human workers": "Toyota ยืนยันว่าแผนการใช้หุ่นยนต์ในโรงงานจำนวน 400,000 ตัว จะไม่เข้ามาแทนที่แรงงานมนุษย์",
-  "Toyota's push comes as automakers race to develop and deploy humanoid robots.": "ความเคลื่อนไหวของ Toyota เกิดขึ้นในขณะที่ผู้ผลิตรถยนต์รายต่างๆ กำลังเร่งแข่งขันกันพัฒนาและนำหุ่นยนต์ฮิวแมนนอยด์มาใช้งาน"
+  "Toyota's push comes as automakers race to develop and deploy humanoid robots.": "ความเคลื่อนไหวของ Toyota เกิดขึ้นในขณะที่ผู้ผลิตรถยนต์รายต่างๆ กำลังเร่งแข่งขันกันพัฒนาและนำหุ่นยนต์ฮิวแมนนอยด์มาใช้งาน",
+  "Toyota orders workers to train humanoid robots but says humans won't be replaced": "Toyota สั่งให้พนักงานฝึกหัดหุ่นยนต์ฮิวแมนนอยด์ แต่ย้ำว่ามนุษย์จะยังไม่ถูกเข้ามาแทนที่",
+  "…and validations, instead of static PRs. We used Codex and Claude Code for a while, but they have poor research 'taste' and are bad at running and comparing multiple…": "…และตรวจสอบความถูกต้อง แทนที่จะใช้ PR แบบเดิมๆ เราเคยลองใช้ Codex และ Claude Code อยู่พักหนึ่ง แต่พวกมันขาด 'รสนิยม' ในการทำวิจัยและยังไม่เก่งพอที่จะรันหรือเปรียบเทียบผลลัพธ์หลายๆ อย่าง…"
 };
