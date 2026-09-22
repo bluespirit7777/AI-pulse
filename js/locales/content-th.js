@@ -454,5 +454,6 @@ export const CONTENT_TH = {
   "In the hope of uncovering new details about ancient life, researchers have developed a large language model that fills in the gaps in papyrus fragments.": "นักวิจัยได้พัฒนาโมเดลภาษาขนาดใหญ่เพื่อเติมเต็มช่องว่างในเศษกระดาษปาปิรุส โดยหวังว่าจะช่วยเปิดเผยรายละเอียดใหม่ๆ เกี่ยวกับวิถีชีวิตในสมัยโบราณ",
   "A New Tool Found Malware That’s Guided by an AI Hive Mind—No Humans in Sight": "เครื่องมือใหม่ตรวจพบมัลแวร์ที่ถูกควบคุมโดย AI Hive Mind โดยไม่พึ่งพามนุษย์",
   "Cisco Talos researchers created a new framework for identifying malware and hacking tools that rely on AI chatbots—and quickly discovered something unusual.": "นักวิจัยจาก Cisco Talos ได้สร้างเฟรมเวิร์กใหม่ขึ้นมาเพื่อตรวจจับมัลแวร์และเครื่องมือแฮ็กที่ใช้งาน AI แชทบอท และพวกเขาได้ค้นพบสิ่งที่ผิดปกติอย่างรวดเร็ว",
-  "Patti Harrison Had Dreams of a Tech Utopia. Silicon Valley Smashed Them": "Patti Harrison เคยฝันถึงโลกยูโทเปียด้านเทคโนโลยี แต่ถูกซิลิคอนวัลเลย์ทำลายความฝันนั้นทิ้ง"
+  "Patti Harrison Had Dreams of a Tech Utopia. Silicon Valley Smashed Them": "Patti Harrison เคยฝันถึงโลกยูโทเปียด้านเทคโนโลยี แต่ถูกซิลิคอนวัลเลย์ทำลายความฝันนั้นทิ้ง",
+  "I Built AI Clones of My Coworkers. Things Got Weird": "ผมสร้างร่าง AI จำลองของเพื่อนร่วมงานขึ้นมา แล้วเรื่องมันก็เริ่มแปลกๆ"
 };
