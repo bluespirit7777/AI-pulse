@@ -545,5 +545,7 @@ export const CONTENT_TH = {
   "Live from 15 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่าใช้งาน 15 รายการบน Vast.ai และ RunPod",
   "Introducing Claude Opus 5.5": "ขอแนะนำ Claude Opus 5.5",
   "…It very well could be something in my own local memories or Claude.MD files that prevents it, but I certainly have never experienced something like that site…": "…เป็นไปได้มากว่าอาจจะมีบางอย่างอยู่ในหน่วยความจำในเครื่องของผมเอง หรือในไฟล์ Claude.MD ที่ทำให้เกิดปัญหา แต่ผมไม่เคยเจออะไรแบบที่เว็บไซต์นั้นเป็นมาก่อนเลย…",
-  "Anthropic is turning Claude Code’s auto mode on by default": "Anthropic เปิดใช้งานโหมดอัตโนมัติใน Claude Code เป็นค่าเริ่มต้นแล้ว"
+  "Anthropic is turning Claude Code’s auto mode on by default": "Anthropic เปิดใช้งานโหมดอัตโนมัติใน Claude Code เป็นค่าเริ่มต้นแล้ว",
+  "“We’re already fighting yesterday’s battle”: Greece’s prime minister gets candi…": "“เรากำลังสู้ศึกของเมื่อวานนี้อยู่”: นายกรัฐมนตรีกรีซเริ่มเปิดอกพู…",
+  "…model upgrades (such as the recent server-side rollout of Gemini 3.8 Flash on v2.5.5). We are also expanding agentic workflows across the Antigravity 2.0 desktop app, CLI, and…": "…การอัปเกรดโมเดล (เช่น การปล่อย Gemini 3.8 Flash ฝั่งเซิร์ฟเวอร์บน v2.5.5 เมื่อเร็วๆ นี้) นอกจากนี้ เรายังกำลังขยายเวิร์กโฟลว์แบบเอเจนต์ (agentic workflows) ไปยังแอปบนเดสก์ท็อป Antigravity 2.0, CLI และ…"
 };
