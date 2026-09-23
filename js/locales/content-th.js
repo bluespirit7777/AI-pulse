@@ -548,5 +548,6 @@ export const CONTENT_TH = {
   "Anthropic is turning Claude Code’s auto mode on by default": "Anthropic เปิดใช้งานโหมดอัตโนมัติใน Claude Code เป็นค่าเริ่มต้นแล้ว",
   "“We’re already fighting yesterday’s battle”: Greece’s prime minister gets candi…": "“เรากำลังสู้ศึกของเมื่อวานนี้อยู่”: นายกรัฐมนตรีกรีซเริ่มเปิดอกพู…",
   "…model upgrades (such as the recent server-side rollout of Gemini 3.8 Flash on v2.5.5). We are also expanding agentic workflows across the Antigravity 2.0 desktop app, CLI, and…": "…การอัปเกรดโมเดล (เช่น การปล่อย Gemini 3.8 Flash ฝั่งเซิร์ฟเวอร์บน v2.5.5 เมื่อเร็วๆ นี้) นอกจากนี้ เรายังกำลังขยายเวิร์กโฟลว์แบบเอเจนต์ (agentic workflows) ไปยังแอปบนเดสก์ท็อป Antigravity 2.0, CLI และ…",
-  "‘We’re already fighting yesterday’s battle’: Greece’s prime minister gets candi…": "‘เรากำลังสู้ศึกของเมื่อวาน’: นายกรัฐมนตรีกรีซได้รับคำเตือน..."
+  "‘We’re already fighting yesterday’s battle’: Greece’s prime minister gets candi…": "‘เรากำลังสู้ศึกของเมื่อวาน’: นายกรัฐมนตรีกรีซได้รับคำเตือน...",
+  "You will lose previous chats, so back them up before doing this: I deleted, %USERPROFILE% .gemini folder and %APPDATA% Antigravity, Antigravity IDE or both folders. rebooted pc…": "คุณจะสูญเสียประวัติการแชทก่อนหน้านี้ทั้งหมด ดังนั้นควรสำรองข้อมูลไว้ก่อนที่จะทำตามขั้นตอนนี้: ผมได้ลบโฟลเดอร์ %USERPROFILE% .gemini และโฟลเดอร์ %APPDATA% Antigravity, Antigravity IDE หรือทั้งสองโฟลเดอร์ทิ้งไป จากนั้นจึงรีบูตเครื่องคอมพิวเตอร์..."
 };
