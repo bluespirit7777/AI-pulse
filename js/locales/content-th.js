@@ -558,5 +558,6 @@ export const CONTENT_TH = {
   "GPT 6 Astra + Roblox Studio is Insane.": "GPT 6 Astra + Roblox Studio นี่มันบ้ามาก",
   "Try GPT-6 Astra with Higgsfield https://higgsfield.ai/s/gpt-6-astra-yt-colemnty-qqOpzs Skool Community ...": "ลองใช้ GPT-6 Astra กับ Higgsfield ได้ที่ https://higgsfield.ai/s/gpt-6-astra-yt-colemnty-qqOpzs ชุมชน Skool ...",
   "Introducing Claude Fable 5.1": "ขอแนะนำ Claude Fable 5.1",
-  "Hi team, I have been using the Gemini 2.5 Pro preview TTS model with the Achird voice for content narration. Previously, the output was consistent and clear. In recent builds,…": "สวัสดีครับทีมงาน ผมใช้งานโมเดล Gemini 2.5 Pro รุ่นพรีวิวสำหรับแปลงข้อความเป็นเสียง (TTS) โดยใช้เสียงที่ชื่อว่า Achird เพื่อบรรยายเนื้อหาอยู่ครับ เมื่อก่อนนี้ผลลัพธ์ที่ได้มีความสม่ำเสมอและชัดเจนดี แต่ในบิลด์ช่วงหลังๆ มานี้..."
+  "Hi team, I have been using the Gemini 2.5 Pro preview TTS model with the Achird voice for content narration. Previously, the output was consistent and clear. In recent builds,…": "สวัสดีครับทีมงาน ผมใช้งานโมเดล Gemini 2.5 Pro รุ่นพรีวิวสำหรับแปลงข้อความเป็นเสียง (TTS) โดยใช้เสียงที่ชื่อว่า Achird เพื่อบรรยายเนื้อหาอยู่ครับ เมื่อก่อนนี้ผลลัพธ์ที่ได้มีความสม่ำเสมอและชัดเจนดี แต่ในบิลด์ช่วงหลังๆ มานี้...",
+  "AT&T Is Automating Away Jobs—and Its Old Telecom Empire": "AT&T กำลังเปลี่ยนงานให้เป็นระบบอัตโนมัติ ซึ่งส่งผลกระทบต่ออาณาจักรโทรคมนาคมยุคเก่าของบริษัท"
 };
