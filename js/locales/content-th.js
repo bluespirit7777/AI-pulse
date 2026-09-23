@@ -557,5 +557,6 @@ export const CONTENT_TH = {
   "Join my AI Accelerator to get all my courses, skills & tech help: https://c.benai.co/cjd4n-accelerator ➡️ Work with my AI Agency: ...": "เข้าร่วม AI Accelerator ของผมเพื่อรับคอร์สเรียน ทักษะ และความช่วยเหลือด้านเทคโนโลยีทั้งหมดได้ที่: https://c.benai.co/cjd4n-accelerator ➡️ ร่วมงานกับเอเจนซี่ AI ของผม: ...",
   "GPT 6 Astra + Roblox Studio is Insane.": "GPT 6 Astra + Roblox Studio นี่มันบ้ามาก",
   "Try GPT-6 Astra with Higgsfield https://higgsfield.ai/s/gpt-6-astra-yt-colemnty-qqOpzs Skool Community ...": "ลองใช้ GPT-6 Astra กับ Higgsfield ได้ที่ https://higgsfield.ai/s/gpt-6-astra-yt-colemnty-qqOpzs ชุมชน Skool ...",
-  "Introducing Claude Fable 5.1": "ขอแนะนำ Claude Fable 5.1"
+  "Introducing Claude Fable 5.1": "ขอแนะนำ Claude Fable 5.1",
+  "Hi team, I have been using the Gemini 2.5 Pro preview TTS model with the Achird voice for content narration. Previously, the output was consistent and clear. In recent builds,…": "สวัสดีครับทีมงาน ผมใช้งานโมเดล Gemini 2.5 Pro รุ่นพรีวิวสำหรับแปลงข้อความเป็นเสียง (TTS) โดยใช้เสียงที่ชื่อว่า Achird เพื่อบรรยายเนื้อหาอยู่ครับ เมื่อก่อนนี้ผลลัพธ์ที่ได้มีความสม่ำเสมอและชัดเจนดี แต่ในบิลด์ช่วงหลังๆ มานี้..."
 };
