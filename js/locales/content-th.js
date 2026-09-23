@@ -559,5 +559,7 @@ export const CONTENT_TH = {
   "Try GPT-6 Astra with Higgsfield https://higgsfield.ai/s/gpt-6-astra-yt-colemnty-qqOpzs Skool Community ...": "ลองใช้ GPT-6 Astra กับ Higgsfield ได้ที่ https://higgsfield.ai/s/gpt-6-astra-yt-colemnty-qqOpzs ชุมชน Skool ...",
   "Introducing Claude Fable 5.1": "ขอแนะนำ Claude Fable 5.1",
   "Hi team, I have been using the Gemini 2.5 Pro preview TTS model with the Achird voice for content narration. Previously, the output was consistent and clear. In recent builds,…": "สวัสดีครับทีมงาน ผมใช้งานโมเดล Gemini 2.5 Pro รุ่นพรีวิวสำหรับแปลงข้อความเป็นเสียง (TTS) โดยใช้เสียงที่ชื่อว่า Achird เพื่อบรรยายเนื้อหาอยู่ครับ เมื่อก่อนนี้ผลลัพธ์ที่ได้มีความสม่ำเสมอและชัดเจนดี แต่ในบิลด์ช่วงหลังๆ มานี้...",
-  "AT&T Is Automating Away Jobs—and Its Old Telecom Empire": "AT&T กำลังเปลี่ยนงานให้เป็นระบบอัตโนมัติ ซึ่งส่งผลกระทบต่ออาณาจักรโทรคมนาคมยุคเก่าของบริษัท"
+  "AT&T Is Automating Away Jobs—and Its Old Telecom Empire": "AT&T กำลังเปลี่ยนงานให้เป็นระบบอัตโนมัติ ซึ่งส่งผลกระทบต่ออาณาจักรโทรคมนาคมยุคเก่าของบริษัท",
+  "Grab and OpenAI bring practical AI skills to Southeast Asia": "Grab และ OpenAI จับมือร่วมกันยกระดับทักษะ AI ที่นำไปใช้ได้จริงในเอเชียตะวันออกเฉียงใต้",
+  "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia.": "OpenAI และ Grab เปิดตัวโครงการ GO Forward with AI ซึ่งเป็นโครงการระดับภูมิภาคที่จะช่วยให้พาร์ทเนอร์กว่า 30,000 รายสามารถสร้างทักษะด้าน AI ที่นำไปใช้ประโยชน์ได้จริงทั่วภูมิภาคเอเชียตะวันออกเฉียงใต้"
 };
