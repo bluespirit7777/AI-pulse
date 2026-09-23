@@ -543,5 +543,6 @@ export const CONTENT_TH = {
   "OpenAI wants to consult elite mathematicians about how to not fumble again": "OpenAI ต้องการขอคำปรึกษาจากเหล่านักคณิตศาสตร์ระดับหัวกะทิ เพื่อหาทางป้องกันไม่ให้พลาดซ้ำสอง",
   "After turning a string of spectacular mathematical results into a reputational crisis, OpenAI is consulting human mathematicians to help it figure out a less disastrous path forward. On Monday, the company announced a new independent panel of mathematicians tasked with advising it and other AI companies on their interactions with mathematical research and the wider […]": "หลังจากที่เปลี่ยนผลลัพธ์ทางคณิตศาสตร์อันน่าทึ่งให้กลายเป็นวิกฤตทางชื่อเสียง ตอนนี้ OpenAI กำลังหันไปปรึกษากับนักคณิตศาสตร์ที่เป็นมนุษย์เพื่อหาแนวทางที่หายนะน้อยกว่าเดิม โดยเมื่อวันจันทร์ที่ผ่านมา บริษัทได้ประกาศจัดตั้งคณะกรรมการอิสระที่ประกอบด้วยนักคณิตศาสตร์ ซึ่งมีหน้าที่ให้คำแนะนำแก่ OpenAI และบริษัท AI อื่นๆ เกี่ยวกับการนำผลงานวิจัยทางคณิตศาสตร์ไปปรับใช้และการดำเนินงานในวงกว้าง [...]",
   "Live from 15 rented offers across Vast.ai + RunPod": "ถ่ายทอดสดจากข้อเสนอเช่าใช้งาน 15 รายการบน Vast.ai และ RunPod",
-  "Introducing Claude Opus 5.5": "ขอแนะนำ Claude Opus 5.5"
+  "Introducing Claude Opus 5.5": "ขอแนะนำ Claude Opus 5.5",
+  "…It very well could be something in my own local memories or Claude.MD files that prevents it, but I certainly have never experienced something like that site…": "…เป็นไปได้มากว่าอาจจะมีบางอย่างอยู่ในหน่วยความจำในเครื่องของผมเอง หรือในไฟล์ Claude.MD ที่ทำให้เกิดปัญหา แต่ผมไม่เคยเจออะไรแบบที่เว็บไซต์นั้นเป็นมาก่อนเลย…"
 };
