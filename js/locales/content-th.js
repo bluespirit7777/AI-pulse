@@ -654,5 +654,7 @@ export const CONTENT_TH = {
   "But maybe the biggest reveal is that Anthropic has not let Claude run loose in its biology lab. Humans are still, so far, in the loop.": "แต่สิ่งที่อาจเป็นประเด็นสำคัญที่สุดคือ Anthropic ยังไม่ได้ปล่อยให้ Claude เข้าไปทำงานในห้องแล็บชีววิทยาโดยไร้การควบคุม โดยที่มนุษย์ยังคงมีส่วนร่วมในกระบวนการทำงานอยู่จนถึงขณะนี้",
   "…be discovered. While OpenAI/Anthrophic and now Google with Gemini produce a series of crimes so far unheard of at scale.Kevin Mitnick had much harder punishment for…": "…ให้ถูกค้นพบ ในขณะที่ OpenAI/Anthropic และล่าสุดคือ Google กับ Gemini กำลังสร้างปัญหาต่าง ๆ ที่ไม่เคยเกิดขึ้นมาก่อนในขนาดที่ใหญ่ขนาดนี้ ซึ่ง Kevin Mitnick กลับได้รับบทลงโทษที่หนักกว่ามากสำหรับ…",
   "…reputable inference providers for deepseek v4 flash or qwen 3.8-flash-next or similar class of open weight LLMs that fit in under 170GB of RAM, so I don't see the point. I…": "...ผู้ให้บริการอนุมานที่มีชื่อเสียงสำหรับ DeepSeek V4 Flash หรือ Qwen 3.8-Flash-Next หรือ LLM แบบเปิดเผยน้ำหนัก (Open Weight) ระดับเดียวกันที่ใช้ RAM น้อยกว่า 170GB ดังนั้นผมเลยไม่เห็นความจำเป็นครับ ผม...",
-  "Meta is making Muse more powerful and will let you video chat with it, too": "Meta กำลังยกระดับ Muse ให้เก่งขึ้นกว่าเดิม แถมยังเปิดให้คุณวิดีโอแชทโต้ตอบกับมันได้ด้วย"
+  "Meta is making Muse more powerful and will let you video chat with it, too": "Meta กำลังยกระดับ Muse ให้เก่งขึ้นกว่าเดิม แถมยังเปิดให้คุณวิดีโอแชทโต้ตอบกับมันได้ด้วย",
+  "Meta introduces camera-free AI glasses": "Meta เปิดตัวแว่นตา AI รุ่นไร้กล้อง",
+  "Meta says the camera-free glasses will be lighter and have up to 12 hours battery life.": "Meta ระบุว่าแว่นตารุ่นไร้กล้องนี้จะมีน้ำหนักเบากว่าเดิมและมาพร้อมแบตเตอรี่ที่ใช้งานได้นานสูงสุด 12 ชั่วโมง"
 };
