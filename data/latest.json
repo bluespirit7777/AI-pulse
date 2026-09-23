@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-23T21:00:36.170Z",
+  "updatedAt": "2026-09-23T21:30:28.450Z",
   "build": {
-    "sha": "d70824b6920b8767a2e7c2ebc266ca453c9f1dfc",
-    "shortSha": "d70824b",
+    "sha": "338a77d0b274d3e43ebe3cbb7a0e812b79994b83",
+    "shortSha": "338a77d",
     "ref": "main",
-    "builtAt": "2026-09-23T21:01:00.886Z"
+    "builtAt": "2026-09-23T21:30:47.638Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.9,
     "estimatedDatasets": 4,
-    "buildSha": "d70824b",
-    "lastSuccessfulUpdate": "2026-09-23T21:00:36.170Z"
+    "buildSha": "338a77d",
+    "lastSuccessfulUpdate": "2026-09-23T21:30:28.450Z"
   },
   "ticker": [
     "INSIDE ANTHROPIC'S MOLECULAR BIOLOGY LAB",
     "ANTHROPIC’S BIOLAB MADE A DISCOVERY IT’S COMPARING TO CRISPR",
     "GOOGLE BEAM EXPANDS WITH NEW REGIONS, PARTNERS, AND CUSTOMERS",
     "EMA RAISES $77M AS AI STARTS EATING INTO ENTERPRISE SOFTWARE AND SERVICES",
+    "SAM ALTMAN’S REMARKS AT THE UNITED NATIONS SECURITY COUNCIL",
     "RINGG’S AI AGENTS RESOLVE UP TO 65% OF CUSTOMER CALLS WITH OPENAI",
     "THE AI HYPE INDEX: AI LOVES CHEATING",
     "LAWSUIT DEMANDS OPENAI PAY FOR NEW SCHOOL AFTER CHATGPT USED IN SHOOTING",
     "AIRBNB WIDENS ACCESS TO GPT-6 ASTRA AND OPENAI FRONTIER MODELS",
-    "GRAB AND OPENAI BRING PRACTICAL AI SKILLS TO SOUTHEAST ASIA",
-    "ANDREESSEN HOROWITZ IS LAUNCHING AN ‘ACADEMY’ WITH NO HOMEWORK AND PARTNERSHIPS WITH PALANTIR, GOOGLE, AND ME…"
+    "GRAB AND OPENAI BRING PRACTICAL AI SKILLS TO SOUTHEAST ASIA"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -66,7 +66,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -131,6 +131,32 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "clusterId": "1ke56x9",
+      "title": "Sam Altman’s remarks at the United Nations Security Council",
+      "desc": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "dateISO": "2026-09-23T12:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 70,
+      "impact": "high",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -462,6 +488,32 @@
       "entityIds": []
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5",
+      "clusterId": "2qoc4v",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5",
+      "dateISO": "2026-09-23T18:14:17.000Z",
+      "date": "SEP 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "anthropic.com",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5"
+        }
+      ],
+      "sourceName": "anthropic.com",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://openai.com/index/two-years-of-openai-academy",
       "clusterId": "imx9ta",
       "title": "Two years of OpenAI Academy",
@@ -512,78 +564,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/",
-      "clusterId": "18bpdrt",
-      "title": "Enveda secures $311M to bring more nature-derived AI drugs into clinical trials",
-      "desc": "The round valued the AI biotech at $2 billion. It is currently testing drugs that treat skin conditions and preserve weight loss after stopping GLP-1s.",
-      "url": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/",
-      "dateISO": "2026-09-23T19:31:28.000Z",
-      "date": "SEP 23 2026",
-      "category": "capital",
-      "catConfidence": 0.78,
-      "family": "market",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
-      "clusterId": "1f2s6ay",
-      "title": "Even Americans who use AI every day are worried about it",
-      "desc": "The report suggests that greater exposure will not resolve the unease around the technology, nor reduce public support for AI regulation.",
-      "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
-      "dateISO": "2026-09-23T16:49:58.000Z",
-      "date": "SEP 23 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
-      "clusterId": "1u3ijh",
-      "title": "Bernie Sanders proposes banning ‘superintelligence’ and putting violators in prison",
-      "desc": "Sen. Bernie Sanders (I-VT) and Rep. Greg Casar (D-TX) have introduced new legislation that would ban anyone from developing artificial superintelligence - a technology the bill describes as capable of the \"destruction or disempowerment of humanity,\" including by overthrowing the government. Under the Ban Artificial Superintelligence Act, AI leaders would face up to 20 years […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
-      "dateISO": "2026-09-23T16:23:05.000Z",
-      "date": "SEP 23 2026",
-      "category": "policy",
-      "catConfidence": 0.62,
-      "family": "market",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
       "id": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
       "clusterId": "108o9nz",
       "title": "Gemini 3.8 text-to-speech says hello",
@@ -605,32 +585,6 @@
         }
       ],
       "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
-      "clusterId": "o3vesp",
-      "title": "YouTube will let you build your own algorithm with AI",
-      "desc": "YouTube’s new custom feeds let users describe the videos they want to see in their own words, then use Gemini to build a personalized feed around the request.",
-      "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
-      "dateISO": "2026-09-23T14:30:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/"
-        }
-      ],
-      "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
       ]
@@ -688,6 +642,104 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/",
+      "clusterId": "18bpdrt",
+      "title": "Enveda secures $311M to bring more nature-derived AI drugs into clinical trials",
+      "desc": "The round valued the AI biotech at $2 billion. It is currently testing drugs that treat skin conditions and preserve weight loss after stopping GLP-1s.",
+      "url": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/",
+      "dateISO": "2026-09-23T19:31:28.000Z",
+      "date": "SEP 23 2026",
+      "category": "capital",
+      "catConfidence": 0.78,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/enveda-secures-311m-to-bring-more-nature-derived-ai-drugs-into-clinical-trials/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
+      "clusterId": "1f2s6ay",
+      "title": "Even Americans who use AI every day are worried about it",
+      "desc": "The report suggests that greater exposure will not resolve the unease around the technology, nor reduce public support for AI regulation.",
+      "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
+      "dateISO": "2026-09-23T16:49:58.000Z",
+      "date": "SEP 23 2026",
+      "category": "policy",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+      "clusterId": "1u3ijh",
+      "title": "Bernie Sanders proposes banning ‘superintelligence’ and putting violators in prison",
+      "desc": "Sen. Bernie Sanders (I-VT) and Rep. Greg Casar (D-TX) have introduced new legislation that would ban anyone from developing artificial superintelligence - a technology the bill describes as capable of the \"destruction or disempowerment of humanity,\" including by overthrowing the government. Under the Ban Artificial Superintelligence Act, AI leaders would face up to 20 years […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+      "dateISO": "2026-09-23T16:23:05.000Z",
+      "date": "SEP 23 2026",
+      "category": "policy",
+      "catConfidence": 0.62,
+      "family": "market",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
+      "clusterId": "o3vesp",
+      "title": "YouTube will let you build your own algorithm with AI",
+      "desc": "YouTube’s new custom feeds let users describe the videos they want to see in their own words, then use Gemini to build a personalized feed around the request.",
+      "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
+      "dateISO": "2026-09-23T14:30:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/999249/openai-creators-patreon-execs-hire-sam-yam",
       "clusterId": "d1c6de",
       "title": "OpenAI nabs key Patreon execs ahead of upcoming announcement",
@@ -698,7 +750,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 53,
+      "significance": 52,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -726,11 +778,11 @@
       "family": "product",
       "significance": 52,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 3,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
         },
         {
@@ -738,11 +790,11 @@
           "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -827,7 +879,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 49,
+      "significance": 48,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -1023,11 +1075,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "cbsnews.com",
+          "name": "CBS News",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1sYU85M1h2UmRpRWhzdWdqNGFrM0gycTJBR2YyMm80VU1MdTFuQUFieVFhb2hZV0tIM1RRc3RiV0JRWDJvbl9RQWNvMlRLMFJDRlg2Nm93TG0xbFZqekVVa1g4MVNtM3RFdm1OaGpJVEFRZkNGZGdmRWVfZzR6TVU?oc=5"
         }
       ],
-      "sourceName": "cbsnews.com",
+      "sourceName": "CBS News",
       "entityIds": [
         "gpt",
         "claude"
@@ -1044,8 +1096,8 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 45,
-      "impact": "notable",
+      "significance": 44,
+      "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -1058,58 +1110,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "clusterId": "1wtfps8",
-      "title": "Disrupting a new covert influence campaign from Russia",
-      "desc": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
-      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "dateISO": "2026-08-25T00:00:00.000Z",
-      "date": "AUG 25 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/apple-is-getting-this-wrong",
-      "clusterId": "pj09wm",
-      "title": "Apple is getting this wrong",
-      "desc": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
-      "url": "https://openai.com/index/apple-is-getting-this-wrong",
-      "dateISO": "2026-08-03T22:00:00.000Z",
-      "date": "AUG 03 2026",
-      "category": "policy",
-      "catConfidence": 0.45,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/apple-is-getting-this-wrong"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1118,7 +1118,7 @@
       "category": "product",
       "title": "Inside Anthropic's molecular biology lab",
       "summary": "Some of the biggest discoveries in biology started with someone noticing something strange in one of the many molecular machines found in nature. We’re introducing a new molecular…",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "date": "SEP 23 2026",
@@ -1192,7 +1192,7 @@
     "chatgpt": 30,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 98,
+    "gpt": 99,
     "claude": 76,
     "gemini": 28,
     "grok": 0,
@@ -1265,7 +1265,7 @@
           "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "VentureBeat",
+          "sourceName": "venturebeat.com",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1391,7 +1391,19 @@
       "date": "SEP 23 2026",
       "verification": "single",
       "impact": "emerging",
-      "h": "China silent as US touts plan for AI safety alerts that omits tech experts",
+      "h": "A US-China AI Hotline Won't Be Ready For a While",
+      "p": "As the US and China race to become the dominant power in the AI industry, the countries also appear to be figuring out ways to communicate on national security issues.",
+      "url": "https://www.wired.com/story/a-us-china-ai-hotline-wont-be-ready-for-a-while/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 23 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Trump’s China rivalry and “AI race” delusion may endanger US, experts say",
       "p": "Trump focus on winning “AI race” may deter China from sharing safety intel.",
       "url": "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/",
       "sourceName": "Ars Technica",
@@ -1449,12 +1461,12 @@
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 23 2026",
-      "verification": "official",
+      "verification": "single",
       "impact": "emerging",
       "h": "Measurements for understanding the pace of AI development inside frontier labs",
       "p": "Measurements for understanding the pace of AI development inside frontier labs",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "sourceCount": 1
     },
     {
@@ -1467,18 +1479,6 @@
       "p": "A clandestine card-counting operation suggests we may need new ways to spot agent-to-agent deception.",
       "url": "https://www.wired.com/story/ai-agent-collusion-card-counting-secrets/",
       "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 23 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Data centers are black boxes, but California wants to change that",
-      "p": "California Gov. Gavin Newsom signed a slate of bills on Monday that could finally give communities better data - and more say - on how data centers impact their electricity bills and water supply. As data centers invade a growing number of communities across…",
-      "url": "https://www.theverge.com/policy/999412/data-center-water-electricity-disclosure-bills",
-      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -1533,13 +1533,13 @@
     },
     {
       "name": "Anthropic’s Claude Code Reigns Despite Rising Interest in C…",
-      "org": "theinformation.com",
+      "org": "The Information",
       "date": "JUL 28 2026",
       "lic": "open weights",
       "licClass": "lic-open",
       "desc": "Open-weight coverage — confirm exact license on the model card.",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUnMyMUZTeWhKa1pYUFAtNFBJVWVQdEpXZEl5MnhMM2pMTlpPdG9kQkRLck1nODFuaDRoMFJNQnBQRkszd3JJdUYwc1BXbUg3ekVvMHZ5STlZNHZEd3dRV294WlBRWm1IXzFHOUZoMmVZOTROWkx5d0UtNkdOWTNoRU9xTzJla0h2Q2I5Z09LTVo4NjNLTGg3TjNhUlJvNWNDeEI1R0gwYzhSVzF6RUVnM0kxVTBfTTQ1ZWc?oc=5",
-      "sourceName": "theinformation.com",
+      "sourceName": "The Information",
       "verification": "single",
       "impact": "emerging"
     }
@@ -1603,12 +1603,12 @@
     {
       "field": "Safety",
       "date": "AUG 28 2026",
-      "verification": "official",
+      "verification": "single",
       "impact": "emerging",
       "h": "Automated researchers can reliably mitigate alignment failures",
       "p": "Automated researchers can reliably mitigate alignment failures",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMm12QTFLek9sVlhENXNNaFlpUHlnbEl5dDRNZTBCbG1iSUtndjBhaUQ3UGl6N2VOWFppR19kbGhHWjlGaWRnby1BcHNlM0lNLUFaZXVrWV9MTFFOcjg0dmpFcWc0cHkyUTd1d2Z3bjNjaU9FeUQzUnpKbFloc1lRVDRPNjBHQ2JRVDh6cg?oc=5",
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "sourceCount": 1
     }
   ],
@@ -1622,7 +1622,7 @@
       "changePct": -1.468082615473974,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 86850061,
+      "volume": 86851377,
       "ohlc": [
         {
           "d": "06-24",
@@ -2067,13 +2067,13 @@
         },
         {
           "d": "09-23",
-          "o": 228.02999877929688,
+          "o": 228.0800018310547,
           "h": 228.9499969482422,
           "l": 224.02000427246094,
           "c": 225.50999450683594
         }
       ],
-      "relVolume": 0.6516595810773497,
+      "relVolume": 0.6516694553825468,
       "marketCap": 5502444000000
     },
     {
@@ -2085,7 +2085,7 @@
       "changePct": 0.5200795859218122,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 19296258,
+      "volume": 19296597,
       "ohlc": [
         {
           "d": "06-24",
@@ -2536,7 +2536,7 @@
           "c": 500.5899963378906
         }
       ],
-      "relVolume": 0.8955256339392994,
+      "relVolume": 0.8955413666886183,
       "marketCap": 3719383700000
     },
     {
@@ -2548,7 +2548,7 @@
       "changePct": -2.6197449077444777,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 22438514,
+      "volume": 22438949,
       "ohlc": [
         {
           "d": "06-24",
@@ -2999,7 +2999,7 @@
           "c": 354.989990234375
         }
       ],
-      "relVolume": 0.8219386435649004,
+      "relVolume": 0.8219545779226726,
       "marketCap": 1746550800000
     },
     {
@@ -3011,7 +3011,7 @@
       "changePct": -3.795995258808022,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 35331949,
+      "volume": 35324218,
       "ohlc": [
         {
           "d": "06-24",
@@ -3456,13 +3456,13 @@
         },
         {
           "d": "09-23",
-          "o": 349.8599853515625,
+          "o": 349.7799987792969,
           "h": 350,
           "l": 337.45001220703125,
           "c": 337.8299865722656
         }
       ],
-      "relVolume": 1.355392403392859,
+      "relVolume": 1.3550958293581057,
       "marketCap": 4121526000000
     },
     {
@@ -3474,7 +3474,7 @@
       "changePct": -2.2393880111205204,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 43685615,
+      "volume": 43691413,
       "ohlc": [
         {
           "d": "06-24",
@@ -3919,13 +3919,13 @@
         },
         {
           "d": "09-23",
-          "o": 253,
+          "o": 253.3300018310547,
           "h": 253.80999755859375,
           "l": 247.75999450683594,
           "c": 249.27000427246094
         }
       ],
-      "relVolume": 1.2878015354351948,
+      "relVolume": 1.2879724537867494,
       "marketCap": 2667189000000
     },
     {
@@ -3937,7 +3937,7 @@
       "changePct": 1.018191725303009,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 30237385,
+      "volume": 30241497,
       "ohlc": [
         {
           "d": "06-24",
@@ -4382,13 +4382,13 @@
         },
         {
           "d": "09-23",
-          "o": 747.5999755859375,
+          "o": 747.9500122070312,
           "h": 763.9000244140625,
           "l": 739.510009765625,
           "c": 744.0999755859375
         }
       ],
-      "relVolume": 1.4277292396519043,
+      "relVolume": 1.4279233974017709,
       "marketCap": 1875132000000
     },
     {
@@ -4863,7 +4863,7 @@
       "changePct": -1.4684954218497184,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 16268524,
+      "volume": 16270327,
       "ohlc": [
         {
           "d": "06-24",
@@ -5308,13 +5308,13 @@
         },
         {
           "d": "09-23",
-          "o": 621.5,
+          "o": 622.1500244140625,
           "h": 624.6898803710938,
           "l": 608.0900268554688,
           "c": 614.6099853515625
         }
       ],
-      "relVolume": 0.769109895541429,
+      "relVolume": 0.7691951340757706,
       "marketCap": 995668200000
     },
     {
@@ -5326,7 +5326,7 @@
       "changePct": 3.6758676636830683,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 34908561,
+      "volume": 34908712,
       "ohlc": [
         {
           "d": "06-24",
@@ -5777,7 +5777,7 @@
           "c": 191.7899932861328
         }
       ],
-      "relVolume": 1.2813662180721195,
+      "relVolume": 1.2813717607325268,
       "marketCap": 460296000000
     },
     {
@@ -6248,23 +6248,23 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.86/hr",
-      "trend": "↑ 9% vs 7d ago",
+      "rate": "$1.99 – $3.82/hr",
+      "trend": "↑ 8% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.80/hr",
-      "trend": "↑ 10% vs 7d ago",
+      "rate": "$3.32 – $5.52/hr",
+      "trend": "↑ 3% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $9.38/hr",
+      "rate": "$5.98 – $9.39/hr",
       "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 5 rented offers across Vast.ai + RunPod"
@@ -6288,14 +6288,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.43 – $1.59/hr",
-      "trend": "↓ 12% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$0.73 – $1.59/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-23T21:00:36.170Z",
+    "updatedAt": "2026-09-23T21:30:28.450Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6392,18 +6392,18 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 846,
+        "rawStoryHits": 847,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 30,
-        "storyCoverage": 0.3546099290780142,
+        "storyCoverage": 0.3541912632821724,
         "estimatedRelevantDiscussions": 88,
         "isEstimated": true,
-        "rawCommentHits": 6347,
+        "rawCommentHits": 6346,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.047266425082716244,
+        "commentCoverage": 0.04727387330601954,
         "limited": false,
-        "points": 465,
+        "points": 510,
         "themes": [
           {
             "id": "coding",
@@ -6444,8 +6444,8 @@
         "topThreads": [
           {
             "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-            "points": 265,
-            "comments": 260,
+            "points": 310,
+            "comments": 298,
             "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
             "date": "SEP 23 2026"
           },
@@ -6481,10 +6481,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
-        "rawCommentHits": 1460,
+        "rawCommentHits": 1462,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
-        "commentCoverage": 0.2054794520547945,
+        "commentCoverage": 0.2051983584131327,
         "limited": false,
         "points": 240,
         "themes": [
@@ -6573,16 +6573,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 546,
+        "rawStoryHits": 547,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 11,
-        "storyCoverage": 0.5494505494505495,
+        "storyCoverage": 0.5484460694698354,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 10785,
+        "rawCommentHits": 10782,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.027816411682892908,
+        "commentCoverage": 0.027824151363383415,
         "limited": false,
         "points": 51,
         "themes": [
@@ -6667,10 +6667,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 469,
+        "rawCommentHits": 468,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.6396588486140725,
+        "commentCoverage": 0.6410256410256411,
         "limited": true,
         "points": 41,
         "themes": [
@@ -6749,16 +6749,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 116,
-        "fetchedStoryCount": 116,
+        "rawStoryHits": 114,
+        "fetchedStoryCount": 114,
         "validatedStoryCount": 20,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": false,
-        "rawCommentHits": 882,
+        "rawCommentHits": 930,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.3401360544217687,
+        "commentCoverage": 0.3225806451612903,
         "limited": false,
         "points": 813,
         "themes": [
@@ -6848,10 +6848,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": false,
-        "rawCommentHits": 4693,
+        "rawCommentHits": 4685,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.06392499467291711,
+        "commentCoverage": 0.064034151547492,
         "limited": false,
         "points": 641,
         "themes": [

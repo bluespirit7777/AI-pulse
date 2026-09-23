@@ -637,5 +637,9 @@ export const CONTENT_TH = {
   "$11M competition showed wildfire detection is still easier than stopping fires.": "การแข่งขันมูลค่า 11 ล้านดอลลาร์แสดงให้เห็นว่าการตรวจจับไฟป่ายังคงเป็นเรื่องที่ง่ายกว่าการดับไฟป่า",
   "Airbnb widens access to GPT-6 Astra and OpenAI frontier models": "Airbnb ขยายการเข้าถึง GPT-6 Astra และโมเดลระดับแนวหน้าของ OpenAI",
   "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.": "เรียนรู้วิธีที่ Airbnb กำลังขยายการเข้าถึง GPT-6 Astra และโมเดลระดับแนวหน้าของ OpenAI เพื่อช่วยให้ทีมวิศวกรสามารถแก้ไขบั๊ก ออกแบบระบบ และปล่อยงานได้รวดเร็วยิ่งขึ้น",
-  "China silent as US touts plan for AI safety alerts that omits tech experts": "จีนยังคงนิ่งเงียบ ในขณะที่สหรัฐฯ เผยแผนการแจ้งเตือนด้านความปลอดภัย AI ซึ่งไม่มีผู้เชี่ยวชาญด้านเทคโนโลยีเข้าร่วม"
+  "China silent as US touts plan for AI safety alerts that omits tech experts": "จีนยังคงนิ่งเงียบ ในขณะที่สหรัฐฯ เผยแผนการแจ้งเตือนด้านความปลอดภัย AI ซึ่งไม่มีผู้เชี่ยวชาญด้านเทคโนโลยีเข้าร่วม",
+  "Sam Altman’s remarks at the United Nations Security Council": "ความเห็นของ Sam Altman ในที่ประชุมคณะมนตรีความมั่นคงแห่งสหประชาชาติ",
+  "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.": "Sam Altman ซีอีโอของ OpenAI กล่าวถึงเรื่องความปลอดภัยของ AI การควบคุมโดยมนุษย์ และความร่วมมือระหว่างประเทศ ในระหว่างการกล่าวถ้อยแถลงต่อที่ประชุมคณะมนตรีความมั่นคงแห่งสหประชาชาติ",
+  "A US-China AI Hotline Won't Be Ready For a While": "สายด่วน AI ระหว่างสหรัฐฯ และจีน ยังไม่พร้อมใช้งานในเร็วๆ นี้",
+  "Trump’s China rivalry and “AI race” delusion may endanger US, experts say": "ผู้เชี่ยวชาญชี้ว่าการแข่งขันกับจีนของ Trump และภาพลวงตาเรื่อง \"การแข่งขันด้าน AI\" อาจนำภัยมาสู่สหรัฐฯ"
 };
