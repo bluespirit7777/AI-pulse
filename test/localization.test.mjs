@@ -83,7 +83,60 @@ test('OpenAI translation provider preserves Responses API structured output beha
   assert.equal(body.text.format.type,'json_schema');
   assert.deepEqual(JSON.parse(body.input),['New story']);
 });
-test('translation providers reject non-successful HTTP responses before parsing',async()=>{
-  const unavailable=async()=>({ok:false,status:503});
-  await assert.rejects(translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-test'},unavailable),/HTTP 503/);
+test('translation retries a transient server error and then returns validated translations',async()=>{
+  let requests=0;
+  const delays=[];
+  const fakeFetch=async()=>{
+    requests++;
+    if(requests===1)return {ok:false,status:503};
+    return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({translations:['ข่าวใหม่']})}]}}]})};
+  };
+  const result=await translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-test'},fakeFetch,{sleepImpl:async ms=>delays.push(ms)});
+  assert.deepEqual(result,['ข่าวใหม่']);
+  assert.equal(requests,2);
+  assert.deepEqual(delays,[1000]);
+});
+
+test('translation honors Retry-After for rate-limited provider responses',async()=>{
+  let requests=0;
+  const delays=[];
+  const fakeFetch=async()=>{
+    requests++;
+    if(requests===1)return {ok:false,status:429,headers:{get:name=>name.toLowerCase()==='retry-after'?'2':null}};
+    return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({translations:['ข่าวใหม่']})}]}}]})};
+  };
+  await translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-test'},fakeFetch,{sleepImpl:async ms=>delays.push(ms)});
+  assert.equal(requests,2);
+  assert.deepEqual(delays,[2000]);
+});
+
+test('translation retries transient fetch failures but not permanent HTTP errors',async()=>{
+  let networkRequests=0;
+  const delays=[];
+  const networkFetch=async()=>{
+    networkRequests++;
+    if(networkRequests===1)throw new TypeError('fetch failed');
+    return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({translations:['ข่าวใหม่']})}]}}]})};
+  };
+  await translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-test'},networkFetch,{sleepImpl:async ms=>delays.push(ms)});
+  assert.equal(networkRequests,2);
+  assert.deepEqual(delays,[1000]);
+
+  let permanentRequests=0;
+  await assert.rejects(translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-test'},async()=>{
+    permanentRequests++;
+    return {ok:false,status:401};
+  },{sleepImpl:async()=>assert.fail('permanent errors must not be retried')}),/HTTP 401/);
+  assert.equal(permanentRequests,1);
+});
+
+test('translation stops after four transient failures without publishing a partial result',async()=>{
+  let requests=0;
+  const delays=[];
+  await assert.rejects(translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-test'},async()=>{
+    requests++;
+    return {ok:false,status:503};
+  },{sleepImpl:async ms=>delays.push(ms)}),/HTTP 503/);
+  assert.equal(requests,4);
+  assert.deepEqual(delays,[1000,2000,4000]);
 });

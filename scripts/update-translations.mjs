@@ -28,30 +28,74 @@ export function selectTranslationProvider(env=process.env) {
   throw new Error('Set OPENAI_API_KEY or GEMINI_API_KEY to translate new strings before publishing.');
 }
 
-export async function translateBatch(batch, provider, fetchImpl=fetch) {
-  let response;
+const RETRYABLE_TRANSLATION_STATUSES=new Set([408,425,429,500,502,503,504]);
+const MAX_TRANSLATION_ATTEMPTS=4;
+const MAX_RETRY_AFTER_MS=60_000;
+const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+
+function retryAfterMs(response) {
+  const value=response.headers?.get?.('retry-after')?.trim();
+  if(!value)return null;
+  const seconds=Number(value);
+  if(Number.isFinite(seconds)&&seconds>=0)return Math.min(seconds*1000,MAX_RETRY_AFTER_MS);
+  const timestamp=Date.parse(value);
+  return Number.isNaN(timestamp)?null:Math.min(Math.max(0,timestamp-Date.now()),MAX_RETRY_AFTER_MS);
+}
+
+function isRetryableTranslationOutput(error) {
+  return error instanceof SyntaxError||(error instanceof Error&&(error.message==='Translation response did not complete'||error.message==='Incomplete Thai translation batch'));
+}
+
+function backoffMs(attempt) {
+  return Math.min(1000*2**(attempt-1),8000);
+}
+
+export async function translateBatch(batch, provider, fetchImpl=fetch, {sleepImpl=sleep,maxAttempts=MAX_TRANSLATION_ATTEMPTS}={}) {
+  let url,headers,body;
   if(provider.name==='openai'){
-    response=await fetchImpl('https://api.openai.com/v1/responses',{
-      method:'POST',signal:AbortSignal.timeout(120000),
-      headers:{Authorization:`Bearer ${provider.apiKey}`,'Content-Type':'application/json'},
-      body:JSON.stringify({model:provider.model,store:false,instructions:TRANSLATION_INSTRUCTIONS,input:JSON.stringify(batch),
-        text:{format:{type:'json_schema',name:'thai_translations',strict:true,schema:{type:'object',properties:{translations:{type:'array',items:{type:'string'}}},required:['translations'],additionalProperties:false}}}
-      }),
+    url='https://api.openai.com/v1/responses';
+    headers={Authorization:`Bearer ${provider.apiKey}`,'Content-Type':'application/json'};
+    body=JSON.stringify({model:provider.model,store:false,instructions:TRANSLATION_INSTRUCTIONS,input:JSON.stringify(batch),
+      text:{format:{type:'json_schema',name:'thai_translations',strict:true,schema:{type:'object',properties:{translations:{type:'array',items:{type:'string'}}},required:['translations'],additionalProperties:false}}}
     });
   }else if(provider.name==='gemini'){
-    response=await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:generateContent`,{
-      method:'POST',signal:AbortSignal.timeout(120000),
-      headers:{'x-goog-api-key':provider.apiKey,'Content-Type':'application/json'},
-      body:JSON.stringify({
-        systemInstruction:{parts:[{text:TRANSLATION_INSTRUCTIONS}]},
-        contents:[{role:'user',parts:[{text:JSON.stringify(batch)}]}],
-        generationConfig:{responseMimeType:'application/json',responseSchema:{type:'OBJECT',properties:{translations:{type:'ARRAY',items:{type:'STRING'}}},required:['translations']}},
-      }),
+    url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(provider.model)}:generateContent`;
+    headers={'x-goog-api-key':provider.apiKey,'Content-Type':'application/json'};
+    body=JSON.stringify({
+      systemInstruction:{parts:[{text:TRANSLATION_INSTRUCTIONS}]},
+      contents:[{role:'user',parts:[{text:JSON.stringify(batch)}]}],
+      generationConfig:{responseMimeType:'application/json',responseSchema:{type:'OBJECT',properties:{translations:{type:'ARRAY',items:{type:'STRING'}}},required:['translations']}},
     });
   }else throw new Error(`Unsupported translation provider: ${provider.name}`);
-  if(!response.ok)throw new Error(`Translation service returned HTTP ${response.status}; existing translations retained`);
-  const payload=await response.json();
-  return provider.name==='openai'?parseTranslations(payload,batch.length):parseGeminiTranslations(payload,batch.length);
+
+  for(let attempt=1;attempt<=maxAttempts;attempt++){
+    let response;
+    try{
+      response=await fetchImpl(url,{method:'POST',signal:AbortSignal.timeout(120000),headers,body});
+    }catch(error){
+      const retryable=error instanceof TypeError||error.name==='AbortError'||error.name==='TimeoutError';
+      if(!retryable||attempt===maxAttempts)throw error;
+      await sleepImpl(backoffMs(attempt));
+      continue;
+    }
+
+    if(!response.ok){
+      if(!RETRYABLE_TRANSLATION_STATUSES.has(response.status)||attempt===maxAttempts){
+        throw new Error(`Translation service returned HTTP ${response.status}; existing translations retained`);
+      }
+      await sleepImpl(retryAfterMs(response)??backoffMs(attempt));
+      continue;
+    }
+
+    try{
+      const payload=await response.json();
+      return provider.name==='openai'?parseTranslations(payload,batch.length):parseGeminiTranslations(payload,batch.length);
+    }catch(error){
+      if(!isRetryableTranslationOutput(error)||attempt===maxAttempts)throw error;
+      await sleepImpl(backoffMs(attempt));
+    }
+  }
+  throw new Error('Translation service failed after retry attempts; existing translations retained');
 }
 
 async function main() {
