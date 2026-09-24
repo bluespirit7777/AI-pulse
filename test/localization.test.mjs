@@ -7,12 +7,16 @@ import { filterNews } from '../js/news-state.js';
 import { CONTENT_TH } from '../js/locales/content-th.js';
 import { parseGeminiTranslations, selectTranslationProvider, translateBatch } from '../scripts/update-translations.mjs';
 
-test('all current reader-facing data has a Thai translation and an unchanged English original',async()=>{
+test('available Thai content is used while untranslated strings safely fall back to English',async()=>{
   for(const source of await contentStrings()){
-    assert.match(CONTENT_TH[source],/[\u0E00-\u0E7F]/u,source);
     assert.equal(translateText(source,'en'),source);
-    assert.equal(translateText(source,'th'),CONTENT_TH[source]);
+    if(CONTENT_TH[source]){
+      assert.match(CONTENT_TH[source],/[\u0E00-\u0E7F]/u,source);
+      assert.equal(translateText(source,'th'),CONTENT_TH[source]);
+    }
   }
+  const pending='Untranslated content from the latest refresh';
+  assert.equal(translateText(pending,'th'),pending);
 });
 test('Thai news search intersects category and entity filters without mutating data',()=>{
   const signals=[{title:'Researchers used Claude to hack OpenAI',desc:'Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.',category:'research',entityIds:['claude']},{title:'Researchers used Claude to hack OpenAI',category:'general',entityIds:['gpt']}];
@@ -41,14 +45,57 @@ test('translation provider is Gemini-only and uses the current model by default'
   assert.throws(()=>selectTranslationProvider({OPENAI_API_KEY:'openai-test'}),/GEMINI_API_KEY/);
   assert.throws(()=>selectTranslationProvider({}),/GEMINI_API_KEY/);
 });
-test('translation workflows only wire Gemini provider credentials and model variables',async()=>{
+test('Gemini translation runs in a once-daily workflow, apart from frequent data collection',async()=>{
   for(const name of ['update-data.yml','update-youtube.yml']){
     const workflow=await readFile(new URL(`../.github/workflows/${name}`,import.meta.url),'utf8');
-    assert.ok(workflow.includes('GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}'));
-    assert.ok(workflow.includes('GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}'));
+    assert.ok(!workflow.includes('GEMINI_API_KEY'),`${name} must not receive the Gemini key`);
+    assert.ok(!workflow.includes('run: npm run translate'),`${name} must not invoke translation`);
+    assert.ok(!workflow.includes('js/locales/content-th.js'),`${name} must not write the translation catalog`);
     assert.ok(!workflow.includes('OPENAI_API_KEY'));
     assert.ok(!workflow.includes('OPENAI_TRANSLATION_MODEL'));
     assert.ok(!workflow.includes('api.openai.com'));
+  }
+  const updateData=await readFile(new URL('../.github/workflows/update-data.yml',import.meta.url),'utf8');
+  assert.ok(updateData.includes('run: npm run validate && npm test'));
+  const daily=await readFile(new URL('../.github/workflows/translate-content.yml',import.meta.url),'utf8');
+  const cronLines=daily.split(String.fromCharCode(10)).filter(line=>line.trim().startsWith('- cron:'));
+  assert.equal(cronLines.length,1);
+  assert.ok(daily.includes("cron: '17 4 * * *'"));
+  assert.ok(daily.includes('GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}'));
+  assert.ok(daily.includes('GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}'));
+  assert.ok(daily.includes('run: npm run translate'));
+  assert.ok(daily.includes('run: npm run check'));
+  assert.ok(daily.includes('git add js/locales/content-th.js'));
+});
+test('generated-artifact push retries fail closed on rebase conflicts',async()=>{
+  for(const name of ['translate-content.yml','update-data.yml','update-youtube.yml']){
+    const workflow=await readFile(new URL(`../.github/workflows/${name}`,import.meta.url),'utf8');
+    const conflictBlock=workflow.match(/if ! git rebase origin\/main; then([\s\S]*?)^\s+fi$/m);
+    assert.ok(conflictBlock,`${name} must explicitly handle a failed rebase`);
+    assert.match(conflictBlock[1],/git rebase --abort 2>\/dev\/null \|\| true/);
+    assert.match(conflictBlock[1],/echo "::error::Rebase conflict; refusing to retry on a stale checkout\."\s+exit 1/);
+    assert.doesNotMatch(conflictBlock[1],/git reset/);
+    assert.ok(!workflow.includes('git reset --soft origin/main'),`${name} must not recommit a stale index after conflict`);
+  }
+});
+test('generated-artifact push retries revalidate the rebased tree before retrying the push',async()=>{
+  const workflows=[
+    ['translate-content.yml','npm run check'],
+    ['update-data.yml','npm run validate'],
+    ['update-youtube.yml','npm run validate']
+  ];
+  for(const [name,validation] of workflows){
+    const workflow=await readFile(new URL(`../.github/workflows/${name}`,import.meta.url),'utf8');
+    const rebaseStart=workflow.indexOf('if ! git rebase origin/main; then');
+    const conflictExit=workflow.indexOf('exit 1',rebaseStart);
+    const validationAfterRebase=workflow.indexOf(validation,rebaseStart);
+    const retrySleep=workflow.indexOf('sleep $((RANDOM',rebaseStart);
+    assert.ok(rebaseStart>=0 && conflictExit>rebaseStart && validationAfterRebase>conflictExit && validationAfterRebase<retrySleep,`${name} must validate the rebased tree before retrying its push`);
+    if(name==='update-data.yml'){
+      const retryValidation=workflow.slice(validationAfterRebase,retrySleep);
+      const validationCommands=retryValidation.split(String.fromCharCode(10)).map(line=>line.trim());
+      assert.deepEqual(validationCommands.slice(0,2),['npm run validate','npm test']);
+    }
   }
 });
 test('Gemini translation provider sends a structured request and returns validated rows',async()=>{

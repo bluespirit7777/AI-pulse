@@ -31,12 +31,6 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: node scripts/update-youtube.mjs
 
-      - name: Translate new reader-facing content
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}
-        run: npm run translate
-
       - name: Validate data
         run: npm run validate
 
@@ -44,25 +38,17 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/youtube-trending.json js/locales/content-th.js
+          git add data/youtube-trending.json
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
           fi
           git commit -m "chore: refresh YouTube trending videos [skip ci]"
-          # Same race as update-data.yml: this can land between a manual push
-          # and the twice-hourly data workflow's own push. Retry with a
-          # fetch+rebase; if the rebase itself conflicts, drop the old commit
-          # object and re-commit the already-regenerated working tree fresh on
-          # top of the new tip.
-          # `git rebase --abort` is guarded with `|| true`: rebase can fail at
-          # its own pre-flight check (an unrelated dirty file elsewhere in the
-          # tree) without ever actually starting, in which case `--abort` has
-          # nothing to abort and errors "no rebase in progress" — harmless,
-          # but fatal to the whole script under Actions' default `set -e` if
-          # left unguarded. (This is the exact bug that hit update-data.yml:
-          # exit 128 from an unguarded `--abort`, root-caused by a generated
-          # file the old `git add` list had missed.)
+          # This can race another writer landing on main between checkout and
+          # push. Retry a non-fast-forward rejection by fetching and rebasing
+          # this generated-file commit onto the new tip. If the rebase conflicts,
+          # fail closed rather than recommitting a stale index that could
+          # include or revert unrelated remote changes.
           for i in 1 2 3 4 5; do
             if git push; then
               echo "Pushed on attempt $i."
@@ -72,10 +58,10 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort 2>/dev/null || true
-              git reset --soft origin/main
-              git add data/youtube-trending.json js/locales/content-th.js
-              git commit -m "chore: refresh YouTube trending videos [skip ci]" || echo "Nothing to commit — remote already matches."
+              echo "::error::Rebase conflict; refusing to retry on a stale checkout."
+              exit 1
             fi
+            npm run validate
             sleep $((RANDOM % 5 + 1))
           done
           echo "::error::Failed to push YouTube snapshot after 5 attempts."

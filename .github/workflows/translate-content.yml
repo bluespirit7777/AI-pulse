@@ -1,0 +1,66 @@
+name: Translate new AI Pulse content
+
+on:
+  schedule:
+    # Daily at 04:17 UTC (11:17 Bangkok time), after the morning feed refresh.
+    - cron: '17 4 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: translate-content
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Translate pending reader-facing content
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}
+        run: npm run translate
+
+      - name: Validate data and translation coverage
+        run: npm run check
+
+      - name: Commit and push translation catalog if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add js/locales/content-th.js
+          if git diff --cached --quiet; then
+            echo "Thai translation catalog is already current."
+            exit 0
+          fi
+          git commit -m "chore: refresh Thai translations [skip ci]"
+          # Data refresh workflows can move main while translation is running.
+          # Rebase this catalog-only commit onto the latest main and retry. If
+          # the rebase conflicts, fail closed rather than resetting/recommitting
+          # an index that could contain unrelated or stale files.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed translations on attempt $i."
+              exit 0
+            fi
+            echo "Push rejected (attempt $i) — remote moved, rebasing and retrying..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort 2>/dev/null || true
+              echo "::error::Rebase conflict; refusing to retry on a stale checkout."
+              exit 1
+            fi
+            npm run check
+            sleep $((RANDOM % 5 + 1))
+          done
+          echo "::error::Failed to push Thai translations after 5 attempts."
+          exit 1

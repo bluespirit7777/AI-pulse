@@ -32,44 +32,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # Community Pulse's GitHub Discussions source (GraphQL needs auth even for public repos); absent locally is a graceful per-model skip, never an error
         run: node scripts/update-data.mjs
 
-      - name: Translate new reader-facing content
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}
-        run: npm run translate
-
       - name: Validate data + run unit tests
-        run: npm run check
+        run: npm run validate && npm test
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ js/locales/content-th.js
+          git add data/
           if git diff --cached --quiet; then
             echo "No data changes."
             exit 0
           fi
           git commit -m "chore: refresh data snapshot [skip ci]"
-          # This runs every 30 min and can race a manual push (or the YouTube
-          # workflow) landing on main between checkout and push. A bare `git
-          # push` then gets rejected as non-fast-forward. Retry: fetch + rebase
-          # our one generated-data commit onto the new tip and push again.
-          # `git add data/ js/locales/content-th.js` (not a fixed file list) so every file the build
-          # script writes is always included — a previously-missed one
-          # (data/compute-history.json) sat unstaged forever, which is
-          # harmless for a plain push but made `git rebase` refuse to run at
-          # all ("You have unstaged changes"), since rebase requires a clean
-          # tree regardless of which paths it's touching.
-          # `git rebase --abort` is guarded with `|| true`: when rebase fails
-          # at that same pre-flight check, it never actually starts, so
-          # `--abort` has nothing to abort and errors "no rebase in progress"
-          # — harmless, but fatal to the whole script under Actions' default
-          # `set -e` if left unguarded (this is what actually produced the
-          # exit-128 failure). If the rebase attempt didn't leave a clean
-          # fast-forward, drop our old commit object and re-commit the
-          # already-regenerated working tree fresh on top of the new tip
-          # instead of hand-resolving a diff nobody reads.
+          # This runs every 30 min and can race another writer landing on main
+          # between checkout and push. Retry a non-fast-forward rejection by
+          # fetching and rebasing this generated-data commit onto the new tip.
+          # Stage all of data/ so every generated artifact is included. If the
+          # rebase conflicts, fail closed rather than recommitting a stale
+          # index that could include or revert unrelated remote changes.
           for i in 1 2 3 4 5; do
             if git push; then
               echo "Pushed on attempt $i."
@@ -79,10 +60,11 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort 2>/dev/null || true
-              git reset --soft origin/main
-              git add data/ js/locales/content-th.js
-              git commit -m "chore: refresh data snapshot [skip ci]" || echo "Nothing to commit — remote already matches."
+              echo "::error::Rebase conflict; refusing to retry on a stale checkout."
+              exit 1
             fi
+            npm run validate
+            npm test
             sleep $((RANDOM % 5 + 1))
           done
           echo "::error::Failed to push data snapshot after 5 attempts."
