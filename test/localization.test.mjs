@@ -5,7 +5,7 @@ import { contentStrings } from '../scripts/lib/localization.mjs';
 import { translateText } from '../js/i18n.js';
 import { filterNews } from '../js/news-state.js';
 import { CONTENT_TH } from '../js/locales/content-th.js';
-import { parseTranslations, parseGeminiTranslations, selectTranslationProvider, translateBatch } from '../scripts/update-translations.mjs';
+import { parseGeminiTranslations, selectTranslationProvider, translateBatch } from '../scripts/update-translations.mjs';
 
 test('all current reader-facing data has a Thai translation and an unchanged English original',async()=>{
   for(const source of await contentStrings()){
@@ -29,30 +29,26 @@ test('translated data labels preserve amounts, dates and proper names',()=>{
   assert.equal(translateText('3 h ago','th'),'3 ชั่วโมงที่แล้ว');
   for(const s of ['Claude Fable 5.1','$222.27','+1.34%','NVDA','https://example.com'])assert.equal(translateText(s,'th'),s);
 });
-test('translation batches reject partial, malformed and untranslated responses',()=>{
-  const response=(translations,status='completed')=>({status,output:[{type:'reasoning'},{content:[{type:'output_text',text:JSON.stringify({translations})}]}]});
-  assert.deepEqual(parseTranslations(response(['ข่าวใหม่']),1),['ข่าวใหม่']);
-  for(const r of [response([]),response(['Still English']),response(['ข่าว'],'incomplete')])assert.throws(()=>parseTranslations(r,1));
-});
 test('Gemini translation batches accept only complete Thai structured output',()=>{
   const response=(translations,finishReason='STOP')=>({candidates:[{finishReason,content:{parts:[{text:JSON.stringify({translations})}]}}]});
   const malformed={candidates:[{finishReason:'STOP',content:{parts:[{text:'not-json'}]}}]};
   assert.deepEqual(parseGeminiTranslations(response(['ข่าวใหม่']),1),['ข่าวใหม่']);
   for(const r of [response([]),response(['Still English']),response(['ข่าว'],'MAX_TOKENS'),{},malformed])assert.throws(()=>parseGeminiTranslations(r,1));
 });
-test('translation provider keeps model overrides scoped to the selected provider',()=>{
-  assert.deepEqual(selectTranslationProvider({GEMINI_API_KEY:'gemini-test',TRANSLATION_MODEL:'gpt-5.5'}),{name:'gemini',apiKey:'gemini-test',model:'gemini-3.1-flash-lite'});
-  assert.deepEqual(selectTranslationProvider({GEMINI_API_KEY:'gemini-test',GEMINI_TRANSLATION_MODEL:'gemini-custom'}),{name:'gemini',apiKey:'gemini-test',model:'gemini-custom'});
-  assert.deepEqual(selectTranslationProvider({OPENAI_API_KEY:'openai-test',GEMINI_API_KEY:'gemini-test',OPENAI_TRANSLATION_MODEL:'openai-custom',GEMINI_TRANSLATION_MODEL:'gemini-custom'}),{name:'openai',apiKey:'openai-test',model:'openai-custom'});
-  assert.deepEqual(selectTranslationProvider({OPENAI_API_KEY:'openai-test',TRANSLATION_MODEL:'gemini-3.1-flash-lite'}),{name:'openai',apiKey:'openai-test',model:'gpt-5.5'});
-  assert.throws(()=>selectTranslationProvider({}),/OPENAI_API_KEY or GEMINI_API_KEY/);
+test('translation provider is Gemini-only and uses the current model by default',()=>{
+  assert.deepEqual(selectTranslationProvider({GEMINI_API_KEY:'gemini-test',OPENAI_API_KEY:'openai-test'}),{name:'gemini',apiKey:'gemini-test',model:'gemini-3.8-flash'});
+  assert.deepEqual(selectTranslationProvider({GEMINI_API_KEY:'gemini-test',GEMINI_TRANSLATION_MODEL:'gemini-custom',OPENAI_API_KEY:'openai-test'}),{name:'gemini',apiKey:'gemini-test',model:'gemini-custom'});
+  assert.throws(()=>selectTranslationProvider({OPENAI_API_KEY:'openai-test'}),/GEMINI_API_KEY/);
+  assert.throws(()=>selectTranslationProvider({}),/GEMINI_API_KEY/);
 });
-test('translation workflows expose provider-specific model variables',async()=>{
+test('translation workflows only wire Gemini provider credentials and model variables',async()=>{
   for(const name of ['update-data.yml','update-youtube.yml']){
     const workflow=await readFile(new URL(`../.github/workflows/${name}`,import.meta.url),'utf8');
-    assert.match(workflow,/OPENAI_TRANSLATION_MODEL: \$\{\{ vars\.OPENAI_TRANSLATION_MODEL \}\}/);
-    assert.match(workflow,/GEMINI_TRANSLATION_MODEL: \$\{\{ vars\.GEMINI_TRANSLATION_MODEL \}\}/);
-    assert.doesNotMatch(workflow,/^\s+TRANSLATION_MODEL:/m);
+    assert.ok(workflow.includes('GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}'));
+    assert.ok(workflow.includes('GEMINI_TRANSLATION_MODEL: ${{ vars.GEMINI_TRANSLATION_MODEL }}'));
+    assert.ok(!workflow.includes('OPENAI_API_KEY'));
+    assert.ok(!workflow.includes('OPENAI_TRANSLATION_MODEL'));
+    assert.ok(!workflow.includes('api.openai.com'));
   }
 });
 test('Gemini translation provider sends a structured request and returns validated rows',async()=>{
@@ -61,27 +57,20 @@ test('Gemini translation provider sends a structured request and returns validat
     request={url,options};
     return {ok:true,json:async()=>({candidates:[{finishReason:'STOP',content:{parts:[{text:JSON.stringify({translations:['ข่าวใหม่']})}]}}]})};
   };
-  assert.deepEqual(await translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-3.5-flash'},fakeFetch),['ข่าวใหม่']);
-  assert.equal(request.url,'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent');
+  assert.deepEqual(await translateBatch(['New story'],{name:'gemini',apiKey:'secret',model:'gemini-3.8-flash'},fakeFetch),['ข่าวใหม่']);
+  assert.equal(request.url,'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent');
   assert.equal(request.options.headers['x-goog-api-key'],'secret');
   const body=JSON.parse(request.options.body);
   assert.equal(body.generationConfig.responseMimeType,'application/json');
   assert.deepEqual(JSON.parse(body.contents[0].parts[0].text),['New story']);
 });
-test('OpenAI translation provider preserves Responses API structured output behavior',async()=>{
-  let request;
-  const fakeFetch=async(url,options)=>{
-    request={url,options};
-    return {ok:true,json:async()=>({status:'completed',output:[{content:[{type:'output_text',text:JSON.stringify({translations:['ข่าวใหม่']})}]}]})};
-  };
-  assert.deepEqual(await translateBatch(['New story'],{name:'openai',apiKey:'secret',model:'gpt-test'},fakeFetch),['ข่าวใหม่']);
-  assert.equal(request.url,'https://api.openai.com/v1/responses');
-  assert.equal(request.options.headers.Authorization,'Bearer secret');
-  const body=JSON.parse(request.options.body);
-  assert.equal(body.model,'gpt-test');
-  assert.equal(body.store,false);
-  assert.equal(body.text.format.type,'json_schema');
-  assert.deepEqual(JSON.parse(body.input),['New story']);
+test('translation batch rejects OpenAI providers before making a request',async()=>{
+  let requests=0;
+  await assert.rejects(translateBatch(['New story'],{name:'openai',apiKey:'openai-test'},async()=>{
+    requests++;
+    return {ok:false,status:400};
+  }),/Unsupported translation provider/);
+  assert.equal(requests,0);
 });
 test('translation retries a transient server error and then returns validated translations',async()=>{
   let requests=0;
