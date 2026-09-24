@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-24T07:30:27.906Z",
+  "updatedAt": "2026-09-24T07:45:22.841Z",
   "build": {
-    "sha": "eec8934c4a8820cdbf174fe378cc050e5aeba71b",
-    "shortSha": "eec8934",
+    "sha": "f93f2a3a4e852a5fc367173b9593621c247c76b0",
+    "shortSha": "f93f2a3",
     "ref": "main",
-    "builtAt": "2026-09-24T07:30:45.242Z"
+    "builtAt": "2026-09-24T07:45:40.275Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.3,
-    "estimatedDatasets": 5,
-    "buildSha": "eec8934",
-    "lastSuccessfulUpdate": "2026-09-24T07:30:27.906Z"
+    "estimatedDatasets": 4,
+    "buildSha": "f93f2a3",
+    "lastSuccessfulUpdate": "2026-09-24T07:45:22.841Z"
   },
   "ticker": [
     "INSIDE ANTHROPIC'S MOLECULAR BIOLOGY LAB",
+    "ANTHROPIC’S BIOLAB MADE A DISCOVERY IT’S COMPARING TO CRISPR",
     "GOOGLE BEAM EXPANDS WITH NEW REGIONS, PARTNERS, AND CUSTOMERS",
-    "SAM ALTMAN’S REMARKS AT THE UNITED NATIONS SECURITY COUNCIL",
     "EMA RAISES $77M AS AI STARTS EATING INTO ENTERPRISE SOFTWARE AND SERVICES",
     "GRAB AND OPENAI BRING PRACTICAL AI SKILLS TO SOUTHEAST ASIA",
+    "SAM ALTMAN’S REMARKS AT THE UNITED NATIONS SECURITY COUNCIL",
     "RINGG’S AI AGENTS RESOLVE UP TO 65% OF CUSTOMER CALLS WITH OPENAI",
     "THE AI HYPE INDEX: AI LOVES CHEATING",
-    "LAWSUIT DEMANDS OPENAI PAY FOR NEW SCHOOL AFTER CHATGPT USED IN SHOOTING",
-    "CLAUDE DISCOVERS A NOVEL ENZYME SYSTEM WITH CRISPR-LIKE REPEATS",
-    "AIRBNB WIDENS ACCESS TO GPT-6 ASTRA AND OPENAI FRONTIER MODELS"
+    "ANTHROPIC UNVEILS CLAUDE OPUS 5.5",
+    "LAWSUIT DEMANDS OPENAI PAY FOR NEW SCHOOL AFTER CHATGPT USED IN SHOOTING"
   ],
   "signals": [
     {
@@ -56,6 +56,32 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
+      "clusterId": "1gi55nf",
+      "title": "Anthropic’s biolab made a discovery it’s comparing to Crispr",
+      "desc": "Anthropic says its AI Claude has \"autonomously discovered\" a new enzyme system similar to machinery behind the powerful gene-editing tool Crispr. It's the first result from Anthropic's newly-launched wet lab and an early test of Claude's usefulness for science as the company prepares to go public. The company says Claude found the enzyme system after […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
+      "dateISO": "2026-09-23T18:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 67,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
       "clusterId": "1aoojnw",
       "title": "Google Beam expands with new regions, partners, and customers",
@@ -79,32 +105,6 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/sam-altman-un-security-council-remarks",
-      "clusterId": "1ke56x9",
-      "title": "Sam Altman’s remarks at the United Nations Security Council",
-      "desc": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
-      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-      "dateISO": "2026-09-23T12:00:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -164,6 +164,32 @@
       ]
     },
     {
+      "id": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "clusterId": "1ke56x9",
+      "title": "Sam Altman’s remarks at the United Nations Security Council",
+      "desc": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "dateISO": "2026-09-23T12:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 65,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://openai.com/index/ringg",
       "clusterId": "16i4kj4",
       "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
@@ -213,6 +239,36 @@
       "sourceName": "MIT Technology Review",
       "entityIds": [
         "gpt",
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+      "clusterId": "x3sik4",
+      "title": "Anthropic unveils Claude Opus 5.5",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+      "dateISO": "2026-09-22T17:22:35.000Z",
+      "date": "SEP 22 2026",
+      "category": "product",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 62,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
         "claude"
       ]
     },
@@ -304,61 +360,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy",
-      "clusterId": "htpdmp",
-      "title": "Andreessen Horowitz is launching an ‘academy’ with no homework and partnerships with Palantir, Google, and Meta",
-      "desc": "Venture capital firm Andreessen Horowitz (a16z) is creating an \"academy\" positioned as a pipeline for young people to build or join a Silicon Valley startup. The \"Horowitz Andreessen Academy\" will launch with 10 partners, including Anduril, Anthropic, Coinbase, Google, Meta, Nvidia, OpenAI, Palantir, Replit, and Stripe, along with $42 million in funding led by a16z. […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy",
-      "dateISO": "2026-09-22T16:34:08.000Z",
-      "date": "SEP 22 2026",
-      "category": "capital",
-      "catConfidence": 0.62,
-      "family": "market",
-      "significance": 59,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt",
-        "claude",
-        "gemini",
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
-      "clusterId": "13side4",
-      "title": "Introducing Claude Opus 5.5",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
-      "dateISO": "2026-09-22T23:25:46.000Z",
-      "date": "SEP 22 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
       "clusterId": "h91za6",
       "title": "Introducing GPT-6 Sol and Luna",
@@ -411,30 +412,32 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
-      "clusterId": "1k2vv7j",
-      "title": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
-      "desc": "Anthropic says its new Claude Opus 5.5 model comes with stronger safeguards in the wake of recent rogue AI hacking incidents. In an announcement on Tuesday, Anthropic says Opus 5.5 comes with improvements to certain risky behaviors, including attempts to escape the company's testing sandbox. It's the first model released by Anthropic after CEO Dario […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
-      "dateISO": "2026-09-22T16:30:00.000Z",
-      "date": "SEP 22 2026",
-      "category": "product",
-      "catConfidence": 0.45,
-      "family": "product",
-      "significance": 55,
+      "id": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
+      "clusterId": "1d7baua",
+      "title": "Meta is making a standalone Muse AI gadget",
+      "desc": "Meta is building a dedicated hardware device for its new Muse AI agent. The product, called Muse Charm, was briefly shown off by Meta CEO Mark Zuckerberg at the end of tonight's Meta Connect presentation. It looks almost like a chunky smartwatch without the strap - just a big screen, plus a little lanyard for […]",
+      "url": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
+      "dateISO": "2026-09-24T00:15:20.000Z",
+      "date": "SEP 24 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 54,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
         {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/"
+        },
+        {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity"
+          "url": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware"
         }
       ],
       "sourceName": "The Verge",
-      "entityIds": [
-        "claude"
-      ]
+      "entityIds": []
     },
     {
       "id": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
@@ -462,6 +465,34 @@
         "gpt",
         "claude"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
+      "clusterId": "df06tf",
+      "title": "Meta Connect 2026 live blog: On the ground at Mark Zuckerberg’s next big product launch",
+      "desc": "It's time once again for Meta's annual September product launch event, and The Verge is on the ground in Menlo Park to cover the show live. Meta says that today's keynote by Mark Zuckerberg will be about how \"Meta is building a future for everyone\" - something he wrote at length about in a recent […]",
+      "url": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote",
+      "dateISO": "2026-09-23T22:30:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/998480/meta-connect-2026-biggest-news-announcements"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/998457/meta-connect-2026-live-blog-mark-zuckerberg-keynote"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/",
@@ -500,7 +531,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 52,
+      "significance": 51,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -637,32 +668,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
-      "clusterId": "o3vesp",
-      "title": "YouTube will let you build your own algorithm with AI",
-      "desc": "YouTube’s new custom feeds let users describe the videos they want to see in their own words, then use Gemini to build a personalized feed around the request.",
-      "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
-      "dateISO": "2026-09-23T14:30:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
       "clusterId": "1q6usxr",
       "title": "OpenAI extends cyber access to Ukraine for civilian defense",
@@ -763,16 +768,16 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
-      "clusterId": "1f2s6ay",
-      "title": "Even Americans who use AI every day are worried about it",
-      "desc": "The report suggests that greater exposure will not resolve the unease around the technology, nor reduce public support for AI regulation.",
-      "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
-      "dateISO": "2026-09-23T16:49:58.000Z",
+      "id": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
+      "clusterId": "o3vesp",
+      "title": "YouTube will let you build your own algorithm with AI",
+      "desc": "YouTube’s new custom feeds let users describe the videos they want to see in their own words, then use Gemini to build a personalized feed around the request.",
+      "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
+      "dateISO": "2026-09-23T14:30:00.000Z",
       "date": "SEP 23 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
-      "family": "market",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
       "significance": 48,
       "impact": "notable",
       "verification": "single",
@@ -780,11 +785,13 @@
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/"
+          "url": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/"
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": []
+      "entityIds": [
+        "gemini"
+      ]
     },
     {
       "id": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
@@ -803,7 +810,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "techcrunch.com",
+          "name": "TechCrunch",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         },
         {
@@ -816,6 +823,30 @@
         "gpt",
         "claude"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features",
+      "clusterId": "h9m95z",
+      "title": "Muse is coming to Meta smart glasses",
+      "desc": "Just a couple of weeks after launching Muse, Meta announced that it's \"working on\" bringing the agent to its smart glasses, including the new glasses it unveiled at Meta Connect. Users will be able to activate Muse from their glasses by saying its name and ask it to handle tasks like guiding a workout, logging […]",
+      "url": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features",
+      "dateISO": "2026-09-23T23:40:56.000Z",
+      "date": "SEP 23 2026",
+      "category": "product",
+      "catConfidence": 0.64,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/09/23/meta-introduces-camera-free-ai-glasses/",
@@ -866,6 +897,54 @@
       "entityIds": []
     },
     {
+      "id": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
+      "clusterId": "1f2s6ay",
+      "title": "Even Americans who use AI every day are worried about it",
+      "desc": "The report suggests that greater exposure will not resolve the unease around the technology, nor reduce public support for AI regulation.",
+      "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/",
+      "dateISO": "2026-09-23T16:49:58.000Z",
+      "date": "SEP 23 2026",
+      "category": "policy",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/even-americans-who-use-ai-every-day-are-worried-about-it/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+      "clusterId": "1u3ijh",
+      "title": "Bernie Sanders proposes banning ‘superintelligence’ and putting violators in prison",
+      "desc": "Sen. Bernie Sanders (I-VT) and Rep. Greg Casar (D-TX) have introduced new legislation that would ban anyone from developing artificial superintelligence - a technology the bill describes as capable of the \"destruction or disempowerment of humanity,\" including by overthrowing the government. Under the Ban Artificial Superintelligence Act, AI leaders would face up to 20 years […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act",
+      "dateISO": "2026-09-23T16:23:05.000Z",
+      "date": "SEP 23 2026",
+      "category": "policy",
+      "catConfidence": 0.62,
+      "family": "market",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/999443/bernie-sanders-ai-superintelligence-ban-act"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://openai.com/index/chatgpt-for-teens",
       "clusterId": "1azzl9u",
       "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
@@ -896,36 +975,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBYTXJBMkg1SG1Hb294NXJlaHBvREtWXzlVVHg0MjJ6WUtmZzJobUQ1LV9ENWc5aXNOYllkN2ZnVzJSVG5JYVI5dWYxemF0NDZYRnlYTGdEUmN3VjJramdqalRyaHhXTkx6ay1jbVk0Wjd0SnpmNXUyOTBmQ0R3cTBhU2pxZTl2YmJzZGFZUUpObDFOOHkwcm5CeGVKWUpuZDNMNXdOVTM?oc=5",
-      "clusterId": "1kn5sz4",
-      "title": "Anthropic Launches Claude for Financial Advisors Tool",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBYTXJBMkg1SG1Hb294NXJlaHBvREtWXzlVVHg0MjJ6WUtmZzJobUQ1LV9ENWc5aXNOYllkN2ZnVzJSVG5JYVI5dWYxemF0NDZYRnlYTGdEUmN3VjJramdqalRyaHhXTkx6ay1jbVk0Wjd0SnpmNXUyOTBmQ0R3cTBhU2pxZTl2YmJzZGFZUUpObDFOOHkwcm5CeGVKWUpuZDNMNXdOVTM?oc=5",
-      "dateISO": "2026-09-14T07:00:00.000Z",
-      "date": "SEP 14 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Wealth Management",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBYTXJBMkg1SG1Hb294NXJlaHBvREtWXzlVVHg0MjJ6WUtmZzJobUQ1LV9ENWc5aXNOYllkN2ZnVzJSVG5JYVI5dWYxemF0NDZYRnlYTGdEUmN3VjJramdqalRyaHhXTkx6ay1jbVk0Wjd0SnpmNXUyOTBmQ0R3cTBhU2pxZTl2YmJzZGFZUUpObDFOOHkwcm5CeGVKWUpuZDNMNXdOVTM?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOako0N2w1bExjVVA0azZSLUI0QXdveUdDUWFnM0RKeVJVTEN4TlFlX0t5UHR6Z1FROWp2LVJUSjY4anRUakt0OTBUWkdFdjNKLTFDNmhPZ0RVY3BZSEZzLVFFUjZVdmtLSHk1bVZQRm1ObVJ6SGVSWGpJbXBBdS1EQ3lSMk4xNzNfVTJQT2NYaW1aUkV5c1plNDJNRXk2S3ZPMzA5Yw?oc=5"
-        }
-      ],
-      "sourceName": "Wealth Management",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
       "clusterId": "gok17r",
       "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
@@ -953,32 +1002,6 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel",
-      "clusterId": "gxtevx",
-      "title": "OpenAI wants to consult elite mathematicians about how to not fumble again",
-      "desc": "After turning a string of spectacular mathematical results into a reputational crisis, OpenAI is consulting human mathematicians to help it figure out a less disastrous path forward. On Monday, the company announced a new independent panel of mathematicians tasked with advising it and other AI companies on their interactions with mathematical research and the wider […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel",
-      "dateISO": "2026-09-23T00:17:17.000Z",
-      "date": "SEP 23 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -1082,33 +1105,6 @@
       ],
       "sourceName": "Google DeepMind",
       "entityIds": []
-    },
-    {
-      "id": "https://arstechnica.com/ai/2026/09/new-anthropic-openai-models-make-same-promise-a-little-more-for-a-lot-less-money/",
-      "clusterId": "11ecixz",
-      "title": "New Anthropic, OpenAI models make same promise: A little more for a lot less money",
-      "desc": "The frontier AI model race has entered its comparison shopping phase.",
-      "url": "https://arstechnica.com/ai/2026/09/new-anthropic-openai-models-make-same-promise-a-little-more-for-a-lot-less-money/",
-      "dateISO": "2026-09-22T21:25:18.000Z",
-      "date": "SEP 22 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/new-anthropic-openai-models-make-same-promise-a-little-more-for-a-lot-less-money/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1137,26 +1133,26 @@
     },
     {
       "family": "market",
-      "category": "orggov",
-      "title": "Sam Altman’s remarks at the United Nations Security Council",
-      "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+      "category": "capital",
+      "title": "Ema raises $77M as AI starts eating into enterprise software and services",
+      "summary": "Ema has raised $140 million to date and has more than 50 enterprise customers, including Google and Microsoft.",
       "significance": 66,
       "impact": "notable",
-      "verification": "official",
+      "verification": "single",
       "date": "SEP 23 2026",
       "dateISO": "2026-09-23T12:00:00.000Z",
-      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "url": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "Governance changes shape how a lab makes its biggest calls."
+      "whyItMatters": "If it holds up, fresh capital extends how long the company can fund training runs and hiring before it needs revenue."
     },
     {
       "family": "research",
@@ -1172,7 +1168,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "techcrunch.com",
+          "name": "TechCrunch",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         },
         {
@@ -1191,9 +1187,9 @@
     "chatgpt": 30,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 98,
-    "claude": 72,
-    "gemini": 28,
+    "gpt": 95,
+    "claude": 71,
+    "gemini": 27,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1204,7 +1200,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 2,
+    "nvidia": 1,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1226,36 +1222,25 @@
           "impact": "notable"
         },
         {
-          "h": "Introducing Claude Opus 5.5",
-          "d": "SEP 22 2026",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+          "h": "Anthropic’s biolab made a discovery it’s comparing to Crispr",
+          "d": "SEP 23 2026",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/999470/anthropic-biolab-claude-crispr",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "The Verge",
           "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
+        {
+          "h": "Anthropic unveils Claude Opus 5.5",
+          "d": "SEP 22 2026",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Reuters",
+          "sourceCount": 2,
           "verification": "official",
-          "impact": "notable"
-        },
-        {
-          "h": "Andreessen Horowitz is launching an ‘academy’ with no homework and partnerships with Pala…",
-          "d": "SEP 22 2026",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/998813/andreessen-horowitz-ai-academy",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
-          "h": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
-          "d": "SEP 22 2026",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "The Verge",
-          "sourceCount": 1,
-          "verification": "single",
           "impact": "notable"
         },
         {
@@ -1265,6 +1250,17 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "venturebeat.com",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Anthropic debuts Claude Docs, raising stakes for Microsoft",
+          "d": "SEP 16 2026",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Axios",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1424,13 +1420,13 @@
       "org": "META",
       "logoKey": "meta",
       "date": "SEP 24 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Meta made a Tamagotchi-like wearable for its Muse AI agent",
-      "p": "The tiny hardware device creates another mobile home for its AI agent Muse.",
-      "url": "https://techcrunch.com/2026/09/23/meta-made-a-tamagotchi-like-wearable-for-its-muse-ai-agent/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
+      "verification": "corroborated",
+      "impact": "notable",
+      "h": "Meta is making a standalone Muse AI gadget",
+      "p": "Meta is building a dedicated hardware device for its new Muse AI agent. The product, called Muse Charm, was briefly shown off by Meta CEO Mark Zuckerberg at the end of tonight's Meta Connect presentation. It looks almost like a chunky smartwatch without the s…",
+      "url": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware",
+      "sourceName": "The Verge",
+      "sourceCount": 2
     },
     {
       "org": "AI WIRE",
@@ -1442,6 +1438,18 @@
       "p": "At its Meta Connect event, CEO Mark Zuckerberg announced a handful of new smart glasses, including a slimmed-down VR headset and the company’s first camera-free glasses.",
       "url": "https://www.wired.com/story/metas-answer-to-the-meta-creep-camera-free-smart-glasses/",
       "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 23 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Muse is coming to Meta smart glasses",
+      "p": "Just a couple of weeks after launching Muse, Meta announced that it's \"working on\" bringing the agent to its smart glasses, including the new glasses it unveiled at Meta Connect. Users will be able to activate Muse from their glasses by saying its name and as…",
+      "url": "https://www.theverge.com/tech/999673/meta-connect-2026-muse-glasses-features",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1457,27 +1465,15 @@
       "sourceCount": 1
     },
     {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "SEP 23 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Anthropic says its biology lab has already found something big",
-      "p": "But maybe the biggest reveal is that Anthropic has not let Claude run loose in its biology lab. Humans are still, so far, in the loop.",
-      "url": "https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 23 2026",
       "verification": "single",
       "impact": "emerging",
-      "h": "A US-China AI Hotline Won't Be Ready For a While",
-      "p": "As the US and China race to become the dominant power in the AI industry, the countries also appear to be figuring out ways to communicate on national security issues.",
-      "url": "https://www.wired.com/story/a-us-china-ai-hotline-wont-be-ready-for-a-while/",
-      "sourceName": "Wired",
+      "h": "Meta ditches the camera on its newest smart glasses",
+      "p": "Walking around Meta Connect 2026, everyone's sporting smart glasses in all sorts of shapes, colors, and sizes. It's a marked difference here, a tech bubble where \"pervert glasses\" are not a concern. Outside Connect, the public backlash against wearable survei…",
+      "url": "https://www.theverge.com/tech/999281/ray-ban-meta-audio-glasses-meta-connect-2026",
+      "sourceName": "The Verge",
       "sourceCount": 1
     }
   ],
@@ -1505,18 +1501,6 @@
       "sourceName": "MIT Technology Review",
       "verification": "single",
       "impact": "notable"
-    },
-    {
-      "name": "UN says AI safeguards can’t wait for certainty",
-      "org": "The Verge",
-      "date": "SEP 21 2026",
-      "lic": "open weights",
-      "licClass": "lic-open",
-      "desc": "Governments need to rein in increasingly capable AI agents before their risks are fully understood, a United Nations scientific panel warne…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/998090/un-ai-panel-hugging-face-hack-precautionary-principle",
-      "sourceName": "The Verge",
-      "verification": "single",
-      "impact": "emerging"
     },
     {
       "name": "US government website used Chinese model the FBI called \"ma…",
@@ -1568,17 +1552,6 @@
       "sourceCount": 1
     },
     {
-      "field": "Reasoning",
-      "date": "SEP 22 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Meta patches Muse exploit that let attackers control the AI agent",
-      "p": "Meta has issued a patch for its Muse macOS app following the discovery of a zero-day vulnerability that could allow someone to take control of the AI agent. The bug found by security researcher Patrick Wardle utilized an undocumented Muse setting that enabled…",
-      "url": "https://www.theverge.com/tech/998679/meta-muse-patch-zero-day-exploit-ai-agent",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
       "field": "Research",
       "date": "SEP 18 2026",
       "verification": "official",
@@ -1620,6 +1593,17 @@
       "p": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
       "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
       "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
+      "field": "Safety",
+      "date": "AUG 28 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "Automated researchers can reliably mitigate alignment failures",
+      "p": "Automated researchers can reliably mitigate alignment failures",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMm12QTFLek9sVlhENXNNaFlpUHlnbEl5dDRNZTBCbG1iSUtndjBhaUQ3UGl6N2VOWFppR19kbGhHWjlGaWRnby1BcHNlM0lNLUFaZXVrWV9MTFFOcjg0dmpFcWc0cHkyUTd1d2Z3bjNjaU9FeUQzUnpKbFloc1lRVDRPNjBHQ2JRVDh6cg?oc=5",
+      "sourceName": "Anthropic",
       "sourceCount": 1
     }
   ],
@@ -6262,23 +6246,23 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.81/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$3.27 – $5.69/hr",
+      "trend": "↓ 6% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $9.39/hr",
+      "rate": "$5.98 – $9.38/hr",
       "trend": "↑ 24% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6302,11 +6286,11 @@
       "rate": "$0.60 – $1.59/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-24T07:30:27.906Z",
+    "updatedAt": "2026-09-24T07:45:22.841Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6321,10 +6305,10 @@
         "storyCoverage": 0.8450704225352113,
         "estimatedRelevantDiscussions": 23,
         "isEstimated": true,
-        "rawCommentHits": 2558,
+        "rawCommentHits": 2559,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.11727912431587177,
+        "commentCoverage": 0.11723329425556858,
         "limited": false,
         "points": 114,
         "themes": [
@@ -6409,12 +6393,12 @@
         "storyCoverage": 0.35294117647058826,
         "estimatedRelevantDiscussions": 85,
         "isEstimated": true,
-        "rawCommentHits": 6409,
+        "rawCommentHits": 6408,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
-        "commentCoverage": 0.04680917459822125,
+        "commentCoverage": 0.04681647940074907,
         "limited": false,
-        "points": 814,
+        "points": 818,
         "themes": [
           {
             "id": "coding",
@@ -6460,8 +6444,8 @@
         "topThreads": [
           {
             "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-            "points": 618,
-            "comments": 631,
+            "points": 622,
+            "comments": 637,
             "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
             "date": "SEP 23 2026"
           },
@@ -6497,10 +6481,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1466,
+        "rawCommentHits": 1465,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.20463847203274216,
+        "commentCoverage": 0.20477815699658702,
         "limited": false,
         "points": 243,
         "themes": [
@@ -6688,10 +6672,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": false,
-        "rawCommentHits": 467,
+        "rawCommentHits": 466,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.6423982869379015,
+        "commentCoverage": 0.6437768240343348,
         "limited": true,
         "points": 41,
         "themes": [
@@ -6771,11 +6755,11 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 116,
-        "fetchedStoryCount": 114,
+        "fetchedStoryCount": 116,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.9827586206896551,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
-        "isEstimated": true,
+        "isEstimated": false,
         "rawCommentHits": 927,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
@@ -6854,7 +6838,7 @@
           {
             "name": "Hacker News",
             "discussions": 20,
-            "isEstimated": true
+            "isEstimated": false
           }
         ]
       },
@@ -6869,10 +6853,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": false,
-        "rawCommentHits": 4690,
+        "rawCommentHits": 4689,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.06396588486140725,
+        "commentCoverage": 0.06397952655150352,
         "limited": false,
         "points": 642,
         "themes": [
