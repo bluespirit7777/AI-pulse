@@ -1,27 +1,27 @@
 {
-  "updatedAt": "2026-09-24T03:15:21.382Z",
+  "updatedAt": "2026-09-24T03:30:28.724Z",
   "build": {
-    "sha": "7bea0cdadbf1407363653ba6955ef358bdf3c674",
-    "shortSha": "7bea0cd",
+    "sha": "70bb7c07bcde7265246ecc892fb9493da2a1be79",
+    "shortSha": "70bb7c0",
     "ref": "main",
-    "builtAt": "2026-09-24T03:15:37.726Z"
+    "builtAt": "2026-09-24T03:30:48.073Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 9,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.1,
-    "estimatedDatasets": 4,
-    "buildSha": "7bea0cd",
-    "lastSuccessfulUpdate": "2026-09-24T03:15:21.382Z"
+    "estimatedDatasets": 5,
+    "buildSha": "70bb7c0",
+    "lastSuccessfulUpdate": "2026-09-24T03:30:28.724Z"
   },
   "ticker": [
     "ANTHROPIC’S BIOLAB MADE A DISCOVERY IT’S COMPARING TO CRISPR",
     "GOOGLE BEAM EXPANDS WITH NEW REGIONS, PARTNERS, AND CUSTOMERS",
-    "SAM ALTMAN’S REMARKS AT THE UNITED NATIONS SECURITY COUNCIL",
     "EMA RAISES $77M AS AI STARTS EATING INTO ENTERPRISE SOFTWARE AND SERVICES",
     "GRAB AND OPENAI BRING PRACTICAL AI SKILLS TO SOUTHEAST ASIA",
+    "SAM ALTMAN’S REMARKS AT THE UNITED NATIONS SECURITY COUNCIL",
     "RINGG’S AI AGENTS RESOLVE UP TO 65% OF CUSTOMER CALLS WITH OPENAI",
     "THE AI HYPE INDEX: AI LOVES CHEATING",
     "ANTHROPIC UNVEILS CLAUDE OPUS 5.5",
@@ -40,8 +40,8 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 70,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -79,32 +79,6 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/sam-altman-un-security-council-remarks",
-      "clusterId": "1ke56x9",
-      "title": "Sam Altman’s remarks at the United Nations Security Council",
-      "desc": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
-      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-      "dateISO": "2026-09-23T12:00:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 68,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -156,6 +130,32 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "clusterId": "1ke56x9",
+      "title": "Sam Altman’s remarks at the United Nations Security Council",
+      "desc": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "dateISO": "2026-09-23T12:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 67,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
         }
       ],
       "sourceName": "OpenAI",
@@ -543,32 +543,6 @@
       ]
     },
     {
-      "id": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-      "clusterId": "108o9nz",
-      "title": "Gemini 3.8 text-to-speech says hello",
-      "desc": "",
-      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
-      "dateISO": "2026-09-23T15:25:14.000Z",
-      "date": "SEP 23 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google DeepMind",
-          "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/"
-        }
-      ],
-      "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
       "clusterId": "1q6usxr",
       "title": "OpenAI extends cyber access to Ukraine for civilian defense",
@@ -699,6 +673,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "clusterId": "108o9nz",
+      "title": "Gemini 3.8 text-to-speech says hello",
+      "desc": "",
+      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "dateISO": "2026-09-23T15:25:14.000Z",
+      "date": "SEP 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google DeepMind",
+          "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/"
+        }
+      ],
+      "sourceName": "Google DeepMind",
+      "entityIds": [
+        "gemini"
+      ]
     },
     {
       "id": "https://techcrunch.com/2026/09/23/youtube-will-let-you-build-your-own-algorithm-with-ai/",
@@ -955,7 +955,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -1110,8 +1110,8 @@
       "category": "product",
       "title": "Anthropic’s biolab made a discovery it’s comparing to Crispr",
       "summary": "Anthropic says its AI Claude has \"autonomously discovered\" a new enzyme system similar to machinery behind the powerful gene-editing tool Crispr. It's the first result from Anthro…",
-      "significance": 70,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "date": "SEP 23 2026",
       "dateISO": "2026-09-23T18:00:00.000Z",
@@ -1130,26 +1130,26 @@
     },
     {
       "family": "market",
-      "category": "orggov",
-      "title": "Sam Altman’s remarks at the United Nations Security Council",
-      "summary": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+      "category": "capital",
+      "title": "Ema raises $77M as AI starts eating into enterprise software and services",
+      "summary": "Ema has raised $140 million to date and has more than 50 enterprise customers, including Google and Microsoft.",
       "significance": 68,
       "impact": "notable",
-      "verification": "official",
+      "verification": "single",
       "date": "SEP 23 2026",
       "dateISO": "2026-09-23T12:00:00.000Z",
-      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "url": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/23/ema-raises-77m-as-ai-starts-eating-into-enterprise-software-and-services/"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "Governance changes shape how a lab makes its biggest calls."
+      "whyItMatters": "If it holds up, fresh capital extends how long the company can fund training runs and hiring before it needs revenue."
     },
     {
       "family": "research",
@@ -1216,7 +1216,7 @@
           "sourceName": "The Verge",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "high"
+          "impact": "notable"
         },
         {
           "h": "Anthropic unveils Claude Opus 5.5",
@@ -6243,7 +6243,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6280,14 +6280,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.93 – $1.59/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$0.60 – $1.59/hr",
+      "trend": "↓ 13% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-24T03:15:21.382Z",
+    "updatedAt": "2026-09-24T03:30:28.724Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6296,16 +6296,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 327,
+        "rawStoryHits": 356,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 19,
-        "storyCoverage": 0.9174311926605505,
-        "estimatedRelevantDiscussions": 23,
+        "storyCoverage": 0.8426966292134831,
+        "estimatedRelevantDiscussions": 25,
         "isEstimated": true,
-        "rawCommentHits": 2559,
+        "rawCommentHits": 2560,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.11723329425556858,
+        "commentCoverage": 0.1171875,
         "limited": false,
         "points": 115,
         "themes": [
@@ -6369,7 +6369,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
+            "discussions": 23,
             "isEstimated": true
           },
           {
@@ -6390,12 +6390,12 @@
         "storyCoverage": 0.3516998827667057,
         "estimatedRelevantDiscussions": 85,
         "isEstimated": true,
-        "rawCommentHits": 6398,
+        "rawCommentHits": 6400,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.046889653016567674,
+        "commentCoverage": 0.046875,
         "limited": false,
-        "points": 736,
+        "points": 740,
         "themes": [
           {
             "id": "coding",
@@ -6441,8 +6441,8 @@
         "topThreads": [
           {
             "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-            "points": 540,
-            "comments": 567,
+            "points": 544,
+            "comments": 571,
             "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
             "date": "SEP 23 2026"
           },
@@ -6483,7 +6483,7 @@
         "validatedCommentCount": 48,
         "commentCoverage": 0.20477815699658702,
         "limited": false,
-        "points": 242,
+        "points": 243,
         "themes": [
           {
             "id": "coding",
@@ -6539,7 +6539,7 @@
         "topThreads": [
           {
             "title": "Show HN: Training a model to identify AI web content from structure alone",
-            "points": 65,
+            "points": 66,
             "comments": 24,
             "url": "https://arxiv.org/abs/2609.15369",
             "date": "SEP 22 2026"
@@ -6581,10 +6581,10 @@
         "storyCoverage": 0.5628517823639775,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 10595,
+        "rawCommentHits": 10597,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.028315243039169418,
+        "commentCoverage": 0.0283098990280268,
         "limited": false,
         "points": 51,
         "themes": [
@@ -6752,17 +6752,17 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 117,
-        "fetchedStoryCount": 117,
+        "fetchedStoryCount": 112,
         "validatedStoryCount": 20,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 20,
-        "isEstimated": false,
+        "storyCoverage": 0.9572649572649573,
+        "estimatedRelevantDiscussions": 21,
+        "isEstimated": true,
         "rawCommentHits": 928,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
         "commentCoverage": 0.3232758620689655,
         "limited": false,
-        "points": 815,
+        "points": 816,
         "themes": [
           {
             "id": "coding",
@@ -6834,8 +6834,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 20,
-            "isEstimated": false
+            "discussions": 21,
+            "isEstimated": true
           }
         ]
       },
@@ -6844,16 +6844,16 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 243,
-        "fetchedStoryCount": 243,
+        "rawStoryHits": 244,
+        "fetchedStoryCount": 244,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": false,
-        "rawCommentHits": 4694,
+        "rawCommentHits": 4696,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
-        "commentCoverage": 0.06391137622496805,
+        "commentCoverage": 0.06388415672913117,
         "limited": false,
         "points": 642,
         "themes": [
