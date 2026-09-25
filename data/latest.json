@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-25T14:30:34.432Z",
+  "updatedAt": "2026-09-25T14:45:30.511Z",
   "build": {
-    "sha": "b24e8304fac0d65ee697e6c464fc224591e118e2",
-    "shortSha": "b24e830",
+    "sha": "49aa33ae8a05b1dfb4e397988eeb4ba31ae3de45",
+    "shortSha": "49aa33a",
     "ref": "main",
-    "builtAt": "2026-09-25T14:30:53.545Z"
+    "builtAt": "2026-09-25T14:45:51.254Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,49 +12,23 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
-    "estimatedDatasets": 4,
-    "buildSha": "b24e830",
-    "lastSuccessfulUpdate": "2026-09-25T14:30:34.432Z"
+    "estimatedDatasets": 5,
+    "buildSha": "49aa33a",
+    "lastSuccessfulUpdate": "2026-09-25T14:45:30.511Z"
   },
   "ticker": [
-    "MICROSOFT THINKS ITS NEW COPILOT ‘SUPER APP’ WILL BE AS INFLUENTIAL AS OFFICE",
     "JENSEN HUANG TALKS ABOUT AI AND CLIMATE CHANGE LIKE A SUPERVILLAIN",
     "GOOGLE PHOTOS ‘CLUELESS’-INSPIRED VIRTUAL CLOSET IS NOW AVAILABLE ON ANDROID AND IOS",
     "ANTHROPIC LAUNCHES CLAUDE OPUS 5.5 WITH LOWER PRICES AND FASTER OUTPUT",
+    "GOOGLE IS SENDING AN AI SATELLITE INTO SPACE NEXT WEEK",
     "MUSE SURE LOOKS A LOT LIKE OPENCLAW",
     "ORACLE SENDS FORCE MAJEURE NOTICE ON ITS NEW MEXICO STARGATE DATA CENTER",
     "INTRODUCING GEMINI 3.7 FLASH",
-    "CAN APPLE HOME’S AI CAMERA FEATURES OUTSMART AMAZON’S AND GOOGLE’S? I PUT THEM TO THE TEST",
     "10 YEARS OF NVIDIA DGX: FROM ONE SYSTEM TO AI FACTORIES",
-    "GOOGLE'S FIRST SUNCATCHER ORBITAL DATA CENTER TEST LAUNCHES OCTOBER 1"
+    "GOOGLE'S FIRST SUNCATCHER ORBITAL DATA CENTER TEST LAUNCHES OCTOBER 1",
+    "INSIDE ANTHROPIC'S MOLECULAR BIOLOGY LAB"
   ],
   "signals": [
-    {
-      "id": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
-      "clusterId": "ahts34",
-      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "desc": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface of chat, coding, and agents. As part of the launch, Microsoft is also rebranding Scout, the AI personal assistant it unveiled at Build earlier this year, as Autopilot. […]",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
-      "dateISO": "2026-09-25T12:00:00.000Z",
-      "date": "SEP 25 2026",
-      "category": "product",
-      "catConfidence": 0.83,
-      "family": "product",
-      "significance": 69,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "copilot"
-      ]
-    },
     {
       "id": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain",
       "clusterId": "184hge6",
@@ -124,13 +98,39 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "techrepublic.com",
+          "name": "TechRepublic",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV1JLV3pVQmtwWEkzUGhJWl9MbTZ3WE9OU1NJZUpfeGxqREJVZHVnTHZzeDlrN2NDbWxUMFhEOG05NmtVcnVRN09oaVpzblBIdzBJWmlCd2RCUlBqYVgzdTlsdncxbVBhOS1vM1RmMDVEdXJqR3pWeEZoVlJUSld4NnotN0dSSy03TGJfMkk0M0VFdw?oc=5"
         }
       ],
-      "sourceName": "techrepublic.com",
+      "sourceName": "TechRepublic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher",
+      "clusterId": "1lo0xh6",
+      "title": "Google is sending an AI satellite into space next week",
+      "desc": "Google is getting ready to launch a satellite with its AI processors to test how well they perform in space, as reported earlier by The New York Times. The move is part of Google's Project Suncatcher, the company's experimental initiative that could eventually put AI data centers into orbit. The satellite, equipped with Google's Tensor […]",
+      "url": "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher",
+      "dateISO": "2026-09-24T14:15:17.000Z",
+      "date": "SEP 24 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 62,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -223,32 +223,6 @@
         }
       ],
       "sourceName": "Google DeepMind",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
-      "clusterId": "14tu6jb",
-      "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
-      "desc": "A few years back, I was at a beachside Easter egg hunt, watching my kids dash through sand dunes searching for sweet treats. My phone buzzed in my pocket; I ignored it. A moment later, it buzzed again. I pulled it out, glanced down, and saw a \"motion detected\" notification from my security camera. \"Just […]",
-      "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
-      "dateISO": "2026-09-25T13:00:00.000Z",
-      "date": "SEP 25 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review"
-        }
-      ],
-      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -619,7 +593,7 @@
       "family": "product",
       "significance": 48,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 3,
       "sources": [
         {
@@ -631,11 +605,11 @@
           "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -849,7 +823,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Wealth Management",
+          "name": "wealthmanagement.com",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdjBYTXJBMkg1SG1Hb294NXJlaHBvREtWXzlVVHg0MjJ6WUtmZzJobUQ1LV9ENWc5aXNOYllkN2ZnVzJSVG5JYVI5dWYxemF0NDZYRnlYTGdEUmN3VjJramdqalRyaHhXTkx6ay1jbVk0Wjd0SnpmNXUyOTBmQ0R3cTBhU2pxZTl2YmJzZGFZUUpObDFOOHkwcm5CeGVKWUpuZDNMNXdOVTM?oc=5"
         },
         {
@@ -857,7 +831,7 @@
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOako0N2w1bExjVVA0azZSLUI0QXdveUdDUWFnM0RKeVJVTEN4TlFlX0t5UHR6Z1FROWp2LVJUSjY4anRUakt0OTBUWkdFdjNKLTFDNmhPZ0RVY3BZSEZzLVFFUjZVdmtLSHk1bVZQRm1ObVJ6SGVSWGpJbXBBdS1EQ3lSMk4xNzNfVTJQT2NYaW1aUkV5c1plNDJNRXk2S3ZPMzA5Yw?oc=5"
         }
       ],
-      "sourceName": "Wealth Management",
+      "sourceName": "wealthmanagement.com",
       "entityIds": [
         "claude"
       ]
@@ -875,7 +849,7 @@
       "family": "product",
       "significance": 45,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
         {
@@ -883,11 +857,11 @@
           "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -1069,30 +1043,6 @@
       "entityIds": []
     },
     {
-      "id": "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/",
-      "clusterId": "1er2jlf",
-      "title": "ElevenLabs’ CEO on margins, IPO timing, and telling customers they’re talking to a bot",
-      "desc": "ElevenLabs powers the AI voice on the other end of a lot of customer service calls, and its CEO told me this week that businesses should probably tell you that — at least until getting a machine is what everyone expects anyway.",
-      "url": "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/",
-      "dateISO": "2026-09-24T16:35:13.000Z",
-      "date": "SEP 24 2026",
-      "category": "capital",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
       "clusterId": "13side4",
       "title": "Introducing Claude Opus 5.5",
@@ -1105,15 +1055,15 @@
       "family": "product",
       "significance": 43,
       "impact": "emerging",
-      "verification": "official",
+      "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -1135,7 +1085,7 @@
       "sourceCount": 9,
       "sources": [
         {
-          "name": "britannica.com",
+          "name": "Britannica",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
         },
         {
@@ -1175,29 +1125,93 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlFvQ0M3SkQ0ZlQ4RzI1OUpBWno2Y3JSQTEwd01qS01CdVRkeTdLR2VOdmd0a0UzQ2M0UzF0UG9kUlA1SzBzeXJyU0U1QUN4RVRmakxCcVdoTG0wRGVMdTVTUTEwVVhWODZWNEdwYVQwR1plVDloVVk1T0ROc3M4ZVFVMmFuTjhTd21sc3RfNzNHS1I0TGxFSHgxMmZzei05VjhYTXh2LWg5YTNKaHlJdTFsdjgwelk?oc=5",
+      "clusterId": "6joh16",
+      "title": "Anthropic sets Claude Code to Auto Mode by default to protect developers from bad approvals - the-decoder.com",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlFvQ0M3SkQ0ZlQ4RzI1OUpBWno2Y3JSQTEwd01qS01CdVRkeTdLR2VOdmd0a0UzQ2M0UzF0UG9kUlA1SzBzeXJyU0U1QUN4RVRmakxCcVdoTG0wRGVMdTVTUTEwVVhWODZWNEdwYVQwR1plVDloVVk1T0ROc3M4ZVFVMmFuTjhTd21sc3RfNzNHS1I0TGxFSHgxMmZzei05VjhYTXh2LWg5YTNKaHlJdTFsdjgwelk?oc=5",
+      "dateISO": "2026-08-08T07:00:00.000Z",
+      "date": "AUG 08 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "thenewstack.io",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG85TlZNc09rQ3IzZnR0bjUzbmhSNXBjdWdTTWNwQTdTU2Jjbm5Fa1I5V2tCZDc4ZXFkRQ?oc=5"
+        },
+        {
+          "name": "BleepingComputer",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPb3lzZENsdmlkQU5TVWo4VGFNdVYwV05wVDVEdEdEelc5dkhNeDVkQ3FqR0JPNHdLaXllWHphTWFSd3FkRUFCYTR5OUVFdGhVVzM5emZjalZHTDYxLTI1RXhvcGplRERpZ0dVR0RZWm5MU29uLVhURHREd1MzdjJHNFJMaGtxSUU3S0dDSXI4RXRKSEpjS2FiWDVQNS14MG1IZEo5a0pkcVJVY2tWV0hCaDJxSDN5Sjlpc3gwSTBTcnpMQmFJQ2p4UUttZTfSAdIBQVVfeXFMTll1YlFSYW1Ec3V6VFBOZzE2OE9mUC1nR1FLeWlZMHNXbk1ndzBYZm11SzQ4OWhQQWhZSnBTbkRYLTRaNG0tQTZSRmdTRXdDcDZpR3kzdUVjdWppdlp1d2ZwUTJGZEZGaFlGeVNOSnNiZGFvRmdGT0Fucjlkd3V2S0tRVmc1VnN4SXhSdGhlMG91QWxtRzhsSkNoUG5IdmtEeHFCc3JRVng4ZmdZeVJEZUpnWnQ0MnBOeHBoUk1aUm1rSVlyZk9WLXlkYV85WldhcENR?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
+        },
+        {
+          "name": "Google News (Anthropic)",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlFvQ0M3SkQ0ZlQ4RzI1OUpBWno2Y3JSQTEwd01qS01CdVRkeTdLR2VOdmd0a0UzQ2M0UzF0UG9kUlA1SzBzeXJyU0U1QUN4RVRmakxCcVdoTG0wRGVMdTVTUTEwVVhWODZWNEdwYVQwR1plVDloVVk1T0ROc3M4ZVFVMmFuTjhTd21sc3RfNzNHS1I0TGxFSHgxMmZzei05VjhYTXh2LWg5YTNKaHlJdTFsdjgwelk?oc=5"
+        }
+      ],
+      "sourceName": "Google News (Anthropic)",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/cooley-gopublic",
+      "clusterId": "c9xyz2",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "dateISO": "2026-09-17T12:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/cooley-gopublic"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "summary": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface…",
-      "significance": 69,
+      "title": "Google Photos ‘Clueless’-inspired virtual closet is now available on Android and iOS",
+      "summary": "The AI-powered feature builds a virtual wardrobe from your photos, and is now broadly available after first rolling out to Android users in June.",
+      "significance": 63,
       "impact": "notable",
       "verification": "single",
-      "date": "SEP 25 2026",
-      "dateISO": "2026-09-25T12:00:00.000Z",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
+      "date": "SEP 24 2026",
+      "dateISO": "2026-09-24T17:00:00.000Z",
+      "url": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/24/google-photos-clueless-inspired-virtual-closet-is-now-available-on-android-and-ios/"
         }
       ],
       "entityIds": [
-        "copilot"
+        "gemini"
       ],
       "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
     },
@@ -1251,10 +1265,10 @@
   ],
   "entityActivity": {
     "chatgpt": 30,
-    "copilot": 1,
+    "copilot": 0,
     "perplexity": 1,
     "gpt": 96,
-    "claude": 70,
+    "claude": 69,
     "gemini": 28,
     "grok": 0,
     "llama": 0,
@@ -1282,7 +1296,7 @@
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV1JLV3pVQmtwWEkzUGhJWl9MbTZ3WE9OU1NJZUpfeGxqREJVZHVnTHZzeDlrN2NDbWxUMFhEOG05NmtVcnVRN09oaVpzblBIdzBJWmlCd2RCUlBqYVgzdTlsdncxbVBhOS1vM1RmMDVEdXJqR3pWeEZoVlJUSld4NnotN0dSSy03TGJfMkk0M0VFdw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "techrepublic.com",
+          "sourceName": "TechRepublic",
           "sourceCount": 1,
           "verification": "single",
           "impact": "notable"
@@ -1304,9 +1318,9 @@
           "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 1,
-          "verification": "official",
+          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1421,6 +1435,17 @@
           "impact": "notable"
         },
         {
+          "h": "Google is sending an AI satellite into space next week",
+          "d": "SEP 24 2026",
+          "url": "https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
+        {
           "h": "Making global data easier to explore",
           "d": "SEP 17 2026",
           "url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
@@ -1438,17 +1463,6 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Google DeepMind",
-          "sourceCount": 1,
-          "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "Try Google Pics: Easy image creation and editing in Google Workspace",
-          "d": "SEP 01 2026",
-          "url": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Google",
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
@@ -1470,27 +1484,15 @@
       "sourceCount": 7
     },
     {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "SEP 25 2026",
-      "verification": "analysis",
-      "impact": "notable",
-      "h": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them…",
-      "p": "A few years back, I was at a beachside Easter egg hunt, watching my kids dash through sand dunes searching for sweet treats. My phone buzzed in my pocket; I ignored it. A moment later, it buzzed again. I pulled it out, glanced down, and saw a \"motion detected…",
-      "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 25 2026",
       "verification": "single",
-      "impact": "notable",
-      "h": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "p": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface of chat, coding, and agents. As part of the launch, Microsoft is also rebranding…",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
-      "sourceName": "The Verge",
+      "impact": "emerging",
+      "h": "Measurements for understanding the pace of AI development inside frontier labs",
+      "p": "Measurements for understanding the pace of AI development inside frontier labs",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
+      "sourceName": "anthropic.com",
       "sourceCount": 1
     },
     {
@@ -1503,18 +1505,6 @@
       "p": "Vendors rolling out AI have an \"incentive to deny as many claims as possible.\"",
       "url": "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/",
       "sourceName": "Ars Technica",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 25 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "Measurements for understanding the pace of AI development inside frontier labs",
-      "p": "Measurements for understanding the pace of AI development inside frontier labs",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1hSlNaZU5CMXdjOERiMTltcEVxMXduUXVrT1UtSExlUGlUUHFCc2huOVM0NEY0cmhCMVF6X0o2QjMwUUZOQkhuSGlHVjFlaWdKelR3ZTEzUV9SRzRIdkxhV3RfQ0N2OUI5U214a0RqZjh3c2MxUktr?oc=5",
-      "sourceName": "Anthropic",
       "sourceCount": 1
     },
     {
@@ -1551,6 +1541,30 @@
       "p": "Instinct saved me $550, booked my restaurant reservations, and warned me about a phishing scam. It also wasted $64 and might be a security nightmare.",
       "url": "https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/",
       "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 24 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "New Jersey fines data center $1.1M after drone pics expose 62 gas generators",
+      "p": "Million-dollar fines won’t end billionaires’ data center pollution, neighbors fear.",
+      "url": "https://arstechnica.com/tech-policy/2026/09/new-jersey-fines-data-center-1-1m-after-satellite-pics-expose-62-gas-generators/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 24 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Oracle sends force majeure notice on its New Mexico Stargate data center",
+      "p": "The notice would allow Oracle to delay payments should the facility miss its 2028 target to come online.",
+      "url": "https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/",
+      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1675,12 +1689,12 @@
     {
       "field": "Safety",
       "date": "AUG 28 2026",
-      "verification": "official",
+      "verification": "single",
       "impact": "emerging",
       "h": "Automated researchers can reliably mitigate alignment failures",
       "p": "Automated researchers can reliably mitigate alignment failures",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMm12QTFLek9sVlhENXNNaFlpUHlnbEl5dDRNZTBCbG1iSUtndjBhaUQ3UGl6N2VOWFppR19kbGhHWjlGaWRnby1BcHNlM0lNLUFaZXVrWV9MTFFOcjg0dmpFcWc0cHkyUTd1d2Z3bjNjaU9FeUQzUnpKbFloc1lRVDRPNjBHQ2JRVDh6cg?oc=5",
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "sourceCount": 1
     }
   ],
@@ -1690,11 +1704,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 223.42,
-      "changePct": -0.516521352146935,
+      "price": 223.305,
+      "changePct": -0.5677304946468883,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 21709041,
+      "volume": 24406877,
       "ohlc": [
         {
           "d": "06-25",
@@ -2149,22 +2163,22 @@
           "o": 225.14999389648438,
           "h": 226.94000244140625,
           "l": 223.13290405273438,
-          "c": 223.4199981689453
+          "c": 223.30499267578125
         }
       ],
-      "relVolume": 0.17160296781116516,
-      "marketCap": 5451448000000
+      "relVolume": 0.19292849132313433,
+      "marketCap": 5448642000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 514.1,
-      "changePct": 3.247441035488108,
+      "price": 513.865,
+      "changePct": 3.2002485877506794,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 11637271,
+      "volume": 12989285,
       "ohlc": [
         {
           "d": "06-25",
@@ -2619,22 +2633,22 @@
           "o": 499.1400146484375,
           "h": 517.47998046875,
           "l": 497.29998779296875,
-          "c": 514.0999755859375
+          "c": 513.864990234375
         }
       ],
-      "relVolume": 0.5453865947312392,
-      "marketCap": 3819763000000
+      "relVolume": 0.6087494150599023,
+      "marketCap": 3818016950000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 349.89,
-      "changePct": -0.1341393774330183,
+      "price": 350.16,
+      "changePct": -0.05707891820250447,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 4178965,
+      "volume": 4763965,
       "ohlc": [
         {
           "d": "06-25",
@@ -3089,22 +3103,22 @@
           "o": 352.6300048828125,
           "h": 354.42999267578125,
           "l": 349.42999267578125,
-          "c": 349.8900146484375
+          "c": 350.1600036621094
         }
       ],
-      "relVolume": 0.15112332692527453,
-      "marketCap": 1721458800000
+      "relVolume": 0.1722786001212179,
+      "marketCap": 1722787200000.0002
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 342.385,
-      "changePct": 0.0073093863574047475,
+      "price": 342.74,
+      "changePct": 0.0001453135317554411,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 4826959,
+      "volume": 5311417,
       "ohlc": [
         {
           "d": "06-25",
@@ -3559,22 +3573,22 @@
           "o": 342.4100036621094,
           "h": 347.0299987792969,
           "l": 341.1099853515625,
-          "c": 342.385009765625
+          "c": 342.739501953125
         }
       ],
-      "relVolume": 0.17890649656259028,
-      "marketCap": 4177097000000
+      "relVolume": 0.19686245672544217,
+      "marketCap": 4181428000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 247.47,
-      "changePct": -0.7659008840772599,
+      "price": 248.03,
+      "changePct": -0.5413449663496532,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 8167400,
+      "volume": 9352630,
       "ohlc": [
         {
           "d": "06-25",
@@ -4029,22 +4043,22 @@
           "o": 248.55999755859375,
           "h": 250.15989685058594,
           "l": 247.17999267578125,
-          "c": 247.47000122070312
+          "c": 248.02999877929688
         }
       ],
-      "relVolume": 0.23053188386018547,
-      "marketCap": 2647929000000
+      "relVolume": 0.26398601916733433,
+      "marketCap": 2653921000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 751.49,
-      "changePct": -3.3565292403042846,
+      "price": 748.845,
+      "changePct": -3.6966852916809096,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8116346,
+      "volume": 9057086,
       "ohlc": [
         {
           "d": "06-25",
@@ -4498,23 +4512,23 @@
           "d": "09-25",
           "o": 768.844970703125,
           "h": 769.5700073242188,
-          "l": 750.5399780273438,
-          "c": 751.489990234375
+          "l": 748.4099731445312,
+          "c": 748.844970703125
         }
       ],
-      "relVolume": 0.3623681777867865,
-      "marketCap": 1893754800000
+      "relVolume": 0.4043691274223912,
+      "marketCap": 1887089400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 449.43,
-      "changePct": -0.38124819771088736,
+      "price": 450.46,
+      "changePct": -0.15294302354896405,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 1951748,
+      "volume": 2140160,
       "ohlc": [
         {
           "d": "06-25",
@@ -4969,22 +4983,22 @@
           "o": 452.3949890136719,
           "h": 455.0199890136719,
           "l": 449.1499938964844,
-          "c": 449.42999267578125
+          "c": 450.4599914550781
         }
       ],
-      "relVolume": 0.1942169221400055,
-      "marketCap": 2332541700000
+      "relVolume": 0.2129656533974438,
+      "marketCap": 2337887400000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 630.2,
-      "changePct": 0.14938219922101273,
+      "price": 631.016,
+      "changePct": 0.27910348565577825,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 6425961,
+      "volume": 7037991,
       "ohlc": [
         {
           "d": "06-25",
@@ -5439,22 +5453,22 @@
           "o": 635.0679931640625,
           "h": 638.9500122070312,
           "l": 629,
-          "c": 630.2000122070312
+          "c": 631.0162963867188
         }
       ],
-      "relVolume": 0.2979837285799709,
-      "marketCap": 1020924000000.0001
+      "relVolume": 0.32636469469582496,
+      "marketCap": 1022245920000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 191.51,
-      "changePct": -0.5607777411033708,
+      "price": 190.48,
+      "changePct": -1.0955920091766655,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 4684809,
+      "volume": 5501160,
       "ohlc": [
         {
           "d": "06-25",
@@ -5908,23 +5922,23 @@
           "d": "09-25",
           "o": 192.86000061035156,
           "h": 194.21400451660156,
-          "l": 190.610107421875,
-          "c": 191.50999450683594
+          "l": 190.32000732421875,
+          "c": 190.47999572753906
         }
       ],
-      "relVolume": 0.17031299788363385,
-      "marketCap": 459624000000
+      "relVolume": 0.1999908750682325,
+      "marketCap": 457152000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 138.28,
-      "changePct": -0.9029629980361716,
+      "price": 138.309,
+      "changePct": -0.00014756903839358826,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 6503789,
+      "volume": 6973183,
       "ohlc": [
         {
           "d": "06-25",
@@ -6379,37 +6393,37 @@
           "o": 138.57000732421875,
           "h": 140.87759399414062,
           "l": 137.6800994873047,
-          "c": 138.27999877929688
+          "c": 138.3092041015625
         }
       ],
-      "relVolume": 0.1931257302952063,
-      "marketCap": 388566800000
+      "relVolume": 0.20706407593436957,
+      "marketCap": 388648290000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
+      "rate": "$1.99 – $3.51/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.00/hr",
-      "trend": "↑ 5% vs 7d ago",
+      "rate": "$3.59 – $5.92/hr",
+      "trend": "↑ 16% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $9.38/hr",
-      "trend": "↑ 4% vs 7d ago",
+      "rate": "$5.98 – $10.64/hr",
+      "trend": "↑ 13% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6437,7 +6451,7 @@
     }
   ],
   "community": {
-    "updatedAt": "2026-09-25T14:30:34.432Z",
+    "updatedAt": "2026-09-25T14:45:30.511Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6452,10 +6466,10 @@
         "storyCoverage": 0.7737430167597765,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 2537,
+        "rawCommentHits": 2535,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.11824990145841545,
+        "commentCoverage": 0.11834319526627218,
         "limited": false,
         "points": 112,
         "themes": [
@@ -6540,12 +6554,12 @@
         "storyCoverage": 0.35335689045936397,
         "estimatedRelevantDiscussions": 79,
         "isEstimated": true,
-        "rawCommentHits": 6376,
+        "rawCommentHits": 6375,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.04705144291091593,
+        "commentCoverage": 0.047058823529411764,
         "limited": false,
-        "points": 940,
+        "points": 941,
         "themes": [
           {
             "id": "coding",
@@ -6586,7 +6600,7 @@
         "topThreads": [
           {
             "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-            "points": 770,
+            "points": 771,
             "comments": 788,
             "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
             "date": "SEP 23 2026"
@@ -6618,9 +6632,9 @@
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
         "rawStoryHits": 133,
-        "fetchedStoryCount": 130,
+        "fetchedStoryCount": 133,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.9774436090225563,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
         "rawCommentHits": 1437,
@@ -6701,7 +6715,7 @@
           {
             "name": "Hacker News",
             "discussions": 20,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6726,10 +6740,10 @@
         "storyCoverage": 0.5586592178770949,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 10831,
+        "rawCommentHits": 10832,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.02769827347428677,
+        "commentCoverage": 0.027695716395864108,
         "limited": false,
         "points": 40,
         "themes": [
@@ -6808,16 +6822,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 72,
-        "fetchedStoryCount": 72,
+        "rawStoryHits": 73,
+        "fetchedStoryCount": 73,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 437,
+        "rawCommentHits": 436,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.6864988558352403,
+        "commentCoverage": 0.6880733944954128,
         "limited": true,
         "points": 38,
         "themes": [
@@ -6897,11 +6911,11 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 109,
-        "fetchedStoryCount": 109,
+        "fetchedStoryCount": 107,
         "validatedStoryCount": 19,
-        "storyCoverage": 1,
+        "storyCoverage": 0.981651376146789,
         "estimatedRelevantDiscussions": 19,
-        "isEstimated": false,
+        "isEstimated": true,
         "rawCommentHits": 904,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
@@ -6980,7 +6994,7 @@
           {
             "name": "Hacker News",
             "discussions": 19,
-            "isEstimated": false
+            "isEstimated": true
           }
         ]
       },
@@ -6995,10 +7009,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4628,
+        "rawCommentHits": 4626,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.06482281763180639,
+        "commentCoverage": 0.0648508430609598,
         "limited": false,
         "points": 158,
         "themes": [
