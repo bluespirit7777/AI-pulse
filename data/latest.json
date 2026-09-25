@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-09-25T01:15:21.474Z",
+  "updatedAt": "2026-09-25T01:30:27.205Z",
   "build": {
-    "sha": "dfd56f7d64285696f41ec4bdfe884d66ef3bc01a",
-    "shortSha": "dfd56f7",
+    "sha": "69b791e96140776214cec4e0b8a022e77a1a330d",
+    "shortSha": "69b791e",
     "ref": "main",
-    "builtAt": "2026-09-25T01:15:36.851Z"
+    "builtAt": "2026-09-25T01:30:53.103Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 14,
+    "feedsSucceeded": 11,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.1,
-    "estimatedDatasets": 4,
-    "buildSha": "dfd56f7",
-    "lastSuccessfulUpdate": "2026-09-25T01:15:21.474Z"
+    "estimatedDatasets": 5,
+    "buildSha": "69b791e",
+    "lastSuccessfulUpdate": "2026-09-25T01:30:27.205Z"
   },
   "ticker": [
     "JENSEN HUANG TALKS ABOUT AI AND CLIMATE CHANGE LIKE A SUPERVILLAIN",
@@ -24,9 +24,9 @@
     "MUSE SURE LOOKS A LOT LIKE OPENCLAW",
     "ORACLE SENDS FORCE MAJEURE NOTICE ON ITS NEW MEXICO STARGATE DATA CENTER",
     "INSIDE ANTHROPIC'S MOLECULAR BIOLOGY LAB",
-    "10 YEARS OF NVIDIA DGX: FROM ONE SYSTEM TO AI FACTORIES",
-    "GOOGLE BEAM EXPANDS WITH NEW REGIONS, PARTNERS, AND CUSTOMERS",
-    "INTRODUCING GEMINI 3.7 FLASH"
+    "INTRODUCING GEMINI 3.7 FLASH",
+    "GOOGLE'S FIRST SUNCATCHER ORBITAL DATA CENTER TEST LAUNCHES OCTOBER 1",
+    "GOOGLE TESTS LETTING GEMINI CALL BUSINESSES FOR YOU"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -212,59 +212,6 @@
       ]
     },
     {
-      "id": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-      "clusterId": "kdw1wo",
-      "title": "10 Years of NVIDIA DGX: From One System to AI Factories",
-      "desc": "A decade ago, Jensen Huang introduced DGX-1 to help researchers tackle AI challenges once thought out of reach. He delivered the first DGX-1 to OpenAI, which started the AI revolution. What began as a single system has evolved into the blueprint for the modern AI factory—driving breakthroughs across research, medicine, industry and beyond. Thank you to every researcher, developer, partner and cust",
-      "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-      "dateISO": "2026-09-24T16:00:27.000Z",
-      "date": "SEP 24 2026",
-      "category": "research",
-      "catConfidence": 0.38,
-      "family": "research",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "NVIDIA (YouTube)",
-          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M"
-        }
-      ],
-      "sourceName": "NVIDIA (YouTube)",
-      "entityIds": [
-        "gpt",
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
-      "clusterId": "1aoojnw",
-      "title": "Google Beam expands with new regions, partners, and customers",
-      "desc": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
-      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
-      "dateISO": "2026-09-23T18:00:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Google",
-          "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/"
-        }
-      ],
-      "sourceName": "Google",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
       "clusterId": "1a8ual3",
       "title": "Introducing Gemini 3.7 Flash",
@@ -358,6 +305,32 @@
         }
       ],
       "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "clusterId": "1aoojnw",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "desc": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "dateISO": "2026-09-23T18:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 57,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Google",
+          "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/"
+        }
+      ],
+      "sourceName": "Google",
       "entityIds": [
         "gemini"
       ]
@@ -472,67 +445,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5",
-      "clusterId": "2qoc4v",
-      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5",
-      "dateISO": "2026-09-23T18:14:17.000Z",
-      "date": "SEP 23 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Al Jazeera",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMENUOHhWSmdxQTlHcUtqOTVmSVhWOS01ZGg1NHY4ajVaUk03ZXJPcVVIaDk2SFl5UzBsYXZVZzVFMERsNlUwdlk1ZlVrbnFEVEJLdkNweVpaZFdfY0V5SjZUZXVPS2JlQ3dPcmp0d1UxNWcyYTI5enNvT3lJQ3BOSkRfLTgzeVRmcHVWNXlTLVZ3WEVLdkJpeTAyV0FfOE80bHV0emgwUFJsajB5X3Y00gG0AUFVX3lxTE5JcnNCQ0IxUUMxdndVQmZobFd0V1czbUQ4bEk5ekVGZGJ2ejdzQlBDVTRzT3R1QVFjXzZXS0pfSTcwMnZSZjdHd3NkSVMxUW1iOC03V2tJVDdVM0RmTXRkZDJhUmlEWnlnVjlLT0VHeVE1TllRM1p0UWR1d2JFekkwdHVHWjNOREotQlZYNnNUWkxITTFCN3lRd0NMQVZUT2dtYVhMQlAtRUoyUGRhTzVsbzNvZQ?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/",
-      "clusterId": "jsopso",
-      "title": "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting",
-      "desc": "British Columbia sues OpenAI, demands Tumbler Ridge shooter’s ChatGPT logs.",
-      "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/",
-      "dateISO": "2026-09-22T19:28:23.000Z",
-      "date": "SEP 22 2026",
-      "category": "policy",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "chatgpt",
-        "gpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/",
       "clusterId": "c2uy4z",
       "title": "OpenAI agent “didn’t accept no for an answer” in Australian government breach",
@@ -556,6 +468,40 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5",
+      "clusterId": "2qoc4v",
+      "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5",
+      "dateISO": "2026-09-23T18:14:17.000Z",
+      "date": "SEP 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMENUOHhWSmdxQTlHcUtqOTVmSVhWOS01ZGg1NHY4ajVaUk03ZXJPcVVIaDk2SFl5UzBsYXZVZzVFMERsNlUwdlk1ZlVrbnFEVEJLdkNweVpaZFdfY0V5SjZUZXVPS2JlQ3dPcmp0d1UxNWcyYTI5enNvT3lJQ3BOSkRfLTgzeVRmcHVWNXlTLVZ3WEVLdkJpeTAyV0FfOE80bHV0emgwUFJsajB5X3Y00gG0AUFVX3lxTE5JcnNCQ0IxUUMxdndVQmZobFd0V1czbUQ4bEk5ekVGZGJ2ejdzQlBDVTRzT3R1QVFjXzZXS0pfSTcwMnZSZjdHd3NkSVMxUW1iOC03V2tJVDdVM0RmTXRkZDJhUmlEWnlnVjlLT0VHeVE1TllRM1p0UWR1d2JFekkwdHVHWjNOREotQlZYNnNUWkxITTFCN3lRd0NMQVZUT2dtYVhMQlAtRUoyUGRhTzVsbzNvZQ?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9JT0FwTVctZXNkYnJXeW44aHhoZmJfbDYwN3B4a2tMTThJZm9XRklxMkEzdFlxb2Z6VGM2UnpDTGlaQ09PODJUMkJFWWl1UVZOTDJ0WU1UQ1pZMDlrbS0tM3FTS0RGWmNSeGt5QlJjZktQWkl4N0E?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -586,6 +532,33 @@
       "sourceName": "Reuters",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/",
+      "clusterId": "jsopso",
+      "title": "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting",
+      "desc": "British Columbia sues OpenAI, demands Tumbler Ridge shooter’s ChatGPT logs.",
+      "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/",
+      "dateISO": "2026-09-22T19:28:23.000Z",
+      "date": "SEP 22 2026",
+      "category": "policy",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
       ]
     },
     {
@@ -625,7 +598,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 52,
+      "significance": 51,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -636,32 +609,6 @@
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/airbnb-gpt-6-astra",
-      "clusterId": "1t3jth8",
-      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
-      "desc": "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.",
-      "url": "https://openai.com/index/airbnb-gpt-6-astra",
-      "dateISO": "2026-09-23T01:00:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/airbnb-gpt-6-astra"
-        }
-      ],
-      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -688,6 +635,32 @@
         }
       ],
       "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/airbnb-gpt-6-astra",
+      "clusterId": "1t3jth8",
+      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
+      "desc": "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.",
+      "url": "https://openai.com/index/airbnb-gpt-6-astra",
+      "dateISO": "2026-09-23T01:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/airbnb-gpt-6-astra"
+        }
+      ],
+      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -963,7 +936,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 46,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -975,33 +948,6 @@
       ],
       "sourceName": "Ars Technica",
       "entityIds": []
-    },
-    {
-      "id": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
-      "clusterId": "5ra5e3",
-      "title": "Don’t be fooled by this summer of AI hype",
-      "desc": "It’s been a busy few months for AI hype. At the end of April, Anthropic claimed that its model Claude Mythos is better at finding software vulnerabilities than most security experts. Then we had the OpenAI–Hugging Face hacking incident, after which Anthropic (proudly) and Meta (reluctantly) disclosed similar incidents involving their models. This was followed…",
-      "url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
-      "dateISO": "2026-09-22T11:04:51.000Z",
-      "date": "SEP 22 2026",
-      "category": "opensource",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/"
-        }
-      ],
-      "sourceName": "MIT Technology Review",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
     },
     {
       "id": "https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/",
@@ -1026,6 +972,33 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
+      "clusterId": "5ra5e3",
+      "title": "Don’t be fooled by this summer of AI hype",
+      "desc": "It’s been a busy few months for AI hype. At the end of April, Anthropic claimed that its model Claude Mythos is better at finding software vulnerabilities than most security experts. Then we had the OpenAI–Hugging Face hacking incident, after which Anthropic (proudly) and Meta (reluctantly) disclosed similar incidents involving their models. This was followed…",
+      "url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
+      "dateISO": "2026-09-22T11:04:51.000Z",
+      "date": "SEP 22 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/"
+        }
+      ],
+      "sourceName": "MIT Technology Review",
+      "entityIds": [
+        "gpt",
         "claude"
       ]
     },
@@ -1136,6 +1109,32 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/two-years-of-openai-academy",
+      "clusterId": "imx9ta",
+      "title": "Two years of OpenAI Academy",
+      "desc": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+      "url": "https://openai.com/index/two-years-of-openai-academy",
+      "dateISO": "2026-09-23T16:00:00.000Z",
+      "date": "SEP 23 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/two-years-of-openai-academy"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1167,7 +1166,7 @@
       "category": "orggov",
       "title": "Jensen Huang talks about AI and climate change like a supervillain",
       "summary": "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first. The Nvidia CEO discussed the future of energy…",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "single",
       "date": "SEP 24 2026",
@@ -1188,33 +1187,37 @@
     {
       "family": "research",
       "category": "research",
-      "title": "10 Years of NVIDIA DGX: From One System to AI Factories",
-      "summary": "A decade ago, Jensen Huang introduced DGX-1 to help researchers tackle AI challenges once thought out of reach. He delivered the first DGX-1 to OpenAI, which started the AI revolu…",
-      "significance": 58,
+      "title": "Researchers used Claude to hack OpenAI",
+      "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
+      "significance": 48,
       "impact": "notable",
-      "verification": "single",
-      "date": "SEP 24 2026",
-      "dateISO": "2026-09-24T16:00:27.000Z",
-      "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "date": "SEP 18 2026",
+      "dateISO": "2026-09-18T13:30:12.000Z",
+      "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/",
+      "sourceCount": 2,
       "sources": [
         {
-          "name": "NVIDIA (YouTube)",
-          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M"
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai/"
         }
       ],
       "entityIds": [
         "gpt",
-        "nvidia"
+        "claude"
       ],
-      "whyItMatters": "If it holds up, the partnership shifts who gets access to whose models, compute or customers."
+      "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
     }
   ],
   "entityActivity": {
     "chatgpt": 29,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 97,
+    "gpt": 96,
     "claude": 73,
     "gemini": 29,
     "grok": 0,
@@ -1227,7 +1230,7 @@
     "gcp": 0,
     "oracle": 1,
     "coreweave": 0,
-    "nvidia": 3,
+    "nvidia": 2,
     "amd": 2,
     "tsmc": 0,
     "broadcom": 0
@@ -1299,17 +1302,6 @@
       "logoKey": "openai",
       "items": [
         {
-          "h": "10 Years of NVIDIA DGX: From One System to AI Factories",
-          "d": "SEP 24 2026",
-          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "NVIDIA (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
           "d": "SEP 23 2026",
           "url": "https://openai.com/index/airbnb-gpt-6-astra",
@@ -1346,6 +1338,17 @@
           "h": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
           "d": "SEP 21 2026",
           "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "Introducing the Australian Youth Safety Blueprint",
+          "d": "SEP 18 2026",
+          "url": "https://openai.com/index/australian-youth-safety-blueprint",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -1421,7 +1424,7 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
-      "date": "SEP 24 2026",
+      "date": "SEP 25 2026",
       "verification": "official",
       "impact": "emerging",
       "h": "Measurements for understanding the pace of AI development inside frontier labs",
@@ -6223,7 +6226,7 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.51/hr",
+      "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
@@ -6234,15 +6237,15 @@
       "rate": "$3.59 – $5.00/hr",
       "trend": "↑ 5% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $9.38/hr",
-      "trend": "↑ 4% vs 7d ago",
+      "rate": "$5.98 – $10.63/hr",
+      "trend": "↑ 13% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6263,14 +6266,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.53 – $1.59/hr",
-      "trend": "↓ 3% vs 7d ago",
+      "rate": "$0.43 – $1.59/hr",
+      "trend": "↓ 8% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-25T01:15:21.474Z",
+    "updatedAt": "2026-09-25T01:30:27.205Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6285,10 +6288,10 @@
         "storyCoverage": 0.8379888268156425,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": true,
-        "rawCommentHits": 2538,
+        "rawCommentHits": 2539,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.1182033096926714,
+        "commentCoverage": 0.11815675462780623,
         "limited": false,
         "points": 115,
         "themes": [
@@ -6450,10 +6453,10 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 133,
-        "fetchedStoryCount": 133,
+        "rawStoryHits": 132,
+        "fetchedStoryCount": 130,
         "validatedStoryCount": 19,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9848484848484849,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
         "rawCommentHits": 1472,
@@ -6534,7 +6537,7 @@
           {
             "name": "Hacker News",
             "discussions": 19,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6559,10 +6562,10 @@
         "storyCoverage": 0.5524861878453039,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 10763,
+        "rawCommentHits": 10765,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.0278732695345164,
+        "commentCoverage": 0.02786809103576405,
         "limited": false,
         "points": 51,
         "themes": [
@@ -6730,11 +6733,11 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 114,
-        "fetchedStoryCount": 114,
+        "fetchedStoryCount": 112,
         "validatedStoryCount": 20,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9824561403508771,
         "estimatedRelevantDiscussions": 20,
-        "isEstimated": false,
+        "isEstimated": true,
         "rawCommentHits": 923,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
@@ -6813,7 +6816,7 @@
           {
             "name": "Hacker News",
             "discussions": 20,
-            "isEstimated": false
+            "isEstimated": true
           }
         ]
       },
@@ -6828,10 +6831,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4657,
+        "rawCommentHits": 4658,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.06441915396177797,
+        "commentCoverage": 0.064405324173465,
         "limited": false,
         "points": 158,
         "themes": [
