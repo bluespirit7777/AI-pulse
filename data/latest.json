@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-09-26T22:45:24.167Z",
+  "updatedAt": "2026-09-26T23:00:32.728Z",
   "build": {
-    "sha": "3cea02628fdb62a2c321ecea261f91324cbb004f",
-    "shortSha": "3cea026",
+    "sha": "2fdbb5dcebcf928c1cba3534a2561a4f7bf0e219",
+    "shortSha": "2fdbb5d",
     "ref": "main",
-    "builtAt": "2026-09-26T22:45:41.847Z"
+    "builtAt": "2026-09-26T23:01:10.142Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.9,
+    "historyDepthDays": 60,
     "estimatedDatasets": 5,
-    "buildSha": "3cea026",
-    "lastSuccessfulUpdate": "2026-09-26T22:45:24.167Z"
+    "buildSha": "2fdbb5d",
+    "lastSuccessfulUpdate": "2026-09-26T23:00:32.728Z"
   },
   "ticker": [
     "U.S. APPEALS COURT UPHOLDS PENTAGON DESIGNATION OF ANTHROPIC AS SUPPLY CHAIN RISK",
@@ -25,8 +25,8 @@
     "ONE COMPANY IS AT THE CENTER OF A WAVE OF ROGUE AI ATTACKS",
     "INTRODUCING GEMINI 3.7 FLASH",
     "OPENAI PAUSES TRAINING OF ITS ‘MOST CAPABLE MODELS’",
-    "MICROSOFT THINKS ITS NEW COPILOT ‘SUPER APP’ WILL BE AS INFLUENTIAL AS OFFICE",
-    "CAN APPLE HOME’S AI CAMERA FEATURES OUTSMART AMAZON’S AND GOOGLE’S? I PUT THEM TO THE TEST"
+    "CAN APPLE HOME’S AI CAMERA FEATURES OUTSMART AMAZON’S AND GOOGLE’S? I PUT THEM TO THE TEST",
+    "MICROSOFT THINKS ITS NEW COPILOT ‘SUPER APP’ WILL BE AS INFLUENTIAL AS OFFICE"
   ],
   "signals": [
     {
@@ -100,7 +100,7 @@
       "category": "policy",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 66,
+      "significance": 65,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -264,32 +264,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
-      "clusterId": "ahts34",
-      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
-      "desc": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface of chat, coding, and agents. As part of the launch, Microsoft is also rebranding Scout, the AI personal assistant it unveiled at Build earlier this year, as Autopilot. […]",
-      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
-      "dateISO": "2026-09-25T12:00:00.000Z",
-      "date": "SEP 25 2026",
-      "category": "product",
-      "catConfidence": 0.83,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "copilot"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
       "clusterId": "14tu6jb",
       "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
@@ -313,6 +287,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
+      "clusterId": "ahts34",
+      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
+      "desc": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface of chat, coding, and agents. As part of the launch, Microsoft is also rebranding Scout, the AI personal assistant it unveiled at Build earlier this year, as Autopilot. […]",
+      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
+      "dateISO": "2026-09-25T12:00:00.000Z",
+      "date": "SEP 25 2026",
+      "category": "product",
+      "catConfidence": 0.83,
+      "family": "product",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "copilot"
       ]
     },
     {
@@ -509,7 +509,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "TechCrunch",
+          "name": "techcrunch.com",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         },
         {
@@ -693,32 +693,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5",
-      "clusterId": "hi1ys4",
-      "title": "Claude computes a nine-loop amplitude in N=4 super-Yang-Mills",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5",
-      "dateISO": "2026-09-25T17:44:53.000Z",
-      "date": "SEP 25 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "anthropic.com",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5"
-        }
-      ],
-      "sourceName": "anthropic.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
       "clusterId": "1wtfps8",
       "title": "Disrupting a new covert influence campaign from Russia",
@@ -813,7 +787,7 @@
       "sourceCount": 9,
       "sources": [
         {
-          "name": "Britannica",
+          "name": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
         },
         {
@@ -825,7 +799,7 @@
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZy04cUpKZ1lLWHB3Zmp5N19XeEEwdi13bjBZYllISzltVk5HaDdlUnJqOEJFZUlYVjBxNzhZbUc5NDhDeWdISkUzLWw3b25ZZTYxZG4tZUFjLXU5T3F2YlZ2M1QtNDdZcDZ1anZlTVFGZzlmY2dYNGRLelY5TjRTMDU4d1QxaDRYY0JvNXBIZ0FQUWxiMVJzQlc3V0plQTd2M19oWWRVUjV3aXdvOHhXREJ0STBfdW9LZkw1QnV0Mk5MQkhRaldlQ1NsSDJHcTkt?oc=5"
         },
         {
-          "name": "aljazeera.com",
+          "name": "Al Jazeera",
           "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
         },
         {
@@ -905,7 +879,7 @@
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVRJRGFUay1pWVdwUkoyTnZqazJiZWZlOGU0NHhCZHNESExCNmZBNFEzSWtWcFlkZTNQRW5BNmJRU2c5QWRrenEtX0g3RlVsV3BfLW0tTEdVSw?oc=5"
         },
         {
-          "name": "TechCrunch",
+          "name": "techcrunch.com",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
         },
         {
@@ -965,11 +939,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "theguardian.com",
+          "name": "The Guardian",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQld2RWtFcDZKTFdOekJMY2NCclRFeWJnN1I0NUVrZHBzUXY4Z2t5Z2FZdEZmTmQtTkg2REtlWVZhcVhYSTViNG4zZzlzOVlPa09vVXVkV1g4ZWNScWNwdzllVm5ndUgzQzBjcUdJdTFGWndWcUp1aFY3MTNzVWY2YVN5M1dYRFpQbG9hLWZINlo1bHVqamxLN1VYWHJPREJQMEE?oc=5"
         }
       ],
-      "sourceName": "theguardian.com",
+      "sourceName": "The Guardian",
       "entityIds": [
         "claude"
       ]
@@ -1199,6 +1173,32 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "clusterId": "nxip51",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "desc": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "dateISO": "2026-08-28T06:00:00.000Z",
+      "date": "AUG 28 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1283,7 +1283,7 @@
     "copilot": 2,
     "perplexity": 1,
     "gpt": 101,
-    "claude": 72,
+    "claude": 71,
     "gemini": 27,
     "grok": 0,
     "llama": 0,
@@ -1322,7 +1322,7 @@
           "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "venturebeat.com",
+          "sourceName": "VentureBeat",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -6329,15 +6329,15 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.24/hr",
-      "trend": "↑ 6% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "rate": "$3.22 – $5.14/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 16 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6366,14 +6366,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.87 – $1.59/hr",
-      "trend": "↑ 28% vs 7d ago",
+      "rate": "$0.80 – $1.59/hr",
+      "trend": "↑ 24% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-26T22:45:24.167Z",
+    "updatedAt": "2026-09-26T23:00:32.728Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6388,10 +6388,10 @@
         "storyCoverage": 0.8333333333333334,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
-        "rawCommentHits": 2543,
+        "rawCommentHits": 2544,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.11797090051120723,
+        "commentCoverage": 0.1179245283018868,
         "limited": false,
         "points": 114,
         "themes": [
@@ -6471,10 +6471,10 @@
         "storyCoverage": 0.35714285714285715,
         "estimatedRelevantDiscussions": 79,
         "isEstimated": true,
-        "rawCommentHits": 6449,
+        "rawCommentHits": 6448,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 27,
-        "commentCoverage": 0.04651884013025275,
+        "commentCoverage": 0.04652605459057072,
         "limited": false,
         "points": 946,
         "themes": [
@@ -6549,10 +6549,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1404,
+        "rawCommentHits": 1403,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
-        "commentCoverage": 0.21367521367521367,
+        "commentCoverage": 0.21382751247327156,
         "limited": false,
         "points": 248,
         "themes": [
@@ -6916,10 +6916,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 4528,
+        "rawCommentHits": 4527,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.06625441696113074,
+        "commentCoverage": 0.06626905235255136,
         "limited": false,
         "points": 158,
         "themes": [
