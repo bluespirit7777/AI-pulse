@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-26T14:30:29.247Z",
+  "updatedAt": "2026-09-26T14:45:23.890Z",
   "build": {
-    "sha": "a63c32b2c4f81ebd3d6564758d4a69ecfd6acc96",
-    "shortSha": "a63c32b",
+    "sha": "a814c121de253d0bb79a53914f5160dbdfe69d7e",
+    "shortSha": "a814c12",
     "ref": "main",
-    "builtAt": "2026-09-26T14:30:49.803Z"
+    "builtAt": "2026-09-26T14:45:39.789Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
-    "estimatedDatasets": 5,
-    "buildSha": "a63c32b",
-    "lastSuccessfulUpdate": "2026-09-26T14:30:29.247Z"
+    "estimatedDatasets": 4,
+    "buildSha": "a814c12",
+    "lastSuccessfulUpdate": "2026-09-26T14:45:23.890Z"
   },
   "ticker": [
     "U.S. APPEALS COURT UPHOLDS PENTAGON DESIGNATION OF ANTHROPIC AS SUPPLY CHAIN RISK",
@@ -26,7 +26,7 @@
     "MICROSOFT THINKS ITS NEW COPILOT ‘SUPER APP’ WILL BE AS INFLUENTIAL AS OFFICE",
     "INTRODUCING GEMINI 3.7 FLASH",
     "CAN APPLE HOME’S AI CAMERA FEATURES OUTSMART AMAZON’S AND GOOGLE’S? I PUT THEM TO THE TEST",
-    "ANTHROPIC TO PAY AKAMAI $11.6 BILLION OVER SEVEN YEARS IN CLOUD DEAL"
+    "JENSEN HUANG TALKS ABOUT AI AND CLIMATE CHANGE LIKE A SUPERVILLAIN"
   ],
   "signals": [
     {
@@ -100,8 +100,8 @@
       "category": "policy",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 70,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -206,7 +206,7 @@
       "category": "product",
       "catConfidence": 0.83,
       "family": "product",
-      "significance": 58,
+      "significance": 57,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -290,32 +290,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
-      "clusterId": "zjytmc",
-      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
-      "desc": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more.",
-      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
-      "dateISO": "2026-09-25T19:13:38.000Z",
-      "date": "SEP 25 2026",
-      "category": "capital",
-      "catConfidence": 0.4,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain",
       "clusterId": "184hge6",
       "title": "Jensen Huang talks about AI and climate change like a supervillain",
@@ -339,6 +313,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+      "clusterId": "zjytmc",
+      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+      "desc": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more.",
+      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+      "dateISO": "2026-09-25T19:13:38.000Z",
+      "date": "SEP 25 2026",
+      "category": "capital",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -386,11 +386,11 @@
       "family": "product",
       "significance": 52,
       "impact": "notable",
-      "verification": "official",
+      "verification": "corroborated",
       "sourceCount": 3,
       "sources": [
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
         },
         {
@@ -398,11 +398,11 @@
           "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
         },
         {
-          "name": "Anthropic",
+          "name": "anthropic.com",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
         }
       ],
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "entityIds": [
         "claude"
       ]
@@ -495,32 +495,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5",
-      "clusterId": "hi1ys4",
-      "title": "Claude computes a nine-loop amplitude in N=4 super-Yang-Mills",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5",
-      "dateISO": "2026-09-25T17:44:53.000Z",
-      "date": "SEP 25 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5",
       "clusterId": "161jsfd",
       "title": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
@@ -548,6 +522,32 @@
       "sourceName": "Forbes",
       "entityIds": [
         "gpt",
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5",
+      "clusterId": "hi1ys4",
+      "title": "Claude computes a nine-loop amplitude in N=4 super-Yang-Mills",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5",
+      "dateISO": "2026-09-25T17:44:53.000Z",
+      "date": "SEP 25 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "anthropic.com",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA0cmtPNG1Fa0prVnBpWXZmaDh4VXRGOE5haUQzQ1VjY3BpUnRJNks2UFhNdEhXdjdDaDFGbHdTX3FCTVhmeDBLdWIyZWVBVlY1T2tUMWNZYWNXX3NoaWIxdWxNQ3NLczNiSWRuTjZjWkQ?oc=5"
+        }
+      ],
+      "sourceName": "anthropic.com",
+      "entityIds": [
         "claude"
       ]
     },
@@ -723,30 +723,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
-      "clusterId": "102nfgz",
-      "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
-      "desc": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans.",
-      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
-      "dateISO": "2026-09-25T23:11:10.000Z",
-      "date": "SEP 25 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
       "clusterId": "kdw1wo",
       "title": "10 Years of NVIDIA DGX: From One System to AI Factories",
@@ -852,6 +828,30 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
+      "clusterId": "102nfgz",
+      "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+      "desc": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans.",
+      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
+      "dateISO": "2026-09-25T23:11:10.000Z",
+      "date": "SEP 25 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
       "id": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
       "clusterId": "sd3qw0",
       "title": "Google's first Suncatcher orbital data center test launches October 1",
@@ -904,44 +904,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlFvQ0M3SkQ0ZlQ4RzI1OUpBWno2Y3JSQTEwd01qS01CdVRkeTdLR2VOdmd0a0UzQ2M0UzF0UG9kUlA1SzBzeXJyU0U1QUN4RVRmakxCcVdoTG0wRGVMdTVTUTEwVVhWODZWNEdwYVQwR1plVDloVVk1T0ROc3M4ZVFVMmFuTjhTd21sc3RfNzNHS1I0TGxFSHgxMmZzei05VjhYTXh2LWg5YTNKaHlJdTFsdjgwelk?oc=5",
-      "clusterId": "6joh16",
-      "title": "Anthropic sets Claude Code to Auto Mode by default to protect developers from bad approvals - the-decoder.com",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlFvQ0M3SkQ0ZlQ4RzI1OUpBWno2Y3JSQTEwd01qS01CdVRkeTdLR2VOdmd0a0UzQ2M0UzF0UG9kUlA1SzBzeXJyU0U1QUN4RVRmakxCcVdoTG0wRGVMdTVTUTEwVVhWODZWNEdwYVQwR1plVDloVVk1T0ROc3M4ZVFVMmFuTjhTd21sc3RfNzNHS1I0TGxFSHgxMmZzei05VjhYTXh2LWg5YTNKaHlJdTFsdjgwelk?oc=5",
-      "dateISO": "2026-08-08T07:00:00.000Z",
-      "date": "AUG 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "The New Stack",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG85TlZNc09rQ3IzZnR0bjUzbmhSNXBjdWdTTWNwQTdTU2Jjbm5Fa1I5V2tCZDc4ZXFkRQ?oc=5"
-        },
-        {
-          "name": "Help Net Security",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVRJRGFUay1pWVdwUkoyTnZqazJiZWZlOGU0NHhCZHNESExCNmZBNFEzSWtWcFlkZTNQRW5BNmJRU2c5QWRrenEtX0g3RlVsV3BfLW0tTEdVSw?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNVUhsdFk2X0hXZVBLOFBkUEZHR3FCLVEweG5WSHVaYnJFNnhlOGtVWUxOaVNGNDhXZzNJR1JtbnlJWnZseFF0NGt2bFBRTnJldGdOb19zVnhHQ3MzNzg4ODY5MVJvamFETV83bUhGc3JmenoxRmNzTnZOWXlhYU45VmVpamRveDIwT1Ytc2xLTV9YZUp0MFdN?oc=5"
-        },
-        {
-          "name": "Google News (Anthropic)",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlFvQ0M3SkQ0ZlQ4RzI1OUpBWno2Y3JSQTEwd01qS01CdVRkeTdLR2VOdmd0a0UzQ2M0UzF0UG9kUlA1SzBzeXJyU0U1QUN4RVRmakxCcVdoTG0wRGVMdTVTUTEwVVhWODZWNEdwYVQwR1plVDloVVk1T0ROc3M4ZVFVMmFuTjhTd21sc3RfNzNHS1I0TGxFSHgxMmZzei05VjhYTXh2LWg5YTNKaHlJdTFsdjgwelk?oc=5"
-        }
-      ],
-      "sourceName": "Google News (Anthropic)",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5",
       "clusterId": "s5wits",
       "title": "Anthropic says Claude AI hacked three companies during cyber tests",
@@ -955,7 +917,7 @@
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 8,
+      "sourceCount": 7,
       "sources": [
         {
           "name": "Reuters",
@@ -980,10 +942,6 @@
         {
           "name": "NBC News",
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWjhVSFZGNzljcllhQktZNEgtazVYSm92SE93VDFSeFU1OWFUZnlyTVNSVERQYzlhUTVkY3dVSERiMEpfalN2OFN2VWZ5OHJuOUx2VXhfVTYxZ19QWWcwWTVyRGd4eFBwb2ZEcERmSWlYMXh1aDg4Y2ZrbVYzdUFMMUc0NGgtN0R4ZWhwUkNpVWtrV0VyQlNFY085ZnJfUFp3SmZlYkNQZGlsaEM2dGc?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ0FyTjVjNWQzY2dYblVWRlNJdGJwYkVuVVlXbkhBNURXR2VYenltaUVUR2I0emloLVB5S0dBTnpwUDJ0Q013dU1DQmZrLVhPeXcxY09pb0hyS3R4Q0ZFa2x4Y3Y5bzNJMGdtOVZZWE5iMFpjNmNLNjNOZlNKRnlBcmdRVW1NTUdrX1VYRk1nYjBKM3JCa3IwUENVbHRQNW44b25HRk91MUxNVVlDNXNxYTJWNjhLMHo0SzVqY203Yw?oc=5"
         },
         {
           "name": "CyberScoop",
@@ -1124,11 +1082,11 @@
           "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFBSQ0tiNFptYWQwY1ZLeEUwSnBRVFZ5Q1prZUxER3I2TzJ6SktUMk9ZZU1qQXp3OGJUYzJsV0VFV2Joc3NBR051SFBsbjlRUlhvLXo3d0JVaFZmVUFncHoyUHVFajU0WWRxUEd1bkRnSkRMdHlJdjVIeWh0VFJtNFR1TXdMXzZTMkk5eEpUWndSbFQxSFE?oc=5"
         },
         {
-          "name": "DW.com",
+          "name": "dw.com",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
-          "name": "The Verge",
+          "name": "theverge.com",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNzM5WTF2azBoUmMtVHJaTzR2Z0pibmdjLVhiSTBzYzYtN245VjdlZWVCRmtoZERWTURCRDFmSWVXWGwwNU1NZmc1cFdaVmx5RVNWdlFMd2ZZYjRVRl9Zamo5eThfRGxqUUl4bnFTbi0tdGU4VkhNMWlrdFJKaW1Gb0gyMV9yT0dReHIzVjJ1cjY3ZWtUb1JOOFhobTdOc0QtenZVbGtoYzd1SWlzUFBuUzZoTE5rQQ?oc=5"
         },
         {
@@ -1193,6 +1151,36 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5",
+      "clusterId": "1fr3c5p",
+      "title": "How Claude is accelerating protein design and analytical chemistry",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5",
+      "dateISO": "2026-08-18T07:00:00.000Z",
+      "date": "AUG 18 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "analysis",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "anthropic.com",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PbzNJUlpWVXZ6VzVsNU13YVBoQUNmTDNEUG83cTFoZk1oU0ZQMFJCWFhqNTFZSGVZWkg3RjBRNktiaXZjd1ZoNTRLM3NpS2V4a3lVUXRJVXFDbXVwRmhfdDlPSy04ZVBzUHB3aHFEUjRtcHVzd0dvN0NYMA?oc=5"
+        },
+        {
+          "name": "anthropic.com",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5"
+        }
+      ],
+      "sourceName": "anthropic.com",
+      "entityIds": [
+        "claude"
       ]
     }
   ],
@@ -1278,7 +1266,7 @@
     "copilot": 2,
     "perplexity": 1,
     "gpt": 100,
-    "claude": 73,
+    "claude": 75,
     "gemini": 27,
     "grok": 0,
     "llama": 0,
@@ -1339,9 +1327,9 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
           "isVideo": false,
           "videoUrl": "https://www.youtube.com/watch?v=ROF2Nv_KjOM",
-          "sourceName": "Anthropic",
+          "sourceName": "anthropic.com",
           "sourceCount": 3,
-          "verification": "official",
+          "verification": "corroborated",
           "impact": "notable"
         }
       ]
@@ -1476,6 +1464,18 @@
       "date": "SEP 26 2026",
       "verification": "single",
       "impact": "emerging",
+      "h": "I created an interactive digital avatar of myself — and you can talk to it",
+      "p": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
+      "url": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 26 2026",
+      "verification": "single",
+      "impact": "emerging",
       "h": "Can Cloudflare CEO Matthew Prince save the web from AI?",
       "p": "Today, I’m talking with Matthew Prince, who is CEO of Cloudflare. This episode is part of a two-part series on the future of business. Matthew last joined us on the show about two and a half years ago, at what we thought then was a wild pivot point for the in…",
       "url": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising",
@@ -1535,7 +1535,7 @@
       "logoKey": "anthropic",
       "date": "SEP 25 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude feat…",
       "p": "\"Overly constrained AI models\" could cause military operations to fail, judges say.",
       "url": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/",
@@ -1553,18 +1553,6 @@
       "url": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
       "sourceName": "Ars Technica",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 25 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Meta opens early access program for new Muse features",
-      "p": "Anyone interested in joining has to ask Muse to put them on the list.",
-      "url": "https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1579,18 +1567,6 @@
       "sourceName": "The Verge",
       "verification": "single",
       "impact": "notable"
-    },
-    {
-      "name": "PrismML brings its tiny LLMs to Qualcomm-powered smart glas…",
-      "org": "TechCrunch",
-      "date": "SEP 24 2026",
-      "lic": "open weights",
-      "licClass": "lic-open",
-      "desc": "Prism's larger goal is open-weight AI that runs on devices and makes better use of the computing power they already have.",
-      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/",
-      "sourceName": "TechCrunch",
-      "verification": "single",
-      "impact": "emerging"
     },
     {
       "name": "The AI Hype Index: AI loves cheating",
@@ -1688,12 +1664,12 @@
     {
       "field": "Safety",
       "date": "AUG 28 2026",
-      "verification": "official",
+      "verification": "single",
       "impact": "emerging",
       "h": "Automated researchers can reliably mitigate alignment failures",
       "p": "Automated researchers can reliably mitigate alignment failures",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMm12QTFLek9sVlhENXNNaFlpUHlnbEl5dDRNZTBCbG1iSUtndjBhaUQ3UGl6N2VOWFppR19kbGhHWjlGaWRnby1BcHNlM0lNLUFaZXVrWV9MTFFOcjg0dmpFcWc0cHkyUTd1d2Z3bjNjaU9FeUQzUnpKbFloc1lRVDRPNjBHQ2JRVDh6cg?oc=5",
-      "sourceName": "Anthropic",
+      "sourceName": "anthropic.com",
       "sourceCount": 1
     }
   ],
@@ -6333,7 +6309,7 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
+      "rate": "$1.97 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 11 rented offers across Vast.ai + RunPod"
@@ -6341,26 +6317,26 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.27/hr",
-      "trend": "↑ 6% vs 7d ago",
+      "rate": "$3.59 – $5.00/hr",
+      "trend": "↑ 3% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 14 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $6.79/hr",
-      "trend": "↓ 17% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $9.39/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.48/hr",
-      "trend": "↑ 24% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $7.89/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6373,14 +6349,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.87 – $1.59/hr",
-      "trend": "↑ 28% vs 7d ago",
+      "rate": "$0.53 – $1.59/hr",
+      "trend": "↑ 10% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-26T14:30:29.247Z",
+    "updatedAt": "2026-09-26T14:45:23.890Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6390,15 +6366,15 @@
         "version": "GPT-6 Astra",
         "org": "OpenAI",
         "rawStoryHits": 361,
-        "fetchedStoryCount": 300,
+        "fetchedStoryCount": 275,
         "validatedStoryCount": 13,
-        "storyCoverage": 0.8310249307479224,
-        "estimatedRelevantDiscussions": 18,
+        "storyCoverage": 0.7617728531855956,
+        "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
-        "rawCommentHits": 2542,
+        "rawCommentHits": 2544,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.11801730920535011,
+        "commentCoverage": 0.1179245283018868,
         "limited": false,
         "points": 112,
         "themes": [
@@ -6462,7 +6438,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 16,
+            "discussions": 17,
             "isEstimated": true
           },
           {
@@ -6477,16 +6453,16 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 844,
+        "rawStoryHits": 843,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 27,
-        "storyCoverage": 0.35545023696682465,
+        "storyCoverage": 0.35587188612099646,
         "estimatedRelevantDiscussions": 79,
         "isEstimated": true,
-        "rawCommentHits": 6518,
+        "rawCommentHits": 6516,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.04602638846271863,
+        "commentCoverage": 0.04604051565377532,
         "limited": false,
         "points": 945,
         "themes": [
@@ -6561,15 +6537,15 @@
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
         "rawStoryHits": 131,
-        "fetchedStoryCount": 131,
+        "fetchedStoryCount": 128,
         "validatedStoryCount": 21,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9770992366412213,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1416,
+        "rawCommentHits": 1417,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
-        "commentCoverage": 0.211864406779661,
+        "commentCoverage": 0.2117148906139732,
         "limited": false,
         "points": 247,
         "themes": [
@@ -6644,7 +6620,7 @@
           {
             "name": "Hacker News",
             "discussions": 21,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6663,16 +6639,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 525,
+        "rawStoryHits": 524,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.5714285714285714,
-        "estimatedRelevantDiscussions": 18,
+        "storyCoverage": 0.5725190839694656,
+        "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10479,
+        "rawCommentHits": 10474,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.0286286859433152,
+        "commentCoverage": 0.028642352491884668,
         "limited": false,
         "points": 37,
         "themes": [
@@ -6736,7 +6712,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 18,
+            "discussions": 17,
             "isEstimated": true
           },
           {
@@ -6839,12 +6815,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 112,
-        "fetchedStoryCount": 110,
+        "rawStoryHits": 114,
+        "fetchedStoryCount": 114,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.9821428571428571,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
-        "isEstimated": true,
+        "isEstimated": false,
         "rawCommentHits": 871,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
@@ -6923,7 +6899,7 @@
           {
             "name": "Hacker News",
             "discussions": 20,
-            "isEstimated": true
+            "isEstimated": false
           }
         ]
       },
@@ -6932,8 +6908,8 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 236,
-        "fetchedStoryCount": 236,
+        "rawStoryHits": 237,
+        "fetchedStoryCount": 237,
         "validatedStoryCount": 12,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
