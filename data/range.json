@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T20:30:27.711Z",
+  "generatedAt": "2026-09-27T20:45:23.599Z",
   "historyDepthDays": 59.9,
   "ranges": {
     "24H": {
@@ -8,7 +8,7 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": 2,
-        "claude": 2,
+        "claude": 3,
         "gemini": 1,
         "grok": 0,
         "llama": 0,
@@ -30,7 +30,7 @@
         "copilot": 0,
         "perplexity": 0,
         "gpt": -3,
-        "claude": -1,
+        "claude": 0,
         "gemini": 1,
         "grok": 0,
         "llama": 0,
@@ -42,7 +42,7 @@
         "gcp": 0,
         "oracle": 0,
         "coreweave": 0,
-        "nvidia": -3,
+        "nvidia": 0,
         "amd": 0,
         "tsmc": 0,
         "broadcom": 0
@@ -51,18 +51,19 @@
         "capital": 2,
         "general": 2,
         "opensource": 1,
-        "analysis": 1
+        "analysis": 1,
+        "orggov": 1
       },
       "topEntities": [
+        {
+          "id": "claude",
+          "count": 3,
+          "delta": 0
+        },
         {
           "id": "gpt",
           "count": 2,
           "delta": -3
-        },
-        {
-          "id": "claude",
-          "count": 2,
-          "delta": -1
         },
         {
           "id": "gemini",
@@ -70,7 +71,7 @@
           "delta": 1
         }
       ],
-      "eventCount": 6,
+      "eventCount": 7,
       "previousWindowComplete": true
     },
     "7D": {
@@ -79,7 +80,7 @@
         "copilot": 6,
         "perplexity": 0,
         "gpt": 165,
-        "claude": 87,
+        "claude": 88,
         "gemini": 53,
         "grok": 0,
         "llama": 0,
@@ -129,7 +130,7 @@
         "compute": 21,
         "research": 23,
         "policy": 20,
-        "orggov": 31
+        "orggov": 32
       },
       "topEntities": [
         {
@@ -139,7 +140,7 @@
         },
         {
           "id": "claude",
-          "count": 87,
+          "count": 88,
           "delta": -234
         },
         {
@@ -173,7 +174,7 @@
           "delta": 3
         }
       ],
-      "eventCount": 665,
+      "eventCount": 666,
       "previousWindowComplete": true
     },
     "30D": {
@@ -182,7 +183,7 @@
         "copilot": 7,
         "perplexity": 16,
         "gpt": 952,
-        "claude": 1399,
+        "claude": 1401,
         "gemini": 372,
         "grok": 38,
         "llama": 5,
@@ -203,20 +204,20 @@
       "categoryCounts": {
         "product": 526,
         "policy": 232,
-        "general": 2801,
+        "general": 2802,
         "analysis": 183,
         "capital": 279,
         "compute": 87,
         "adoption": 181,
         "market": 38,
         "opensource": 58,
-        "orggov": 133,
+        "orggov": 134,
         "research": 203
       },
       "topEntities": [
         {
           "id": "claude",
-          "count": 1399,
+          "count": 1401,
           "delta": null
         },
         {
@@ -255,7 +256,7 @@
           "delta": null
         }
       ],
-      "eventCount": 4721,
+      "eventCount": 4723,
       "previousWindowComplete": false
     }
   },
@@ -1213,9 +1214,9 @@
         "research": 16,
         "opensource": 5,
         "product": 36,
-        "general": 180,
+        "general": 181,
         "analysis": 18,
-        "orggov": 8,
+        "orggov": 9,
         "compute": 6,
         "adoption": 17
       }
