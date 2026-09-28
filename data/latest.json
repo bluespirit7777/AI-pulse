@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-28T15:15:24.391Z",
+  "updatedAt": "2026-09-28T15:30:30.889Z",
   "build": {
-    "sha": "682b20f7e7e5e565c05c8fe80d76ab7d23cfdf7c",
-    "shortSha": "682b20f",
+    "sha": "cc3e8dabb6135167073d0f9b2125bbf0a98b5e08",
+    "shortSha": "cc3e8da",
     "ref": "main",
-    "builtAt": "2026-09-28T15:15:42.275Z"
+    "builtAt": "2026-09-28T15:30:51.035Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,10 +13,11 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
     "estimatedDatasets": 4,
-    "buildSha": "682b20f",
-    "lastSuccessfulUpdate": "2026-09-28T15:15:24.391Z"
+    "buildSha": "cc3e8da",
+    "lastSuccessfulUpdate": "2026-09-28T15:30:30.889Z"
   },
   "ticker": [
+    "NVIDIA SAYS ITS NEW AI SAFETY PLATFORM CAN CONTAIN ROGUE AGENTS WITHIN ‘MILLISECONDS’",
     "NVIDIA’S ANSWER TO ROGUE AGENTS IS AN OPEN-SOURCE AI SECURITY SYSTEM",
     "VIRAL AI AGENT INSTINCT RAISES $1B SERIES C AT A $10B VALUATION",
     "ANTHROPIC’S CEO IS ABOUT TO HAVE DINNER WITH PRESIDENT TRUMP",
@@ -25,10 +26,35 @@
     "CAN MUSE OVERCOME META’S TRUST ISSUES?",
     "MODULATE RAISES $25M FOR ITS VOICE MODELS AND ANALYSIS SUITE",
     "INSURETECH OUTMARKET RAISES $34.5M JUST MONTHS AFTER PRIOR ROUND",
-    "OPENAI AGENTS TRIED TO ‘BRUTEFORCE’ A UN WEBSITE",
-    "MICROSOFT GOES QUIET AFTER CHURCH GROUPS ASK FOR 1% OF DATA CENTER COSTS"
+    "OPENAI AGENTS TRIED TO ‘BRUTEFORCE’ A UN WEBSITE"
   ],
   "signals": [
+    {
+      "id": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "clusterId": "11rnucr",
+      "title": "Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’",
+      "desc": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reuters. In an announcement on Monday, Nvidia says its new Open Agent Safety Platform can quarantine agents that attempt to escape their boundaries within […]",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "dateISO": "2026-09-28T13:36:06.000Z",
+      "date": "SEP 28 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
     {
       "id": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/",
       "clusterId": "1nr2852",
@@ -121,12 +147,8 @@
       "significance": 57,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face"
-        },
         {
           "name": "Google DeepMind",
           "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/"
@@ -298,6 +320,30 @@
         }
       ],
       "sourceName": "Ars Technica",
+      "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/podcast/1000914/atlassian-ceo-mike-cannon-brookes-saaspocalypse-ai-enterprise-software-trello-jira",
+      "clusterId": "g921fv",
+      "title": "The SaaSpocalypse that wasn’t, with Atlassian CEO Mike Cannon-Brookes",
+      "desc": "Today, I’m talking with Mike Cannon-Brookes, who is cofounder and CEO of Atlassian. Atlassian is one of those companies that every other company runs on — it makes important platform tools like Jira and Trello that allow people to organize and manage big teams, create shared databases of company information, and generally allow work to […]",
+      "url": "https://www.theverge.com/podcast/1000914/atlassian-ceo-mike-cannon-brookes-saaspocalypse-ai-enterprise-software-trello-jira",
+      "dateISO": "2026-09-28T14:00:00.000Z",
+      "date": "SEP 28 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/1000914/atlassian-ceo-mike-cannon-brookes-saaspocalypse-ai-enterprise-software-trello-jira"
+        }
+      ],
+      "sourceName": "The Verge",
       "entityIds": []
     },
     {
@@ -731,32 +777,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/proaction",
-      "clusterId": "478aau",
-      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
-      "desc": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
-      "url": "https://openai.com/index/proaction",
-      "dateISO": "2026-09-25T19:00:00.000Z",
-      "date": "SEP 25 2026",
-      "category": "market",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/proaction"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV0dwR09RSHU0MGFKSHFQS3ZkeUwzUmM1T3VhV1J5NDFUUzBQaHMzUXgtYkpOMzdWRVZTRDIyUXFaMHAzT2pRRjkzbUVldjdkeU1rc2RRNzFqY3JfNXFzeUktRXM0bXNrUVU0Vmd3eTlJNW1Ta0FkMkw3Qm43dUhOYUNXMlBUTDlpNFV3NjNUeHN3SmozdXB1ZGxjSlhQYUhoWUpj?oc=5",
       "clusterId": "d683j1",
       "title": "Anthropic's Pentagon blacklist upheld in US appeals court: How the conflict unfolded",
@@ -829,7 +849,7 @@
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0xMkdGYnpZQ0E5SU1yelZSVVM5d3dqV0g0aWVzNUw1WVItbjBnNFF6dG85TlZNc09rQ3IzZnR0bjUzbmhSNXBjdWdTTWNwQTdTU2Jjbm5Fa1I5V2tCZDc4ZXFkRQ?oc=5"
         },
         {
-          "name": "Help Net Security",
+          "name": "helpnetsecurity.com",
           "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOemhYelZlbmhJajAxR1hUSHk3czgybWVvel9fVUg2VUs1RmtGWmh0VVRJRGFUay1pWVdwUkoyTnZqazJiZWZlOGU0NHhCZHNESExCNmZBNFEzSWtWcFlkZTNQRW5BNmJRU2c5QWRrenEtX0g3RlVsV3BfLW0tTEdVSw?oc=5"
         },
         {
@@ -875,15 +895,15 @@
           "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5"
         },
         {
-          "name": "Cybersecurity Dive",
+          "name": "cybersecuritydive.com",
           "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWmtMWmdtVmdWUjBRa1ZqcXpsOGpOUkJTQThkUzEtZnU5WW5qRnU0d2w0WHdwdHJkTF85OUJlX29hanhuNlNsR2g3WXhuU0xGbUpuU2lWRkI1bDlFeExfTWNDRWNRdlZoeDg5WFdtOGJ5TS1SUThvYjhfS292TEZ2MzcxRmJPZw?oc=5"
         },
         {
-          "name": "bbc.com",
+          "name": "BBC",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB2QlZMcUJ4dUVteXdkZVAxOElRaVhib0pnTVZuZzBQY043YzMySTE0NUtkQ1Y3NnY5MTJkOHdaemxhdkFjdmJmY2U0cmdDRGYtdnEzUVZvMXZjZw?oc=5"
         }
       ],
-      "sourceName": "Cybersecurity Dive",
+      "sourceName": "cybersecuritydive.com",
       "entityIds": [
         "claude"
       ]
@@ -991,7 +1011,7 @@
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeENSNk5wMnlGV25SZ3o0X0dnTVZNdjNiUlRHVnlERGdkYWc0UF8zQVozSlFzSmh1Z01OWEQ5b0R6cmJ2dEdjNGw0NGhOVlZEc1NSOWZleEZxYkFiRE5kSnBpOWRnTEI3NXRCNHpNemRSakN2UWV5RDM0Ymdhc0ltcnVHTFk5ZUFQTjFCbm9nX1ZPN0NJRUpueNIBmAFBVV95cUxPdmhpbmEwS3NqaHFmNU1xZklSY0xUck9Dd1ZiZkFYa3ZLT29uTHNmS3dpbUJHSllQMWhMRzNwZ1pid3ZCSG9qVVU5TUswTFMyek5ockgzRVd3TnVDaVJUdjN5Mll0SDc1ZE8zQXd3OWVmWUdEc0dfSFhoUnl2emlLTmt6bW9WR0ZtWVFZeUVOdWRMQWg3LXZhdA?oc=5"
         },
         {
-          "name": "theverge.com",
+          "name": "The Verge",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNzM5WTF2azBoUmMtVHJaTzR2Z0pibmdjLVhiSTBzYzYtN245VjdlZWVCRmtoZERWTURCRDFmSWVXWGwwNU1NZmc1cFdaVmx5RVNWdlFMd2ZZYjRVRl9Zamo5eThfRGxqUUl4bnFTbi0tdGU4VkhNMWlrdFJKaW1Gb0gyMV9yT0dReHIzVjJ1cjY3ZWtUb1JOOFhobTdOc0QtenZVbGtoYzd1SWlzUFBuUzZoTE5rQQ?oc=5"
         },
         {
@@ -1056,6 +1076,32 @@
       "entityIds": []
     },
     {
+      "id": "https://openai.com/index/proaction",
+      "clusterId": "478aau",
+      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "desc": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+      "url": "https://openai.com/index/proaction",
+      "dateISO": "2026-09-25T19:00:00.000Z",
+      "date": "SEP 25 2026",
+      "category": "market",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/proaction"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5",
       "clusterId": "1fr3c5p",
       "title": "How Claude is accelerating protein design and analytical chemistry",
@@ -1114,77 +1160,25 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://openai.com/index/teen-development-research-grants",
-      "clusterId": "dt1aj7",
-      "title": "Funding grants for new research into AI and teen development",
-      "desc": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
-      "url": "https://openai.com/index/teen-development-research-grants",
-      "dateISO": "2026-09-08T09:00:00.000Z",
-      "date": "SEP 08 2026",
-      "category": "capital",
-      "catConfidence": 0.8,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/teen-development-research-grants"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "clusterId": "nxip51",
-      "title": "Our decision on Cursor following its acquisition by SpaceX",
-      "desc": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
-      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "dateISO": "2026-08-28T06:00:00.000Z",
-      "date": "AUG 28 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
-      "category": "opensource",
-      "title": "Nvidia’s Answer to Rogue Agents Is an Open-Source AI Security System",
-      "summary": "In the wake of a series of high-profile AI safety incidents, Nvidia is introducing a new software tool that helps keep agents from escaping containment.",
-      "significance": 74,
+      "category": "product",
+      "title": "Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’",
+      "summary": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reu…",
+      "significance": 75,
       "impact": "high",
       "verification": "single",
       "date": "SEP 28 2026",
-      "dateISO": "2026-09-28T09:00:00.000Z",
-      "url": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/",
+      "dateISO": "2026-09-28T13:36:06.000Z",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents"
         }
       ],
       "entityIds": [
@@ -1246,7 +1240,7 @@
   ],
   "entityActivity": {
     "chatgpt": 29,
-    "copilot": 2,
+    "copilot": 1,
     "perplexity": 1,
     "gpt": 98,
     "claude": 81,
@@ -1261,7 +1255,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 1,
-    "nvidia": 5,
+    "nvidia": 6,
     "amd": 2,
     "tsmc": 0,
     "broadcom": 0
@@ -1444,7 +1438,7 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Google DeepMind",
-          "sourceCount": 5,
+          "sourceCount": 4,
           "verification": "official",
           "impact": "notable"
         }
@@ -1494,10 +1488,34 @@
       "date": "SEP 28 2026",
       "verification": "single",
       "impact": "notable",
+      "h": "The SaaSpocalypse that wasn’t, with Atlassian CEO Mike Cannon-Brookes",
+      "p": "Today, I’m talking with Mike Cannon-Brookes, who is cofounder and CEO of Atlassian. Atlassian is one of those companies that every other company runs on — it makes important platform tools like Jira and Trello that allow people to organize and manage big team…",
+      "url": "https://www.theverge.com/podcast/1000914/atlassian-ceo-mike-cannon-brookes-saaspocalypse-ai-enterprise-software-trello-jira",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 28 2026",
+      "verification": "single",
+      "impact": "notable",
       "h": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
       "p": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
       "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
       "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 28 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Nvidia says its new AI safety platform can contain rogue agents within ‘millise…",
+      "p": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reuters. In an announcement on Monday, Nvidia says its new Open Agent Safety Platfo…",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1522,30 +1540,6 @@
       "p": "“Microsoft claims to want to be a good neighbor, but the jury is still out.\"",
       "url": "https://arstechnica.com/tech-policy/2026/09/microsoft-goes-quiet-after-church-groups-ask-for-1-of-data-center-costs/",
       "sourceName": "Ars Technica",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 28 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "AI Agents Are About to Flood the Workforce. No One’s Ready for It",
-      "p": "Your next coworker might well be an AI agent—and will require a whole new model of workplace interactions.",
-      "url": "https://www.wired.com/story/ai-agents-are-about-to-flood-the-workforce-no-ones-ready-for-it/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 28 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Solving Math’s Greatest Problems Was an Art Form. Then Came AI",
-      "p": "Mathematics has been one of humanity’s most creative endeavors, akin to painting and poetry. Now, mathematicians are trying to save it from the brute force of AI.",
-      "url": "https://www.wired.com/story/solving-maths-greatest-problems-was-an-art-form-until-ai/",
-      "sourceName": "Wired",
       "sourceCount": 1
     }
   ],
@@ -1697,11 +1691,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 230.425,
-      "changePct": 2.3792578101377417,
+      "price": 230.165,
+      "changePct": 2.263733858849799,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 66465717,
+      "volume": 70017339,
       "ohlc": [
         {
           "d": "06-29",
@@ -2149,22 +2143,22 @@
           "o": 229.6999969482422,
           "h": 233.2100067138672,
           "l": 228.46499633789062,
-          "c": 230.4250030517578
+          "c": 230.1649932861328
         }
       ],
-      "relVolume": 0.572681438497529,
-      "marketCap": 5622370000000
+      "relVolume": 0.6032828987354358,
+      "marketCap": 5616026000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 510.16,
-      "changePct": -1.16434109828757,
+      "price": 509.315,
+      "changePct": -1.3280470960557904,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 7279956,
+      "volume": 7841371,
       "ohlc": [
         {
           "d": "06-29",
@@ -2610,24 +2604,24 @@
         {
           "d": "09-28",
           "o": 505.42498779296875,
-          "h": 510.17999267578125,
+          "h": 510.29998779296875,
           "l": 502.2200012207031,
-          "c": 510.1600036621094
+          "c": 509.31500244140625
         }
       ],
-      "relVolume": 0.3337600567028754,
-      "marketCap": 3790488800000
+      "relVolume": 0.35949893510184444,
+      "marketCap": 3784210450000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 349.445,
-      "changePct": -0.9537683902554805,
+      "price": 349.925,
+      "changePct": -0.8177233597655817,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 5449753,
+      "volume": 5841209,
       "ohlc": [
         {
           "d": "06-29",
@@ -3075,22 +3069,22 @@
           "o": 352.57501220703125,
           "h": 355.8500061035156,
           "l": 347.32000732421875,
-          "c": 349.44500732421875
+          "c": 349.92498779296875
         }
       ],
-      "relVolume": 0.1989005229678471,
-      "marketCap": 1719269400000
+      "relVolume": 0.21318755636530595,
+      "marketCap": 1721631000000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 341.16,
-      "changePct": -0.8025150203144378,
+      "price": 340.575,
+      "changePct": -0.9725836058888134,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 6228568,
+      "volume": 6842242,
       "ohlc": [
         {
           "d": "06-29",
@@ -3538,22 +3532,22 @@
           "o": 340.70001220703125,
           "h": 343.5899963378906,
           "l": 339.55999755859375,
-          "c": 341.1600036621094
+          "c": 340.5751037597656
         }
       ],
-      "relVolume": 0.2315020335420614,
-      "marketCap": 4162152000000.0005
+      "relVolume": 0.254310932623181,
+      "marketCap": 4155015000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 247.27,
-      "changePct": -0.9612664373315533,
+      "price": 246.59,
+      "changePct": -1.2336291319113675,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 11319411,
+      "volume": 12057870,
       "ohlc": [
         {
           "d": "06-29",
@@ -4001,22 +3995,22 @@
           "o": 246.32000732421875,
           "h": 247.5399932861328,
           "l": 244.72500610351562,
-          "c": 247.27000427246094
+          "c": 246.58999633789062
         }
       ],
-      "relVolume": 0.32024959832329863,
-      "marketCap": 2645789000000
+      "relVolume": 0.34114213399748033,
+      "marketCap": 2638513000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 720.31,
-      "changePct": -4.1707655996083535,
+      "price": 720.04,
+      "changePct": -4.206688695276251,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 12246094,
+      "volume": 12757754,
       "ohlc": [
         {
           "d": "06-29",
@@ -4464,22 +4458,22 @@
           "o": 750.4249877929688,
           "h": 750.5759887695312,
           "l": 717.6500244140625,
-          "c": 720.3099975585938
+          "c": 720.0399780273438
         }
       ],
-      "relVolume": 0.5341142466227216,
-      "marketCap": 1815181199999.9998
+      "relVolume": 0.5564303333216299,
+      "marketCap": 1814500800000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 444.26,
-      "changePct": -1.4091954888623466,
+      "price": 446.56,
+      "changePct": -0.8987789717551378,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 2775525,
+      "volume": 2937360,
       "ohlc": [
         {
           "d": "06-29",
@@ -4927,22 +4921,22 @@
           "o": 448.3900146484375,
           "h": 449.6000061035156,
           "l": 443.1099853515625,
-          "c": 444.260009765625
+          "c": 446.55999755859375
         }
       ],
-      "relVolume": 0.2832138023010978,
-      "marketCap": 2305709400000
+      "relVolume": 0.29972740087988853,
+      "marketCap": 2317646400000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 597.51,
-      "changePct": -5.251890151237263,
+      "price": 599.754,
+      "changePct": -4.896023534872683,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 9951194,
+      "volume": 10531119,
       "ohlc": [
         {
           "d": "06-29",
@@ -5390,22 +5384,22 @@
           "o": 624.89501953125,
           "h": 629.64501953125,
           "l": 596.0700073242188,
-          "c": 597.510009765625
+          "c": 599.7542114257812
         }
       ],
-      "relVolume": 0.4601614579865196,
-      "marketCap": 967966200000
+      "relVolume": 0.48697825339045125,
+      "marketCap": 971601480000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 188.27,
-      "changePct": -0.7381208994568315,
+      "price": 188.515,
+      "changePct": -0.6089517532804949,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 6524442,
+      "volume": 7096175,
       "ohlc": [
         {
           "d": "06-29",
@@ -5853,22 +5847,22 @@
           "o": 186.2310028076172,
           "h": 189.60000610351562,
           "l": 185.6199951171875,
-          "c": 188.27000427246094
+          "c": 188.51499938964844
         }
       ],
-      "relVolume": 0.24750452374539564,
-      "marketCap": 451848000000
+      "relVolume": 0.2691931990182429,
+      "marketCap": 452435999999.99994
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 132.14,
-      "changePct": -3.6178019642991095,
+      "price": 132.165,
+      "changePct": -3.599571551920059,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 11734020,
+      "volume": 12935070,
       "ohlc": [
         {
           "d": "06-29",
@@ -6315,30 +6309,30 @@
           "d": "09-28",
           "o": 132.72500610351562,
           "h": 135.69000244140625,
-          "l": 132.0399932861328,
-          "c": 132.13999938964844
+          "l": 131.8000030517578,
+          "c": 132.1649932861328
         }
       ],
-      "relVolume": 0.351866781436495,
-      "marketCap": 371313399999.99994
+      "relVolume": 0.3878825371488854,
+      "marketCap": 371383650000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.47 – $3.52/hr",
-      "trend": "↓ 9% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$1.87 – $3.49/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.44 – $5.53/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$3.44 – $5.33/hr",
+      "trend": "↓ 4% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6346,7 +6340,7 @@
       "rate": "$5.98 – $10.64/hr",
       "trend": "↑ 18% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6370,11 +6364,11 @@
       "rate": "$0.53 – $1.59/hr",
       "trend": "→ 1% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-28T15:15:24.391Z",
+    "updatedAt": "2026-09-28T15:30:30.889Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6383,18 +6377,18 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 364,
+        "rawStoryHits": 365,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 14,
-        "storyCoverage": 0.8241758241758241,
-        "estimatedRelevantDiscussions": 18,
+        "validatedStoryCount": 15,
+        "storyCoverage": 0.821917808219178,
+        "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
-        "rawCommentHits": 2584,
+        "rawCommentHits": 2582,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 28,
-        "commentCoverage": 0.11609907120743033,
+        "validatedCommentCount": 27,
+        "commentCoverage": 0.11618900077459333,
         "limited": false,
-        "points": 115,
+        "points": 118,
         "themes": [
           {
             "id": "reasoning",
@@ -6446,7 +6440,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 17,
+            "discussions": 18,
             "isEstimated": true
           },
           {
@@ -6461,28 +6455,28 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 845,
+        "rawStoryHits": 844,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 29,
-        "storyCoverage": 0.35502958579881655,
+        "storyCoverage": 0.35545023696682465,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
-        "rawCommentHits": 6403,
+        "rawCommentHits": 6408,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.046853037638606904,
+        "commentCoverage": 0.04681647940074907,
         "limited": false,
         "points": 956,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 16
+            "count": 17
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 10
+            "count": 9
           },
           {
             "id": "writing",
@@ -6539,18 +6533,18 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 122,
-        "fetchedStoryCount": 122,
-        "validatedStoryCount": 20,
+        "rawStoryHits": 123,
+        "fetchedStoryCount": 123,
+        "validatedStoryCount": 21,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 29,
+        "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
         "rawCommentHits": 1415,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
         "commentCoverage": 0.21201413427561838,
         "limited": false,
-        "points": 243,
+        "points": 246,
         "themes": [
           {
             "id": "coding",
@@ -6617,7 +6611,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 20,
+            "discussions": 21,
             "isEstimated": false
           },
           {
@@ -6725,8 +6719,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 77,
-        "fetchedStoryCount": 77,
+        "rawStoryHits": 78,
+        "fetchedStoryCount": 78,
         "validatedStoryCount": 8,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
@@ -6808,16 +6802,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 109,
-        "fetchedStoryCount": 109,
+        "rawStoryHits": 113,
+        "fetchedStoryCount": 113,
         "validatedStoryCount": 20,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": false,
-        "rawCommentHits": 835,
+        "rawCommentHits": 893,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.3592814371257485,
+        "commentCoverage": 0.335946248600224,
         "limited": false,
         "points": 824,
         "themes": [
@@ -6902,10 +6896,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4521,
+        "rawCommentHits": 4519,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.06635700066357,
+        "commentCoverage": 0.066386368665634,
         "limited": false,
         "points": 159,
         "themes": [
@@ -7053,13 +7047,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding"
+          "reasoning"
         ],
-        "excerpt": "So my Claude Code workflow for a ticket is:* Scoping discussion - do research and figure out approach (auto mode)* Planning - take the scoping and convert it to a concrete plan…",
+        "excerpt": "…question in general about all models and not just for Claude regardless of your perceived imaginary views of Anthropic.>i spend a good amount of time on anthropic because…",
         "source": "Hacker News",
-        "author": "lyjia",
-        "publishedAt": "2026-09-26T15:46:34.000Z",
-        "url": "https://news.ycombinator.com/item?id=49857634"
+        "author": "hardbass",
+        "publishedAt": "2026-09-27T14:06:48.000Z",
+        "url": "https://news.ycombinator.com/item?id=49866779"
       },
       {
         "modelId": "claude",
@@ -7076,13 +7070,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "reasoning"
+          "coding"
         ],
-        "excerpt": "…question in general about all models and not just for Claude regardless of your perceived imaginary views of Anthropic.>i spend a good amount of time on anthropic because…",
+        "excerpt": "So my Claude Code workflow for a ticket is:* Scoping discussion - do research and figure out approach (auto mode)* Planning - take the scoping and convert it to a concrete plan…",
         "source": "Hacker News",
-        "author": "hardbass",
-        "publishedAt": "2026-09-27T14:06:48.000Z",
-        "url": "https://news.ycombinator.com/item?id=49866779"
+        "author": "lyjia",
+        "publishedAt": "2026-09-26T15:46:34.000Z",
+        "url": "https://news.ycombinator.com/item?id=49857634"
       },
       {
         "modelId": "claude",
@@ -7099,14 +7093,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding",
-          "price"
+          "coding"
         ],
-        "excerpt": "…also an infinite where you can see the shots and references.Claude Code or Codex can control MiniCut through MCP. It works great with OPUS 5.5.Here's a demo of the 3D Scene…",
+        "excerpt": "Apparently Anthropic's guidance says under 200 lines is ideal.That seems ironic, considering they ship like 20k of context in Claude Code's system prompts etc.",
         "source": "Hacker News",
-        "author": "lliu56p",
-        "publishedAt": "2026-09-27T03:05:08.000Z",
-        "url": "https://news.ycombinator.com/item?id=49862981"
+        "author": "user43928",
+        "publishedAt": "2026-09-28T15:15:26.000Z",
+        "url": "https://news.ycombinator.com/item?id=49879390"
       },
       {
         "modelId": "gemini",
