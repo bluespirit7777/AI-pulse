@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-28T13:30:30.573Z",
+  "updatedAt": "2026-09-28T13:45:24.347Z",
   "build": {
-    "sha": "d9a7ccbddd4a62ada181dcd9087069484e3585e5",
-    "shortSha": "d9a7ccb",
+    "sha": "9aac98134c9fe14017290236917ce7dd64f162b9",
+    "shortSha": "9aac981",
     "ref": "main",
-    "builtAt": "2026-09-28T13:30:48.271Z"
+    "builtAt": "2026-09-28T13:45:41.803Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,23 +12,49 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.6,
-    "estimatedDatasets": 5,
-    "buildSha": "d9a7ccb",
-    "lastSuccessfulUpdate": "2026-09-28T13:30:30.573Z"
+    "estimatedDatasets": 4,
+    "buildSha": "9aac981",
+    "lastSuccessfulUpdate": "2026-09-28T13:45:24.347Z"
   },
   "ticker": [
+    "NVIDIA SAYS ITS NEW AI SAFETY PLATFORM CAN CONTAIN ROGUE AGENTS WITHIN ‘MILLISECONDS’",
     "NVIDIA’S ANSWER TO ROGUE AGENTS IS AN OPEN-SOURCE AI SECURITY SYSTEM",
+    "VIRAL AI AGENT INSTINCT RAISES $1B SERIES C AT A $10B VALUATION",
     "ANTHROPIC’S CEO IS ABOUT TO HAVE DINNER WITH PRESIDENT TRUMP",
     "INTRODUCING GEMINI 3.7 FLASH",
     "U.S. APPEALS COURT UPHOLDS PENTAGON DESIGNATION OF ANTHROPIC AS SUPPLY CHAIN RISK",
     "WHO’S LIABLE WHEN AI AGENTS GO ROGUE?",
     "CAN MUSE OVERCOME META’S TRUST ISSUES?",
     "OPENAI AGENTS TRIED TO ‘BRUTEFORCE’ A UN WEBSITE",
-    "MICROSOFT GOES QUIET AFTER CHURCH GROUPS ASK FOR 1% OF DATA CENTER COSTS",
-    "INTRODUCING CLAUDE FABLE 5.1 AND CLAUDE MYTHOS 5.1",
-    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK"
+    "MICROSOFT GOES QUIET AFTER CHURCH GROUPS ASK FOR 1% OF DATA CENTER COSTS"
   ],
   "signals": [
+    {
+      "id": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "clusterId": "11rnucr",
+      "title": "Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’",
+      "desc": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reuters. In an announcement on Monday, Nvidia says its new Open Agent Safety Platform can quarantine agents that attempt to escape their boundaries within […]",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "dateISO": "2026-09-28T13:36:06.000Z",
+      "date": "SEP 28 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 76,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
     {
       "id": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/",
       "clusterId": "1nr2852",
@@ -40,7 +66,7 @@
       "category": "opensource",
       "catConfidence": 0.5,
       "family": "product",
-      "significance": 75,
+      "significance": 74,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -53,6 +79,32 @@
       "sourceName": "Wired",
       "entityIds": [
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+      "clusterId": "1jd0bcs",
+      "title": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+      "desc": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
+      "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+      "dateISO": "2026-09-28T13:38:48.000Z",
+      "date": "SEP 28 2026",
+      "category": "capital",
+      "catConfidence": 0.91,
+      "family": "market",
+      "significance": 70,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "amd"
       ]
     },
     {
@@ -95,12 +147,8 @@
       "significance": 57,
       "impact": "notable",
       "verification": "official",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face"
-        },
         {
           "name": "Google DeepMind",
           "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/"
@@ -148,11 +196,11 @@
           "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUmtFZ2JhaDQxbWhDZF9LUi1mSU4zQVBGWUotb3I0WUxoOXl4TDhNSG1FU0k5MnBFdlBNX0pqeE1yQ1lmR1I0ZkdhUWRMY3JTTFppUHpmdi1XVjlRcHF2Q1BLTE9obld5NDZYaGVvbl9YWDczTjNoYVpOQjV6WDktU3p6ajQzYXJnek4tYVZn0gGTAUFVX3lxTE9XVkJxVjc2SFJMeFhxT1BXLVhoaTE2c0ZDUENCSzg5VmRpblpIaHlzWU5kc1BpQlFPZG9DeG5HYXdodlVDMi1CR1JyRXpaMnhYcWVNajNtREd6OVlJb2FHZE83QXNSTkdLNG44NWVVdWhBdTVqczlYS2JUZ0pEdEh4QWZwMC1wOGZzSHpHMzJlS0RBYw?oc=5"
         },
         {
-          "name": "cnbc.com",
+          "name": "CNBC",
           "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5"
         }
       ],
-      "sourceName": "cnbc.com",
+      "sourceName": "CNBC",
       "entityIds": [
         "claude"
       ]
@@ -261,40 +309,6 @@
       "entityIds": []
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "clusterId": "gok17r",
-      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "dateISO": "2026-09-01T18:01:25.000Z",
-      "date": "SEP 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "anthropic.com",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
-        },
-        {
-          "name": "Anthropic (YouTube)",
-          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
-        },
-        {
-          "name": "anthropic.com",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
-        }
-      ],
-      "sourceName": "anthropic.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/nvidia/chatgpt-work",
       "clusterId": "kw1uc",
       "title": "How NVIDIA scales expertise with ChatGPT Work",
@@ -327,36 +341,6 @@
       "entityIds": [
         "chatgpt",
         "nvidia"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
-      "clusterId": "1cfsw0d",
-      "title": "Anthropic’s founders seek voting control ahead of IPO",
-      "desc": "Anthropic is asking its shareholders to approve a structure that would give its seven co-founders a combined 50.1% of the vote on most corporate matters.",
-      "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
-      "dateISO": "2026-09-25T15:40:03.000Z",
-      "date": "SEP 25 2026",
-      "category": "capital",
-      "catConfidence": 0.75,
-      "family": "market",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -473,6 +457,33 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+      "clusterId": "1gkdro",
+      "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+      "desc": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout.",
+      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+      "dateISO": "2026-09-25T18:33:59.000Z",
+      "date": "SEP 25 2026",
+      "category": "capital",
+      "catConfidence": 0.63,
+      "family": "market",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "coreweave",
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
       "clusterId": "13bfju0",
       "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
@@ -500,6 +511,36 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+      "clusterId": "x3sik4",
+      "title": "Anthropic unveils Claude Opus 5.5",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+      "dateISO": "2026-09-22T17:22:35.000Z",
+      "date": "SEP 22 2026",
+      "category": "product",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -555,6 +596,36 @@
         }
       ],
       "sourceName": "Wealth Management",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "clusterId": "gok17r",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "dateISO": "2026-09-01T18:01:25.000Z",
+      "date": "SEP 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic (YouTube)",
+          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
@@ -743,32 +814,6 @@
         }
       ],
       "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/",
-      "clusterId": "tm01q0",
-      "title": "For months, OpenAI’s agent swarms have been attacking online databases to find obscure facts",
-      "desc": "The latest unauthorized agent swarms were discovered by researchers.",
-      "url": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/",
-      "dateISO": "2026-09-25T15:48:14.000Z",
-      "date": "SEP 25 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/"
-        }
-      ],
-      "sourceName": "TechCrunch",
       "entityIds": [
         "gpt"
       ]
@@ -1049,6 +1094,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/",
+      "clusterId": "tm01q0",
+      "title": "For months, OpenAI’s agent swarms have been attacking online databases to find obscure facts",
+      "desc": "The latest unauthorized agent swarms were discovered by researchers.",
+      "url": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/",
+      "dateISO": "2026-09-25T15:48:14.000Z",
+      "date": "SEP 25 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
       "clusterId": "magvex",
       "title": "One company is at the center of a wave of rogue AI attacks",
@@ -1093,119 +1164,37 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "anthropic.com",
+          "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PbzNJUlpWVXZ6VzVsNU13YVBoQUNmTDNEUG83cTFoZk1oU0ZQMFJCWFhqNTFZSGVZWkg3RjBRNktiaXZjd1ZoNTRLM3NpS2V4a3lVUXRJVXFDbXVwRmhfdDlPSy04ZVBzUHB3aHFEUjRtcHVzd0dvN0NYMA?oc=5"
         },
         {
-          "name": "anthropic.com",
+          "name": "Anthropic",
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZSUlFZ25ZeUpwR2FqLUh5WlJpQVRfM3RPaVg5dlo5NWMzbldIOW1WZDR2MklDNWdidlJIN2JKbUV1VU52aDk0YmlpdVJIVmRVTzRfanM5ZmU5MnlWVTZLSHZhTE0wVC1iRzNwUzRKRTk3MC1DMWZR?oc=5"
         }
       ],
-      "sourceName": "anthropic.com",
+      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRWgwX0doUEdwTmZPRWVvd2FPUktpeXh6WnF6T1g2ZVFMMVBISlpFbnI4RnVoRFk2cjhDa2pqajBTN0RBakdDNXRFYW1qUzdJbGxobV91MVV4MnVsNDZydVpPVXoyamZjWGRuQkduNGhjTTJQWUlfdV9hN1FncmVlUHV1UjRYX2VCaS1Pbk9wa1hLNmEwejRxODdZRFl5T1ZDeFhlUGJjMFZncjZHdmRlRVFEbXRMMmRGMUxUejRB0gHDAUFVX3lxTE5WSlRyTlpURWRhODJESVZfcS00U29HN2N1M3Z0d3FsUXhWSmQ1MnFNMmtJMnVKeE5QbmJVSW1taGkxUW5LWnBMX25WRTlUaVc4TmhWaFF3RVQ3T2VtT2VXVGRudjBiNnl5ZUZCcy1lbkZjY2s1dTUyU24zcXFrX05UYl9tTTEzbURHQkViNzU3M1lFUGNsUkU1eEVvTjJtaE8xY3E3NXp5LXc2X3Ftd2s2OVhjb2NNUW94cGZfYm9OZUgtVQ?oc=5",
-      "clusterId": "3fyhrc",
-      "title": "How Anthropic plans to watermark Claude's AI-generated text",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRWgwX0doUEdwTmZPRWVvd2FPUktpeXh6WnF6T1g2ZVFMMVBISlpFbnI4RnVoRFk2cjhDa2pqajBTN0RBakdDNXRFYW1qUzdJbGxobV91MVV4MnVsNDZydVpPVXoyamZjWGRuQkduNGhjTTJQWUlfdV9hN1FncmVlUHV1UjRYX2VCaS1Pbk9wa1hLNmEwejRxODdZRFl5T1ZDeFhlUGJjMFZncjZHdmRlRVFEbXRMMmRGMUxUejRB0gHDAUFVX3lxTE5WSlRyTlpURWRhODJESVZfcS00U29HN2N1M3Z0d3FsUXhWSmQ1MnFNMmtJMnVKeE5QbmJVSW1taGkxUW5LWnBMX25WRTlUaVc4TmhWaFF3RVQ3T2VtT2VXVGRudjBiNnl5ZUZCcy1lbkZjY2s1dTUyU24zcXFrX05UYl9tTTEzbURHQkViNzU3M1lFUGNsUkU1eEVvTjJtaE8xY3E3NXp5LXc2X3Ftd2s2OVhjb2NNUW94cGZfYm9OZUgtVQ?oc=5",
-      "dateISO": "2026-08-14T07:00:00.000Z",
-      "date": "AUG 14 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "analysis",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ2o0V3htdFZCT1R5VFoxR0JHNDk3QzRxOHdlYXdzdUE4c2hXbUI2WFVLUmM0RFRwN2V2TUdUVlFEcy0tY0Z6eEVySHhaN213M29CdTIwYmJyNjBqU1BkYUhOQVpVYTlXam9jbnNvTV9LVS0zd2xodVBvdVlsRThtcTVCeDExdGRKYnA5S3o0bjllMk1WMFc1NXVCYS1JSFNCNkFfX09ZY1NscGNORFEzTW0xZFc?oc=5"
-        },
-        {
-          "name": "BleepingComputer",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRWgwX0doUEdwTmZPRWVvd2FPUktpeXh6WnF6T1g2ZVFMMVBISlpFbnI4RnVoRFk2cjhDa2pqajBTN0RBakdDNXRFYW1qUzdJbGxobV91MVV4MnVsNDZydVpPVXoyamZjWGRuQkduNGhjTTJQWUlfdV9hN1FncmVlUHV1UjRYX2VCaS1Pbk9wa1hLNmEwejRxODdZRFl5T1ZDeFhlUGJjMFZncjZHdmRlRVFEbXRMMmRGMUxUejRB0gHDAUFVX3lxTE5WSlRyTlpURWRhODJESVZfcS00U29HN2N1M3Z0d3FsUXhWSmQ1MnFNMmtJMnVKeE5QbmJVSW1taGkxUW5LWnBMX25WRTlUaVc4TmhWaFF3RVQ3T2VtT2VXVGRudjBiNnl5ZUZCcy1lbkZjY2s1dTUyU24zcXFrX05UYl9tTTEzbURHQkViNzU3M1lFUGNsUkU1eEVvTjJtaE8xY3E3NXp5LXc2X3Ftd2s2OVhjb2NNUW94cGZfYm9OZUgtVQ?oc=5"
-        }
-      ],
-      "sourceName": "BleepingComputer",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/teen-development-research-grants",
-      "clusterId": "dt1aj7",
-      "title": "Funding grants for new research into AI and teen development",
-      "desc": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
-      "url": "https://openai.com/index/teen-development-research-grants",
-      "dateISO": "2026-09-08T09:00:00.000Z",
-      "date": "SEP 08 2026",
-      "category": "capital",
-      "catConfidence": 0.8,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/teen-development-research-grants"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "clusterId": "nxip51",
-      "title": "Our decision on Cursor following its acquisition by SpaceX",
-      "desc": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
-      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
-      "dateISO": "2026-08-28T06:00:00.000Z",
-      "date": "AUG 28 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 42,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     }
   ],
   "waves": [
     {
       "family": "product",
-      "category": "opensource",
-      "title": "Nvidia’s Answer to Rogue Agents Is an Open-Source AI Security System",
-      "summary": "In the wake of a series of high-profile AI safety incidents, Nvidia is introducing a new software tool that helps keep agents from escaping containment.",
-      "significance": 75,
+      "category": "product",
+      "title": "Nvidia says its new AI safety platform can contain rogue agents within ‘milliseconds’",
+      "summary": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reu…",
+      "significance": 76,
       "impact": "high",
       "verification": "single",
       "date": "SEP 28 2026",
-      "dateISO": "2026-09-28T09:00:00.000Z",
-      "url": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/",
+      "dateISO": "2026-09-28T13:36:06.000Z",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents"
         }
       ],
       "entityIds": [
@@ -1215,26 +1204,26 @@
     },
     {
       "family": "market",
-      "category": "orggov",
-      "title": "Anthropic’s CEO is about to have dinner with President Trump",
-      "summary": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-      "significance": 66,
-      "impact": "notable",
+      "category": "capital",
+      "title": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+      "summary": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
+      "significance": 70,
+      "impact": "high",
       "verification": "single",
-      "date": "SEP 27 2026",
-      "dateISO": "2026-09-27T20:34:28.000Z",
-      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+      "date": "SEP 28 2026",
+      "dateISO": "2026-09-28T13:38:48.000Z",
+      "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
       "sourceCount": 1,
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/"
+          "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/"
         }
       ],
       "entityIds": [
-        "claude"
+        "amd"
       ],
-      "whyItMatters": "If it holds up, governance changes shape how a lab makes its biggest calls."
+      "whyItMatters": "If it holds up, fresh capital extends how long the company can fund training runs and hiring before it needs revenue."
     },
     {
       "family": "research",
@@ -1270,7 +1259,7 @@
     "copilot": 2,
     "perplexity": 1,
     "gpt": 99,
-    "claude": 81,
+    "claude": 80,
     "gemini": 26,
     "grok": 0,
     "llama": 0,
@@ -1281,9 +1270,9 @@
     "aws": 1,
     "gcp": 0,
     "oracle": 0,
-    "coreweave": 0,
-    "nvidia": 4,
-    "amd": 1,
+    "coreweave": 1,
+    "nvidia": 6,
+    "amd": 2,
     "tsmc": 0,
     "broadcom": 0
   },
@@ -1304,6 +1293,17 @@
           "impact": "emerging"
         },
         {
+          "h": "Anthropic unveils Claude Opus 5.5",
+          "d": "SEP 22 2026",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Reuters",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
+        },
+        {
           "h": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and d…",
           "d": "SEP 17 2026",
           "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
@@ -1320,7 +1320,7 @@
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "axios.com",
+          "sourceName": "Axios",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1333,17 +1333,6 @@
           "videoUrl": null,
           "sourceName": "Wealth Management",
           "sourceCount": 2,
-          "verification": "corroborated",
-          "impact": "notable"
-        },
-        {
-          "h": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-          "d": "SEP 01 2026",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-          "isVideo": false,
-          "videoUrl": "https://www.youtube.com/watch?v=ROF2Nv_KjOM",
-          "sourceName": "anthropic.com",
-          "sourceCount": 3,
           "verification": "corroborated",
           "impact": "notable"
         }
@@ -1465,7 +1454,7 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Google DeepMind",
-          "sourceCount": 5,
+          "sourceCount": 4,
           "verification": "official",
           "impact": "notable"
         }
@@ -1473,6 +1462,30 @@
     }
   ],
   "wire": [
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 28 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Viral AI agent Instinct raises $1B Series C at a $10B valuation",
+      "p": "Instinct has raised a $1 billion Series C, saying 'we're just getting started.' The company is now valued at $10 billion.",
+      "url": "https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "SEP 28 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Nvidia says its new AI safety platform can contain rogue agents within ‘millise…",
+      "p": "Nvidia is launching a new safety platform designed to contain and monitor AI agents, a move that comes in response to a wave of rogue hacking incidents, as reported earlier by Reuters. In an announcement on Monday, Nvidia says its new Open Agent Safety Platfo…",
+      "url": "https://www.theverge.com/tech/1001287/nvidia-ai-safety-platform-rogue-agents",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
     {
       "org": "OPENAI",
       "logoKey": "openai",
@@ -1543,30 +1556,6 @@
       "p": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here. Over the past few months, a cascade of cyberattacks by AI agents has stunned the…",
       "url": "https://www.technologyreview.com/2026/09/28/1145197/whos-liable-when-ai-agents-go-rogue/",
       "sourceName": "MIT Technology Review",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 27 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Engram is a sampler that turns broken AI hallucinations into music",
-      "p": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram. It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds. This isn't Suno in a box, though. This…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "SEP 27 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Anthropic’s CEO is about to have dinner with President Trump",
-      "p": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
-      "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1718,11 +1707,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 229.723,
-      "changePct": 0.00012971013756902735,
+      "price": 232.5,
+      "changePct": 3.301191822097454,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 10662447,
+      "volume": 31667090,
       "ohlc": [
         {
           "d": "06-29",
@@ -2168,24 +2157,24 @@
         {
           "d": "09-28",
           "o": 229.6999969482422,
-          "h": 229.9499969482422,
+          "h": 233.2100067138672,
           "l": 229.49749755859375,
-          "c": 229.7227020263672
+          "c": 232.5
         }
       ],
-      "relVolume": 0.0918697000720486,
-      "marketCap": 5605241200000
+      "relVolume": 0.2728497558257096,
+      "marketCap": 5673000000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 504.99,
-      "changePct": -2.165951730232097,
+      "price": 504.11,
+      "changePct": -2.3364391494832226,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 1159959,
+      "volume": 2872858,
       "ohlc": [
         {
           "d": "06-29",
@@ -2631,24 +2620,24 @@
         {
           "d": "09-28",
           "o": 505.42498779296875,
-          "h": 505.5849914550781,
-          "l": 504.4700012207031,
-          "c": 504.989990234375
+          "h": 506.489990234375,
+          "l": 502.2200012207031,
+          "c": 504.1099853515625
         }
       ],
-      "relVolume": 0.05317998922150226,
-      "marketCap": 3752075700000
+      "relVolume": 0.13171030827374633,
+      "marketCap": 3745537300000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 352.35,
-      "changePct": -0.1303793708401732,
+      "price": 352.385,
+      "changePct": -0.12045797905660799,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 713617,
+      "volume": 2041601,
       "ohlc": [
         {
           "d": "06-29",
@@ -3094,24 +3083,24 @@
         {
           "d": "09-28",
           "o": 352.57501220703125,
-          "h": 352.989990234375,
-          "l": 352.29998779296875,
-          "c": 352.3500061035156
+          "h": 355.8500061035156,
+          "l": 351.03009033203125,
+          "c": 352.385009765625
         }
       ],
-      "relVolume": 0.026044995892244318,
-      "marketCap": 1733562000000
+      "relVolume": 0.07451264425959848,
+      "marketCap": 1733734200000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 340.9,
-      "changePct": -0.8781168333736927,
+      "price": 342.71,
+      "changePct": -0.3518323811971192,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 1008813,
+      "volume": 2246151,
       "ohlc": [
         {
           "d": "06-29",
@@ -3557,24 +3546,24 @@
         {
           "d": "09-28",
           "o": 340.70001220703125,
-          "h": 341.3900146484375,
+          "h": 343.5899963378906,
           "l": 340.2701110839844,
-          "c": 340.8999938964844
+          "c": 342.7099914550781
         }
       ],
-      "relVolume": 0.037495337766829805,
-      "marketCap": 4158979999999.9995
+      "relVolume": 0.08348444203266862,
+      "marketCap": 4181061999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 246.56,
-      "changePct": -1.24564450400929,
+      "price": 245.92,
+      "changePct": -1.5019826280699016,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 1018750,
+      "volume": 3957561,
       "ohlc": [
         {
           "d": "06-29",
@@ -4021,23 +4010,23 @@
           "d": "09-28",
           "o": 246.32000732421875,
           "h": 246.8699951171875,
-          "l": 246.25,
-          "c": 246.55999755859375
+          "l": 244.72500610351562,
+          "c": 245.9199981689453
         }
       ],
-      "relVolume": 0.02882254900823554,
-      "marketCap": 2638192000000
+      "relVolume": 0.11196760331345439,
+      "marketCap": 2631344000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 745.24,
-      "changePct": -0.8541073277187526,
+      "price": 722.57,
+      "changePct": -3.870096434510954,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 1979408,
+      "volume": 6012709,
       "ohlc": [
         {
           "d": "06-29",
@@ -4484,23 +4473,23 @@
           "d": "09-28",
           "o": 750.4249877929688,
           "h": 750.5759887695312,
-          "l": 745.239990234375,
-          "c": 745.239990234375
+          "l": 720.2999877929688,
+          "c": 722.5700073242188
         }
       ],
-      "relVolume": 0.08633201841166563,
-      "marketCap": 1878004800000
+      "relVolume": 0.26224472372142965,
+      "marketCap": 1820876400000.0002
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 448.76,
-      "changePct": -0.41054917691053006,
+      "price": 447.125,
+      "changePct": -0.7733928374542213,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 396884,
+      "volume": 834453,
       "ohlc": [
         {
           "d": "06-29",
@@ -4945,25 +4934,25 @@
         },
         {
           "d": "09-28",
-          "o": 452.3949890136719,
-          "h": 449,
-          "l": 448,
-          "c": 448.760009765625
+          "o": 448.3900146484375,
+          "h": 449.6000061035156,
+          "l": 446.7099914550781,
+          "c": 447.125
         }
       ],
-      "relVolume": 0.04049793344050905,
-      "marketCap": 2329064400000
+      "relVolume": 0.08514735301305446,
+      "marketCap": 2320578750000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 628.205,
-      "changePct": -0.38453416015614034,
+      "price": 612.39,
+      "changePct": -2.8923441785432438,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 903501,
+      "volume": 2823767,
       "ohlc": [
         {
           "d": "06-29",
@@ -5409,24 +5398,24 @@
         {
           "d": "09-28",
           "o": 624.89501953125,
-          "h": 628.2050170898438,
-          "l": 624.844970703125,
-          "c": 628.2050170898438
+          "h": 629.64501953125,
+          "l": 611.5900268554688,
+          "c": 612.3900146484375
         }
       ],
-      "relVolume": 0.04177954298270925,
-      "marketCap": 1017692100000.0001
+      "relVolume": 0.1305761639994377,
+      "marketCap": 992071800000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 186.64,
-      "changePct": -1.5975108391143418,
+      "price": 188.3,
+      "changePct": -0.7223045976766448,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 898428,
+      "volume": 2392518,
       "ohlc": [
         {
           "d": "06-29",
@@ -5872,24 +5861,24 @@
         {
           "d": "09-28",
           "o": 186.2310028076172,
-          "h": 186.9199981689453,
-          "l": 186.2310028076172,
-          "c": 186.63999938964844
+          "h": 189.60000610351562,
+          "l": 185.6199951171875,
+          "c": 188.3000030517578
         }
       ],
-      "relVolume": 0.03408184090831497,
-      "marketCap": 447935999999.99994
+      "relVolume": 0.0907601030313836,
+      "marketCap": 451920000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 132.57,
-      "changePct": -3.304156511763068,
+      "price": 133.95,
+      "changePct": -2.297599573332669,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 2312148,
+      "volume": 5302409,
       "ohlc": [
         {
           "d": "06-29",
@@ -6334,32 +6323,32 @@
         },
         {
           "d": "09-28",
-          "o": 138.57000732421875,
-          "h": 133.2899932861328,
+          "o": 132.72500610351562,
+          "h": 135.69000244140625,
           "l": 132.5,
-          "c": 132.57000732421875
+          "c": 133.9499969482422
         }
       ],
-      "relVolume": 0.06933413058481484,
-      "marketCap": 372521700000
+      "relVolume": 0.15900276194261678,
+      "marketCap": 376399499999.99994
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.94 – $3.83/hr",
-      "trend": "↑ 5% vs 7d ago",
+      "rate": "$1.99 – $3.71/hr",
+      "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.21 – $4.81/hr",
-      "trend": "↓ 12% vs 7d ago",
+      "rate": "$3.46 – $4.80/hr",
+      "trend": "↓ 9% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6375,7 +6364,7 @@
       "rate": "$6.94 – $15.00/hr",
       "trend": "↑ 48% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6388,14 +6377,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.92 – $1.59/hr",
-      "trend": "↑ 18% vs 7d ago",
+      "rate": "$0.67 – $1.59/hr",
+      "trend": "↑ 6% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-28T13:30:30.573Z",
+    "updatedAt": "2026-09-28T13:45:24.347Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6404,16 +6393,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 359,
-        "fetchedStoryCount": 271,
+        "rawStoryHits": 360,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 14,
-        "storyCoverage": 0.754874651810585,
-        "estimatedRelevantDiscussions": 20,
+        "storyCoverage": 0.8333333333333334,
+        "estimatedRelevantDiscussions": 18,
         "isEstimated": true,
-        "rawCommentHits": 2576,
+        "rawCommentHits": 2577,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 28,
-        "commentCoverage": 0.11645962732919254,
+        "validatedCommentCount": 27,
+        "commentCoverage": 0.11641443538998836,
         "limited": false,
         "points": 115,
         "themes": [
@@ -6467,7 +6456,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 19,
+            "discussions": 17,
             "isEstimated": true
           },
           {
@@ -6488,10 +6477,10 @@
         "storyCoverage": 0.35587188612099646,
         "estimatedRelevantDiscussions": 83,
         "isEstimated": true,
-        "rawCommentHits": 6383,
+        "rawCommentHits": 6394,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 33,
-        "commentCoverage": 0.046999843333855554,
+        "validatedCommentCount": 34,
+        "commentCoverage": 0.046918986549890525,
         "limited": false,
         "points": 956,
         "themes": [
@@ -6503,12 +6492,12 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 8
+            "count": 9
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 5
+            "count": 6
           },
           {
             "id": "price",
@@ -6653,16 +6642,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 499,
+        "rawStoryHits": 501,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.6012024048096193,
+        "storyCoverage": 0.5988023952095808,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10329,
+        "rawCommentHits": 10333,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.02904443799012489,
+        "commentCoverage": 0.029033194619181264,
         "limited": false,
         "points": 37,
         "themes": [
@@ -6824,28 +6813,28 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 111,
+        "rawStoryHits": 107,
         "fetchedStoryCount": 107,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.963963963963964,
-        "estimatedRelevantDiscussions": 21,
-        "isEstimated": true,
-        "rawCommentHits": 870,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 20,
+        "isEstimated": false,
+        "rawCommentHits": 892,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 46,
-        "commentCoverage": 0.3448275862068966,
+        "validatedCommentCount": 45,
+        "commentCoverage": 0.336322869955157,
         "limited": false,
         "points": 824,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 18
+            "count": 17
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 17
+            "count": 16
           },
           {
             "id": "price",
@@ -6902,8 +6891,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": true
+            "discussions": 20,
+            "isEstimated": false
           }
         ]
       },
@@ -6918,10 +6907,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4509,
+        "rawCommentHits": 4512,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.0665335994677312,
+        "commentCoverage": 0.06648936170212766,
         "limited": false,
         "points": 159,
         "themes": [
@@ -7348,14 +7337,14 @@
       {
         "modelId": "deepseek",
         "themes": [
-          "speed",
+          "reasoning",
           "price"
         ],
-        "excerpt": "…so I am now experimenting with cheaper alternatives like Deepseek 4.1 flash and so on. I don't trust Anthropic as the downgrade my models consistently and its rare i get to…",
+        "excerpt": "… cost well above reasonably reputable inference providers for deepseek v4 flash or qwen 3.8-flash-next or similar class of open weight LLMs that fit in under 170GB of RAM, so I…",
         "source": "Hacker News",
-        "author": "nowittyusername",
-        "publishedAt": "2026-09-17T16:04:12.000Z",
-        "url": "https://news.ycombinator.com/item?id=49742775"
+        "author": "walrus01",
+        "publishedAt": "2026-09-23T23:03:53.000Z",
+        "url": "https://news.ycombinator.com/item?id=49823863"
       },
       {
         "modelId": "qwen",
