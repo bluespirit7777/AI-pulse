@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-29T01:30:29.763Z",
+  "updatedAt": "2026-09-29T01:45:25.779Z",
   "build": {
-    "sha": "4318c99b802056ebee8819bad38fbb73c0362575",
-    "shortSha": "4318c99",
+    "sha": "7fa46c68ad6477e086c12e9bdf7d8d53a8197a35",
+    "shortSha": "7fa46c6",
     "ref": "main",
-    "builtAt": "2026-09-29T01:30:45.439Z"
+    "builtAt": "2026-09-29T01:45:44.269Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,9 +12,9 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.1,
-    "estimatedDatasets": 5,
-    "buildSha": "4318c99",
-    "lastSuccessfulUpdate": "2026-09-29T01:30:29.763Z"
+    "estimatedDatasets": 4,
+    "buildSha": "7fa46c6",
+    "lastSuccessfulUpdate": "2026-09-29T01:45:25.779Z"
   },
   "ticker": [
     "NVIDIA SAYS ITS NEW AI SAFETY PLATFORM CAN CONTAIN ROGUE AGENTS WITHIN ‘MILLISECONDS’",
@@ -70,7 +70,7 @@
       "category": "policy",
       "catConfidence": 0.64,
       "family": "market",
-      "significance": 76,
+      "significance": 75,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -312,6 +312,32 @@
       ]
     },
     {
+      "id": "https://openai.com/index/how-we-will-do-better-for-australia",
+      "clusterId": "q47ed1",
+      "title": "How we will do better for Australia",
+      "desc": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+      "dateISO": "2026-09-29T01:00:00.000Z",
+      "date": "SEP 29 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/how-we-will-do-better-for-australia"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
       "clusterId": "g3jh8q",
       "title": "OpenAI reportedly ditches model over safety concerns",
@@ -333,32 +359,6 @@
         }
       ],
       "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/",
-      "clusterId": "qdzl16",
-      "title": "Florida invokes extinction fears in legal bid to halt OpenAI development",
-      "desc": "State says LLMs threaten civilization as \"the greatest public nuisance ever created.\"",
-      "url": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/",
-      "dateISO": "2026-09-28T20:49:39.000Z",
-      "date": "SEP 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/"
-        }
-      ],
-      "sourceName": "Ars Technica",
       "entityIds": [
         "gpt"
       ]
@@ -414,6 +414,32 @@
       "entityIds": [
         "gpt",
         "claude"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/",
+      "clusterId": "qdzl16",
+      "title": "Florida invokes extinction fears in legal bid to halt OpenAI development",
+      "desc": "State says LLMs threaten civilization as \"the greatest public nuisance ever created.\"",
+      "url": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/",
+      "dateISO": "2026-09-28T20:49:39.000Z",
+      "date": "SEP 28 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -1087,32 +1113,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "clusterId": "1wtfps8",
-      "title": "Disrupting a new covert influence campaign from Russia",
-      "desc": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
-      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "dateISO": "2026-08-25T00:00:00.000Z",
-      "date": "AUG 25 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
@@ -1148,7 +1148,7 @@
       "category": "policy",
       "title": "Florida seeks a ban on ChatGPT acting like a person",
       "summary": "Florida Attorney General James Uthmeier is calling for a judge to block OpenAI from \"giving ChatGPT false human attributes,\" a few months after Florida sued the AI company over sa…",
-      "significance": 76,
+      "significance": 75,
       "impact": "high",
       "verification": "single",
       "date": "SEP 28 2026",
@@ -1200,7 +1200,7 @@
     "chatgpt": 28,
     "copilot": 1,
     "perplexity": 1,
-    "gpt": 102,
+    "gpt": 103,
     "claude": 77,
     "gemini": 22,
     "grok": 0,
@@ -1273,7 +1273,7 @@
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "axios.com",
+          "sourceName": "Axios",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1405,6 +1405,18 @@
   ],
   "wire": [
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "SEP 29 2026",
+      "verification": "analysis",
+      "impact": "notable",
+      "h": "How we will do better for Australia",
+      "p": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+      "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 29 2026",
@@ -1486,18 +1498,6 @@
       "p": "State says LLMs threaten civilization as \"the greatest public nuisance ever created.\"",
       "url": "https://arstechnica.com/ai/2026/09/florida-asks-court-to-put-the-brakes-on-openais-frontier-ai-development/",
       "sourceName": "Ars Technica",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 28 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Shopify opens checkout to browser-based AI agents",
-      "p": "Shopify is expanding WebMCP support to checkout, allowing browser-based AI agents to update order details and complete purchases with a buyer’s authorization.",
-      "url": "https://techcrunch.com/2026/09/28/shopify-opens-checkout-to-browser-based-ai-agents/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -6275,18 +6275,18 @@
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $4.81/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$3.31 – $4.81/hr",
+      "trend": "→ 3% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $8.13/hr",
-      "trend": "↓ 8% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $9.38/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6307,14 +6307,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "↑ 29% vs 7d ago",
+      "rate": "$0.59 – $1.59/hr",
+      "trend": "↑ 9% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-29T01:30:29.763Z",
+    "updatedAt": "2026-09-29T01:45:25.779Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6334,7 +6334,7 @@
         "validatedCommentCount": 27,
         "commentCoverage": 0.11534025374855825,
         "limited": false,
-        "points": 244,
+        "points": 245,
         "themes": [
           {
             "id": "reasoning",
@@ -6360,8 +6360,8 @@
         "topThreads": [
           {
             "title": "Show HN: HN.watch – Videos of all Hacker News posts",
-            "points": 125,
-            "comments": 79,
+            "points": 126,
+            "comments": 81,
             "url": "https://hn.watch/",
             "date": "SEP 28 2026"
           },
@@ -6480,7 +6480,7 @@
         "validatedCommentCount": 41,
         "commentCoverage": 0.20920502092050208,
         "limited": false,
-        "points": 372,
+        "points": 373,
         "themes": [
           {
             "id": "coding",
@@ -6526,8 +6526,8 @@
         "topThreads": [
           {
             "title": "Show HN: HN.watch – Videos of all Hacker News posts",
-            "points": 125,
-            "comments": 79,
+            "points": 126,
+            "comments": 81,
             "url": "https://hn.watch/",
             "date": "SEP 28 2026"
           },
@@ -6568,10 +6568,10 @@
         "storyCoverage": 0.5847953216374269,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10517,
+        "rawCommentHits": 10518,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 31,
-        "commentCoverage": 0.02852524484168489,
+        "commentCoverage": 0.02852253280091272,
         "limited": false,
         "points": 37,
         "themes": [
@@ -6733,23 +6733,23 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 116,
+        "rawStoryHits": 112,
         "fetchedStoryCount": 112,
         "validatedStoryCount": 20,
-        "storyCoverage": 0.9655172413793104,
-        "estimatedRelevantDiscussions": 21,
-        "isEstimated": true,
-        "rawCommentHits": 905,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 20,
+        "isEstimated": false,
+        "rawCommentHits": 847,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 42,
-        "commentCoverage": 0.3314917127071823,
+        "commentCoverage": 0.3541912632821724,
         "limited": false,
         "points": 825,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 18
+            "count": 17
           },
           {
             "id": "coding",
@@ -6759,7 +6759,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 9
+            "count": 8
           },
           {
             "id": "price",
@@ -6811,8 +6811,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": true
+            "discussions": 20,
+            "isEstimated": false
           }
         ]
       },
@@ -6827,10 +6827,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 4573,
+        "rawCommentHits": 4571,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.0656024491581019,
+        "commentCoverage": 0.0656311529205863,
         "limited": false,
         "points": 160,
         "themes": [
