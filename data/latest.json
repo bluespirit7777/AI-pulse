@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-30T23:30:25.294Z",
+  "updatedAt": "2026-09-30T23:45:21.714Z",
   "build": {
-    "sha": "c21d65670bc801bbf42d4534230602a1f157328c",
-    "shortSha": "c21d656",
+    "sha": "49b6231181c43bd3393f3e57d121ad771387a8a5",
+    "shortSha": "49b6231",
     "ref": "main",
-    "builtAt": "2026-09-30T23:30:46.416Z"
+    "builtAt": "2026-09-30T23:45:38.668Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,8 +13,8 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 60,
     "estimatedDatasets": 5,
-    "buildSha": "c21d656",
-    "lastSuccessfulUpdate": "2026-09-30T23:30:25.294Z"
+    "buildSha": "49b6231",
+    "lastSuccessfulUpdate": "2026-09-30T23:45:21.714Z"
   },
   "ticker": [
     "GOOGLE ANNOUNCES GEMINI 4 AND SAYS IT’S SO CAPABLE THAT ONLY ‘TRUSTED CYBER DEFENDERS’ CAN HAVE IT RIGHT NOW",
@@ -26,7 +26,7 @@
     "INTRODUCING ANTHROPIC MODELS ON AMAZON BEDROCK FOR IN-REGION INFERENCE IN SEOUL AND SINGAPORE | ARTIFICIAL IN…",
     "PROTESTS AGAINST OPENAI GET INCREASINGLY CREATIVE",
     "INTRODUCING DOTS, ALWAYS-ON AGENTS BUILT TO HANDLE EVERYTHING.",
-    "OPENAI TAKES ON MICROSOFT WITH THE LAUNCH OF WHAT FEELS A WHOLE LOT LIKE CHATGPT’S OWN OFFICE SUITE"
+    "GOOGLE ANNOUNCES GEMINI 4 ARGON AI MODEL, BUT YOU CAN'T USE IT YET"
   ],
   "signals": [
     {
@@ -236,7 +236,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 63,
+      "significance": 62,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -278,30 +278,33 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/",
-      "clusterId": "flbbdv",
-      "title": "OpenAI takes on Microsoft with the launch of what feels a whole lot like ChatGPT’s own office suite",
-      "desc": "OpenAI's newly announced suite of office features puts it into more direct competition with more traditional software companies.",
-      "url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/",
-      "dateISO": "2026-09-29T17:45:51.000Z",
-      "date": "SEP 29 2026",
-      "category": "product",
-      "catConfidence": 0.6,
+      "id": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
+      "clusterId": "7vmvnz",
+      "title": "Google announces Gemini 4 Argon AI model, but you can't use it yet",
+      "desc": "So much for Gemini 3.5 Pro.",
+      "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
+      "dateISO": "2026-09-30T20:11:08.000Z",
+      "date": "SEP 30 2026",
+      "category": "general",
+      "catConfidence": 0.3,
       "family": "product",
-      "significance": 62,
+      "significance": 59,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
         {
           "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/"
+          "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "Ars Technica",
       "entityIds": [
-        "chatgpt",
-        "gpt"
+        "gemini"
       ]
     },
     {
@@ -475,32 +478,6 @@
       "entityIds": [
         "gpt",
         "nvidia"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
-      "clusterId": "7vmvnz",
-      "title": "Google announces Gemini 4 Argon AI model, but you can't use it yet",
-      "desc": "So much for Gemini 3.5 Pro.",
-      "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
-      "dateISO": "2026-09-30T20:11:08.000Z",
-      "date": "SEP 30 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
       ]
     },
     {
@@ -1122,6 +1099,32 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "clusterId": "p21kob",
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "desc": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "dateISO": "2026-09-28T07:00:00.000Z",
+      "date": "SEP 28 2026",
+      "category": "capital",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/lenfest-ai-collaborative-expansion"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1201,11 +1204,11 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 29,
+    "chatgpt": 28,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 109,
-    "claude": 75,
+    "gpt": 108,
+    "claude": 76,
     "gemini": 25,
     "grok": 0,
     "llama": 0,
@@ -1272,12 +1275,12 @@
           "impact": "notable"
         },
         {
-          "h": "Anthropic launches Claude Code Projects, an ‘always-on’ conversation that remembers and d…",
-          "d": "SEP 17 2026",
-          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPbzFBR1I0TUFsdkpnMFY2amNCMzJuRFlxS2tCZ1JiWEFhOVl0WkJBU1pBSkZha0hHWEdMYTFGc201QmtVUGFFU2VnQUh2UW9ucHp5V1Y2Uk10WlBWbjdvYTBjX0JfTDB2MUJDMnFRNkstUG9iNU1hQnV0TXJDcHhhbkdKenEyMVREQ3BVMzdEdnlEN1VKLXpGQXRMRTJGMHlLSzY1TUZSeWEyU0pqMy1SX20wRHJIVTgwZXpqWHVLY184Y09GS0M1M2VCU29ZN1JjYWNGelUya0NmOGxkdVRubnVGM21SM0t1OTJNUmZLbFI?oc=5",
+          "h": "Anthropic launches Claude Opus 5.5 with stricter safeguards for cybersecurity",
+          "d": "SEP 22 2026",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVDNTSkNCdjRXSUVQQzc4LWtrblRKM3p6N1RvMk9UQTRfamFBMy1UelVxdjRGX3hRSlpTYmFDa1piM2FKT3lfdFlGdXZ0YmoyOURoRzBvM3hYRnp4elUzX2ZqYURxbEJWSjVCY1hWWHhVSTFWZjd3VkJGRlNkWXk3N3pYWWFHbVItLVA1RmJPOUoyblZ0dGp2aWF4QVJMZlk?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "VentureBeat",
+          "sourceName": "The Verge",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1322,17 +1325,6 @@
           "impact": "notable"
         },
         {
-          "h": "OpenAI takes on Microsoft with the launch of what feels a whole lot like ChatGPT’s own of…",
-          "d": "SEP 29 2026",
-          "url": "https://techcrunch.com/2026/09/29/openai-takes-on-microsoft-with-the-launch-of-what-feels-a-whole-lot-like-chatgpts-own-office-suite/",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "TechCrunch",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing dots",
           "d": "SEP 29 2026",
           "url": "https://openai.com/index/introducing-dots",
@@ -1342,6 +1334,17 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "notable"
+        },
+        {
+          "h": "10 Years of NVIDIA DGX: From One System to AI Factories",
+          "d": "SEP 24 2026",
+          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "NVIDIA (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
         }
       ]
     },
@@ -1409,6 +1412,18 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "SEP 30 2026",
+      "verification": "corroborated",
+      "impact": "notable",
+      "h": "Google announces Gemini 4 Argon AI model, but you can't use it yet",
+      "p": "So much for Gemini 3.5 Pro.",
+      "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 2
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 30 2026",
@@ -1442,18 +1457,6 @@
       "p": "Six major AI companies signed a voluntary agreement with the White House this week vowing to implement safeguards. It’s unclear how much that matters.",
       "url": "https://www.wired.com/story/trumps-ai-safety-accord-is-a-fancy-pinky-swear/",
       "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "SEP 30 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Google announces Gemini 4 Argon AI model, but you can't use it yet",
-      "p": "So much for Gemini 3.5 Pro.",
-      "url": "https://arstechnica.com/google/2026/09/google-announces-gemini-4-argon-ai-model-but-you-cant-use-it-yet/",
-      "sourceName": "Ars Technica",
       "sourceCount": 1
     },
     {
@@ -6259,18 +6262,18 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.54/hr",
-      "trend": "↓ 4% vs 7d ago",
+      "rate": "$1.99 – $3.49/hr",
+      "trend": "↓ 5% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.74 – $5.85/hr",
-      "trend": "↓ 16% vs 7d ago",
+      "rate": "$2.74 – $5.73/hr",
+      "trend": "↓ 17% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6278,7 +6281,7 @@
       "rate": "$5.98 – $8.56/hr",
       "trend": "↓ 5% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6299,14 +6302,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$1.00 – $1.59/hr",
-      "trend": "↑ 19% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "rate": "$0.53 – $1.59/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-30T23:30:25.294Z",
+    "updatedAt": "2026-09-30T23:45:21.714Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6321,10 +6324,10 @@
         "storyCoverage": 0.7481296758104738,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 2727,
+        "rawCommentHits": 2728,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 40,
-        "commentCoverage": 0.11001100110011001,
+        "commentCoverage": 0.10997067448680352,
         "limited": false,
         "points": 347,
         "themes": [
@@ -6584,16 +6587,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 524,
+        "rawStoryHits": 525,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 11,
-        "storyCoverage": 0.5725190839694656,
+        "storyCoverage": 0.5714285714285714,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
-        "rawCommentHits": 10824,
+        "rawCommentHits": 10825,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.02771618625277162,
+        "commentCoverage": 0.02771362586605081,
         "limited": false,
         "points": 34,
         "themes": [
@@ -6678,7 +6681,7 @@
         "validatedCommentCount": 44,
         "commentCoverage": 0.6993006993006993,
         "limited": false,
-        "points": 156,
+        "points": 159,
         "themes": [
           {
             "id": "reasoning",
@@ -6724,8 +6727,8 @@
         "topThreads": [
           {
             "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-            "points": 115,
-            "comments": 51,
+            "points": 118,
+            "comments": 52,
             "url": "https://github.com/magnitudedev/magnitude",
             "date": "SEP 30 2026"
           },
@@ -6750,16 +6753,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 120,
-        "fetchedStoryCount": 120,
+        "rawStoryHits": 118,
+        "fetchedStoryCount": 112,
         "validatedStoryCount": 21,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 21,
-        "isEstimated": false,
-        "rawCommentHits": 1026,
+        "storyCoverage": 0.9491525423728814,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": true,
+        "rawCommentHits": 1025,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 46,
-        "commentCoverage": 0.29239766081871343,
+        "commentCoverage": 0.2926829268292683,
         "limited": false,
         "points": 830,
         "themes": [
@@ -6823,8 +6826,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
-            "isEstimated": false
+            "discussions": 22,
+            "isEstimated": true
           }
         ]
       },
@@ -6834,17 +6837,17 @@
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
         "rawStoryHits": 232,
-        "fetchedStoryCount": 230,
+        "fetchedStoryCount": 232,
         "validatedStoryCount": 14,
-        "storyCoverage": 0.9913793103448276,
+        "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
-        "isEstimated": true,
-        "rawCommentHits": 4699,
+        "isEstimated": false,
+        "rawCommentHits": 4696,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.0638433709299851,
+        "commentCoverage": 0.06388415672913117,
         "limited": false,
-        "points": 275,
+        "points": 278,
         "themes": [
           {
             "id": "reasoning",
@@ -6890,8 +6893,8 @@
         "topThreads": [
           {
             "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-            "points": 115,
-            "comments": 51,
+            "points": 118,
+            "comments": 52,
             "url": "https://github.com/magnitudedev/magnitude",
             "date": "SEP 30 2026"
           },
@@ -6907,7 +6910,7 @@
           {
             "name": "Hacker News",
             "discussions": 14,
-            "isEstimated": true
+            "isEstimated": false
           },
           {
             "name": "Qwen GitHub",
