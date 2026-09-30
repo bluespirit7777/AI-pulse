@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-30T16:15:24.564Z",
+  "updatedAt": "2026-09-30T16:30:27.463Z",
   "build": {
-    "sha": "bec4e0fe4fa6a5718ef5a253ca131d3b5fa15d10",
-    "shortSha": "bec4e0f",
+    "sha": "1dcdb514e775817bb7e74bb9261f77f675103091",
+    "shortSha": "1dcdb51",
     "ref": "main",
-    "builtAt": "2026-09-30T16:15:49.161Z"
+    "builtAt": "2026-09-30T16:30:45.406Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,12 +12,13 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.7,
-    "estimatedDatasets": 5,
-    "buildSha": "bec4e0f",
-    "lastSuccessfulUpdate": "2026-09-30T16:15:24.564Z"
+    "estimatedDatasets": 4,
+    "buildSha": "1dcdb51",
+    "lastSuccessfulUpdate": "2026-09-30T16:30:27.463Z"
   },
   "ticker": [
     "GOOGLE'S EARLY ATTEMPT TO PAY WEBSITES FOR AI ANSWERS IS STRUGGLING",
+    "GOOGLE REPORTEDLY TESTS PAYING PUBLISHERS FOR AI SEARCH RESULTS",
     "ANTHROPIC ROLLS OUT SECOND CLAUDE 5.5 MODEL AS IT BUILDS TOWARD IPO",
     "OPENAI LAUNCHES DOTS, ITS MUSE COMPETITOR",
     "AMD ACQUIRES WORLD LABS AI STARTUP, UPPING THE ANTE AGAINST NVIDIA",
@@ -25,8 +26,7 @@
     "OPENAI REPORTEDLY IN TALKS TO RAISE $30B ROUND AT $1.4T VALUATION",
     "PROTESTS AGAINST OPENAI GET INCREASINGLY CREATIVE",
     "INTRODUCING DOTS, ALWAYS-ON AGENTS BUILT TO HANDLE EVERYTHING.",
-    "OPENAI TAKES ON MICROSOFT WITH THE LAUNCH OF WHAT FEELS A WHOLE LOT LIKE CHATGPT’S OWN OFFICE SUITE",
-    "AI RESEARCHERS PUT OUT VIDEOS SAYING SUPERINTELLIGENCE IS ‘EXACTLY AS DANGEROUS AS IT SOUNDS’"
+    "OPENAI TAKES ON MICROSOFT WITH THE LAUNCH OF WHAT FEELS A WHOLE LOT LIKE CHATGPT’S OWN OFFICE SUITE"
   ],
   "signals": [
     {
@@ -56,6 +56,32 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+      "clusterId": "p3wh4v",
+      "title": "Google reportedly tests paying publishers for AI search results",
+      "desc": "Google has launched a pilot program that pays publishers for their contributions to its AI-powered search features, according to a report from The Information. The pilot program reportedly includes around 100 publishers and comes as Google faces scrutiny over the impact of its AI features on web traffic. Digiday first reported on the pilot program, […]",
+      "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+      "dateISO": "2026-09-30T14:51:49.000Z",
+      "date": "SEP 30 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5",
       "clusterId": "c8yav9",
       "title": "Anthropic rolls out second Claude 5.5 model as it builds toward IPO",
@@ -66,7 +92,7 @@
       "category": "capital",
       "catConfidence": 0.55,
       "family": "market",
-      "significance": 73,
+      "significance": 72,
       "impact": "high",
       "verification": "corroborated",
       "sourceCount": 4,
@@ -311,32 +337,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers",
-      "clusterId": "rytc42",
-      "title": "Protesters gather at OpenAI’s DevDay",
-      "desc": "On Tuesday, OpenAI's annual DevDay event began with protests, flyers, and chants. \"Sam Altman, get off it, put people over profit,\" said a group of protesters marching in a circle in front of a series of signs that spelled out \"PEOPLE OVER PROFIT.\" More than a dozen organizations came together to sponsor a rally outside […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers",
-      "dateISO": "2026-09-29T17:12:27.000Z",
-      "date": "SEP 29 2026",
-      "category": "market",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 65,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/",
       "clusterId": "2g1hs2",
       "title": "OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less",
@@ -358,6 +358,32 @@
         }
       ],
       "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers",
+      "clusterId": "rytc42",
+      "title": "Protesters gather at OpenAI’s DevDay",
+      "desc": "On Tuesday, OpenAI's annual DevDay event began with protests, flyers, and chants. \"Sam Altman, get off it, put people over profit,\" said a group of protesters marching in a circle in front of a series of signs that spelled out \"PEOPLE OVER PROFIT.\" More than a dozen organizations came together to sponsor a rally outside […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers",
+      "dateISO": "2026-09-29T17:12:27.000Z",
+      "date": "SEP 29 2026",
+      "category": "market",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 64,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1002201/openai-sam-altman-openai-devday-protests-ice-data-centers"
+        }
+      ],
+      "sourceName": "The Verge",
       "entityIds": [
         "gpt"
       ]
@@ -424,36 +450,6 @@
       "sourceName": "Google DeepMind",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements",
-      "clusterId": "8w8riv",
-      "title": "OpenAI DevDay 2026: The biggest news and announcements",
-      "desc": "It’s OpenAI’s turn in the fall tech events calendar. The company is hosting its annual DevDay on September 29th in San Francisco, and during a live keynote featuring CEO Sam Altman, it revealed several notable updates, including Dots, its AI agent product that rivals Meta’s recently-launched Muse. However, unlike Muse, which is available for free, […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements",
-      "dateISO": "2026-09-29T16:00:00.000Z",
-      "date": "SEP 29 2026",
-      "category": "orggov",
-      "catConfidence": 0.44,
-      "family": "market",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=Fls_onRviPM"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1001681/openai-devday-2026-biggest-news-announcements"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -615,7 +611,7 @@
       "id": "https://techcrunch.com/2026/09/30/restate-lands-20m-as-the-need-for-durable-infrastructure-increases-with-ai-agents/",
       "clusterId": "p3x1s5",
       "title": "Restate lands $20M as the need for durable infrastructure increases with AI agents",
-      "desc": "Founded by Apache Flink veterans, the startup is taking on workflow heavyweight Temporal.",
+      "desc": "Instead of building its durable execution engine on top of an external database, the company developed its own storage, replication, and redundancy layers. This architecture allows Restate to be exceptionally fast and lightweight.",
       "url": "https://techcrunch.com/2026/09/30/restate-lands-20m-as-the-need-for-durable-infrastructure-increases-with-ai-agents/",
       "dateISO": "2026-09-30T14:27:11.000Z",
       "date": "SEP 30 2026",
@@ -686,6 +682,30 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai",
+      "clusterId": "1me8972",
+      "title": "All the latest news on Meta’s cute, creepy Muse AI agent",
+      "desc": "Meta launched a new Muse AI agent it claims can help you with everything from firing off emails to buying stuff online. Muse can be surprisingly effective at delivering on those promises — if you’re willing to trust Meta with your data and hand Muse your credit card. Since the launch, Meta’s also announced plans […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai",
+      "dateISO": "2026-09-30T15:18:49.000Z",
+      "date": "SEP 30 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": []
+    },
+    {
       "id": "https://deepmind.google/blog/introducing-synthid-bio/",
       "clusterId": "13vz4kf",
       "title": "Introducing SynthID Bio",
@@ -708,6 +728,37 @@
       ],
       "sourceName": "Google DeepMind",
       "entityIds": []
+    },
+    {
+      "id": "https://openai.com/index/devday-2026-recap",
+      "clusterId": "du1j1",
+      "title": "DevDay 2026 Recap",
+      "desc": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "dateISO": "2026-09-29T10:00:00.000Z",
+      "date": "SEP 29 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=Fls_onRviPM"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/devday-2026-recap"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
     },
     {
       "id": "https://www.wired.com/story/nvidias-answer-to-rogue-agents-is-an-open-source-ai-security-system/",
@@ -894,7 +945,7 @@
           "url": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/"
         },
         {
-          "name": "Ars Technica",
+          "name": "arstechnica.com",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQUVqRzQwNW9SN1pNeThVT1lWblh2YUJBSElLVE5sTXJzZGVpUk1MMG1JX1AwUWZyRGxRUlZyNS1YcnNjS2hzVllkTVEwUlhZTHN0NXZoSWdCVjBUVEZBOFFVdUQ4dWJOTjdqaFdOUGZVQnQ3LWRpalZFdG1CbmYwWkFSbU11b3FQUlpJX0FacDcwMFBkNzBpUDhYeTN5U1FWVDcyWnplVkV4Y2J3amhMcXpvWEh0bk1aUVRQeUtsU08xeGc?oc=5"
         }
       ],
@@ -1065,95 +1116,31 @@
         "qwen",
         "nvidia"
       ]
-    },
-    {
-      "id": "https://openai.com/index/chatgpt-for-teens",
-      "clusterId": "1azzl9u",
-      "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
-      "desc": "ChatGPT for Teens helps teens learn, think critically, and use AI with confidence, with stronger built-in protections, healthy-use features, and additional controls for parents.",
-      "url": "https://openai.com/index/chatgpt-for-teens",
-      "dateISO": "2026-08-18T11:00:00.000Z",
-      "date": "AUG 18 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-chatgpt-financial-services"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/chatgpt-for-teens"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/sam-altman-un-security-council-remarks",
-      "clusterId": "1ke56x9",
-      "title": "Sam Altman’s remarks at the United Nations Security Council",
-      "desc": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
-      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-      "dateISO": "2026-09-23T12:00:00.000Z",
-      "date": "SEP 23 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/sam-altman-un-security-council-remarks"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "OpenAI launches Dots, its Muse competitor",
-      "summary": "OpenAI is responding to Meta's buzzy Muse AI with agentic helpers of its own: Dots. During its DevDay keynote on Tuesday, OpenAI announced that Dots will serve as always-on AI ass…",
-      "significance": 70,
+      "title": "Google reportedly tests paying publishers for AI search results",
+      "summary": "Google has launched a pilot program that pays publishers for their contributions to its AI-powered search features, according to a report from The Information. The pilot program r…",
+      "significance": 73,
       "impact": "high",
-      "verification": "corroborated",
-      "date": "SEP 29 2026",
-      "dateISO": "2026-09-29T17:15:00.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor",
-      "sourceCount": 2,
+      "verification": "uncertain",
+      "date": "SEP 30 2026",
+      "dateISO": "2026-09-30T14:51:49.000Z",
+      "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/"
-        },
-        {
           "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor"
+          "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features"
         }
       ],
       "entityIds": [
-        "gpt"
+        "gemini"
       ],
-      "whyItMatters": "A new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
     },
     {
       "family": "market",
@@ -1208,9 +1195,9 @@
     "chatgpt": 30,
     "copilot": 1,
     "perplexity": 1,
-    "gpt": 112,
+    "gpt": 111,
     "claude": 77,
-    "gemini": 23,
+    "gemini": 24,
     "grok": 0,
     "llama": 0,
     "deepseek": 0,
@@ -1222,7 +1209,7 @@
     "oracle": 0,
     "coreweave": 0,
     "nvidia": 6,
-    "amd": 3,
+    "amd": 2,
     "tsmc": 0,
     "broadcom": 0
   },
@@ -1354,6 +1341,17 @@
       "logoKey": "google",
       "items": [
         {
+          "h": "Google reportedly tests paying publishers for AI search results",
+          "d": "SEP 30 2026",
+          "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "The Verge",
+          "sourceCount": 1,
+          "verification": "uncertain",
+          "impact": "high"
+        },
+        {
           "h": "Google's first Suncatcher orbital data center test launches October 1",
           "d": "SEP 24 2026",
           "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
@@ -1396,22 +1394,23 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
-        },
-        {
-          "h": "Introducing Gemini 3.7 Flash",
-          "d": "AUG 13 2026",
-          "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Google DeepMind",
-          "sourceCount": 4,
-          "verification": "official",
-          "impact": "notable"
         }
       ]
     }
   ],
   "wire": [
+    {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "SEP 30 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Meta disputes claim that Muse read a user’s private messages without permission",
+      "p": "Meta says its Muse AI agent cannot access a user’s Messages without explicit permission, disputing a journalist’s account that the agent read his private messages while the required Mac setting was turned off.",
+      "url": "https://techcrunch.com/2026/09/30/meta-disputes-claim-that-muse-read-a-users-private-messages-without-permission/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
     {
       "org": "GOOGLE",
       "logoKey": "google",
@@ -1473,6 +1472,18 @@
       "sourceCount": 1
     },
     {
+      "org": "META",
+      "logoKey": "meta",
+      "date": "SEP 30 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "All the latest news on Meta’s cute, creepy Muse AI agent",
+      "p": "Meta launched a new Muse AI agent it claims can help you with everything from firing off emails to buying stuff online. Muse can be surprisingly effective at delivering on those promises — if you’re willing to trust Meta with your data and hand Muse your cred…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002671/meta-muse-ai",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "SEP 30 2026",
@@ -1482,30 +1493,6 @@
       "p": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
       "url": "https://deepmind.google/blog/introducing-synthid-bio/",
       "sourceName": "Google DeepMind",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 30 2026",
-      "verification": "corroborated",
-      "impact": "emerging",
-      "h": "3 days left to exhibit: Turn visibility into your next opportunity at TechCrunc…",
-      "p": "Three days left to exhibit at TechCrunch Disrupt 2026. Book by October 2 at 11:59 p.m. PT to showcase your startup to 10,000+ founders, investors, operators, and tech leaders.",
-      "url": "https://techcrunch.com/2026/09/30/3-days-left-to-exhibit-at-techcrunch-disrupt-2026-2/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "SEP 30 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Restate lands $20M as the need for durable infrastructure increases with AI age…",
-      "p": "Founded by Apache Flink veterans, the startup is taking on workflow heavyweight Temporal.",
-      "url": "https://techcrunch.com/2026/09/30/restate-lands-20m-as-the-need-for-durable-infrastructure-increases-with-ai-agents/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -1645,11 +1632,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 230.67,
-      "changePct": 1.522816492600787,
+      "price": 230.315,
+      "changePct": 1.3665752545174132,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 42625499,
+      "volume": 44548234,
       "ohlc": [
         {
           "d": "06-30",
@@ -2104,22 +2091,22 @@
           "o": 229,
           "h": 232.3699951171875,
           "l": 228.8000030517578,
-          "c": 230.6699981689453
+          "c": 230.31500244140625
         }
       ],
-      "relVolume": 0.37972394103136625,
-      "marketCap": 5628348000000
+      "relVolume": 0.39685238595019157,
+      "marketCap": 5619686000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 517.895,
-      "changePct": 1.7555462563230768,
+      "price": 517.63,
+      "changePct": 1.7034764172616914,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 8338749,
+      "volume": 8786951,
       "ohlc": [
         {
           "d": "06-30",
@@ -2574,22 +2561,22 @@
           "o": 510.79998779296875,
           "h": 519.8297119140625,
           "l": 510.3299865722656,
-          "c": 517.89501953125
+          "c": 517.6300048828125
         }
       ],
-      "relVolume": 0.39631462406484946,
-      "marketCap": 3847959850000
+      "relVolume": 0.4176162614129833,
+      "marketCap": 3845990900000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 354.105,
-      "changePct": -0.2802013799170276,
+      "price": 353.115,
+      "changePct": -0.5590019248160674,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 6144807,
+      "volume": 6525070,
       "ohlc": [
         {
           "d": "06-30",
@@ -3044,22 +3031,22 @@
           "o": 356.9549865722656,
           "h": 357.8999938964844,
           "l": 352.4527893066406,
-          "c": 354.1050109863281
+          "c": 353.114990234375
         }
       ],
-      "relVolume": 0.2233862382120978,
-      "marketCap": 1742196600000
+      "relVolume": 0.23721019087672127,
+      "marketCap": 1737325800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 352.065,
-      "changePct": 3.2690920376354806,
+      "price": 352.04,
+      "changePct": 3.2617249234128947,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 13864765,
+      "volume": 14401803,
       "ohlc": [
         {
           "d": "06-30",
@@ -3514,22 +3501,22 @@
           "o": 344.2149963378906,
           "h": 352.6000061035156,
           "l": 344.0799865722656,
-          "c": 352.06500244140625
+          "c": 352.0398864746094
         }
       ],
-      "relVolume": 0.5336560213989492,
-      "marketCap": 4295193000000
+      "relVolume": 0.5543266611407731,
+      "marketCap": 4294888000000.0005
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 251.836,
-      "changePct": 2.0943766038910008,
+      "price": 251.73,
+      "changePct": 2.0513226562429923,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 15676028,
+      "volume": 16277548,
       "ohlc": [
         {
           "d": "06-30",
@@ -3984,22 +3971,22 @@
           "o": 246.63499450683594,
           "h": 252.44000244140625,
           "l": 246.08999633789062,
-          "c": 251.83619689941406
+          "c": 251.72999572753906
         }
       ],
-      "relVolume": 0.46271842456405854,
-      "marketCap": 2694645200000
+      "relVolume": 0.4804738398225521,
+      "marketCap": 2693511000000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 736.765,
-      "changePct": -0.2740918852625939,
+      "price": 736.87,
+      "changePct": -0.2598821000905874,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8485143,
+      "volume": 8853266,
       "ohlc": [
         {
           "d": "06-30",
@@ -4454,22 +4441,22 @@
           "o": 729,
           "h": 738.25,
           "l": 721.2999877929688,
-          "c": 736.7650146484375
+          "c": 736.8699951171875
         }
       ],
-      "relVolume": 0.3531005849469328,
-      "marketCap": 1856647800000
+      "relVolume": 0.36841964870725125,
+      "marketCap": 1856912400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 459.51,
-      "changePct": 0.5624386813339469,
+      "price": 458.94,
+      "changePct": 0.43769422447457124,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 4558307,
+      "volume": 4682801,
       "ohlc": [
         {
           "d": "06-30",
@@ -4924,22 +4911,22 @@
           "o": 456.739990234375,
           "h": 461.8699951171875,
           "l": 454.8999938964844,
-          "c": 459.510009765625
+          "c": 458.94000244140625
         }
       ],
-      "relVolume": 0.46008348166274965,
-      "marketCap": 2384856900000
+      "relVolume": 0.4726490313210158,
+      "marketCap": 2381898600000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 604.11,
-      "changePct": -0.569485315428,
+      "price": 602.36,
+      "changePct": -0.8575179666293198,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 7505295,
+      "volume": 7727711,
       "ohlc": [
         {
           "d": "06-30",
@@ -5394,22 +5381,22 @@
           "o": 609.3300170898438,
           "h": 615.1699829101562,
           "l": 600.0999755859375,
-          "c": 604.1099853515625
+          "c": 602.3599853515625
         }
       ],
-      "relVolume": 0.3386233348101934,
-      "marketCap": 978658200000
+      "relVolume": 0.3486582831546814,
+      "marketCap": 975823200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 190.13,
-      "changePct": 1.6901126605755559,
+      "price": 189.875,
+      "changePct": 1.5537245335243681,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 6871667,
+      "volume": 7067903,
       "ohlc": [
         {
           "d": "06-30",
@@ -5864,22 +5851,22 @@
           "o": 187.92999267578125,
           "h": 190.99000549316406,
           "l": 187,
-          "c": 190.1300048828125
+          "c": 189.875
         }
       ],
-      "relVolume": 0.2697779661359638,
-      "marketCap": 456312000000
+      "relVolume": 0.27748208639712557,
+      "marketCap": 455700000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 137.69,
-      "changePct": -0.07256756629556028,
+      "price": 137.905,
+      "changePct": 0.08346432888289912,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 10688927,
+      "volume": 11421185,
       "ohlc": [
         {
           "d": "06-30",
@@ -6332,29 +6319,29 @@
         {
           "d": "09-30",
           "o": 136.5399932861328,
-          "h": 138.13999938964844,
+          "h": 138.14999389648438,
           "l": 134.75,
-          "c": 137.69000244140625
+          "c": 137.90499877929688
         }
       ],
-      "relVolume": 0.2990667564982902,
-      "marketCap": 386908900000
+      "relVolume": 0.31955468994380115,
+      "marketCap": 387513050000
     }
   ],
   "compute": [
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
-      "trend": "↓ 5% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$1.99 – $3.94/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$2.80 – $5.61/hr",
-      "trend": "↓ 18% vs 7d ago",
+      "rate": "$2.80 – $5.49/hr",
+      "trend": "↓ 19% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
@@ -6369,10 +6356,10 @@
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $7.89/hr",
-      "trend": "↓ 14% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $11.48/hr",
+      "trend": "↑ 7% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6385,14 +6372,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.62 – $1.59/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$0.87 – $1.59/hr",
+      "trend": "↑ 13% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-09-30T16:15:24.564Z",
+    "updatedAt": "2026-09-30T16:30:27.463Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6401,33 +6388,33 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 296,
-        "fetchedStoryCount": 295,
+        "rawStoryHits": 392,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.9966216216216216,
-        "estimatedRelevantDiscussions": 22,
+        "storyCoverage": 0.7653061224489796,
+        "estimatedRelevantDiscussions": 28,
         "isEstimated": true,
-        "rawCommentHits": 2710,
+        "rawCommentHits": 2711,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 40,
-        "commentCoverage": 0.11070110701107011,
+        "validatedCommentCount": 39,
+        "commentCoverage": 0.11066027296200664,
         "limited": false,
         "points": 345,
         "themes": [
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 13
-          },
           {
             "id": "coding",
             "label": "Coding",
             "count": 12
           },
           {
+            "id": "reasoning",
+            "label": "Reasoning",
+            "count": 12
+          },
+          {
             "id": "price",
             "label": "Price",
-            "count": 10
+            "count": 9
           },
           {
             "id": "speed",
@@ -6474,7 +6461,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 21,
+            "discussions": 27,
             "isEstimated": true
           },
           {
@@ -6495,10 +6482,10 @@
         "storyCoverage": 0.34522439585730724,
         "estimatedRelevantDiscussions": 92,
         "isEstimated": true,
-        "rawCommentHits": 6545,
+        "rawCommentHits": 6546,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.04583651642475172,
+        "commentCoverage": 0.045829514207149404,
         "limited": false,
         "points": 963,
         "themes": [
@@ -6593,10 +6580,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 32,
         "isEstimated": true,
-        "rawCommentHits": 1484,
+        "rawCommentHits": 1483,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.20215633423180593,
+        "commentCoverage": 0.20229265003371544,
         "limited": false,
         "points": 469,
         "themes": [
@@ -6847,15 +6834,15 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 119,
-        "fetchedStoryCount": 111,
+        "fetchedStoryCount": 119,
         "validatedStoryCount": 21,
-        "storyCoverage": 0.9327731092436975,
-        "estimatedRelevantDiscussions": 23,
-        "isEstimated": true,
-        "rawCommentHits": 1001,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 21,
+        "isEstimated": false,
+        "rawCommentHits": 1004,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.2997002997002997,
+        "commentCoverage": 0.29880478087649404,
         "limited": false,
         "points": 827,
         "themes": [
@@ -6924,8 +6911,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 23,
-            "isEstimated": true
+            "discussions": 21,
+            "isEstimated": false
           }
         ]
       },
@@ -6934,16 +6921,16 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 229,
-        "fetchedStoryCount": 229,
+        "rawStoryHits": 230,
+        "fetchedStoryCount": 230,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 4706,
+        "rawCommentHits": 4705,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.06374840628984275,
+        "commentCoverage": 0.06376195536663125,
         "limited": false,
         "points": 160,
         "themes": [
