@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-01T20:00:33.307Z",
+  "updatedAt": "2026-10-01T20:15:23.026Z",
   "build": {
-    "sha": "3a4b9e13749f71e78624227c6110c2e9ffb2d0f6",
-    "shortSha": "3a4b9e1",
+    "sha": "1fdbc11c95e3020a991e2eb697a03ac1472f1efe",
+    "shortSha": "1fdbc11",
     "ref": "main",
-    "builtAt": "2026-10-01T20:01:14.281Z"
+    "builtAt": "2026-10-01T20:15:41.781Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,22 +13,48 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.8,
     "estimatedDatasets": 4,
-    "buildSha": "3a4b9e1",
-    "lastSuccessfulUpdate": "2026-10-01T20:00:33.307Z"
+    "buildSha": "1fdbc11",
+    "lastSuccessfulUpdate": "2026-10-01T20:15:23.026Z"
   },
   "ticker": [
+    "ANTITRUST LAWSUITS TARGETING GOOGLE AI SEARCH DISMISSED BY FEDERAL JUDGE",
     "OPENAI CUTS TIES WITH 3 SAFETY RESEARCHERS, WSJ REPORTS",
     "JUDGE DISMISSES ANTITRUST LAWSUITS OVER GOOGLE’S AI OVERVIEWS",
-    "GOOGLE’S NEW GUIDED VISION FEATURE CAN HELP YOU READ THE FINE PRINT",
     "HOW ALBERTSONS COMPANIES IS REIMAGINING RETAIL FROM THE INSIDE OUT",
     "OPENAI’S NEW AGENT IS A SHOT AT META — BUT CAN IT COMPETE WITH FREE?",
     "SATLYT, FOUNDED BY A FORMER GOOGLE AND SPACEX PRODUCT MANAGER, RAISES $8M TO RUN AI ON SATELLITES",
     "GOOGLE ANNOUNCES GEMINI 4 AND SAYS IT’S SO CAPABLE THAT ONLY ‘TRUSTED CYBER DEFENDERS’ CAN HAVE IT RIGHT NOW",
     "GOOGLE'S EARLY ATTEMPT TO PAY WEBSITES FOR AI ANSWERS IS STRUGGLING",
-    "GOOGLE THINKS SPACEX’S STARSHIP HAS TO LAUNCH 1,600 TIMES BEFORE SPACE DATA CENTERS GET OFF THE GROUND",
+    "GOOGLE THINKS SPACEX’S STARSHIP HAS TO LAUNCH 1,800 TIMES BEFORE SPACE DATA CENTERS GET OFF THE GROUND",
     "ANTHROPIC ROLLS OUT SECOND CLAUDE 5.5 MODEL AS IT BUILDS TOWARD IPO"
   ],
   "signals": [
+    {
+      "id": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/",
+      "clusterId": "jc7cr2",
+      "title": "Antitrust lawsuits targeting Google AI search dismissed by federal judge",
+      "desc": "The court acknowledges AI search comes with consequences, but it's not an antitrust issue.",
+      "url": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/",
+      "dateISO": "2026-10-01T20:11:55.000Z",
+      "date": "OCT 01 2026",
+      "category": "policy",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 77,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
     {
       "id": "https://techcrunch.com/2026/10/01/openai-cuts-ties-with-three-safety-researchers-wsj-reports/",
       "clusterId": "1fwt14t",
@@ -74,32 +100,6 @@
         {
           "name": "The Verge",
           "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
-      "clusterId": "qzbutu",
-      "title": "Google’s new Guided Vision feature can help you read the fine print",
-      "desc": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By sharing your camera in Gemini Live, you can have Google's AI help with things like reading small text, describing your surroundings, finding or identifying objects around […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
-      "dateISO": "2026-10-01T19:47:51.000Z",
-      "date": "OCT 01 2026",
-      "category": "product",
-      "catConfidence": 0.71,
-      "family": "product",
-      "significance": 73,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision"
         }
       ],
       "sourceName": "The Verge",
@@ -241,7 +241,7 @@
     {
       "id": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
       "clusterId": "164nupl",
-      "title": "Google thinks SpaceX’s Starship has to launch 1,600 times before space data centers get off the ground",
+      "title": "Google thinks SpaceX’s Starship has to launch 1,800 times before space data centers get off the ground",
       "desc": "Google launched its first advanced chip into orbit to pave the way for space data centers.",
       "url": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
       "dateISO": "2026-10-01T19:18:03.000Z",
@@ -367,33 +367,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-      "clusterId": "1i8zyj5",
-      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-      "desc": "The deal, which is expected to close by year's end, is worth $8.2 billion.",
-      "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-      "dateISO": "2026-09-29T21:14:49.000Z",
-      "date": "SEP 29 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "nvidia",
-        "amd"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
       "clusterId": "1qv1ai",
       "title": "ChatGPT can now virtually try on clothes for you",
@@ -418,6 +391,33 @@
       "entityIds": [
         "chatgpt",
         "gpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
+      "clusterId": "1i8zyj5",
+      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
+      "desc": "The deal, which is expected to close by year's end, is worth $8.2 billion.",
+      "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
+      "dateISO": "2026-09-29T21:14:49.000Z",
+      "date": "SEP 29 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "nvidia",
+        "amd"
       ]
     },
     {
@@ -457,7 +457,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 53,
+      "significance": 52,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -696,30 +696,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/",
-      "clusterId": "fskcrz",
-      "title": "Hearing tech startup Legato launches its AI hearing glasses",
-      "desc": "The glasses stem from the startup’s goal of making hearing care more accessible by addressing the cost, comfort, and stigma associated with traditional hearing aids.",
-      "url": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/",
-      "dateISO": "2026-10-01T13:00:00.000Z",
-      "date": "OCT 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/",
       "clusterId": "1w6iu2j",
       "title": "“We’re not going to shoot ourselves in the foot” over hack fallout, says OpenAI’s chief research officer",
@@ -775,6 +751,30 @@
         "gpt",
         "claude"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/",
+      "clusterId": "fskcrz",
+      "title": "Hearing tech startup Legato launches its AI hearing glasses",
+      "desc": "The glasses stem from the startup’s goal of making hearing care more accessible by addressing the cost, comfort, and stigma associated with traditional hearing aids.",
+      "url": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/",
+      "dateISO": "2026-10-01T13:00:00.000Z",
+      "date": "OCT 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/hearing-tech-startup-legato-launches-its-ai-hearing-glasses/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/",
@@ -1160,43 +1160,44 @@
   "waves": [
     {
       "family": "product",
-      "category": "product",
-      "title": "Google’s new Guided Vision feature can help you read the fine print",
-      "summary": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By shari…",
+      "category": "adoption",
+      "title": "How Albertsons Companies is reimagining retail from the inside out",
+      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
       "significance": 73,
       "impact": "high",
-      "verification": "single",
+      "verification": "official",
       "date": "OCT 01 2026",
-      "dateISO": "2026-10-01T19:47:51.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
+      "dateISO": "2026-10-01T16:00:00.000Z",
+      "url": "https://openai.com/index/albertsons-reimagining-retail",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/albertsons-reimagining-retail"
         }
       ],
       "entityIds": [
-        "gemini"
+        "chatgpt",
+        "gpt"
       ],
-      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "This is where model capability turns into real usage and revenue."
     },
     {
       "family": "market",
       "category": "policy",
-      "title": "Judge dismisses antitrust lawsuits over Google’s AI Overviews",
-      "summary": "A federal judge has dismissed a pair of antitrust lawsuits filed by Chegg and Rolling Stone parent company Penske Media Corporation, which accused Google of driving away web traff…",
-      "significance": 76,
+      "title": "Antitrust lawsuits targeting Google AI search dismissed by federal judge",
+      "summary": "The court acknowledges AI search comes with consequences, but it's not an antitrust issue.",
+      "significance": 77,
       "impact": "high",
       "verification": "single",
       "date": "OCT 01 2026",
-      "dateISO": "2026-10-01T17:12:21.000Z",
-      "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed",
+      "dateISO": "2026-10-01T20:11:55.000Z",
+      "url": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/"
         }
       ],
       "entityIds": [
@@ -1378,7 +1379,7 @@
       "logoKey": "google",
       "items": [
         {
-          "h": "Google thinks SpaceX’s Starship has to launch 1,600 times before space data centers get o…",
+          "h": "Google thinks SpaceX’s Starship has to launch 1,800 times before space data centers get o…",
           "d": "OCT 01 2026",
           "url": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
           "isVideo": false,
@@ -1442,10 +1443,22 @@
       "date": "OCT 01 2026",
       "verification": "single",
       "impact": "high",
-      "h": "Google’s new Guided Vision feature can help you read the fine print",
-      "p": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By sharing your camera in Gemini Live, you can have Google's AI help with things like re…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
-      "sourceName": "The Verge",
+      "h": "Antitrust lawsuits targeting Google AI search dismissed by federal judge",
+      "p": "The court acknowledges AI search comes with consequences, but it's not an antitrust issue.",
+      "url": "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 01 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Trump’s ‘Morally Binding’ AI ‘Accord,’ the Rise of AI Agents, and Extremists on…",
+      "p": "This week on “Uncanny Valley,” we discuss the voluntary AI safety agreement tech executives signed, AI agents for normies, and extremist candidates running for office in the US midterms.",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-trumps-pinky-swear-ai-safety-accord-an-ai-agent-worth-the-risk/",
+      "sourceName": "Wired",
       "sourceCount": 1
     },
     {
@@ -1518,18 +1531,6 @@
       "p": "Shopify’s new Canvas site builder lets merchants create and customize their online stores by chatting with its AI agent Sidekick, while watching the changes happen in real time.",
       "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
       "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "OCT 01 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "With most information hidden, the game Stratego had stumped AI—until now",
-      "p": "Adding in a second neural network that guesses the identity of hidden pieces was key.",
-      "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
-      "sourceName": "Ars Technica",
       "sourceCount": 1
     }
   ],
@@ -1661,7 +1662,7 @@
       "changePct": 1.0859075551783135,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 93411000,
+      "volume": 97235961,
       "ohlc": [
         {
           "d": "07-02",
@@ -2106,13 +2107,13 @@
         },
         {
           "d": "10-01",
-          "o": 229.9499969482422,
+          "o": 229.97500610351562,
           "h": 232.28500366210938,
           "l": 228.16000366210938,
           "c": 230.86000061035156
         }
       ],
-      "relVolume": 0.8276178461239131,
+      "relVolume": 0.8615068526041774,
       "marketCap": 5632984000000
     },
     {
@@ -2124,7 +2125,7 @@
       "changePct": -0.0195041170465983,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 17961166,
+      "volume": 18882301,
       "ohlc": [
         {
           "d": "07-02",
@@ -2575,7 +2576,7 @@
           "c": 512.7999877929688
         }
       ],
-      "relVolume": 0.8412592120919883,
+      "relVolume": 0.8844030316151948,
       "marketCap": 3810103999999.9995
     },
     {
@@ -2587,7 +2588,7 @@
       "changePct": -2.1498299326526005,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 21277361,
+      "volume": 22172521,
       "ohlc": [
         {
           "d": "07-02",
@@ -3032,13 +3033,13 @@
         },
         {
           "d": "10-01",
-          "o": 351.94000244140625,
+          "o": 352.1499938964844,
           "h": 354.45001220703125,
           "l": 343.2900085449219,
           "c": 343.6400146484375
         }
       ],
-      "relVolume": 0.7727872860724498,
+      "relVolume": 0.8052992252645618,
       "marketCap": 1690708800000
     },
     {
@@ -3050,7 +3051,7 @@
       "changePct": -1.6972787043119917,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 31678202,
+      "volume": 33000872,
       "ohlc": [
         {
           "d": "07-02",
@@ -3501,7 +3502,7 @@
           "c": 338.239990234375
         }
       ],
-      "relVolume": 1.18711198384117,
+      "relVolume": 1.2366778464386492,
       "marketCap": 4126528000000
     },
     {
@@ -3513,7 +3514,7 @@
       "changePct": -0.36925474271837583,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 31545077,
+      "volume": 32553800,
       "ohlc": [
         {
           "d": "07-02",
@@ -3958,13 +3959,13 @@
         },
         {
           "d": "10-01",
-          "o": 251.5,
+          "o": 251.60499572753906,
           "h": 251.8300018310547,
           "l": 246.11669921875,
           "c": 248.22999572753906
         }
       ],
-      "relVolume": 0.917191090605727,
+      "relVolume": 0.9465202866793039,
       "marketCap": 2656061000000
     },
     {
@@ -3976,7 +3977,7 @@
       "changePct": 0.1034225995718163,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 12079056,
+      "volume": 12233971,
       "ohlc": [
         {
           "d": "07-02",
@@ -4427,7 +4428,7 @@
           "c": 725.9299926757812
         }
       ],
-      "relVolume": 0.4988925207358083,
+      "relVolume": 0.5052908630276056,
       "marketCap": 1829343599999.9998
     },
     {
@@ -4435,11 +4436,11 @@
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 459.205,
-      "changePct": 0.6609053496841207,
+      "price": 459.2,
+      "changePct": 0.6598149344606934,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 7018127,
+      "volume": 7800394,
       "ohlc": [
         {
           "d": "07-02",
@@ -4885,13 +4886,13 @@
         {
           "d": "10-01",
           "o": 457.2650146484375,
-          "h": 460.4100036621094,
+          "h": 460.4150085449219,
           "l": 453.46099853515625,
-          "c": 459.2049865722656
+          "c": 459.20001220703125
         }
       ],
-      "relVolume": 0.7045661444926774,
-      "marketCap": 2383273950000
+      "relVolume": 0.7830997538379989,
+      "marketCap": 2383248000000
     },
     {
       "t": "AMD",
@@ -4902,7 +4903,7 @@
       "changePct": 0.6489425002863393,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 16288754,
+      "volume": 16605676,
       "ohlc": [
         {
           "d": "07-02",
@@ -5347,13 +5348,13 @@
         },
         {
           "d": "10-01",
-          "o": 611.0050048828125,
+          "o": 612.7000122070312,
           "h": 619.280029296875,
           "l": 601.5,
           "c": 615.72998046875
         }
       ],
-      "relVolume": 0.7339203944098833,
+      "relVolume": 0.7481999101565862,
       "marketCap": 997482600000
     },
     {
@@ -5365,7 +5366,7 @@
       "changePct": 1.598497827101159,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 15599078,
+      "volume": 16716254,
       "ohlc": [
         {
           "d": "07-02",
@@ -5810,13 +5811,13 @@
         },
         {
           "d": "10-01",
-          "o": 190.17999267578125,
+          "o": 190.08999633789062,
           "h": 191.8000030517578,
           "l": 186.60000610351562,
           "c": 190.0399932861328
         }
       ],
-      "relVolume": 0.6204686406160504,
+      "relVolume": 0.6649054127155858,
       "marketCap": 456096000000
     },
     {
@@ -5824,11 +5825,11 @@
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 138.08,
-      "changePct": 0.5680981514638712,
+      "price": 138.07,
+      "changePct": 0.5608188312790277,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 16610452,
+      "volume": 22956709,
       "ohlc": [
         {
           "d": "07-02",
@@ -6276,11 +6277,11 @@
           "o": 139.60000610351562,
           "h": 140.24000549316406,
           "l": 135.3300018310547,
-          "c": 138.0800018310547
+          "c": 138.07000732421875
         }
       ],
-      "relVolume": 0.466710995043754,
-      "marketCap": 388004800000.00006
+      "relVolume": 0.6450245002556163,
+      "marketCap": 387976700000
     }
   ],
   "compute": [
@@ -6290,7 +6291,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 13 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6303,8 +6304,8 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $9.38/hr",
-      "trend": "↑ 20% vs 7d ago",
+      "rate": "$5.98 – $7.50/hr",
+      "trend": "↑ 6% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
@@ -6327,14 +6328,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.55 – $1.59/hr",
-      "trend": "↑ 6% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$0.47 – $1.59/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-01T20:00:33.307Z",
+    "updatedAt": "2026-10-01T20:15:23.026Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6343,16 +6344,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 406,
+        "rawStoryHits": 405,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 23,
-        "storyCoverage": 0.7389162561576355,
+        "storyCoverage": 0.7407407407407407,
         "estimatedRelevantDiscussions": 32,
         "isEstimated": true,
-        "rawCommentHits": 2745,
+        "rawCommentHits": 2743,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.1092896174863388,
+        "commentCoverage": 0.10936930368209989,
         "limited": false,
         "points": 357,
         "themes": [
@@ -6442,22 +6443,22 @@
         "storyCoverage": 0.3412969283276451,
         "estimatedRelevantDiscussions": 93,
         "isEstimated": true,
-        "rawCommentHits": 6477,
+        "rawCommentHits": 6476,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 56,
-        "commentCoverage": 0.04631773969430292,
+        "validatedCommentCount": 58,
+        "commentCoverage": 0.04632489190858555,
         "limited": false,
         "points": 963,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 40
+            "count": 42
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 21
+            "count": 22
           },
           {
             "id": "writing",
@@ -6467,7 +6468,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 6
+            "count": 5
           },
           {
             "id": "speed",
@@ -6477,7 +6478,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 1
+            "count": 2
           },
           {
             "id": "local",
@@ -6525,17 +6526,17 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 1602,
+        "rawCommentHits": 1603,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 51,
-        "commentCoverage": 0.18726591760299627,
+        "validatedCommentCount": 52,
+        "commentCoverage": 0.18714909544603867,
         "limited": false,
         "points": 467,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 23
+            "count": 24
           },
           {
             "id": "reasoning",
@@ -6553,13 +6554,13 @@
             "count": 4
           },
           {
-            "id": "speed",
-            "label": "Speed",
-            "count": 2
-          },
-          {
             "id": "multimodal",
             "label": "Image/video",
+            "count": 3
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
             "count": 2
           },
           {
@@ -6618,10 +6619,10 @@
         "storyCoverage": 0.5639097744360902,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": true,
-        "rawCommentHits": 10935,
+        "rawCommentHits": 10932,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.027434842249657063,
+        "commentCoverage": 0.027442371020856202,
         "limited": false,
         "points": 34,
         "themes": [
@@ -6778,28 +6779,28 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 118,
-        "fetchedStoryCount": 118,
+        "rawStoryHits": 119,
+        "fetchedStoryCount": 119,
         "validatedStoryCount": 21,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": false,
-        "rawCommentHits": 1002,
+        "rawCommentHits": 1016,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 52,
-        "commentCoverage": 0.2994011976047904,
+        "validatedCommentCount": 53,
+        "commentCoverage": 0.2952755905511811,
         "limited": false,
-        "points": 867,
+        "points": 869,
         "themes": [
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 23
+            "count": 24
           },
           {
             "id": "coding",
             "label": "Coding",
-            "count": 21
+            "count": 22
           },
           {
             "id": "price",
@@ -7159,17 +7160,6 @@
       {
         "modelId": "gemini",
         "themes": [
-          "coding"
-        ],
-        "excerpt": "I wonder, why Google don't make Gemini - open weights model?Considering, Gemini 4 is in the same ballpark as SOTA models, just open source it and kill any competition from openAI…",
-        "source": "Hacker News",
-        "author": "mridulmalpani",
-        "publishedAt": "2026-09-30T21:01:43.000Z",
-        "url": "https://news.ycombinator.com/item?id=49914406"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
           "price"
         ],
         "excerpt": "…cost per task $1.99 (https://artificialanalysis.ai/models/gemini-4-argon#cost-tab...) which is higher than Astra high ($1.73), Opus 5.5 high ($1.82), Muse Max ($1.60) and way…",
@@ -7177,6 +7167,17 @@
         "author": "GodelNumbering",
         "publishedAt": "2026-09-30T21:08:48.000Z",
         "url": "https://news.ycombinator.com/item?id=49914488"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "I wonder, why Google don't make Gemini - open weights model?Considering, Gemini 4 is in the same ballpark as SOTA models, just open source it and kill any competition from openAI…",
+        "source": "Hacker News",
+        "author": "mridulmalpani",
+        "publishedAt": "2026-09-30T21:01:43.000Z",
+        "url": "https://news.ycombinator.com/item?id=49914406"
       },
       {
         "modelId": "grok",
