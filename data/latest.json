@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-02T20:30:28.346Z",
+  "updatedAt": "2026-10-02T20:45:22.413Z",
   "build": {
-    "sha": "8812dff79ccad1ccfb4752b4db1818a3630ff815",
-    "shortSha": "8812dff",
+    "sha": "60754c252af2fa152c67ce178ebd0f3f63cdd052",
+    "shortSha": "60754c2",
     "ref": "main",
-    "builtAt": "2026-10-02T20:30:51.024Z"
+    "builtAt": "2026-10-02T20:45:40.539Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -13,20 +13,20 @@
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.9,
     "estimatedDatasets": 4,
-    "buildSha": "8812dff",
-    "lastSuccessfulUpdate": "2026-10-02T20:30:28.346Z"
+    "buildSha": "60754c2",
+    "lastSuccessfulUpdate": "2026-10-02T20:45:22.413Z"
   },
   "ticker": [
     "IT’S NOT AI ANYMORE, IT’S ‘SUPER INTELLIGENCE’ (ACCORDING TO THE WHITE HOUSE)",
     "CLAUDE FRONTIER ACADEMY: $100M TO TRAIN 10,000 ENGINEERS",
+    "OPENAI’S DOT AGENT IS ENTERPRISE SOFTWARE THAT CAN ALSO ORDER YOUR DINNER",
     "THE 7-YEAR-OLD NVIDIA SHIELD TV IS NOW $100 MORE EXPENSIVE DUE TO AI",
     "JUDGE DISMISSES ANTITRUST LAWSUITS OVER GOOGLE’S AI OVERVIEWS",
     "OPENAI CUTS TIES WITH 3 SAFETY RESEARCHERS, WSJ REPORTS",
     "GOOGLE’S NEW GUIDED VISION FEATURE CAN HELP YOU READ THE FINE PRINT",
     "HOW ALBERTSONS COMPANIES IS REIMAGINING RETAIL FROM THE INSIDE OUT",
     "US ARRESTS TECH CEO ACCUSED OF SMUGGLING $300M IN NVIDIA CHIPS INTO CHINA",
-    "OPENAI’S NEW AGENT IS A SHOT AT META — BUT CAN IT COMPETE WITH FREE?",
-    "SATLYT, FOUNDED BY A FORMER GOOGLE AND SPACEX PRODUCT MANAGER, RAISES $8M TO RUN AI ON SATELLITES"
+    "OPENAI’S NEW AGENT IS A SHOT AT META — BUT CAN IT COMPETE WITH FREE?"
   ],
   "signals": [
     {
@@ -84,6 +84,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+      "clusterId": "1szv3pu",
+      "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+      "desc": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable Meta Muse, Dots feel very much like using workplace software that happens to be able to order you a burrito - emphasis on work. OpenAI announced […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+      "dateISO": "2026-10-02T18:00:00.000Z",
+      "date": "OCT 02 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -300,6 +326,44 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5",
+      "clusterId": "c8yav9",
+      "title": "Anthropic rolls out second Claude 5.5 model as it builds toward IPO",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5",
+      "dateISO": "2026-09-28T18:03:43.000Z",
+      "date": "SEP 28 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 60,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/openai-delays-ipo-over-ai-safety-concerns/"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNbVlPeVROc0FBWTl6a0ZCZXdPVF93WjdPT1BFV2xkQmlyRE9oYS1wRF9yWk0zV1EwSlJ5Vmt0UkpucHdQWUpSbGdzUmdVeC1EWm5sMzBkTUNQMkg3ekVYMkMtemVySUxhWnRCTWRNLTA1Vl8tZVZkRU80ZVk4TjdZbE5LdjJ5VzJXbUlmM1FvMnJqTFE4TkZVeEJFVndEMmpIbGN5WDRxclhHX0JZdHp6LWlad3JTakZr?oc=5"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/anthropics-ipo-pitch-includes-a-warning-about-human-extinction/"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
       "clusterId": "gok17r",
       "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
@@ -441,40 +505,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5",
-      "clusterId": "c8yav9",
-      "title": "Anthropic rolls out second Claude 5.5 model as it builds toward IPO",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5",
-      "dateISO": "2026-09-28T18:03:43.000Z",
-      "date": "SEP 28 2026",
-      "category": "capital",
-      "catConfidence": 0.55,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/openai-delays-ipo-over-ai-safety-concerns/"
-        },
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/anthropics-ipo-pitch-includes-a-warning-about-human-extinction/"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUm1rcklHNVRzQnFIS2t3RnNGNDBwU25RUzJIcnFNN0FIbDNOU3VTNEhVVGprOEhNOVZISGVlWHo1NkFZX3doLUNkOU16cmlMdWotdnljUUowc19DcXJXbzFjRTI1QVFKNGtJSWNBMGdUSExIVlB3NmpVZWQ2TnBFNFpjckY1NEhOOS1BMWw1MktacnlrbFpBMDd5X2tZb0xpbVRxRlREYlRGWWE4elFr?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://www.wired.com/story/a-flaw-in-chatgpts-mac-app-could-have-let-hackers-grab-sensitive-data/",
       "clusterId": "czvjuc",
       "title": "A Flaw in ChatGPT’s Mac App Could Have Let Hackers Grab Sensitive Data",
@@ -553,32 +583,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/",
-      "clusterId": "vtr4m5",
-      "title": "\"An AI did it\" is no defense, says nonprofit suing OpenAI over Hugging Face hack",
-      "desc": "OpenAI makes others suffer \"the harms of its unsafe decision-making,\" nonprofit says.",
-      "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/",
-      "dateISO": "2026-09-30T18:25:04.000Z",
-      "date": "SEP 30 2026",
-      "category": "opensource",
-      "catConfidence": 0.67,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
       "clusterId": "19sh5qg",
       "title": "Last 24 hours: Exhibit at TechCrunch Disrupt 2026 and reach 10,000+ tech leaders",
@@ -613,32 +617,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
-      "clusterId": "14r66et",
-      "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
-      "desc": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu. But the company is limiting access at […]",
-      "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
-      "dateISO": "2026-09-30T20:41:41.000Z",
-      "date": "SEP 30 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
     },
     {
       "id": "https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry",
@@ -1017,33 +995,6 @@
       ]
     },
     {
-      "id": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-      "clusterId": "1i8zyj5",
-      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
-      "desc": "The deal, which is expected to close by year's end, is worth $8.2 billion.",
-      "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
-      "dateISO": "2026-09-29T21:14:49.000Z",
-      "date": "SEP 29 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "nvidia",
-        "amd"
-      ]
-    },
-    {
       "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
       "clusterId": "1wtfps8",
       "title": "Disrupting a new covert influence campaign from Russia",
@@ -1094,6 +1045,30 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://arstechnica.com/tech-policy/2026/10/amazons-1b-plan-to-combat-data-center-backlash-draws-more-backlash/",
+      "clusterId": "1xy4up6",
+      "title": "Amazon’s $1B plan to combat data center backlash draws more backlash",
+      "desc": "Amazon praised for ending NDAs but slammed for downplaying data center pollution.",
+      "url": "https://arstechnica.com/tech-policy/2026/10/amazons-1b-plan-to-combat-data-center-backlash-draws-more-backlash/",
+      "dateISO": "2026-10-02T20:30:27.000Z",
+      "date": "OCT 02 2026",
+      "category": "capital",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/10/amazons-1b-plan-to-combat-data-center-backlash-draws-more-backlash/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": []
     },
     {
       "id": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
@@ -1162,31 +1137,58 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
+      "clusterId": "1i8zyj5",
+      "title": "AMD acquires World Labs AI startup, upping the ante against Nvidia",
+      "desc": "The deal, which is expected to close by year's end, is worth $8.2 billion.",
+      "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/",
+      "dateISO": "2026-09-29T21:14:49.000Z",
+      "date": "SEP 29 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "nvidia",
+        "amd"
+      ]
     }
   ],
   "waves": [
     {
       "family": "product",
-      "category": "product",
-      "title": "The 7-year-old Nvidia Shield TV is now $100 more expensive due to AI",
-      "summary": "Initially launched in 2019, the Nvidia Shield TV Pro now retails for $299.99.",
+      "category": "adoption",
+      "title": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+      "summary": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable Meta Muse, Dots f…",
       "significance": 73,
       "impact": "high",
       "verification": "single",
       "date": "OCT 02 2026",
-      "dateISO": "2026-10-02T14:52:16.000Z",
-      "url": "https://arstechnica.com/gadgets/2026/10/the-7-year-old-nvidia-shield-tv-is-now-100-more-expensive-thanks-to-ai/",
+      "dateISO": "2026-10-02T18:00:00.000Z",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/gadgets/2026/10/the-7-year-old-nvidia-shield-tv-is-now-100-more-expensive-thanks-to-ai/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent"
         }
       ],
       "entityIds": [
-        "nvidia"
+        "gpt"
       ],
-      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, this is where model capability turns into real usage and revenue."
     },
     {
       "family": "market",
@@ -1244,9 +1246,9 @@
     "chatgpt": 30,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 106,
+    "gpt": 105,
     "claude": 74,
-    "gemini": 27,
+    "gemini": 26,
     "grok": 1,
     "llama": 0,
     "deepseek": 0,
@@ -1285,20 +1287,9 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Reuters",
-          "sourceCount": 3,
+          "sourceCount": 4,
           "verification": "corroborated",
           "impact": "notable"
-        },
-        {
-          "h": "Anthropic debuts Claude Sonnet 5.5 running 30% faster than the previous-generation AI mod…",
-          "d": "SEP 28 2026",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOEZHRldHN1lwUzlvZDdRV25iQTBKT1BKWEc4LVVrRzIzUHJJTC1XWTBtbi0wQzhzbTVucTlDYkF6aHdtYmtsdDZZSHZjZThtampicFZVNTRBSkJXcmR2aGxCU3JESUZjSkRSWGRxMXRRYlBPVk1zemNMYXRYWElaMThyV3Jia24xNHNvalNQZkRDU2huRWpNUzZSTnFSZlJCVC1Ma0N4cEt5bEgxTFB1TmlPZ1RkUWN1eHNvVUxzT00wWTRMemc?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "SiliconANGLE",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
         },
         {
           "h": "Inside Anthropic's molecular biology lab",
@@ -1317,10 +1308,21 @@
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "axios.com",
+          "sourceName": "Axios",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
+        },
+        {
+          "h": "Anthropic Launches Claude for Financial Advisors",
+          "d": "SEP 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcDhXR2RLTU5KcWtiVUxvVTBSbU1BSkZ0Mm1YbElYUGZrdXhBZ3htbWQ2WmU5aDBfUHVMcFdMbXJUQ3FsMHRmZzk3LS04ZUs0NWJ6WXRGenYtQmNiamkyRko1TGJ6ZHY2RHdyTnVpNDJhcUVhOG1hQVJFbW91TjdyVm15d3hRZElOUmhITWtFRFRDZW9vV2hLQlE1QjQ5amp4TUdUM0RNd0xXSEt4?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Yahoo Finance",
+          "sourceCount": 2,
+          "verification": "corroborated",
+          "impact": "notable"
         }
       ]
     },
@@ -1449,6 +1451,18 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 02 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Amazon’s $1B plan to combat data center backlash draws more backlash",
+      "p": "Amazon praised for ending NDAs but slammed for downplaying data center pollution.",
+      "url": "https://arstechnica.com/tech-policy/2026/10/amazons-1b-plan-to-combat-data-center-backlash-draws-more-backlash/",
+      "sourceName": "Ars Technica",
+      "sourceCount": 1
+    },
+    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "OCT 02 2026",
@@ -1458,6 +1472,18 @@
       "p": "Claude Frontier Academy: $100M to train 10,000 engineers",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9FNlFxVHBSRkl5bVF0c253UE5sUEFac3dDZmQ4bzFjc2lER0hNcjFmUUxPVFI5T0xQcldFTXhsd1diR2h4UUVoRnl4TWxEVnp5WXpCMFdkZHNKdlA1bFV4QTVqUDI?oc=5",
       "sourceName": "Anthropic",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 02 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Apple will limit Mac disk access as AI agents ‘substantially’ increase risk",
+      "p": "Apple will add new limits for \"full disk access\" on Mac in response to risks posed by AI agents, as reported earlier by TechCrunch. In an update on Friday, Apple says it's rolling out new controls to \"ensure that users who genuinely wish to grant an app this…",
+      "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents",
+      "sourceName": "The Verge",
       "sourceCount": 1
     },
     {
@@ -1497,6 +1523,18 @@
       "sourceCount": 1
     },
     {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "OCT 02 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "OpenAI’s Dot agent is enterprise software that can also order your dinner",
+      "p": "It's a tale as old as last week: OpenAI's new agent platform, called Dots, is full of cute little guys who can do your bidding. But unlike the ultra-approachable Meta Muse, Dots feel very much like using workplace software that happens to be able to order you…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "OCT 02 2026",
@@ -1507,57 +1545,9 @@
       "url": "https://techcrunch.com/video/its-not-ai-anymore-its-super-intelligence-according-to-the-white-house/",
       "sourceName": "TechCrunch",
       "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "OCT 02 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Circuit Breaker Labs hopes to make AI safer for your kids (and you)",
-      "p": "With all the talk about how AI might one day kill us all, it's easy to forget that AI has already harmed some people psychologically. Circuit Breaker Labs has created \"crash-test dummies\" to solve that.",
-      "url": "https://techcrunch.com/2026/10/02/circuit-breaker-labs-hopes-to-make-ai-safer-for-your-kids-and-you/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "AUG 13 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "The builder’s guide to GPT‑5.6",
-      "p": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
-      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
-      "sourceName": "OpenAI",
-      "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "OCT 02 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "These AI Experts Want to Do High-Stakes Research Out in the Open",
-      "p": "Many frontier labs keep their risky research locked away. Trillium Labs wants to show off its work when it comes to self-improvement and model behavior.",
-      "url": "https://www.wired.com/story/trillium-labs-wants-to-do-high-risk-ai-research-in-the-open/",
-      "sourceName": "Wired",
-      "sourceCount": 1
     }
   ],
   "feed": [
-    {
-      "name": "\"An AI did it\" is no defense, says nonprofit suing OpenAI o…",
-      "org": "Ars Technica",
-      "date": "SEP 30 2026",
-      "lic": "open weights",
-      "licClass": "lic-open",
-      "desc": "OpenAI makes others suffer \"the harms of its unsafe decision-making,\" nonprofit says.",
-      "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/",
-      "sourceName": "Ars Technica",
-      "verification": "single",
-      "impact": "notable"
-    },
     {
       "name": "“We’re not going to shoot ourselves in the foot” over hack…",
       "org": "MIT Technology Review",
@@ -6311,15 +6301,15 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.66/hr",
-      "trend": "↑ 3% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$1.99 – $3.54/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.12/hr",
+      "rate": "$3.56 – $5.12/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 6 rented offers across Vast.ai + RunPod"
@@ -6327,9 +6317,9 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $6.79/hr",
-      "trend": "↓ 17% vs 7d ago",
-      "trendClass": "trend-down",
+      "rate": "$5.98 – $9.38/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6351,14 +6341,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.65 – $1.59/hr",
-      "trend": "↑ 11% vs 7d ago",
+      "rate": "$0.67 – $1.59/hr",
+      "trend": "↑ 12% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 14 rented offers across Vast.ai + RunPod"
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-02T20:30:28.346Z",
+    "updatedAt": "2026-10-02T20:45:22.413Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6367,18 +6357,18 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 402,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 403,
+        "fetchedStoryCount": 296,
         "validatedStoryCount": 25,
-        "storyCoverage": 0.746268656716418,
+        "storyCoverage": 0.7344913151364765,
         "estimatedRelevantDiscussions": 35,
         "isEstimated": true,
-        "rawCommentHits": 2750,
+        "rawCommentHits": 2751,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 53,
-        "commentCoverage": 0.10909090909090909,
+        "validatedCommentCount": 54,
+        "commentCoverage": 0.10905125408942203,
         "limited": false,
-        "points": 384,
+        "points": 388,
         "themes": [
           {
             "id": "coding",
@@ -6466,10 +6456,10 @@
         "storyCoverage": 0.3456221198156682,
         "estimatedRelevantDiscussions": 89,
         "isEstimated": true,
-        "rawCommentHits": 6389,
+        "rawCommentHits": 6386,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 66,
-        "commentCoverage": 0.046955705118171855,
+        "commentCoverage": 0.04697776385844034,
         "limited": false,
         "points": 957,
         "themes": [
@@ -6548,16 +6538,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 131,
-        "fetchedStoryCount": 131,
+        "rawStoryHits": 132,
+        "fetchedStoryCount": 132,
         "validatedStoryCount": 23,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1472,
+        "rawCommentHits": 1470,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 57,
-        "commentCoverage": 0.20380434782608695,
+        "commentCoverage": 0.20408163265306123,
         "limited": false,
         "points": 465,
         "themes": [
@@ -6641,16 +6631,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 521,
+        "rawStoryHits": 522,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 10,
-        "storyCoverage": 0.5758157389635317,
+        "storyCoverage": 0.5747126436781609,
         "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 10708,
+        "rawCommentHits": 10710,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.028016436309301458,
+        "commentCoverage": 0.028011204481792718,
         "limited": false,
         "points": 30,
         "themes": [
@@ -6730,10 +6720,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 451,
+        "rawCommentHits": 452,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 45,
-        "commentCoverage": 0.6651884700665188,
+        "commentCoverage": 0.6637168141592921,
         "limited": false,
         "points": 233,
         "themes": [
@@ -6807,16 +6797,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 119,
-        "fetchedStoryCount": 119,
+        "rawStoryHits": 110,
+        "fetchedStoryCount": 110,
         "validatedStoryCount": 20,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 20,
         "isEstimated": false,
-        "rawCommentHits": 1032,
+        "rawCommentHits": 977,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 55,
-        "commentCoverage": 0.29069767441860467,
+        "commentCoverage": 0.3070624360286592,
         "limited": false,
         "points": 908,
         "themes": [
@@ -6896,10 +6886,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4642,
+        "rawCommentHits": 4644,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.06462731581214994,
+        "validatedCommentCount": 36,
+        "commentCoverage": 0.06459948320413436,
         "limited": false,
         "points": 354,
         "themes": [
@@ -6921,7 +6911,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 6
+            "count": 7
           },
           {
             "id": "price",
@@ -7373,6 +7363,17 @@
       {
         "modelId": "qwen",
         "themes": [
+          "speed"
+        ],
+        "excerpt": "… for 1m context lengths on a 128 gb MacBook M5 Max when using Qwen 3.8 flash next (https://github.com/antirez/ds4/pull/1115 if you are interested). If I get bored I might port…",
+        "source": "Hacker News",
+        "author": "vlowther",
+        "publishedAt": "2026-10-02T20:34:20.000Z",
+        "url": "https://news.ycombinator.com/item?id=49938274"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
           "multimodal",
           "local"
         ],
@@ -7381,17 +7382,6 @@
         "author": "ndriscoll",
         "publishedAt": "2026-09-27T15:48:01.000Z",
         "url": "https://news.ycombinator.com/item?id=49867728"
-      },
-      {
-        "modelId": "qwen",
-        "themes": [
-          "local"
-        ],
-        "excerpt": "… in over-quantized (~Q4 or lower) local models like Llama and Qwen 3.x. Thus, it is likely that they quantize the model after release to save on compute costs (while giving a…",
-        "source": "Hacker News",
-        "author": "rhdunn",
-        "publishedAt": "2026-09-30T07:01:18.000Z",
-        "url": "https://news.ycombinator.com/item?id=49905396"
       }
     ]
   }
