@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-10-02T05:26:29.986Z",
+  "updatedAt": "2026-10-02T05:30:27.414Z",
   "build": {
-    "sha": "e51e415026e08283c14d50038a88d4ec1cf60db4",
-    "shortSha": "e51e415",
+    "sha": "d715df3a88009f538da3930e503f6c7dbaa9134b",
+    "shortSha": "d715df3",
     "ref": "main",
-    "builtAt": "2026-10-02T05:26:52.888Z"
+    "builtAt": "2026-10-02T05:30:50.958Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 13,
+    "feedsSucceeded": 9,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.2,
-    "estimatedDatasets": 4,
-    "buildSha": "e51e415",
-    "lastSuccessfulUpdate": "2026-10-02T05:26:29.986Z"
+    "estimatedDatasets": 6,
+    "buildSha": "d715df3",
+    "lastSuccessfulUpdate": "2026-10-02T05:30:27.414Z"
   },
   "ticker": [
     "JUDGE DISMISSES ANTITRUST LAWSUITS OVER GOOGLE’S AI OVERVIEWS",
@@ -23,10 +23,10 @@
     "HOW ALBERTSONS COMPANIES IS REIMAGINING RETAIL FROM THE INSIDE OUT",
     "OPENAI’S NEW AGENT IS A SHOT AT META — BUT CAN IT COMPETE WITH FREE?",
     "SATLYT, FOUNDED BY A FORMER GOOGLE AND SPACEX PRODUCT MANAGER, RAISES $8M TO RUN AI ON SATELLITES",
-    "INTRODUCING CLAUDE FABLE 5.1 AND CLAUDE MYTHOS 5.1",
     "GOOGLE THINKS SPACEX’S STARSHIP HAS TO LAUNCH 1,800 TIMES BEFORE SPACE DATA CENTERS GET OFF THE GROUND",
     "GOOGLE ANNOUNCES GEMINI 4 AND SAYS IT’S SO CAPABLE THAT ONLY ‘TRUSTED CYBER DEFENDERS’ CAN HAVE IT RIGHT NOW",
-    "INTRODUCING GEMINI 3.7 FLASH"
+    "INTRODUCING GEMINI 3.7 FLASH",
+    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK"
   ],
   "signals": [
     {
@@ -188,44 +188,6 @@
       "sourceName": "TechCrunch",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "clusterId": "gok17r",
-      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "dateISO": "2026-09-01T18:01:25.000Z",
-      "date": "SEP 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
-        },
-        {
-          "name": "Anthropic (YouTube)",
-          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -744,32 +706,6 @@
       ]
     },
     {
-      "id": "https://www.youtube.com/watch?v=uXspbC2srEQ",
-      "clusterId": "19p14ij",
-      "title": "Introducing dots, always-on agents built to handle everything.",
-      "desc": "Dots are frontier intelligence that have your back. Powered by GPT‑6 Astra, they have their own cloud computer, learn from feedback over time, and can work towards your goals 24/7. Through our ecosystem of plugins, they can readily connect to over 4,000 apps, giving them the tools to help wherever you need them. Your dot is always within reach, whether it is through ChatGPT, Slack, or Teams. You c",
-      "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
-      "dateISO": "2026-09-29T18:04:41.000Z",
-      "date": "SEP 29 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=uXspbC2srEQ"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://openai.com/index/chatgpt-for-teens",
       "clusterId": "1azzl9u",
       "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
@@ -959,6 +895,36 @@
       "sourceName": "Wired",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+      "clusterId": "13side4",
+      "title": "Introducing Claude Opus 5.5",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+      "dateISO": "2026-09-22T07:00:00.000Z",
+      "date": "SEP 22 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -1164,6 +1130,32 @@
       "entityIds": [
         "claude"
       ]
+    },
+    {
+      "id": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/",
+      "clusterId": "zyf7vd",
+      "title": "The Battle to Be Your Personal AI Agent Is Here",
+      "desc": "OpenAI's Dots and Meta's Muse are vying to be your AI agent of choice. I've tried both—and I suspect you will too.",
+      "url": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/",
+      "dateISO": "2026-09-30T19:30:00.000Z",
+      "date": "SEP 30 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/ai-agents-dots-devday-muse-battling-it-out/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1242,10 +1234,10 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 29,
+    "chatgpt": 28,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 107,
+    "gpt": 106,
     "claude": 74,
     "gemini": 29,
     "grok": 1,
@@ -1258,7 +1250,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 4,
+    "nvidia": 3,
     "amd": 1,
     "tsmc": 0,
     "broadcom": 0
@@ -1291,15 +1283,15 @@
           "impact": "notable"
         },
         {
-          "h": "Inside Anthropic's molecular biology lab",
-          "d": "SEP 23 2026",
-          "url": "https://www.youtube.com/watch?v=DdCEmlAydcw",
-          "isVideo": true,
+          "h": "Introducing Claude Opus 5.5",
+          "d": "SEP 22 2026",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+          "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
+          "sourceName": "Anthropic",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
         },
         {
           "h": "Anthropic debuts Claude Docs, raising stakes for Microsoft",
@@ -1341,17 +1333,6 @@
           "impact": "notable"
         },
         {
-          "h": "Introducing dots, always-on agents built to handle everything.",
-          "d": "SEP 29 2026",
-          "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing dots",
           "d": "SEP 29 2026",
           "url": "https://openai.com/index/introducing-dots",
@@ -1360,17 +1341,6 @@
           "sourceName": "OpenAI",
           "sourceCount": 1,
           "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "10 Years of NVIDIA DGX: From One System to AI Factories",
-          "d": "SEP 24 2026",
-          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "NVIDIA (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1383,6 +1353,28 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
+        },
+        {
+          "h": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+          "d": "SEP 23 2026",
+          "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
+        },
+        {
+          "h": "Introducing GPT-6 Sol and Luna",
+          "d": "SEP 22 2026",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
         }
       ]
     },
@@ -1534,16 +1526,16 @@
       "sourceCount": 1
     },
     {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "SEP 29 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "DevDay 2026 Recap",
-      "p": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "sourceName": "OpenAI",
-      "sourceCount": 3
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 01 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Amazon releases its own Jev clone as decision models flood the web",
+      "p": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
+      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
     }
   ],
   "feed": [
@@ -6300,10 +6292,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$1.79 – $3.49/hr",
+      "trend": "↓ 4% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6311,15 +6303,15 @@
       "rate": "$3.07 – $5.12/hr",
       "trend": "↓ 6% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $7.50/hr",
-      "trend": "↓ 12% vs 7d ago",
+      "rate": "$5.98 – $6.79/hr",
+      "trend": "↓ 17% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6340,14 +6332,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.67 – $1.59/hr",
-      "trend": "↑ 12% vs 7d ago",
-      "trendClass": "trend-up",
+      "rate": "$0.47 – $1.59/hr",
+      "trend": "→ 2% vs 7d ago",
+      "trendClass": "trend-flat",
       "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-02T05:26:29.986Z",
+    "updatedAt": "2026-10-02T05:30:27.414Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6620,10 +6612,10 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 521,
+        "rawStoryHits": 520,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 11,
-        "storyCoverage": 0.5758157389635317,
+        "storyCoverage": 0.5769230769230769,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
         "rawCommentHits": 10710,
@@ -6786,16 +6778,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 114,
+        "rawStoryHits": 122,
         "fetchedStoryCount": 114,
         "validatedStoryCount": 22,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 22,
-        "isEstimated": false,
-        "rawCommentHits": 959,
+        "storyCoverage": 0.9344262295081968,
+        "estimatedRelevantDiscussions": 24,
+        "isEstimated": true,
+        "rawCommentHits": 1023,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
-        "commentCoverage": 0.31282586027111575,
+        "commentCoverage": 0.2932551319648094,
         "limited": false,
         "points": 926,
         "themes": [
@@ -6859,8 +6851,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
-            "isEstimated": false
+            "discussions": 24,
+            "isEstimated": true
           }
         ]
       },
@@ -6870,15 +6862,15 @@
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
         "rawStoryHits": 231,
-        "fetchedStoryCount": 231,
+        "fetchedStoryCount": 218,
         "validatedStoryCount": 14,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 14,
-        "isEstimated": false,
-        "rawCommentHits": 4677,
+        "storyCoverage": 0.9437229437229437,
+        "estimatedRelevantDiscussions": 15,
+        "isEstimated": true,
+        "rawCommentHits": 4678,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.06414368184733804,
+        "commentCoverage": 0.06412997007268063,
         "limited": false,
         "points": 350,
         "themes": [
@@ -6942,8 +6934,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 14,
-            "isEstimated": false
+            "discussions": 15,
+            "isEstimated": true
           },
           {
             "name": "Qwen GitHub",
