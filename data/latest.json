@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-10-02T06:45:24.600Z",
+  "updatedAt": "2026-10-02T07:00:32.899Z",
   "build": {
-    "sha": "e371cb746c51a985d8c37a79ae26b1ef15efb795",
-    "shortSha": "e371cb7",
+    "sha": "d6c74cae6e3df01a2c64f1d13ec56e18f64e8269",
+    "shortSha": "d6c74ca",
     "ref": "main",
-    "builtAt": "2026-10-02T06:45:40.072Z"
+    "builtAt": "2026-10-02T07:01:06.039Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.3,
     "estimatedDatasets": 4,
-    "buildSha": "e371cb7",
-    "lastSuccessfulUpdate": "2026-10-02T06:45:24.600Z"
+    "buildSha": "d6c74ca",
+    "lastSuccessfulUpdate": "2026-10-02T07:00:32.899Z"
   },
   "ticker": [
     "JUDGE DISMISSES ANTITRUST LAWSUITS OVER GOOGLE’S AI OVERVIEWS",
@@ -24,9 +24,9 @@
     "OPENAI’S NEW AGENT IS A SHOT AT META — BUT CAN IT COMPETE WITH FREE?",
     "SATLYT, FOUNDED BY A FORMER GOOGLE AND SPACEX PRODUCT MANAGER, RAISES $8M TO RUN AI ON SATELLITES",
     "ANTHROPIC ROLLS OUT SECOND CLAUDE 5.5 MODEL AS IT BUILDS TOWARD IPO",
+    "INTRODUCING CLAUDE FABLE 5.1 AND CLAUDE MYTHOS 5.1",
     "INTRODUCING GEMINI 3.7 FLASH",
-    "GOOGLE THINKS SPACEX’S STARSHIP HAS TO LAUNCH 1,800 TIMES BEFORE SPACE DATA CENTERS GET OFF THE GROUND",
-    "HOW NVIDIA SCALES EXPERTISE WITH CHATGPT WORK"
+    "GOOGLE THINKS SPACEX’S STARSHIP HAS TO LAUNCH 1,800 TIMES BEFORE SPACE DATA CENTERS GET OFF THE GROUND"
   ],
   "signals": [
     {
@@ -224,6 +224,44 @@
         }
       ],
       "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "clusterId": "gok17r",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "dateISO": "2026-09-01T18:01:25.000Z",
+      "date": "SEP 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
+        },
+        {
+          "name": "Anthropic (YouTube)",
+          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
@@ -473,7 +511,7 @@
       "category": "policy",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 51,
+      "significance": 50,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -511,32 +549,6 @@
       "entityIds": [
         "nvidia",
         "amd"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
-      "clusterId": "16uh5eb",
-      "title": "Amazon releases its own Jev clone as decision models flood the web",
-      "desc": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
-      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
-      "dateISO": "2026-10-01T16:49:22.000Z",
-      "date": "OCT 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "aws"
       ]
     },
     {
@@ -593,6 +605,32 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+      "clusterId": "16uh5eb",
+      "title": "Amazon releases its own Jev clone as decision models flood the web",
+      "desc": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
+      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+      "dateISO": "2026-10-01T16:49:22.000Z",
+      "date": "OCT 01 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "aws"
       ]
     },
     {
@@ -764,6 +802,32 @@
       "entityIds": []
     },
     {
+      "id": "https://www.youtube.com/watch?v=uXspbC2srEQ",
+      "clusterId": "19p14ij",
+      "title": "Introducing dots, always-on agents built to handle everything.",
+      "desc": "Dots are frontier intelligence that have your back. Powered by GPT‑6 Astra, they have their own cloud computer, learn from feedback over time, and can work towards your goals 24/7. Through our ecosystem of plugins, they can readily connect to over 4,000 apps, giving them the tools to help wherever you need them. Your dot is always within reach, whether it is through ChatGPT, Slack, or Teams. You c",
+      "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
+      "dateISO": "2026-09-29T18:04:41.000Z",
+      "date": "SEP 29 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=uXspbC2srEQ"
+        }
+      ],
+      "sourceName": "OpenAI (YouTube)",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
       "clusterId": "h91za6",
       "title": "Introducing GPT-6 Sol and Luna",
@@ -878,36 +942,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
-      "clusterId": "13side4",
-      "title": "Introducing Claude Opus 5.5",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
-      "dateISO": "2026-09-22T07:00:00.000Z",
-      "date": "SEP 22 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
       "clusterId": "ucsnum",
       "title": "Anthropic debuts Claude Docs, raising stakes for Microsoft",
@@ -958,41 +992,11 @@
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRktmYWhfak5Yd1VDdGtxeWVSYUFrYjhjZ1Bqbms4X0k3cXpFN1lPVUhha3ZqQURCeWlPX3A3N0s5a1pFZnByOVVsbW85ZzRWSDZwRDJNdXg0akpKenBUV1JPXzFtYkl3eF96aEpxci1YVWJKRHdIekRJU0Y1RFgtUUg2OUVwc3RlbkRFS2xrR1haVHhhOUJ6UEhRTmItZ3Bzd3dfaXY4VW44bGNFNnljdjZpWHZhUGM?oc=5"
         },
         {
-          "name": "Yahoo Finance",
+          "name": "finance.yahoo.com",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcDhXR2RLTU5KcWtiVUxvVTBSbU1BSkZ0Mm1YbElYUGZrdXhBZ3htbWQ2WmU5aDBfUHVMcFdMbXJUQ3FsMHRmZzk3LS04ZUs0NWJ6WXRGenYtQmNiamkyRko1TGJ6ZHY2RHdyTnVpNDJhcUVhOG1hQVJFbW91TjdyVm15d3hRZElOUmhITWtFRFRDZW9vV2hLQlE1QjQ5amp4TUdUM0RNd0xXSEt4?oc=5"
         }
       ],
-      "sourceName": "Yahoo Finance",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "clusterId": "gok17r",
-      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "dateISO": "2026-09-01T18:01:25.000Z",
-      "date": "SEP 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic (YouTube)",
-          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
+      "sourceName": "finance.yahoo.com",
       "entityIds": [
         "claude"
       ]
@@ -1100,32 +1104,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
-      "clusterId": "ytzprs",
-      "title": "OpenAI’s Jev clone could help the frontier lab stop its swarming agents",
-      "desc": "OpenAI's \"Decisions API\" is a Jev clone that confirms the importance of fast, cheap intelligence.",
-      "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/",
-      "dateISO": "2026-09-30T19:00:57.000Z",
-      "date": "SEP 30 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/",
       "clusterId": "1w6iu2j",
       "title": "“We’re not going to shoot ourselves in the foot” over hack fallout, says OpenAI’s chief research officer",
@@ -1149,6 +1127,48 @@
       "sourceName": "MIT Technology Review",
       "entityIds": [
         "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
+      "clusterId": "12l6dix",
+      "title": "Anthropic says it disrupted scientists using Claude AI for possible biological weapons development",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
+      "dateISO": "2026-09-10T07:00:00.000Z",
+      "date": "SEP 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 5,
+      "sources": [
+        {
+          "name": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZy04cUpKZ1lLWHB3Zmp5N19XeEEwdi13bjBZYllISzltVk5HaDdlUnJqOEJFZUlYVjBxNzhZbUc5NDhDeWdISkUzLWw3b25ZZTYxZG4tZUFjLXU5T3F2YlZ2M1QtNDdZcDZ1anZlTVFGZzlmY2dYNGRLelY5TjRTMDU4d1QxaDRYY0JvNXBIZ0FQUWxiMVJzQlc3V0plQTd2M19oWWRVUjV3aXdvOHhXREJ0STBfdW9LZkw1QnV0Mk5MQkhRaldlQ1NsSDJHcTkt?oc=5"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
+        },
+        {
+          "name": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5"
+        }
+      ],
+      "sourceName": "CBS News",
+      "entityIds": [
+        "claude"
       ]
     }
   ],
@@ -1228,11 +1248,11 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 28,
+    "chatgpt": 29,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 106,
-    "claude": 74,
+    "gpt": 107,
+    "claude": 73,
     "gemini": 29,
     "grok": 1,
     "llama": 0,
@@ -1244,7 +1264,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 3,
+    "nvidia": 4,
     "amd": 1,
     "tsmc": 0,
     "broadcom": 0
@@ -1288,23 +1308,23 @@
           "impact": "emerging"
         },
         {
-          "h": "Introducing Claude Opus 5.5",
-          "d": "SEP 22 2026",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Anthropic",
-          "sourceCount": 2,
-          "verification": "official",
-          "impact": "notable"
-        },
-        {
           "h": "Anthropic debuts Claude Docs, raising stakes for Microsoft",
           "d": "SEP 16 2026",
           "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyNjJZVWhzbEpjOFlFOEliQzhkUjhFZllKbmlHN1dCR1FzOVpEZHRXTTdhcjFCbHJqb2twZ2dERGJUQ1JNWXZEdEVRWExaMXRhSDZ3WFBpTVM2OFhnU2FNVGRzR3FsR0djQTFZR2NRTnhiZw?oc=5",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Axios",
+          "sourceCount": 2,
+          "verification": "corroborated",
+          "impact": "notable"
+        },
+        {
+          "h": "Anthropic Launches Claude for Financial Advisors",
+          "d": "SEP 14 2026",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcDhXR2RLTU5KcWtiVUxvVTBSbU1BSkZ0Mm1YbElYUGZrdXhBZ3htbWQ2WmU5aDBfUHVMcFdMbXJUQ3FsMHRmZzk3LS04ZUs0NWJ6WXRGenYtQmNiamkyRko1TGJ6ZHY2RHdyTnVpNDJhcUVhOG1hQVJFbW91TjdyVm15d3hRZElOUmhITWtFRFRDZW9vV2hLQlE1QjQ5amp4TUdUM0RNd0xXSEt4?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "finance.yahoo.com",
           "sourceCount": 2,
           "verification": "corroborated",
           "impact": "notable"
@@ -1327,6 +1347,17 @@
           "impact": "notable"
         },
         {
+          "h": "Introducing dots, always-on agents built to handle everything.",
+          "d": "SEP 29 2026",
+          "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "OpenAI (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "notable"
+        },
+        {
           "h": "Introducing dots",
           "d": "SEP 29 2026",
           "url": "https://openai.com/index/introducing-dots",
@@ -1335,6 +1366,17 @@
           "sourceName": "OpenAI",
           "sourceCount": 1,
           "verification": "official",
+          "impact": "emerging"
+        },
+        {
+          "h": "10 Years of NVIDIA DGX: From One System to AI Factories",
+          "d": "SEP 24 2026",
+          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "NVIDIA (YouTube)",
+          "sourceCount": 1,
+          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1347,28 +1389,6 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
-        },
-        {
-          "h": "Grab and OpenAI bring practical AI skills to Southeast Asia",
-          "d": "SEP 23 2026",
-          "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 2,
-          "verification": "official",
-          "impact": "notable"
-        },
-        {
-          "h": "Introducing GPT-6 Sol and Luna",
-          "d": "SEP 22 2026",
-          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "OpenAI",
-          "sourceCount": 2,
-          "verification": "official",
-          "impact": "notable"
         }
       ]
     },
@@ -1520,16 +1540,16 @@
       "sourceCount": 1
     },
     {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "OCT 01 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Amazon releases its own Jev clone as decision models flood the web",
-      "p": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
-      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "SEP 29 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "DevDay 2026 Recap",
+      "p": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "sourceName": "OpenAI",
+      "sourceCount": 3
     }
   ],
   "feed": [
@@ -6286,7 +6306,7 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.50/hr",
+      "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
       "note": "Live from 10 rented offers across Vast.ai + RunPod"
@@ -6302,18 +6322,18 @@
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $6.79/hr",
-      "trend": "↓ 17% vs 7d ago",
+      "rate": "$5.98 – $7.50/hr",
+      "trend": "↓ 12% vs 7d ago",
       "trendClass": "trend-down",
       "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.48/hr",
-      "trend": "↓ 11% vs 7d ago",
+      "rate": "$6.94 – $7.89/hr",
+      "trend": "↓ 28% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6329,11 +6349,11 @@
       "rate": "$0.47 – $1.59/hr",
       "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-02T06:45:24.600Z",
+    "updatedAt": "2026-10-02T07:00:32.899Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6348,10 +6368,10 @@
         "storyCoverage": 0.7389162561576355,
         "estimatedRelevantDiscussions": 33,
         "isEstimated": true,
-        "rawCommentHits": 2737,
+        "rawCommentHits": 2739,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.10960906101571063,
+        "commentCoverage": 0.10952902519167579,
         "limited": false,
         "points": 363,
         "themes": [
@@ -6441,10 +6461,10 @@
         "storyCoverage": 0.34207525655644244,
         "estimatedRelevantDiscussions": 93,
         "isEstimated": true,
-        "rawCommentHits": 6419,
+        "rawCommentHits": 6418,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 66,
-        "commentCoverage": 0.04673625175260944,
+        "validatedCommentCount": 67,
+        "commentCoverage": 0.046743533811156125,
         "limited": false,
         "points": 963,
         "themes": [
@@ -6456,7 +6476,7 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 25
+            "count": 26
           },
           {
             "id": "writing",
@@ -6529,7 +6549,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 26
+            "count": 27
           },
           {
             "id": "reasoning",
@@ -6612,10 +6632,10 @@
         "storyCoverage": 0.5791505791505791,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
-        "rawCommentHits": 10711,
+        "rawCommentHits": 10709,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.028008589300718888,
+        "commentCoverage": 0.02801382015127463,
         "limited": false,
         "points": 34,
         "themes": [
@@ -6689,8 +6709,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 48,
-        "fetchedStoryCount": 48,
+        "rawStoryHits": 87,
+        "fetchedStoryCount": 87,
         "validatedStoryCount": 8,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
@@ -6778,10 +6798,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 22,
         "isEstimated": false,
-        "rawCommentHits": 975,
+        "rawCommentHits": 1025,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
-        "commentCoverage": 0.3076923076923077,
+        "commentCoverage": 0.2926829268292683,
         "limited": false,
         "points": 926,
         "themes": [
@@ -6855,16 +6875,16 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 231,
-        "fetchedStoryCount": 231,
+        "rawStoryHits": 230,
+        "fetchedStoryCount": 230,
         "validatedStoryCount": 14,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4675,
+        "rawCommentHits": 4673,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.06417112299465241,
+        "commentCoverage": 0.06419858763107211,
         "limited": false,
         "points": 350,
         "themes": [
@@ -7086,11 +7106,11 @@
         "themes": [
           "coding"
         ],
-        "excerpt": "…can still call https://ai.google.dev/gemini-api/docs/models Gemini 3.1 Pro Preview via the Gemini API. AI Studio Playground: Gemini 3.1 Pro Preview remains available in the…",
+        "excerpt": "I am currently working on a React application (using Next.js/Vite) inside Google Antigravity . I've been using this since they launched the IDE. While running the development…",
         "source": "Google AI forum",
-        "author": "Mahesh_Sutar",
-        "publishedAt": "2026-10-01T13:59:29.839Z",
-        "url": "https://discuss.ai.google.dev/t/gemini-pro-unavailable-in-google-ai-studio-for-google-one-subscribers/185842"
+        "author": "SuneraX",
+        "publishedAt": "2026-10-02T06:50:09.765Z",
+        "url": "https://discuss.ai.google.dev/t/terminal-text-glitched-overlapping-characters-in-google-antigravity-during-next-js-vite-hmr/186378"
       },
       {
         "modelId": "gemini",
@@ -7114,6 +7134,17 @@
         "author": "tinyhouse",
         "publishedAt": "2026-10-01T01:13:32.000Z",
         "url": "https://news.ycombinator.com/item?id=49916498"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "…can still call https://ai.google.dev/gemini-api/docs/models Gemini 3.1 Pro Preview via the Gemini API. AI Studio Playground: Gemini 3.1 Pro Preview remains available in the…",
+        "source": "Google AI forum",
+        "author": "Mahesh_Sutar",
+        "publishedAt": "2026-10-01T13:59:29.839Z",
+        "url": "https://discuss.ai.google.dev/t/gemini-pro-unavailable-in-google-ai-studio-for-google-one-subscribers/185842"
       },
       {
         "modelId": "gemini",
