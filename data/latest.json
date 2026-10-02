@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-10-02T01:45:24.074Z",
+  "updatedAt": "2026-10-02T02:00:33.828Z",
   "build": {
-    "sha": "290d4fadde0c72e13b66b187659aa9b022a5a048",
-    "shortSha": "290d4fa",
+    "sha": "33d48ff396979dad52a8f51eb83e42cebaf220ae",
+    "shortSha": "33d48ff",
     "ref": "main",
-    "builtAt": "2026-10-02T01:45:41.959Z"
+    "builtAt": "2026-10-02T02:01:04.092Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 12,
+    "feedsSucceeded": 9,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.1,
-    "estimatedDatasets": 5,
-    "buildSha": "290d4fa",
-    "lastSuccessfulUpdate": "2026-10-02T01:45:24.074Z"
+    "estimatedDatasets": 4,
+    "buildSha": "33d48ff",
+    "lastSuccessfulUpdate": "2026-10-02T02:00:33.828Z"
   },
   "ticker": [
     "JUDGE DISMISSES ANTITRUST LAWSUITS OVER GOOGLE’S AI OVERVIEWS",
@@ -24,8 +24,8 @@
     "OPENAI’S NEW AGENT IS A SHOT AT META — BUT CAN IT COMPETE WITH FREE?",
     "SATLYT, FOUNDED BY A FORMER GOOGLE AND SPACEX PRODUCT MANAGER, RAISES $8M TO RUN AI ON SATELLITES",
     "ANTHROPIC ROLLS OUT SECOND CLAUDE 5.5 MODEL AS IT BUILDS TOWARD IPO",
-    "GOOGLE ANNOUNCES GEMINI 4 AND SAYS IT’S SO CAPABLE THAT ONLY ‘TRUSTED CYBER DEFENDERS’ CAN HAVE IT RIGHT NOW",
     "GOOGLE THINKS SPACEX’S STARSHIP HAS TO LAUNCH 1,800 TIMES BEFORE SPACE DATA CENTERS GET OFF THE GROUND",
+    "GOOGLE ANNOUNCES GEMINI 4 AND SAYS IT’S SO CAPABLE THAT ONLY ‘TRUSTED CYBER DEFENDERS’ CAN HAVE IT RIGHT NOW",
     "GOOGLE'S EARLY ATTEMPT TO PAY WEBSITES FOR AI ANSWERS IS STRUGGLING"
   ],
   "signals": [
@@ -96,7 +96,7 @@
       "category": "product",
       "catConfidence": 0.71,
       "family": "product",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -122,7 +122,7 @@
       "category": "adoption",
       "catConfidence": 0.55,
       "family": "product",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "official",
       "sourceCount": 1,
@@ -149,8 +149,8 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 70,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -229,32 +229,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
-      "clusterId": "14r66et",
-      "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
-      "desc": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu. But the company is limiting access at […]",
-      "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
-      "dateISO": "2026-09-30T20:41:41.000Z",
-      "date": "SEP 30 2026",
-      "category": "adoption",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 59,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/2026/10/01/google-thinks-spacexs-starship-has-to-launch-1600-times-before-space-data-centers-get-off-the-ground/",
       "clusterId": "164nupl",
       "title": "Google thinks SpaceX’s Starship has to launch 1,800 times before space data centers get off the ground",
@@ -281,6 +255,32 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
+      "clusterId": "14r66et",
+      "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
+      "desc": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu. But the company is limiting access at […]",
+      "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon",
+      "dateISO": "2026-09-30T20:41:41.000Z",
+      "date": "SEP 30 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://arstechnica.com/google/2026/09/google-is-paying-100-websites-for-contributions-to-ai-overviews-but-the-amounts-are-tiny/",
       "clusterId": "1wzbtrr",
       "title": "Google's early attempt to pay websites for AI answers is struggling",
@@ -302,32 +302,6 @@
         }
       ],
       "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
-      "clusterId": "p3wh4v",
-      "title": "Google reportedly tests paying publishers for AI search results",
-      "desc": "Google has launched a pilot program that pays publishers for their contributions to its AI-powered search features, according to a report from The Information. The pilot program reportedly includes around 100 publishers and comes as Google faces scrutiny over the impact of its AI features on web traffic. Digiday first reported on the pilot program, […]",
-      "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
-      "dateISO": "2026-09-30T14:51:49.000Z",
-      "date": "SEP 30 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features"
-        }
-      ],
-      "sourceName": "The Verge",
       "entityIds": [
         "gemini"
       ]
@@ -407,6 +381,32 @@
       "entityIds": [
         "chatgpt",
         "nvidia"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+      "clusterId": "p3wh4v",
+      "title": "Google reportedly tests paying publishers for AI search results",
+      "desc": "Google has launched a pilot program that pays publishers for their contributions to its AI-powered search features, according to a report from The Information. The pilot program reportedly includes around 100 publishers and comes as Google faces scrutiny over the impact of its AI features on web traffic. Digiday first reported on the pilot program, […]",
+      "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features",
+      "dateISO": "2026-09-30T14:51:49.000Z",
+      "date": "SEP 30 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 56,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1002665/google-paying-publishers-ai-search-features"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -514,32 +514,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
-      "clusterId": "16uh5eb",
-      "title": "Amazon releases its own Jev clone as decision models flood the web",
-      "desc": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
-      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
-      "dateISO": "2026-10-01T16:49:22.000Z",
-      "date": "OCT 01 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "aws"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1UWno0NFZ1Y0JIWFRYSFZoRE9iVmx5Z093dlk0aXVQc2JHSVFocFZuelQ3azV3Mm1vcnhiLXZ5d213R0RPc29ia0NYd1VvTUJjWWZUWi1qVHItQmRnVFRyZzRUWENXV28?oc=5",
       "clusterId": "14g6hi5",
       "title": "Claude-shaped science",
@@ -563,6 +537,32 @@
       "sourceName": "Anthropic",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+      "clusterId": "16uh5eb",
+      "title": "Amazon releases its own Jev clone as decision models flood the web",
+      "desc": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
+      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+      "dateISO": "2026-10-01T16:49:22.000Z",
+      "date": "OCT 01 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "aws"
       ]
     },
     {
@@ -649,32 +649,6 @@
       ]
     },
     {
-      "id": "https://www.youtube.com/watch?v=uXspbC2srEQ",
-      "clusterId": "19p14ij",
-      "title": "Introducing dots, always-on agents built to handle everything.",
-      "desc": "Dots are frontier intelligence that have your back. Powered by GPT‑6 Astra, they have their own cloud computer, learn from feedback over time, and can work towards your goals 24/7. Through our ecosystem of plugins, they can readily connect to over 4,000 apps, giving them the tools to help wherever you need them. Your dot is always within reach, whether it is through ChatGPT, Slack, or Teams. You c",
-      "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
-      "dateISO": "2026-09-29T18:04:41.000Z",
-      "date": "SEP 29 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=uXspbC2srEQ"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/",
       "clusterId": "1wdjz4q",
       "title": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features",
@@ -729,30 +703,6 @@
       "entityIds": []
     },
     {
-      "id": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
-      "clusterId": "stqo1p",
-      "title": "Inside our months-long investigation into Kevin O’Leary’s Utah data center debacle",
-      "desc": "Today I’m talking with Josh Dzieza, a longtime features writer here at The Verge, about Kevin O’Leary’s plans to build a massive data center in Utah. The idea was to build the world’s biggest data center — a 40,000-acre AI campus with nine gigawatts of power, or more than double the average power usage of […]",
-      "url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
-      "dateISO": "2026-10-01T14:00:00.000Z",
-      "date": "OCT 01 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": []
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5",
       "clusterId": "161jsfd",
       "title": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
@@ -769,7 +719,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Forbes",
+          "name": "forbes.com",
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5"
         },
         {
@@ -777,34 +727,34 @@
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         }
       ],
-      "sourceName": "Forbes",
+      "sourceName": "forbes.com",
       "entityIds": [
         "gpt",
         "claude"
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
-      "clusterId": "hjvw55",
-      "title": "Shopify debuts Canvas, a way to build online stores by chatting with AI",
-      "desc": "Shopify’s new Canvas site builder lets merchants create and customize their online stores by chatting with its AI agent Sidekick, while watching the changes happen in real time.",
-      "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
-      "dateISO": "2026-10-01T16:44:35.000Z",
+      "id": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
+      "clusterId": "stqo1p",
+      "title": "Inside our months-long investigation into Kevin O’Leary’s Utah data center debacle",
+      "desc": "Today I’m talking with Josh Dzieza, a longtime features writer here at The Verge, about Kevin O’Leary’s plans to build a massive data center in Utah. The idea was to build the world’s biggest data center — a 40,000-acre AI campus with nine gigawatts of power, or more than double the average power usage of […]",
+      "url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash",
+      "dateISO": "2026-10-01T14:00:00.000Z",
       "date": "OCT 01 2026",
-      "category": "product",
+      "category": "compute",
       "catConfidence": 0.67,
-      "family": "product",
+      "family": "market",
       "significance": 47,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/1002851/utah-ai-data-center-stratos-kevin-oleary-investigation-backlash"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "The Verge",
       "entityIds": []
     },
     {
@@ -866,6 +816,30 @@
       "entityIds": [
         "chatgpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
+      "clusterId": "hjvw55",
+      "title": "Shopify debuts Canvas, a way to build online stores by chatting with AI",
+      "desc": "Shopify’s new Canvas site builder lets merchants create and customize their online stores by chatting with its AI agent Sidekick, while watching the changes happen in real time.",
+      "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/",
+      "dateISO": "2026-10-01T16:44:35.000Z",
+      "date": "OCT 01 2026",
+      "category": "product",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/01/shopify-debuts-canvas-a-way-to-build-online-stores-by-chatting-with-ai/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
@@ -1080,7 +1054,7 @@
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Forbes",
+          "name": "forbes.com",
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRktmYWhfak5Yd1VDdGtxeWVSYUFrYjhjZ1Bqbms4X0k3cXpFN1lPVUhha3ZqQURCeWlPX3A3N0s5a1pFZnByOVVsbW85ZzRWSDZwRDJNdXg0akpKenBUV1JPXzFtYkl3eF96aEpxci1YVWJKRHdIekRJU0Y1RFgtUUg2OUVwc3RlbkRFS2xrR1haVHhhOUJ6UEhRTmItZ3Bzd3dfaXY4VW44bGNFNnljdjZpWHZhUGM?oc=5"
         },
         {
@@ -1144,6 +1118,32 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices",
+      "clusterId": "qjcgbx",
+      "title": "The AI Tamagotchis are coming",
+      "desc": "While AI has made plenty of inroads on people's phones and computers, it's largely failed in dedicated devices. But over the next year, two major AI companies, Meta and OpenAI, will attempt to change that. And they're apparently betting on a similar path: testing appetites for physical hardware with their cutesy software agents. \"Hardware is […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices",
+      "dateISO": "2026-09-30T18:07:38.000Z",
+      "date": "SEP 30 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gpt"
+      ]
     }
   ],
   "waves": [
@@ -1152,7 +1152,7 @@
       "category": "product",
       "title": "Google’s new Guided Vision feature can help you read the fine print",
       "summary": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By shari…",
-      "significance": 71,
+      "significance": 70,
       "impact": "high",
       "verification": "single",
       "date": "OCT 01 2026",
@@ -1222,10 +1222,10 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 29,
+    "chatgpt": 28,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 107,
+    "gpt": 106,
     "claude": 73,
     "gemini": 29,
     "grok": 1,
@@ -1238,7 +1238,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 4,
+    "nvidia": 3,
     "amd": 1,
     "tsmc": 0,
     "broadcom": 0
@@ -1321,17 +1321,6 @@
           "impact": "notable"
         },
         {
-          "h": "Introducing dots, always-on agents built to handle everything.",
-          "d": "SEP 29 2026",
-          "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "OpenAI (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Introducing dots",
           "d": "SEP 29 2026",
           "url": "https://openai.com/index/introducing-dots",
@@ -1340,17 +1329,6 @@
           "sourceName": "OpenAI",
           "sourceCount": 1,
           "verification": "official",
-          "impact": "emerging"
-        },
-        {
-          "h": "10 Years of NVIDIA DGX: From One System to AI Factories",
-          "d": "SEP 24 2026",
-          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "NVIDIA (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1363,6 +1341,28 @@
           "sourceCount": 1,
           "verification": "official",
           "impact": "emerging"
+        },
+        {
+          "h": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+          "d": "SEP 23 2026",
+          "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
+        },
+        {
+          "h": "Introducing GPT-6 Sol and Luna",
+          "d": "SEP 22 2026",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
         }
       ]
     },
@@ -1514,16 +1514,16 @@
       "sourceCount": 1
     },
     {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "SEP 29 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "DevDay 2026 Recap",
-      "p": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "sourceName": "OpenAI",
-      "sourceCount": 3
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 01 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Amazon releases its own Jev clone as decision models flood the web",
+      "p": "Amazon Web Services' Strand Labs has released the latest Jevalike decision model, Strands Decider 2B.",
+      "url": "https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
     }
   ],
   "feed": [
@@ -1640,7 +1640,7 @@
       "h": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
       "p": "Security Researchers Hacked Into OpenAI Using Anthropic’s Claude",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcW5TQ3c4elF6NEloRlVEN3JqZnVOOVFmWW5HdXRvR0pybGRXUzFFanItb0pLdzVDZlpBUkJqX2xMejdKV19ERHM5N2kzOGdZck1Eem9yNVBSWVRSMkNqRFZkckRQb2FCREYtV25iZnNRRjNralRubkM0MXRRekhxZ3lIRm1WallPNFJBOE5oMENhdUk2UVZ2Y0xydVBpVGhuTnlzZFZYeUZnMzg0NGJBQ1dkWGRTOVJy?oc=5",
-      "sourceName": "Forbes",
+      "sourceName": "forbes.com",
       "sourceCount": 2
     }
   ],
@@ -6280,10 +6280,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.62/hr",
-      "trend": "→ 2% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 12 rented offers across Vast.ai + RunPod"
+      "rate": "$1.79 – $3.50/hr",
+      "trend": "↓ 4% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 13 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6320,14 +6320,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.73 – $1.59/hr",
-      "trend": "↑ 15% vs 7d ago",
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "↑ 28% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-02T01:45:24.074Z",
+    "updatedAt": "2026-10-02T02:00:33.828Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6336,10 +6336,10 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 403,
+        "rawStoryHits": 404,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 23,
-        "storyCoverage": 0.7444168734491315,
+        "storyCoverage": 0.7425742574257426,
         "estimatedRelevantDiscussions": 32,
         "isEstimated": true,
         "rawCommentHits": 2739,
@@ -6513,10 +6513,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 30,
         "isEstimated": true,
-        "rawCommentHits": 1594,
+        "rawCommentHits": 1593,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 53,
-        "commentCoverage": 0.18820577164366373,
+        "commentCoverage": 0.18832391713747645,
         "limited": false,
         "points": 468,
         "themes": [
@@ -6600,16 +6600,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 519,
+        "rawStoryHits": 518,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 11,
-        "storyCoverage": 0.5780346820809249,
+        "storyCoverage": 0.5791505791505791,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": true,
-        "rawCommentHits": 10707,
+        "rawCommentHits": 10711,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.028019052956010086,
+        "commentCoverage": 0.028008589300718888,
         "limited": false,
         "points": 34,
         "themes": [
@@ -6683,8 +6683,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 85,
-        "fetchedStoryCount": 85,
+        "rawStoryHits": 38,
+        "fetchedStoryCount": 38,
         "validatedStoryCount": 8,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
@@ -6766,12 +6766,12 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 122,
-        "fetchedStoryCount": 119,
+        "rawStoryHits": 121,
+        "fetchedStoryCount": 121,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.9754098360655737,
-        "estimatedRelevantDiscussions": 23,
-        "isEstimated": true,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": false,
         "rawCommentHits": 1018,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 52,
@@ -6839,8 +6839,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 23,
-            "isEstimated": true
+            "discussions": 22,
+            "isEstimated": false
           }
         ]
       },
@@ -6855,10 +6855,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4676,
+        "rawCommentHits": 4677,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.0641573994867408,
+        "commentCoverage": 0.06414368184733804,
         "limited": false,
         "points": 350,
         "themes": [
