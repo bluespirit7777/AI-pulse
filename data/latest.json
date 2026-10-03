@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-10-03T04:30:25.613Z",
+  "updatedAt": "2026-10-03T04:45:22.410Z",
   "build": {
-    "sha": "7abb771e3ca5c68fefdc53d354daa7702659e42d",
-    "shortSha": "7abb771",
+    "sha": "5b95d2761d1e751d4815155128a15e65f0e24f32",
+    "shortSha": "5b95d27",
     "ref": "main",
-    "builtAt": "2026-10-03T04:30:55.458Z"
+    "builtAt": "2026-10-03T04:45:38.254Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 11,
+    "feedsSucceeded": 9,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.2,
-    "estimatedDatasets": 3,
-    "buildSha": "7abb771",
-    "lastSuccessfulUpdate": "2026-10-03T04:30:25.613Z"
+    "estimatedDatasets": 4,
+    "buildSha": "5b95d27",
+    "lastSuccessfulUpdate": "2026-10-03T04:45:22.410Z"
   },
   "ticker": [
     "IT’S NOT AI ANYMORE, IT’S ‘SUPER INTELLIGENCE’ (ACCORDING TO THE WHITE HOUSE)",
@@ -25,8 +25,8 @@
     "JUDGE DISMISSES ANTITRUST LAWSUITS OVER GOOGLE’S AI OVERVIEWS",
     "OPENAI CUTS TIES WITH 3 SAFETY RESEARCHERS, WSJ REPORTS",
     "ANTHROPIC ROLLS OUT SECOND CLAUDE 5.5 MODEL AS IT BUILDS TOWARD IPO",
-    "GOOGLE’S NEW GUIDED VISION FEATURE CAN HELP YOU READ THE FINE PRINT",
-    "HOW ALBERTSONS COMPANIES IS REIMAGINING RETAIL FROM THE INSIDE OUT"
+    "US ARRESTS TECH CEO ACCUSED OF SMUGGLING $300M IN NVIDIA CHIPS INTO CHINA",
+    "GOOGLE’S NEW GUIDED VISION FEATURE CAN HELP YOU READ THE FINE PRINT"
   ],
   "signals": [
     {
@@ -71,7 +71,7 @@
       "category": "capital",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 74,
+      "significance": 73,
       "impact": "high",
       "verification": "official",
       "sourceCount": 1,
@@ -259,6 +259,32 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/",
+      "clusterId": "1nerepg",
+      "title": "US arrests tech CEO accused of smuggling $300M in Nvidia chips into China",
+      "desc": "Nvidia’s chip-smuggling problem won’t go away as arrests continue.",
+      "url": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/",
+      "dateISO": "2026-10-02T18:39:36.000Z",
+      "date": "OCT 02 2026",
+      "category": "orggov",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 57,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
       "clusterId": "qzbutu",
       "title": "Google’s new Guided Vision feature can help you read the fine print",
@@ -269,7 +295,7 @@
       "category": "product",
       "catConfidence": 0.71,
       "family": "product",
-      "significance": 58,
+      "significance": 57,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -295,7 +321,7 @@
       "category": "adoption",
       "catConfidence": 0.55,
       "family": "product",
-      "significance": 58,
+      "significance": 57,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -309,70 +335,6 @@
       "entityIds": [
         "chatgpt",
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "clusterId": "gok17r",
-      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "dateISO": "2026-09-01T18:01:25.000Z",
-      "date": "SEP 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
-        },
-        {
-          "name": "Anthropic (YouTube)",
-          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/",
-      "clusterId": "1nerepg",
-      "title": "US arrests tech CEO accused of smuggling $300M in Nvidia chips into China",
-      "desc": "Nvidia’s chip-smuggling problem won’t go away as arrests continue.",
-      "url": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/",
-      "dateISO": "2026-10-02T18:39:36.000Z",
-      "date": "OCT 02 2026",
-      "category": "orggov",
-      "catConfidence": 0.4,
-      "family": "market",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "nvidia"
       ]
     },
     {
@@ -515,7 +477,7 @@
       "category": "analysis",
       "catConfidence": 0.75,
       "family": "product",
-      "significance": 49,
+      "significance": 48,
       "impact": "notable",
       "verification": "analysis",
       "sourceCount": 1,
@@ -588,42 +550,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
-      "clusterId": "19sh5qg",
-      "title": "Last 24 hours: Exhibit at TechCrunch Disrupt 2026 and reach 10,000+ tech leaders",
-      "desc": "Today is the last day to book your exhibit table at TechCrunch Disrupt 2026. From October 13–15, 10,000+ founders, investors, operators, and tech leaders will arrive at San Francisco’s Moscone West looking for companies, products, ideas, and people worth knowing. The question is: Will they find your startup?",
-      "url": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
-      "dateISO": "2026-10-02T14:00:00.000Z",
-      "date": "OCT 02 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-blackstones-jas-khaira-on-building-the-next-generation-of-ai-giants/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-clays-kareem-amin-on-the-rise-of-the-gtm-engineer/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
-    },
-    {
       "id": "https://openai.com/index/chatgpt-for-teens",
       "clusterId": "1azzl9u",
       "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
@@ -682,6 +608,42 @@
       "entityIds": [
         "chatgpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
+      "clusterId": "19sh5qg",
+      "title": "Last 24 hours: Exhibit at TechCrunch Disrupt 2026 and reach 10,000+ tech leaders",
+      "desc": "Today is the last day to book your exhibit table at TechCrunch Disrupt 2026. From October 13–15, 10,000+ founders, investors, operators, and tech leaders will arrive at San Francisco’s Moscone West looking for companies, products, ideas, and people worth knowing. The question is: Will they find your startup?",
+      "url": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/",
+      "dateISO": "2026-10-02T14:00:00.000Z",
+      "date": "OCT 02 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/02/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-blackstones-jas-khaira-on-building-the-next-generation-of-ai-giants/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/02/techcrunch-disrupt-2026-clays-kareem-amin-on-the-rise-of-the-gtm-engineer/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/02/last-24-hours-exhibit-at-techcrunch-disrupt-2026-and-reach-10000-tech-leaders/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
@@ -817,6 +779,36 @@
       "sourceName": "Ars Technica",
       "entityIds": [
         "gemini"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+      "clusterId": "13side4",
+      "title": "Introducing Claude Opus 5.5",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+      "dateISO": "2026-09-22T07:00:00.000Z",
+      "date": "SEP 22 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX2VINVptSExJdjU0WkQ0WDVkRUdsaHduYjB1Tk81TnBrZkVvalowQWh2NFJnYmZ1TkxtVTQyZHdVWDgzVmJtRE9SSjkzeW9DWDFleHNPU01LUWE1TUpCdktmTVVRZHNXWm9ack9CRmdQTU1XUHd0Y2lhaEZBWWJYQVNFYw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -1012,11 +1004,11 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "arstechnica.com",
+          "name": "Ars Technica",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQUVqRzQwNW9SN1pNeThVT1lWblh2YUJBSElLVE5sTXJzZGVpUk1MMG1JX1AwUWZyRGxRUlZyNS1YcnNjS2hzVllkTVEwUlhZTHN0NXZoSWdCVjBUVEZBOFFVdUQ4dWJOTjdqaFdOUGZVQnQ3LWRpalZFdG1CbmYwWkFSbU11b3FQUlpJX0FacDcwMFBkNzBpUDhYeTN5U1FWVDcyWnplVkV4Y2J3amhMcXpvWEh0bk1aUVRQeUtsU08xeGc?oc=5"
         }
       ],
-      "sourceName": "arstechnica.com",
+      "sourceName": "Ars Technica",
       "entityIds": [
         "claude"
       ]
@@ -1270,7 +1262,7 @@
     "chatgpt": 29,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 102,
+    "gpt": 101,
     "claude": 73,
     "gemini": 25,
     "grok": 1,
@@ -1283,7 +1275,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 6,
+    "nvidia": 5,
     "amd": 1,
     "tsmc": 0,
     "broadcom": 0
@@ -1316,15 +1308,15 @@
           "impact": "notable"
         },
         {
-          "h": "Inside Anthropic's molecular biology lab",
-          "d": "SEP 23 2026",
-          "url": "https://www.youtube.com/watch?v=DdCEmlAydcw",
-          "isVideo": true,
+          "h": "Introducing Claude Opus 5.5",
+          "d": "SEP 22 2026",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xbTN1a0tOdm9kT0JxbVBHMU9XYUhpUjd0MHNFYm8yd2pRMnhjdEYzdjF3ckZEY1V0a2ZQTXlyRUhteVozMlhDbVQ3Mm1KWlRYbUVF?oc=5",
+          "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Anthropic (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
+          "sourceName": "Anthropic",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
         },
         {
           "h": "Anthropic debuts Claude Docs, raising stakes for Microsoft",
@@ -1377,17 +1369,6 @@
           "impact": "emerging"
         },
         {
-          "h": "10 Years of NVIDIA DGX: From One System to AI Factories",
-          "d": "SEP 24 2026",
-          "url": "https://www.youtube.com/watch?v=xAgq8ByWK0M",
-          "isVideo": true,
-          "videoUrl": null,
-          "sourceName": "NVIDIA (YouTube)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
           "h": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
           "d": "SEP 23 2026",
           "url": "https://openai.com/index/airbnb-gpt-6-astra",
@@ -1402,6 +1383,17 @@
           "h": "Grab and OpenAI bring practical AI skills to Southeast Asia",
           "d": "SEP 23 2026",
           "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "OpenAI",
+          "sourceCount": 2,
+          "verification": "official",
+          "impact": "notable"
+        },
+        {
+          "h": "Introducing GPT-6 Sol and Luna",
+          "d": "SEP 22 2026",
+          "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "OpenAI",
@@ -6325,24 +6317,24 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$1.79 – $3.49/hr",
+      "trend": "↓ 4% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 12 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.12/hr",
-      "trend": "→ 1% vs 7d ago",
+      "rate": "$3.56 – $4.89/hr",
+      "trend": "→ 2% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $8.13/hr",
-      "trend": "↑ 10% vs 7d ago",
+      "rate": "$5.98 – $9.39/hr",
+      "trend": "↑ 20% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
@@ -6365,14 +6357,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.40 – $1.59/hr",
-      "trend": "↓ 13% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "rate": "$0.80 – $1.59/hr",
+      "trend": "↑ 5% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-03T04:30:25.613Z",
+    "updatedAt": "2026-10-03T04:45:22.410Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6387,12 +6379,12 @@
         "storyCoverage": 0.75,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2750,
+        "rawCommentHits": 2748,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
-        "commentCoverage": 0.10909090909090909,
+        "commentCoverage": 0.1091703056768559,
         "limited": false,
-        "points": 447,
+        "points": 450,
         "themes": [
           {
             "id": "coding",
@@ -6455,7 +6447,7 @@
           },
           {
             "title": "Show HN: Made an open-source Lego AI generator",
-            "points": 82,
+            "points": 85,
             "comments": 41,
             "url": "https://github.com/anteloc/ldraw-nova",
             "date": "OCT 02 2026"
@@ -6481,16 +6473,16 @@
         "org": "Anthropic",
         "rawStoryHits": 867,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 30,
+        "validatedStoryCount": 29,
         "storyCoverage": 0.3460207612456747,
-        "estimatedRelevantDiscussions": 89,
+        "estimatedRelevantDiscussions": 86,
         "isEstimated": true,
         "rawCommentHits": 6374,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 54,
         "commentCoverage": 0.047066206463759024,
         "limited": false,
-        "points": 958,
+        "points": 954,
         "themes": [
           {
             "id": "coding",
@@ -6552,7 +6544,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 87,
+            "discussions": 84,
             "isEstimated": true
           },
           {
@@ -6573,10 +6565,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1430,
+        "rawCommentHits": 1428,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 58,
-        "commentCoverage": 0.2097902097902098,
+        "commentCoverage": 0.21008403361344538,
         "limited": false,
         "points": 465,
         "themes": [
@@ -6660,16 +6652,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 75,
-        "fetchedStoryCount": 75,
+        "rawStoryHits": 523,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 10,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 10,
-        "isEstimated": false,
-        "rawCommentHits": 10697,
+        "storyCoverage": 0.5736137667304015,
+        "estimatedRelevantDiscussions": 17,
+        "isEstimated": true,
+        "rawCommentHits": 10698,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 26,
-        "commentCoverage": 0.02804524633074694,
+        "commentCoverage": 0.028042624789680313,
         "limited": false,
         "points": 30,
         "themes": [
@@ -6728,8 +6720,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 10,
-            "isEstimated": false
+            "discussions": 17,
+            "isEstimated": true
           },
           {
             "name": "xAI GitHub",
@@ -6910,10 +6902,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 14,
         "isEstimated": false,
-        "rawCommentHits": 4654,
+        "rawCommentHits": 4653,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.06446067898581866,
+        "commentCoverage": 0.06447453255963895,
         "limited": false,
         "points": 354,
         "themes": [
