@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-06T22:30:31.435Z",
+  "updatedAt": "2026-10-06T22:45:26.608Z",
   "build": {
-    "sha": "38d0475b48705a116bff8c5bca07bde7b482af4c",
-    "shortSha": "38d0475",
+    "sha": "e5745a7d86dedeb04a18f2e3a0ed288b93e380cc",
+    "shortSha": "e5745a7",
     "ref": "main",
-    "builtAt": "2026-10-06T22:31:03.144Z"
+    "builtAt": "2026-10-06T22:45:45.099Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.9,
-    "estimatedDatasets": 4,
-    "buildSha": "38d0475",
-    "lastSuccessfulUpdate": "2026-10-06T22:30:31.435Z"
+    "estimatedDatasets": 5,
+    "buildSha": "e5745a7",
+    "lastSuccessfulUpdate": "2026-10-06T22:45:26.608Z"
   },
   "ticker": [
     "AI COMPUTING STARTUP LAMBDA TO RAISE $4B AHEAD OF PLANNED IPO",
     "INTRODUCING THE DECISIONS API",
     "‘ARTIFICIAL’ ROASTS AI’S CREATORS—AND SENDS A DARK WARNING ABOUT ITS DANGERS",
     "ATLASSIAN AND OPENAI EXPAND PARTNERSHIP TO TURN ENTERPRISE KNOWLEDGE INTO ACTION",
+    "SHARING AI PROGRESS IN MATHEMATICS",
     "GEMINI CALL FOR ME MIGHT TELL YOUR MOM YOU’RE RUNNING LATE",
     "MISTRAL SAYS ITS NEW AI MODEL ‘LE CHONK’ IS THE BEST OPEN-WEIGHT OFFERING OUTSIDE OF CHINA",
     "OUR APPROACH TO EU TEXT PROVENANCE RULES",
     "OPENAI LAUNCHES VISUAL ADS THAT APPEAR ALONGSIDE IMAGE GENERATION RESULTS",
-    "ANTHROPIC IS GIVING STARTUPS A FREE YEAR OF CLAUDE TEAM AND $1,000 IN CREDITS",
-    "BUILDING ADVERTISING FOR THE WAY PEOPLE USE AI"
+    "ANTHROPIC IS GIVING STARTUPS A FREE YEAR OF CLAUDE TEAM AND $1,000 IN CREDITS"
   ],
   "signals": [
     {
@@ -66,7 +66,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 75,
+      "significance": 74,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -126,6 +126,32 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/atlassian-partnership"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "clusterId": "48301v",
+      "title": "Sharing AI progress in mathematics",
+      "desc": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "dateISO": "2026-10-06T12:00:00.000Z",
+      "date": "OCT 06 2026",
+      "category": "market",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 71,
+      "impact": "high",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/sharing-ai-progress-in-mathematics"
         }
       ],
       "sourceName": "OpenAI",
@@ -399,32 +425,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
-      "clusterId": "1r19fsx",
-      "title": "Instinct brings its AI agent to group chats, even for friends without an account",
-      "desc": "Instinct is launching group chats that let friends use its AI agent together for tasks like planning trips, organizing carpools, and coordinating events. The company says personal accounts remain separate, with permission required before personal agents share information or take action.",
-      "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
-      "dateISO": "2026-10-05T18:54:30.000Z",
-      "date": "OCT 05 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "amd"
-      ]
-    },
-    {
       "id": "https://www.wired.com/story/openai-is-pissing-off-a-bunch-of-mathematicians-again/",
       "clusterId": "zbpifh",
       "title": "OpenAI Is Pissing Off a Bunch of Mathematicians—Again",
@@ -449,6 +449,56 @@
       "entityIds": [
         "gpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
+      "clusterId": "1r19fsx",
+      "title": "Instinct brings its AI agent to group chats, even for friends without an account",
+      "desc": "Instinct is launching group chats that let friends use its AI agent together for tasks like planning trips, organizing carpools, and coordinating events. The company says personal accounts remain separate, with permission required before personal agents share information or take action.",
+      "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/",
+      "dateISO": "2026-10-05T18:54:30.000Z",
+      "date": "OCT 05 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/05/instinct-brings-its-ai-agent-to-group-chats-even-for-friends-without-an-account/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "amd"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
+      "clusterId": "pz1vtf",
+      "title": "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product",
+      "desc": "The startup crossed over $1 million in anualized revenue within two months of its post-pivot launch.",
+      "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
+      "dateISO": "2026-10-06T22:34:03.000Z",
+      "date": "OCT 06 2026",
+      "category": "capital",
+      "catConfidence": 0.54,
+      "family": "market",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     },
     {
       "id": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBrMXU1ams3ZHlMaE4yVnNKLUFKUEREMjJGRkVJQ09UVHRYbzBiXzdQSlFqS2lsY3dtSWZmLUpoZFRkb0tEZHh4YlBvbUVVQVBCcUFQMlVyNTJuOVdscHhabW5SY1oyRzZLU2ZsT1BwSlJoUHRiYVNrSmlR0gF_QVVfeXFMUFlncV9mdTFCd3ZGSVZqeGVEUVVfVl9mRzc0UzhEQ2dncnNRN1Y0NE9LWHpvREFYcVljSG90RXl3UGRIVnVhaEc3NldUSjlZSTdDTHJSRGxEekZXQUJaejVWSGtiOW45RHZuZHA0RlFzVzdGa3M4NEIySjJEWWdIdw?oc=5",
@@ -573,7 +623,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 52,
+      "significance": 51,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -840,6 +890,36 @@
       ]
     },
     {
+      "id": "https://openai.com/index/virgin-atlantic/chatgpt-work",
+      "clusterId": "yknt1j",
+      "title": "Virgin Atlantic sharpens customer journeys with ChatGPT Work",
+      "desc": "Virgin Atlantic is accelerating research, product planning, and decision-making with ChatGPT Work, helping teams connect signals across the customer journey.",
+      "url": "https://openai.com/index/virgin-atlantic/chatgpt-work",
+      "dateISO": "2026-08-10T00:00:00.000Z",
+      "date": "AUG 10 2026",
+      "category": "adoption",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/virgin-atlantic/chatgpt-work"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/zapier"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
       "clusterId": "11ae84m",
       "title": "Wikipedia operator says OpenAI’s ‘rogue’ bots may be linked to a May outage",
@@ -1062,104 +1142,6 @@
       "entityIds": [
         "claude"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "clusterId": "gok17r",
-      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
-      "dateISO": "2026-09-01T18:01:25.000Z",
-      "date": "SEP 01 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Anthropic (YouTube)",
-          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
-        },
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "clusterId": "1wtfps8",
-      "title": "Disrupting a new covert influence campaign from Russia",
-      "desc": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
-      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "dateISO": "2026-08-25T00:00:00.000Z",
-      "date": "AUG 25 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
-      "clusterId": "12l6dix",
-      "title": "Anthropic says it disrupted scientists using Claude AI for possible biological weapons development",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
-      "dateISO": "2026-09-10T07:00:00.000Z",
-      "date": "SEP 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 5,
-      "sources": [
-        {
-          "name": "Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZy04cUpKZ1lLWHB3Zmp5N19XeEEwdi13bjBZYllISzltVk5HaDdlUnJqOEJFZUlYVjBxNzhZbUc5NDhDeWdISkUzLWw3b25ZZTYxZG4tZUFjLXU5T3F2YlZ2M1QtNDdZcDZ1anZlTVFGZzlmY2dYNGRLelY5TjRTMDU4d1QxaDRYY0JvNXBIZ0FQUWxiMVJzQlc3V0plQTd2M19oWWRVUjV3aXdvOHhXREJ0STBfdW9LZkw1QnV0Mk5MQkhRaldlQ1NsSDJHcTkt?oc=5"
-        },
-        {
-          "name": "Al Jazeera",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
-        },
-        {
-          "name": "CBS News",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5"
-        }
-      ],
-      "sourceName": "CBS News",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
@@ -1168,7 +1150,7 @@
       "category": "product",
       "title": "Introducing the Decisions API",
       "summary": "Introducing the Decisions API: a fast way to turn text and images into actions in your app. Give the model an input, define a question and the possible answers, and use its choice…",
-      "significance": 75,
+      "significance": 74,
       "impact": "high",
       "verification": "single",
       "date": "OCT 06 2026",
@@ -1237,7 +1219,7 @@
     "chatgpt": 29,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 101,
+    "gpt": 102,
     "claude": 72,
     "gemini": 27,
     "grok": 0,
@@ -1431,6 +1413,18 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 06 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first pr…",
+      "p": "The startup crossed over $1 million in anualized revenue within two months of its post-pivot launch.",
+      "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "OPENAI",
       "logoKey": "openai",
       "date": "OCT 06 2026",
@@ -1512,18 +1506,6 @@
       "p": "From their dorky parties to their weird walks, the movie holds OpenAI CEO Sam Altman and other stakeholders with contempt, while demonstrating their recklessness.",
       "url": "https://www.wired.com/story/artificial-roasts-ais-creators-and-sends-a-dark-warning-about-its-dangers/",
       "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "OCT 06 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Hark releases an AI personal assistant with a focus on privacy",
-      "p": "The AI lab's personal assistant is an operating system from the future designed to compete with Muse, Dots, and Instinct.",
-      "url": "https://techcrunch.com/2026/10/06/hark-releases-an-ai-personal-assistant-with-a-focus-on-privacy/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -6378,7 +6360,7 @@
       "rate": "$1.99 – $3.49/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6386,15 +6368,15 @@
       "rate": "$3.59 – $5.12/hr",
       "trend": "↓ 3% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $9.39/hr",
-      "trend": "↑ 6% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $6.79/hr",
+      "trend": "↓ 12% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6415,14 +6397,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.54 – $1.59/hr",
+      "rate": "$0.55 – $1.59/hr",
       "trend": "↓ 13% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-06T22:30:31.435Z",
+    "updatedAt": "2026-10-06T22:45:26.608Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6437,10 +6419,10 @@
         "storyCoverage": 0.783289817232376,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2726,
+        "rawCommentHits": 2728,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 48,
-        "commentCoverage": 0.11005135730007337,
+        "commentCoverage": 0.10997067448680352,
         "limited": false,
         "points": 541,
         "themes": [
@@ -6525,10 +6507,10 @@
         "storyCoverage": 0.3412969283276451,
         "estimatedRelevantDiscussions": 81,
         "isEstimated": true,
-        "rawCommentHits": 6233,
+        "rawCommentHits": 6232,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 33,
-        "commentCoverage": 0.048130916091769615,
+        "commentCoverage": 0.04813863928112965,
         "limited": false,
         "points": 944,
         "themes": [
@@ -6608,9 +6590,9 @@
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
         "rawStoryHits": 130,
-        "fetchedStoryCount": 130,
+        "fetchedStoryCount": 128,
         "validatedStoryCount": 22,
-        "storyCoverage": 1,
+        "storyCoverage": 0.9846153846153847,
         "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
         "rawCommentHits": 1322,
@@ -6681,7 +6663,7 @@
           {
             "name": "Hacker News",
             "discussions": 22,
-            "isEstimated": false
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
@@ -6871,16 +6853,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 116,
-        "fetchedStoryCount": 116,
+        "rawStoryHits": 113,
+        "fetchedStoryCount": 108,
         "validatedStoryCount": 22,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 22,
-        "isEstimated": false,
-        "rawCommentHits": 1062,
+        "storyCoverage": 0.9557522123893806,
+        "estimatedRelevantDiscussions": 23,
+        "isEstimated": true,
+        "rawCommentHits": 1063,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 67,
-        "commentCoverage": 0.2824858757062147,
+        "commentCoverage": 0.28222013170272814,
         "limited": false,
         "points": 924,
         "themes": [
@@ -6949,8 +6931,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 22,
-            "isEstimated": false
+            "discussions": 23,
+            "isEstimated": true
           }
         ]
       },
