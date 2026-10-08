@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-10-08T01:45:25.720Z",
+  "updatedAt": "2026-10-08T02:00:37.877Z",
   "build": {
-    "sha": "f5cec7c2cd4ed22da0a8b5d0d2e9fca1c62a7db1",
-    "shortSha": "f5cec7c",
+    "sha": "41f4bbbc889618d92bb2131ad6d71206e252bebd",
+    "shortSha": "41f4bbb",
     "ref": "main",
-    "builtAt": "2026-10-08T01:45:44.393Z"
+    "builtAt": "2026-10-08T02:01:20.537Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 11,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.1,
-    "estimatedDatasets": 5,
-    "buildSha": "f5cec7c",
-    "lastSuccessfulUpdate": "2026-10-08T01:45:25.720Z"
+    "estimatedDatasets": 4,
+    "buildSha": "41f4bbb",
+    "lastSuccessfulUpdate": "2026-10-08T02:00:37.877Z"
   },
   "ticker": [
     "THESE RESEARCHERS MADE AI DRIVE A TOYOTA COROLLA TO GET IN-N-OUT",
@@ -26,7 +26,7 @@
     "CHATGPT FOR TEENS IS AN ‘UNACCEPTABLE RISK,’ SAYS COMMON SENSE MEDIA",
     "EVERYTHING ANNOUNCED AT MICROSOFT’S SURFACE LAPTOP ULTRA EVENT",
     "ANTHROPIC CLAUDE SUBSCRIPTION PLAN PROVIDES MORE VALUE THAN OPENAI'S, STUDY SAYS",
-    "INTRODUCING THE DECISIONS API"
+    "‘ARTIFICIAL’ ROASTS AI’S CREATORS—AND SENDS A DARK WARNING ABOUT ITS DANGERS"
   ],
   "signals": [
     {
@@ -259,7 +259,7 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 63,
+      "significance": 62,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -273,32 +273,6 @@
       "entityIds": [
         "gpt",
         "claude"
-      ]
-    },
-    {
-      "id": "https://www.youtube.com/watch?v=FB6oCmrIj-Y",
-      "clusterId": "u7o20n",
-      "title": "Introducing the Decisions API",
-      "desc": "Introducing the Decisions API: a fast way to turn text and images into actions in your app. Give the model an input, define a question and the possible answers, and use its choice to decide what happens next. Powered by GPT-6 Luna, the Decisions API focuses on a small set of choices to make interactions feel responsive. See how it works alongside GPT-Live-1 and a Microduck to bring voice, visual u",
-      "url": "https://www.youtube.com/watch?v=FB6oCmrIj-Y",
-      "dateISO": "2026-10-06T21:33:36.000Z",
-      "date": "OCT 06 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 61,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=FB6oCmrIj-Y"
-        }
-      ],
-      "sourceName": "OpenAI (YouTube)",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -377,41 +351,6 @@
       ],
       "sourceName": "OpenAI",
       "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/gpt-6-for-everyone",
-      "clusterId": "anf7hz",
-      "title": "GPT-6 and Intelligent UI for everyone",
-      "desc": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
-      "url": "https://openai.com/index/gpt-6-for-everyone",
-      "dateISO": "2026-10-07T00:00:00.000Z",
-      "date": "OCT 07 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=IsL4dVezs18"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/gpt-6-for-everyone"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt",
         "gpt"
       ]
     },
@@ -674,6 +613,37 @@
         {
           "name": "OpenAI",
           "url": "https://openai.com/index/jump-trading"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt",
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/gpt-6-for-everyone",
+      "clusterId": "anf7hz",
+      "title": "GPT-6 and Intelligent UI for everyone",
+      "desc": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+      "url": "https://openai.com/index/gpt-6-for-everyone",
+      "dateISO": "2026-10-07T00:00:00.000Z",
+      "date": "OCT 07 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-for-everyone"
         }
       ],
       "sourceName": "OpenAI",
@@ -1131,6 +1101,30 @@
       "entityIds": [
         "chatgpt"
       ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material/",
+      "clusterId": "kkf4rh",
+      "title": "Meta rolls out new AI tools to detect ads that secretly lead to child sexual abuse material",
+      "desc": "Meta launches new AI tools after discovering ads on its platforms that may look normal but direct users to harmful content elsewhere online.",
+      "url": "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material/",
+      "dateISO": "2026-10-07T16:53:46.000Z",
+      "date": "OCT 07 2026",
+      "category": "adoption",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/07/meta-rolls-out-new-ai-tools-to-detect-ads-that-secretly-lead-to-child-sexual-abuse-material/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
     }
   ],
   "waves": [
@@ -1214,7 +1208,7 @@
     "copilot": 1,
     "perplexity": 1,
     "gpt": 108,
-    "claude": 70,
+    "claude": 71,
     "gemini": 26,
     "grok": 2,
     "llama": 0,
@@ -1226,7 +1220,7 @@
     "gcp": 0,
     "oracle": 0,
     "coreweave": 0,
-    "nvidia": 6,
+    "nvidia": 7,
     "amd": 1,
     "tsmc": 0,
     "broadcom": 0
@@ -1243,6 +1237,17 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Reuters",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Inside Anthropic's molecular biology lab",
+          "d": "SEP 23 2026",
+          "url": "https://www.youtube.com/watch?v=DdCEmlAydcw",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "Anthropic (YouTube)",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1276,17 +1281,6 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Axios",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
-          "h": "Anthropic Launches Claude For Advisors With Schwab And BlackRock",
-          "d": "SEP 16 2026",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNRktmYWhfak5Yd1VDdGtxeWVSYUFrYjhjZ1Bqbms4X0k3cXpFN1lPVUhha3ZqQURCeWlPX3A3N0s5a1pFZnByOVVsbW85ZzRWSDZwRDJNdXg0akpKenBUV1JPXzFtYkl3eF96aEpxci1YVWJKRHdIekRJU0Y1RFgtUUg2OUVwc3RlbkRFS2xrR1haVHhhOUJ6UEhRTmItZ3Bzd3dfaXY4VW44bGNFNnljdjZpWHZhUGM?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Forbes",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1430,18 +1424,6 @@
       "sourceCount": 1
     },
     {
-      "org": "OPENAI",
-      "logoKey": "openai",
-      "date": "OCT 07 2026",
-      "verification": "official",
-      "impact": "notable",
-      "h": "GPT-6 and Intelligent UI for everyone",
-      "p": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
-      "url": "https://openai.com/index/gpt-6-for-everyone",
-      "sourceName": "OpenAI",
-      "sourceCount": 3
-    },
-    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "OCT 07 2026",
@@ -1463,6 +1445,18 @@
       "p": "Microsoft just wrapped up a big Windows and Surface-focused keynote in San Francisco. The biggest announcement was arguably the release details about the Surface Laptop Ultra, its new laptop that’s powered by Nvidia’s RTX Spark Arm-based chip. The machine wil…",
       "url": "https://www.theverge.com/tech/1007147/microsoft-surface-laptop-ultra-windows-event-everything-announced",
       "sourceName": "The Verge",
+      "sourceCount": 2
+    },
+    {
+      "org": "OPENAI",
+      "logoKey": "openai",
+      "date": "OCT 07 2026",
+      "verification": "official",
+      "impact": "notable",
+      "h": "GPT-6 and Intelligent UI for everyone",
+      "p": "GPT‑6 is rolling out globally in ChatGPT with Intelligent UI, delivering faster responses with visuals and interactive experiences you can explore and use directly.",
+      "url": "https://openai.com/index/gpt-6-for-everyone",
+      "sourceName": "OpenAI",
       "sourceCount": 2
     },
     {
@@ -6350,10 +6344,10 @@
     {
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
-      "rate": "$1.99 – $3.49/hr",
-      "trend": "↓ 7% vs 7d ago",
+      "rate": "$1.99 – $3.54/hr",
+      "trend": "↓ 6% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6361,21 +6355,21 @@
       "rate": "$3.59 – $5.12/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $8.61/hr",
-      "trend": "↑ 14% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $6.79/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.38/hr",
-      "trend": "↑ 24% vs 7d ago",
+      "rate": "$6.94 – $9.99/hr",
+      "trend": "↑ 14% vs 7d ago",
       "trendClass": "trend-up",
       "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
@@ -6390,14 +6384,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.54 – $1.59/hr",
-      "trend": "↑ 8% vs 7d ago",
+      "rate": "$1.00 – $1.59/hr",
+      "trend": "↑ 31% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-08T01:45:25.720Z",
+    "updatedAt": "2026-10-08T02:00:37.877Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6412,10 +6406,10 @@
         "storyCoverage": 0.7853403141361257,
         "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2784,
+        "rawCommentHits": 2785,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.10775862068965517,
+        "commentCoverage": 0.10771992818671454,
         "limited": false,
         "points": 541,
         "themes": [
@@ -6496,16 +6490,16 @@
         "org": "Anthropic",
         "rawStoryHits": 901,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 28,
+        "validatedStoryCount": 27,
         "storyCoverage": 0.33296337402885684,
-        "estimatedRelevantDiscussions": 86,
+        "estimatedRelevantDiscussions": 83,
         "isEstimated": true,
-        "rawCommentHits": 6353,
+        "rawCommentHits": 6354,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 43,
-        "commentCoverage": 0.047221784983472376,
+        "commentCoverage": 0.047214353163361665,
         "limited": false,
-        "points": 953,
+        "points": 945,
         "themes": [
           {
             "id": "coding",
@@ -6572,7 +6566,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 84,
+            "discussions": 81,
             "isEstimated": true
           },
           {
@@ -6593,10 +6587,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 31,
         "isEstimated": true,
-        "rawCommentHits": 1348,
+        "rawCommentHits": 1349,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 53,
-        "commentCoverage": 0.22255192878338279,
+        "commentCoverage": 0.2223869532987398,
         "limited": false,
         "points": 473,
         "themes": [
@@ -6686,10 +6680,10 @@
         "storyCoverage": 0.5825242718446602,
         "estimatedRelevantDiscussions": 21,
         "isEstimated": true,
-        "rawCommentHits": 10549,
+        "rawCommentHits": 10548,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 24,
-        "commentCoverage": 0.02843871457010143,
+        "commentCoverage": 0.02844141069397042,
         "limited": false,
         "points": 41,
         "themes": [
@@ -6769,10 +6763,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": false,
-        "rawCommentHits": 459,
+        "rawCommentHits": 458,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 47,
-        "commentCoverage": 0.6535947712418301,
+        "commentCoverage": 0.6550218340611353,
         "limited": false,
         "points": 232,
         "themes": [
@@ -6851,16 +6845,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 117,
-        "fetchedStoryCount": 109,
+        "rawStoryHits": 114,
+        "fetchedStoryCount": 114,
         "validatedStoryCount": 22,
-        "storyCoverage": 0.9316239316239316,
-        "estimatedRelevantDiscussions": 24,
-        "isEstimated": true,
-        "rawCommentHits": 1062,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 22,
+        "isEstimated": false,
+        "rawCommentHits": 1071,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 67,
-        "commentCoverage": 0.2824858757062147,
+        "commentCoverage": 0.2801120448179272,
         "limited": false,
         "points": 923,
         "themes": [
@@ -6929,8 +6923,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 24,
-            "isEstimated": true
+            "discussions": 22,
+            "isEstimated": false
           }
         ]
       },
@@ -6945,10 +6939,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 19,
         "isEstimated": false,
-        "rawCommentHits": 4735,
+        "rawCommentHits": 4733,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.06335797254487856,
+        "commentCoverage": 0.06338474540460595,
         "limited": false,
         "points": 353,
         "themes": [
