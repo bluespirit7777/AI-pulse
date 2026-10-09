@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-09T18:30:31.101Z",
+  "updatedAt": "2026-10-09T18:45:24.106Z",
   "build": {
-    "sha": "dc3af3f4ec8e8b4ff813f866a067b00d8b3395c6",
-    "shortSha": "dc3af3f",
+    "sha": "a40d7ede2ebb5ab449ed1a158638ac298f5272b0",
+    "shortSha": "a40d7ed",
     "ref": "main",
-    "builtAt": "2026-10-09T18:30:57.585Z"
+    "builtAt": "2026-10-09T18:45:42.114Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.8,
-    "estimatedDatasets": 5,
-    "buildSha": "dc3af3f",
-    "lastSuccessfulUpdate": "2026-10-09T18:30:31.101Z"
+    "estimatedDatasets": 4,
+    "buildSha": "a40d7ed",
+    "lastSuccessfulUpdate": "2026-10-09T18:45:24.106Z"
   },
   "ticker": [
     "ANTHROPIC BANS ‘ABUSIVE OR CRUEL BEHAVIOR’ TOWARD CLAUDE",
     "ANTHROPIC PAUSES FREE CLAUDE STARTUP PERKS DAYS AFTER LAUNCH",
-    "FIRED OPENAI SAFETY RESEARCHERS DISPUTE MISCONDUCT CLAIMS, WARN OF CHILLING EFFECT",
+    "ASANA CUTS MODEL COSTS 76X IN BROWSER TESTS WITH GPT-6.1 SOL",
     "ANTHROPIC LAUNCHES FREE AI SECURITY SCANS FOR OPEN-SOURCE PROJECTS",
+    "FIRED OPENAI SAFETY RESEARCHERS DISPUTE MISCONDUCT CLAIMS, WARN OF CHILLING EFFECT",
     "OPENAI’S MATH SOLUTIONS AREN’T MEETING THE FIELD’S STANDARDS YET",
     "ANTHROPIC LAUNCHES DASHBOARD, ANIMATION TOOLS FOR CLAUDE",
     "AMAZON DROPS DATA CENTER NDAS, AND AI AGENTS WANT YOUR CREDIT CARD",
-    "OPENAI DOUBLES DOWN ON DECISION TO FIRE THREE AI SAFETY RESEARCHERS",
-    "ANTHROPIC CHANGES USAGE POLICY TO BAN MODEL ABUSE AND ELECTION INTERFERENCE",
-    "INTRODUCING THE ANTHROPIC CYBER MISSION"
+    "GOOGLE IS LAUNCHING A ONE-STOP GEMINI AGENT FOR YOUR WORK TASKS",
+    "OPENAI DOUBLES DOWN ON DECISION TO FIRE THREE AI SAFETY RESEARCHERS"
   ],
   "signals": [
     {
@@ -94,27 +94,27 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-      "clusterId": "i83kd3",
-      "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
-      "desc": "Three fired OpenAI safety researchers dispute allegations of mishandling sensitive information, warning in an open letter that their dismissals are creating a chilling effect on the company’s AI safety culture.",
-      "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-      "dateISO": "2026-10-08T20:04:26.000Z",
-      "date": "OCT 08 2026",
-      "category": "research",
+      "id": "https://openai.com/index/asana-browser-agent",
+      "clusterId": "nqk6go",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "desc": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "dateISO": "2026-10-09T07:00:00.000Z",
+      "date": "OCT 09 2026",
+      "category": "adoption",
       "catConfidence": 0.6,
-      "family": "research",
-      "significance": 66,
+      "family": "product",
+      "significance": 69,
       "impact": "notable",
-      "verification": "single",
+      "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/asana-browser-agent"
         }
       ],
-      "sourceName": "TechCrunch",
+      "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
       ]
@@ -143,6 +143,32 @@
       "sourceName": "The Verge",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
+      "clusterId": "i83kd3",
+      "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
+      "desc": "Three fired OpenAI safety researchers dispute allegations of mishandling sensitive information, warning in an open letter that their dismissals are creating a chilling effect on the company’s AI safety culture.",
+      "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
+      "dateISO": "2026-10-08T20:04:26.000Z",
+      "date": "OCT 08 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 65,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -224,6 +250,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise",
+      "clusterId": "e7lqny",
+      "title": "Google is launching a one-stop Gemini agent for your work tasks",
+      "desc": "Google is launching a \"universal\" Gemini AI agent that can work across apps and devices in the background. The tool, announced as part of the Gemini at Work event on Thursday, will be available within the Gemini Enterprise app, allowing users to chat with the Gemini agent and assign it tasks from a single interface. […]",
+      "url": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise",
+      "dateISO": "2026-10-08T14:28:03.000Z",
+      "date": "OCT 08 2026",
+      "category": "adoption",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 59,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
     },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers",
@@ -464,32 +516,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5",
-      "clusterId": "sog8wt",
-      "title": "Anthropic asks users to stop being mean to Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5",
-      "dateISO": "2026-10-09T10:42:00.000Z",
-      "date": "OCT 09 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Register",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5"
-        }
-      ],
-      "sourceName": "The Register",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1008198/usa-today-openai-copyright-lawsuit",
       "clusterId": "zaspy3",
       "title": "USA Today becomes the latest publisher to sue OpenAI",
@@ -537,6 +563,32 @@
         }
       ],
       "sourceName": "Reuters",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5",
+      "clusterId": "sog8wt",
+      "title": "Anthropic asks users to stop being mean to Claude",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5",
+      "dateISO": "2026-10-09T10:42:00.000Z",
+      "date": "OCT 09 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 52,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Register",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYm1BN01TVXF6eDVwQU81bWZXYWExX091aXN2UHRxUG1KZ2h0bEhqZUoxRHZBRXAzdTg1U0hSdjBoWjJ3MU9WSzNXSDNQUHdBQm15cndjbUZydzNiZVNGWDUwOVVrOEtLOXFQZU9GWk85VlQ2MDBCdTVBb1ExY3RXYXBObXBhbGk5bUZBckxyS3ZNTDVaOXFlUFR0UkdJdWc1Q1RHYXJfY0JCdw?oc=5"
+        }
+      ],
+      "sourceName": "The Register",
       "entityIds": [
         "claude"
       ]
@@ -970,32 +1022,6 @@
       ]
     },
     {
-      "id": "https://openai.com/index/pollo-ai",
-      "clusterId": "srbye2",
-      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "desc": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
-      "url": "https://openai.com/index/pollo-ai",
-      "dateISO": "2026-10-08T12:00:00.000Z",
-      "date": "OCT 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/pollo-ai"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
       "id": "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/",
       "clusterId": "12zc4tn",
       "title": "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots",
@@ -1108,16 +1134,16 @@
       ]
     },
     {
-      "id": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "clusterId": "1wtfps8",
-      "title": "Disrupting a new covert influence campaign from Russia",
-      "desc": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
-      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
-      "dateISO": "2026-08-25T00:00:00.000Z",
-      "date": "AUG 25 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
+      "id": "https://openai.com/index/pollo-ai",
+      "clusterId": "srbye2",
+      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+      "desc": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+      "url": "https://openai.com/index/pollo-ai",
+      "dateISO": "2026-10-08T12:00:00.000Z",
+      "date": "OCT 08 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
       "significance": 44,
       "impact": "emerging",
       "verification": "official",
@@ -1125,39 +1151,12 @@
       "sources": [
         {
           "name": "OpenAI",
-          "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia"
+          "url": "https://openai.com/index/pollo-ai"
         }
       ],
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcWY4dUh1dUExNEs0Mng4cHZfS0FhSGwzX1Y5UmxxanI4S0JucjBRdWR5TUZwZTBJckd0SUhLRk80V0pnOTFHdVZvX2tGVEc4eDZWR3F2Q01USzZwV2NSVUhPc3JDZzhaWTB3NW81NjBHRTBCYmJSM3NvUTdiZzVLVlNDVWdLUGpWRnZUYS1LbUxydmlVMTl4UUx0YmtGRnFobUc1Y2JhVEhyM3ZpekxxUnh0cVkza0hVT09yemU3RFJ4Y3BsRDFmaEg3bVRwS3V4?oc=5",
-      "clusterId": "1e74t6g",
-      "title": "Anthropic Claude subscription plan provides more value than OpenAI's, study says",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcWY4dUh1dUExNEs0Mng4cHZfS0FhSGwzX1Y5UmxxanI4S0JucjBRdWR5TUZwZTBJckd0SUhLRk80V0pnOTFHdVZvX2tGVEc4eDZWR3F2Q01USzZwV2NSVUhPc3JDZzhaWTB3NW81NjBHRTBCYmJSM3NvUTdiZzVLVlNDVWdLUGpWRnZUYS1LbUxydmlVMTl4UUx0YmtGRnFobUc1Y2JhVEhyM3ZpekxxUnh0cVkza0hVT09yemU3RFJ4Y3BsRDFmaEg3bVRwS3V4?oc=5",
-      "dateISO": "2026-10-06T21:11:38.000Z",
-      "date": "OCT 06 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Register",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcWY4dUh1dUExNEs0Mng4cHZfS0FhSGwzX1Y5UmxxanI4S0JucjBRdWR5TUZwZTBJckd0SUhLRk80V0pnOTFHdVZvX2tGVEc4eDZWR3F2Q01USzZwV2NSVUhPc3JDZzhaWTB3NW81NjBHRTBCYmJSM3NvUTdiZzVLVlNDVWdLUGpWRnZUYS1LbUxydmlVMTl4UUx0YmtGRnFobUc1Y2JhVEhyM3ZpekxxUnh0cVkza0hVT09yemU3RFJ4Y3BsRDFmaEg3bVRwS3V4?oc=5"
-        }
-      ],
-      "sourceName": "The Register",
-      "entityIds": [
-        "gpt",
-        "claude"
       ]
     }
   ],
@@ -1225,7 +1224,7 @@
       "category": "research",
       "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
       "summary": "Three fired OpenAI safety researchers dispute allegations of mishandling sensitive information, warning in an open letter that their dismissals are creating a chilling effect on t…",
-      "significance": 66,
+      "significance": 65,
       "impact": "notable",
       "verification": "single",
       "date": "OCT 08 2026",
@@ -1248,9 +1247,9 @@
     "chatgpt": 30,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 104,
+    "gpt": 106,
     "claude": 75,
-    "gemini": 26,
+    "gemini": 27,
     "grok": 2,
     "llama": 0,
     "deepseek": 0,
@@ -1458,10 +1457,10 @@
       "date": "OCT 09 2026",
       "verification": "single",
       "impact": "emerging",
-      "h": "Nikon microscopic video competition winner disqualified for using generative AI",
-      "p": "Nikon says the video that originally won first place in its Small World in Motion contest \"did not comply with the competition rules regarding generative AI.\" BBC reports that the original first place video from Dr. Ning Xu claimed to show \"tiny, hair-like st…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008930/nikon-small-world-in-motion-winner-ai",
-      "sourceName": "The Verge",
+      "h": "Winning Nikon Small World in Motion video disqualified for AI use",
+      "p": "New winner is Nguyen Nam Nhat of Vietnam for video of a roundworm and single-celled Dileptus.",
+      "url": "https://arstechnica.com/science/2026/10/winning-nikon-small-world-in-motion-video-disqualified-for-ai-use/",
+      "sourceName": "Ars Technica",
       "sourceCount": 1
     },
     {
@@ -1661,11 +1660,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 229.74,
-      "changePct": -0.3211509078244792,
+      "price": 229.46,
+      "changePct": -0.4425499100050534,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 54865027,
+      "volume": 56253045,
       "ohlc": [
         {
           "d": "07-09",
@@ -2127,22 +2126,22 @@
           "o": 233.875,
           "h": 233.88999938964844,
           "l": 229.11000061035156,
-          "c": 229.73980712890625
+          "c": 229.4600067138672
         }
       ],
-      "relVolume": 0.5030638558860528,
-      "marketCap": 5605656000000
+      "relVolume": 0.5157907554302605,
+      "marketCap": 5598824000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 534.63,
-      "changePct": 2.2999980613007365,
+      "price": 535.965,
+      "changePct": 2.55545088655783,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 9660090,
+      "volume": 11025241,
       "ohlc": [
         {
           "d": "07-09",
@@ -2602,24 +2601,24 @@
         {
           "d": "10-09",
           "o": 528.2349853515625,
-          "h": 535.4498901367188,
+          "h": 536.6599731445312,
           "l": 526.2401123046875,
-          "c": 534.6300048828125
+          "c": 535.9650268554688
         }
       ],
-      "relVolume": 0.43524643234166255,
-      "marketCap": 3972300900000
+      "relVolume": 0.4967548760888381,
+      "marketCap": 3982219950000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 362.48,
-      "changePct": 0.6497462772013516,
+      "price": 361.91,
+      "changePct": 0.49147246672928246,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 11274827,
+      "volume": 11579254,
       "ohlc": [
         {
           "d": "07-09",
@@ -3080,23 +3079,23 @@
           "d": "10-09",
           "o": 365.5899963378906,
           "h": 366.6300048828125,
-          "l": 361.6199951171875,
-          "c": 362.4800109863281
+          "l": 361.46148681640625,
+          "c": 361.9100036621094
         }
       ],
-      "relVolume": 0.4650128452747577,
-      "marketCap": 1783401600000
+      "relVolume": 0.4775684672322794,
+      "marketCap": 1780597200000.0002
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 351.615,
-      "changePct": 0.9546589359092321,
+      "price": 351.16,
+      "changePct": 0.8240245332266926,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 10694827,
+      "volume": 10949096,
       "ohlc": [
         {
           "d": "07-09",
@@ -3558,22 +3557,22 @@
           "o": 351.45001220703125,
           "h": 354.70001220703125,
           "l": 350.30999755859375,
-          "c": 351.614990234375
+          "c": 351.1600036621094
         }
       ],
-      "relVolume": 0.40105152573605585,
-      "marketCap": 4289703000000
+      "relVolume": 0.4105865065634578,
+      "marketCap": 4284152000000.0005
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 261.025,
-      "changePct": 2.741476975840831,
+      "price": 261.09,
+      "changePct": 2.767062444639892,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 21806339,
+      "volume": 22249759,
       "ohlc": [
         {
           "d": "07-09",
@@ -4035,22 +4034,22 @@
           "o": 256.29998779296875,
           "h": 261.6400146484375,
           "l": 256,
-          "c": 261.0249938964844
+          "c": 261.0899963378906
         }
       ],
-      "relVolume": 0.5948978873623676,
-      "marketCap": 2792967500000
+      "relVolume": 0.6069948111611868,
+      "marketCap": 2793662999999.9995
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 718,
-      "changePct": -0.4008953640239971,
+      "price": 718.35,
+      "changePct": -0.35234765510501936,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 8534350,
+      "volume": 9125327,
       "ohlc": [
         {
           "d": "07-09",
@@ -4511,23 +4510,23 @@
           "d": "10-09",
           "o": 726.4199829101562,
           "h": 728.0700073242188,
-          "l": 716.6599731445312,
-          "c": 718
+          "l": 716.2100219726562,
+          "c": 718.3499755859375
         }
       ],
-      "relVolume": 0.3896723261351469,
-      "marketCap": 1809360000000
+      "relVolume": 0.4166559139048506,
+      "marketCap": 1810242000000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 452.25,
-      "changePct": -1.2533003682979136,
+      "price": 451.358,
+      "changePct": 0.00010780196433065392,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6696350,
+      "volume": 6867266,
       "ohlc": [
         {
           "d": "07-09",
@@ -4989,22 +4988,22 @@
           "o": 464.2099914550781,
           "h": 464.8299865722656,
           "l": 449.75,
-          "c": 452.25
+          "c": 451.3575134277344
         }
       ],
-      "relVolume": 0.6630745404963293,
-      "marketCap": 2347177500000
+      "relVolume": 0.6799986929321296,
+      "marketCap": 2342548020000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 611.655,
-      "changePct": -1.4540445133407958,
+      "price": 611.86,
+      "changePct": -1.4210233015881943,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 9780424,
+      "volume": 10082280,
       "ohlc": [
         {
           "d": "07-09",
@@ -5466,22 +5465,22 @@
           "o": 625.5399780273438,
           "h": 626.5,
           "l": 608.9000244140625,
-          "c": 611.655029296875
+          "c": 611.8599853515625
         }
       ],
-      "relVolume": 0.4366050208293529,
-      "marketCap": 990881100000
+      "relVolume": 0.45008008542445277,
+      "marketCap": 991213200000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 205.86,
-      "changePct": 3.5617274748630674,
+      "price": 206.845,
+      "changePct": 4.057250473354077,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 23504110,
+      "volume": 24286201,
       "ohlc": [
         {
           "d": "07-09",
@@ -5941,24 +5940,24 @@
         {
           "d": "10-09",
           "o": 201.05999755859375,
-          "h": 206.3300018310547,
+          "h": 206.8699951171875,
           "l": 198.3000030517578,
-          "c": 205.86000061035156
+          "c": 206.84500122070312
         }
       ],
-      "relVolume": 1.0234124532306095,
-      "marketCap": 494064000000.00006
+      "relVolume": 1.057466142945284,
+      "marketCap": 496428000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 142.07,
-      "changePct": 4.701897537047741,
+      "price": 142.05,
+      "changePct": 4.687154908924069,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 18656628,
+      "volume": 18911672,
       "ohlc": [
         {
           "d": "07-09",
@@ -6420,11 +6419,11 @@
           "o": 136.6999969482422,
           "h": 142.89999389648438,
           "l": 136.5,
-          "c": 142.07000732421875
+          "c": 142.0500030517578
         }
       ],
-      "relVolume": 0.5541999297470671,
-      "marketCap": 399216700000
+      "relVolume": 0.561776077316843,
+      "marketCap": 399160500000.00006
     }
   ],
   "compute": [
@@ -6442,7 +6441,7 @@
       "rate": "$3.59 – $5.40/hr",
       "trend": "↑ 3% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6450,7 +6449,7 @@
       "rate": "$5.98 – $9.39/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6471,14 +6470,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.43 – $1.79/hr",
-      "trend": "→ 1% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$0.53 – $1.79/hr",
+      "trend": "↑ 4% vs 7d ago",
+      "trendClass": "trend-up",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-09T18:30:31.101Z",
+    "updatedAt": "2026-10-09T18:45:24.106Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6493,10 +6492,10 @@
         "storyCoverage": 0.7751937984496124,
         "estimatedRelevantDiscussions": 37,
         "isEstimated": true,
-        "rawCommentHits": 2621,
+        "rawCommentHits": 2620,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
-        "commentCoverage": 0.11446012972148036,
+        "commentCoverage": 0.11450381679389313,
         "limited": false,
         "points": 545,
         "themes": [
@@ -6575,10 +6574,10 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 908,
+        "rawStoryHits": 909,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 27,
-        "storyCoverage": 0.3303964757709251,
+        "storyCoverage": 0.33003300330033003,
         "estimatedRelevantDiscussions": 84,
         "isEstimated": true,
         "rawCommentHits": 6305,
@@ -6648,16 +6647,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 134,
-        "fetchedStoryCount": 131,
+        "rawStoryHits": 132,
+        "fetchedStoryCount": 132,
         "validatedStoryCount": 28,
-        "storyCoverage": 0.9776119402985075,
-        "estimatedRelevantDiscussions": 37,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 36,
         "isEstimated": true,
-        "rawCommentHits": 1323,
+        "rawCommentHits": 1322,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 51,
-        "commentCoverage": 0.22675736961451248,
+        "commentCoverage": 0.22692889561270801,
         "limited": false,
         "points": 491,
         "themes": [
@@ -6721,8 +6720,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 29,
-            "isEstimated": true
+            "discussions": 28,
+            "isEstimated": false
           },
           {
             "name": "Google AI forum",
@@ -6741,16 +6740,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 519,
+        "rawStoryHits": 520,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 9,
-        "storyCoverage": 0.5780346820809249,
+        "storyCoverage": 0.5769230769230769,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": true,
-        "rawCommentHits": 10559,
+        "rawCommentHits": 10558,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 22,
-        "commentCoverage": 0.02841178141869495,
+        "commentCoverage": 0.028414472437961736,
         "limited": false,
         "points": 22,
         "themes": [
@@ -6898,27 +6897,27 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 107,
-        "fetchedStoryCount": 102,
+        "fetchedStoryCount": 107,
         "validatedStoryCount": 17,
-        "storyCoverage": 0.9532710280373832,
-        "estimatedRelevantDiscussions": 18,
-        "isEstimated": true,
-        "rawCommentHits": 1185,
+        "storyCoverage": 1,
+        "estimatedRelevantDiscussions": 17,
+        "isEstimated": false,
+        "rawCommentHits": 1187,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 49,
-        "commentCoverage": 0.25316455696202533,
+        "commentCoverage": 0.2527379949452401,
         "limited": false,
         "points": 472,
         "themes": [
           {
             "id": "price",
             "label": "Price",
-            "count": 18
+            "count": 19
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 16
+            "count": 15
           },
           {
             "id": "coding",
@@ -6975,8 +6974,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 18,
-            "isEstimated": true
+            "discussions": 17,
+            "isEstimated": false
           }
         ]
       },
@@ -6991,10 +6990,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": false,
-        "rawCommentHits": 4676,
+        "rawCommentHits": 4671,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.0641573994867408,
+        "commentCoverage": 0.06422607578676943,
         "limited": false,
         "points": 348,
         "themes": [
