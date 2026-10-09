@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-09T17:30:30.195Z",
+  "updatedAt": "2026-10-09T17:45:27.159Z",
   "build": {
-    "sha": "d58e1607e1a23da097202f4fb1463efebfb9dd43",
-    "shortSha": "d58e160",
+    "sha": "00805f57f3e98e5517f8c9d8fb28ad9563d2ca19",
+    "shortSha": "00805f5",
     "ref": "main",
-    "builtAt": "2026-10-09T17:30:58.622Z"
+    "builtAt": "2026-10-09T17:45:47.796Z"
   },
   "dataHealth": {
     "feedsSucceeded": 14,
@@ -12,21 +12,21 @@
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
     "historyDepthDays": 59.7,
-    "estimatedDatasets": 4,
-    "buildSha": "d58e160",
-    "lastSuccessfulUpdate": "2026-10-09T17:30:30.195Z"
+    "estimatedDatasets": 5,
+    "buildSha": "00805f5",
+    "lastSuccessfulUpdate": "2026-10-09T17:45:27.159Z"
   },
   "ticker": [
     "ANTHROPIC BANS ‘ABUSIVE OR CRUEL BEHAVIOR’ TOWARD CLAUDE",
+    "ANTHROPIC PAUSES FREE CLAUDE STARTUP PERKS DAYS AFTER LAUNCH",
     "FIRED OPENAI SAFETY RESEARCHERS DISPUTE MISCONDUCT CLAIMS, WARN OF CHILLING EFFECT",
     "ANTHROPIC LAUNCHES FREE AI SECURITY SCANS FOR OPEN-SOURCE PROJECTS",
     "OPENAI’S MATH SOLUTIONS AREN’T MEETING THE FIELD’S STANDARDS YET",
     "ANTHROPIC LAUNCHES DASHBOARD, ANIMATION TOOLS FOR CLAUDE",
-    "GOOGLE IS LAUNCHING A ONE-STOP GEMINI AGENT FOR YOUR WORK TASKS",
     "AMAZON DROPS DATA CENTER NDAS, AND AI AGENTS WANT YOUR CREDIT CARD",
+    "GOOGLE IS LAUNCHING A ONE-STOP GEMINI AGENT FOR YOUR WORK TASKS",
     "OPENAI DOUBLES DOWN ON DECISION TO FIRE THREE AI SAFETY RESEARCHERS",
-    "ANTHROPIC CHANGES USAGE POLICY TO BAN MODEL ABUSE AND ELECTION INTERFERENCE",
-    "INTRODUCING THE ANTHROPIC CYBER MISSION"
+    "ANTHROPIC CHANGES USAGE POLICY TO BAN MODEL ABUSE AND ELECTION INTERFERENCE"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "policy",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 85,
+      "significance": 84,
       "impact": "high",
       "verification": "corroborated",
       "sourceCount": 4,
@@ -63,6 +63,32 @@
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5",
+      "clusterId": "85uzk6",
+      "title": "Anthropic Pauses Free Claude Startup Perks Days After Launch",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5",
+      "dateISO": "2026-10-09T14:54:37.000Z",
+      "date": "OCT 09 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5"
+        }
+      ],
+      "sourceName": "Forbes",
       "entityIds": [
         "claude"
       ]
@@ -172,32 +198,6 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise",
-      "clusterId": "e7lqny",
-      "title": "Google is launching a one-stop Gemini agent for your work tasks",
-      "desc": "Google is launching a \"universal\" Gemini AI agent that can work across apps and devices in the background. The tool, announced as part of the Gemini at Work event on Thursday, will be available within the Gemini Enterprise app, allowing users to chat with the Gemini agent and assign it tasks from a single interface. […]",
-      "url": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise",
-      "dateISO": "2026-10-08T14:28:03.000Z",
-      "date": "OCT 08 2026",
-      "category": "adoption",
-      "catConfidence": 0.5,
-      "family": "product",
-      "significance": 60,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://techcrunch.com/podcast/amazon-drops-data-center-ndas-and-ai-agents-want-your-credit-card/",
       "clusterId": "fcipkc",
       "title": "Amazon drops data center NDAs, and AI agents want your credit card",
@@ -224,6 +224,32 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
+    },
+    {
+      "id": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise",
+      "clusterId": "e7lqny",
+      "title": "Google is launching a one-stop Gemini agent for your work tasks",
+      "desc": "Google is launching a \"universal\" Gemini AI agent that can work across apps and devices in the background. The tool, announced as part of the Gemini at Work event on Thursday, will be available within the Gemini Enterprise app, allowing users to chat with the Gemini agent and assign it tasks from a single interface. […]",
+      "url": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise",
+      "dateISO": "2026-10-08T14:28:03.000Z",
+      "date": "OCT 08 2026",
+      "category": "adoption",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 59,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1007904/google-gemini-ai-agent-enterprise"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "gemini"
+      ]
     },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1008604/openai-defends-decision-fire-safety-researchers",
@@ -682,7 +708,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 49,
+      "significance": 48,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -1133,67 +1159,25 @@
         "gpt",
         "claude"
       ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
-      "clusterId": "12l6dix",
-      "title": "Anthropic says it disrupted scientists using Claude AI for possible biological weapons development",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
-      "dateISO": "2026-09-10T07:00:00.000Z",
-      "date": "SEP 10 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 5,
-      "sources": [
-        {
-          "name": "Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41Q1h2QkF0SGRpMFZSMVN5al9RNkhQLTR4MDc0cHJNbndmdndTbHE5cGswRFk4SS1JbVhmXzdWNm5KRDlJa3FiUkt6T01MZUNiTjhON2R6cFJtQQ?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZy04cUpKZ1lLWHB3Zmp5N19XeEEwdi13bjBZYllISzltVk5HaDdlUnJqOEJFZUlYVjBxNzhZbUc5NDhDeWdISkUzLWw3b25ZZTYxZG4tZUFjLXU5T3F2YlZ2M1QtNDdZcDZ1anZlTVFGZzlmY2dYNGRLelY5TjRTMDU4d1QxaDRYY0JvNXBIZ0FQUWxiMVJzQlc3V0plQTd2M19oWWRVUjV3aXdvOHhXREJ0STBfdW9LZkw1QnV0Mk5MQkhRaldlQ1NsSDJHcTkt?oc=5"
-        },
-        {
-          "name": "Al Jazeera",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
-        },
-        {
-          "name": "CBS News",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5"
-        }
-      ],
-      "sourceName": "CBS News",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
-      "category": "opensource",
-      "title": "Anthropic launches free AI security scans for open-source projects",
-      "summary": "Anthropic's offering to help open-source projects track down security vulnerabilities with a new service called OSS Scanner. It says open-source projects that opt-in will get \"tho…",
-      "significance": 65,
-      "impact": "notable",
+      "category": "product",
+      "title": "Anthropic Pauses Free Claude Startup Perks Days After Launch",
+      "summary": "Anthropic Pauses Free Claude Startup Perks Days After Launch",
+      "significance": 73,
+      "impact": "high",
       "verification": "single",
-      "date": "OCT 08 2026",
-      "dateISO": "2026-10-08T21:53:51.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+      "date": "OCT 09 2026",
+      "dateISO": "2026-10-09T14:54:37.000Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner"
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5"
         }
       ],
       "entityIds": [
@@ -1206,7 +1190,7 @@
       "category": "policy",
       "title": "Anthropic bans ‘abusive or cruel behavior’ toward Claude",
       "summary": "Anthropic is making changes to its usage policy for the first time in over a year to reflect new and high-risk cases of misuse - including election interference, weapons developme…",
-      "significance": 85,
+      "significance": 84,
       "impact": "high",
       "verification": "corroborated",
       "date": "OCT 08 2026",
@@ -1288,6 +1272,17 @@
       "logoKey": "anthropic",
       "items": [
         {
+          "h": "Anthropic Pauses Free Claude Startup Perks Days After Launch",
+          "d": "OCT 09 2026",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNSXhCYjlxWDNfb1ltVFFTVTkxdjdiS2p0RlB2UjU1a3BlaVNqbUM0WVlIS2dOdV9JaVE0ZHI3VFFzVkZJZU5PZHVieTRMVU1MWFNITzNUZVg4ZHRrQ3Z4cThUUlpQeHZ0QnRSb3M2RjR0OXhnbnhQbHBiX1EtRnBkTjZfUl9ENTROZ0E1aERQOF9ZcUxUdUF4Tl9YWkx0VkUtQnRWaDVoVWZmREthbFJMYnJ3?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Forbes",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "high"
+        },
+        {
           "h": "Anthropic launches free AI security scans for open-source projects",
           "d": "OCT 08 2026",
           "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
@@ -1327,17 +1322,6 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Amazon Web Services (AWS)",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
-          "h": "Anthropic launches third Claude 5.5 model, expanding AI lineup before planned IPO",
-          "d": "OCT 07 2026",
-          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbENadk1Lcm1iLUZOd0hYSmRZLWJHLTd0YjAwTExuMVozWW9McllnVWJuTHdPY3ZfRWJwVGdzMmpVaHhvODVVMkFMd0U0ejdyRjQxcEJMVzRqcTJqbWVaLXI5QnM1ckRSYmZVYjlBR2NqRTZaaW42QjFZMC00ZmxKOF9Fal9EODV2dEZnb1BPUDBlSFJrRDVtWkNLTWhacE04b3dyemlvckZTR3JmR0xONmxGb19hNU1tWFJMcVlJajNYUQ?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Reuters",
           "sourceCount": 1,
           "verification": "single",
           "impact": "notable"
@@ -1677,11 +1661,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 229.886,
-      "changePct": -0.2577668184490733,
+      "price": 229.47,
+      "changePct": -0.43821352202292563,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 49241777,
+      "volume": 50693219,
       "ohlc": [
         {
           "d": "07-09",
@@ -2143,22 +2127,22 @@
           "o": 233.875,
           "h": 233.88999938964844,
           "l": 229.11000061035156,
-          "c": 229.88589477539062
+          "c": 229.47000122070312
         }
       ],
-      "relVolume": 0.45150361829405733,
-      "marketCap": 5609218400000
+      "relVolume": 0.4648120599196299,
+      "marketCap": 5599068000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 534.16,
-      "changePct": 2.2100587659455098,
+      "price": 534.6,
+      "changePct": 2.2942520369773014,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 8510820,
+      "volume": 8812605,
       "ohlc": [
         {
           "d": "07-09",
@@ -2620,22 +2604,22 @@
           "o": 528.2349853515625,
           "h": 535.4498901367188,
           "l": 526.2401123046875,
-          "c": 534.1599731445312
+          "c": 534.5999755859375
         }
       ],
-      "relVolume": 0.3834647546039497,
-      "marketCap": 3968808800000
+      "relVolume": 0.39706202384100947,
+      "marketCap": 3972078000000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 362.575,
-      "changePct": 0.6761252456133632,
+      "price": 362.565,
+      "changePct": 0.6733458361565242,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 10459130,
+      "volume": 10630145,
       "ohlc": [
         {
           "d": "07-09",
@@ -3097,22 +3081,22 @@
           "o": 365.5899963378906,
           "h": 366.6300048828125,
           "l": 361.6199951171875,
-          "c": 362.57501220703125
+          "c": 362.56500244140625
         }
       ],
-      "relVolume": 0.4313706809336034,
-      "marketCap": 1783869000000
+      "relVolume": 0.4384239307736819,
+      "marketCap": 1783819800000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 351.88,
-      "changePct": 1.0307491601291783,
+      "price": 352.34,
+      "changePct": 1.1628205500033426,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 9678902,
+      "volume": 9947288,
       "ohlc": [
         {
           "d": "07-09",
@@ -3574,22 +3558,22 @@
           "o": 351.45001220703125,
           "h": 354.70001220703125,
           "l": 350.30999755859375,
-          "c": 351.8800048828125
+          "c": 352.3399963378906
         }
       ],
-      "relVolume": 0.3629547644435728,
-      "marketCap": 4292936000000
+      "relVolume": 0.3730191268485184,
+      "marketCap": 4298547999999.9995
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 260.16,
-      "changePct": 0.00015108663904744523,
+      "price": 260.823,
+      "changePct": 0.0001879570806291244,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 19476247,
+      "volume": 20161249,
       "ohlc": [
         {
           "d": "07-09",
@@ -4051,22 +4035,22 @@
           "o": 256.29998779296875,
           "h": 261.6400146484375,
           "l": 256,
-          "c": 260.15960693359375
+          "c": 260.822509765625
         }
       ],
-      "relVolume": 0.5313307380045614,
-      "marketCap": 2783712000000.0005
+      "relVolume": 0.5500182509630179,
+      "marketCap": 2790806100000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 724.47,
-      "changePct": 0.4966022530404125,
+      "price": 718.121,
+      "changePct": -0.3841229518564884,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 6378325,
+      "volume": 7626693,
       "ohlc": [
         {
           "d": "07-09",
@@ -4528,22 +4512,22 @@
           "o": 726.4199829101562,
           "h": 728.0700073242188,
           "l": 716.6599731445312,
-          "c": 724.469970703125
+          "c": 718.1209106445312
         }
       ],
-      "relVolume": 0.2912297643752554,
-      "marketCap": 1825664400000
+      "relVolume": 0.34822935572464714,
+      "marketCap": 1809664920000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 450.915,
-      "changePct": -1.5447895893603536,
+      "price": 451.25,
+      "changePct": -1.4716457516737058,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 6171197,
+      "volume": 6265192,
       "ohlc": [
         {
           "d": "07-09",
@@ -5005,22 +4989,22 @@
           "o": 464.2099914550781,
           "h": 464.8299865722656,
           "l": 449.75,
-          "c": 450.9150085449219
+          "c": 451.25
         }
       ],
-      "relVolume": 0.6110737364515484,
-      "marketCap": 2340248850000
+      "relVolume": 0.6203811489126582,
+      "marketCap": 2341987500000
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 611.17,
-      "changePct": -1.5321920921966392,
+      "price": 610.075,
+      "changePct": -1.7086067851214957,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 8735208,
+      "volume": 8955475,
       "ohlc": [
         {
           "d": "07-09",
@@ -5482,22 +5466,22 @@
           "o": 625.5399780273438,
           "h": 626.5,
           "l": 608.9000244140625,
-          "c": 611.1699829101562
+          "c": 610.0750122070312
         }
       ],
-      "relVolume": 0.38994584189690856,
-      "marketCap": 990095399999.9999
+      "relVolume": 0.3997787160261916,
+      "marketCap": 988321500000.0001
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 206.205,
-      "changePct": 3.735286798145978,
+      "price": 206.07,
+      "changePct": 3.6673752840776936,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 21632611,
+      "volume": 22144967,
       "ohlc": [
         {
           "d": "07-09",
@@ -5959,22 +5943,22 @@
           "o": 201.05999755859375,
           "h": 206.32989501953125,
           "l": 198.3000030517578,
-          "c": 206.2050018310547
+          "c": 206.07000732421875
         }
       ],
-      "relVolume": 0.941923922807265,
-      "marketCap": 494892000000
+      "relVolume": 0.9642328513685857,
+      "marketCap": 494568000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 141.5,
-      "changePct": 4.281816975500923,
+      "price": 141.872,
+      "changePct": 4.556045602063743,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 16695279,
+      "volume": 17066895,
       "ohlc": [
         {
           "d": "07-09",
@@ -6436,11 +6420,11 @@
           "o": 136.6999969482422,
           "h": 142.64999389648438,
           "l": 136.5,
-          "c": 141.5
+          "c": 141.87210083007812
         }
       ],
-      "relVolume": 0.495937553608706,
-      "marketCap": 397615000000
+      "relVolume": 0.5069765023990708,
+      "marketCap": 398660320000.00006
     }
   ],
   "compute": [
@@ -6450,15 +6434,15 @@
       "rate": "$1.99 – $3.99/hr",
       "trend": "↑ 13% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.73/hr",
-      "trend": "↑ 7% vs 7d ago",
+      "rate": "$3.59 – $5.59/hr",
+      "trend": "↑ 5% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "note": "Live from 6 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6466,7 +6450,7 @@
       "rate": "$5.98 – $8.61/hr",
       "trend": "↓ 5% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 5 rented offers across Vast.ai + RunPod"
+      "note": "Live from 4 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6487,14 +6471,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.38 – $1.79/hr",
-      "trend": "↓ 3% vs 7d ago",
-      "trendClass": "trend-down",
-      "note": "Live from 10 rented offers across Vast.ai + RunPod"
+      "rate": "$0.43 – $1.79/hr",
+      "trend": "→ 1% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-09T17:30:30.195Z",
+    "updatedAt": "2026-10-09T17:45:27.159Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6503,16 +6487,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 387,
+        "rawStoryHits": 351,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 29,
-        "storyCoverage": 0.7751937984496124,
-        "estimatedRelevantDiscussions": 37,
+        "storyCoverage": 0.8547008547008547,
+        "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2626,
+        "rawCommentHits": 2624,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 50,
-        "commentCoverage": 0.11424219345011424,
+        "commentCoverage": 0.11432926829268293,
         "limited": false,
         "points": 545,
         "themes": [
@@ -6576,7 +6560,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 37,
+            "discussions": 34,
             "isEstimated": true
           },
           {
@@ -6591,23 +6575,23 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 908,
+        "rawStoryHits": 909,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 28,
-        "storyCoverage": 0.3303964757709251,
+        "storyCoverage": 0.33003300330033003,
         "estimatedRelevantDiscussions": 87,
         "isEstimated": true,
-        "rawCommentHits": 18629,
+        "rawCommentHits": 6307,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 30,
-        "commentCoverage": 0.01610392398947877,
+        "validatedCommentCount": 31,
+        "commentCoverage": 0.04756619628983669,
         "limited": false,
         "points": 947,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
+            "count": 20
           },
           {
             "id": "reasoning",
@@ -6757,16 +6741,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 72,
-        "fetchedStoryCount": 72,
+        "rawStoryHits": 517,
+        "fetchedStoryCount": 300,
         "validatedStoryCount": 9,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 9,
-        "isEstimated": false,
-        "rawCommentHits": 10551,
+        "storyCoverage": 0.5802707930367504,
+        "estimatedRelevantDiscussions": 16,
+        "isEstimated": true,
+        "rawCommentHits": 10555,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 22,
-        "commentCoverage": 0.028433323855558714,
+        "commentCoverage": 0.028422548555187114,
         "limited": false,
         "points": 22,
         "themes": [
@@ -6815,8 +6799,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 9,
-            "isEstimated": false
+            "discussions": 16,
+            "isEstimated": true
           },
           {
             "name": "xAI GitHub",
@@ -6830,8 +6814,8 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 80,
-        "fetchedStoryCount": 80,
+        "rawStoryHits": 79,
+        "fetchedStoryCount": 79,
         "validatedStoryCount": 7,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 7,
@@ -6914,15 +6898,15 @@
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
         "rawStoryHits": 107,
-        "fetchedStoryCount": 102,
+        "fetchedStoryCount": 104,
         "validatedStoryCount": 17,
-        "storyCoverage": 0.9532710280373832,
-        "estimatedRelevantDiscussions": 18,
+        "storyCoverage": 0.9719626168224299,
+        "estimatedRelevantDiscussions": 17,
         "isEstimated": true,
-        "rawCommentHits": 1181,
+        "rawCommentHits": 1179,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 51,
-        "commentCoverage": 0.2540220152413209,
+        "commentCoverage": 0.2544529262086514,
         "limited": false,
         "points": 472,
         "themes": [
@@ -6991,7 +6975,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 18,
+            "discussions": 17,
             "isEstimated": true
           }
         ]
@@ -7007,10 +6991,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 18,
         "isEstimated": false,
-        "rawCommentHits": 4687,
+        "rawCommentHits": 4686,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 37,
-        "commentCoverage": 0.06400682739492213,
+        "commentCoverage": 0.06402048655569782,
         "limited": false,
         "points": 348,
         "themes": [
@@ -7171,14 +7155,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding",
-          "speed"
+          "reasoning"
         ],
-        "excerpt": "…Technical Documentation, Mentoring AI-Assisted Development: Claude Code, Cursor, GitHub CopilotRésumé/CV:https://drive.google.com/file/d/1pUS80ZK3fA1qFAmfgxJCjfW4iFN...Email:…",
+        "excerpt": "…any reason GLM and DeepSeek won't eventually be as good as Claude, it's just a matter of time and 2) the open models are well and truly capable enough for most of what I'd want…",
         "source": "Hacker News",
-        "author": "davidlang422",
-        "publishedAt": "2026-10-08T17:40:20.000Z",
-        "url": "https://news.ycombinator.com/item?id=50009085"
+        "author": "denkmoon",
+        "publishedAt": "2026-10-08T22:36:58.000Z",
+        "url": "https://news.ycombinator.com/item?id=50013406"
       },
       {
         "modelId": "claude",
@@ -7195,13 +7178,25 @@
       {
         "modelId": "claude",
         "themes": [
+          "coding",
+          "speed"
+        ],
+        "excerpt": "…Technical Documentation, Mentoring AI-Assisted Development: Claude Code, Cursor, GitHub CopilotRésumé/CV:https://drive.google.com/file/d/1pUS80ZK3fA1qFAmfgxJCjfW4iFN...Email:…",
+        "source": "Hacker News",
+        "author": "davidlang422",
+        "publishedAt": "2026-10-08T17:40:20.000Z",
+        "url": "https://news.ycombinator.com/item?id=50009085"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
           "reasoning"
         ],
-        "excerpt": "…any reason GLM and DeepSeek won't eventually be as good as Claude, it's just a matter of time and 2) the open models are well and truly capable enough for most of what I'd want…",
+        "excerpt": "…people are doing PR reviews with AI and saying \"IDK ask claude\" and giving you LLM output in response to your questions then you're going against the grain by having…",
         "source": "Hacker News",
-        "author": "denkmoon",
-        "publishedAt": "2026-10-08T22:36:58.000Z",
-        "url": "https://news.ycombinator.com/item?id=50013406"
+        "author": "advael",
+        "publishedAt": "2026-10-08T22:40:19.000Z",
+        "url": "https://news.ycombinator.com/item?id=50013440"
       },
       {
         "modelId": "claude",
@@ -7214,17 +7209,6 @@
         "author": "arthurthecreato",
         "publishedAt": "2026-10-09T14:52:00.000Z",
         "url": "https://news.ycombinator.com/item?id=50021352"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "reasoning"
-        ],
-        "excerpt": "…people are doing PR reviews with AI and saying \"IDK ask claude\" and giving you LLM output in response to your questions then you're going against the grain by having…",
-        "source": "Hacker News",
-        "author": "advael",
-        "publishedAt": "2026-10-08T22:40:19.000Z",
-        "url": "https://news.ycombinator.com/item?id=50013440"
       },
       {
         "modelId": "gemini",
