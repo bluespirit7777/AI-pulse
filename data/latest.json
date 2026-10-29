@@ -1,34 +1,60 @@
 {
-  "updatedAt": "2026-10-29T05:32:30.062Z",
+  "updatedAt": "2026-10-29T11:41:20.232Z",
   "build": {
-    "sha": "03668fe5bcc4afce256d3d58c004e577ae0408cc",
-    "shortSha": "03668fe",
+    "sha": "d1e7037bb262b2282d124a4d60d6902cc8dd049a",
+    "shortSha": "d1e7037",
     "ref": "main",
-    "builtAt": "2026-10-29T05:32:45.869Z"
+    "builtAt": "2026-10-29T11:41:40.484Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 9,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.2,
+    "historyDepthDays": 59.5,
     "estimatedDatasets": 4,
-    "buildSha": "03668fe",
-    "lastSuccessfulUpdate": "2026-10-29T05:32:30.062Z"
+    "buildSha": "d1e7037",
+    "lastSuccessfulUpdate": "2026-10-29T11:41:20.232Z"
   },
   "ticker": [
+    "WE URGENTLY NEED TO MONITOR AI AGENTS’ ACTIONS IN REAL TIME",
     "MICROSOFT RECORDED $10 BILLION IN REVENUE FROM OPENAI",
-    "MICROSOFT JUST SHARED AZURE’S ACTUAL REVENUE IN DOLLARS: $33.2 BILLION",
     "GOOGLE EXPANDS AI SEARCH ADS GLOBALLY AS CORE AD GROWTH SLOWS",
-    "ANTHROPIC JUST LAUNCHED TOOLS TO SHOW COMPANIES WHAT THEIR AI SPENDING IS BUYING",
+    "MICROSOFT JUST SHARED AZURE’S ACTUAL REVENUE IN DOLLARS: $33.2 BILLION",
     "ANTHROPIC UNVEILS ADDITIONAL CLAUDE TOOLS FOR LAWYERS",
     "OPENAI AND SERVICENOW EXPAND PARTNERSHIP ACROSS ENTERPRISE WORKFLOWS",
-    "ANTHROPIC SUED FOR ALLEGEDLY TRAINING CLAUDE ON ELVIS PRESLEY'S MUSIC",
+    "WILL THE REAL ANTHROPIC PLEASE STAND UP",
     "PARENTS SUE OPENAI, ALLEGING GPT-4O COACHED THEIR DAUGHTER OFF SEIZURE MEDICATION",
     "XAI IS BUYING OUT HOMEOWNERS WHO PROMISE NOT TO SUE OVER DATA CENTER NOISE",
-    "WHAT TO KNOW AHEAD OF ANTHROPIC’S IPO (NASDAQ: ANT)"
+    "LEGORA IS BUILDING THE AGENTIC OPERATING SYSTEM FOR LEGAL WORK"
   ],
   "signals": [
+    {
+      "id": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+      "clusterId": "cq126",
+      "title": "We urgently need to monitor AI agents’ actions in real time",
+      "desc": "This summer, hundreds of OpenAI agents tried to cheat on a cybersecurity test. They broke out of their test environment and successfully hacked Hugging Face, a site that they believed held clues about how they’d be graded. Around the same time, another OpenAI agent accessed private files from an Australian government website. It’s a problem…",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+      "dateISO": "2026-10-29T10:11:12.000Z",
+      "date": "OCT 29 2026",
+      "category": "opensource",
+      "catConfidence": 0.67,
+      "family": "product",
+      "significance": 75,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/"
+        }
+      ],
+      "sourceName": "MIT Technology Review",
+      "entityIds": [
+        "gpt"
+      ]
+    },
     {
       "id": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
       "clusterId": "531zau",
@@ -40,8 +66,8 @@
       "category": "market",
       "catConfidence": 0.54,
       "family": "market",
-      "significance": 72,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -56,6 +82,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+      "clusterId": "1866wod",
+      "title": "Google expands AI Search ads globally as core ad growth slows",
+      "desc": "The announcement came alongside parent company Alphabet's third-quarter earnings report, which saw revenue grow 25% year over year to $127.6 billion.",
+      "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+      "dateISO": "2026-10-28T21:48:37.000Z",
+      "date": "OCT 28 2026",
+      "category": "market",
+      "catConfidence": 0.86,
+      "family": "market",
+      "significance": 68,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
       "clusterId": "gi4xf0",
       "title": "Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
@@ -66,8 +118,8 @@
       "category": "market",
       "catConfidence": 0.78,
       "family": "market",
-      "significance": 70,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -83,58 +135,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
-      "clusterId": "1866wod",
-      "title": "Google expands AI Search ads globally as core ad growth slows",
-      "desc": "The announcement came alongside parent company Alphabet's third-quarter earnings report, which saw revenue grow 25% year over year to $127.6 billion.",
-      "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
-      "dateISO": "2026-10-28T21:48:37.000Z",
-      "date": "OCT 28 2026",
-      "category": "market",
-      "catConfidence": 0.86,
-      "family": "market",
-      "significance": 70,
-      "impact": "high",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5",
-      "clusterId": "kasuau",
-      "title": "Anthropic just launched tools to show companies what their AI spending is buying",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5",
-      "dateISO": "2026-10-28T19:19:58.000Z",
-      "date": "OCT 28 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 69,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbFBaWDBVa3BKM0dEcGpjZldpYXlJb1pZdDYtMFFOaDJpMEtjWkVyaGMtVHhGd0pwZDRLLUJhNnlveHJwZHNsckY1STlMZXBuc1Z4SUpiSEJVTFlWR0I5d1o3X3ZabkRNMkE0TDRTaVNiVnRzS0o4S1JTcllTVUVPZ1JXOFI1bFV2dm1JaE00YzluSGZwY2V4NDk1aVB3c1RTX2pFZUk5SzQ?oc=5",
       "clusterId": "yumvej",
       "title": "Anthropic unveils additional Claude tools for lawyers",
@@ -145,7 +145,7 @@
       "category": "product",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 68,
+      "significance": 65,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -171,7 +171,7 @@
       "category": "adoption",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 67,
+      "significance": 64,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -188,27 +188,55 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aM0VCcEtCcW8wb2VSYU8zM2ducWdqTGtXbTVSQlVFenFITHdISHUzVllRRXdSNGtBcHVWcjYyd1VJTk9BcWRjeVdCYVFkVkJtWlE4cEp4eHMwUE4zakZGUlE4QnVHbUpnbVRUSTNYU0QzQkxiamRkdlB2OWsxVlU?oc=5",
-      "clusterId": "5sqzih",
-      "title": "Anthropic sued for allegedly training Claude on Elvis Presley's music",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aM0VCcEtCcW8wb2VSYU8zM2ducWdqTGtXbTVSQlVFenFITHdISHUzVllRRXdSNGtBcHVWcjYyd1VJTk9BcWRjeVdCYVFkVkJtWlE4cEp4eHMwUE4zakZGUlE4QnVHbUpnbVRUSTNYU0QzQkxiamRkdlB2OWsxVlU?oc=5",
-      "dateISO": "2026-10-28T08:03:45.000Z",
-      "date": "OCT 28 2026",
-      "category": "policy",
-      "catConfidence": 0.67,
+      "id": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/",
+      "clusterId": "1ee3jg7",
+      "title": "Will the real Anthropic please stand up",
+      "desc": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. After weeks of frenzied speculation, Anthropic has filed its IPO prospectus. The 335-page document (100 pages or so are focused on risks) lays out the company’s unique view of the technology it…",
+      "url": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/",
+      "dateISO": "2026-10-26T17:45:43.000Z",
+      "date": "OCT 26 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
       "family": "market",
-      "significance": 67,
+      "significance": 63,
       "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 8,
       "sources": [
         {
-          "name": "Mashable",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1aM0VCcEtCcW8wb2VSYU8zM2ducWdqTGtXbTVSQlVFenFITHdISHUzVllRRXdSNGtBcHVWcjYyd1VJTk9BcWRjeVdCYVFkVkJtWlE4cEp4eHMwUE4zakZGUlE4QnVHbUpnbVRUSTNYU0QzQkxiamRkdlB2OWsxVlU?oc=5"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/"
+        },
+        {
+          "name": "Axios",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBOQkpIcTdUQTA1ZWJqVUh5Z3gxZ0NYVmMweHhFX3paZm1KWDJNblhKVEozTmIxZTdMX3YwLVNxUklhekF4ZENmY08xNk5zYmhDeTFxUWk1aVNWWWlnM0tMU0pscXhzeFpGZG9ZTERWZWs?oc=5"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/"
         }
       ],
-      "sourceName": "Mashable",
+      "sourceName": "MIT Technology Review",
       "entityIds": [
         "claude"
       ]
@@ -224,7 +252,7 @@
       "category": "policy",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 65,
+      "significance": 62,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -251,7 +279,7 @@
       "category": "policy",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 64,
+      "significance": 61,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -264,216 +292,6 @@
       "sourceName": "The Verge",
       "entityIds": [
         "grok"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNFNBR2Q0SFRtdTdYRW90WUJnX0dDSGhEVHhlSTdRSjBVX3JzQ1ltbEtFb3VuakNSY0dLSlJrei1iS3dPTm1ZWGk2M0hKTHJvdC1PbmhPZFE3dDZNcE1CU252cG0tWUtNdXkyc05OazVkbXFxM01LSldyc1B3MjJlQ0hDSi1MNTQ?oc=5",
-      "clusterId": "e9v0gi",
-      "title": "What to Know Ahead of Anthropic’s IPO (NASDAQ: ANT)",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNFNBR2Q0SFRtdTdYRW90WUJnX0dDSGhEVHhlSTdRSjBVX3JzQ1ltbEtFb3VuakNSY0dLSlJrei1iS3dPTm1ZWGk2M0hKTHJvdC1PbmhPZFE3dDZNcE1CU252cG0tWUtNdXkyc05OazVkbXFxM01LSldyc1B3MjJlQ0hDSi1MNTQ?oc=5",
-      "dateISO": "2026-10-26T07:00:00.000Z",
-      "date": "OCT 26 2026",
-      "category": "capital",
-      "catConfidence": 0.46,
-      "family": "market",
-      "significance": 61,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 18,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/"
-        },
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9Vc2N5SUR3WmY1a1l1cWJRbFM1RXVLakdBUGc1YWZ0dWRjLVhfN2ZZX2lHUG9pcU1HVno0cnMyY096UWp5b1lmYmlSRTN6SnI5ZFhGTGE2NGtUWkM0cUhCazlDM0l1LTh6ZkNYWFlwbGZuQ3pDdUZjLUc2bU9JZ9IBgwFBVV95cUxPbnp1REdiQWJ3c1Vic0N1cEtITFRkbDlraEY0VzJhTVhLdmd5RHYweHVCWllTNlJsajJ3d3gxa2RhV0ZWRjZJNkRZYjFjQm0zZWJkTTRPSlBrRjZnQmk1RFlsUXpjc3NiakxuVlZfckNxcC1lbHUwMTZNQnJOR2FNbzMyRQ?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/27/vcs-will-make-billions-on-anthropics-ipo-but-amazon-is-set-to-make-much-much-more/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/27/whos-really-in-charge-at-anthropic-after-the-ipo/"
-        },
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity/"
-        },
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/anthropic-says-it-will-revolutionize-biology-some-day/"
-        },
-        {
-          "name": "news8000.com",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQMUtTcHB5QUpHMXpMZF85SEpvaHk5MW5Mb2lOTk1DY2xDNVl6Q0ZxdXMwLWN4TnhfUnJLWTZ1WVR1VHJBNEtndlNlZV9UV0ZxSXpESUp4RF9odXFxdHdEM1Vtb1d4NW5KaXdNZXBhbDBjMmZnc09jTWYxVjlQaE1IWjdLTmpBaUw1WTBoUWFRRnlDaDY4d20yTndvdGdzVHVSN3lXY2I2N1dRSTlSYWtOenV1a1l4eFdUMnEzR2k4Q2Y2cDZoM1Z0cnhYeEg?oc=5"
-        },
-        {
-          "name": "The Motley Fool",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQUzhMMkI3Y3dpUF9qeVJNTmdwR0F6aFNFX21sSC1BMlhtSGZlTVp4OFl1REM3V2w5NG9UN3dtTmZMSldwd244SmJlMEJCZ3BxY3JmNUphX0ZqdUxsZThNekRXUVpFZi00NGdST2xhck04Mnd5bkZiMzF5OWJMUURoWnNNeXRzQ2JqRFdxR0d0Y1IyN2RuQ0p0dw?oc=5"
-        },
-        {
-          "name": "CNN",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBza2QxNFoyWmFrS01XUFNGR2E0NVVYOGhTSTdzYkxVaXM0cUdWc1BCaEVjWFdLNUw0eDJENzRwVnBmUkMxUEh3Y0ZkQktzeEJrWUs4QUVXTmhFRWp0a1ktTExrZXZrNGZlQmZCTWR1M2hOSGZBT0JN?oc=5"
-        },
-        {
-          "name": "Ad Age",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1PTWtnODFIYUdzR0tSQ3J0bDY4eHktUUdFXzJSa0hwWmpYaU9Fd3ZGU0lZM0tIMU1MTEphd21ZU2d5UzNfZElHRjktdF8yazBubWtKTU1NbU5qb0haSGlIcDJCUHkwOUlaTnVROXYtdEJob2MtZUdONmRtMA?oc=5"
-        },
-        {
-          "name": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/"
-        },
-        {
-          "name": "Financial Times",
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdXNxcmV4QUdNRzRjcUJPS2xSR3hjSDJfLUtGTTNBOUdaSEFoSlQ3dmE5ZUNlWjlSX0NUUkZDMlUtd3dpNU13eWlrTTVtTnNrVkZ1eWwta1dxNmJQME9hTGotQ2RtOGRmTWtreHVRNzZFLW40d29LSnM2aTBaZzVfeVNGWUc?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY2pOYXpaOW03X0lrN3B2Yzgtby1PZkg2MEdhRlZrcHVLWFUyd0RDSXU4aTllRXZwek01S2pRdFZRVWtyQzZNRXhNOGdXbG82UDJxZ2JlWmZJdlBBYlczM00wLXBfQkt1MEFkdFM1R3VZU1lhaFYtMkFvZEhPSGdPWHZfUjZ5dy1ZTk5kcEdjNGs2MlVDSE1heTJnRTZSb3pvZllLbzlxRTJiaE05ZGF2TFEzaS1xVXdE?oc=5"
-        },
-        {
-          "name": "Bloomberg",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSU91RXFjTktnUkEyQlRXY3FOdEJBTWNyVVg5QjB4Y0hNaVBFczJSZXdqNXpZWHRxNDBFa0JTWGNSSlhJdFFqSFdXWDVVX01KRTU2Ni1MdU5oYTVGZlBVQjRoYmxIcEI2OUs3UkQ2YjFfdWtUaXFYNFAteTkxaFhUOHBXZ0NaUy1nWnFZREhhaXc5VnhoZW5fVmlVSGVwU3ZhQUJLdE5hU3FSbklJVE1HVzNvUW5jNUh0d0h3TQ?oc=5"
-        },
-        {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQVENSY1FhaHZibXRsdmE4cU00ZllHSFp3UkRwNHFfUDFKdVlfMmRMd2U1SzJnQlNENkFRSnlLUHk1VHVMNktHMGYyOGVPT29ycTQxQXZFMmZWXzNhdTEyOExfY0l2NDdPMFI5T25idHVvYjFsYTFkczk2a2FiaVpfelVrbVJFczZFRXRHSnQ4elp4cUliR3o4VW9xMUpmdUVLZDNBb3RURndMWFExdlJnTTdsN3VOUjZGc29vbzY4bkxOVlV4WlVwVEJrZ3I?oc=5"
-        },
-        {
-          "name": "Barron's",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9WRkRfQnNUQ3JUSFFla2RpQXg5b2FtVlZaX01VTVJXR2JXdHIzc0h6T1pDRmtzbDlZOWZUSU5sNmZvZXRQQVJzMTN1VEl1T3dTcThneHdTNWhRNHFQbHdWWVNSckJFalJuZnhiVERRSUhwVE02YmdrWFdmOA?oc=5"
-        },
-        {
-          "name": "CBS News",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBZSlY5T3JkOG5YNHVNTDNhWGV2Q3dnVjdLX29OUWRGSllaT3p3NmFKUlFZdzM4NTJ3SzJKcWJMa1UxS1dHLXRrLVpGN1JhTXBfZ0xEdk5FODZQZzVpTWdBbHlubWlMX2dZQkM4?oc=5"
-        },
-        {
-          "name": "NerdWallet",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPNFNBR2Q0SFRtdTdYRW90WUJnX0dDSGhEVHhlSTdRSjBVX3JzQ1ltbEtFb3VuakNSY0dLSlJrei1iS3dPTm1ZWGk2M0hKTHJvdC1PbmhPZFE3dDZNcE1CU252cG0tWUtNdXkyc05OazVkbXFxM01LSldyc1B3MjJlQ0hDSi1MNTQ?oc=5"
-        }
-      ],
-      "sourceName": "NerdWallet",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaG5QVkVkdXoyQ0N3eEFmbjBtdGtNNC1jalU4ck1HZ25Ea011cWw0Y2VIY2k0RkhORWppN21pV0Jwd1Q1ZHpYOGNNTTVnM0RpYllJZG9wTS0xczNhMWt4ZE5QcnFVa3FjM0F5dnhYczQtSS1SOXdpU2dlUVhyQVNBd2phbUhOQzZOVktnQjlB?oc=5",
-      "clusterId": "1mba2fy",
-      "title": "Anthropic acquires a one-person biotech that used Claude to coordinate 11 labs",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaG5QVkVkdXoyQ0N3eEFmbjBtdGtNNC1jalU4ck1HZ25Ea011cWw0Y2VIY2k0RkhORWppN21pV0Jwd1Q1ZHpYOGNNTTVnM0RpYllJZG9wTS0xczNhMWt4ZE5QcnFVa3FjM0F5dnhYczQtSS1SOXdpU2dlUVhyQVNBd2phbUhOQzZOVktnQjlB?oc=5",
-      "dateISO": "2026-10-27T23:10:40.000Z",
-      "date": "OCT 27 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 61,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "R&D World",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaG5QVkVkdXoyQ0N3eEFmbjBtdGtNNC1jalU4ck1HZ25Ea011cWw0Y2VIY2k0RkhORWppN21pV0Jwd1Q1ZHpYOGNNTTVnM0RpYllJZG9wTS0xczNhMWt4ZE5QcnFVa3FjM0F5dnhYczQtSS1SOXdpU2dlUVhyQVNBd2phbUhOQzZOVktnQjlB?oc=5"
-        }
-      ],
-      "sourceName": "R&D World",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
-      "clusterId": "1yyml64",
-      "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
-      "desc": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite its apparent course correction, researchers who spoke to The Verge are growing increasingly tired of the company's antics. It has been a turbulent few months between OpenAI […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
-      "dateISO": "2026-10-27T20:48:58.000Z",
-      "date": "OCT 27 2026",
-      "category": "research",
-      "catConfidence": 0.75,
-      "family": "research",
-      "significance": 61,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONzM4X2pFVmMwLXdqWXduTS01UTJHZEtPY2V0WEdiVm93aF80Z1hKMTFySnhOWXFvYlA3SUpmTEhJRTZjV05RaVB1V3R6Wnk5MlI3OEg3MWYyVk5BTjZzbHdnekYwMXhQczZpajFZaGJMdWxyaUpEZzRpQ2d3TnAxcm5PeDAyVjRKQWFfZkg5b1dTRWhqb1FHQjJVT1BTTHc0Y2hWZQ?oc=5",
-      "clusterId": "zymutl",
-      "title": "FINNY Comes to Anthropic’s Claude for Financial Advisors, Bringing Campaign Results and Prospect Data",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONzM4X2pFVmMwLXdqWXduTS01UTJHZEtPY2V0WEdiVm93aF80Z1hKMTFySnhOWXFvYlA3SUpmTEhJRTZjV05RaVB1V3R6Wnk5MlI3OEg3MWYyVk5BTjZzbHdnekYwMXhQczZpajFZaGJMdWxyaUpEZzRpQ2d3TnAxcm5PeDAyVjRKQWFfZkg5b1dTRWhqb1FHQjJVT1BTTHc0Y2hWZQ?oc=5",
-      "dateISO": "2026-10-27T16:00:00.000Z",
-      "date": "OCT 27 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "PYMNTS.com",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOYUJGRDYxZ0dJMk5hMjh3Q0k1UDlMU1NpcGlhLWhCdUVfLVgtU1dka1dZMk9QOXpFYS1HY2UyUU9SZU1SNGZpTkpuVm43S1VBY3BlbWE0cmxfSmR0TndfRk11dWM0RzJtZUM5SENaazl4OUkzY1Zmbnlhc200WUstZWdfUnJ5R2ZGN3VnOFpwNEZjZ2Z5NFNLWl80Zk5YN0t6Q01oWHh5X2Rsc2JGQWpIQ2pPbzNZUWRhQmZjdmxybWk?oc=5"
-        },
-        {
-          "name": "Seeking Alpha",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUEpnMFBnTk54ME1sRDdUNEN6X0VLQjduQjhUNVFYRlE3SnNoRklYQ3RDcENCWWlhZE1YRnVqTm9aVU9wd3IxT3Z6aG9Nb0xpTXV5bEFldElIQ3pLdnY4ZlgtRFVwR0prc3RWRkpXaFdWWWN3OU1CQnkyYUVfRVhsWTNFel9qNWhPVXUwdUlETQ?oc=5"
-        },
-        {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONzM4X2pFVmMwLXdqWXduTS01UTJHZEtPY2V0WEdiVm93aF80Z1hKMTFySnhOWXFvYlA3SUpmTEhJRTZjV05RaVB1V3R6Wnk5MlI3OEg3MWYyVk5BTjZzbHdnekYwMXhQczZpajFZaGJMdWxyaUpEZzRpQ2d3TnAxcm5PeDAyVjRKQWFfZkg5b1dTRWhqb1FHQjJVT1BTTHc0Y2hWZQ?oc=5"
-        },
-        {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQlBhY1Ytb2dtRy1xXzZoM0tFWklYN213VGhSWnRYcGZlTzBVR3hESlh5QnlORVhjNmtxRFNIeW9kNUxxejE3UXJuYnR3R2psX0lNOHd0bXZLX3ZDYW96MWdsNC1QcFE1UlVKR09NdC1zOHlQaEZkZXM0X2lCbmJOdFZEWGx3S0VOczVXYnRiN3p3SnZ4NTlpYUVxQ3hOMms5V3hF?oc=5"
-        }
-      ],
-      "sourceName": "Yahoo Finance",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbHVZRnFMZ3RKdmREOW9PaTRrdURtSVJQN0NWcFhJcUFXYlNuVzNpajdYVVFPWjd2enJ6bmh5TUgtVWVXTTBvOWFVS0x5YXlmeWp1Z1NuaDJnM056RjRudXFuWVQ0bllKdGNsTFlEbV9ia18wZjVrZ0JuU1hkOHYtNHJqZThRRU9lWnhzS2dud3ZtWjJD?oc=5",
-      "clusterId": "1hlma6t",
-      "title": "Four takeaways from Anthropic’s potentially record-breaking stock market filing",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbHVZRnFMZ3RKdmREOW9PaTRrdURtSVJQN0NWcFhJcUFXYlNuVzNpajdYVVFPWjd2enJ6bmh5TUgtVWVXTTBvOWFVS0x5YXlmeWp1Z1NuaDJnM056RjRudXFuWVQ0bllKdGNsTFlEbV9ia18wZjVrZ0JuU1hkOHYtNHJqZThRRU9lWnhzS2dud3ZtWjJD?oc=5",
-      "dateISO": "2026-10-27T15:27:00.000Z",
-      "date": "OCT 27 2026",
-      "category": "market",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbHVZRnFMZ3RKdmREOW9PaTRrdURtSVJQN0NWcFhJcUFXYlNuVzNpajdYVVFPWjd2enJ6bmh5TUgtVWVXTTBvOWFVS0x5YXlmeWp1Z1NuaDJnM056RjRudXFuWVQ0bllKdGNsTFlEbV9ia18wZjVrZ0JuU1hkOHYtNHJqZThRRU9lWnhzS2dud3ZtWjJD?oc=5"
-        }
-      ],
-      "sourceName": "The Guardian",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -502,64 +320,6 @@
         "chatgpt",
         "gpt"
       ]
-    },
-    {
-      "id": "https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/",
-      "clusterId": "129guxc",
-      "title": "Why Anthropic’s IPO Prospectus Is Missing So Many Key Figures",
-      "desc": "Anthropic’s S-1 filing is hundreds of pages long—and it leaves out quite a few financial details. “Anthropic owes investors more information,” one analyst tells WIRED.",
-      "url": "https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/",
-      "dateISO": "2026-10-26T21:27:15.000Z",
-      "date": "OCT 26 2026",
-      "category": "capital",
-      "catConfidence": 0.55,
-      "family": "market",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPYllMbFRuTjU1YW5QWWRQd3JFZ0VkRk52dTl6RG04VEFZZC1HalMxaE9Iem01ZlN4MW5udlBWdUtvVU93U1BETlFVamk5SlNCam1XVVRzWExBemxDSC1yM0pDSHlkR1ZHNlpSNG02OTZCcVlEMGZiUXVBUkRWaWRQYVhkLUNrUmwwZEZ0YXZ6a29pemJHZGNaU2hpVUbSAaIBQVVfeXFMTmt4Q1hTcjFXT0kwZGNHeVE2bU9GaFUxeTVKTmx5bjhmMGFOOTI2R1N1ellVLWQtYzFSZWJBVzU3WDVILWRMR05LSEFnVFNTd1lLNGJyc3k5VjBLWUI1T3lfMmtXcFBENEJQZ3ZVTktfTjJpRFRYS0ktb0tOZkxCSzlPWmM4TXlPTC1zemFtZmpzUUNQQ1RuaEg1MGtKUEgzaU93?oc=5"
-        },
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/",
-      "clusterId": "1lag42h",
-      "title": "The ‘Vulnpocalypse’ is coming for the internet’s aging code, says Wiz’s CTO",
-      "desc": "The PHP scare may have faded from your feed, but the cleanup is far from over. Last week, two critical bugs in the open source language behind roughly 70% of websites left organizations scrambling to fix their systems, with some taking sites offline until the vulnerabilities could be patched. According to researchers who found the […]",
-      "url": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/",
-      "dateISO": "2026-10-28T18:50:39.000Z",
-      "date": "OCT 28 2026",
-      "category": "opensource",
-      "catConfidence": 0.5,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": []
     },
     {
       "id": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
@@ -630,140 +390,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56X2lqb0JtRDhTZ19hUmN6MEF3dVJkNTdGSGp1MGZRV04zRHN0R0tqU1l1SklfamlyUzhXU0g1YmJtRWRWbHdMVDJHengzeTVaNzFVN09nVWRhQTdya2s0WDRFdnoxcEw5ZHdUMHNZOWVjMm0zbktVZF9VNEVNRFU?oc=5",
-      "clusterId": "bpdmjb",
-      "title": "GSA Expands Anthropic OneGov Deal With 40-Percent Claude Token Discount",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56X2lqb0JtRDhTZ19hUmN6MEF3dVJkNTdGSGp1MGZRV04zRHN0R0tqU1l1SklfamlyUzhXU0g1YmJtRWRWbHdMVDJHengzeTVaNzFVN09nVWRhQTdya2s0WDRFdnoxcEw5ZHdUMHNZOWVjMm0zbktVZF9VNEVNRFU?oc=5",
-      "dateISO": "2026-10-28T21:24:49.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "ExecutiveGov",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56X2lqb0JtRDhTZ19hUmN6MEF3dVJkNTdGSGp1MGZRV04zRHN0R0tqU1l1SklfamlyUzhXU0g1YmJtRWRWbHdMVDJHengzeTVaNzFVN09nVWRhQTdya2s0WDRFdnoxcEw5ZHdUMHNZOWVjMm0zbktVZF9VNEVNRFU?oc=5"
-        }
-      ],
-      "sourceName": "ExecutiveGov",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
-      "clusterId": "13useoc",
-      "title": "Voice AI in vogue: Nvidia releases new open transcription model",
-      "desc": "Nvidia just released a free speech-to-text model that can transcribe up to 40 languages, but it only works on recordings, not live audio, so it’s a big step for meeting and medical transcription tools while still leaving real-time use to rivals like ElevenLabs.",
-      "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
-      "dateISO": "2026-10-28T15:00:00.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/retell-ai",
-      "clusterId": "dja9xg",
-      "title": "Retell uses OpenAI models to help power 100M monthly calls",
-      "desc": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
-      "url": "https://openai.com/index/retell-ai",
-      "dateISO": "2026-10-27T15:00:00.000Z",
-      "date": "OCT 27 2026",
-      "category": "market",
-      "catConfidence": 0.44,
-      "family": "market",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/retell-ai"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWVNRVVR4Y1lWYXF5bm9nU1VOTlk1d3VPdkhuejZyNHBINDMtQ2tFWng4WHhEa1F1UjQzNmFaR1pUVDJlaGVlVGFNSk92TzBOSDVURk5WVlRPMlRSQzNPUzkwWkVCVXgzdEdjSVREcEFyNHJxZmp1dkRUYjRsVnpyZDd2WWJvdl9xWVQ0RkZYeFlqVlZqUHNOMA?oc=5",
-      "clusterId": "w2o085",
-      "title": "A Biotech Used Anthropic’s Claude to Design Better CAR T Signaling Domains",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWVNRVVR4Y1lWYXF5bm9nU1VOTlk1d3VPdkhuejZyNHBINDMtQ2tFWng4WHhEa1F1UjQzNmFaR1pUVDJlaGVlVGFNSk92TzBOSDVURk5WVlRPMlRSQzNPUzkwWkVCVXgzdEdjSVREcEFyNHJxZmp1dkRUYjRsVnpyZDd2WWJvdl9xWVQ0RkZYeFlqVlZqUHNOMA?oc=5",
-      "dateISO": "2026-10-28T18:03:00.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "GenomeWeb",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWVNRVVR4Y1lWYXF5bm9nU1VOTlk1d3VPdkhuejZyNHBINDMtQ2tFWng4WHhEa1F1UjQzNmFaR1pUVDJlaGVlVGFNSk92TzBOSDVURk5WVlRPMlRSQzNPUzkwWkVCVXgzdEdjSVREcEFyNHJxZmp1dkRUYjRsVnpyZDd2WWJvdl9xWVQ0RkZYeFlqVlZqUHNOMA?oc=5"
-        }
-      ],
-      "sourceName": "GenomeWeb",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
-      "clusterId": "1qf1nua",
-      "title": "Google AI gets cagey when asked who won the 2020 elections",
-      "desc": "But the AI responses get more forthright when asked outside the US.",
-      "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
-      "dateISO": "2026-10-28T17:46:32.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 51,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
       "clusterId": "1a20hwv",
       "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
@@ -798,6 +424,116 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/",
+      "clusterId": "1lag42h",
+      "title": "The ‘Vulnpocalypse’ is coming for the internet’s aging code, says Wiz’s CTO",
+      "desc": "The PHP scare may have faded from your feed, but the cleanup is far from over. Last week, two critical bugs in the open source language behind roughly 70% of websites left organizations scrambling to fix their systems, with some taking sites offline until the vulnerabilities could be patched. According to researchers who found the […]",
+      "url": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/",
+      "dateISO": "2026-10-28T18:50:39.000Z",
+      "date": "OCT 28 2026",
+      "category": "opensource",
+      "catConfidence": 0.5,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/the-vulnpocalypse-is-coming-for-the-internets-aging-code-says-wizs-cto/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": []
+    },
+    {
+      "id": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
+      "clusterId": "13useoc",
+      "title": "Voice AI in vogue: Nvidia releases new open transcription model",
+      "desc": "Nvidia just released a free speech-to-text model that can transcribe up to 40 languages, but it only works on recordings, not live audio, so it’s a big step for meeting and medical transcription tools while still leaving real-time use to rivals like ElevenLabs.",
+      "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
+      "dateISO": "2026-10-28T15:00:00.000Z",
+      "date": "OCT 28 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/retell-ai",
+      "clusterId": "dja9xg",
+      "title": "Retell uses OpenAI models to help power 100M monthly calls",
+      "desc": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+      "url": "https://openai.com/index/retell-ai",
+      "dateISO": "2026-10-27T15:00:00.000Z",
+      "date": "OCT 27 2026",
+      "category": "market",
+      "catConfidence": 0.44,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/retell-ai"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
+      "clusterId": "1qf1nua",
+      "title": "Google AI gets cagey when asked who won the 2020 elections",
+      "desc": "But the AI responses get more forthright when asked outside the US.",
+      "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
+      "dateISO": "2026-10-28T17:46:32.000Z",
+      "date": "OCT 28 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
       "clusterId": "5x4sqk",
       "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
@@ -808,7 +544,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 50,
+      "significance": 48,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -824,58 +560,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTHBLOUVkYnFNbHV2VzFrVDFwdEpDdWxYVkFGaFZveGFTbHdGcXBRMm9vM0hxN0FWdW1ucTNKMXJ6Ump3X01qQzR3SE9iNDdaQkMwLUJ0d1pqZ2R5UWJCZUhNVVBpZFpGTTgyem1pNU5ldWYtcFFrQzVHU240RFVPbFlfSzRIQ24teTU0?oc=5",
-      "clusterId": "10gicvj",
-      "title": "Anthropic Adds Ready-to-Use Legal Artifacts Gallery to Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTHBLOUVkYnFNbHV2VzFrVDFwdEpDdWxYVkFGaFZveGFTbHdGcXBRMm9vM0hxN0FWdW1ucTNKMXJ6Ump3X01qQzR3SE9iNDdaQkMwLUJ0d1pqZ2R5UWJCZUhNVVBpZFpGTTgyem1pNU5ldWYtcFFrQzVHU240RFVPbFlfSzRIQ24teTU0?oc=5",
-      "dateISO": "2026-10-28T15:50:01.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Unite.AI",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNTHBLOUVkYnFNbHV2VzFrVDFwdEpDdWxYVkFGaFZveGFTbHdGcXBRMm9vM0hxN0FWdW1ucTNKMXJ6Ump3X01qQzR3SE9iNDdaQkMwLUJ0d1pqZ2R5UWJCZUhNVVBpZFpGTTgyem1pNU5ldWYtcFFrQzVHU240RFVPbFlfSzRIQ24teTU0?oc=5"
-        }
-      ],
-      "sourceName": "Unite.AI",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTJlbERhR2hXeUJNbkw5cUVwd0Q1MTZkQUNMU0hWbnlfZmhlTmdOVi1CWm8yVjMwZ1NGaC1TZmdkOWg2S1c5bUpxelowTXdXcTh0aTExU0o4d2lEaDZHY1BIVlJFRTFpQ3FZUHM1VnZmNUxEb1d1eGpkR2U4ZkdvNjVnMGc5VEVpQ1pON28yaGs0alY0Tm1TOGRaQ1BMWWJmZlFYRm5nZHkxYXZZOEFxOWs5YU52QzI2VFBybzU5MW42NVpveEkxdGFwUEZpSWtkZmp2MThR?oc=5",
-      "clusterId": "1qs86sw",
-      "title": "Anthropic Releases Claude for Legal Artifacts, a Set of New Interactive Tools for Legal Users",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTJlbERhR2hXeUJNbkw5cUVwd0Q1MTZkQUNMU0hWbnlfZmhlTmdOVi1CWm8yVjMwZ1NGaC1TZmdkOWg2S1c5bUpxelowTXdXcTh0aTExU0o4d2lEaDZHY1BIVlJFRTFpQ3FZUHM1VnZmNUxEb1d1eGpkR2U4ZkdvNjVnMGc5VEVpQ1pON28yaGs0alY0Tm1TOGRaQ1BMWWJmZlFYRm5nZHkxYXZZOEFxOWs5YU52QzI2VFBybzU5MW42NVpveEkxdGFwUEZpSWtkZmp2MThR?oc=5",
-      "dateISO": "2026-10-28T15:15:00.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Law.com",
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLTJlbERhR2hXeUJNbkw5cUVwd0Q1MTZkQUNMU0hWbnlfZmhlTmdOVi1CWm8yVjMwZ1NGaC1TZmdkOWg2S1c5bUpxelowTXdXcTh0aTExU0o4d2lEaDZHY1BIVlJFRTFpQ3FZUHM1VnZmNUxEb1d1eGpkR2U4ZkdvNjVnMGc5VEVpQ1pON28yaGs0alY0Tm1TOGRaQ1BMWWJmZlFYRm5nZHkxYXZZOEFxOWs5YU52QzI2VFBybzU5MW42NVpveEkxdGFwUEZpSWtkZmp2MThR?oc=5"
-        }
-      ],
-      "sourceName": "Law.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/tech/1021143/microsoft-lg-samsung-copilot-ai-assistant-smart-tvs-ending",
       "clusterId": "prmwj7",
       "title": "Microsoft is ending Copilot support on smart TVs",
@@ -886,7 +570,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 49,
+      "significance": 46,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -902,36 +586,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5",
-      "clusterId": "17o7sb6",
-      "title": "Anthropic bans ‘abusive or cruel behavior’ toward Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5",
-      "dateISO": "2026-10-08T07:00:00.000Z",
-      "date": "OCT 08 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 49,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5"
-        },
-        {
-          "name": "The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2lja2Y3b2J4SGw2TDhuWUNxNmxablZvTlcwSVg4eHhuSUFwNUEzQTd0WFhOTlJMd0F5UHBDSnhxTl9nVXJlNjFrZVBSc1Zic01sZ1RuZ2tTTlQ3RVVLUEw5OFI2NDcwNzNPSVpYTUJmR1pVdmd2NWkyOUtxcTg5bC05ckRhX1pnSVRZdVhLSlQ0ckU?oc=5"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1021644/adam-mosseri-instagram-ai-negativity",
       "clusterId": "1kol5zx",
       "title": "Adam Mosseri says negativity around AI is ‘going to get worse’",
@@ -942,7 +596,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 48,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -966,7 +620,7 @@
       "category": "opensource",
       "catConfidence": 0.71,
       "family": "product",
-      "significance": 48,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -990,7 +644,7 @@
       "category": "market",
       "catConfidence": 0.78,
       "family": "market",
-      "significance": 48,
+      "significance": 45,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -1004,27 +658,61 @@
       "entityIds": []
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5",
-      "clusterId": "1nmcrpo",
-      "title": "Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits",
+      "id": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOEZHRldHN1lwUzlvZDdRV25iQTBKT1BKWEc4LVVrRzIzUHJJTC1XWTBtbi0wQzhzbTVucTlDYkF6aHdtYmtsdDZZSHZjZThtampicFZVNTRBSkJXcmR2aGxCU3JESUZjSkRSWGRxMXRRYlBPVk1zemNMYXRYWElaMThyV3Jia24xNHNvalNQZkRDU2huRWpNUzZSTnFSZlJCVC1Ma0N4cEt5bEgxTFB1TmlPZ1RkUWN1eHNvVUxzT00wWTRMemc?oc=5",
+      "clusterId": "1awei0q",
+      "title": "Anthropic debuts Claude Sonnet 5.5 running 30% faster than the previous-generation AI model",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5",
-      "dateISO": "2026-10-28T08:15:00.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOEZHRldHN1lwUzlvZDdRV25iQTBKT1BKWEc4LVVrRzIzUHJJTC1XWTBtbi0wQzhzbTVucTlDYkF6aHdtYmtsdDZZSHZjZThtampicFZVNTRBSkJXcmR2aGxCU3JESUZjSkRSWGRxMXRRYlBPVk1zemNMYXRYWElaMThyV3Jia24xNHNvalNQZkRDU2huRWpNUzZSTnFSZlJCVC1Ma0N4cEt5bEgxTFB1TmlPZ1RkUWN1eHNvVUxzT00wWTRMemc?oc=5",
+      "dateISO": "2026-09-28T07:00:00.000Z",
+      "date": "SEP 28 2026",
+      "category": "product",
+      "catConfidence": 0.67,
       "family": "product",
-      "significance": 47,
+      "significance": 45,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 2,
       "sources": [
         {
-          "name": "The Hacker News",
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbzh3WHRfc1NZQVJFS1ZaWURuVmhrV0hhS3d0UEpYeTQ5WE5pYVFLa3RrcWNaTmVmT0ZMaXBZWHE4cERGVmg4OFdRZzVtTnFFWFotNWRhb2hhYTloOXlpV3pSYnlBU1pVQnFfc1J6WE45WUFPSjZkRWZvRm9VTzZOUExn?oc=5"
+          "name": "SiliconANGLE",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOEZHRldHN1lwUzlvZDdRV25iQTBKT1BKWEc4LVVrRzIzUHJJTC1XWTBtbi0wQzhzbTVucTlDYkF6aHdtYmtsdDZZSHZjZThtampicFZVNTRBSkJXcmR2aGxCU3JESUZjSkRSWGRxMXRRYlBPVk1zemNMYXRYWElaMThyV3Jia24xNHNvalNQZkRDU2huRWpNUzZSTnFSZlJCVC1Ma0N4cEt5bEgxTFB1TmlPZ1RkUWN1eHNvVUxzT00wWTRMemc?oc=5"
+        },
+        {
+          "name": "Mashable",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNXzZmVllHd3ZISlAtUEZSa0xkaExzZ1RfNl9LU2dGZUdiU0xNb1FLZlNlMldSc2pFWnFVbEhPbDRKbG50bXlNVVRqcEpOUEl0VTdhZXpabFg0N29fbXVMYlM5TlVSU1hDZFU1NUxnd2N3SzNVb0dvMlRQbmJtSnVDcQ?oc=5"
         }
       ],
-      "sourceName": "The Hacker News",
+      "sourceName": "SiliconANGLE",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "clusterId": "gok17r",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5",
+      "dateISO": "2026-09-01T18:01:25.000Z",
+      "date": "SEP 01 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 45,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic (YouTube)",
+          "url": "https://www.youtube.com/watch?v=ROF2Nv_KjOM"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wODA3NURfTHVDbUZnSE12Q3A0TFpvYjhDLU1rT1NVZ2xmM2Z0VWJPc1ZRM0RVVkpIckh6b0ROcXIxTHgzODZWYV9yekV1dTJiMk1KbkVWcThSeUYxcUpDUy1KZw?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
@@ -1040,8 +728,8 @@
       "category": "adoption",
       "catConfidence": 0.75,
       "family": "product",
-      "significance": 46,
-      "impact": "notable",
+      "significance": 43,
+      "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -1054,6 +742,220 @@
       "entityIds": []
     },
     {
+      "id": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "clusterId": "18cfhhh",
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "desc": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "dateISO": "2026-10-26T13:45:00.000Z",
+      "date": "OCT 26 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSFZYTW81ai1KaU91ZGZUV1VlUkFrRkVfWVpraWlRMl9rWXJnUXV2cnZ3dlFBUUtCeldidHR0MVhJdmY3MGVzSzZDYnYxODNQNXdxS1Z5ZVNIcHd4bklybjBOR3hQeEhwUkFBVW1WdVA1Q0V2WTZfbFAwSVdPcVRKdG5jc3dhYzZiYm01X1hqbDR2ZlVtblF6NmZUWVV0TFlVSkZJWHJUeG_SAa4BQVVfeXFMUDZ1eGN2Uncyczl3by1yNFAxQlJfd2JmSDBaX05QaEpFb0tGY3FJWGY4R2RzcXBRMXRYdzFhTWFIVEluT0I5MExZZG9hX3U0MXliVFJYS3hxN0FtME5obUdWOW9CZTBYdkpsVXFHN2d1VXp2VVI2NG5BNFF4MkEwLTlmZkVWZ016RkRtRHNsUi1RSEVERG1SNzB2aFlVLXFNSF80dEtDUnNZN05RSlh3?oc=5",
+      "clusterId": "1fkr9y6",
+      "title": "Anthropic announces preview of Claude Duet, a personal AI agent to take on Muse, Dots",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSFZYTW81ai1KaU91ZGZUV1VlUkFrRkVfWVpraWlRMl9rWXJnUXV2cnZ3dlFBUUtCeldidHR0MVhJdmY3MGVzSzZDYnYxODNQNXdxS1Z5ZVNIcHd4bklybjBOR3hQeEhwUkFBVW1WdVA1Q0V2WTZfbFAwSVdPcVRKdG5jc3dhYzZiYm01X1hqbDR2ZlVtblF6NmZUWVV0TFlVSkZJWHJUeG_SAa4BQVVfeXFMUDZ1eGN2Uncyczl3by1yNFAxQlJfd2JmSDBaX05QaEpFb0tGY3FJWGY4R2RzcXBRMXRYdzFhTWFIVEluT0I5MExZZG9hX3U0MXliVFJYS3hxN0FtME5obUdWOW9CZTBYdkpsVXFHN2d1VXp2VVI2NG5BNFF4MkEwLTlmZkVWZ016RkRtRHNsUi1RSEVERG1SNzB2aFlVLXFNSF80dEtDUnNZN05RSlh3?oc=5",
+      "dateISO": "2026-10-21T21:42:54.000Z",
+      "date": "OCT 21 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Fortune",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPR0Y0UXFkbWVlcjN3VHZKcEFPQzNkNWdvbGM2TWxHdGd4bXREaFJpQUU5cndXZHZLa2FkeDFEb282VTRkRGVQdnJTbzBlX21uNGl1MmlsOGJXbVRzVkQtME9SeUtaenN0MEhlV2ZnejlmWlhKc3cxTXFUeE9HS1dIUWRlaFI0V0F6VjRCeFlOU2o1MTFiLWVYSnFHbG95YUdMdUJZ?oc=5"
+        },
+        {
+          "name": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS3M2TXpYVGJXT2txOW5uaVExTzJPRmhDVG1UZ1hWWUEwSmRMV3JFZklxeHBCRDd3bkNocVhSZXlQc1M0VXJvdjhiYnNyaVgwdmJ2c1o4R2oxaFd5MGZFY181d2VjbFJuYU5IcTJzUU1fa0l1RmdNd2lOZ0ZkdUN0VUpaNFBnS0k?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUmgyb1ZobDFPVTdQcnNCbTIwR2EzODI3TmRwUGEyWl92eDY3OV83UVh3LXVfekJpNldLdlBXSW1oQlN0Z0MyRTNvUG1NSHRnTGg0NzBhSUFXbm41NFRIQjNObVNCV0xQS2xxWi1YaHpxN1dEOWtLZnUxRzBNMlJCc3lSTXI?oc=5"
+        },
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSFZYTW81ai1KaU91ZGZUV1VlUkFrRkVfWVpraWlRMl9rWXJnUXV2cnZ3dlFBUUtCeldidHR0MVhJdmY3MGVzSzZDYnYxODNQNXdxS1Z5ZVNIcHd4bklybjBOR3hQeEhwUkFBVW1WdVA1Q0V2WTZfbFAwSVdPcVRKdG5jc3dhYzZiYm01X1hqbDR2ZlVtblF6NmZUWVV0TFlVSkZJWHJUeG_SAa4BQVVfeXFMUDZ1eGN2Uncyczl3by1yNFAxQlJfd2JmSDBaX05QaEpFb0tGY3FJWGY4R2RzcXBRMXRYdzFhTWFIVEluT0I5MExZZG9hX3U0MXliVFJYS3hxN0FtME5obUdWOW9CZTBYdkpsVXFHN2d1VXp2VVI2NG5BNFF4MkEwLTlmZkVWZ016RkRtRHNsUi1RSEVERG1SNzB2aFlVLXFNSF80dEtDUnNZN05RSlh3?oc=5"
+        }
+      ],
+      "sourceName": "CNBC",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
+      "clusterId": "12l6dix",
+      "title": "Anthropic says it disrupted scientists using Claude AI for possible biological weapons development",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5",
+      "dateISO": "2026-09-10T07:00:00.000Z",
+      "date": "SEP 10 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 6,
+      "sources": [
+        {
+          "name": "AP News",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOLXhqV3p0UGc3M1lxVTI0RG1qMXJmd0Rnb3ZXbDdQQXpqYjEwcGplMkgtTXdBRjJRcVBYclRmMGlSYzV1RS0yM1VCN1JkYlhDekU1LXNsNVB3SFJKM1RWZEpCQnlQTTVadjNpSXZoQi1oVVhtVVY5REprcHRZRFNQdE5RWl9lTnVwMnAxZE9NanVBNmdIR1pzOFRXM1NjLTFHcVE?oc=5"
+        },
+        {
+          "name": "Los Angeles Times",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeElGamhIZ2Z1VV9pcXpsMG9wb2lVVDFlS1BBc0dzU3lVWW1nWkV2blJEYXVVeHFGR21PYWV4dHYzcGEzN2ZlbkhpWUtkQlJjTFFIcm9GVmVVTkpCampZSDkwTzc4M19MR3VRRU9jUk51dUdpODlVZ1VOcUdMX3ZNNmRlb3BoQkp3cHFMMFVVUjNnZF92R3BzQ1lPd2RHUEZiSnRPVzNHSTRDSUsySVE?oc=5"
+        },
+        {
+          "name": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1Cc0xQa0oxTGNmSmZaYk9kZktQYkZmMzlJdzRkZWV4RFFOOVBxY2szQmhqazROLWhmeGFvYTFxanRlLURweGlKVjBIRnZMT21DSVJyeG9ObHN2S2J3TTBVWll3dXlmNjFiaWpNbnhuU2tVckV0SmtV?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSy1hZUZTdFRxVmt6XzZubm9GeGFET0hMaVBkaUh1aEpJVWRnbVgzdGlPZE5KQXFHOFdiRHZEQ2JZTmtaeTgzY25rY3Z6VFpMYVdkekp5SG81bEJ6Q2RRaF9VMUcwem1NS2N5dE5wcmI5ZkNoeE9TaGdNWFVtekFPVUN6eWRUeXluUFQwNVp0N18xanFEU0xwNVhiNUxnMF9xZHVMLVRwYU9LSWJmWERKSlBtdktoZ2RXbm8yY3BuRk1sSmYtX0xTSEY1M00?oc=5"
+        },
+        {
+          "name": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxON3RoSWgyVENhaXVDdFY0bkU1eDN3T2wwQnRJNXkwMk9RYld5ZVJSS0FPcGhtVXdIb3AyMnJ6c2xHZkNhMFZ1Q1BINDl2NVVIejM1NjFkMnZveExXWnh6Y2JUbXctYUxRX0VTaVFBamJhNjFwZ1BPbkh3a3Z0anRmckpiSlJWNWg1U0I3c1NHNjBma0Z1TlB4WTg5anJ3ZjVyOGF6cnVubm00d0s1LXdJ0gG0AUFVX3lxTE5MRVpJa1BQVnU5TlRCZUstMDNNM0hWZFZPdEd2dFlXNTVqeGNZYmY5VHR4aGpvU3lQeEs2ZE5xekJHNnE3Ni1iT21HU3hEV0tNQ3I1VV95dDhublJndVZUVmQyTU0xUndYWVpzWTdlckp6bnJSYUY0blFibS0wYlFzZUxvMGhWeG5JZFJmVnpYaUt3Ym02bjlGVGRXYm1hcFpOVFdHaGVlbTBocG0wSkk0VlVtSA?oc=5"
+        },
+        {
+          "name": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd1gxVjdSOXNuN1U4VUVvdzMyeG03NE1WZm5Ya3VBNnJTZVZrcXU5Vy16elVNMzlRbU9YN1JWYjBweS1RQjE1cEdBbFg5QlFVOGlWQkhNb1F0Um5JWDIyelZkbHFmMnhsS2EzZjFyeDJLSFA0Qlk2SDVJa1RMQ2htckk2aFpIYU0?oc=5"
+        }
+      ],
+      "sourceName": "CBS News",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVFdUOVUxZWlsaklRN003RVp3LVYxYWZ6d1JiTl93UnBKcXdhTHQxSV92TElyOWpoSGZvUjdmdXlqWkFsbk1jYWJBb1U1M1FiYl94QTJWOFVubWtFeERadEJMb1RlZVE0NHZSOFd3cGV6X2NqeEcwVWdiZ2NWRWVOLUVBQkJQdmFCLXJVMUhtdEx3NUwzUWpfblN1WC1uWGI4aU9YQ3lOb0xBMGxHZ0RDcw?oc=5",
+      "clusterId": "1uju1vf",
+      "title": "Anthropic Bans Being Excessively Mean To Claude",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVFdUOVUxZWlsaklRN003RVp3LVYxYWZ6d1JiTl93UnBKcXdhTHQxSV92TElyOWpoSGZvUjdmdXlqWkFsbk1jYWJBb1U1M1FiYl94QTJWOFVubWtFeERadEJMb1RlZVE0NHZSOFd3cGV6X2NqeEcwVWdiZ2NWRWVOLUVBQkJQdmFCLXJVMUhtdEx3NUwzUWpfblN1WC1uWGI4aU9YQ3lOb0xBMGxHZ0RDcw?oc=5",
+      "dateISO": "2026-10-08T07:00:00.000Z",
+      "date": "OCT 08 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVFdUOVUxZWlsaklRN003RVp3LVYxYWZ6d1JiTl93UnBKcXdhTHQxSV92TElyOWpoSGZvUjdmdXlqWkFsbk1jYWJBb1U1M1FiYl94QTJWOFVubWtFeERadEJMb1RlZVE0NHZSOFd3cGV6X2NqeEcwVWdiZ2NWRWVOLUVBQkJQdmFCLXJVMUhtdEx3NUwzUWpfblN1WC1uWGI4aU9YQ3lOb0xBMGxHZ0RDcw?oc=5"
+        }
+      ],
+      "sourceName": "Forbes",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5",
+      "clusterId": "q0sip8",
+      "title": "U.S. appeals court upholds Pentagon designation of Anthropic as supply chain risk",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5",
+      "dateISO": "2026-09-25T07:00:00.000Z",
+      "date": "SEP 25 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5"
+        }
+      ],
+      "sourceName": "CNBC",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQUVqRzQwNW9SN1pNeThVT1lWblh2YUJBSElLVE5sTXJzZGVpUk1MMG1JX1AwUWZyRGxRUlZyNS1YcnNjS2hzVllkTVEwUlhZTHN0NXZoSWdCVjBUVEZBOFFVdUQ4dWJOTjdqaFdOUGZVQnQ3LWRpalZFdG1CbmYwWkFSbU11b3FQUlpJX0FacDcwMFBkNzBpUDhYeTN5U1FWVDcyWnplVkV4Y2J3amhMcXpvWEh0bk1aUVRQeUtsU08xeGc?oc=5",
+      "clusterId": "1221v4n",
+      "title": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQUVqRzQwNW9SN1pNeThVT1lWblh2YUJBSElLVE5sTXJzZGVpUk1MMG1JX1AwUWZyRGxRUlZyNS1YcnNjS2hzVllkTVEwUlhZTHN0NXZoSWdCVjBUVEZBOFFVdUQ4dWJOTjdqaFdOUGZVQnQ3LWRpalZFdG1CbmYwWkFSbU11b3FQUlpJX0FacDcwMFBkNzBpUDhYeTN5U1FWVDcyWnplVkV4Y2J3amhMcXpvWEh0bk1aUVRQeUtsU08xeGc?oc=5",
+      "dateISO": "2026-09-25T07:00:00.000Z",
+      "date": "SEP 25 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNQUVqRzQwNW9SN1pNeThVT1lWblh2YUJBSElLVE5sTXJzZGVpUk1MMG1JX1AwUWZyRGxRUlZyNS1YcnNjS2hzVllkTVEwUlhZTHN0NXZoSWdCVjBUVEZBOFFVdUQ4dWJOTjdqaFdOUGZVQnQ3LWRpalZFdG1CbmYwWkFSbU11b3FQUlpJX0FacDcwMFBkNzBpUDhYeTN5U1FWVDcyWnplVkV4Y2J3amhMcXpvWEh0bk1aUVRQeUtsU08xeGc?oc=5"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/cooley-gopublic",
+      "clusterId": "c9xyz2",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "dateISO": "2026-09-17T12:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/cooley-gopublic"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1018676/data-center-midterm-election-energy-water-texas",
       "clusterId": "tl3en1",
       "title": "Voters in Texas agree: They hate data centers",
@@ -1064,8 +966,8 @@
       "category": "compute",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 45,
-      "impact": "notable",
+      "significance": 42,
+      "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -1088,8 +990,8 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 45,
-      "impact": "notable",
+      "significance": 42,
+      "impact": "emerging",
       "verification": "official",
       "sourceCount": 1,
       "sources": [
@@ -1104,24 +1006,80 @@
       ]
     },
     {
-      "id": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "clusterId": "18cfhhh",
-      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
-      "desc": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
-      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "dateISO": "2026-10-26T13:45:00.000Z",
-      "date": "OCT 26 2026",
-      "category": "research",
+      "id": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/",
+      "clusterId": "1a87uij",
+      "title": "DeepMind unveils Genie 4 world model promising more realistic physics and humans",
+      "desc": "Genie 4 will roll out to developers and Google AI Ultra subscribers soon.",
+      "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/",
+      "dateISO": "2026-10-27T16:00:22.000Z",
+      "date": "OCT 27 2026",
+      "category": "product",
+      "catConfidence": 0.44,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/10/deepminds-genie-4-world-model-adds-audio-and-more-realistic-people-to-simulations/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PbzNJUlpWVXZ6VzVsNU13YVBoQUNmTDNEUG83cTFoZk1oU0ZQMFJCWFhqNTFZSGVZWkg3RjBRNktiaXZjd1ZoNTRLM3NpS2V4a3lVUXRJVXFDbXVwRmhfdDlPSy04ZVBzUHB3aHFEUjRtcHVzd0dvN0NYMA?oc=5",
+      "clusterId": "1k4oq59",
+      "title": "How Claude is uplifting biomolecular modeling",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PbzNJUlpWVXZ6VzVsNU13YVBoQUNmTDNEUG83cTFoZk1oU0ZQMFJCWFhqNTFZSGVZWkg3RjBRNktiaXZjd1ZoNTRLM3NpS2V4a3lVUXRJVXFDbXVwRmhfdDlPSy04ZVBzUHB3aHFEUjRtcHVzd0dvN0NYMA?oc=5",
+      "dateISO": "2026-09-17T07:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "analysis",
       "catConfidence": 0.6,
-      "family": "research",
-      "significance": 45,
-      "impact": "notable",
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "analysis",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9VNkRtQVc2UUZVVmgyWUJOQU5RSjdCMjQ0V1JuczVKVmxoME1pQ295LWZ5a3J1M21SWk1yWUtGQ01pbTN3bFVldVVmc01QLXNYYlBqRi04UnZ4VWR5NzU1dTZuYzFxRVA5enZObVVFeE1sVURIVFp1NGVn?oc=5"
+        },
+        {
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5PbzNJUlpWVXZ6VzVsNU13YVBoQUNmTDNEUG83cTFoZk1oU0ZQMFJCWFhqNTFZSGVZWkg3RjBRNktiaXZjd1ZoNTRLM3NpS2V4a3lVUXRJVXFDbXVwRmhfdDlPSy04ZVBzUHB3aHFEUjRtcHVzd0dvN0NYMA?oc=5"
+        }
+      ],
+      "sourceName": "Anthropic",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+      "clusterId": "f4ebm7",
+      "title": "OpenAI acquires Orchestra Bio",
+      "desc": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+      "dateISO": "2026-10-20T00:00:00.000Z",
+      "date": "OCT 20 2026",
+      "category": "capital",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
       "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
           "name": "OpenAI",
-          "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security"
+          "url": "https://openai.com/index/openai-to-acquire-orchestra-bio"
         }
       ],
       "sourceName": "OpenAI",
@@ -1130,54 +1088,81 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTUhMaTN1bnRXWEpZaFkxN0RnR1J5bGlhUEV6emRnbFBXWDJIS1dBMGZmVE4yUHZXNmJRNV9nZVB4QmU1akRPQnhEVVA5QW4xcHU4SU05M252bW05QzF5XzBUQTEzcE9JaVkxc1EtZ1BXTU1FM2NyY3prcXhqdm5meUtzTTRWcExWS0NUajF1WWE?oc=5",
-      "clusterId": "ains2f",
-      "title": "Anthropic files for potentially record-breaking stock market valuation in key test for AI industry",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTUhMaTN1bnRXWEpZaFkxN0RnR1J5bGlhUEV6emRnbFBXWDJIS1dBMGZmVE4yUHZXNmJRNV9nZVB4QmU1akRPQnhEVVA5QW4xcHU4SU05M252bW05QzF5XzBUQTEzcE9JaVkxc1EtZ1BXTU1FM2NyY3prcXhqdm5meUtzTTRWcExWS0NUajF1WWE?oc=5",
-      "dateISO": "2026-10-26T13:12:00.000Z",
-      "date": "OCT 26 2026",
-      "category": "capital",
-      "catConfidence": 0.45,
-      "family": "market",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
+      "id": "https://openai.com/index/eu-text-provenance",
+      "clusterId": "u3byi7",
+      "title": "Our approach to EU text provenance rules",
+      "desc": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
+      "url": "https://openai.com/index/eu-text-provenance",
+      "dateISO": "2026-10-05T15:00:00.000Z",
+      "date": "OCT 05 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTUhMaTN1bnRXWEpZaFkxN0RnR1J5bGlhUEV6emRnbFBXWDJIS1dBMGZmVE4yUHZXNmJRNV9nZVB4QmU1akRPQnhEVVA5QW4xcHU4SU05M252bW05QzF5XzBUQTEzcE9JaVkxc1EtZ1BXTU1FM2NyY3prcXhqdm5meUtzTTRWcExWS0NUajF1WWE?oc=5"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/eu-text-provenance"
         }
       ],
-      "sourceName": "The Guardian",
+      "sourceName": "OpenAI",
       "entityIds": [
-        "claude"
+        "gpt"
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWlhObWpLU0dJNzJkWnpRbmNXQzlfXzlPeEh0c0N0eXBVMVlWZF9YUEpGTGw5VHJjbXlQb0l3VXRUTE1ZdG9vbnM0RGRtZUh3Uk9DMWpDLXVfNTZMUmFGdUttd3hCM0tESlpvclE1bmRnekVlMWtMX20yQW1iR1dFNkpPemtvaFJKcTJOSFZtdzhscWJnNzF4UjJqUkU2TmE4bWJucDlDbVRFTEYtTWZ2bG5reHlVTVZKRHhNNXJIcFdHNEE?oc=5",
-      "clusterId": "d45vdi",
-      "title": "Anthropic brings fundraising, hiring and AI governance tools to Claude for Nonprofits",
+      "id": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "clusterId": "p21kob",
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "desc": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "dateISO": "2026-09-28T07:00:00.000Z",
+      "date": "SEP 28 2026",
+      "category": "capital",
+      "catConfidence": 0.8,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/lenfest-ai-collaborative-expansion"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5",
+      "clusterId": "16x3gsg",
+      "title": "Researchers used Anthropic’s Claude to hack into OpenAI",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWlhObWpLU0dJNzJkWnpRbmNXQzlfXzlPeEh0c0N0eXBVMVlWZF9YUEpGTGw5VHJjbXlQb0l3VXRUTE1ZdG9vbnM0RGRtZUh3Uk9DMWpDLXVfNTZMUmFGdUttd3hCM0tESlpvclE1bmRnekVlMWtMX20yQW1iR1dFNkpPemtvaFJKcTJOSFZtdzhscWJnNzF4UjJqUkU2TmE4bWJucDlDbVRFTEYtTWZ2bG5reHlVTVZKRHhNNXJIcFdHNEE?oc=5",
-      "dateISO": "2026-10-28T00:30:53.000Z",
-      "date": "OCT 28 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5",
+      "dateISO": "2026-09-18T07:00:00.000Z",
+      "date": "SEP 18 2026",
+      "category": "research",
+      "catConfidence": 0.6,
+      "family": "research",
+      "significance": 42,
       "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "EdTech Innovation Hub",
-          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWlhObWpLU0dJNzJkWnpRbmNXQzlfXzlPeEh0c0N0eXBVMVlWZF9YUEpGTGw5VHJjbXlQb0l3VXRUTE1ZdG9vbnM0RGRtZUh3Uk9DMWpDLXVfNTZMUmFGdUttd3hCM0tESlpvclE1bmRnekVlMWtMX20yQW1iR1dFNkpPemtvaFJKcTJOSFZtdzhscWJnNzF4UjJqUkU2TmE4bWJucDlDbVRFTEYtTWZ2bG5reHlVTVZKRHhNNXJIcFdHNEE?oc=5"
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQS0tYS0VHd1I0cEFmd0JuMHh0SEg0NGxoMUprUDFPWVRlWWZvWE9LN0ZWMWd6Z2Utc2dlYWY2elB3Nk1xTGtRZm5aSzFDZlhfR0JRSms0NkJmVDlDY3JJYkxzU0M4ZWFLak1RSnNGNTlzWTJRZmxkbGZfUWppNUVDc3hxQUlVd01Ha1Z1U1ZYUzJReUU?oc=5"
         }
       ],
-      "sourceName": "EdTech Innovation Hub",
+      "sourceName": "TechCrunch",
       "entityIds": [
+        "gpt",
         "claude"
       ]
     }
@@ -1185,34 +1170,34 @@
   "waves": [
     {
       "family": "product",
-      "category": "product",
-      "title": "Anthropic just launched tools to show companies what their AI spending is buying",
-      "summary": "Anthropic just launched tools to show companies what their AI spending is buying",
-      "significance": 69,
-      "impact": "notable",
+      "category": "opensource",
+      "title": "We urgently need to monitor AI agents’ actions in real time",
+      "summary": "This summer, hundreds of OpenAI agents tried to cheat on a cybersecurity test. They broke out of their test environment and successfully hacked Hugging Face, a site that they beli…",
+      "significance": 75,
+      "impact": "high",
       "verification": "single",
-      "date": "OCT 28 2026",
-      "dateISO": "2026-10-28T19:19:58.000Z",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5",
+      "date": "OCT 29 2026",
+      "dateISO": "2026-10-29T10:11:12.000Z",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5"
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/"
         }
       ],
       "entityIds": [
-        "claude"
+        "gpt"
       ],
-      "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
+      "whyItMatters": "If it holds up, open weights let anyone run and build on the model, widening who can compete."
     },
     {
       "family": "market",
       "category": "market",
       "title": "Microsoft recorded $10 billion in revenue from OpenAI",
       "summary": "Microsoft said it made $10 billion in revenue from commercial arrangements with OpenAI, including revenue-sharing payments, in the quarter ending September 30. It underscores the…",
-      "significance": 72,
-      "impact": "high",
+      "significance": 69,
+      "impact": "notable",
       "verification": "single",
       "date": "OCT 28 2026",
       "dateISO": "2026-10-28T21:34:30.000Z",
@@ -1232,25 +1217,25 @@
     {
       "family": "research",
       "category": "research",
-      "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
-      "summary": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its f…",
-      "significance": 61,
-      "impact": "notable",
-      "verification": "single",
-      "date": "OCT 27 2026",
-      "dateISO": "2026-10-27T20:48:58.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+      "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+      "summary": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "official",
+      "date": "OCT 26 2026",
+      "dateISO": "2026-10-26T13:45:00.000Z",
+      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics"
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security"
         }
       ],
       "entityIds": [
         "gpt"
       ],
-      "whyItMatters": "If the result holds up it could shape how the next generation of models is built — though single papers often don’t replicate."
+      "whyItMatters": "If it holds up, new rules here can change what products are allowed to ship, and in which markets."
     }
   ],
   "entityActivity": {
@@ -1258,8 +1243,8 @@
     "copilot": 1,
     "perplexity": 1,
     "gpt": 107,
-    "claude": 64,
-    "gemini": 25,
+    "claude": 72,
+    "gemini": 26,
     "grok": 1,
     "llama": 0,
     "deepseek": 0,
@@ -1281,17 +1266,6 @@
       "logoKey": "anthropic",
       "items": [
         {
-          "h": "Anthropic just launched tools to show companies what their AI spending is buying",
-          "d": "OCT 28 2026",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxORDlBbXhmcEdpSXhaQ1YyY0llV1JaU29fZzFvZ2xBdDZzdlEyVWhuR3k4QWpSQ196MXI1SUVVVlBzMER5ZUZHOUF6bVJYZVg5cXh1TTlOdWJWc2I4N0laSmpRNGg1Um1qQ05obkVPRDJiUm9lQks1WFdQdUp1SldtVV9PMnVicVRJcTlUMWQzZDFjbXZqS2lVU3hNeVBCb2FKdXV5YWNjZGdpUmY2TWs0ckxXdHgzZw?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "TechCrunch",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "notable"
-        },
-        {
           "h": "Anthropic unveils additional Claude tools for lawyers",
           "d": "OCT 28 2026",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbFBaWDBVa3BKM0dEcGpjZldpYXlJb1pZdDYtMFFOaDJpMEtjWkVyaGMtVHhGd0pwZDRLLUJhNnlveHJwZHNsckY1STlMZXBuc1Z4SUpiSEJVTFlWR0I5d1o3X3ZabkRNMkE0TDRTaVNiVnRzS0o4S1JTcllTVUVPZ1JXOFI1bFV2dm1JaE00YzluSGZwY2V4NDk1aVB3c1RTX2pFZUk5SzQ?oc=5",
@@ -1301,17 +1275,6 @@
           "sourceCount": 1,
           "verification": "single",
           "impact": "notable"
-        },
-        {
-          "h": "Anthropic set to make stock market debut as questions swirl about safety of AI",
-          "d": "OCT 26 2026",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9TTUMzZ3kyQXlPLXRDU0hPQjlUZU9XWVhtZkhwMlBkSVRMOWVHU3MzcF8yUWJYTXc1LUdiQnZNc2ZGOWNibGt0SjBHRXBhbURnQkFOWEk1aDdIaDJhZTh5WkQ5M3kwUQ?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "CNN",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
         },
         {
           "h": "Introducing Claude Haiku 5.5",
@@ -1331,6 +1294,28 @@
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "Reuters",
+          "sourceCount": 1,
+          "verification": "single",
+          "impact": "emerging"
+        },
+        {
+          "h": "Anthropic debuts Claude Sonnet 5.5 running 30% faster than the previous-generation AI mod…",
+          "d": "SEP 28 2026",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQOEZHRldHN1lwUzlvZDdRV25iQTBKT1BKWEc4LVVrRzIzUHJJTC1XWTBtbi0wQzhzbTVucTlDYkF6aHdtYmtsdDZZSHZjZThtampicFZVNTRBSkJXcmR2aGxCU3JESUZjSkRSWGRxMXRRYlBPVk1zemNMYXRYWElaMThyV3Jia24xNHNvalNQZkRDU2huRWpNUzZSTnFSZlJCVC1Ma0N4cEt5bEgxTFB1TmlPZ1RkUWN1eHNvVUxzT00wWTRMemc?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "SiliconANGLE",
+          "sourceCount": 2,
+          "verification": "corroborated",
+          "impact": "notable"
+        },
+        {
+          "h": "Inside Anthropic's molecular biology lab",
+          "d": "SEP 23 2026",
+          "url": "https://www.youtube.com/watch?v=DdCEmlAydcw",
+          "isVideo": true,
+          "videoUrl": null,
+          "sourceName": "Anthropic (YouTube)",
           "sourceCount": 1,
           "verification": "single",
           "impact": "emerging"
@@ -1453,6 +1438,30 @@
     {
       "org": "AI WIRE",
       "logoKey": "other",
+      "date": "OCT 29 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "AI has come for Arizona’s water",
+      "p": "A hulking gray giant rises from the desert. Inside, engineers create the force behind our phones and computers and appliances, our streaming services and search engines and chatbots and vibe-coded apps and websites. The complex is simultaneously massive and s…",
+      "url": "https://www.theverge.com/cs/features/1016650/arizona-water-data-center-tsmc",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "OCT 29 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "I Gave My Blood to the AI Death Clock",
+      "p": "Death Clock promises to predict when you’re going to die and help you extend your time on Earth. After a month, I felt like it was sucking the life out of me.",
+      "url": "https://www.wired.com/story/i-gave-an-ai-death-clock-my-blood/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
       "date": "OCT 28 2026",
       "verification": "single",
       "impact": "notable",
@@ -1467,7 +1476,7 @@
       "logoKey": "other",
       "date": "OCT 28 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
       "p": "Microsoft has never disclosed Azure's quarterly revenue in dollars. But for the first time, we can see just how close it is getting to besting the biggest competitor in the market, AWS.",
       "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
@@ -1479,7 +1488,7 @@
       "logoKey": "google",
       "date": "OCT 28 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "Google expands AI Search ads globally as core ad growth slows",
       "p": "The announcement came alongside parent company Alphabet's third-quarter earnings report, which saw revenue grow 25% year over year to $127.6 billion.",
       "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
@@ -1491,7 +1500,7 @@
       "logoKey": "openai",
       "date": "OCT 28 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "Microsoft recorded $10 billion in revenue from OpenAI",
       "p": "Microsoft said it made $10 billion in revenue from commercial arrangements with OpenAI, including revenue-sharing payments, in the quarter ending September 30. It underscores the still-enormous financial dependency of the partnership.",
       "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
@@ -1511,43 +1520,31 @@
       "sourceCount": 1
     },
     {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "OCT 28 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "GSA Expands Anthropic OneGov Deal With 40-Percent Claude Token Discount",
-      "p": "GSA Expands Anthropic OneGov Deal With 40-Percent Claude Token Discount",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56X2lqb0JtRDhTZ19hUmN6MEF3dVJkNTdGSGp1MGZRV04zRHN0R0tqU1l1SklfamlyUzhXU0g1YmJtRWRWbHdMVDJHengzeTVaNzFVN09nVWRhQTdya2s0WDRFdnoxcEw5ZHdUMHNZOWVjMm0zbktVZF9VNEVNRFU?oc=5",
-      "sourceName": "ExecutiveGov",
-      "sourceCount": 1
-    },
-    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "OCT 28 2026",
       "verification": "single",
-      "impact": "notable",
+      "impact": "emerging",
       "h": "Creating AI value with enterprise context",
       "p": "Across a business, any number of AI platforms, systems, and tools may be at work simultaneously—for example, AI-powered customer platforms, conversational assistants, and workflow and process automation tools. Each one is sophisticated, advanced, and quick to…",
       "url": "https://www.technologyreview.com/2026/10/28/1147709/creating-ai-value-with-enterprise-context/",
       "sourceName": "MIT Technology Review",
       "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "OCT 28 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "AI for Science expands to foundations and research institutions",
-      "p": "AI for Science expands to foundations and research institutions",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTE8xTmRrRUZtQndpOVdCTUFQQ2ZXSjl5Tk4zeXB0RzhSVzRYaUt3S091Y3FmRnVvT1c0UXhIVW0xZF83R2c1VUwtNjhNUkcxYWI0MFRXWXcxT2ZLdkF6bUd5V0JpTWJla3BzOWNORmdFN0ZTUkplbmZRcjRNdm5GSUVDUXp5QWwxNkRoN3JCVXo?oc=5",
-      "sourceName": "Anthropic",
-      "sourceCount": 1
     }
   ],
   "feed": [
+    {
+      "name": "We urgently need to monitor AI agents’ actions in real time",
+      "org": "MIT Technology Review",
+      "date": "OCT 29 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "This summer, hundreds of OpenAI agents tried to cheat on a cybersecurity test. They broke out of their test environment and successfully ha…",
+      "url": "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
+      "sourceName": "MIT Technology Review",
+      "verification": "single",
+      "impact": "high"
+    },
     {
       "name": "Akai is embracing vibe-coded mods with an open-source MPC",
       "org": "The Verge",
@@ -1588,20 +1585,9 @@
   "breakthroughs": [
     {
       "field": "Reasoning",
-      "date": "OCT 27 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
-      "p": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite its apparent course correction, researchers who spoke to Th…",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
-      "sourceName": "The Verge",
-      "sourceCount": 1
-    },
-    {
-      "field": "Reasoning",
       "date": "OCT 26 2026",
       "verification": "official",
-      "impact": "notable",
+      "impact": "emerging",
       "h": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
       "p": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
       "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
@@ -1649,6 +1635,17 @@
       "h": "The eternal complement",
       "p": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
       "url": "https://openai.com/index/the-eternal-complement",
+      "sourceName": "OpenAI",
+      "sourceCount": 1
+    },
+    {
+      "field": "Research",
+      "date": "SEP 28 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "Are you a Codex Original?",
+      "p": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about your story and project below.",
+      "url": "https://openai.com/form/codex-originals",
       "sourceName": "OpenAI",
       "sourceCount": 1
     }
@@ -6360,33 +6357,33 @@
       "chip": "H100 (Hopper)",
       "segment": "Mainstream training/inference",
       "rate": "$1.99 – $3.99/hr",
-      "trend": "↑ 3% vs 7d ago",
+      "trend": "↑ 4% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $6.45/hr",
-      "trend": "↑ 13% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 9 rented offers across Vast.ai + RunPod"
+      "rate": "$3.59 – $5.53/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $10.63/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
-      "note": "Live from 4 rented offers across Vast.ai + RunPod"
+      "rate": "$5.98 – $7.99/hr",
+      "trend": "↓ 16% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $11.25/hr",
-      "trend": "↑ 14% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $8.99/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6399,14 +6396,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.63 – $1.79/hr",
-      "trend": "↑ 8% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 11 rented offers across Vast.ai + RunPod"
+      "rate": "$0.34 – $1.79/hr",
+      "trend": "↓ 5% vs 7d ago",
+      "trendClass": "trend-down",
+      "note": "Live from 10 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-10-29T05:32:30.062Z",
+    "updatedAt": "2026-10-29T11:41:20.232Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6415,16 +6412,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 305,
-        "fetchedStoryCount": 300,
+        "rawStoryHits": 306,
+        "fetchedStoryCount": 280,
         "validatedStoryCount": 31,
-        "storyCoverage": 0.9836065573770492,
-        "estimatedRelevantDiscussions": 32,
+        "storyCoverage": 0.9150326797385621,
+        "estimatedRelevantDiscussions": 34,
         "isEstimated": true,
-        "rawCommentHits": 2405,
+        "rawCommentHits": 2412,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.12474012474012475,
+        "validatedCommentCount": 34,
+        "commentCoverage": 0.12437810945273632,
         "limited": false,
         "points": 597,
         "themes": [
@@ -6441,12 +6438,17 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 5
+            "count": 4
           },
           {
             "id": "price",
             "label": "Price",
             "count": 4
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
+            "count": 2
           },
           {
             "id": "multimodal",
@@ -6464,11 +6466,6 @@
             "count": 1
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 1
-          },
-          {
             "id": "local",
             "label": "Local use",
             "count": 1
@@ -6478,7 +6475,7 @@
           {
             "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
             "points": 172,
-            "comments": 42,
+            "comments": 43,
             "url": "https://github.com/FrigadeHQ/hob",
             "date": "OCT 26 2026"
           },
@@ -6493,7 +6490,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 32,
+            "discussions": 34,
             "isEstimated": true
           },
           {
@@ -6508,23 +6505,23 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 966,
+        "rawStoryHits": 963,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 32,
-        "storyCoverage": 0.3105590062111801,
+        "storyCoverage": 0.3115264797507788,
         "estimatedRelevantDiscussions": 103,
         "isEstimated": true,
-        "rawCommentHits": 6185,
+        "rawCommentHits": 6214,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 36,
-        "commentCoverage": 0.04850444624090541,
+        "commentCoverage": 0.0482780817508851,
         "limited": false,
-        "points": 562,
+        "points": 564,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 14
+            "count": 16
           },
           {
             "id": "reasoning",
@@ -6539,24 +6536,29 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 4
+            "count": 5
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 4
+            "count": 3
           },
           {
             "id": "reliability",
             "label": "Reliability",
             "count": 2
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 1
           }
         ],
         "topThreads": [
           {
             "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
             "points": 172,
-            "comments": 42,
+            "comments": 43,
             "url": "https://github.com/FrigadeHQ/hob",
             "date": "OCT 26 2026"
           },
@@ -6586,16 +6588,16 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
+        "rawStoryHits": 146,
+        "fetchedStoryCount": 146,
         "validatedStoryCount": 32,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 38,
         "isEstimated": true,
-        "rawCommentHits": 1334,
+        "rawCommentHits": 1343,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 52,
-        "commentCoverage": 0.22488755622188905,
+        "validatedCommentCount": 51,
+        "commentCoverage": 0.22338049143708116,
         "limited": false,
         "points": 198,
         "themes": [
@@ -6607,12 +6609,17 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 15
+            "count": 17
           },
           {
             "id": "price",
             "label": "Price",
             "count": 6
+          },
+          {
+            "id": "local",
+            "label": "Local use",
+            "count": 3
           },
           {
             "id": "writing",
@@ -6622,12 +6629,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 2
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 2
+            "count": 1
           },
           {
             "id": "reliability",
@@ -6674,16 +6676,16 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 493,
+        "rawStoryHits": 494,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 6,
-        "storyCoverage": 0.6085192697768763,
+        "storyCoverage": 0.6072874493927125,
         "estimatedRelevantDiscussions": 10,
         "isEstimated": true,
-        "rawCommentHits": 10760,
+        "rawCommentHits": 10743,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 18,
-        "commentCoverage": 0.027881040892193308,
+        "commentCoverage": 0.027925160569673275,
         "limited": false,
         "points": 21,
         "themes": [
@@ -6757,16 +6759,16 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 63,
-        "fetchedStoryCount": 63,
+        "rawStoryHits": 62,
+        "fetchedStoryCount": 62,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 405,
+        "rawCommentHits": 406,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 41,
-        "commentCoverage": 0.7407407407407407,
+        "commentCoverage": 0.7389162561576355,
         "limited": true,
         "points": 373,
         "themes": [
@@ -6822,7 +6824,7 @@
           {
             "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
             "points": 172,
-            "comments": 42,
+            "comments": 43,
             "url": "https://github.com/FrigadeHQ/hob",
             "date": "OCT 26 2026"
           }
@@ -6840,16 +6842,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 92,
-        "fetchedStoryCount": 92,
+        "rawStoryHits": 90,
+        "fetchedStoryCount": 90,
         "validatedStoryCount": 16,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 16,
         "isEstimated": false,
-        "rawCommentHits": 1444,
+        "rawCommentHits": 1443,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 44,
-        "commentCoverage": 0.2077562326869806,
+        "commentCoverage": 0.2079002079002079,
         "limited": false,
         "points": 159,
         "themes": [
@@ -6928,18 +6930,18 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 244,
-        "fetchedStoryCount": 244,
+        "rawStoryHits": 246,
+        "fetchedStoryCount": 246,
         "validatedStoryCount": 12,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 19,
+        "estimatedRelevantDiscussions": 20,
         "isEstimated": false,
-        "rawCommentHits": 4594,
+        "rawCommentHits": 4606,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.06530256856769699,
+        "commentCoverage": 0.06513243595310464,
         "limited": false,
-        "points": 295,
+        "points": 296,
         "themes": [
           {
             "id": "reasoning",
@@ -6949,16 +6951,16 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 11
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 4
+            "count": 12
           },
           {
             "id": "price",
             "label": "Price",
+            "count": 5
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
             "count": 4
           },
           {
@@ -6987,7 +6989,7 @@
           },
           {
             "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
-            "points": 71,
+            "points": 72,
             "comments": 31,
             "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
             "date": "OCT 26 2026"
@@ -7001,7 +7003,7 @@
           },
           {
             "name": "Qwen GitHub",
-            "discussions": 7,
+            "discussions": 8,
             "isEstimated": false
           }
         ]
@@ -7045,13 +7047,14 @@
       {
         "modelId": "gpt",
         "themes": [
-          "multimodal"
+          "writing",
+          "reliability"
         ],
-        "excerpt": "Gibson published Agency nearly three years before ChatGPT's release, and six years before the emergence of today's increasingly autononomous AI agents....and fifteen years after…",
+        "excerpt": "…some whacky weirdness, then you can't even trust Claude or ChatGPT. Which is important—the big vendors often do provide sandboxing or command filtering in their harnesses, but…",
         "source": "Hacker News",
-        "author": "egypturnash",
-        "publishedAt": "2026-10-25T20:13:49.000Z",
-        "url": "https://news.ycombinator.com/item?id=50235601"
+        "author": "ekidd",
+        "publishedAt": "2026-10-26T20:02:44.000Z",
+        "url": "https://news.ycombinator.com/item?id=50250081"
       },
       {
         "modelId": "claude",
@@ -7068,25 +7071,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "coding",
+          "reasoning",
           "speed"
         ],
-        "excerpt": "…could very well be too late. Just try the \"fast\" feature of Claude Code, now imagine Claude launching thousands of sub-agents at top speed internally, the capacity for…",
+        "excerpt": "…system down to customized force-field parameters\", not \"Claude\".So sure, maybe Anthropic will invest lots of time and money and energy into making these kinds of molecular…",
         "source": "Hacker News",
-        "author": "giancarlostoro",
-        "publishedAt": "2026-10-27T18:51:07.000Z",
-        "url": "https://news.ycombinator.com/item?id=50263947"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "writing"
-        ],
-        "excerpt": "… one fairly generic lead optimization play, and then we get … Claude helped write better paperwork and documentation for Enveda?!I know Anthropic are brilliant at knowing when to…",
-        "source": "Hacker News",
-        "author": "rao-v",
-        "publishedAt": "2026-10-27T22:29:51.000Z",
-        "url": "https://news.ycombinator.com/item?id=50266765"
+        "author": "timr",
+        "publishedAt": "2026-10-28T08:26:47.000Z",
+        "url": "https://news.ycombinator.com/item?id=50270628"
       },
       {
         "modelId": "claude",
@@ -7101,15 +7093,27 @@
         "url": "https://news.ycombinator.com/item?id=50281409"
       },
       {
+        "modelId": "claude",
+        "themes": [
+          "coding",
+          "reasoning"
+        ],
+        "excerpt": "…clear metrics. Anthropic made a big point about speeding up Claude code and claude.ai with Opus 5.5, OpenAI is doing a sprint on Codex this month.So dear AI labs, here's a…",
+        "source": "Hacker News",
+        "author": "w-m",
+        "publishedAt": "2026-10-28T09:45:40.000Z",
+        "url": "https://news.ycombinator.com/item?id=50271101"
+      },
+      {
         "modelId": "gemini",
         "themes": [
           "coding"
         ],
-        "excerpt": "…Keep track of updates to the Gemini API October 8, 2026 Gemini 3.7 Flash deprecation : https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.7 gemini-3.7-flash is…",
+        "excerpt": "…are causing errors. It doesn't clean up duplicated imports. Gemini 3.8 Flash on medium seems less capable than before. It now introduces code I never asked for, which it didn't…",
         "source": "Google AI forum",
-        "author": "ron_jan",
-        "publishedAt": "2026-10-29T02:44:16.051Z",
-        "url": "https://discuss.ai.google.dev/t/omg-what-is-going-on-with-gemini-3-8-flash-extremely-slow-responses-and-massive-latency-persistent-503-capacity-unavailable-errors-cluster-routing-issues-on-account/189135"
+        "author": "Misa_John_Carlo",
+        "publishedAt": "2026-10-29T09:50:29.529Z",
+        "url": "https://discuss.ai.google.dev/t/antigravity-ide-version-2-6-0-bad-update/196445"
       },
       {
         "modelId": "gemini",
@@ -7139,11 +7143,11 @@
         "themes": [
           "coding"
         ],
-        "excerpt": "… Pro for non-trial subscriptions only. Gemini models missing: Gemini 3.8 Flash should be available on every plan, so that part isn't expected. Please confirm your exact version in…",
+        "excerpt": "Hello, Yes, streaming text-to-speech is supported for production use (see the https://ai.google.dev/gemini-api/docs/speech-generation#streaming Speech generation guide ).…",
         "source": "Google AI forum",
-        "author": "chunduriv",
-        "publishedAt": "2026-10-29T01:37:27.257Z",
-        "url": "https://discuss.ai.google.dev/t/google-ai-pro-active-but-gemini-models-missing-in-antigravity-ide/196476"
+        "author": "Sai_Deepika_K",
+        "publishedAt": "2026-10-29T05:35:24.730Z",
+        "url": "https://discuss.ai.google.dev/t/gemini-3-1-flash-tts-preview-streamgeneratecontent-truncates-audio-finishreason-other-past-60s-while-generatecontent-non-streaming-works/169063"
       },
       {
         "modelId": "gemini",
@@ -7334,13 +7338,13 @@
         "modelId": "qwen",
         "themes": [
           "coding",
-          "reasoning"
+          "price"
         ],
-        "excerpt": "The most likely reason I listed beregor/ was that I was trying to orient myself — find the zed/ subdirectory, confirm the layout of drafts/, LOG.md, MEMO.md, etc. That was a…",
+        "excerpt": "Qwen in production: auto-generating 79 baseball highlight clips for a Korean broadcaster at the 2026 Asian Games We used Qwen models end to end to build an automatic…",
         "source": "Qwen GitHub",
-        "author": "beregor",
-        "publishedAt": "2026-10-14T19:19:09.000Z",
-        "url": "https://github.com/QwenLM/Qwen3.8/discussions/259"
+        "author": "sungbin1015",
+        "publishedAt": "2026-10-29T08:16:56.000Z",
+        "url": "https://github.com/QwenLM/Qwen3.8/discussions/262"
       },
       {
         "modelId": "qwen",
@@ -7360,11 +7364,11 @@
           "coding",
           "reasoning"
         ],
-        "excerpt": "Hi Qwen team, We applied a training-only auxiliary objective to Qwen3-VL-4B and the 4B model ended up above Qwen3.5-35B-A3B and GPT-5 on signed motion direction. We wanted to…",
+        "excerpt": "The most likely reason I listed beregor/ was that I was trying to orient myself — find the zed/ subdirectory, confirm the layout of drafts/, LOG.md, MEMO.md, etc. That was a…",
         "source": "Qwen GitHub",
-        "author": "jong980812",
-        "publishedAt": "2026-10-11T13:34:38.000Z",
-        "url": "https://github.com/QwenLM/Qwen3.8/discussions/258"
+        "author": "beregor",
+        "publishedAt": "2026-10-14T19:19:09.000Z",
+        "url": "https://github.com/QwenLM/Qwen3.8/discussions/259"
       },
       {
         "modelId": "qwen",
