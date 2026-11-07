@@ -1,22 +1,23 @@
 {
-  "updatedAt": "2026-11-07T20:07:24.526Z",
+  "updatedAt": "2026-11-07T23:51:55.958Z",
   "build": {
-    "sha": "8d331a19bcb8b8ebf0edc874e1dc2bdcf8c48f31",
-    "shortSha": "8d331a1",
+    "sha": "779329aec57b4ffe03a623565f21bf7f76d9438c",
+    "shortSha": "779329a",
     "ref": "main",
-    "builtAt": "2026-11-07T20:07:43.818Z"
+    "builtAt": "2026-11-07T23:52:13.929Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 14,
+    "feedsSucceeded": 9,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.8,
+    "historyDepthDays": 60,
     "estimatedDatasets": 4,
-    "buildSha": "8d331a1",
-    "lastSuccessfulUpdate": "2026-11-07T20:07:24.526Z"
+    "buildSha": "779329a",
+    "lastSuccessfulUpdate": "2026-11-07T23:51:55.958Z"
   },
   "ticker": [
+    "MEGASPEED EXEC WAS RECRUITED TO SPY ON NVIDIA CEO, ACCORDING TO US INTELLIGENCE MEMO",
     "THE US LET NVIDIA SELL CHIPS TO AN EMPTY OFFICE IN CHINA",
     "ANTHROPIC'S CLAUDE CAN NOW LINK BANK ACCOUNTS AND ANALYZE TRANSACTIONS BUT WON'T OFFER INVESTMENT ADVICE",
     "OPENAI REPORTEDLY RAISES AN ADDITIONAL $11 BILLION AT A $1.25 TRILLION VALUATION",
@@ -25,10 +26,35 @@
     "OPENAI PRESIDENT GREG BROCKMAN SAYS COMPANY COULD BE IPO READY IN 2027",
     "GENERATE CEO SEES ‘HUGE OPPORTUNITY’ FROM USING CLAUDE TO SHORTEN CAR-T CELL ENGINES",
     "WHY A NEW REPORT ON ANTHROPIC AUTOMATING AI DEVELOPMENT IS ALARMING RESEARCHERS",
-    "LAWSUIT: MAN INTRODUCED HIS WIFE TO CHATGPT. SHE USED IT TO PLAN HIS MURDER.",
-    "ANTHROPIC INTRODUCES READ-ONLY PERSONAL FINANCE BETA IN CLAUDE"
+    "CAN CLAUDE DREAM NOW? ANTHROPIC EXPLORES HUMAN-LIKE MACHINE MEMORY"
   ],
   "signals": [
+    {
+      "id": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+      "clusterId": "1ytb63p",
+      "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+      "desc": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+      "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+      "dateISO": "2026-11-07T21:17:08.000Z",
+      "date": "NOV 07 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 75,
+      "impact": "high",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
     {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
       "clusterId": "3p68lx",
@@ -40,7 +66,7 @@
       "category": "compute",
       "catConfidence": 0.5,
       "family": "market",
-      "significance": 76,
+      "significance": 74,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -66,7 +92,7 @@
       "category": "capital",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 73,
+      "significance": 71,
       "impact": "high",
       "verification": "single",
       "sourceCount": 1,
@@ -92,7 +118,7 @@
       "category": "capital",
       "catConfidence": 0.89,
       "family": "market",
-      "significance": 73,
+      "significance": 71,
       "impact": "high",
       "verification": "uncertain",
       "sourceCount": 2,
@@ -122,7 +148,7 @@
       "category": "compute",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 67,
+      "significance": 65,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -148,7 +174,7 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 66,
+      "significance": 64,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -174,7 +200,7 @@
       "category": "capital",
       "catConfidence": 0.55,
       "family": "market",
-      "significance": 65,
+      "significance": 64,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 3,
@@ -209,7 +235,7 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 60,
+      "significance": 58,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -235,7 +261,7 @@
       "category": "research",
       "catConfidence": 0.38,
       "family": "research",
-      "significance": 57,
+      "significance": 56,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -246,62 +272,6 @@
         }
       ],
       "sourceName": "The Verge",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
-      "clusterId": "102s5v3",
-      "title": "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder.",
-      "desc": "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says.",
-      "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
-      "dateISO": "2026-11-05T21:39:40.000Z",
-      "date": "NOV 05 2026",
-      "category": "policy",
-      "catConfidence": 0.5,
-      "family": "market",
-      "significance": 57,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVUYzZzF2NmgtQldiQk9PQ3BfQnZGQTFnanZjNEdHeUk2THRTRmt5cERpTHJwZ3hwM3dBZGdyVmZlNHA4RDJlTkxnQXUwWFR4d19sMjhJMko1c0hIWkdoS2xSNzFrNGhVbGxibzVJT1g0c2Z5S0ZkQzg2TTZrMlVoNDdDSjNHSkNDVFpuQg?oc=5",
-      "clusterId": "13dvms3",
-      "title": "Anthropic Introduces Read-Only Personal Finance Beta in Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVUYzZzF2NmgtQldiQk9PQ3BfQnZGQTFnanZjNEdHeUk2THRTRmt5cERpTHJwZ3hwM3dBZGdyVmZlNHA4RDJlTkxnQXUwWFR4d19sMjhJMko1c0hIWkdoS2xSNzFrNGhVbGxibzVJT1g0c2Z5S0ZkQzg2TTZrMlVoNDdDSjNHSkNDVFpuQg?oc=5",
-      "dateISO": "2026-11-05T18:17:02.000Z",
-      "date": "NOV 05 2026",
-      "category": "product",
-      "catConfidence": 0.71,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "NewsCord",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOOGdxZEpVNkdXX2JoYmdyUzAzcEQyMENONUVIQkdwWE5XbjJyUU5fSDZ5d2Z6VVphMDBHei16U25GTVZ5QU1fR0RramFocmI1NmZDMXRBVVNCT1RkTGRFbm51WENhdlZ6TUhxSENHOU1oZl9xcExGSmZJX2RKb0p5em1YNzh6NmZrNlhKQmowa3llOTBfeUtUQ3NjRzhMWUdVa3NvcjlhaFFLRDFreGFBMWlaanB5S2JNVmt4ZXhtc2hfN1REY1I2ZXZJSkIybWdDRDZVZU9lQQ?oc=5"
-        },
-        {
-          "name": "Unite.AI",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVUYzZzF2NmgtQldiQk9PQ3BfQnZGQTFnanZjNEdHeUk2THRTRmt5cERpTHJwZ3hwM3dBZGdyVmZlNHA4RDJlTkxnQXUwWFR4d19sMjhJMko1c0hIWkdoS2xSNzFrNGhVbGxibzVJT1g0c2Z5S0ZkQzg2TTZrMlVoNDdDSjNHSkNDVFpuQg?oc=5"
-        }
-      ],
-      "sourceName": "Unite.AI",
       "entityIds": [
         "claude"
       ]
@@ -333,6 +303,62 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
+      "clusterId": "102s5v3",
+      "title": "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder.",
+      "desc": "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says.",
+      "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
+      "dateISO": "2026-11-05T21:39:40.000Z",
+      "date": "NOV 05 2026",
+      "category": "policy",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVUYzZzF2NmgtQldiQk9PQ3BfQnZGQTFnanZjNEdHeUk2THRTRmt5cERpTHJwZ3hwM3dBZGdyVmZlNHA4RDJlTkxnQXUwWFR4d19sMjhJMko1c0hIWkdoS2xSNzFrNGhVbGxibzVJT1g0c2Z5S0ZkQzg2TTZrMlVoNDdDSjNHSkNDVFpuQg?oc=5",
+      "clusterId": "13dvms3",
+      "title": "Anthropic Introduces Read-Only Personal Finance Beta in Claude",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVUYzZzF2NmgtQldiQk9PQ3BfQnZGQTFnanZjNEdHeUk2THRTRmt5cERpTHJwZ3hwM3dBZGdyVmZlNHA4RDJlTkxnQXUwWFR4d19sMjhJMko1c0hIWkdoS2xSNzFrNGhVbGxibzVJT1g0c2Z5S0ZkQzg2TTZrMlVoNDdDSjNHSkNDVFpuQg?oc=5",
+      "dateISO": "2026-11-05T18:17:02.000Z",
+      "date": "NOV 05 2026",
+      "category": "product",
+      "catConfidence": 0.71,
+      "family": "product",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "NewsCord",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOOGdxZEpVNkdXX2JoYmdyUzAzcEQyMENONUVIQkdwWE5XbjJyUU5fSDZ5d2Z6VVphMDBHei16U25GTVZ5QU1fR0RramFocmI1NmZDMXRBVVNCT1RkTGRFbm51WENhdlZ6TUhxSENHOU1oZl9xcExGSmZJX2RKb0p5em1YNzh6NmZrNlhKQmowa3llOTBfeUtUQ3NjRzhMWUdVa3NvcjlhaFFLRDFreGFBMWlaanB5S2JNVmt4ZXhtc2hfN1REY1I2ZXZJSkIybWdDRDZVZU9lQQ?oc=5"
+        },
+        {
+          "name": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNVUYzZzF2NmgtQldiQk9PQ3BfQnZGQTFnanZjNEdHeUk2THRTRmt5cERpTHJwZ3hwM3dBZGdyVmZlNHA4RDJlTkxnQXUwWFR4d19sMjhJMko1c0hIWkdoS2xSNzFrNGhVbGxibzVJT1g0c2Z5S0ZkQzg2TTZrMlVoNDdDSjNHSkNDVFpuQg?oc=5"
+        }
+      ],
+      "sourceName": "Unite.AI",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcU9ZaHhETTA4YmZiMmMtMms5WVZneWtneDVTQ2RzbGNIcVRfNjBkT2MzbDltVnlWRlMyOUx2ZmtsclUwZ2JEVlBZdndkQmNxb01FZ0Q0cS10QnNNdWVmUUljcGNGS2w3QWVsX3ZtTDV5QVdrSUt3WVBQQ0t3Uk9MWFY1djk0U2R2NUlYUkdJalpQTnl2aE5VU2xqSWNHVjUzbE1VdXFYU2JsUQ?oc=5",
       "clusterId": "tm121b",
       "title": "Anthropic Just Gave Claude Access to Your Bank Accounts – Here’s What It Can See",
@@ -343,7 +369,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 54,
+      "significance": 53,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 3,
@@ -377,7 +403,7 @@
       "category": "adoption",
       "catConfidence": 0.43,
       "family": "product",
-      "significance": 54,
+      "significance": 53,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 4,
@@ -400,32 +426,6 @@
         }
       ],
       "sourceName": "Reuters",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5",
-      "clusterId": "l0s6mx",
-      "title": "AI for scientific discovery How researchers use Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5",
-      "dateISO": "2026-11-05T23:29:34.000Z",
-      "date": "NOV 05 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Anthropic",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5"
-        }
-      ],
-      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
@@ -499,53 +499,69 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5",
-      "clusterId": "1xqwgcm",
-      "title": "Anthropic loosens Claude's game cloning ban — AI will now offer to build original games in the requested genre",
+      "id": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5",
+      "clusterId": "l0s6mx",
+      "title": "AI for scientific discovery How researchers use Claude",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5",
-      "dateISO": "2026-11-05T11:00:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5",
+      "dateISO": "2026-11-05T23:29:34.000Z",
       "date": "NOV 05 2026",
-      "category": "policy",
+      "category": "research",
       "catConfidence": 0.6,
-      "family": "market",
-      "significance": 50,
+      "family": "research",
+      "significance": 52,
       "impact": "notable",
-      "verification": "single",
+      "verification": "official",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Tom's Hardware",
-          "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5"
+          "name": "Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5"
         }
       ],
-      "sourceName": "Tom's Hardware",
+      "sourceName": "Anthropic",
       "entityIds": [
         "claude"
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5",
-      "clusterId": "6la34g",
-      "title": "Anthropic must face claims its Claude Max pitch misled users",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5",
-      "dateISO": "2026-11-07T04:11:33.000Z",
-      "date": "NOV 07 2026",
+      "id": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+      "clusterId": "1rmj5o",
+      "title": "Claude can now analyze your spending with its new Personal Finance tool",
+      "desc": "With Personal Finance in Claude, users can connect their bank and card accounts through Plaid and ask questions about their finances.",
+      "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
+      "dateISO": "2026-11-05T18:00:00.000Z",
+      "date": "NOV 05 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 49,
+      "significance": 50,
       "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
+      "verification": "corroborated",
+      "sourceCount": 5,
       "sources": [
         {
-          "name": "Courthouse News",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5"
+          "name": "The Mac Observer",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaGEwdjl4QTY5N183SWZ4eUJJMzhyUWtUS24yU2syVDBvUkZNUklsUE9pb1RpMnZGUWtxNEkyNEJySWRvQkc4YkhJaDZDRzlxZ2lxU1NpWG55b1FYbWtQZ2wyeXAwTDFHVG9PTDBxVktqdmdtbVI2OXBHa0lCTjZ0X1phWHpYaVVJTFVSOFVzY25BMzhRRjhORzlxMWhNczRlNlE?oc=5"
+        },
+        {
+          "name": "Digital Watch Observatory",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAteC1vakJ6QjRVQXVTeFJfdWk0TUVGMm1URENFV3ZFNDZ0YmFwbXpTaXpDZW5jNWx1TXdqZjVkdDFzNlF6VmpMS1djWWVGZzhtR2tKTVl3NVRPaWx0QXFWRUhQRXVMOGJTTGlF?oc=5"
+        },
+        {
+          "name": "ZDNET",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1pMU1xVHcxb1VUUWtPaExlTzYyenlqalBZWjVHUmw5Z0pvTTNVUFRGSXFCSG1UcmxGMWRhZzM4eW9Eb1g5b2Z0bW82aC1VODhNWndERkMyTjRwd1loYS0yR2hyU1JQSGp4cmFrVFNFbkptY0tnTnc?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZEtFZTdKVm5NbllXbVdGcTRrU3ZuZ3p4Q0VvS2hPRjJQWmJGUWlIRmlpaC1kV1l0WUJTbmRQSm5mVVhrYV9oRUE2c2xPZWpoRDRnWkJwQzFmVmg1REtTN0k4WkRVYjUyaUExOXUyaXlWZU9yei1Bd0ZqYWpGLTNlOXJubi1DQmZxekZWbG9Cd1Q1NE1rTnMzbm15bEw2TnJMNFZnMm9rOWxVdw?oc=5"
         }
       ],
-      "sourceName": "Courthouse News",
+      "sourceName": "TechCrunch",
       "entityIds": [
         "claude"
       ]
@@ -581,31 +597,79 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUtlQnZCZm9uS3lENk8xWlVQMVFKdVozNFhIekVNZTJtd0IxeFFvM0hXLXAtaWpKVk5ocjN4RDJqYk52a3BkZFRSMzlXYk4zRGo4WGZwS1RnZEx0alI3U21aQ1FyaWo1YlJ6STBxU0c0aXFreGI5MEhYTndBbDdqZ2dxUzNiVGVELUdYZ1FmNnIyczFuSjREaEdCVDJ4Zzc5SlZfaDRB?oc=5",
-      "clusterId": "w198e3",
-      "title": "Anthropic adds bank account access to Claude so users can track their spending",
+      "id": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5",
+      "clusterId": "6la34g",
+      "title": "Anthropic must face claims its Claude Max pitch misled users",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUtlQnZCZm9uS3lENk8xWlVQMVFKdVozNFhIekVNZTJtd0IxeFFvM0hXLXAtaWpKVk5ocjN4RDJqYk52a3BkZFRSMzlXYk4zRGo4WGZwS1RnZEx0alI3U21aQ1FyaWo1YlJ6STBxU0c0aXFreGI5MEhYTndBbDdqZ2dxUzNiVGVELUdYZ1FmNnIyczFuSjREaEdCVDJ4Zzc5SlZfaDRB?oc=5",
-      "dateISO": "2026-11-06T11:40:33.000Z",
-      "date": "NOV 06 2026",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5",
+      "dateISO": "2026-11-07T04:11:33.000Z",
+      "date": "NOV 07 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 48,
       "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
+      "verification": "single",
+      "sourceCount": 1,
       "sources": [
         {
-          "name": "The Mac Observer",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaGEwdjl4QTY5N183SWZ4eUJJMzhyUWtUS24yU2syVDBvUkZNUklsUE9pb1RpMnZGUWtxNEkyNEJySWRvQkc4YkhJaDZDRzlxZ2lxU1NpWG55b1FYbWtQZ2wyeXAwTDFHVG9PTDBxVktqdmdtbVI2OXBHa0lCTjZ0X1phWHpYaVVJTFVSOFVzY25BMzhRRjhORzlxMWhNczRlNlE?oc=5"
-        },
-        {
-          "name": "The Decoder",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUtlQnZCZm9uS3lENk8xWlVQMVFKdVozNFhIekVNZTJtd0IxeFFvM0hXLXAtaWpKVk5ocjN4RDJqYk52a3BkZFRSMzlXYk4zRGo4WGZwS1RnZEx0alI3U21aQ1FyaWo1YlJ6STBxU0c0aXFreGI5MEhYTndBbDdqZ2dxUzNiVGVELUdYZ1FmNnIyczFuSjREaEdCVDJ4Zzc5SlZfaDRB?oc=5"
+          "name": "Courthouse News",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5"
         }
       ],
-      "sourceName": "The Decoder",
+      "sourceName": "Courthouse News",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5",
+      "clusterId": "1xqwgcm",
+      "title": "Anthropic loosens Claude's game cloning ban — AI will now offer to build original games in the requested genre",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5",
+      "dateISO": "2026-11-05T11:00:00.000Z",
+      "date": "NOV 05 2026",
+      "category": "policy",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Tom's Hardware",
+          "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQRjZtdTRhY2hIeDlfYkV1ZEFWQThWNUZBczNJYUdTd0xHSUM1aU5CZ2VkNGpfWU9Lb1hsOV9hM2VjNEtYdGZUZklkYWJZZkNsZmNWQUtsTnhzTERKTktMR1RfZzQ2RjJEVnl6ZFJObzVQVzNnRzVsM0w2N1Q2MEloM0xzTnJWcTRZc1BHRmpoZ0RIY2k4OWJOdlV2Zll3bm5oaXNtTUdpTExLWjcxSkpaTUNvYjNNRHJKQ000RzBfRk96bzJTZjROb1ZfcldCYjNoUk1GeGltVXFWdi0tbkVhd0pzcGRPUU1fUTFKYW1TMzJOQ2V4WmVjQ1RnSUVUMUtRNjNrLUtrZmZYZw?oc=5"
+        }
+      ],
+      "sourceName": "Tom's Hardware",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjJYdWZDWUJvTG5aZElOMS1yU25aZW56Tll5cFk2ZUJBZTJpeFVYbUYtd0JXSHROek5MUTh4eTFCRTNWd3g0MmJXbVA0LTNEbGpmQlY3Vktmc2FaZzRIQjdUelh5MlNXeVk5Vm91bEV2QjhRcmlWQW84VGU4cWFwdXg4T0ZjNlJoQ0JkcmRWLS1Xa2dTc0JReTJnUEVnUzFackE?oc=5",
+      "clusterId": "uubn7r",
+      "title": "CEO of South Jersey’s largest data center and Anthropic’s Claude to headline Rowan’s artificial intelligence conference, Nov. 10",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjJYdWZDWUJvTG5aZElOMS1yU25aZW56Tll5cFk2ZUJBZTJpeFVYbUYtd0JXSHROek5MUTh4eTFCRTNWd3g0MmJXbVA0LTNEbGpmQlY3Vktmc2FaZzRIQjdUelh5MlNXeVk5Vm91bEV2QjhRcmlWQW84VGU4cWFwdXg4T0ZjNlJoQ0JkcmRWLS1Xa2dTc0JReTJnUEVnUzFackE?oc=5",
+      "dateISO": "2026-11-06T13:50:03.000Z",
+      "date": "NOV 06 2026",
+      "category": "orggov",
+      "catConfidence": 0.4,
+      "family": "market",
+      "significance": 46,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Rowan Today",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjJYdWZDWUJvTG5aZElOMS1yU25aZW56Tll5cFk2ZUJBZTJpeFVYbUYtd0JXSHROek5MUTh4eTFCRTNWd3g0MmJXbVA0LTNEbGpmQlY3Vktmc2FaZzRIQjdUelh5MlNXeVk5Vm91bEV2QjhRcmlWQW84VGU4cWFwdXg4T0ZjNlJoQ0JkcmRWLS1Xa2dTc0JReTJnUEVnUzFackE?oc=5"
+        }
+      ],
+      "sourceName": "Rowan Today",
       "entityIds": [
         "claude"
       ]
@@ -621,7 +685,7 @@
       "category": "market",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 48,
+      "significance": 46,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -648,7 +712,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 47,
+      "significance": 45,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -674,7 +738,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 47,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -700,7 +764,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 47,
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -727,7 +791,7 @@
       "category": "compute",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 47,
+      "significance": 45,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
@@ -743,174 +807,6 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjJYdWZDWUJvTG5aZElOMS1yU25aZW56Tll5cFk2ZUJBZTJpeFVYbUYtd0JXSHROek5MUTh4eTFCRTNWd3g0MmJXbVA0LTNEbGpmQlY3Vktmc2FaZzRIQjdUelh5MlNXeVk5Vm91bEV2QjhRcmlWQW84VGU4cWFwdXg4T0ZjNlJoQ0JkcmRWLS1Xa2dTc0JReTJnUEVnUzFackE?oc=5",
-      "clusterId": "uubn7r",
-      "title": "CEO of South Jersey’s largest data center and Anthropic’s Claude to headline Rowan’s artificial intelligence conference, Nov. 10",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjJYdWZDWUJvTG5aZElOMS1yU25aZW56Tll5cFk2ZUJBZTJpeFVYbUYtd0JXSHROek5MUTh4eTFCRTNWd3g0MmJXbVA0LTNEbGpmQlY3Vktmc2FaZzRIQjdUelh5MlNXeVk5Vm91bEV2QjhRcmlWQW84VGU4cWFwdXg4T0ZjNlJoQ0JkcmRWLS1Xa2dTc0JReTJnUEVnUzFackE?oc=5",
-      "dateISO": "2026-11-06T13:50:03.000Z",
-      "date": "NOV 06 2026",
-      "category": "orggov",
-      "catConfidence": 0.4,
-      "family": "market",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Rowan Today",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYjJYdWZDWUJvTG5aZElOMS1yU25aZW56Tll5cFk2ZUJBZTJpeFVYbUYtd0JXSHROek5MUTh4eTFCRTNWd3g0MmJXbVA0LTNEbGpmQlY3Vktmc2FaZzRIQjdUelh5MlNXeVk5Vm91bEV2QjhRcmlWQW84VGU4cWFwdXg4T0ZjNlJoQ0JkcmRWLS1Xa2dTc0JReTJnUEVnUzFackE?oc=5"
-        }
-      ],
-      "sourceName": "Rowan Today",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/introducing-images-2-6",
-      "clusterId": "1syjj9m",
-      "title": "Introducing Images 2.6",
-      "desc": "Images 2.6 brings faster image generation, GIF creation, more precise editing, and new API controls across ChatGPT, Codex, and the API.",
-      "url": "https://openai.com/index/introducing-images-2-6",
-      "dateISO": "2026-11-04T00:00:00.000Z",
-      "date": "NOV 04 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "OpenAI (YouTube)",
-          "url": "https://www.youtube.com/watch?v=bJldMYfRvMQ"
-        },
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-images-2-6"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "chatgpt"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
-      "clusterId": "1rmj5o",
-      "title": "Claude can now analyze your spending with its new Personal Finance tool",
-      "desc": "With Personal Finance in Claude, users can connect their bank and card accounts through Plaid and ask questions about their finances.",
-      "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/",
-      "dateISO": "2026-11-05T18:00:00.000Z",
-      "date": "NOV 05 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "ZDNET",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1pMU1xVHcxb1VUUWtPaExlTzYyenlqalBZWjVHUmw5Z0pvTTNVUFRGSXFCSG1UcmxGMWRhZzM4eW9Eb1g5b2Z0bW82aC1VODhNWndERkMyTjRwd1loYS0yR2hyU1JQSGp4cmFrVFNFbkptY0tnTnc?oc=5"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZEtFZTdKVm5NbllXbVdGcTRrU3ZuZ3p4Q0VvS2hPRjJQWmJGUWlIRmlpaC1kV1l0WUJTbmRQSm5mVVhrYV9oRUE2c2xPZWpoRDRnWkJwQzFmVmg1REtTN0k4WkRVYjUyaUExOXUyaXlWZU9yei1Bd0ZqYWpGLTNlOXJubi1DQmZxekZWbG9Cd1Q1NE1rTnMzbm15bEw2TnJMNFZnMm9rOWxVdw?oc=5"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/introducing-gpt-6-cyber",
-      "clusterId": "18ssata",
-      "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
-      "desc": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
-      "url": "https://openai.com/index/introducing-gpt-6-cyber",
-      "dateISO": "2026-11-05T09:00:00.000Z",
-      "date": "NOV 05 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/introducing-gpt-6-cyber"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5",
-      "clusterId": "1uw4ewb",
-      "title": "Don’t Be Mean To Claude: And Other New Rules From Anthropic",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5",
-      "dateISO": "2026-11-06T16:28:49.000Z",
-      "date": "NOV 06 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Forbes",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5"
-        }
-      ],
-      "sourceName": "Forbes",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5",
-      "clusterId": "ckner1",
-      "title": "Anthropic Says Claude Helped Scientists Map a Mysterious Cell Structure",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5",
-      "dateISO": "2026-11-06T15:50:00.000Z",
-      "date": "NOV 06 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 45,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Benzinga",
-          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5"
-        }
-      ],
-      "sourceName": "Benzinga",
-      "entityIds": [
-        "claude"
-      ]
     },
     {
       "id": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
@@ -943,6 +839,84 @@
       ]
     },
     {
+      "id": "https://openai.com/index/introducing-gpt-6-cyber",
+      "clusterId": "18ssata",
+      "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+      "desc": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.",
+      "url": "https://openai.com/index/introducing-gpt-6-cyber",
+      "dateISO": "2026-11-05T09:00:00.000Z",
+      "date": "NOV 05 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-gpt-6-cyber"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5",
+      "clusterId": "1uw4ewb",
+      "title": "Don’t Be Mean To Claude: And Other New Rules From Anthropic",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5",
+      "dateISO": "2026-11-06T16:28:49.000Z",
+      "date": "NOV 06 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Forbes",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNWI5RFEyN1o0TUlzY0x6OUp4Y2JvWm1VSTJlTWx6cFZCaUxjdDVnNlJHRzMxZmgzTjE1WHhRelRXN2JXa0ZvZ29WYm9XQURTSS1QMmdnWHhoTzd4RFJGd0JsbnRPOWwwcnRkdzFRZ1dVVG9rUlpfSlVLNGdsdzlqR2I3Y3ltMHIyN2Njd0pzNmd2S19UMVI3MHpJNGRhOE52TzlITEhLa0pELXllNWc?oc=5"
+        }
+      ],
+      "sourceName": "Forbes",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5",
+      "clusterId": "ckner1",
+      "title": "Anthropic Says Claude Helped Scientists Map a Mysterious Cell Structure",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5",
+      "dateISO": "2026-11-06T15:50:00.000Z",
+      "date": "NOV 06 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWmhValNmeE5jVWJhTTVON2RoclFGR29UMDR3WE1pMnRZeDBtRlNiRlNsTmoyMHU1bTdHT2o0N3pwMUJGT3YtUDM2eDdpLXdKS0diNF81eDR5VGI0QzBMN1Y0RlhOWnFJM1VBd3RVYTBSU1BMYjhlT2N6UTNjLVBnSWdMUU9ObUo4Z3VFeldfN0RmdnB0TGlsWWVLS1E2WWVLRV9Pc2VTeFpRdDB5bWhwMTduZlY2VU5PMGhWZjRJbkZILTQwMEFxWlVPVnBrQk9y?oc=5"
+        }
+      ],
+      "sourceName": "Benzinga",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBCSU9YMTU4eXZjZ2lISEd1OXNMSXVOb0JESS1WZE5VaWlBUV9hUzA2RmtrX1BjSG9KemFhLXkwUEhQdVAwQUtRdmxhVnh1aUhUNkltM3Q1U196WTZIVGd5X2w0Q2UxNWlWN25V0gFwQVVfeXFMUEVId1RlTy1yTTdyT0VPVUhhVkMyQ0V2UWZ4TjFKMXB3SDdDNXNjeGhRNjFoODl1M3B4TEQ2dVVFV244TzF6d3pYdjJPTjlWcFZWSE80eC0xUU5nMFZrUjgtZ0E0ZnRaaWdLT293RlJaZA?oc=5",
       "clusterId": "156wvj6",
       "title": "Anthropic's Claude Code Reportedly Leaks User Email Addresses Through HTTP User-Agent Headers",
@@ -953,7 +927,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 44,
+      "significance": 43,
       "impact": "emerging",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -969,32 +943,6 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5",
-      "clusterId": "6nw4y",
-      "title": "Strategist Who Warned Before Rout Sees Anthropic as Bigger Risk",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5",
-      "dateISO": "2026-11-06T13:11:30.000Z",
-      "date": "NOV 06 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Bloomberg.com",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5"
-        }
-      ],
-      "sourceName": "Bloomberg.com",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
       "id": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
       "clusterId": "zytr8y",
       "title": "Measuring how AI agents handle everyday wet-lab science",
@@ -1005,7 +953,7 @@
       "category": "research",
       "catConfidence": 0.38,
       "family": "research",
-      "significance": 44,
+      "significance": 43,
       "impact": "emerging",
       "verification": "official",
       "sourceCount": 1,
@@ -1018,88 +966,6 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "gpt"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/franklin-templeton",
-      "clusterId": "lc41yx",
-      "title": "Franklin Templeton uses OpenAI to support investment research",
-      "desc": "Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks.",
-      "url": "https://openai.com/index/franklin-templeton",
-      "dateISO": "2026-11-05T00:00:00.000Z",
-      "date": "NOV 05 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/franklin-templeton"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTm41eXFubWtUby1QYU9PSGlhQjF6SnBoRWQtVTVTN2YzZGdaUjVway0yTi1FeEFCX1VlN1NxSFlUZ0dkbmpxR1ZjYTl4azZSY3ZUVkh5UkpselVyQWRta1JCaXNiMXpLbzh6aW9BR1kxLS11c3NkT284TGI0V2FuMXpUWElPUGJ0YmV2UXdjX3REbUlwWjc3M0I2M2puN2M?oc=5",
-      "clusterId": "1ab0jjj",
-      "title": "Music publishers suffer setback in copyright case against Anthropic",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTm41eXFubWtUby1QYU9PSGlhQjF6SnBoRWQtVTVTN2YzZGdaUjVway0yTi1FeEFCX1VlN1NxSFlUZ0dkbmpxR1ZjYTl4azZSY3ZUVkh5UkpselVyQWRta1JCaXNiMXpLbzh6aW9BR1kxLS11c3NkT284TGI0V2FuMXpUWElPUGJ0YmV2UXdjX3REbUlwWjc3M0I2M2puN2M?oc=5",
-      "dateISO": "2026-11-04T22:56:45.000Z",
-      "date": "NOV 04 2026",
-      "category": "policy",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 44,
-      "impact": "emerging",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Courthouse News",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTm41eXFubWtUby1QYU9PSGlhQjF6SnBoRWQtVTVTN2YzZGdaUjVway0yTi1FeEFCX1VlN1NxSFlUZ0dkbmpxR1ZjYTl4azZSY3ZUVkh5UkpselVyQWRta1JCaXNiMXpLbzh6aW9BR1kxLS11c3NkT284TGI0V2FuMXpUWElPUGJ0YmV2UXdjX3REbUlwWjc3M0I2M2puN2M?oc=5"
-        }
-      ],
-      "sourceName": "Courthouse News",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTmJGZmxUQ05rczF1cG1vdm9JWjNvQ3MyODU4N1lOSE81MFU5V191WXYtMmxNLVlhLTFoa0xsaTk5OUlQQTZEaE5FWEphRktVS0ozenVrZWtSektqcGlCdENYakFITC1QOW11Sjhib0xVNF81bllVQlNVX2JWajhGSnhZNA?oc=5",
-      "clusterId": "1vn23zh",
-      "title": "Claude Gets Personal Finance—Anthony Pompliano Accuses Anthropic of Copying His Startup",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTmJGZmxUQ05rczF1cG1vdm9JWjNvQ3MyODU4N1lOSE81MFU5V191WXYtMmxNLVlhLTFoa0xsaTk5OUlQQTZEaE5FWEphRktVS0ozenVrZWtSektqcGlCdENYakFITC1QOW11Sjhib0xVNF81bllVQlNVX2JWajhGSnhZNA?oc=5",
-      "dateISO": "2026-11-05T23:06:02.000Z",
-      "date": "NOV 05 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 43,
-      "impact": "emerging",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "Decrypt",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTmJGZmxUQ05rczF1cG1vdm9JWjNvQ3MyODU4N1lOSE81MFU5V191WXYtMmxNLVlhLTFoa0xsaTk5OUlQQTZEaE5FWEphRktVS0ozenVrZWtSektqcGlCdENYakFITC1QOW11Sjhib0xVNF81bllVQlNVX2JWajhGSnhZNA?oc=5"
-        },
-        {
-          "name": "Yahoo Tech",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeWVadFJaQWpRTnJ5MmUzVVN0ZXp2V2NySks1Q3ZvR25YTUd6X3BHQ3JBemxfX2s2ZVQ2elRHVkpkWEtVZHFFZUZzOGY2Rk9vSk9OTXNlOTFfb3VqTFliM0pvZTZESVc4SDhFZVhaQVVFNlZfNU9yZkIxYVNLNFU2X3VsdUxkS0dncUViTndKbk5fRXY1eWlyeQ?oc=5"
-        }
-      ],
-      "sourceName": "Decrypt",
-      "entityIds": [
-        "claude"
       ]
     },
     {
@@ -1141,16 +1007,68 @@
       ]
     },
     {
-      "id": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-      "clusterId": "c50sgo",
-      "title": "Setting a new standard for responsible AI infrastructure",
-      "desc": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
-      "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-      "dateISO": "2026-11-05T02:00:00.000Z",
-      "date": "NOV 05 2026",
-      "category": "product",
+      "id": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTm41eXFubWtUby1QYU9PSGlhQjF6SnBoRWQtVTVTN2YzZGdaUjVway0yTi1FeEFCX1VlN1NxSFlUZ0dkbmpxR1ZjYTl4azZSY3ZUVkh5UkpselVyQWRta1JCaXNiMXpLbzh6aW9BR1kxLS11c3NkT284TGI0V2FuMXpUWElPUGJ0YmV2UXdjX3REbUlwWjc3M0I2M2puN2M?oc=5",
+      "clusterId": "1ab0jjj",
+      "title": "Music publishers suffer setback in copyright case against Anthropic",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTm41eXFubWtUby1QYU9PSGlhQjF6SnBoRWQtVTVTN2YzZGdaUjVway0yTi1FeEFCX1VlN1NxSFlUZ0dkbmpxR1ZjYTl4azZSY3ZUVkh5UkpselVyQWRta1JCaXNiMXpLbzh6aW9BR1kxLS11c3NkT284TGI0V2FuMXpUWElPUGJ0YmV2UXdjX3REbUlwWjc3M0I2M2puN2M?oc=5",
+      "dateISO": "2026-11-04T22:56:45.000Z",
+      "date": "NOV 04 2026",
+      "category": "policy",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Courthouse News",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTm41eXFubWtUby1QYU9PSGlhQjF6SnBoRWQtVTVTN2YzZGdaUjVway0yTi1FeEFCX1VlN1NxSFlUZ0dkbmpxR1ZjYTl4azZSY3ZUVkh5UkpselVyQWRta1JCaXNiMXpLbzh6aW9BR1kxLS11c3NkT284TGI0V2FuMXpUWElPUGJ0YmV2UXdjX3REbUlwWjc3M0I2M2puN2M?oc=5"
+        }
+      ],
+      "sourceName": "Courthouse News",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5",
+      "clusterId": "q0sip8",
+      "title": "U.S. appeals court upholds Pentagon designation of Anthropic as supply chain risk",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5",
+      "dateISO": "2026-09-25T07:00:00.000Z",
+      "date": "SEP 25 2026",
+      "category": "policy",
       "catConfidence": 0.6,
-      "family": "product",
+      "family": "market",
+      "significance": 43,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNU3ZmOE1OdnZzZlNfVTllZUVPMUVnb3g4c3hYS1k4c2U5Sk13dTBWZUkwRzZnajFTVmpCbFdoZlM1cV9fZEU1NGlCc053UkRLN3JadElNN3NGVE1iRGJzSnZrcEdBV1d4UWdwVjVvOGV4ZlUwamNULU9wSnVlTE9lU3dHd9IBiAFBVV95cUxPMndkTFZBaExhd2RzWlU5NXliOHlwRXh6eFlRci1OenRuY01nWlQ3WnBmbURNYzRRMzY2TzhpcElNVVQ4Wktla1FNanl2STc3THN4VUlJdjFpSFJOZzgwaklVRkhoNlNGS1lTUFZ5dDZPZnJZblU0bi1KVlNRYms2ZlVfbm1CdXlp?oc=5"
+        }
+      ],
+      "sourceName": "CNBC",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/cooley-gopublic",
+      "clusterId": "c9xyz2",
+      "title": "How Cooley is accelerating IPO work with ChatGPT",
+      "desc": "Cooley built GO Public with ChatGPT Work to bring intelligence to the IPO process, helping lawyers surface issues earlier and focus judgment where it matters most.",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "dateISO": "2026-09-17T12:00:00.000Z",
+      "date": "SEP 17 2026",
+      "category": "capital",
+      "catConfidence": 0.55,
+      "family": "market",
       "significance": 43,
       "impact": "emerging",
       "verification": "official",
@@ -1158,12 +1076,94 @@
       "sources": [
         {
           "name": "OpenAI",
-          "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure"
+          "url": "https://openai.com/index/cooley-gopublic"
         }
       ],
       "sourceName": "OpenAI",
       "entityIds": [
-        "gpt"
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5",
+      "clusterId": "6nw4y",
+      "title": "Strategist Who Warned Before Rout Sees Anthropic as Bigger Risk",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5",
+      "dateISO": "2026-11-06T13:11:30.000Z",
+      "date": "NOV 06 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQUHIycEZRSkJsN281eURCTG5nSGdPaXAzZzhfWHNLRU5pb2Z5MzZBRlNtMFVyRkVJa0RuMk9SeExIdndfZkxuQ1BSbG01UnlGbDdpVjdiVmJEM3U1cHJ2V285dkhHanNEczJ4QVJqUk1sVXdXZXJObFFSMjNxYXNySWpYZVNNQXU4dmhzNXk1dW5FaHU2WXJyak82emlxdWh3RTd6UlU2NDhhclJEMkpINk5UWmg?oc=5"
+        }
+      ],
+      "sourceName": "Bloomberg.com",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUtlQnZCZm9uS3lENk8xWlVQMVFKdVozNFhIekVNZTJtd0IxeFFvM0hXLXAtaWpKVk5ocjN4RDJqYk52a3BkZFRSMzlXYk4zRGo4WGZwS1RnZEx0alI3U21aQ1FyaWo1YlJ6STBxU0c0aXFreGI5MEhYTndBbDdqZ2dxUzNiVGVELUdYZ1FmNnIyczFuSjREaEdCVDJ4Zzc5SlZfaDRB?oc=5",
+      "clusterId": "w198e3",
+      "title": "Anthropic adds bank account access to Claude so users can track their spending",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUtlQnZCZm9uS3lENk8xWlVQMVFKdVozNFhIekVNZTJtd0IxeFFvM0hXLXAtaWpKVk5ocjN4RDJqYk52a3BkZFRSMzlXYk4zRGo4WGZwS1RnZEx0alI3U21aQ1FyaWo1YlJ6STBxU0c0aXFreGI5MEhYTndBbDdqZ2dxUzNiVGVELUdYZ1FmNnIyczFuSjREaEdCVDJ4Zzc5SlZfaDRB?oc=5",
+      "dateISO": "2026-11-06T11:40:33.000Z",
+      "date": "NOV 06 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Decoder",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVUtlQnZCZm9uS3lENk8xWlVQMVFKdVozNFhIekVNZTJtd0IxeFFvM0hXLXAtaWpKVk5ocjN4RDJqYk52a3BkZFRSMzlXYk4zRGo4WGZwS1RnZEx0alI3U21aQ1FyaWo1YlJ6STBxU0c0aXFreGI5MEhYTndBbDdqZ2dxUzNiVGVELUdYZ1FmNnIyczFuSjREaEdCVDJ4Zzc5SlZfaDRB?oc=5"
+        }
+      ],
+      "sourceName": "The Decoder",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTmJGZmxUQ05rczF1cG1vdm9JWjNvQ3MyODU4N1lOSE81MFU5V191WXYtMmxNLVlhLTFoa0xsaTk5OUlQQTZEaE5FWEphRktVS0ozenVrZWtSektqcGlCdENYakFITC1QOW11Sjhib0xVNF81bllVQlNVX2JWajhGSnhZNA?oc=5",
+      "clusterId": "1vn23zh",
+      "title": "Claude Gets Personal Finance—Anthony Pompliano Accuses Anthropic of Copying His Startup",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTmJGZmxUQ05rczF1cG1vdm9JWjNvQ3MyODU4N1lOSE81MFU5V191WXYtMmxNLVlhLTFoa0xsaTk5OUlQQTZEaE5FWEphRktVS0ozenVrZWtSektqcGlCdENYakFITC1QOW11Sjhib0xVNF81bllVQlNVX2JWajhGSnhZNA?oc=5",
+      "dateISO": "2026-11-05T23:06:02.000Z",
+      "date": "NOV 05 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "Decrypt",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTmJGZmxUQ05rczF1cG1vdm9JWjNvQ3MyODU4N1lOSE81MFU5V191WXYtMmxNLVlhLTFoa0xsaTk5OUlQQTZEaE5FWEphRktVS0ozenVrZWtSektqcGlCdENYakFITC1QOW11Sjhib0xVNF81bllVQlNVX2JWajhGSnhZNA?oc=5"
+        },
+        {
+          "name": "Yahoo Tech",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQeWVadFJaQWpRTnJ5MmUzVVN0ZXp2V2NySks1Q3ZvR25YTUd6X3BHQ3JBemxfX2s2ZVQ2elRHVkpkWEtVZHFFZUZzOGY2Rk9vSk9OTXNlOTFfb3VqTFliM0pvZTZESVc4SDhFZVhaQVVFNlZfNU9yZkIxYVNLNFU2X3VsdUxkS0dncUViTndKbk5fRXY1eWlyeQ?oc=5"
+        }
+      ],
+      "sourceName": "Decrypt",
+      "entityIds": [
+        "claude"
       ]
     }
   ],
@@ -1173,7 +1173,7 @@
       "category": "product",
       "title": "Anthropic Introduces Read-Only Personal Finance Beta in Claude",
       "summary": "Anthropic Introduces Read-Only Personal Finance Beta in Claude",
-      "significance": 56,
+      "significance": 54,
       "impact": "notable",
       "verification": "corroborated",
       "date": "NOV 05 2026",
@@ -1197,33 +1197,33 @@
     },
     {
       "family": "market",
-      "category": "compute",
-      "title": "The US let Nvidia sell chips to an empty office in China",
-      "summary": "Concerns are being raised that neither the Commerce Department nor Nvidia are doing their due diligence when it comes to vetting Chinese firms cleared to handle the company's H200…",
-      "significance": 76,
+      "category": "orggov",
+      "title": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence memo",
+      "summary": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+      "significance": 75,
       "impact": "high",
-      "verification": "single",
+      "verification": "uncertain",
       "date": "NOV 07 2026",
-      "dateISO": "2026-11-07T15:43:45.000Z",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government",
+      "dateISO": "2026-11-07T21:17:08.000Z",
+      "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1029483/nvidia-ai-chips-china-blacklist-government"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/"
         }
       ],
       "entityIds": [
         "nvidia"
       ],
-      "whyItMatters": "If it holds up, fresh capital extends how long the company can fund training runs and hiring before it needs revenue."
+      "whyItMatters": "If it holds up, governance changes shape how a lab makes its biggest calls."
     },
     {
       "family": "research",
       "category": "research",
       "title": "Why a new report on Anthropic automating AI development is alarming researchers",
       "summary": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with lit…",
-      "significance": 57,
+      "significance": 56,
       "impact": "notable",
       "verification": "single",
       "date": "NOV 07 2026",
@@ -1247,7 +1247,7 @@
     "copilot": 1,
     "perplexity": 1,
     "gpt": 119,
-    "claude": 79,
+    "claude": 77,
     "gemini": 24,
     "grok": 0,
     "llama": 0,
@@ -1259,7 +1259,7 @@
     "gcp": 1,
     "oracle": 2,
     "coreweave": 0,
-    "nvidia": 2,
+    "nvidia": 3,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1350,7 +1350,7 @@
           "sourceName": "OpenAI",
           "sourceCount": 1,
           "verification": "official",
-          "impact": "notable"
+          "impact": "emerging"
         },
         {
           "h": "Setting a new standard for responsible AI infrastructure",
@@ -1379,11 +1379,11 @@
           "d": "NOV 04 2026",
           "url": "https://openai.com/index/introducing-images-2-6",
           "isVideo": false,
-          "videoUrl": "https://www.youtube.com/watch?v=bJldMYfRvMQ",
+          "videoUrl": null,
           "sourceName": "OpenAI",
-          "sourceCount": 2,
+          "sourceCount": 1,
           "verification": "official",
-          "impact": "notable"
+          "impact": "emerging"
         }
       ]
     },
@@ -1417,6 +1417,30 @@
     }
   ],
   "wire": [
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 07 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "After the midterms, things are looking rocky for Elon Musk and data centers",
+      "p": "On Equity, we unpacked what the midterms mean for the tech industry.",
+      "url": "https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 07 2026",
+      "verification": "uncertain",
+      "impact": "high",
+      "h": "Megaspeed exec was recruited to spy on Nvidia CEO, according to US intelligence…",
+      "p": "A memo circulated earlier this year reportedly claimed that China’s Ministry of State Security recruited a female technology executive to spy on Nvidia's CEO.",
+      "url": "https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
     {
       "org": "AI WIRE",
       "logoKey": "other",
@@ -1487,30 +1511,6 @@
       "p": "Anthropic must face claims its Claude Max pitch misled users",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbVRmUWVLWlVpRHdBa0xvdndPZ3EtZjRKd0RCUmREd1BqcTFmcS1NdDZPQzFWR29oQnJiOUtYXy1NSFZiaUs2em1qS0d0b0lCYnlWMmMzT2xCUThCNGJNeG5zdl9FZU5vNFdPYnZvZExObmhRN19vUlU4ZlU5Y1BPaW5BWVRWN0RqVGplSTJiZjJFMEdyT2c?oc=5",
       "sourceName": "Courthouse News",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "NOV 07 2026",
-      "verification": "analysis",
-      "impact": "notable",
-      "h": "Can Claude dream now? Anthropic explores human-like machine memory",
-      "p": "Can Claude dream now? Anthropic explores human-like machine memory",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5",
-      "sourceName": "Interesting Engineering",
-      "sourceCount": 1
-    },
-    {
-      "org": "GOOGLE",
-      "logoKey": "google",
-      "date": "NOV 07 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Crusoe sells troubled Wyoming data center project to Google",
-      "p": "The deal highlights the challenges of developing massive AI data centers.",
-      "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
-      "sourceName": "TechCrunch",
       "sourceCount": 1
     }
   ],
@@ -6329,7 +6329,7 @@
       "rate": "$1.99 – $3.99/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6337,7 +6337,7 @@
       "rate": "$3.59 – $5.29/hr",
       "trend": "↓ 3% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 7 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
@@ -6345,7 +6345,7 @@
       "rate": "$5.98 – $7.99/hr",
       "trend": "↓ 4% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 2 rented offers across Vast.ai + RunPod"
+      "note": "Live from 3 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
@@ -6366,14 +6366,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.34 – $1.79/hr",
-      "trend": "↓ 10% vs 7d ago",
+      "rate": "$0.40 – $1.79/hr",
+      "trend": "↓ 7% vs 7d ago",
       "trendClass": "trend-down",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 11 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-11-07T20:07:24.526Z",
+    "updatedAt": "2026-11-07T23:51:55.958Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6382,15 +6382,15 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 277,
-        "fetchedStoryCount": 277,
+        "rawStoryHits": 276,
+        "fetchedStoryCount": 256,
         "validatedStoryCount": 33,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 33,
+        "storyCoverage": 0.927536231884058,
+        "estimatedRelevantDiscussions": 36,
         "isEstimated": true,
         "rawCommentHits": 1982,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 44,
+        "validatedCommentCount": 45,
         "commentCoverage": 0.15136226034308778,
         "limited": false,
         "points": 662,
@@ -6398,7 +6398,7 @@
           {
             "id": "coding",
             "label": "Coding",
-            "count": 22
+            "count": 20
           },
           {
             "id": "reasoning",
@@ -6418,7 +6418,7 @@
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 5
+            "count": 4
           },
           {
             "id": "writing",
@@ -6450,12 +6450,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 33,
-            "isEstimated": false
-          },
-          {
-            "name": "OpenAI forum",
-            "discussions": 0,
+            "discussions": 36,
             "isEstimated": true
           }
         ]
@@ -6465,16 +6460,16 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 953,
+        "rawStoryHits": 950,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 34,
-        "storyCoverage": 0.3147953830010493,
+        "storyCoverage": 0.3157894736842105,
         "estimatedRelevantDiscussions": 111,
         "isEstimated": true,
-        "rawCommentHits": 6887,
+        "rawCommentHits": 6882,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.04356033105851605,
+        "validatedCommentCount": 36,
+        "commentCoverage": 0.043591979075850044,
         "limited": false,
         "points": 1076,
         "themes": [
@@ -6489,19 +6484,19 @@
             "count": 13
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 5
-          },
-          {
             "id": "price",
             "label": "Price",
             "count": 5
           },
           {
+            "id": "writing",
+            "label": "Writing",
+            "count": 4
+          },
+          {
             "id": "reliability",
             "label": "Reliability",
-            "count": 3
+            "count": 4
           },
           {
             "id": "speed",
@@ -6553,18 +6548,18 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 145,
-        "fetchedStoryCount": 145,
-        "validatedStoryCount": 29,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 38,
+        "rawStoryHits": 143,
+        "fetchedStoryCount": 142,
+        "validatedStoryCount": 26,
+        "storyCoverage": 0.993006993006993,
+        "estimatedRelevantDiscussions": 36,
         "isEstimated": true,
-        "rawCommentHits": 1373,
+        "rawCommentHits": 1370,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 38,
-        "commentCoverage": 0.21849963583394028,
+        "commentCoverage": 0.21897810218978103,
         "limited": false,
-        "points": 179,
+        "points": 176,
         "themes": [
           {
             "id": "coding",
@@ -6636,12 +6631,12 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 29,
-            "isEstimated": false
+            "discussions": 26,
+            "isEstimated": true
           },
           {
             "name": "Google AI forum",
-            "discussions": 1,
+            "discussions": 2,
             "isEstimated": true
           },
           {
@@ -6662,10 +6657,10 @@
         "storyCoverage": 0.5976095617529881,
         "estimatedRelevantDiscussions": 7,
         "isEstimated": true,
-        "rawCommentHits": 10654,
+        "rawCommentHits": 10742,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 14,
-        "commentCoverage": 0.028158438145297542,
+        "validatedCommentCount": 13,
+        "commentCoverage": 0.02792776019363247,
         "limited": true,
         "points": 11,
         "themes": [
@@ -6735,10 +6730,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 5,
         "isEstimated": false,
-        "rawCommentHits": 359,
+        "rawCommentHits": 356,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 30,
-        "commentCoverage": 0.8356545961002786,
+        "commentCoverage": 0.8426966292134831,
         "limited": true,
         "points": 187,
         "themes": [
@@ -6817,16 +6812,16 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 105,
-        "fetchedStoryCount": 105,
+        "rawStoryHits": 98,
+        "fetchedStoryCount": 98,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 1497,
+        "rawCommentHits": 1442,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 57,
-        "commentCoverage": 0.20040080160320642,
+        "validatedCommentCount": 56,
+        "commentCoverage": 0.20804438280166435,
         "limited": false,
         "points": 32,
         "themes": [
@@ -6838,16 +6833,16 @@
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 23
-          },
-          {
-            "id": "price",
-            "label": "Price",
-            "count": 7
+            "count": 22
           },
           {
             "id": "speed",
             "label": "Speed",
+            "count": 6
+          },
+          {
+            "id": "price",
+            "label": "Price",
             "count": 6
           },
           {
@@ -6911,10 +6906,10 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": false,
-        "rawCommentHits": 4693,
+        "rawCommentHits": 4675,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 29,
-        "commentCoverage": 0.06392499467291711,
+        "commentCoverage": 0.06417112299465241,
         "limited": false,
         "points": 91,
         "themes": [
@@ -6998,17 +6993,6 @@
       {
         "modelId": "gpt",
         "themes": [
-          "coding"
-        ],
-        "excerpt": "Hi @magic_cue_ball, For clarity, the https://help.openai.com/en/articles/9624314-model-release-notes#h_d7ec15c07a:~:text=Retiring%20GPT%2D5.5,affect%20API%20access. October 14…",
-        "source": "OpenAI forum",
-        "author": "OpenAI_Support",
-        "publishedAt": "2026-11-06T14:53:51.949Z",
-        "url": "https://community.openai.com/t/please-add-gpt-5-5-instant-to-the-api/1405778"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
           "multimodal"
         ],
         "excerpt": "… surprisingly passes (without plagiaristic cheating): https://chatgpt.com/share/6aebcbcd-6b8c-83e8-b52b-dbedf20ce4...…",
@@ -7016,18 +7000,6 @@
         "author": "minimaxir",
         "publishedAt": "2026-11-05T00:13:06.000Z",
         "url": "https://news.ycombinator.com/item?id=50373260"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
-          "coding",
-          "multimodal"
-        ],
-        "excerpt": "…to the model's unpublished vision patch limit (the same as gpt-5.2 for large images). See, for example, software that will cap the sent image client-side, to the discovered…",
-        "source": "OpenAI forum",
-        "author": "_j",
-        "publishedAt": "2026-11-02T22:16:13.205Z",
-        "url": "https://community.openai.com/t/image-detail-degrades-across-successive-v1-images-edits-requests/1412207"
       },
       {
         "modelId": "gpt",
@@ -7079,14 +7051,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "reasoning",
-          "writing"
+          "reliability"
         ],
-        "excerpt": "…Scorer) for academic writing. RefVerify_Lite — Anthropic Claude + server-side web search, prompt caching, pause_turn continuation loop, token budget manager. VerityVerify —…",
+        "excerpt": "…it hard by giving it the exact same tasks that I give to Claude/Codex models. And the new releases all have the same issues: they start out strong, but start deviating after…",
         "source": "Hacker News",
-        "author": "shajin_joseph",
-        "publishedAt": "2026-11-06T16:39:45.000Z",
-        "url": "https://news.ycombinator.com/item?id=50394700"
+        "author": "enraged_camel",
+        "publishedAt": "2026-11-07T23:34:08.000Z",
+        "url": "https://news.ycombinator.com/item?id=50409066"
       },
       {
         "modelId": "claude",
@@ -7103,13 +7074,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "reliability"
+          "reasoning",
+          "writing"
         ],
-        "excerpt": "… commoditized and the open weight models are competitive with Claude models, the interface does become the key part!Despite being awful in so many ways, Microsoft Office continues…",
+        "excerpt": "…Scorer) for academic writing. RefVerify_Lite — Anthropic Claude + server-side web search, prompt caching, pause_turn continuation loop, token budget manager. VerityVerify —…",
         "source": "Hacker News",
-        "author": "epistasis",
-        "publishedAt": "2026-11-06T16:06:15.000Z",
-        "url": "https://news.ycombinator.com/item?id=50394141"
+        "author": "shajin_joseph",
+        "publishedAt": "2026-11-06T16:39:45.000Z",
+        "url": "https://news.ycombinator.com/item?id=50394700"
       },
       {
         "modelId": "claude",
@@ -7126,13 +7098,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "context"
+          "reliability"
         ],
-        "excerpt": "When it comes to difficult optimization/search problems, doing research in a single Claude/Codex thread is definitely a struggle. There are ways to bypass some of the pitfalls by…",
+        "excerpt": "… commoditized and the open weight models are competitive with Claude models, the interface does become the key part!Despite being awful in so many ways, Microsoft Office continues…",
         "source": "Hacker News",
-        "author": "lxe",
-        "publishedAt": "2026-11-06T17:23:54.000Z",
-        "url": "https://news.ycombinator.com/item?id=50395355"
+        "author": "epistasis",
+        "publishedAt": "2026-11-06T16:06:15.000Z",
+        "url": "https://news.ycombinator.com/item?id=50394141"
       },
       {
         "modelId": "gemini",
