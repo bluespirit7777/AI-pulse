@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-11-09T01:53:40.201Z",
+  "updatedAt": "2026-11-09T09:36:22.522Z",
   "build": {
-    "sha": "ec236b8613caefbe373d320d44fa453f0f9f4111",
-    "shortSha": "ec236b8",
+    "sha": "ef8f2db3eb0fc6edc5f09658ddbcffdf9e46b2de",
+    "shortSha": "ef8f2db",
     "ref": "main",
-    "builtAt": "2026-11-09T01:53:57.836Z"
+    "builtAt": "2026-11-09T09:36:39.435Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 10,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.1,
+    "historyDepthDays": 59.4,
     "estimatedDatasets": 4,
-    "buildSha": "ec236b8",
-    "lastSuccessfulUpdate": "2026-11-09T01:53:40.201Z"
+    "buildSha": "ef8f2db",
+    "lastSuccessfulUpdate": "2026-11-09T09:36:22.522Z"
   },
   "ticker": [
     "NVIDIA IS INVESTIGATING JENSEN HUANG’S RELATIONSHIP WITH A CHINESE SPY",
+    "IS JENSEN HUANG’S JOB ON THE LINE? YALE’S JEFFREY SONNENFELD ESTIMATES IT’S “ABOUT A 50-50”",
     "APPLE IS RACING TO MAKE SIRI MORE AGENTIC",
     "OPENAI REPORTEDLY RAISES AN ADDITIONAL $11 BILLION AT A $1.25 TRILLION VALUATION",
     "MEGASPEED EXEC WAS RECRUITED TO SPY ON NVIDIA CEO, ACCORDING TO US INTELLIGENCE MEMO",
     "THE US LET NVIDIA SELL CHIPS TO AN EMPTY OFFICE IN CHINA",
-    "CHINA REPORTEDLY RECRUITED AI EXEC TO SPY ON JENSEN HUANG",
-    "ANTHROPIC'S CLAUDE CAN NOW LINK BANK ACCOUNTS AND ANALYZE TRANSACTIONS BUT WON'T OFFER INVESTMENT ADVICE",
-    "ANTHROPIC SECURES $3.4 BILLION GENERATOR DEAL FOR AI DATA CENTERS, FT REPORTS",
+    "CRUSOE SELLS TROUBLED WYOMING DATA CENTER PROJECT TO GOOGLE",
     "OPENAI PRESIDENT GREG BROCKMAN SAYS COMPANY COULD BE IPO READY IN 2027",
-    "ANTHROPIC BANS ‘ABUSIVE OR CRUEL BEHAVIOR’ TOWARD CLAUDE"
+    "CHINA REPORTEDLY RECRUITED AI EXEC TO SPY ON JENSEN HUANG",
+    "ANTHROPIC'S CLAUDE CAN NOW LINK BANK ACCOUNTS AND ANALYZE TRANSACTIONS BUT WON'T OFFER INVESTMENT ADVICE"
   ],
   "signals": [
     {
@@ -40,7 +40,7 @@
       "category": "orggov",
       "catConfidence": 0.75,
       "family": "market",
-      "significance": 80,
+      "significance": 76,
       "impact": "high",
       "verification": "uncertain",
       "sourceCount": 2,
@@ -60,6 +60,32 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
+      "clusterId": "1hdgxuo",
+      "title": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “about a 50-50”",
+      "desc": "Nvidia’s board is investigating Jensen Huang over his relationship with a suspected Chinese spy, and Yale’s Jeffrey Sonnenfeld thinks it’s roughly a coin flip whether Huang stays on as CEO.",
+      "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
+      "dateISO": "2026-11-09T05:26:29.000Z",
+      "date": "NOV 09 2026",
+      "category": "orggov",
+      "catConfidence": 0.55,
+      "family": "market",
+      "significance": 74,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
       "clusterId": "eikha7",
       "title": "Apple is racing to make Siri more agentic",
@@ -70,8 +96,8 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 72,
-      "impact": "high",
+      "significance": 68,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -96,14 +122,18 @@
       "category": "capital",
       "catConfidence": 0.89,
       "family": "market",
-      "significance": 65,
+      "significance": 67,
       "impact": "notable",
       "verification": "uncertain",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "sources": [
         {
           "name": "Google News (Anthropic)",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMjU1VC1wRkJ4eDNDVmpFV1NfekRMVHdKV2RuSTdOc25LdWpaaks2TWJINkh3M3pLaklkZ2FHOVlGYnBjWEpRcWpPb1N2MmZ6MExDME9VM0pRTXJYM3JrbEl6UnF6VGhYMHdJNkdzMnV1Q255MjZIZ0I3SUp5RGFSaGdEUWJlODZPTTlwTkdFY1dDQQ?oc=5"
+        },
+        {
+          "name": "Seeking Alpha",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSG44NXNtN3I0alUwQkRkVnRiTW1kYVVsOVh6NlJTTkVuUFROWV92c250eW44NnpyYjgydmVpS2pOOGtKVy1rVnRPazA1RVRBWEtwODhVWHQ0NWVOeEU3eXdEamFyYzFqR3VSUzdOcXc1WlJMeUZXbU1xSnpPUzJNcGNaUU02Y2c?oc=5"
         },
         {
           "name": "The Verge",
@@ -130,7 +160,7 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 62,
+      "significance": 58,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -156,7 +186,7 @@
       "category": "compute",
       "catConfidence": 0.5,
       "family": "market",
-      "significance": 62,
+      "significance": 58,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -172,89 +202,33 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
-      "clusterId": "wp2f7b",
-      "title": "China reportedly recruited AI exec to spy on Jensen Huang",
-      "desc": "China's intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about American AI chips and \"potentially influence the company to push for its most advanced chips to be made available to China.\" Megaspeed […]",
-      "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
-      "dateISO": "2026-11-06T23:00:44.000Z",
-      "date": "NOV 06 2026",
-      "category": "orggov",
+      "id": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+      "clusterId": "1dus170",
+      "title": "Crusoe sells troubled Wyoming data center project to Google",
+      "desc": "The deal highlights the challenges of developing massive AI data centers.",
+      "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+      "dateISO": "2026-11-07T01:40:28.000Z",
+      "date": "NOV 07 2026",
+      "category": "compute",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWtHTk1YYll3THp6bDdfZHRickJwTWtPcGpmZ0I2c3hhZ0g3MVFMbGxCaUxIYlp2Y2FMN0FfNWI0bXRPelZmX2l4dWUxRUR5cmV6eU44SWVuTG5xRlVlc2ZkbmNDRHU2VVhWNnhLRWZlQWJ4WUYwc0ttYmxmU2NwSjZFZ01rcVViak9iQXNWLTd3ZGlxZndiNEFrZGhvc25j?oc=5",
-      "clusterId": "ul106g",
-      "title": "Anthropic's Claude Can Now Link Bank Accounts and Analyze Transactions But Won't Offer Investment Advice",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWtHTk1YYll3THp6bDdfZHRickJwTWtPcGpmZ0I2c3hhZ0g3MVFMbGxCaUxIYlp2Y2FMN0FfNWI0bXRPelZmX2l4dWUxRUR5cmV6eU44SWVuTG5xRlVlc2ZkbmNDRHU2VVhWNnhLRWZlQWJ4WUYwc0ttYmxmU2NwSjZFZ01rcVViak9iQXNWLTd3ZGlxZndiNEFrZGhvc25j?oc=5",
-      "dateISO": "2026-11-07T12:30:05.000Z",
-      "date": "NOV 07 2026",
-      "category": "capital",
-      "catConfidence": 0.6,
-      "family": "market",
-      "significance": 58,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWtHTk1YYll3THp6bDdfZHRickJwTWtPcGpmZ0I2c3hhZ0g3MVFMbGxCaUxIYlp2Y2FMN0FfNWI0bXRPelZmX2l4dWUxRUR5cmV6eU44SWVuTG5xRlVlc2ZkbmNDRHU2VVhWNnhLRWZlQWJ4WUYwc0ttYmxmU2NwSjZFZ01rcVViak9iQXNWLTd3ZGlxZndiNEFrZGhvc25j?oc=5"
-        }
-      ],
-      "sourceName": "Yahoo Finance",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
-      "clusterId": "6qacn8",
-      "title": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
-      "dateISO": "2026-11-08T12:54:10.000Z",
-      "date": "NOV 08 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 56,
+      "significance": 55,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
         {
-          "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPS3dmWWtwZTJMS0pBRzdvYVVabzBjUHNzQnlWVlF0T3B6U1JrZVhZSG9NZDRCaVlkQ1JvS1p1ZDR1bjVrRUdwMkVxX2NIN3MzbGpsZ2NPQ1RYSFJWRTNwM2J5akxsaWd0RXZ3RVpGTlN6TEFFalRERVRhYWE5d3lxOXBlcw?oc=5"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/bug-activists-and-biker-gang-members-are-teaming-up-to-protest-data-centers/"
         },
         {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5"
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"
         }
       ],
-      "sourceName": "Reuters",
+      "sourceName": "TechCrunch",
       "entityIds": [
-        "claude"
+        "gemini"
       ]
     },
     {
@@ -293,35 +267,87 @@
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5",
-      "clusterId": "17o7sb6",
-      "title": "Anthropic bans ‘abusive or cruel behavior’ toward Claude",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5",
-      "dateISO": "2026-10-08T07:00:00.000Z",
-      "date": "OCT 08 2026",
-      "category": "policy",
-      "catConfidence": 0.6,
+      "id": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
+      "clusterId": "wp2f7b",
+      "title": "China reportedly recruited AI exec to spy on Jensen Huang",
+      "desc": "China's intelligence agency recruited Megaspeed executive Alice Huang to spy on Nvidia CEO Jensen Huang, according to The New York Times. The Ministry of State Security (MSS) enlisted her to glean information about American AI chips and \"potentially influence the company to push for its most advanced chips to be made available to China.\" Megaspeed […]",
+      "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy",
+      "dateISO": "2026-11-06T23:00:44.000Z",
+      "date": "NOV 06 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
       "family": "market",
-      "significance": 55,
+      "significance": 54,
       "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
+      "verification": "uncertain",
+      "sourceCount": 2,
       "sources": [
         {
-          "name": "The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2lja2Y3b2J4SGw2TDhuWUNxNmxablZvTlcwSVg4eHhuSUFwNUEzQTd0WFhOTlJMd0F5UHBDSnhxTl9nVXJlNjFrZVBSc1Zic01sZ1RuZ2tTTlQ3RVVLUEw5OFI2NDcwNzNPSVpYTUJmR1pVdmd2NWkyOUtxcTg5bC05ckRhX1pnSVRZdVhLSlQ0ckU?oc=5"
-        },
-        {
-          "name": "BBC",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ramZhSWMyQlZTRHhlTjVYOXNuNkw0Ty1RYkF4dTQ5aVZtSUgtRjQ5SWpkTllONG5VYlVHaS1Mb1VsRXpTT2dvUUZ0RmxYczVWT0E0c0VvN3h3WW8?oc=5"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia"
         },
         {
           "name": "The Verge",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5"
+          "url": "https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy"
         }
       ],
       "sourceName": "The Verge",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWtHTk1YYll3THp6bDdfZHRickJwTWtPcGpmZ0I2c3hhZ0g3MVFMbGxCaUxIYlp2Y2FMN0FfNWI0bXRPelZmX2l4dWUxRUR5cmV6eU44SWVuTG5xRlVlc2ZkbmNDRHU2VVhWNnhLRWZlQWJ4WUYwc0ttYmxmU2NwSjZFZ01rcVViak9iQXNWLTd3ZGlxZndiNEFrZGhvc25j?oc=5",
+      "clusterId": "ul106g",
+      "title": "Anthropic's Claude Can Now Link Bank Accounts and Analyze Transactions But Won't Offer Investment Advice",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWtHTk1YYll3THp6bDdfZHRickJwTWtPcGpmZ0I2c3hhZ0g3MVFMbGxCaUxIYlp2Y2FMN0FfNWI0bXRPelZmX2l4dWUxRUR5cmV6eU44SWVuTG5xRlVlc2ZkbmNDRHU2VVhWNnhLRWZlQWJ4WUYwc0ttYmxmU2NwSjZFZ01rcVViak9iQXNWLTd3ZGlxZndiNEFrZGhvc25j?oc=5",
+      "dateISO": "2026-11-07T12:30:05.000Z",
+      "date": "NOV 07 2026",
+      "category": "capital",
+      "catConfidence": 0.6,
+      "family": "market",
+      "significance": 54,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWtHTk1YYll3THp6bDdfZHRickJwTWtPcGpmZ0I2c3hhZ0g3MVFMbGxCaUxIYlp2Y2FMN0FfNWI0bXRPelZmX2l4dWUxRUR5cmV6eU44SWVuTG5xRlVlc2ZkbmNDRHU2VVhWNnhLRWZlQWJ4WUYwc0ttYmxmU2NwSjZFZ01rcVViak9iQXNWLTd3ZGlxZndiNEFrZGhvc25j?oc=5"
+        }
+      ],
+      "sourceName": "Yahoo Finance",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+      "clusterId": "6qacn8",
+      "title": "Anthropic secures $3.4 billion generator deal for AI data centers, FT reports",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5",
+      "dateISO": "2026-11-08T12:54:10.000Z",
+      "date": "NOV 08 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPS3dmWWtwZTJMS0pBRzdvYVVabzBjUHNzQnlWVlF0T3B6U1JrZVhZSG9NZDRCaVlkQ1JvS1p1ZDR1bjVrRUdwMkVxX2NIN3MzbGpsZ2NPQ1RYSFJWRTNwM2J5akxsaWd0RXZ3RVpGTlN6TEFFalRERVRhYWE5d3lxOXBlcw?oc=5"
+        },
+        {
+          "name": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUktcGxpNENhQ1llV2F3a3V5RUZya0dDc0ZLeFVTZmFqclBqSVhuYkNiSFpSTkkwVnZ2NkFVVEVjQjZPLTJzMGMyU0dnaFg0X1pPd2pMV0ZCWWtMWlpSdTNvckRlaGxLcWs1SnljenEwcUs0N0doWG0yRDdET2o4YlZMVWl6c2lpYWJ1emstVFI1S3VyUXdIdG1xdmZpS3k3ZW5LVUpibUZ0SWxmZUNLNXN0SDBMZE5nWFJZdDlQSQ?oc=5"
+        }
+      ],
+      "sourceName": "Reuters",
       "entityIds": [
         "claude"
       ]
@@ -395,32 +421,6 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
-      "clusterId": "1dus170",
-      "title": "Crusoe sells troubled Wyoming data center project to Google",
-      "desc": "The deal highlights the challenges of developing massive AI data centers.",
-      "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
-      "dateISO": "2026-11-07T01:40:28.000Z",
-      "date": "NOV 07 2026",
-      "category": "compute",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSGhQQllLMWVqLWxNbEExX21BSU1BZHRLbm1fc04tSE1HOEl4WHEtaEZMNVNKeklIcThxUmJHWFhJbmRTRkMzWDFTQVUyOW85RFZJcGZCOGdGTWl0alljRm5HbW9rSU5ENVhscDZQaWFHOWU4cFp5MWQ1Y2xiRjZ0MktLenozYmRVYlNyT0twTXBKalVo?oc=5",
       "clusterId": "xrx9wt",
       "title": "Anthropic launches personal finance in Claude",
@@ -465,7 +465,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 50,
+      "significance": 47,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -476,32 +476,6 @@
         }
       ],
       "sourceName": "FourWeekMBA",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5",
-      "clusterId": "1bhdbug",
-      "title": "Can Claude dream now? Anthropic explores human-like machine memory",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5",
-      "dateISO": "2026-11-07T03:21:00.000Z",
-      "date": "NOV 07 2026",
-      "category": "analysis",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 48,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Interesting Engineering",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5"
-        }
-      ],
-      "sourceName": "Interesting Engineering",
       "entityIds": [
         "claude"
       ]
@@ -537,91 +511,27 @@
       ]
     },
     {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
-      "clusterId": "1gnbam5",
-      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
-      "desc": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
-      "dateISO": "2026-11-07T12:30:00.000Z",
-      "date": "NOV 07 2026",
-      "category": "research",
-      "catConfidence": 0.38,
-      "family": "research",
-      "significance": 46,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdzdfa2NNWTVnNDd4OHQyUmZIN2RIRXVLbDJ3U2RJUHNXeHNiUzhpWU9NWTh2VEJ4SmNEUnRIQW5DTGZJM01WMGhGc2pSRjQ3QnpiWHR5Y3p5YW4wZ0w4c3F0WXlEZjM4RS1hNWVFV0U5U0NERUVGU3RWczR2aXJxdHpnaUI4Ty1HaGZ2WVNUM2NxNzdIVllXQTVvY0Q?oc=5",
-      "clusterId": "kg7dg0",
-      "title": "Anthropic rolls out personal finance feature for Claude",
+      "id": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ1p5cnJDbnhoTElxN3ZodFpWRE52RmNSS01fNE90WTNYbHF2X3B5bDJET0RTTWRWRndUTEM0TkRBclhJVnVSVXM1ZG1yMXNaMmFGRmJhSmpLVGw1RXRpd2Vva2gyOU1rOEt6eE5zRVhaVmFZVFdrNGJ4MXcyRFZkQ09XRVE?oc=5",
+      "clusterId": "cx69hk",
+      "title": "Anthropic S-1: Loss Narrows to $1.3B From $5.2B [2026]",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdzdfa2NNWTVnNDd4OHQyUmZIN2RIRXVLbDJ3U2RJUHNXeHNiUzhpWU9NWTh2VEJ4SmNEUnRIQW5DTGZJM01WMGhGc2pSRjQ3QnpiWHR5Y3p5YW4wZ0w4c3F0WXlEZjM4RS1hNWVFV0U5U0NERUVGU3RWczR2aXJxdHpnaUI4Ty1HaGZ2WVNUM2NxNzdIVllXQTVvY0Q?oc=5",
-      "dateISO": "2026-11-05T18:03:44.000Z",
-      "date": "NOV 05 2026",
-      "category": "adoption",
-      "catConfidence": 0.43,
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ1p5cnJDbnhoTElxN3ZodFpWRE52RmNSS01fNE90WTNYbHF2X3B5bDJET0RTTWRWRndUTEM0TkRBclhJVnVSVXM1ZG1yMXNaMmFGRmJhSmpLVGw1RXRpd2Vva2gyOU1rOEt6eE5zRVhaVmFZVFdrNGJ4MXcyRFZkQ09XRVE?oc=5",
+      "dateISO": "2026-11-08T08:13:53.000Z",
+      "date": "NOV 08 2026",
+      "category": "general",
+      "catConfidence": 0.3,
       "family": "product",
       "significance": 46,
       "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 4,
-      "sources": [
-        {
-          "name": "The Mac Observer",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaGEwdjl4QTY5N183SWZ4eUJJMzhyUWtUS24yU2syVDBvUkZNUklsUE9pb1RpMnZGUWtxNEkyNEJySWRvQkc4YkhJaDZDRzlxZ2lxU1NpWG55b1FYbWtQZ2wyeXAwTDFHVG9PTDBxVktqdmdtbVI2OXBHa0lCTjZ0X1phWHpYaVVJTFVSOFVzY25BMzhRRjhORzlxMWhNczRlNlE?oc=5"
-        },
-        {
-          "name": "Digital Watch Observatory",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAteC1vakJ6QjRVQXVTeFJfdWk0TUVGMm1URENFV3ZFNDZ0YmFwbXpTaXpDZW5jNWx1TXdqZjVkdDFzNlF6VmpMS1djWWVGZzhtR2tKTVl3NVRPaWx0QXFWRUhQRXVMOGJTTGlF?oc=5"
-        },
-        {
-          "name": "9to5Mac",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLUZJbk5NTDd3ZnF6NTVTS3p5eENzUFE0Tk93bnprTWF2WmdBRm5rcFZTN0UzVVNpcnU0UjdRT1V0eUgzV2dXVDFNOEF0Z3Y4VXpzTVA5UmoxdHlHVXdJZXVQSUJlQVdIc1Y3MmQtQ2dIa1NiSkR2UVFBRnd5Q2VJejZoTW5WbGIzUGEtRTNZS1g4WU9VZnc?oc=5"
-        },
-        {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdzdfa2NNWTVnNDd4OHQyUmZIN2RIRXVLbDJ3U2RJUHNXeHNiUzhpWU9NWTh2VEJ4SmNEUnRIQW5DTGZJM01WMGhGc2pSRjQ3QnpiWHR5Y3p5YW4wZ0w4c3F0WXlEZjM4RS1hNWVFV0U5U0NERUVGU3RWczR2aXJxdHpnaUI4Ty1HaGZ2WVNUM2NxNzdIVllXQTVvY0Q?oc=5"
-        }
-      ],
-      "sourceName": "Reuters",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5",
-      "clusterId": "1ehh1n2",
-      "title": "Generate CEO sees ‘huge opportunity’ from using Claude to shorten CAR-T cell engines",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5",
-      "dateISO": "2026-11-06T15:02:00.000Z",
-      "date": "NOV 06 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 45,
-      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Fierce Biotech",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5"
+          "name": "shattered.io",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZ1p5cnJDbnhoTElxN3ZodFpWRE52RmNSS01fNE90WTNYbHF2X3B5bDJET0RTTWRWRndUTEM0TkRBclhJVnVSVXM1ZG1yMXNaMmFGRmJhSmpLVGw1RXRpd2Vva2gyOU1rOEt6eE5zRVhaVmFZVFdrNGJ4MXcyRFZkQ09XRVE?oc=5"
         }
       ],
-      "sourceName": "Fierce Biotech",
+      "sourceName": "shattered.io",
       "entityIds": [
         "claude"
       ]
@@ -743,59 +653,133 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
-      "clusterId": "1g8on6p",
-      "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
-      "desc": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
-      "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
-      "dateISO": "2026-11-08T12:00:00.000Z",
-      "date": "NOV 08 2026",
-      "category": "product",
-      "catConfidence": 0.67,
+      "id": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5",
+      "clusterId": "1bhdbug",
+      "title": "Can Claude dream now? Anthropic explores human-like machine memory",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5",
+      "dateISO": "2026-11-07T03:21:00.000Z",
+      "date": "NOV 07 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
       "family": "product",
       "significance": 44,
+      "impact": "emerging",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Interesting Engineering",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPLW9QUXo1Zktyc2dQVzZmUlo0aUxnUTJiRWpsSm1fMkptWkJpdXVjNkk3U3VTMnRXQ2RrOGtJSmY4RlF5TWRvRVBjTDE4TTUzQk1iTXBBUEpsVGx0bk90LVNVazJhcExwYXJmMmtES0x6RktDeHRmOTRuWkxPVHlfWnYtQUc5UHBZazVic2hVYnhKUQ?oc=5"
+        }
+      ],
+      "sourceName": "Interesting Engineering",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2lja2Y3b2J4SGw2TDhuWUNxNmxablZvTlcwSVg4eHhuSUFwNUEzQTd0WFhOTlJMd0F5UHBDSnhxTl9nVXJlNjFrZVBSc1Zic01sZ1RuZ2tTTlQ3RVVLUEw5OFI2NDcwNzNPSVpYTUJmR1pVdmd2NWkyOUtxcTg5bC05ckRhX1pnSVRZdVhLSlQ0ckU?oc=5",
+      "clusterId": "bqom9t",
+      "title": "Anthropic bans users from ‘needless abusive or cruel behavior’ towards Claude",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2lja2Y3b2J4SGw2TDhuWUNxNmxablZvTlcwSVg4eHhuSUFwNUEzQTd0WFhOTlJMd0F5UHBDSnhxTl9nVXJlNjFrZVBSc1Zic01sZ1RuZ2tTTlQ3RVVLUEw5OFI2NDcwNzNPSVpYTUJmR1pVdmd2NWkyOUtxcTg5bC05ckRhX1pnSVRZdVhLSlQ0ckU?oc=5",
+      "dateISO": "2026-10-08T07:00:00.000Z",
+      "date": "OCT 08 2026",
+      "category": "policy",
+      "catConfidence": 0.43,
+      "family": "market",
+      "significance": 44,
+      "impact": "emerging",
+      "verification": "corroborated",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "name": "BBC",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9ramZhSWMyQlZTRHhlTjVYOXNuNkw0Ty1RYkF4dTQ5aVZtSUgtRjQ5SWpkTllONG5VYlVHaS1Mb1VsRXpTT2dvUUZ0RmxYczVWT0E0c0VvN3h3WW8?oc=5"
+        },
+        {
+          "name": "The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPb2lja2Y3b2J4SGw2TDhuWUNxNmxablZvTlcwSVg4eHhuSUFwNUEzQTd0WFhOTlJMd0F5UHBDSnhxTl9nVXJlNjFrZVBSc1Zic01sZ1RuZ2tTTlQ3RVVLUEw5OFI2NDcwNzNPSVpYTUJmR1pVdmd2NWkyOUtxcTg5bC05ckRhX1pnSVRZdVhLSlQ0ckU?oc=5"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPRHp1a0RodHB0TloxZW1vN3pSUFl6VkJyLWFvUXk3RHp5ZWVadUFJWlotZTk2SG5oanR6V3JRMGRMVDB5YThFUVBWaVYyZWFfalBneDl0THFXb0U0NmZHUVQzN1RZS1dGNmZ6X01rMlBoeWNpZEhrYmQzalItcVpyS2p1WFJDMUFMMHBFREZWeHJaNlh1Q0Vka0lHQWxHNy1S?oc=5"
+        }
+      ],
+      "sourceName": "The Guardian",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+      "clusterId": "1gnbam5",
+      "title": "Why a new report on Anthropic automating AI development is alarming researchers",
+      "desc": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thursday by the AI safety research organization METR, following an 11-week investigation […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
+      "dateISO": "2026-11-07T12:30:00.000Z",
+      "date": "NOV 07 2026",
+      "category": "research",
+      "catConfidence": 0.38,
+      "family": "research",
+      "significance": 43,
       "impact": "emerging",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/"
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development"
         }
       ],
-      "sourceName": "Wired",
-      "entityIds": []
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
+      ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcU9ZaHhETTA4YmZiMmMtMms5WVZneWtneDVTQ2RzbGNIcVRfNjBkT2MzbDltVnlWRlMyOUx2ZmtsclUwZ2JEVlBZdndkQmNxb01FZ0Q0cS10QnNNdWVmUUljcGNGS2w3QWVsX3ZtTDV5QVdrSUt3WVBQQ0t3Uk9MWFY1djk0U2R2NUlYUkdJalpQTnl2aE5VU2xqSWNHVjUzbE1VdXFYU2JsUQ?oc=5",
-      "clusterId": "tm121b",
-      "title": "Anthropic Just Gave Claude Access to Your Bank Accounts – Here’s What It Can See",
+      "id": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZEtFZTdKVm5NbllXbVdGcTRrU3ZuZ3p4Q0VvS2hPRjJQWmJGUWlIRmlpaC1kV1l0WUJTbmRQSm5mVVhrYV9oRUE2c2xPZWpoRDRnWkJwQzFmVmg1REtTN0k4WkRVYjUyaUExOXUyaXlWZU9yei1Bd0ZqYWpGLTNlOXJubi1DQmZxekZWbG9Cd1Q1NE1rTnMzbm15bEw2TnJMNFZnMm9rOWxVdw?oc=5",
+      "clusterId": "1ngtzwq",
+      "title": "Claude can now analyze your spending with its new Personal Finance tool",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcU9ZaHhETTA4YmZiMmMtMms5WVZneWtneDVTQ2RzbGNIcVRfNjBkT2MzbDltVnlWRlMyOUx2ZmtsclUwZ2JEVlBZdndkQmNxb01FZ0Q0cS10QnNNdWVmUUljcGNGS2w3QWVsX3ZtTDV5QVdrSUt3WVBQQ0t3Uk9MWFY1djk0U2R2NUlYUkdJalpQTnl2aE5VU2xqSWNHVjUzbE1VdXFYU2JsUQ?oc=5",
-      "dateISO": "2026-11-06T15:05:44.000Z",
-      "date": "NOV 06 2026",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZEtFZTdKVm5NbllXbVdGcTRrU3ZuZ3p4Q0VvS2hPRjJQWmJGUWlIRmlpaC1kV1l0WUJTbmRQSm5mVVhrYV9oRUE2c2xPZWpoRDRnWkJwQzFmVmg1REtTN0k4WkRVYjUyaUExOXUyaXlWZU9yei1Bd0ZqYWpGLTNlOXJubi1DQmZxekZWbG9Cd1Q1NE1rTnMzbm15bEw2TnJMNFZnMm9rOWxVdw?oc=5",
+      "dateISO": "2026-11-05T18:00:00.000Z",
+      "date": "NOV 05 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
       "significance": 43,
       "impact": "emerging",
       "verification": "corroborated",
-      "sourceCount": 3,
+      "sourceCount": 6,
       "sources": [
         {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPMWgyS0t1LW4xMndzblFOYmpYb2tmM0l3SUpfV1poZWV5VF9DQU5hcHk0NmpCWk5MdEZqWDFSVnlQMk1WcExKWWR2M05sa3lnYmMyWUVtLUJjcHR5TFdBampXTHEtU29OSWhVZklOblpqR3l5dHhJRzNITlUyeEVlZkh3anV4TGtsWTFzc1U2Q3hLY3ZqaU9WdUNn?oc=5"
+          "name": "The Mac Observer",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaGEwdjl4QTY5N183SWZ4eUJJMzhyUWtUS24yU2syVDBvUkZNUklsUE9pb1RpMnZGUWtxNEkyNEJySWRvQkc4YkhJaDZDRzlxZ2lxU1NpWG55b1FYbWtQZ2wyeXAwTDFHVG9PTDBxVktqdmdtbVI2OXBHa0lCTjZ0X1phWHpYaVVJTFVSOFVzY25BMzhRRjhORzlxMWhNczRlNlE?oc=5"
         },
         {
-          "name": "24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPOUxGQ2NoVWotWTd3Qk93Z0d6aFlBOTkwSWlYLWRDS0syTEFTc29CcURDdDJVcGkwcW8xTWRWeEcwaW4yWm54Y1pCUmlDNXBrRnV2YVRYaGdYeVRiblNRYUl0Zm15dm1wUHVTVllzNS1HZUltMEF6c0llenp3T0VENjdWMTU4WUZZRWpPOWl1Tk94WldEV2ZvVA?oc=5"
+          "name": "Digital Watch Observatory",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFAteC1vakJ6QjRVQXVTeFJfdWk0TUVGMm1URENFV3ZFNDZ0YmFwbXpTaXpDZW5jNWx1TXdqZjVkdDFzNlF6VmpMS1djWWVGZzhtR2tKTVl3NVRPaWx0QXFWRUhQRXVMOGJTTGlF?oc=5"
         },
         {
-          "name": "Gadget Review",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcU9ZaHhETTA4YmZiMmMtMms5WVZneWtneDVTQ2RzbGNIcVRfNjBkT2MzbDltVnlWRlMyOUx2ZmtsclUwZ2JEVlBZdndkQmNxb01FZ0Q0cS10QnNNdWVmUUljcGNGS2w3QWVsX3ZtTDV5QVdrSUt3WVBQQ0t3Uk9MWFY1djk0U2R2NUlYUkdJalpQTnl2aE5VU2xqSWNHVjUzbE1VdXFYU2JsUQ?oc=5"
+          "name": "XDA",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNZnNFS2V1RVJLNlc2UVpRY1E4TWVoQjgtQlZwblRzblJLaVotWGc5eGN1d05oRzBPNUdiVFZzRmQtZDB5bGdGdlFMS1ZPYWRRQUllRTg4NDAtWkpFTXowTTE1ZkRmTUtTS0xLWW8yckN1eDBJMEhSV1VBc0JzQXBiUXpRcE1meGhtLS1fLUN0U0lxazBYVkhRaUJLYjFHOE1rdXF5a1liaVYtakhr?oc=5"
+        },
+        {
+          "name": "9to5Mac",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQLUZJbk5NTDd3ZnF6NTVTS3p5eENzUFE0Tk93bnprTWF2WmdBRm5rcFZTN0UzVVNpcnU0UjdRT1V0eUgzV2dXVDFNOEF0Z3Y4VXpzTVA5UmoxdHlHVXdJZXVQSUJlQVdIc1Y3MmQtQ2dIa1NiSkR2UVFBRnd5Q2VJejZoTW5WbGIzUGEtRTNZS1g4WU9VZnc?oc=5"
+        },
+        {
+          "name": "ZDNET",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1pMU1xVHcxb1VUUWtPaExlTzYyenlqalBZWjVHUmw5Z0pvTTNVUFRGSXFCSG1UcmxGMWRhZzM4eW9Eb1g5b2Z0bW82aC1VODhNWndERkMyTjRwd1loYS0yR2hyU1JQSGp4cmFrVFNFbkptY0tnTnc?oc=5"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZEtFZTdKVm5NbllXbVdGcTRrU3ZuZ3p4Q0VvS2hPRjJQWmJGUWlIRmlpaC1kV1l0WUJTbmRQSm5mVVhrYV9oRUE2c2xPZWpoRDRnWkJwQzFmVmg1REtTN0k4WkRVYjUyaUExOXUyaXlWZU9yei1Bd0ZqYWpGLTNlOXJubi1DQmZxekZWbG9Cd1Q1NE1rTnMzbm15bEw2TnJMNFZnMm9rOWxVdw?oc=5"
         }
       ],
-      "sourceName": "Gadget Review",
+      "sourceName": "TechCrunch",
       "entityIds": [
         "claude"
       ]
@@ -940,6 +924,32 @@
       "sourceName": "OpenAI",
       "entityIds": [
         "chatgpt"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5",
+      "clusterId": "1ehh1n2",
+      "title": "Generate CEO sees ‘huge opportunity’ from using Claude to shorten CAR-T cell engines",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5",
+      "dateISO": "2026-11-06T15:02:00.000Z",
+      "date": "NOV 06 2026",
+      "category": "orggov",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 42,
+      "impact": "emerging",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Fierce Biotech",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZ1V5eTlOcFp2WTMzTmxDVlJrVEN3NkxtclJ0WWd1ZmNCOEFoeGlxSlY4aE96QWJlUmZtV0FZa1R2X1Q1MTJ4M0d0Zl9KSXRiT0tnMmluc01mVmN5NmhJbXlRWnB1bm1mbkF4dThtTVFsWjN1UkM0ZURzR3VqTUdrRXNKLXlSanhzNnFKYUNDc1FMTVBjWUNISDJwcExPNmRPVlhXOTBB?oc=5"
+        }
+      ],
+      "sourceName": "Fierce Biotech",
+      "entityIds": [
+        "claude"
       ]
     },
     {
@@ -1220,7 +1230,7 @@
       "category": "orggov",
       "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
       "summary": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's M…",
-      "significance": 80,
+      "significance": 76,
       "impact": "high",
       "verification": "uncertain",
       "date": "NOV 08 2026",
@@ -1247,8 +1257,8 @@
       "category": "research",
       "title": "Why a new report on Anthropic automating AI development is alarming researchers",
       "summary": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with lit…",
-      "significance": 46,
-      "impact": "notable",
+      "significance": 43,
+      "impact": "emerging",
       "verification": "single",
       "date": "NOV 07 2026",
       "dateISO": "2026-11-07T12:30:00.000Z",
@@ -1267,11 +1277,11 @@
     }
   ],
   "entityActivity": {
-    "chatgpt": 36,
+    "chatgpt": 35,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 118,
-    "claude": 74,
+    "gpt": 115,
+    "claude": 73,
     "gemini": 24,
     "grok": 0,
     "llama": 0,
@@ -1283,7 +1293,7 @@
     "gcp": 1,
     "oracle": 2,
     "coreweave": 0,
-    "nvidia": 4,
+    "nvidia": 5,
     "amd": 0,
     "tsmc": 0,
     "broadcom": 0
@@ -1318,23 +1328,12 @@
         {
           "h": "Anthropic rolls out personal finance feature for Claude",
           "d": "NOV 05 2026",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdzdfa2NNWTVnNDd4OHQyUmZIN2RIRXVLbDJ3U2RJUHNXeHNiUzhpWU9NWTh2VEJ4SmNEUnRIQW5DTGZJM01WMGhGc2pSRjQ3QnpiWHR5Y3p5YW4wZ0w4c3F0WXlEZjM4RS1hNWVFV0U5U0NERUVGU3RWczR2aXJxdHpnaUI4Ty1HaGZ2WVNUM2NxNzdIVllXQTVvY0Q?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPTklGdXdMWVNidEl2UnVFWW0tRTVET1Z3NmhkTWdNU00yR2JNelVVLUd3MjJteW1jcDhJeWlHMFB2VGVaV0w3QmlrVDQ1Wm16Ui1NLVJaUmthWDRnYnFTUjJLclR5UUhDWWxJeGtxSU5FZDg3VkVBdWFmRzRvYnFBQjZTU2M4RndGUWFnSW9BMDlHUXEzcnI4a2JJdW9pbDNVUzJ3MUxCV3NRX1Q4SDkxcDh2UEhCR3NJeW5BSm9NczM5OW8?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Reuters",
-          "sourceCount": 4,
+          "sourceName": "TradingView",
+          "sourceCount": 3,
           "verification": "corroborated",
-          "impact": "notable"
-        },
-        {
-          "h": "Anthropic Debuts Tool for Your Boss to Spy on Your Claude Chats",
-          "d": "NOV 03 2026",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMnpIVHMtWlhsVGNpRDQyRGZXYTFRZWJUSENxRklKcXR4SWdOLTBocmQteVdUQXN1RXBNcC00WDB3TFV3Sjdta1ZvV012amtMS3E4WWtoWU8tMnBQSWxiMFVEVS1Za21JYnBHVDhSb2lMTlh6ZjJkcTNucXdPZVkybHYtSGpUV3g2djNJaFh2ZDJ6UldIZHc?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "Futurism",
-          "sourceCount": 1,
-          "verification": "single",
           "impact": "emerging"
         },
         {
@@ -1347,6 +1346,17 @@
           "sourceCount": 2,
           "verification": "corroborated",
           "impact": "notable"
+        },
+        {
+          "h": "Introducing the Anthropic Cyber Mission",
+          "d": "OCT 08 2026",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9SRkRRLThCQk54NV9hR0E5akl4LVNfanczWXU2cExpb2tyd3M4bGtFbWx6ekVPOUw5bDRzRjNhSlJ3ZjJqQklIMTVMNmNjXzNwaGtsb1lJeVItOXVaMlVuQk1BelE?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
         }
       ]
     },
@@ -1442,6 +1452,30 @@
   ],
   "wire": [
     {
+      "org": "GOOGLE",
+      "logoKey": "google",
+      "date": "NOV 07 2026",
+      "verification": "corroborated",
+      "impact": "notable",
+      "h": "Crusoe sells troubled Wyoming data center project to Google",
+      "p": "The deal highlights the challenges of developing massive AI data centers.",
+      "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 2
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 09 2026",
+      "verification": "single",
+      "impact": "high",
+      "h": "Is Jensen Huang’s job on the line? Yale’s Jeffrey Sonnenfeld estimates it’s “ab…",
+      "p": "Nvidia’s board is investigating Jensen Huang over his relationship with a suspected Chinese spy, and Yale’s Jeffrey Sonnenfeld thinks it’s roughly a coin flip whether Huang stays on as CEO.",
+      "url": "https://techcrunch.com/2026/11/08/is-jensen-huangs-job-on-the-line-yales-jeffrey-sonnenfeld-estimates-its-about-a-50-50/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
       "org": "AI WIRE",
       "logoKey": "other",
       "date": "NOV 06 2026",
@@ -1470,7 +1504,7 @@
       "logoKey": "openai",
       "date": "NOV 08 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "Apple is racing to make Siri more agentic",
       "p": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse. While Federighi has delivered a functional version of Siri AI…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029552/apple-siri-ai-agentic",
@@ -1510,30 +1544,6 @@
       "h": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty G…",
       "p": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark.",
       "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
-      "sourceName": "Wired",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "NOV 08 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Anthropic: CLAUDE.md Rules Are Requests; Hooks Are Enforced",
-      "p": "Anthropic: CLAUDE.md Rules Are Requests; Hooks Are Enforced",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaGh3bGExVzQ0NDE2eG11QXBNT3E4ZjI0NEVWd1RWVWdUbnZwM3hQeG1meWJJeENJYkpzbEx5N2NObmF2dnlIUnRlMmh0OTNDOEpkNF96X3FnTmF5TlpPbXRZclRJckdfRDhXVndtTi1CTWZkZXZFai1jWjZtN1lQY1ZMekhHMkFWRWx0OTJB?oc=5",
-      "sourceName": "FourWeekMBA",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "NOV 08 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "World Models Will Soon Be Inescapable. Here’s What You Need to Know",
-      "p": "Moving AI from text to 3D space, world models simulate real-world physics to teach robots and autonomous cars how to navigate reality.",
-      "url": "https://www.wired.com/story/world-models-will-soon-be-inescapable-what-you-need-to-know/",
       "sourceName": "Wired",
       "sourceCount": 1
     }
@@ -1581,7 +1591,7 @@
       "field": "Safety",
       "date": "NOV 07 2026",
       "verification": "single",
-      "impact": "notable",
+      "impact": "emerging",
       "h": "Why a new report on Anthropic automating AI development is alarming researchers",
       "p": "Anthropic is using AI to build more powerful AI. And it appears to be working remarkably well, with the company's models improving roughly twice as quickly as a year ago, with little indication of slowing down. That's according to a new report published Thurs…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development",
@@ -1597,6 +1607,17 @@
       "p": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
       "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
       "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "field": "Research",
+      "date": "NOV 05 2026",
+      "verification": "official",
+      "impact": "emerging",
+      "h": "AI for scientific discovery How researchers use Claude",
+      "p": "AI for scientific discovery How researchers use Claude",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wMDFpTC1odkNLZ3AxZk5sMUplMXhyU2MtSll2Z3J6a20tN3p5UjJuTF83T2xaNzlTbDJGQ1J6ckk2TUcyTWVRSUNETjZQbjhBa2R3cHcyQi1CRVJSQ3BmTHBYb1gtT2JNemw3bmt3?oc=5",
+      "sourceName": "Anthropic",
       "sourceCount": 1
     },
     {
@@ -1629,17 +1650,6 @@
       "h": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
       "p": "CodeRabbit uses GPT-6.1 Sol to investigate security risks across complex codebases. Its security agent helps developers review findings and proposed fixes.",
       "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
-      "sourceName": "OpenAI",
-      "sourceCount": 1
-    },
-    {
-      "field": "Research",
-      "date": "OCT 15 2026",
-      "verification": "official",
-      "impact": "emerging",
-      "h": "Teaching students to think and learn through questions",
-      "p": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning.",
-      "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
       "sourceName": "OpenAI",
       "sourceCount": 1
     }
@@ -6353,14 +6363,14 @@
       "rate": "$1.99 – $3.99/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
       "segment": "Inference / long context",
-      "rate": "$3.59 – $5.29/hr",
-      "trend": "→ 0% vs 7d ago",
-      "trendClass": "trend-flat",
+      "rate": "$3.59 – $5.66/hr",
+      "trend": "↑ 4% vs 7d ago",
+      "trendClass": "trend-up",
       "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
@@ -6390,14 +6400,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.61 – $1.79/hr",
-      "trend": "↑ 6% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "rate": "$0.54 – $1.79/hr",
+      "trend": "→ 3% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-11-09T01:53:40.201Z",
+    "updatedAt": "2026-11-09T09:36:22.522Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6406,16 +6416,16 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 264,
-        "fetchedStoryCount": 264,
+        "rawStoryHits": 263,
+        "fetchedStoryCount": 191,
         "validatedStoryCount": 31,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 31,
+        "storyCoverage": 0.7262357414448669,
+        "estimatedRelevantDiscussions": 43,
         "isEstimated": true,
-        "rawCommentHits": 1981,
+        "rawCommentHits": 1993,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 42,
-        "commentCoverage": 0.1514386673397274,
+        "validatedCommentCount": 47,
+        "commentCoverage": 0.15052684395383845,
         "limited": false,
         "points": 659,
         "themes": [
@@ -6427,27 +6437,27 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 8
+            "count": 11
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 5
+            "count": 8
           },
           {
             "id": "writing",
             "label": "Writing",
-            "count": 5
+            "count": 6
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 5
+            "count": 6
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 4
+            "count": 5
           },
           {
             "id": "local",
@@ -6474,8 +6484,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 31,
-            "isEstimated": false
+            "discussions": 43,
+            "isEstimated": true
           },
           {
             "name": "OpenAI forum",
@@ -6489,33 +6499,48 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 934,
+        "rawStoryHits": 937,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 33,
-        "storyCoverage": 0.32119914346895073,
+        "storyCoverage": 0.32017075773745995,
         "estimatedRelevantDiscussions": 106,
         "isEstimated": true,
-        "rawCommentHits": 7108,
+        "rawCommentHits": 7193,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.04220596510973551,
+        "validatedCommentCount": 44,
+        "commentCoverage": 0.04170721534825525,
         "limited": false,
         "points": 1075,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 21
+            "count": 29
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 12
+            "count": 11
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 7
+            "count": 9
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
+            "count": 4
+          },
+          {
+            "id": "speed",
+            "label": "Speed",
+            "count": 3
+          },
+          {
+            "id": "multimodal",
+            "label": "Image/video",
+            "count": 3
           },
           {
             "id": "local",
@@ -6523,29 +6548,14 @@
             "count": 3
           },
           {
+            "id": "reliability",
+            "label": "Reliability",
+            "count": 2
+          },
+          {
             "id": "context",
             "label": "Context limits",
             "count": 2
-          },
-          {
-            "id": "multimodal",
-            "label": "Image/video",
-            "count": 2
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 1
-          },
-          {
-            "id": "speed",
-            "label": "Speed",
-            "count": 1
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 1
           },
           {
             "id": "safety",
@@ -6593,22 +6603,17 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 37,
         "isEstimated": true,
-        "rawCommentHits": 1374,
+        "rawCommentHits": 1378,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 35,
-        "commentCoverage": 0.2183406113537118,
+        "validatedCommentCount": 33,
+        "commentCoverage": 0.21770682148040638,
         "limited": false,
         "points": 176,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 26
-          },
-          {
-            "id": "reasoning",
-            "label": "Reasoning",
-            "count": 9
+            "count": 27
           },
           {
             "id": "price",
@@ -6616,9 +6621,14 @@
             "count": 9
           },
           {
+            "id": "reasoning",
+            "label": "Reasoning",
+            "count": 8
+          },
+          {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 6
+            "count": 5
           },
           {
             "id": "writing",
@@ -6675,28 +6685,28 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 493,
+        "rawStoryHits": 499,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 5,
-        "storyCoverage": 0.6085192697768763,
+        "storyCoverage": 0.6012024048096193,
         "estimatedRelevantDiscussions": 8,
         "isEstimated": true,
-        "rawCommentHits": 10652,
+        "rawCommentHits": 10779,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 14,
-        "commentCoverage": 0.02816372512204281,
+        "validatedCommentCount": 16,
+        "commentCoverage": 0.027831895352073477,
         "limited": false,
         "points": 13,
         "themes": [
           {
+            "id": "coding",
+            "label": "Coding",
+            "count": 7
+          },
+          {
             "id": "reasoning",
             "label": "Reasoning",
             "count": 6
-          },
-          {
-            "id": "coding",
-            "label": "Coding",
-            "count": 5
           },
           {
             "id": "price",
@@ -6704,13 +6714,13 @@
             "count": 3
           },
           {
-            "id": "writing",
-            "label": "Writing",
-            "count": 1
-          },
-          {
             "id": "speed",
             "label": "Speed",
+            "count": 2
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
             "count": 1
           }
         ],
@@ -6725,7 +6735,7 @@
           {
             "title": "Show HN: Loop – your coding agents, from your phone",
             "points": 2,
-            "comments": 7,
+            "comments": 8,
             "url": "https://github.com/j-asefa/loop",
             "date": "NOV 08 2026"
           }
@@ -6754,22 +6764,22 @@
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 5,
         "isEstimated": false,
-        "rawCommentHits": 365,
+        "rawCommentHits": 366,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 29,
-        "commentCoverage": 0.821917808219178,
+        "validatedCommentCount": 28,
+        "commentCoverage": 0.819672131147541,
         "limited": true,
         "points": 187,
         "themes": [
           {
-            "id": "coding",
-            "label": "Coding",
-            "count": 13
-          },
-          {
             "id": "reasoning",
             "label": "Reasoning",
             "count": 13
+          },
+          {
+            "id": "coding",
+            "label": "Coding",
+            "count": 12
           },
           {
             "id": "local",
@@ -6789,11 +6799,6 @@
           {
             "id": "writing",
             "label": "Writing",
-            "count": 1
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
             "count": 1
           },
           {
@@ -6836,28 +6841,28 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 98,
-        "fetchedStoryCount": 98,
+        "rawStoryHits": 113,
+        "fetchedStoryCount": 113,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 1402,
+        "rawCommentHits": 1411,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 50,
-        "commentCoverage": 0.21398002853067047,
+        "validatedCommentCount": 48,
+        "commentCoverage": 0.21261516654854712,
         "limited": false,
         "points": 32,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 22
+            "count": 23
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 18
+            "count": 16
           },
           {
             "id": "price",
@@ -6880,13 +6885,13 @@
             "count": 2
           },
           {
-            "id": "context",
-            "label": "Context limits",
-            "count": 2
-          },
-          {
             "id": "reliability",
             "label": "Reliability",
+            "count": 1
+          },
+          {
+            "id": "context",
+            "label": "Context limits",
             "count": 1
           },
           {
@@ -6924,23 +6929,23 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 232,
-        "fetchedStoryCount": 232,
+        "rawStoryHits": 230,
+        "fetchedStoryCount": 230,
         "validatedStoryCount": 8,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 11,
         "isEstimated": false,
-        "rawCommentHits": 4644,
+        "rawCommentHits": 4657,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 35,
-        "commentCoverage": 0.06459948320413436,
+        "commentCoverage": 0.06441915396177797,
         "limited": false,
         "points": 86,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
+            "count": 20
           },
           {
             "id": "reasoning",
@@ -6955,12 +6960,12 @@
           {
             "id": "local",
             "label": "Local use",
-            "count": 9
+            "count": 8
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 5
+            "count": 6
           },
           {
             "id": "context",
@@ -7028,13 +7033,14 @@
       {
         "modelId": "gpt",
         "themes": [
-          "multimodal"
+          "writing",
+          "price"
         ],
-        "excerpt": "… surprisingly passes (without plagiaristic cheating): https://chatgpt.com/share/6aebcbcd-6b8c-83e8-b52b-dbedf20ce4...…",
+        "excerpt": "…altruistic AI safety lab, they should have kept working on ChatGPT, but demoed it to the world including government, so we could as a planet decide where we are taking this.It…",
         "source": "Hacker News",
-        "author": "minimaxir",
-        "publishedAt": "2026-11-05T00:13:06.000Z",
-        "url": "https://news.ycombinator.com/item?id=50373260"
+        "author": "genxy",
+        "publishedAt": "2026-11-09T02:52:50.000Z",
+        "url": "https://news.ycombinator.com/item?id=50420429"
       },
       {
         "modelId": "gpt",
@@ -7051,6 +7057,29 @@
       {
         "modelId": "gpt",
         "themes": [
+          "multimodal"
+        ],
+        "excerpt": "… surprisingly passes (without plagiaristic cheating): https://chatgpt.com/share/6aebcbcd-6b8c-83e8-b52b-dbedf20ce4...…",
+        "source": "Hacker News",
+        "author": "minimaxir",
+        "publishedAt": "2026-11-05T00:13:06.000Z",
+        "url": "https://news.ycombinator.com/item?id=50373260"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
+          "reasoning",
+          "price"
+        ],
+        "excerpt": "…develop brand loyalty. For example, I pretty much only use ChatGPT, not because I have any really reason to, but because it was the first LLM that I ever usedLLMs are just one…",
+        "source": "Hacker News",
+        "author": "teiferer",
+        "publishedAt": "2026-11-09T09:18:49.000Z",
+        "url": "https://news.ycombinator.com/item?id=50423124"
+      },
+      {
+        "modelId": "gpt",
+        "themes": [
           "price"
         ],
         "excerpt": "…I got really tired of losing context between ChatGPT and Claude. So I built an agent neutral workspace that has all of the basic functionality of ChatGPT work and…",
@@ -7058,29 +7087,6 @@
         "author": "mimziebot1",
         "publishedAt": "2026-11-08T21:31:06.000Z",
         "url": "https://news.ycombinator.com/item?id=50417514"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
-          "reasoning"
-        ],
-        "excerpt": "Recently I needed to book a table for 16 for a rehearsal dinner. I used ChatGPT work to find availabilities and create an html doc of only restaurants that could handle our party…",
-        "source": "Hacker News",
-        "author": "cush",
-        "publishedAt": "2026-11-05T01:05:52.000Z",
-        "url": "https://news.ycombinator.com/item?id=50373701"
-      },
-      {
-        "modelId": "gpt",
-        "themes": [
-          "coding",
-          "speed"
-        ],
-        "excerpt": "…NoTechnologies: AI (Agents, Harnesses, OpenAI, Anthropic, ChatGPT), Django, FastAPI, Python, React, Roku BrightScript, Linux, AWS, Google Cloud, DigitalOcean, Ant Media Server…",
-        "source": "Hacker News",
-        "author": "rv888",
-        "publishedAt": "2026-11-06T17:55:31.000Z",
-        "url": "https://news.ycombinator.com/item?id=50395797"
       },
       {
         "modelId": "claude",
@@ -7096,13 +7102,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "context"
+          "coding",
+          "writing"
         ],
-        "excerpt": "… a recent Anthropic article showed that when they didn't tell Claude how to use memory, it actually used its memory better. Ultimately, we have to come to terms with how little is…",
+        "excerpt": "…to use it for work similar to what people use 90eur/month claude code subscription for you need a mashine like what I have. Ryzen 7950x 192GB RAM and 6x rtx3090.Cost today…",
         "source": "Hacker News",
-        "author": "mohsen1",
-        "publishedAt": "2026-11-08T13:15:18.000Z",
-        "url": "https://news.ycombinator.com/item?id=50413016"
+        "author": "Roark66",
+        "publishedAt": "2026-11-09T09:30:47.000Z",
+        "url": "https://news.ycombinator.com/item?id=50423223"
       },
       {
         "modelId": "claude",
@@ -7119,28 +7126,6 @@
       {
         "modelId": "claude",
         "themes": [
-          "local"
-        ],
-        "excerpt": "…at work, and it’s fine, but I simply prefer the TUI.I use:claude agentsGranted, I run it as a terminal tab in my editor so that I can look at files. I prefer the TUI in a tab…",
-        "source": "Hacker News",
-        "author": "codazoda",
-        "publishedAt": "2026-11-08T13:51:25.000Z",
-        "url": "https://news.ycombinator.com/item?id=50413381"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "coding"
-        ],
-        "excerpt": "I’m working on Spool, an open-source tool for running persistent Claude Code loops.https://github.com/enes-alatas/spoolI wanted a way to manage multiple loops without babysitting…",
-        "source": "Hacker News",
-        "author": "enesalatas",
-        "publishedAt": "2026-11-08T23:01:08.000Z",
-        "url": "https://news.ycombinator.com/item?id=50418478"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
           "reasoning",
           "safety"
         ],
@@ -7149,6 +7134,41 @@
         "author": "nullc",
         "publishedAt": "2026-11-08T19:54:13.000Z",
         "url": "https://news.ycombinator.com/item?id=50416515"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "reasoning",
+          "context"
+        ],
+        "excerpt": "…relationships.Then you just: jd 21.15 // or search by title claude and now Claude has access to:- All of your notes from your index. This is your shared memory: it's designed to…",
+        "source": "Hacker News",
+        "author": "jen729w",
+        "publishedAt": "2026-11-09T03:35:09.000Z",
+        "url": "https://news.ycombinator.com/item?id=50420735"
+      },
+      {
+        "modelId": "claude",
+        "themes": [
+          "reasoning",
+          "speed"
+        ],
+        "excerpt": "…to training data cutoffs, and how fast things are moving, claude/chatgpt tend to have very out of date info about what models can be run and what hardware / software is…",
+        "source": "Hacker News",
+        "author": "kennywinker",
+        "publishedAt": "2026-11-09T05:23:32.000Z",
+        "url": "https://news.ycombinator.com/item?id=50421388"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "Hello @Yechiel_Corn , As documented in the https://ai.google.dev/gemini-api/docs/live-api/live-translate#live-agent-vs-live-translation Live Agent vs. Live Translation comparison…",
+        "source": "Google AI forum",
+        "author": "Pooja_Kapse",
+        "publishedAt": "2026-11-09T08:51:01.798Z",
+        "url": "https://discuss.ai.google.dev/t/gemini-3-5-live-translate-preview-systeminstruction-is-accepted-and-silently-ignored-plus-polarity-reversals-on-long-sentences/179912"
       },
       {
         "modelId": "gemini",
@@ -7171,6 +7191,17 @@
         "author": "msabalau",
         "publishedAt": "2026-11-06T15:19:24.000Z",
         "url": "https://news.ycombinator.com/item?id=50393388"
+      },
+      {
+        "modelId": "gemini",
+        "themes": [
+          "coding"
+        ],
+        "excerpt": "…limits ). The cutoff works the same at any thinkingLevel . Gemini 3.1 Pro Preview supports low , medium and high , and defaults to high (…",
+        "source": "Google AI forum",
+        "author": "Sai_Deepika_K",
+        "publishedAt": "2026-11-09T07:26:58.574Z",
+        "url": "https://discuss.ai.google.dev/t/gemini-3-1-pro-preview-does-maxoutputtokens-include-thinking-tokens/198591"
       },
       {
         "modelId": "gemini",
@@ -7233,6 +7264,18 @@
       {
         "modelId": "grok",
         "themes": [
+          "coding",
+          "speed"
+        ],
+        "excerpt": "…(Codex, Claude Code, Pi, OpenCode, Antigravity, Muse Code, Grok Build, or any ACP agent), each keeping its own context, tools, sign-in and billing — local models through Pi or…",
+        "source": "Hacker News",
+        "author": "jamesasefa",
+        "publishedAt": "2026-11-09T07:20:56.000Z",
+        "url": "https://news.ycombinator.com/item?id=50422176"
+      },
+      {
+        "modelId": "grok",
+        "themes": [
           "reasoning",
           "price"
         ],
@@ -7253,17 +7296,6 @@
         "author": "sadilek",
         "publishedAt": "2026-11-04T20:15:02.000Z",
         "url": "https://news.ycombinator.com/item?id=50370886"
-      },
-      {
-        "modelId": "grok",
-        "themes": [
-          "price"
-        ],
-        "excerpt": "…with premium accounts for Claude, ChatGPT, and Cursor/Grok. We encourage people to go to AI conferences + use budget to experiment with AI.We're an intrinsically motivated…",
-        "source": "Hacker News",
-        "author": "jbhatab",
-        "publishedAt": "2026-11-02T17:46:45.000Z",
-        "url": "https://news.ycombinator.com/item?id=50340600"
       },
       {
         "modelId": "llama",
@@ -7410,6 +7442,18 @@
         "modelId": "qwen",
         "themes": [
           "coding",
+          "speed"
+        ],
+        "excerpt": "Actually Qwen3.8-flash-next comes very close to a \"nerfed frontier model\" the way I host it locally at 4.75bpw with int8 kv. It is pretty much equivalent to opus 4.6 up to 4.8 on…",
+        "source": "Hacker News",
+        "author": "Roark66",
+        "publishedAt": "2026-11-09T09:17:37.000Z",
+        "url": "https://news.ycombinator.com/item?id=50423114"
+      },
+      {
+        "modelId": "qwen",
+        "themes": [
+          "coding",
           "multimodal"
         ],
         "excerpt": "… for file-level changes.2) Others: I have a DGX Spark running Qwen 3.8 27b (for confidential/sensitive work, narrow coding and narrow agentic work), but it's often running ComfyUI…",
@@ -7417,18 +7461,6 @@
         "author": "vekker",
         "publishedAt": "2026-11-05T10:22:14.000Z",
         "url": "https://news.ycombinator.com/item?id=50377455"
-      },
-      {
-        "modelId": "qwen",
-        "themes": [
-          "coding",
-          "writing"
-        ],
-        "excerpt": "…running with Clef (for model routing and decisions), Qwen-35B-A3B and Ornith-1.5-35B.And I switch to Qwen3.8-27B (the Perplexity Pro version that works well with…",
-        "source": "Hacker News",
-        "author": "jedisct1",
-        "publishedAt": "2026-11-05T08:24:46.000Z",
-        "url": "https://news.ycombinator.com/item?id=50376601"
       }
     ]
   }
