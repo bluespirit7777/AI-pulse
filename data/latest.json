@@ -1,32 +1,32 @@
 {
-  "updatedAt": "2026-11-13T06:22:38.656Z",
+  "updatedAt": "2026-11-13T14:50:38.947Z",
   "build": {
-    "sha": "291d75873c2e87d8a3f461d52c15316327367b67",
-    "shortSha": "291d758",
+    "sha": "b3ec4455cd82cfa46e6a38a343415597a179ba94",
+    "shortSha": "b3ec445",
     "ref": "main",
-    "builtAt": "2026-11-13T06:22:55.129Z"
+    "builtAt": "2026-11-13T14:50:54.918Z"
   },
   "dataHealth": {
-    "feedsSucceeded": 9,
+    "feedsSucceeded": 14,
     "feedsConfigured": 15,
     "stockNodesAvailable": 10,
     "communityModelsAvailable": 7,
-    "historyDepthDays": 59.3,
-    "estimatedDatasets": 4,
-    "buildSha": "291d758",
-    "lastSuccessfulUpdate": "2026-11-13T06:22:38.656Z"
+    "historyDepthDays": 59.6,
+    "estimatedDatasets": 5,
+    "buildSha": "b3ec445",
+    "lastSuccessfulUpdate": "2026-11-13T14:50:38.947Z"
   },
   "ticker": [
     "MEET COLETTE KRESS, NVIDIA’S NEW INTERIM CEO",
+    "ANTHROPIC SHIPS 4 OFFICE TOOLS TO RIVAL MICROSOFT [2026]",
     "ANTHROPIC, OPENAI SUED FOR ALLEGEDLY INFRINGING INVENTORS' NEURAL NETWORK PATENTS",
+    "GOOGLE FACES CALLS FOR AI MORATORIUMS IN SCHOOLS AFTER GEMINI PILOT BACKLASH",
     "ANTHROPIC SAYS AI IS ERODING NVIDIA'S CUDA LEAD, CUTTING AN AMD CHIP SWITCH FROM MONTHS TO THREE DAYS",
     "AI CHATBOTS ARE RECOMMENDING FAKE RETAIL WEBSITES, STUDY FINDS",
     "NVIDIA’S $10 BILLION ANTHROPIC IPO PLEDGE IN FOCUS WITH CEO EXIT",
     "NO, AI AGENTS DID NOT DISCOVER A PREVIOUSLY UNKNOWN MAYA SITE",
     "THE JENSEN HUANG SCANDAL IS HARDLY OVER",
-    "READ NVIDIA’S INTERNAL EMAILS ABOUT THE ‘EXTRAORDINARILY DIFFICULT PERIOD’ AMID CEO SHAKEUP",
-    "GONDOLA DOUBLES REVENUE AS ITS TEAM BUILDS MORE WITH CODEX",
-    "GOOGLE PUSHES PRIVACY ANGLE AS GEMINI-POWERED SMARTGLASSES DEBUT STARTING AT $395"
+    "GONDOLA DOUBLES REVENUE AS ITS TEAM BUILDS MORE WITH CODEX"
   ],
   "signals": [
     {
@@ -40,11 +40,23 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 87,
+      "significance": 83,
       "impact": "high",
       "verification": "corroborated",
-      "sourceCount": 11,
+      "sourceCount": 14,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
@@ -96,6 +108,32 @@
       ]
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0t5bGxIX2NKV2Q0ckN1cXU3US13N1l5RXhOUVRTQ2RiSFZHb0JxYnRuZ3BUYmlwcUdqQ1REQlJFcW9jalgwQkk3UUhDd2F4dmt6QXlQYzVvTjJSY2c1YWJTSTB1d2pqakI4Mno4R0I4VjZSdjBJRXEyV2pFa3U4SF9jWTE5RlFJbEc0NDdTZGVyVlViemllcg?oc=5",
+      "clusterId": "1o86f5a",
+      "title": "Anthropic Ships 4 Office Tools to Rival Microsoft [2026]",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0t5bGxIX2NKV2Q0ckN1cXU3US13N1l5RXhOUVRTQ2RiSFZHb0JxYnRuZ3BUYmlwcUdqQ1REQlJFcW9jalgwQkk3UUhDd2F4dmt6QXlQYzVvTjJSY2c1YWJTSTB1d2pqakI4Mno4R0I4VjZSdjBJRXEyV2pFa3U4SF9jWTE5RlFJbEc0NDdTZGVyVlViemllcg?oc=5",
+      "dateISO": "2026-11-13T13:18:46.000Z",
+      "date": "NOV 13 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 73,
+      "impact": "high",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "shattered.io",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0t5bGxIX2NKV2Q0ckN1cXU3US13N1l5RXhOUVRTQ2RiSFZHb0JxYnRuZ3BUYmlwcUdqQ1REQlJFcW9jalgwQkk3UUhDd2F4dmt6QXlQYzVvTjJSY2c1YWJTSTB1d2pqakI4Mno4R0I4VjZSdjBJRXEyV2pFa3U4SF9jWTE5RlFJbEc0NDdTZGVyVlViemllcg?oc=5"
+        }
+      ],
+      "sourceName": "shattered.io",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOWTRubERMSXBGblFuaGZHYzh2SDBfRkZCR0F4bnZmUjlXazJhamZaSkhRRzJPT0xuUmZDdlY5RlJQVFE0Rm1VZl9UeVRTVldVRE01VWZORE9NNGxCbjNNTHBrZmdNTXZNbVo1UVdsZ0JLYTlfWkJqa2diNTdCWHUzQ0lYVHNfYWtVNlhlbWh0LUtDNHFsZW5zQ254eHRXdDlkMlJNUnBXY0pLRkx3M1ZRQ3ZKcmZ3RlNYdUxLcWF3?oc=5",
       "clusterId": "23trjp",
       "title": "Anthropic, OpenAI sued for allegedly infringing inventors' neural network patents",
@@ -106,7 +144,7 @@
       "category": "policy",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 74,
+      "significance": 70,
       "impact": "high",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -123,6 +161,32 @@
       ]
     },
     {
+      "id": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/",
+      "clusterId": "1a6vssr",
+      "title": "Google faces calls for AI moratoriums in schools after Gemini pilot backlash",
+      "desc": "Families confront Google after teen’s lawsuit labels Gemini a “suicide coach.”",
+      "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/",
+      "dateISO": "2026-11-12T18:57:45.000Z",
+      "date": "NOV 12 2026",
+      "category": "policy",
+      "catConfidence": 0.71,
+      "family": "market",
+      "significance": 68,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSUlLVl9MQkF2d2tNQXctbXotemNQUEJnLWJReXNYZlBRYUJWQkZoOV9aZjdKdXhHZ3N1VkhKNEprWmx3QWxGNGtnRjQ2UnZ2dS1xV2dobFRQYTN0UXBxaFdjY3JBc2tKSC1SSHJXM18tYTVTcFFhX0pxcl9SRkVwQmxLamVUbGU1Mnp0a3YtRm5kZ1U4NUkwM3BkYW01LXhBM3JtaFJVTDBuZ0FrQmJraENaUXdOdmJXbHpYNmJsNkdSQQ?oc=5",
       "clusterId": "938eln",
       "title": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
@@ -133,8 +197,8 @@
       "category": "compute",
       "catConfidence": 0.6,
       "family": "market",
-      "significance": 71,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 3,
       "sources": [
@@ -169,8 +233,8 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 71,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
       "sources": [
@@ -197,8 +261,8 @@
       "category": "capital",
       "catConfidence": 0.63,
       "family": "market",
-      "significance": 71,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -224,8 +288,8 @@
       "category": "research",
       "catConfidence": 0.6,
       "family": "research",
-      "significance": 70,
-      "impact": "high",
+      "significance": 66,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
@@ -250,40 +314,14 @@
       "category": "orggov",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 70,
-      "impact": "high",
+      "significance": 66,
+      "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
           "name": "The Verge",
           "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-      "clusterId": "198u91n",
-      "title": "Read Nvidia’s internal emails about the ‘extraordinarily difficult period’ amid CEO shakeup",
-      "desc": "Jensen Huang resigned as CEO of Nvidia this morning, a company he co-founded in 1993. The decision came following the company's board opening an investigation into multiple extramarital affairs Huang had with a direct report and an alleged Chinese spy. The new, and first, Chair of the Board, Harvey Jones, shared news of Huang's resignation […]",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang",
-      "dateISO": "2026-11-12T15:48:12.000Z",
-      "date": "NOV 12 2026",
-      "category": "orggov",
-      "catConfidence": 0.75,
-      "family": "market",
-      "significance": 69,
-      "impact": "notable",
-      "verification": "uncertain",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032028/read-nvidias-internal-emails-jensen-huang"
         }
       ],
       "sourceName": "The Verge",
@@ -302,7 +340,7 @@
       "category": "market",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 68,
+      "significance": 64,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -328,7 +366,7 @@
       "category": "product",
       "catConfidence": 0.67,
       "family": "product",
-      "significance": 66,
+      "significance": 62,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -344,67 +382,15 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/google-wanted-spirit-airlines-data-flight-attendants-found-a-way-to-opt-out/",
-      "clusterId": "4bzyg3",
-      "title": "Google Wanted Spirit Airlines Data. Flight Attendants Found a Way to Opt Out",
-      "desc": "The union representing flight attendants for the defunct airline struck a deal with Google to scrub sensitive employee records from a $10 million data sale.",
-      "url": "https://www.wired.com/story/google-wanted-spirit-airlines-data-flight-attendants-found-a-way-to-opt-out/",
-      "dateISO": "2026-11-12T10:15:00.000Z",
-      "date": "NOV 12 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 66,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/google-wanted-spirit-airlines-data-flight-attendants-found-a-way-to-opt-out/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
-      "clusterId": "1seuvwc",
-      "title": "Nebius tests the neocloud playbook with $40 billion in planned spending",
-      "desc": "Nebius plans to fund its $40 billion AI infrastructure expansion through customer prepayments and loans, even as delays at a Microsoft data center raise questions about its financing model.",
-      "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
-      "dateISO": "2026-11-12T21:27:10.000Z",
-      "date": "NOV 12 2026",
-      "category": "capital",
-      "catConfidence": 0.54,
-      "family": "market",
-      "significance": 62,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "coreweave"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS3lsbk5PNHd3d2swVERWUUJGX3liTWpvdDhRVFJ1amdzZFhLZC1yUGJ6SHUzdWFMTnF1YlNjQ1NyRElJYlpvcmVXeFJ6TjgxTmxtOHBWMUJiYUVtZmJoRV9fbU5qaEYxU2FFQlRXX3Rnb2xwWm00Vm00aFNoYk41U21WXzgxRmg5ODNrWjQ3SXFySHJ4cE5BUGNZQ3NHMlN2?oc=5",
-      "clusterId": "besf0r",
-      "title": "Anthropic Now Makes Its Own Spreadsheet Software. Here's What I'd Do With Microsoft Stock.",
+      "id": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaXRUOVRlYlcyMXh0N2pRaFI4R2g2SFA1YWdxdnlJd2xsRHpzLWlwRWdSYVl1YS1fY3VieXBZRUNTLWhrT21feFY1ZEd5dVBpajVCZmdkS1M2VkFlUUgxZlVwU3kxclk0Zm1TRTVYaF9zQWRUblk5c2F4WE9ZNTVqc294THdXcmV3VUtOakhNamJwOXc3aDRxS184YjlFMmNGaWowRQ?oc=5",
+      "clusterId": "15ocmho",
+      "title": "Should You Buy Anthropic IPO Stock? Here’s What History Says",
       "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS3lsbk5PNHd3d2swVERWUUJGX3liTWpvdDhRVFJ1amdzZFhLZC1yUGJ6SHUzdWFMTnF1YlNjQ1NyRElJYlpvcmVXeFJ6TjgxTmxtOHBWMUJiYUVtZmJoRV9fbU5qaEYxU2FFQlRXX3Rnb2xwWm00Vm00aFNoYk41U21WXzgxRmg5ODNrWjQ3SXFySHJ4cE5BUGNZQ3NHMlN2?oc=5",
-      "dateISO": "2026-11-12T03:27:00.000Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaXRUOVRlYlcyMXh0N2pRaFI4R2g2SFA1YWdxdnlJd2xsRHpzLWlwRWdSYVl1YS1fY3VieXBZRUNTLWhrT21feFY1ZEd5dVBpajVCZmdkS1M2VkFlUUgxZlVwU3kxclk0Zm1TRTVYaF9zQWRUblk5c2F4WE9ZNTVqc294THdXcmV3VUtOakhNamJwOXc3aDRxS184YjlFMmNGaWowRQ?oc=5",
+      "dateISO": "2026-11-12T08:50:00.000Z",
       "date": "NOV 12 2026",
-      "category": "market",
-      "catConfidence": 0.67,
+      "category": "capital",
+      "catConfidence": 0.5,
       "family": "market",
       "significance": 62,
       "impact": "notable",
@@ -412,39 +398,13 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS3lsbk5PNHd3d2swVERWUUJGX3liTWpvdDhRVFJ1amdzZFhLZC1yUGJ6SHUzdWFMTnF1YlNjQ1NyRElJYlpvcmVXeFJ6TjgxTmxtOHBWMUJiYUVtZmJoRV9fbU5qaEYxU2FFQlRXX3Rnb2xwWm00Vm00aFNoYk41U21WXzgxRmg5ODNrWjQ3SXFySHJ4cE5BUGNZQ3NHMlN2?oc=5"
+          "name": "The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNaXRUOVRlYlcyMXh0N2pRaFI4R2g2SFA1YWdxdnlJd2xsRHpzLWlwRWdSYVl1YS1fY3VieXBZRUNTLWhrT21feFY1ZEd5dVBpajVCZmdkS1M2VkFlUUgxZlVwU3kxclk0Zm1TRTVYaF9zQWRUblk5c2F4WE9ZNTVqc294THdXcmV3VUtOakhNamJwOXc3aDRxS184YjlFMmNGaWowRQ?oc=5"
         }
       ],
-      "sourceName": "Yahoo Finance",
+      "sourceName": "The Motley Fool",
       "entityIds": [
         "claude"
-      ]
-    },
-    {
-      "id": "https://openai.com/index/children-first-declaration",
-      "clusterId": "1f7oiz8",
-      "title": "Supporting research on AI and children’s safety",
-      "desc": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
-      "url": "https://openai.com/index/children-first-declaration",
-      "dateISO": "2026-11-12T00:00:00.000Z",
-      "date": "NOV 12 2026",
-      "category": "capital",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 62,
-      "impact": "notable",
-      "verification": "official",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/index/children-first-declaration"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -461,7 +421,7 @@
       "significance": 60,
       "impact": "notable",
       "verification": "corroborated",
-      "sourceCount": 21,
+      "sourceCount": 18,
       "sources": [
         {
           "name": "CNBC",
@@ -520,6 +480,10 @@
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZlMwX3dzdHpVbEFBcTlGVWlibGtMcDBYOGJwbVJaaWs5X2xiVWM3ZUVDZHBoM1dyM0t1NjNYdVpzTHlYVHhKYTRHbXJTSmpRSFRLZ3FENE9kcXRFcHZVVTloYVJybUJaWWJ0a0ZGcVZpWXA1U2dZNmp1ZjRtbEJWSEtSc1RRbXdsSnh3bjV2WE90SHpBeGJkQ1hfUUtnZV9ldW14RUJoRVFMMFZmVGxBemNXSlM?oc=5"
         },
         {
+          "name": "Tom's Guide",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPTFNDODhkWHlIdHR4UlpGR0kxQzdNejFKVHdmMjdqRENPaEhKVEtyWFZTSXN2b0ttQVlIdUdOUjVMV2RIT29tcGJFeElCNDlBMjNtbFJYQmxaMXNqbjhtTFZmREFWZ0lpWTZNekpQc00tRHBDN2ZjZm5udm9IU1ZSWURqcUpwSlJ3TlN3bWNtMVUwSzZnbHlIVlVjXy04VkpUeTlFZ09MazRYRW13YWdBUnpWTk5pNktnRVVwQll6cmpJeF9HV2w3MFRhU25RSzlOWGNxR0ZrV2I?oc=5"
+        },
+        {
           "name": "Barron's",
           "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWmE0b0M1U2tYVmtNd2RBd1RnM1ZXZzdvWFlwS2twYXFWWE54cjBRUlZlN1hOSEhqSU5GQUluZkVwdXphdkszOXZQUjZvN1JoMXVjOXIzVG1JR001SHhOamxqZUZ5d1JUU28tR0RJVTZvdi1INzhzaGRVT3prSWItTm1TWHU?oc=5"
         },
@@ -529,28 +493,128 @@
         },
         {
           "name": "CNBC",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRndodzlpaTVnaEdjdDBCMHNyQlVjclVGb0tXV0xEdkU4YUIxbE83eTdHUFpRN1VYQ3UybWRYckJ4Q0s5UlhZSHRILXgzN0g4MHRveHVrbUlfZnhvcV85dWs3WjI0Y1VPeXBaakY1RTlJazBsZ2NPeFBEcGVLcHRtNXl3UzZ3ZzRDN1JEcUV4dWRMN0NhY1HSAZsBQVVfeXFMTkJzemsxZUVncWxxcVJhNnc2VE5PVklGeEF3a3hmbmJlY25Ed2JxTE1kcDVwLVJzRkFxUHJVbHVHeWUxb0ZxUlZoZlNobkQyT1Z3QU9uX09QdmRyMUFMaVJ2bUJSTTczeFFER1RrelFLYTJfdG5iWDk3Um9QYTI1Q0hteEUyNnlPUENETHNxeU81VDM0Mm85NUs1ODg?oc=5"
-        },
-        {
-          "name": "The Decoder",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOazEzN2VpdkxsT2N3UjhIWDZYQklNeG9YemJRUHJjMHlWdTR5OHdfOTFkZ3I5X3huYnJQamNsSkJkS19lb0VleEw2T0UzRGFCaFB1bkpFeGczX1UtbVRYVWdEVms3ZHY1d056NV9XWV9mVm5LWHNhUUNBUnA0OVZCWTU2WHVZbVVib3I2LTJma1FBUnlkUVF6ZjU5YzV2SVBlblA5bw?oc=5"
-        },
-        {
-          "name": "Fortune",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNZXh5WWJvWmxMbkZBakNhNWhkR3R2YnFvS2Uwc3JuOFlPOGh0aU1mbWZXZEJJU0xuRDZ2TW1nLXdyMWxnWllFcnRnRGlHWDJBdWUxdHJaR1NIZDc5Y0djdEliTUhGTDlxazlFbER1cmZyTk9udlJ1eHJxRHo1cmlKV2QtMW0yVTFaVk55dFJJVE9DRVYyM21nMXl0eEVzVEVxR1lVVGJWb2lzNDl1MmJONWVsc2ZET2VST3dEUUxGQWdIeFFkQjB6TnlKY0M5WmFqck80Q1VaSHQ?oc=5"
-        },
-        {
-          "name": "Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxORUxtR3VZQVJjcnhWLW1rb3RBdG1vMlFJRlpGeG9iTmdtZ0RrVTBDRkJITUQtM3FjZkhrZHQtb3J4cGNsLUs0SllMR05JcENTWFVOZjJLUUM0c0k2aXlhZGJKNFdnUFd2ZUVtcmp3WWdudFhpWG41by11a3lDZWI1b3Z1VHppTzBteEt4amNJeXc0Y0diSkxnMUdGeVVwNXQ2Y3RUeC1qS3V6cU04eUJtUUg2WHBPVk5pWXB5Vlp1YktpOWxY?oc=5"
-        },
-        {
-          "name": "CNBC",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1EZ19OSTNSY1dhR3hRS1h5MWdBMnQtbDBZRG9lNUl6c2Z3Sy1hYlh2LUY2elVFd1BzbUVrYkdHcC1XQVBuTFZ3d2p3ME9uTkRRb0k5NE1OdjB1eU5XNFFWb3pTcTd1OUw0cTF2Ynd4M25tSGFQaHdhVFFoZVZyR1U?oc=5"
         }
       ],
       "sourceName": "CNBC",
       "entityIds": [
         "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+      "clusterId": "1seuvwc",
+      "title": "Nebius tests the neocloud playbook with $40 billion in planned spending",
+      "desc": "Nebius plans to fund its $40 billion AI infrastructure expansion through customer prepayments and loans, even as delays at a Microsoft data center raise questions about its financing model.",
+      "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/",
+      "dateISO": "2026-11-12T21:27:10.000Z",
+      "date": "NOV 12 2026",
+      "category": "capital",
+      "catConfidence": 0.54,
+      "family": "market",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "coreweave"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5",
+      "clusterId": "1ct7mqv",
+      "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5",
+      "dateISO": "2026-11-09T19:00:00.000Z",
+      "date": "NOV 09 2026",
+      "category": "product",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 4,
+      "sources": [
+        {
+          "name": "Unite.AI",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZlgxNnVMWnBTVDVqRnpidmxSQ3J5a3VlM1lXZTlCMU1OVXNrbkZzcHJXMl9nWjJDd1JUQUZuM0Y5Rl83Qlg1TDFRUE8xcVpBdWU5dDRfS0hTNGxDNG9YRmxkUkM4S1F0T3U4RmE2cm5mLTJjQUNkTFN0ZG1CMHhxQ21vdlRpaVlqLWlSQnNGWWpJdGs?oc=5"
+        },
+        {
+          "name": "Manufacturing Dive",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWRmQ1BneGdsLUtIeUJmSS1HeUpjVnRib1o1cnJOamNsV3k1aGNFZnR4X0J2ZjdxR1VfcGg4VUt0dHBNWlQ1SDJXRDREaDZwYk80clNHVGdoeG5icjFOdFFHUmNQLWtYOV9RWkRudWRlQ3cyQzNRdVQyRllBalFjUlEtQ0Y5RnFnV1VNbmE4ckFDc1ZK?oc=5"
+        },
+        {
+          "name": "MacRumors",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA4bERid0NXUDIzNk4zUHZYX3JvWGRqSWZ2Q1J0cUVBZXJNalAwX2xib0VuTm1pQVVaUGRxNExYR2ZYd2kxbWhHcEE3WlVzd0JZRFJucERiU1Vxc2E4SmpPY1dhUDhsQzkxUGllQ25Ub0IxRzhqbktTRGc1T0tjdw?oc=5"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS3lsbk5PNHd3d2swVERWUUJGX3liTWpvdDhRVFJ1amdzZFhLZC1yUGJ6SHUzdWFMTnF1YlNjQ1NyRElJYlpvcmVXeFJ6TjgxTmxtOHBWMUJiYUVtZmJoRV9fbU5qaEYxU2FFQlRXX3Rnb2xwWm00Vm00aFNoYk41U21WXzgxRmg5ODNrWjQ3SXFySHJ4cE5BUGNZQ3NHMlN2?oc=5",
+      "clusterId": "besf0r",
+      "title": "Anthropic Now Makes Its Own Spreadsheet Software. Here's What I'd Do With Microsoft Stock.",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS3lsbk5PNHd3d2swVERWUUJGX3liTWpvdDhRVFJ1amdzZFhLZC1yUGJ6SHUzdWFMTnF1YlNjQ1NyRElJYlpvcmVXeFJ6TjgxTmxtOHBWMUJiYUVtZmJoRV9fbU5qaEYxU2FFQlRXX3Rnb2xwWm00Vm00aFNoYk41U21WXzgxRmg5ODNrWjQ3SXFySHJ4cE5BUGNZQ3NHMlN2?oc=5",
+      "dateISO": "2026-11-12T03:27:00.000Z",
+      "date": "NOV 12 2026",
+      "category": "market",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS3lsbk5PNHd3d2swVERWUUJGX3liTWpvdDhRVFJ1amdzZFhLZC1yUGJ6SHUzdWFMTnF1YlNjQ1NyRElJYlpvcmVXeFJ6TjgxTmxtOHBWMUJiYUVtZmJoRV9fbU5qaEYxU2FFQlRXX3Rnb2xwWm00Vm00aFNoYk41U21WXzgxRmg5ODNrWjQ3SXFySHJ4cE5BUGNZQ3NHMlN2?oc=5"
+        }
+      ],
+      "sourceName": "Yahoo Finance",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://openai.com/index/children-first-declaration",
+      "clusterId": "1f7oiz8",
+      "title": "Supporting research on AI and children’s safety",
+      "desc": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+      "url": "https://openai.com/index/children-first-declaration",
+      "dateISO": "2026-11-12T00:00:00.000Z",
+      "date": "NOV 12 2026",
+      "category": "capital",
+      "catConfidence": 0.67,
+      "family": "market",
+      "significance": 58,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/children-first-declaration"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
       ]
     },
     {
@@ -564,7 +628,7 @@
       "category": "capital",
       "catConfidence": 0.54,
       "family": "market",
-      "significance": 60,
+      "significance": 56,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -582,6 +646,58 @@
       ]
     },
     {
+      "id": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "clusterId": "1u9bu29",
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "desc": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don't write code. It's been an interesting couple […]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "dateISO": "2026-11-13T14:00:00.000Z",
+      "date": "NOV 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on"
+        }
+      ],
+      "sourceName": "The Verge",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
+      "id": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+      "clusterId": "1rduf7g",
+      "title": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+      "desc": "Given Nvidia’s stronghold on AI and its importance in Israel, many in the country's startup ecosystem are worried about the impact of his departure.",
+      "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+      "dateISO": "2026-11-13T12:52:19.000Z",
+      "date": "NOV 13 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 55,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
       "id": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
       "clusterId": "1qv5w2t",
       "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
@@ -592,7 +708,7 @@
       "category": "market",
       "catConfidence": 0.38,
       "family": "market",
-      "significance": 58,
+      "significance": 55,
       "impact": "notable",
       "verification": "uncertain",
       "sourceCount": 1,
@@ -608,6 +724,36 @@
       ]
     },
     {
+      "id": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+      "clusterId": "12n2pju",
+      "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
+      "desc": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
+      "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+      "dateISO": "2026-11-12T19:27:45.000Z",
+      "date": "NOV 12 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 53,
+      "impact": "notable",
+      "verification": "corroborated",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
+        }
+      ],
+      "sourceName": "TechCrunch",
+      "entityIds": [
+        "gemini"
+      ]
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdkN0VWFWT3BuM1RBTG1ZWVp6TWs3RVpNZ2JHSGp2Q0NmcEh6Z3p6anZYY1FYYXpSTXRYZ2hoX2dXY2MyaXdGSXptUFlxWXhMRmVyLVgwbEw0N05PTWJmMmF5bE9uYzF5RkhGOHpueGpuUzA3UE5mekh1UE1oWmp1dWhvWTVEaHhacXJkb0poVklsRWd1V2xWVkpuWlZBbDQ3X3RHajUzWmlabGM5Wml4Ni1KWDZLOV9PYlhPag?oc=5",
       "clusterId": "7r1yzq",
       "title": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
@@ -618,7 +764,7 @@
       "category": "product",
       "catConfidence": 0.6,
       "family": "product",
-      "significance": 57,
+      "significance": 53,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 3,
@@ -652,7 +798,7 @@
       "category": "research",
       "catConfidence": 0.67,
       "family": "research",
-      "significance": 57,
+      "significance": 53,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -665,210 +811,6 @@
       "sourceName": "Google",
       "entityIds": [
         "gemini"
-      ]
-    },
-    {
-      "id": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-      "clusterId": "12n2pju",
-      "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
-      "desc": "Powered by Gemini 4 Hydrogen, Google's AI Mode is getting better at understanding complex queries, surfacing relevant links, and delivering richer visual responses.",
-      "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
-      "dateISO": "2026-11-12T19:27:45.000Z",
-      "date": "NOV 12 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 56,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 2,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen"
-        },
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXJOZE13aW5YNlFwQkNJUXA1dEZlUzd3c1l5c2t2MFh2V0RWVWV5ZXVpM004cmhReWs4MndrUVVFWEpENWM1NHpOaTFVQUhlNTB2ZThVVWQ2ZFl2U0tIbXYxaXpvZmNoLXNxSDl5QTB6dWFvalVjRWY0OXVFLUNxQnhhTQ?oc=5",
-      "clusterId": "1aoro8v",
-      "title": "Anthropic's Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Benchmark",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXJOZE13aW5YNlFwQkNJUXA1dEZlUzd3c1l5c2t2MFh2V0RWVWV5ZXVpM004cmhReWs4MndrUVVFWEpENWM1NHpOaTFVQUhlNTB2ZThVVWQ2ZFl2U0tIbXYxaXpvZmNoLXNxSDl5QTB6dWFvalVjRWY0OXVFLUNxQnhhTQ?oc=5",
-      "dateISO": "2026-11-10T08:16:00.000Z",
-      "date": "NOV 10 2026",
-      "category": "research",
-      "catConfidence": 0.6,
-      "family": "research",
-      "significance": 55,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Mashable",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWGw3UFZ0ZUxYWk1VSm9nMXJUNkVIamQxQ1VsVlMtOElpV3ozckEwRWRlVkdrZUdDSkZwV1ZpODQtV1RYR2MxM0Z1UUo1LW9fSXBtZ3RJZ1RkT2hJRnJMQU5KRVZiQ3ZVSFBvM09sNG4taThSb3VKcjdiaEtGTWRDXw?oc=5"
-        },
-        {
-          "name": "InfoWorld",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdk5fSl93Uk5vU0ZWOGtvODNUMEtqek5WMUlWN1JEY3dLYVRLQktCa01ZcWpqaHhvT1VSdFl6clBnVFdmY2xVN2VwZGtTTkxDX2dBVU43dUQ0VlNRTnJoVTBMc0Y5TWNNekRHTGVpWTBHU25sbUVZWVNocE4xM3hVVTVrZDdHSlN1RnFRcG5Fd0ItS0doNHVBelRhR1pTRlRKS3hnS2dDZmFtR2RTdi0tMENBUUlTSVZucm9oUlBFVVNYcEQycWc?oc=5"
-        },
-        {
-          "name": "The Hacker News",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXJOZE13aW5YNlFwQkNJUXA1dEZlUzd3c1l5c2t2MFh2V0RWVWV5ZXVpM004cmhReWs4MndrUVVFWEpENWM1NHpOaTFVQUhlNTB2ZThVVWQ2ZFl2U0tIbXYxaXpvZmNoLXNxSDl5QTB6dWFvalVjRWY0OXVFLUNxQnhhTQ?oc=5"
-        }
-      ],
-      "sourceName": "The Hacker News",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYlczWW5CYUlhR3h6QzBPcDk2aEZyMjhHZWMtYjJSTWtESjlQRmJBRUJvR0hrc2NfZGxDRDFrWjhaN0llbkhWVkdCdlU5WFhoVmhHUF9sX0U4WW1abWxrd2Rya25XRVdiaGFqZ0VodmhWWWZDMWZpYzBVdXAzbktKejlpQS05S1pYRjJfc3FaaGtxYk9XTzIwV3hlemFOX3hvclhsamFGNFdpM2FBLXczclZseDVpQnppOUNVd0tR?oc=5",
-      "clusterId": "patmf5",
-      "title": "Anthropic’s Claude Tops AI Rankings as OpenAI Limits Cyber Model",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYlczWW5CYUlhR3h6QzBPcDk2aEZyMjhHZWMtYjJSTWtESjlQRmJBRUJvR0hrc2NfZGxDRDFrWjhaN0llbkhWVkdCdlU5WFhoVmhHUF9sX0U4WW1abWxrd2Rya25XRVdiaGFqZ0VodmhWWWZDMWZpYzBVdXAzbktKejlpQS05S1pYRjJfc3FaaGtxYk9XTzIwV3hlemFOX3hvclhsamFGNFdpM2FBLXczclZseDVpQnppOUNVd0tR?oc=5",
-      "dateISO": "2026-11-13T01:14:49.000Z",
-      "date": "NOV 13 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "PYMNTS.com",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYlczWW5CYUlhR3h6QzBPcDk2aEZyMjhHZWMtYjJSTWtESjlQRmJBRUJvR0hrc2NfZGxDRDFrWjhaN0llbkhWVkdCdlU5WFhoVmhHUF9sX0U4WW1abWxrd2Rya25XRVdiaGFqZ0VodmhWWWZDMWZpYzBVdXAzbktKejlpQS05S1pYRjJfc3FaaGtxYk9XTzIwV3hlemFOX3hvclhsamFGNFdpM2FBLXczclZseDVpQnppOUNVd0tR?oc=5"
-        }
-      ],
-      "sourceName": "PYMNTS.com",
-      "entityIds": [
-        "gpt",
-        "claude"
-      ]
-    },
-    {
-      "id": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/",
-      "clusterId": "16dsmle",
-      "title": "Jensen Huang Is Out. Will Nvidia’s Rivals Cash In?",
-      "desc": "In a special episode of “Uncanny Valley,” we break down Jensen Huang’s resignation from Nvidia, what comes next for the company, and where the AI industry goes from here.",
-      "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/",
-      "dateISO": "2026-11-12T22:14:41.000Z",
-      "date": "NOV 12 2026",
-      "category": "general",
-      "catConfidence": 0.3,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/"
-        }
-      ],
-      "sourceName": "Wired",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
-      "clusterId": "1vfuxgt",
-      "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
-      "desc": "Gemini 4 Hydrogen isn't getting a slow, security-conscious release like Carbon and Argon.",
-      "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
-      "dateISO": "2026-11-12T19:23:03.000Z",
-      "date": "NOV 12 2026",
-      "category": "adoption",
-      "catConfidence": 0.43,
-      "family": "product",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "gemini"
-      ]
-    },
-    {
-      "id": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
-      "clusterId": "1tq5saz",
-      "title": "Nvidia CEO's affair becomes a national security problem",
-      "desc": "Nvidia is probing whether Chinese intelligence targeted its CEO through an affair.",
-      "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
-      "dateISO": "2026-11-09T15:23:20.000Z",
-      "date": "NOV 09 2026",
-      "category": "orggov",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 54,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
-        },
-        {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-steps-down/"
-        },
-        {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/"
-        }
-      ],
-      "sourceName": "Ars Technica",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://openai.com/business/customer-stories/amplitude",
-      "clusterId": "1jwi9ut",
-      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
-      "desc": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
-      "url": "https://openai.com/business/customer-stories/amplitude",
-      "dateISO": "2026-11-12T20:00:00.000Z",
-      "date": "NOV 12 2026",
-      "category": "analysis",
-      "catConfidence": 0.38,
-      "family": "product",
-      "significance": 53,
-      "impact": "notable",
-      "verification": "analysis",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "OpenAI",
-          "url": "https://openai.com/business/customer-stories/amplitude"
-        }
-      ],
-      "sourceName": "OpenAI",
-      "entityIds": [
-        "gpt"
       ]
     },
     {
@@ -940,72 +882,39 @@
       ]
     },
     {
-      "id": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/",
-      "clusterId": "1201u0f",
-      "title": "Jensen Huang Basically Lit More Than $1 Trillion on Fire in Less Than a Month",
-      "desc": "Since the scandal involving an alleged Chinese spy began, Nvidia has lost an eye-watering sum from its market value.",
-      "url": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/",
-      "dateISO": "2026-11-12T17:59:15.000Z",
-      "date": "NOV 12 2026",
+      "id": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYlczWW5CYUlhR3h6QzBPcDk2aEZyMjhHZWMtYjJSTWtESjlQRmJBRUJvR0hrc2NfZGxDRDFrWjhaN0llbkhWVkdCdlU5WFhoVmhHUF9sX0U4WW1abWxrd2Rya25XRVdiaGFqZ0VodmhWWWZDMWZpYzBVdXAzbktKejlpQS05S1pYRjJfc3FaaGtxYk9XTzIwV3hlemFOX3hvclhsamFGNFdpM2FBLXczclZseDVpQnppOUNVd0tR?oc=5",
+      "clusterId": "patmf5",
+      "title": "Anthropic’s Claude Tops AI Rankings as OpenAI Limits Cyber Model",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYlczWW5CYUlhR3h6QzBPcDk2aEZyMjhHZWMtYjJSTWtESjlQRmJBRUJvR0hrc2NfZGxDRDFrWjhaN0llbkhWVkdCdlU5WFhoVmhHUF9sX0U4WW1abWxrd2Rya25XRVdiaGFqZ0VodmhWWWZDMWZpYzBVdXAzbktKejlpQS05S1pYRjJfc3FaaGtxYk9XTzIwV3hlemFOX3hvclhsamFGNFdpM2FBLXczclZseDVpQnppOUNVd0tR?oc=5",
+      "dateISO": "2026-11-13T01:14:49.000Z",
+      "date": "NOV 13 2026",
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 52,
+      "significance": 51,
       "impact": "notable",
-      "verification": "uncertain",
+      "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Wired",
-          "url": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/"
+          "name": "PYMNTS.com",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNYlczWW5CYUlhR3h6QzBPcDk2aEZyMjhHZWMtYjJSTWtESjlQRmJBRUJvR0hrc2NfZGxDRDFrWjhaN0llbkhWVkdCdlU5WFhoVmhHUF9sX0U4WW1abWxrd2Rya25XRVdiaGFqZ0VodmhWWWZDMWZpYzBVdXAzbktKejlpQS05S1pYRjJfc3FaaGtxYk9XTzIwV3hlemFOX3hvclhsamFGNFdpM2FBLXczclZseDVpQnppOUNVd0tR?oc=5"
         }
       ],
-      "sourceName": "Wired",
+      "sourceName": "PYMNTS.com",
       "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5",
-      "clusterId": "1ct7mqv",
-      "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5",
-      "dateISO": "2026-11-09T19:00:00.000Z",
-      "date": "NOV 09 2026",
-      "category": "product",
-      "catConfidence": 0.6,
-      "family": "product",
-      "significance": 52,
-      "impact": "notable",
-      "verification": "corroborated",
-      "sourceCount": 3,
-      "sources": [
-        {
-          "name": "Manufacturing Dive",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQQWRmQ1BneGdsLUtIeUJmSS1HeUpjVnRib1o1cnJOamNsV3k1aGNFZnR4X0J2ZjdxR1VfcGg4VUt0dHBNWlQ1SDJXRDREaDZwYk80clNHVGdoeG5icjFOdFFHUmNQLWtYOV9RWkRudWRlQ3cyQzNRdVQyRllBalFjUlEtQ0Y5RnFnV1VNbmE4ckFDc1ZK?oc=5"
-        },
-        {
-          "name": "MacRumors",
-          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA4bERid0NXUDIzNk4zUHZYX3JvWGRqSWZ2Q1J0cUVBZXJNalAwX2xib0VuTm1pQVVaUGRxNExYR2ZYd2kxbWhHcEE3WlVzd0JZRFJucERiU1Vxc2E4SmpPY1dhUDhsQzkxUGllQ25Ub0IxRzhqbktTRGc1T0tjdw?oc=5"
-        },
-        {
-          "name": "The Verge",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5"
-        }
-      ],
-      "sourceName": "The Verge",
-      "entityIds": [
+        "gpt",
         "claude"
       ]
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5",
-      "clusterId": "gjefr1",
-      "title": "Self-hosted Claude Managed Agents keeps agent credentials in your environment",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5",
-      "dateISO": "2026-11-12T18:07:00.000Z",
+      "id": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/",
+      "clusterId": "16dsmle",
+      "title": "Jensen Huang Is Out. Will Nvidia’s Rivals Cash In?",
+      "desc": "In a special episode of “Uncanny Valley,” we break down Jensen Huang’s resignation from Nvidia, what comes next for the company, and where the AI industry goes from here.",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/",
+      "dateISO": "2026-11-12T22:14:41.000Z",
       "date": "NOV 12 2026",
       "category": "general",
       "catConfidence": 0.3,
@@ -1016,13 +925,39 @@
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Help Net Security",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/"
         }
       ],
-      "sourceName": "Help Net Security",
+      "sourceName": "Wired",
       "entityIds": [
-        "claude"
+        "nvidia"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+      "clusterId": "1vfuxgt",
+      "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
+      "desc": "Gemini 4 Hydrogen isn't getting a slow, security-conscious release like Carbon and Argon.",
+      "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+      "dateISO": "2026-11-12T19:23:03.000Z",
+      "date": "NOV 12 2026",
+      "category": "adoption",
+      "catConfidence": 0.43,
+      "family": "product",
+      "significance": 51,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/"
+        }
+      ],
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "gemini"
       ]
     },
     {
@@ -1060,6 +995,84 @@
       ]
     },
     {
+      "id": "https://openai.com/business/customer-stories/amplitude",
+      "clusterId": "1jwi9ut",
+      "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+      "desc": "Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "dateISO": "2026-11-12T20:00:00.000Z",
+      "date": "NOV 12 2026",
+      "category": "analysis",
+      "catConfidence": 0.38,
+      "family": "product",
+      "significance": 50,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/business/customer-stories/amplitude"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "gpt"
+      ]
+    },
+    {
+      "id": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/",
+      "clusterId": "1201u0f",
+      "title": "Jensen Huang Basically Lit More Than $1 Trillion on Fire in Less Than a Month",
+      "desc": "Since the scandal involving an alleged Chinese spy began, Nvidia has lost an eye-watering sum from its market value.",
+      "url": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/",
+      "dateISO": "2026-11-12T17:59:15.000Z",
+      "date": "NOV 12 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 49,
+      "impact": "notable",
+      "verification": "uncertain",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/"
+        }
+      ],
+      "sourceName": "Wired",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5",
+      "clusterId": "gjefr1",
+      "title": "Self-hosted Claude Managed Agents keeps agent credentials in your environment",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5",
+      "dateISO": "2026-11-12T18:07:00.000Z",
+      "date": "NOV 12 2026",
+      "category": "general",
+      "catConfidence": 0.3,
+      "family": "product",
+      "significance": 48,
+      "impact": "notable",
+      "verification": "single",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "Help Net Security",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV0FhVXZpZF9wY3FHcDVLdkNoNGlKdVcxd1pkcjgzSE9Eb0hDTVRRcGdsQWxtYUh5WDBYaE94M25GNlQwbURleGMyQ1pranVXaHlFa3I5dUp2S3BPbmNrOVluRklqVTNfclhaelB6aEMzSHNqb09ONHJMcnhUM09sVmo0eXFRTDc4VWEzb0xNVVE?oc=5"
+        }
+      ],
+      "sourceName": "Help Net Security",
+      "entityIds": [
+        "claude"
+      ]
+    },
+    {
       "id": "https://www.wired.com/story/google-deepmind-staff-escalate-their-union-fight/",
       "clusterId": "r5zws5",
       "title": "Google DeepMind Staff Tap the UK Government to Escalate Their Unionization Fight",
@@ -1070,7 +1083,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 50,
+      "significance": 47,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
@@ -1096,7 +1109,7 @@
       "category": "general",
       "catConfidence": 0.3,
       "family": "product",
-      "significance": 50,
+      "significance": 47,
       "impact": "notable",
       "verification": "official",
       "sourceCount": 1,
@@ -1112,85 +1125,115 @@
       ]
     },
     {
-      "id": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
-      "clusterId": "b1gq9s",
-      "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
-      "desc": "Nvidia has no succession plan and a CEO in hot water, so we’ve drafted a shortlist.",
-      "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
-      "dateISO": "2026-11-12T03:13:10.000Z",
-      "date": "NOV 12 2026",
-      "category": "orggov",
-      "catConfidence": 0.44,
-      "family": "market",
-      "significance": 50,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "TechCrunch",
-          "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/"
-        }
-      ],
-      "sourceName": "TechCrunch",
-      "entityIds": [
-        "nvidia"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd1ZtZzZWNUh2ejlBRmZIQ2prdlNzWnlNTFFkOFZXRWJCaXpBdzVtaUk3cDBXZG1uUXdEaEdqZHNtSWF5N2o4Ni1xdjkzVHp0azBKQTFZb0k0ZVpDYU5id2l3ZTdtNlltZVJyNUhRZjIxWDluWHd4TW5YLXhCcHNlejNyamFlZjZUbWJsaS1yb0VGZDJFQnJXZUhaNmNoUEJjM2s3TWltbFREMmNMVkdDbkNLaXNJQQ?oc=5",
-      "clusterId": "zi3pgi",
-      "title": "Anthropic must face lawsuit over Claude subscription marketing",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd1ZtZzZWNUh2ejlBRmZIQ2prdlNzWnlNTFFkOFZXRWJCaXpBdzVtaUk3cDBXZG1uUXdEaEdqZHNtSWF5N2o4Ni1xdjkzVHp0azBKQTFZb0k0ZVpDYU5id2l3ZTdtNlltZVJyNUhRZjIxWDluWHd4TW5YLXhCcHNlejNyamFlZjZUbWJsaS1yb0VGZDJFQnJXZUhaNmNoUEJjM2s3TWltbFREMmNMVkdDbkNLaXNJQQ?oc=5",
-      "dateISO": "2026-11-09T19:38:42.000Z",
+      "id": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
+      "clusterId": "1tq5saz",
+      "title": "Nvidia CEO's affair becomes a national security problem",
+      "desc": "Nvidia is probing whether Chinese intelligence targeted its CEO through an affair.",
+      "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
+      "dateISO": "2026-11-09T15:23:20.000Z",
       "date": "NOV 09 2026",
-      "category": "policy",
-      "catConfidence": 0.71,
+      "category": "orggov",
+      "catConfidence": 0.67,
       "family": "market",
-      "significance": 49,
+      "significance": 47,
       "impact": "notable",
       "verification": "corroborated",
       "sourceCount": 2,
       "sources": [
         {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+          "name": "Wired",
+          "url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-steps-down/"
         },
         {
-          "name": "Reuters",
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd1ZtZzZWNUh2ejlBRmZIQ2prdlNzWnlNTFFkOFZXRWJCaXpBdzVtaUk3cDBXZG1uUXdEaEdqZHNtSWF5N2o4Ni1xdjkzVHp0azBKQTFZb0k0ZVpDYU5id2l3ZTdtNlltZVJyNUhRZjIxWDluWHd4TW5YLXhCcHNlejNyamFlZjZUbWJsaS1yb0VGZDJFQnJXZUhaNmNoUEJjM2s3TWltbFREMmNMVkdDbkNLaXNJQQ?oc=5"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/"
         }
       ],
-      "sourceName": "Reuters",
+      "sourceName": "Ars Technica",
+      "entityIds": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10enV3TE5wbE16VzdLdGtURWpZSW4xekNGZDJHMXRGS3MwT2wwcG4zVnAxT0dFeXdnR0x2RDYxR1pab2Flcmk3LTRMVU9hMmVyZmd4VGpKckgtRlhpanA4RW8tVzBFVVVjdUpqbC0xdTFpRi03T0xSbHkxNy0?oc=5",
+      "clusterId": "13fowos",
+      "title": "What Anthropic Claude Meetings Means for Enterprises",
+      "desc": "",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10enV3TE5wbE16VzdLdGtURWpZSW4xekNGZDJHMXRGS3MwT2wwcG4zVnAxT0dFeXdnR0x2RDYxR1pab2Flcmk3LTRMVU9hMmVyZmd4VGpKckgtRlhpanA4RW8tVzBFVVVjdUpqbC0xdTFpRi03T0xSbHkxNy0?oc=5",
+      "dateISO": "2026-11-11T14:04:24.000Z",
+      "date": "NOV 11 2026",
+      "category": "analysis",
+      "catConfidence": 0.6,
+      "family": "product",
+      "significance": 47,
+      "impact": "notable",
+      "verification": "analysis",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "name": "UC Today",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE10enV3TE5wbE16VzdLdGtURWpZSW4xekNGZDJHMXRGS3MwT2wwcG4zVnAxT0dFeXdnR0x2RDYxR1pab2Flcmk3LTRMVU9hMmVyZmd4VGpKckgtRlhpanA4RW8tVzBFVVVjdUpqbC0xdTFpRi03T0xSbHkxNy0?oc=5"
+        }
+      ],
+      "sourceName": "UC Today",
       "entityIds": [
         "claude"
       ]
     },
     {
-      "id": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
-      "clusterId": "9944d1",
-      "title": "I reviewed the Apple HomeView, ask me anything",
-      "desc": "Hi! I'm Jen Tuohy, The Verge's senior smart home reviewer. I've tested every smart display Amazon and Google have ever made, and for the past week I've been testing Apple's first: The $299 HomeView. I put the tabletop and wall-mounted versions through their paces, on my kitchen counter, bedside table, in my office, and on […]",
-      "url": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything",
-      "dateISO": "2026-11-12T14:10:00.000Z",
-      "date": "NOV 12 2026",
-      "category": "general",
-      "catConfidence": 0.3,
+      "id": "https://openai.com/index/introducing-businesses-chatgpt",
+      "clusterId": "viuanc",
+      "title": "Introducing Businesses in ChatGPT",
+      "desc": "Manage your business information, get insights about how your business shows up, and turn interest into action in ChatGPT.",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "dateISO": "2026-11-10T10:00:00.000Z",
+      "date": "NOV 10 2026",
+      "category": "product",
+      "catConfidence": 0.6,
       "family": "product",
-      "significance": 49,
+      "significance": 47,
+      "impact": "notable",
+      "verification": "official",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "name": "OpenAI (YouTube)",
+          "url": "https://www.youtube.com/watch?v=Z9k5oI3Paoc"
+        },
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/introducing-businesses-chatgpt"
+        }
+      ],
+      "sourceName": "OpenAI",
+      "entityIds": [
+        "chatgpt"
+      ]
+    },
+    {
+      "id": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
+      "clusterId": "102s5v3",
+      "title": "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder.",
+      "desc": "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says.",
+      "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/",
+      "dateISO": "2026-11-05T21:39:40.000Z",
+      "date": "NOV 05 2026",
+      "category": "policy",
+      "catConfidence": 0.5,
+      "family": "market",
+      "significance": 45,
       "impact": "notable",
       "verification": "single",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "The Verge",
-          "url": "https://www.theverge.com/tech/1031868/i-reviewed-the-apple-homeview-ask-me-anything"
+          "name": "Ars Technica",
+          "url": "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/"
         }
       ],
-      "sourceName": "The Verge",
+      "sourceName": "Ars Technica",
       "entityIds": [
-        "gemini"
+        "chatgpt"
       ]
     },
     {
@@ -1204,8 +1247,8 @@
       "category": "capital",
       "catConfidence": 0.67,
       "family": "market",
-      "significance": 47,
-      "impact": "notable",
+      "significance": 43,
+      "impact": "emerging",
       "verification": "uncertain",
       "sourceCount": 1,
       "sources": [
@@ -1216,81 +1259,29 @@
       ],
       "sourceName": "TechCrunch",
       "entityIds": []
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVU1YdlJPSUlEcmx5OUpyelIxZlBYSnp5QmUzbTJpNE5IcG4xSURIbndrNWlHSXJpMGVacnM2QlpmWGdUbWRtY0xJQ3l1Z3RqN0RCRDM5VXZEOFlQWktpNTBDdHZqTTJDRnhlUkFVS1VOQS1Dakx2VmFhSVU3WXlaTGFicjRpcnBPWjJkbHBtcExZbXQySktYOWRB?oc=5",
-      "clusterId": "1hbnzmb",
-      "title": "Microsoft Stock Falls On Anthropic’s Challenge To Office Software",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVU1YdlJPSUlEcmx5OUpyelIxZlBYSnp5QmUzbTJpNE5IcG4xSURIbndrNWlHSXJpMGVacnM2QlpmWGdUbWRtY0xJQ3l1Z3RqN0RCRDM5VXZEOFlQWktpNTBDdHZqTTJDRnhlUkFVS1VOQS1Dakx2VmFhSVU3WXlaTGFicjRpcnBPWjJkbHBtcExZbXQySktYOWRB?oc=5",
-      "dateISO": "2026-11-10T21:27:00.000Z",
-      "date": "NOV 10 2026",
-      "category": "market",
-      "catConfidence": 0.67,
-      "family": "market",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "Investor's Business Daily",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVU1YdlJPSUlEcmx5OUpyelIxZlBYSnp5QmUzbTJpNE5IcG4xSURIbndrNWlHSXJpMGVacnM2QlpmWGdUbWRtY0xJQ3l1Z3RqN0RCRDM5VXZEOFlQWktpNTBDdHZqTTJDRnhlUkFVS1VOQS1Dakx2VmFhSVU3WXlaTGFicjRpcnBPWjJkbHBtcExZbXQySktYOWRB?oc=5"
-        }
-      ],
-      "sourceName": "Investor's Business Daily",
-      "entityIds": [
-        "claude"
-      ]
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX1lQVHdDaElEQmFkYTI3SHh0ZEo0QjN3VGNRRTZYQ3hHMm1zQWtnc3RlZFpCM2VwX0U3YkNvOVdHeVZzQ2RuMEFFTnNpNjl6SV9DN1c3TkgxLTRHVkNkekFTSC15RDR4cHVmazNoeHdpdmlHc1NjMU1ZUXg2dXFxdl8yek1wQVJPLWVSeVpXMTdnWUlLRk5hLXVubncxWnZueDlDNUxqSGVZRzVBTXNIMG0xa3BhUzjSAb8BQVVfeXFMTnVhbk16TjJRcHZJNFdYLUtJWEdOVnFvSGFiRWU3OXA3RHl0WHJlLUZfbzBZWUdHd21Za1N0eXlKUC0zNWZTVGpFTzhOQzhDdGZBeTRJTnJCWldEd3lhTlVTZU5kTXJKd0pWemcyVUlZX0c1SGZrUXVrTjdGeXdsVjlvdkx6NlA2T2RFNDRuWTJtSWVNcEh6SFFhbS1RV2hLSWlDZ3ZqeVQ1UkRXNzdjLWVSd2FCSnhaSjNXQ0VPMEE?oc=5",
-      "clusterId": "uzahf4",
-      "title": "Anthropic seeks $1.3 trillion valuation when it becomes publicly traded company",
-      "desc": "",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX1lQVHdDaElEQmFkYTI3SHh0ZEo0QjN3VGNRRTZYQ3hHMm1zQWtnc3RlZFpCM2VwX0U3YkNvOVdHeVZzQ2RuMEFFTnNpNjl6SV9DN1c3TkgxLTRHVkNkekFTSC15RDR4cHVmazNoeHdpdmlHc1NjMU1ZUXg2dXFxdl8yek1wQVJPLWVSeVpXMTdnWUlLRk5hLXVubncxWnZueDlDNUxqSGVZRzVBTXNIMG0xa3BhUzjSAb8BQVVfeXFMTnVhbk16TjJRcHZJNFdYLUtJWEdOVnFvSGFiRWU3OXA3RHl0WHJlLUZfbzBZWUdHd21Za1N0eXlKUC0zNWZTVGpFTzhOQzhDdGZBeTRJTnJCWldEd3lhTlVTZU5kTXJKd0pWemcyVUlZX0c1SGZrUXVrTjdGeXdsVjlvdkx6NlA2T2RFNDRuWTJtSWVNcEh6SFFhbS1RV2hLSWlDZ3ZqeVQ1UkRXNzdjLWVSd2FCSnhaSjNXQ0VPMEE?oc=5",
-      "dateISO": "2026-11-10T18:02:27.000Z",
-      "date": "NOV 10 2026",
-      "category": "capital",
-      "catConfidence": 0.71,
-      "family": "market",
-      "significance": 47,
-      "impact": "notable",
-      "verification": "single",
-      "sourceCount": 1,
-      "sources": [
-        {
-          "name": "NBC Bay Area",
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX1lQVHdDaElEQmFkYTI3SHh0ZEo0QjN3VGNRRTZYQ3hHMm1zQWtnc3RlZFpCM2VwX0U3YkNvOVdHeVZzQ2RuMEFFTnNpNjl6SV9DN1c3TkgxLTRHVkNkekFTSC15RDR4cHVmazNoeHdpdmlHc1NjMU1ZUXg2dXFxdl8yek1wQVJPLWVSeVpXMTdnWUlLRk5hLXVubncxWnZueDlDNUxqSGVZRzVBTXNIMG0xa3BhUzjSAb8BQVVfeXFMTnVhbk16TjJRcHZJNFdYLUtJWEdOVnFvSGFiRWU3OXA3RHl0WHJlLUZfbzBZWUdHd21Za1N0eXlKUC0zNWZTVGpFTzhOQzhDdGZBeTRJTnJCWldEd3lhTlVTZU5kTXJKd0pWemcyVUlZX0c1SGZrUXVrTjdGeXdsVjlvdkx6NlA2T2RFNDRuWTJtSWVNcEh6SFFhbS1RV2hLSWlDZ3ZqeVQ1UkRXNzdjLWVSd2FCSnhaSjNXQ0VPMEE?oc=5"
-        }
-      ],
-      "sourceName": "NBC Bay Area",
-      "entityIds": [
-        "claude"
-      ]
     }
   ],
   "waves": [
     {
       "family": "product",
       "category": "product",
-      "title": "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395",
-      "summary": "The first Gemini smartglasses are a collab between Google, Samsung, Gentle Monster, and Warby Parker.",
-      "significance": 66,
-      "impact": "notable",
+      "title": "Anthropic Ships 4 Office Tools to Rival Microsoft [2026]",
+      "summary": "Anthropic Ships 4 Office Tools to Rival Microsoft [2026]",
+      "significance": 73,
+      "impact": "high",
       "verification": "single",
-      "date": "NOV 12 2026",
-      "dateISO": "2026-11-12T14:50:17.000Z",
-      "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/",
+      "date": "NOV 13 2026",
+      "dateISO": "2026-11-13T13:18:46.000Z",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0t5bGxIX2NKV2Q0ckN1cXU3US13N1l5RXhOUVRTQ2RiSFZHb0JxYnRuZ3BUYmlwcUdqQ1REQlJFcW9jalgwQkk3UUhDd2F4dmt6QXlQYzVvTjJSY2c1YWJTSTB1d2pqakI4Mno4R0I4VjZSdjBJRXEyV2pFa3U4SF9jWTE5RlFJbEc0NDdTZGVyVlViemllcg?oc=5",
       "sourceCount": 1,
       "sources": [
         {
-          "name": "Ars Technica",
-          "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/"
+          "name": "shattered.io",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0t5bGxIX2NKV2Q0ckN1cXU3US13N1l5RXhOUVRTQ2RiSFZHb0JxYnRuZ3BUYmlwcUdqQ1REQlJFcW9jalgwQkk3UUhDd2F4dmt6QXlQYzVvTjJSY2c1YWJTSTB1d2pqakI4Mno4R0I4VjZSdjBJRXEyV2pFa3U4SF9jWTE5RlFJbEc0NDdTZGVyVlViemllcg?oc=5"
         }
       ],
       "entityIds": [
-        "gemini"
+        "claude"
       ],
       "whyItMatters": "If it holds up, a new release raises the bar rivals are measured against and gives developers something to build on now."
     },
@@ -1299,14 +1290,26 @@
       "category": "orggov",
       "title": "Meet Colette Kress, Nvidia’s New Interim CEO",
       "summary": "Nvidia’s longtime chief financial officer helped transform the company into an AI powerhouse. Now she’s taking the reins following Jensen Huang’s resignation on Thursday.",
-      "significance": 87,
+      "significance": 83,
       "impact": "high",
       "verification": "corroborated",
       "date": "NOV 12 2026",
       "dateISO": "2026-11-12T14:14:33.000Z",
       "url": "https://www.wired.com/story/who-is-colette-kress-the-woman-who-could-succeed-jensen-huang/",
-      "sourceCount": 11,
+      "sourceCount": 14,
       "sources": [
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow"
+        },
         {
           "name": "TechCrunch",
           "url": "https://techcrunch.com/2026/11/12/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
@@ -1362,8 +1365,8 @@
       "category": "research",
       "title": "AI chatbots are recommending fake retail websites, study finds",
       "summary": "Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP p…",
-      "significance": 71,
-      "impact": "high",
+      "significance": 67,
+      "impact": "notable",
       "verification": "uncertain",
       "date": "NOV 12 2026",
       "dateISO": "2026-11-12T17:00:00.000Z",
@@ -1387,9 +1390,9 @@
     "chatgpt": 37,
     "copilot": 0,
     "perplexity": 1,
-    "gpt": 120,
-    "claude": 60,
-    "gemini": 36,
+    "gpt": 118,
+    "claude": 64,
+    "gemini": 35,
     "grok": 1,
     "llama": 0,
     "deepseek": 0,
@@ -1400,7 +1403,7 @@
     "gcp": 1,
     "oracle": 3,
     "coreweave": 1,
-    "nvidia": 11,
+    "nvidia": 10,
     "amd": 2,
     "tsmc": 1,
     "broadcom": 0
@@ -1411,15 +1414,15 @@
       "logoKey": "anthropic",
       "items": [
         {
-          "h": "Microsoft Stock Falls as Anthropic Unveils Excel Competitor. Don’t Panic.",
-          "d": "NOV 10 2026",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxONTN6WVZPSEd2bVBITEc3MlhWb25Nal8zQVgtaExYMjBFWndmcHZqVHo5R0JDZTNsWUo0VGNNNzNfYkduSWJuRHp4QVVvMzBBVDNUbU5QRG5VazdWcHNfU1NqR21yS0JCR3lyOEZSZlVKT1VENG9CR1JfdDhaOWh5dWkyenIxUVU?oc=5",
+          "h": "Anthropic Ships 4 Office Tools to Rival Microsoft [2026]",
+          "d": "NOV 13 2026",
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQQ0t5bGxIX2NKV2Q0ckN1cXU3US13N1l5RXhOUVRTQ2RiSFZHb0JxYnRuZ3BUYmlwcUdqQ1REQlJFcW9jalgwQkk3UUhDd2F4dmt6QXlQYzVvTjJSY2c1YWJTSTB1d2pqakI4Mno4R0I4VjZSdjBJRXEyV2pFa3U4SF9jWTE5RlFJbEc0NDdTZGVyVlViemllcg?oc=5",
           "isVideo": false,
           "videoUrl": null,
-          "sourceName": "Barron's",
+          "sourceName": "shattered.io",
           "sourceCount": 1,
           "verification": "single",
-          "impact": "emerging"
+          "impact": "high"
         },
         {
           "h": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
@@ -1433,26 +1436,26 @@
           "impact": "notable"
         },
         {
-          "h": "Anthropic releases new Mythos and Fable models amid RSI concerns",
-          "d": "NOV 09 2026",
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQ2Yta1hDZm1QakE4S2RXZTd0UXR0N2V5QVdtdFNxQVBZQW9XVklvODB3WGR1Wmc3Vk5tV1VoX1ltVHVEd0liM2Fka1Q2NS1nRVdMSWZKLVJQTUd6Wm9xd3JWWGlwX2M3Mkl2cjlIS0pSdUFmZEdWaWtkQnItbmRvaVRudDFnVXdGMmY4Vi1aLU9ma2RDM2VWd2loMGI3aE1i?oc=5",
-          "isVideo": false,
-          "videoUrl": null,
-          "sourceName": "TechCrunch",
-          "sourceCount": 1,
-          "verification": "single",
-          "impact": "emerging"
-        },
-        {
           "h": "Anthropic launches new Claude Fable and Mythos 5.2 models",
           "d": "NOV 09 2026",
           "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNSWctMWdSek1tY1pVaWg4SXBfcHFRR0VYTHprRUI4OHFNZWs1VGp2YU5yUVJQdDNSVkVXS01uMmx0b0dOemlFZjFQNUVibmN3UkU2VkpvWDFkUG1qNnpobDZiVkF3VjlUOVBfdzNfVWJLcm52a2VIcjhJMDY0ZUg1dnJjR2dqZTdxQjh2N18wY3BhS2ctN0k3RA?oc=5",
           "isVideo": false,
           "videoUrl": null,
           "sourceName": "The Verge",
-          "sourceCount": 3,
+          "sourceCount": 4,
           "verification": "corroborated",
           "impact": "notable"
+        },
+        {
+          "h": "Introducing the Anthropic Cyber Mission",
+          "d": "OCT 08 2026",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9SRkRRLThCQk54NV9hR0E5akl4LVNfanczWXU2cExpb2tyd3M4bGtFbWx6ekVPOUw5bDRzRjNhSlJ3ZjJqQklIMTVMNmNjXzNwaGtsb1lJeVItOXVaMlVuQk1BelE?oc=5",
+          "isVideo": false,
+          "videoUrl": null,
+          "sourceName": "Anthropic",
+          "sourceCount": 1,
+          "verification": "official",
+          "impact": "emerging"
         },
         {
           "h": "Introducing Claude Haiku 5.5",
@@ -1476,11 +1479,11 @@
           "d": "NOV 10 2026",
           "url": "https://openai.com/index/introducing-businesses-chatgpt",
           "isVideo": false,
-          "videoUrl": null,
+          "videoUrl": "https://www.youtube.com/watch?v=Z9k5oI3Paoc",
           "sourceName": "OpenAI",
-          "sourceCount": 1,
+          "sourceCount": 2,
           "verification": "official",
-          "impact": "emerging"
+          "impact": "notable"
         },
         {
           "h": "ChatGPT Enterprise now available in AWS Marketplace",
@@ -1592,6 +1595,78 @@
   ],
   "wire": [
     {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 12 2026",
+      "verification": "corroborated",
+      "impact": "high",
+      "h": "Meet Colette Kress, Nvidia’s New Interim CEO",
+      "p": "Nvidia’s longtime chief financial officer helped transform the company into an AI powerhouse. Now she’s taking the reins following Jensen Huang’s resignation on Thursday.",
+      "url": "https://www.wired.com/story/who-is-colette-kress-the-woman-who-could-succeed-jensen-huang/",
+      "sourceName": "Wired",
+      "sourceCount": 14
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 13 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "ElevenLabs’ new app combines meeting note-taking and dictation for teams",
+      "p": "ElevenAI is a new meeting notetaker and dictation app aimed at teams and enterprises.",
+      "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "NOV 13 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "p": "Normally, the products I test don't offer to help me write up my experience with them. Duet is different. Claude Duet is Anthropic's AI agent for consumers, the latest attempt by an AI company to try to convince us that agents can be useful for people who don…",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "sourceName": "The Verge",
+      "sourceCount": 1
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 13 2026",
+      "verification": "single",
+      "impact": "notable",
+      "h": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+      "p": "Given Nvidia’s stronghold on AI and its importance in Israel, many in the country's startup ecosystem are worried about the impact of his departure.",
+      "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+      "sourceName": "TechCrunch",
+      "sourceCount": 1
+    },
+    {
+      "org": "ANTHROPIC",
+      "logoKey": "anthropic",
+      "date": "OCT 19 2026",
+      "verification": "corroborated",
+      "impact": "emerging",
+      "h": "Structured outputs for Anthropic Claude models on Amazon Bedrock | Artificial I…",
+      "p": "Structured outputs for Anthropic Claude models on Amazon Bedrock | Artificial Intelligence",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQeGtQZ3VDNTRrRVNBTDA4ak5mUlBKUG1kdWpwWDJxQUx2UWxFMGw3Sk85MllYN1gyTENSZEcxa0RwZ2RXLTk5WlE0ejZPZWU0UzI5RVRmUnlLdXgwcjZBUUhEUnI5enprM2NPZVlhbXl6ZUhTVU4wZEpwMjc0SHlQME54Ri1NMk40UmF5bDBReHdEV0V6OWxXVnJVSl9nUkpsTGFQejBtU2tFeEliQXpvZw?oc=5",
+      "sourceName": "Amazon Web Services (AWS)",
+      "sourceCount": 2
+    },
+    {
+      "org": "AI WIRE",
+      "logoKey": "other",
+      "date": "NOV 13 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
+      "p": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out.",
+      "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+      "sourceName": "Wired",
+      "sourceCount": 1
+    },
+    {
       "org": "ANTHROPIC",
       "logoKey": "anthropic",
       "date": "NOV 13 2026",
@@ -1613,79 +1688,7 @@
       "p": "Anthropic releases first frontier models since Amodei's call for slowdown as IPO buzz builds",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1EZ19OSTNSY1dhR3hRS1h5MWdBMnQtbDBZRG9lNUl6c2Z3Sy1hYlh2LUY2elVFd1BzbUVrYkdHcC1XQVBuTFZ3d2p3ME9uTkRRb0k5NE1OdjB1eU5XNFFWb3pTcTd1OUw0cTF2Ynd4M25tSGFQaHdhVFFoZVZyR1U?oc=5",
       "sourceName": "CNBC",
-      "sourceCount": 21
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "NOV 10 2026",
-      "verification": "corroborated",
-      "impact": "emerging",
-      "h": "Anthropic brings Claude to Google Meet to tackle tasks live",
-      "p": "Anthropic brings Claude to Google Meet to tackle tasks live",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPa1lkekszdzZzWXNDOXRjbGg1SWhiaFR5NXZrWVNuSjluX0xOX1BQcm9YZDlneHJJU3dEOXA4Z0pvY09pbXhua1pGWlJKWU51OVNmVFdTNzY1QWN2cjl0b0ttTHR1b0cyQW9RX0habzJ3MVp1dHc2YXh6RGZLNHJGY3hCMlhsakFsOEUtSWJXUWVpb3I5eHpmcGNhVm5JTlo2VVE?oc=5",
-      "sourceName": "Reuters",
-      "sourceCount": 2
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "NOV 12 2026",
-      "verification": "uncertain",
-      "impact": "notable",
-      "h": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme…",
-      "p": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke.",
-      "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "ANTHROPIC",
-      "logoKey": "anthropic",
-      "date": "NOV 11 2026",
-      "verification": "corroborated",
-      "impact": "high",
-      "h": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch fro…",
-      "p": "Anthropic says AI is eroding Nvidia's CUDA lead, cutting an AMD chip switch from months to three days",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSUlLVl9MQkF2d2tNQXctbXotemNQUEJnLWJReXNYZlBRYUJWQkZoOV9aZjdKdXhHZ3N1VkhKNEprWmx3QWxGNGtnRjQ2UnZ2dS1xV2dobFRQYTN0UXBxaFdjY3JBc2tKSC1SSHJXM18tYTVTcFFhX0pxcl9SRkVwQmxLamVUbGU1Mnp0a3YtRm5kZ1U4NUkwM3BkYW01LXhBM3JtaFJVTDBuZ0FrQmJraENaUXdOdmJXbHpYNmJsNkdSQQ?oc=5",
-      "sourceName": "The Decoder",
-      "sourceCount": 3
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "NOV 12 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
-      "p": "Airlines praised the AI tool, but the air traffic controllers’ union wasn’t involved.",
-      "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
-      "sourceName": "Ars Technica",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "NOV 12 2026",
-      "verification": "single",
-      "impact": "emerging",
-      "h": "Muse can now place calls to US businesses — if you pay",
-      "p": "Muse's AI can now place outbound calls to U.S. businesses — but it's not free.",
-      "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
-      "sourceName": "TechCrunch",
-      "sourceCount": 1
-    },
-    {
-      "org": "AI WIRE",
-      "logoKey": "other",
-      "date": "NOV 12 2026",
-      "verification": "single",
-      "impact": "notable",
-      "h": "Jensen Huang Is Out. Will Nvidia’s Rivals Cash In?",
-      "p": "In a special episode of “Uncanny Valley,” we break down Jensen Huang’s resignation from Nvidia, what comes next for the company, and where the AI industry goes from here.",
-      "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/",
-      "sourceName": "Wired",
-      "sourceCount": 1
+      "sourceCount": 18
     }
   ],
   "feed": [
@@ -1700,6 +1703,18 @@
       "sourceName": "OpenAI",
       "verification": "official",
       "impact": "emerging"
+    },
+    {
+      "name": "Launching an opt-in vulnerability-finding service for open-…",
+      "org": "Anthropic",
+      "date": "OCT 08 2026",
+      "lic": "open weights",
+      "licClass": "lic-open",
+      "desc": "Open-weight coverage — confirm exact license on the model card.",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQYlVFa0lLSzZRaDNqRXNLWjFxOE0xa3pZdkNrV2hkNHkxTDg3QnVRdFVVclpaUXVXTVZyekdxNkRGQTFGTWdmb1h2NGtLT3pOaUJuZG8wYldhVUFMbEdta2o0eERWaGlTalpISG9reWhCTm9VSmI1X0RFVDJ3Rk1zSDF6YmEwZWRiVnFHSS1DczNLZw?oc=5",
+      "sourceName": "Anthropic",
+      "verification": "official",
+      "impact": "emerging"
     }
   ],
   "breakthroughs": [
@@ -1707,7 +1722,7 @@
       "field": "Reasoning",
       "date": "NOV 12 2026",
       "verification": "single",
-      "impact": "high",
+      "impact": "notable",
       "h": "No, AI agents did not discover a previously unknown Maya site",
       "p": "Armed with a team of AI agents, Google researcher Pietro Miotti claimed earlier this week to have discovered a potentially unmapped Maya site in Mexico. There was just one problem: The site had already been discovered and was published in an academic journal…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
@@ -1718,7 +1733,7 @@
       "field": "Research",
       "date": "NOV 12 2026",
       "verification": "uncertain",
-      "impact": "high",
+      "impact": "notable",
       "h": "AI chatbots are recommending fake retail websites, study finds",
       "p": "Shoppers using AI chatbots to research products or find places to buy items could be directed to imposters and other risky websites, a new study found. The study conducted by IP protection firm Podqi and shared exclusively with The Verge prompted ChatGPT, Gem…",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
@@ -1759,15 +1774,15 @@
       "sourceCount": 1
     },
     {
-      "field": "Reasoning",
-      "date": "NOV 10 2026",
-      "verification": "corroborated",
-      "impact": "notable",
-      "h": "Anthropic's Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Bench…",
-      "p": "Anthropic's Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Benchmark",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOaXJOZE13aW5YNlFwQkNJUXA1dEZlUzd3c1l5c2t2MFh2V0RWVWV5ZXVpM004cmhReWs4MndrUVVFWEpENWM1NHpOaTFVQUhlNTB2ZThVVWQ2ZFl2U0tIbXYxaXpvZmNoLXNxSDl5QTB6dWFvalVjRWY0OXVFLUNxQnhhTQ?oc=5",
-      "sourceName": "The Hacker News",
-      "sourceCount": 3
+      "field": "Research",
+      "date": "NOV 09 2026",
+      "verification": "single",
+      "impact": "emerging",
+      "h": "Innovating with AI in the special chemicals industry",
+      "p": "As companies look to accelerate innovation with artificial intelligence, cloud computing, and advanced modeling, the primary challenge is connecting new technologies to reliable data, scientific expertise, and the practical realities of bringing products to m…",
+      "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+      "sourceName": "MIT Technology Review",
+      "sourceCount": 1
     }
   ],
   "stocks": [
@@ -1776,11 +1791,11 @@
       "n": "NVIDIA Corporation",
       "layer": "Chips",
       "signal": "Dominant AI GPU stack — data center is the majority of revenue",
-      "price": 166.19,
-      "changePct": -4.340064163679479,
+      "price": 162.04,
+      "changePct": -2.4971472978566265,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/NVDA",
-      "volume": 740019481,
+      "volume": 85456771,
       "ohlc": [
         {
           "d": "08-13",
@@ -2236,21 +2251,28 @@
           "h": 167.13999938964844,
           "l": 148.8000030517578,
           "c": 166.19000244140625
+        },
+        {
+          "d": "11-13",
+          "o": 169.88999938964844,
+          "h": 170,
+          "l": 161.88999938964844,
+          "c": 162.0399932861328
         }
       ],
-      "relVolume": 4.485810169212906,
-      "marketCap": 4055036000000
+      "relVolume": 0.4351792689587925,
+      "marketCap": 3953776000000
     },
     {
       "t": "MSFT",
       "n": "Microsoft Corporation",
       "layer": "Cloud",
       "signal": "Azure AI + Copilot pushed across the whole product line",
-      "price": 523,
-      "changePct": 0.35883466690965327,
+      "price": 522.16,
+      "changePct": -0.16061698957337475,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/MSFT",
-      "volume": 17899545,
+      "volume": 3936635,
       "ohlc": [
         {
           "d": "08-13",
@@ -2706,21 +2728,28 @@
           "h": 529.6599731445312,
           "l": 520,
           "c": 523
+        },
+        {
+          "d": "11-13",
+          "o": 519.9099731445312,
+          "h": 523.5698852539062,
+          "l": 513.8200073242188,
+          "c": 522.1599731445312
         }
       ],
-      "relVolume": 0.7027684922510121,
-      "marketCap": 3885890000000
+      "relVolume": 0.15042692421593634,
+      "marketCap": 3879648800000
     },
     {
       "t": "AVGO",
       "n": "Broadcom Inc.",
       "layer": "Chips",
       "signal": "Custom AI XPUs for hyperscalers plus AI networking silicon",
-      "price": 364.36,
-      "changePct": 5.544285980875993,
+      "price": 346.483,
+      "changePct": 0.00014043198336777731,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AVGO",
-      "volume": 43502367,
+      "volume": 4803702,
       "ohlc": [
         {
           "d": "08-13",
@@ -3176,21 +3205,28 @@
           "h": 369.82000732421875,
           "l": 354.7200012207031,
           "c": 364.3599853515625
+        },
+        {
+          "d": "11-13",
+          "o": 356.5400085449219,
+          "h": 358.4700012207031,
+          "l": 345.42999267578125,
+          "c": 346.4825134277344
         }
       ],
-      "relVolume": 1.6780612253729912,
-      "marketCap": 1792651200000
+      "relVolume": 0.17955136659438442,
+      "marketCap": 1704696360000
     },
     {
       "t": "GOOGL",
       "n": "Alphabet Inc.",
       "layer": "Cloud",
       "signal": "Gemini and in-house TPUs across search, cloud and devices",
-      "price": 298.7,
-      "changePct": 1.789061094431335,
+      "price": 301.5,
+      "changePct": 0.9373912549518267,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/GOOGL",
-      "volume": 35166591,
+      "volume": 5337250,
       "ohlc": [
         {
           "d": "08-13",
@@ -3646,21 +3682,28 @@
           "h": 302.55999755859375,
           "l": 293.69000244140625,
           "c": 298.70001220703125
+        },
+        {
+          "d": "11-13",
+          "o": 302.9800109863281,
+          "h": 304.96990966796875,
+          "l": 301.30999755859375,
+          "c": 301.5
         }
       ],
-      "relVolume": 0.8841448848677834,
-      "marketCap": 3644140000000
+      "relVolume": 0.13120452874103758,
+      "marketCap": 3678300000000
     },
     {
       "t": "AMZN",
       "n": "Amazon.com, Inc.",
       "layer": "Cloud",
       "signal": "Custom Trainium chips and AWS Bedrock model hosting",
-      "price": 267.44,
-      "changePct": 0.47713451914322397,
+      "price": 268.045,
+      "changePct": -0.00015301744944820882,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMZN",
-      "volume": 33764492,
+      "volume": 3691914,
       "ohlc": [
         {
           "d": "08-13",
@@ -4116,21 +4159,28 @@
           "h": 273.6000061035156,
           "l": 267.20001220703125,
           "c": 267.44000244140625
+        },
+        {
+          "d": "11-13",
+          "o": 269.55499267578125,
+          "h": 269.94000244140625,
+          "l": 267.0799865722656,
+          "c": 268.04541015625
         }
       ],
-      "relVolume": 0.6810553344094078,
-      "marketCap": 2861608000000
+      "relVolume": 0.07311275290779479,
+      "marketCap": 2868081500000
     },
     {
       "t": "META",
       "n": "Meta Platforms, Inc.",
       "layer": "Software",
       "signal": "Ad-ranking AI and in-house frontier model efforts",
-      "price": 623.61,
-      "changePct": -0.820655250632707,
+      "price": 632.97,
+      "changePct": 1.5009357725864143,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/META",
-      "volume": 10253879,
+      "volume": 1829978,
       "ohlc": [
         {
           "d": "08-13",
@@ -4586,21 +4636,28 @@
           "h": 630.3200073242188,
           "l": 618.9199829101562,
           "c": 623.6099853515625
+        },
+        {
+          "d": "11-13",
+          "o": 627.2100219726562,
+          "h": 637.22998046875,
+          "l": 625,
+          "c": 632.969970703125
         }
       ],
-      "relVolume": 0.42205362132440843,
-      "marketCap": 1571497200000
+      "relVolume": 0.0761449867909745,
+      "marketCap": 1595084400000
     },
     {
       "t": "TSM",
       "n": "Taiwan Semiconductor Manufacturing Company Limited",
       "layer": "Foundry",
       "signal": "Manufactures advanced-node chips for Nvidia, AMD and Apple",
-      "price": 405.49,
-      "changePct": -1.9015400394532072,
+      "price": 399.97,
+      "changePct": -1.3613132621304158,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/TSM",
-      "volume": 11308972,
+      "volume": 1754692,
       "ohlc": [
         {
           "d": "08-13",
@@ -5056,21 +5113,28 @@
           "h": 411.7699890136719,
           "l": 393.9100036621094,
           "c": 405.489990234375
+        },
+        {
+          "d": "11-13",
+          "o": 407.6000061035156,
+          "h": 408.0849914550781,
+          "l": 399.6300048828125,
+          "c": 399.9700012207031
         }
       ],
-      "relVolume": 0.739591026324266,
-      "marketCap": 2104493100000
+      "relVolume": 0.11883881882601856,
+      "marketCap": 2075844300000.0002
     },
     {
       "t": "AMD",
       "n": "Advanced Micro Devices, Inc.",
       "layer": "Chips",
       "signal": "Instinct GPU line chasing Nvidia’s ecosystem lead",
-      "price": 585.3,
-      "changePct": 5.860003969658386,
+      "price": 547.47,
+      "changePct": -6.463355181757652,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/AMD",
-      "volume": 55014886,
+      "volume": 7180320,
       "ohlc": [
         {
           "d": "08-13",
@@ -5526,21 +5590,28 @@
           "h": 594,
           "l": 554.9000244140625,
           "c": 585.2999877929688
+        },
+        {
+          "d": "11-13",
+          "o": 566.6699829101562,
+          "h": 571.125,
+          "l": 546.8099975585938,
+          "c": 547.469970703125
         }
       ],
-      "relVolume": 1.7225221939338715,
-      "marketCap": 948185999999.9999
+      "relVolume": 0.2153684000250752,
+      "marketCap": 886901400000
     },
     {
       "t": "PLTR",
       "n": "Palantir Technologies Inc.",
       "layer": "Software",
       "signal": "AIP platform adoption across government and enterprise",
-      "price": 171.58,
-      "changePct": -0.4756334654640664,
+      "price": 169.575,
+      "changePct": -1.168553946506375,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/PLTR",
-      "volume": 12382352,
+      "volume": 1406399,
       "ohlc": [
         {
           "d": "08-13",
@@ -5996,21 +6067,28 @@
           "h": 173.052001953125,
           "l": 168.25,
           "c": 171.5800018310547
+        },
+        {
+          "d": "11-13",
+          "o": 171.97999572753906,
+          "h": 172.27999877929688,
+          "l": 168.91000366210938,
+          "c": 169.5749969482422
         }
       ],
-      "relVolume": 0.47473517349448535,
-      "marketCap": 411792000000
+      "relVolume": 0.055122843798313115,
+      "marketCap": 406980000000
     },
     {
       "t": "ORCL",
       "n": "Oracle Corporation",
       "layer": "Cloud",
       "signal": "Large-scale cloud compute deals with frontier AI labs",
-      "price": 127.11,
-      "changePct": -0.9892539524517229,
+      "price": 123.5395,
+      "changePct": -2.808986875712836,
       "changeReview": false,
       "url": "https://finance.yahoo.com/quote/ORCL",
-      "volume": 22446154,
+      "volume": 2629708,
       "ohlc": [
         {
           "d": "08-13",
@@ -6466,10 +6544,17 @@
           "h": 129.05999755859375,
           "l": 123.05000305175781,
           "c": 127.11000061035156
+        },
+        {
+          "d": "11-13",
+          "o": 127.5,
+          "h": 128,
+          "l": 123.46499633789062,
+          "c": 123.53949737548828
         }
       ],
-      "relVolume": 0.5227685018763487,
-      "marketCap": 357179100000
+      "relVolume": 0.061734640218456906,
+      "marketCap": 347145995000
     }
   ],
   "compute": [
@@ -6479,7 +6564,7 @@
       "rate": "$1.99 – $4.39/hr",
       "trend": "↑ 7% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 7 rented offers across Vast.ai + RunPod"
+      "note": "Live from 8 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "H200 (Hopper)",
@@ -6487,23 +6572,23 @@
       "rate": "$3.59 – $5.29/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 6 rented offers across Vast.ai + RunPod"
+      "note": "Live from 5 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B200 (Blackwell)",
       "segment": "Frontier training",
-      "rate": "$5.98 – $8.03/hr",
+      "rate": "$5.98 – $7.99/hr",
       "trend": "→ 0% vs 7d ago",
       "trendClass": "trend-flat",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "B300 (Blackwell Ultra)",
       "segment": "Frontier training",
-      "rate": "$6.94 – $10.63/hr",
-      "trend": "↑ 10% vs 7d ago",
-      "trendClass": "trend-up",
-      "note": "Live from 3 rented offers across Vast.ai + RunPod"
+      "rate": "$6.94 – $8.99/hr",
+      "trend": "→ 0% vs 7d ago",
+      "trendClass": "trend-flat",
+      "note": "Live from 2 rented offers across Vast.ai + RunPod"
     },
     {
       "chip": "MI300X (AMD)",
@@ -6516,14 +6601,14 @@
     {
       "chip": "A100 (legacy)",
       "segment": "Budget / fine-tuning",
-      "rate": "$0.40 – $2.19/hr",
-      "trend": "↑ 18% vs 7d ago",
+      "rate": "$0.58 – $2.19/hr",
+      "trend": "↑ 27% vs 7d ago",
       "trendClass": "trend-up",
-      "note": "Live from 8 rented offers across Vast.ai + RunPod"
+      "note": "Live from 9 rented offers across Vast.ai + RunPod"
     }
   ],
   "community": {
-    "updatedAt": "2026-11-13T06:22:38.656Z",
+    "updatedAt": "2026-11-13T14:50:38.947Z",
     "window": "30D",
     "source": "Hacker News + official model forums + GitHub Discussions — new models, features & discoveries",
     "models": [
@@ -6532,33 +6617,33 @@
         "model": "GPT",
         "version": "GPT-6 Astra",
         "org": "OpenAI",
-        "rawStoryHits": 250,
-        "fetchedStoryCount": 250,
-        "validatedStoryCount": 30,
+        "rawStoryHits": 248,
+        "fetchedStoryCount": 248,
+        "validatedStoryCount": 29,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 30,
+        "estimatedRelevantDiscussions": 29,
         "isEstimated": true,
-        "rawCommentHits": 1945,
+        "rawCommentHits": 1931,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 43,
-        "commentCoverage": 0.15424164524421594,
+        "validatedCommentCount": 42,
+        "commentCoverage": 0.15535991714137753,
         "limited": false,
-        "points": 540,
+        "points": 508,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 14
+            "count": 13
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
+            "count": 12
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 9
+            "count": 8
           },
           {
             "id": "writing",
@@ -6568,7 +6653,7 @@
           {
             "id": "speed",
             "label": "Speed",
-            "count": 3
+            "count": 4
           },
           {
             "id": "multimodal",
@@ -6597,7 +6682,7 @@
           {
             "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
             "points": 128,
-            "comments": 70,
+            "comments": 76,
             "url": "https://uncracked.city",
             "date": "NOV 03 2026"
           }
@@ -6605,7 +6690,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 30,
+            "discussions": 29,
             "isEstimated": false
           },
           {
@@ -6620,48 +6705,38 @@
         "model": "Claude",
         "version": "Claude Fable 5.1",
         "org": "Anthropic",
-        "rawStoryHits": 1011,
+        "rawStoryHits": 1015,
         "fetchedStoryCount": 300,
-        "validatedStoryCount": 38,
-        "storyCoverage": 0.29673590504451036,
-        "estimatedRelevantDiscussions": 131,
+        "validatedStoryCount": 39,
+        "storyCoverage": 0.2955665024630542,
+        "estimatedRelevantDiscussions": 135,
         "isEstimated": true,
-        "rawCommentHits": 7432,
+        "rawCommentHits": 7493,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 33,
-        "commentCoverage": 0.040365984930032295,
+        "validatedCommentCount": 23,
+        "commentCoverage": 0.04003736821032964,
         "limited": false,
-        "points": 1028,
+        "points": 1032,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 22
+            "count": 16
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 11
-          },
-          {
-            "id": "writing",
-            "label": "Writing",
-            "count": 4
+            "count": 5
           },
           {
             "id": "price",
             "label": "Price",
+            "count": 5
+          },
+          {
+            "id": "writing",
+            "label": "Writing",
             "count": 3
-          },
-          {
-            "id": "reliability",
-            "label": "Reliability",
-            "count": 2
-          },
-          {
-            "id": "local",
-            "label": "Local use",
-            "count": 2
           },
           {
             "id": "safety",
@@ -6669,13 +6744,18 @@
             "count": 2
           },
           {
-            "id": "speed",
-            "label": "Speed",
+            "id": "reliability",
+            "label": "Reliability",
             "count": 1
           },
           {
             "id": "multimodal",
             "label": "Image/video",
+            "count": 1
+          },
+          {
+            "id": "local",
+            "label": "Local use",
             "count": 1
           }
         ],
@@ -6698,7 +6778,7 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 128,
+            "discussions": 132,
             "isEstimated": true
           },
           {
@@ -6713,38 +6793,38 @@
         "model": "Gemini",
         "version": "Gemini 3.1 Pro Preview",
         "org": "Google DeepMind",
-        "rawStoryHits": 159,
-        "fetchedStoryCount": 159,
-        "validatedStoryCount": 32,
+        "rawStoryHits": 152,
+        "fetchedStoryCount": 152,
+        "validatedStoryCount": 30,
         "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 41,
+        "estimatedRelevantDiscussions": 38,
         "isEstimated": true,
-        "rawCommentHits": 1436,
+        "rawCommentHits": 1429,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 49,
-        "commentCoverage": 0.20891364902506965,
+        "validatedCommentCount": 47,
+        "commentCoverage": 0.2099370188943317,
         "limited": false,
-        "points": 505,
+        "points": 502,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 24
+            "count": 21
           },
           {
             "id": "reasoning",
             "label": "Reasoning",
-            "count": 16
+            "count": 13
           },
           {
             "id": "speed",
             "label": "Speed",
-            "count": 12
+            "count": 11
           },
           {
             "id": "price",
             "label": "Price",
-            "count": 9
+            "count": 8
           },
           {
             "id": "writing",
@@ -6754,12 +6834,12 @@
           {
             "id": "reliability",
             "label": "Reliability",
-            "count": 2
+            "count": 1
           },
           {
             "id": "multimodal",
             "label": "Image/video",
-            "count": 2
+            "count": 1
           },
           {
             "id": "local",
@@ -6786,12 +6866,12 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 32,
+            "discussions": 30,
             "isEstimated": false
           },
           {
             "name": "Google AI forum",
-            "discussions": 1,
+            "discussions": 0,
             "isEstimated": true
           },
           {
@@ -6806,18 +6886,18 @@
         "model": "Grok",
         "version": "Grok 4.6",
         "org": "xAI",
-        "rawStoryHits": 519,
+        "rawStoryHits": 511,
         "fetchedStoryCount": 300,
         "validatedStoryCount": 7,
-        "storyCoverage": 0.5780346820809249,
+        "storyCoverage": 0.5870841487279843,
         "estimatedRelevantDiscussions": 12,
         "isEstimated": true,
-        "rawCommentHits": 10685,
+        "rawCommentHits": 10724,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 16,
-        "commentCoverage": 0.028076743097800654,
+        "commentCoverage": 0.027974636329727715,
         "limited": false,
-        "points": 82,
+        "points": 84,
         "themes": [
           {
             "id": "coding",
@@ -6848,8 +6928,8 @@
         "topThreads": [
           {
             "title": "Launch HN: Pomerado (YC F26) – Turn any website into an MCP for agents",
-            "points": 61,
-            "comments": 47,
+            "points": 63,
+            "comments": 48,
             "url": "https://news.ycombinator.com/item?id=50455811",
             "date": "NOV 11 2026"
           },
@@ -6879,18 +6959,18 @@
         "model": "Llama",
         "version": "Llama 4 Maverick",
         "org": "Meta",
-        "rawStoryHits": 65,
-        "fetchedStoryCount": 65,
+        "rawStoryHits": 69,
+        "fetchedStoryCount": 69,
         "validatedStoryCount": 6,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 6,
         "isEstimated": false,
-        "rawCommentHits": 377,
-        "fetchedCommentCount": 275,
+        "rawCommentHits": 378,
+        "fetchedCommentCount": 300,
         "validatedCommentCount": 32,
-        "commentCoverage": 0.7294429708222812,
+        "commentCoverage": 0.7936507936507936,
         "limited": true,
-        "points": 475,
+        "points": 480,
         "themes": [
           {
             "id": "reasoning",
@@ -6941,8 +7021,8 @@
         "topThreads": [
           {
             "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola",
-            "points": 288,
-            "comments": 111,
+            "points": 293,
+            "comments": 112,
             "url": "https://github.com/FrigadeHQ/yogurt",
             "date": "NOV 11 2026"
           },
@@ -6967,23 +7047,23 @@
         "model": "DeepSeek",
         "version": "DeepSeek V4.1 Flash",
         "org": "DeepSeek",
-        "rawStoryHits": 113,
-        "fetchedStoryCount": 113,
+        "rawStoryHits": 119,
+        "fetchedStoryCount": 119,
         "validatedStoryCount": 13,
         "storyCoverage": 1,
         "estimatedRelevantDiscussions": 13,
         "isEstimated": false,
-        "rawCommentHits": 1512,
+        "rawCommentHits": 1521,
         "fetchedCommentCount": 300,
-        "validatedCommentCount": 53,
-        "commentCoverage": 0.1984126984126984,
+        "validatedCommentCount": 50,
+        "commentCoverage": 0.19723865877712032,
         "limited": false,
         "points": 32,
         "themes": [
           {
             "id": "coding",
             "label": "Coding",
-            "count": 19
+            "count": 18
           },
           {
             "id": "reasoning",
@@ -6993,7 +7073,7 @@
           {
             "id": "price",
             "label": "Price",
-            "count": 10
+            "count": 9
           },
           {
             "id": "speed",
@@ -7055,18 +7135,18 @@
         "model": "Qwen",
         "version": "Qwen3.8 Max",
         "org": "Alibaba",
-        "rawStoryHits": 228,
-        "fetchedStoryCount": 228,
-        "validatedStoryCount": 9,
-        "storyCoverage": 1,
-        "estimatedRelevantDiscussions": 11,
-        "isEstimated": false,
-        "rawCommentHits": 4774,
+        "rawStoryHits": 232,
+        "fetchedStoryCount": 231,
+        "validatedStoryCount": 10,
+        "storyCoverage": 0.9956896551724138,
+        "estimatedRelevantDiscussions": 12,
+        "isEstimated": true,
+        "rawCommentHits": 4785,
         "fetchedCommentCount": 300,
         "validatedCommentCount": 39,
-        "commentCoverage": 0.06284038542103058,
+        "commentCoverage": 0.06269592476489028,
         "limited": false,
-        "points": 105,
+        "points": 106,
         "themes": [
           {
             "id": "reasoning",
@@ -7125,7 +7205,7 @@
           {
             "title": "Qwen 4 Max Preview",
             "points": 19,
-            "comments": 4,
+            "comments": 5,
             "url": "https://www.qwencloud.com/benefits/tokenplan",
             "date": "NOV 11 2026"
           }
@@ -7133,8 +7213,8 @@
         "sources": [
           {
             "name": "Hacker News",
-            "discussions": 9,
-            "isEstimated": false
+            "discussions": 10,
+            "isEstimated": true
           },
           {
             "name": "Qwen GitHub",
@@ -7160,14 +7240,13 @@
       {
         "modelId": "gpt",
         "themes": [
-          "writing",
-          "speed"
+          "price"
         ],
-        "excerpt": "…it we could have a higher tier iCloud plan that included a chatgpt plus style setup with the \"its private\" marketing tag that cant be provided by anyone else. Instead we get…",
+        "excerpt": "… the moral here is. Users really hate ads in their free tier? ChatGPT is great at organically surfacing products but terrible at ads? Either way I'm not sure if I'll be using this…",
         "source": "Hacker News",
-        "author": "esskay",
-        "publishedAt": "2026-11-11T11:29:08.000Z",
-        "url": "https://news.ycombinator.com/item?id=50452157"
+        "author": "in_cahoots",
+        "publishedAt": "2026-11-10T23:50:01.000Z",
+        "url": "https://news.ycombinator.com/item?id=50447963"
       },
       {
         "modelId": "gpt",
@@ -7183,13 +7262,14 @@
       {
         "modelId": "gpt",
         "themes": [
-          "price"
+          "writing",
+          "speed"
         ],
-        "excerpt": "… the moral here is. Users really hate ads in their free tier? ChatGPT is great at organically surfacing products but terrible at ads? Either way I'm not sure if I'll be using this…",
+        "excerpt": "…it we could have a higher tier iCloud plan that included a chatgpt plus style setup with the \"its private\" marketing tag that cant be provided by anyone else. Instead we get…",
         "source": "Hacker News",
-        "author": "in_cahoots",
-        "publishedAt": "2026-11-10T23:50:01.000Z",
-        "url": "https://news.ycombinator.com/item?id=50447963"
+        "author": "esskay",
+        "publishedAt": "2026-11-11T11:29:08.000Z",
+        "url": "https://news.ycombinator.com/item?id=50452157"
       },
       {
         "modelId": "gpt",
@@ -7206,14 +7286,13 @@
       {
         "modelId": "gpt",
         "themes": [
-          "reasoning",
-          "price"
+          "coding"
         ],
-        "excerpt": "…number of startups that are effectively wrappers on Claude/ChatGPT/Gemini/Bedrock, that will dry up immediately, and make the ARR for OpenAi and Anthropic start looking real…",
+        "excerpt": "…out the nuances of each.Earlier today I found myself asking ChatGPT to research and explain exactly what Anthropic Playground is for and how specifically it may differ for my…",
         "source": "Hacker News",
-        "author": "Root_Denied",
-        "publishedAt": "2026-11-11T08:34:35.000Z",
-        "url": "https://news.ycombinator.com/item?id=50451009"
+        "author": "lavendermon",
+        "publishedAt": "2026-11-12T19:12:43.000Z",
+        "url": "https://news.ycombinator.com/item?id=50472603"
       },
       {
         "modelId": "claude",
@@ -7229,14 +7308,13 @@
       {
         "modelId": "claude",
         "themes": [
-          "reliability",
-          "safety"
+          "price"
         ],
-        "excerpt": "… mandatory safety checks that coincidentally are exactly what Claude is trained to pass, regulating the amount of compute or trying to claw back data centers to prevent new…",
+        "excerpt": "It depends on what \"us\" means. I am switched off of Claude almost entirely now except for background things where I want to abuse my subsidized account. Otherwise, OpenRouter +…",
         "source": "Hacker News",
-        "author": "andrewla",
-        "publishedAt": "2026-11-12T14:28:05.000Z",
-        "url": "https://news.ycombinator.com/item?id=50467819"
+        "author": "sausagefeet",
+        "publishedAt": "2026-11-13T12:29:27.000Z",
+        "url": "https://news.ycombinator.com/item?id=50482570"
       },
       {
         "modelId": "claude",
@@ -7253,24 +7331,14 @@
       {
         "modelId": "claude",
         "themes": [
-          "multimodal"
+          "coding",
+          "safety"
         ],
-        "excerpt": "…on the exercise bike.Print gallery was a few rounds of Claude (Opus 5.5). I would guess that would've taken me 20-40 hours. So maybe an hour of wall clock time to save me…",
+        "excerpt": "…has got biolabs: https://www.anthropic.com/research/claude-discovers-novel-en...…",
         "source": "Hacker News",
-        "author": "abetusk",
-        "publishedAt": "2026-11-11T23:29:25.000Z",
-        "url": "https://news.ycombinator.com/item?id=50460480"
-      },
-      {
-        "modelId": "claude",
-        "themes": [
-          "local"
-        ],
-        "excerpt": "It's not clear which parts of Claude state are safe to sync and which you want to keep local to one machine. I'm doing something with syncthing trying to keep agent session…",
-        "source": "Hacker News",
-        "author": "NelsonMinar",
-        "publishedAt": "2026-11-11T22:10:27.000Z",
-        "url": "https://news.ycombinator.com/item?id=50459406"
+        "author": "ben_w",
+        "publishedAt": "2026-11-13T14:28:31.000Z",
+        "url": "https://news.ycombinator.com/item?id=50484005"
       },
       {
         "modelId": "claude",
@@ -7285,16 +7353,15 @@
         "url": "https://news.ycombinator.com/item?id=50476037"
       },
       {
-        "modelId": "gemini",
+        "modelId": "claude",
         "themes": [
-          "reasoning",
-          "reliability"
+          "multimodal"
         ],
-        "excerpt": "You should have thought ahead when launching an 18-month promotion to attract users—your lack of foresight shouldn't be our problem now. Moves like this completely destroy trust…",
-        "source": "Google AI forum",
-        "author": "Hojat_Rad",
-        "publishedAt": "2026-11-13T06:10:06.853Z",
-        "url": "https://discuss.ai.google.dev/t/stop-the-switch-jio-google-ai-pro-users-are-being-out-of-gemini-4-argon-carbon-and-claude-5-5/196611"
+        "excerpt": "… Elizabeth Holmes blush.\"On the plus side, it's unlikely that Claude wrote this because it would have written the correct plural form of \"overpromise,\" but that's just sloppy…",
+        "source": "Hacker News",
+        "author": "gsaines",
+        "publishedAt": "2026-11-13T14:16:19.000Z",
+        "url": "https://news.ycombinator.com/item?id=50483821"
       },
       {
         "modelId": "gemini",
@@ -7318,17 +7385,6 @@
         "author": "Havoc",
         "publishedAt": "2026-11-12T21:56:43.000Z",
         "url": "https://news.ycombinator.com/item?id=50474885"
-      },
-      {
-        "modelId": "gemini",
-        "themes": [
-          "speed"
-        ],
-        "excerpt": "Same here, it was ok when it started but in last couple of weeks when argon released the 3.8 became supper slow!!!",
-        "source": "Google AI forum",
-        "author": "iamtakdir",
-        "publishedAt": "2026-11-13T04:33:14.728Z",
-        "url": "https://discuss.ai.google.dev/t/critical-performance-issue-gemini-3-8-flash-extremely-slow-in-antigravity-ide-2-31-2-despite-google-ai-pro-subscription/199986"
       },
       {
         "modelId": "gemini",
